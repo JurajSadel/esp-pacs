@@ -14,65 +14,13 @@ impl From<crate::R<HOST_SLCHOST_STATE_W0_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_SLCHOST_STATE0` reader - "]
-pub struct HOST_SLCHOST_STATE0_R(crate::FieldReader<u8>);
-impl HOST_SLCHOST_STATE0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        HOST_SLCHOST_STATE0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLCHOST_STATE0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLCHOST_STATE0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `HOST_SLCHOST_STATE1` reader - "]
-pub struct HOST_SLCHOST_STATE1_R(crate::FieldReader<u8>);
-impl HOST_SLCHOST_STATE1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        HOST_SLCHOST_STATE1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLCHOST_STATE1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLCHOST_STATE1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `HOST_SLCHOST_STATE2` reader - "]
-pub struct HOST_SLCHOST_STATE2_R(crate::FieldReader<u8>);
-impl HOST_SLCHOST_STATE2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        HOST_SLCHOST_STATE2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLCHOST_STATE2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLCHOST_STATE2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `HOST_SLCHOST_STATE3` reader - "]
-pub struct HOST_SLCHOST_STATE3_R(crate::FieldReader<u8>);
-impl HOST_SLCHOST_STATE3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        HOST_SLCHOST_STATE3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLCHOST_STATE3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLCHOST_STATE3_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]

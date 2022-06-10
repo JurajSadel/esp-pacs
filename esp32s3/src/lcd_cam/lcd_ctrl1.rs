@@ -35,86 +35,17 @@ impl From<crate::W<LCD_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_VB_FRONT` reader - It is the vertical blank front porch of a frame."]
-pub struct LCD_VB_FRONT_R(crate::FieldReader<u8>);
-impl LCD_VB_FRONT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LCD_VB_FRONT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_VB_FRONT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_VB_FRONT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LCD_VB_FRONT` writer - It is the vertical blank front porch of a frame."]
-pub struct LCD_VB_FRONT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_VB_FRONT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type LCD_VB_FRONT_W<'a> = crate::FieldWriter<'a, u32, LCD_CTRL1_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `LCD_HA_WIDTH` reader - It is the horizontal active width of a frame."]
-pub struct LCD_HA_WIDTH_R(crate::FieldReader<u16>);
-impl LCD_HA_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        LCD_HA_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_HA_WIDTH_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_HA_WIDTH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LCD_HA_WIDTH` writer - It is the horizontal active width of a frame."]
-pub struct LCD_HA_WIDTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_HA_WIDTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 8)) | ((value as u32 & 0x0fff) << 8);
-        self.w
-    }
-}
+pub type LCD_HA_WIDTH_W<'a> = crate::FieldWriter<'a, u32, LCD_CTRL1_SPEC, u16, u16, 12, 8>;
 #[doc = "Field `LCD_HT_WIDTH` reader - It is the horizontal total width of a frame."]
-pub struct LCD_HT_WIDTH_R(crate::FieldReader<u16>);
-impl LCD_HT_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        LCD_HT_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_HT_WIDTH_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_HT_WIDTH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LCD_HT_WIDTH` writer - It is the horizontal total width of a frame."]
-pub struct LCD_HT_WIDTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_HT_WIDTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 20)) | ((value as u32 & 0x0fff) << 20);
-        self.w
-    }
-}
+pub type LCD_HT_WIDTH_W<'a> = crate::FieldWriter<'a, u32, LCD_CTRL1_SPEC, u16, u16, 12, 20>;
 impl R {
     #[doc = "Bits 0:7 - It is the vertical blank front porch of a frame."]
     #[inline(always)]
@@ -136,17 +67,17 @@ impl W {
     #[doc = "Bits 0:7 - It is the vertical blank front porch of a frame."]
     #[inline(always)]
     pub fn lcd_vb_front(&mut self) -> LCD_VB_FRONT_W {
-        LCD_VB_FRONT_W { w: self }
+        LCD_VB_FRONT_W::new(self)
     }
     #[doc = "Bits 8:19 - It is the horizontal active width of a frame."]
     #[inline(always)]
     pub fn lcd_ha_width(&mut self) -> LCD_HA_WIDTH_W {
-        LCD_HA_WIDTH_W { w: self }
+        LCD_HA_WIDTH_W::new(self)
     }
     #[doc = "Bits 20:31 - It is the horizontal total width of a frame."]
     #[inline(always)]
     pub fn lcd_ht_width(&mut self) -> LCD_HT_WIDTH_W {
-        LCD_HT_WIDTH_W { w: self }
+        LCD_HT_WIDTH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

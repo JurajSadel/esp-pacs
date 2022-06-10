@@ -35,111 +35,21 @@ impl From<crate::W<RTC_FASTMEM_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_START` reader - Set 1 to start the CRC of RTC memory"]
-pub struct RTC_MEM_CRC_START_R(crate::FieldReader<bool>);
-impl RTC_MEM_CRC_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_MEM_CRC_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_MEM_CRC_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_MEM_CRC_START_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_MEM_CRC_START` writer - Set 1 to start the CRC of RTC memory"]
-pub struct RTC_MEM_CRC_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_MEM_CRC_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type RTC_MEM_CRC_START_W<'a> = crate::BitWriter<'a, u32, RTC_FASTMEM_CONFIG_SPEC, bool, 8>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` reader - This field is used to set address of RTC memory for CRC."]
-pub struct RTC_MEM_CRC_ADDR_R(crate::FieldReader<u16>);
-impl RTC_MEM_CRC_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RTC_MEM_CRC_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_MEM_CRC_ADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_MEM_CRC_ADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RTC_MEM_CRC_ADDR` writer - This field is used to set address of RTC memory for CRC."]
-pub struct RTC_MEM_CRC_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_MEM_CRC_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff << 9)) | ((value as u32 & 0x07ff) << 9);
-        self.w
-    }
-}
+pub type RTC_MEM_CRC_ADDR_W<'a> =
+    crate::FieldWriter<'a, u32, RTC_FASTMEM_CONFIG_SPEC, u16, u16, 11, 9>;
 #[doc = "Field `RTC_MEM_CRC_LEN` reader - This field is used to set length of RTC memory for CRC based on start address."]
-pub struct RTC_MEM_CRC_LEN_R(crate::FieldReader<u16>);
-impl RTC_MEM_CRC_LEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RTC_MEM_CRC_LEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_MEM_CRC_LEN_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_MEM_CRC_LEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RTC_MEM_CRC_LEN` writer - This field is used to set length of RTC memory for CRC based on start address."]
-pub struct RTC_MEM_CRC_LEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_MEM_CRC_LEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff << 20)) | ((value as u32 & 0x07ff) << 20);
-        self.w
-    }
-}
+pub type RTC_MEM_CRC_LEN_W<'a> =
+    crate::FieldWriter<'a, u32, RTC_FASTMEM_CONFIG_SPEC, u16, u16, 11, 20>;
 #[doc = "Field `RTC_MEM_CRC_FINISH` reader - This bit stores the status of RTC memory CRC.1 means finished."]
-pub struct RTC_MEM_CRC_FINISH_R(crate::FieldReader<bool>);
-impl RTC_MEM_CRC_FINISH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_MEM_CRC_FINISH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_MEM_CRC_FINISH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_MEM_CRC_FINISH_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 8 - Set 1 to start the CRC of RTC memory"]
     #[inline(always)]
@@ -166,17 +76,17 @@ impl W {
     #[doc = "Bit 8 - Set 1 to start the CRC of RTC memory"]
     #[inline(always)]
     pub fn rtc_mem_crc_start(&mut self) -> RTC_MEM_CRC_START_W {
-        RTC_MEM_CRC_START_W { w: self }
+        RTC_MEM_CRC_START_W::new(self)
     }
     #[doc = "Bits 9:19 - This field is used to set address of RTC memory for CRC."]
     #[inline(always)]
     pub fn rtc_mem_crc_addr(&mut self) -> RTC_MEM_CRC_ADDR_W {
-        RTC_MEM_CRC_ADDR_W { w: self }
+        RTC_MEM_CRC_ADDR_W::new(self)
     }
     #[doc = "Bits 20:30 - This field is used to set length of RTC memory for CRC based on start address."]
     #[inline(always)]
     pub fn rtc_mem_crc_len(&mut self) -> RTC_MEM_CRC_LEN_W {
-        RTC_MEM_CRC_LEN_W { w: self }
+        RTC_MEM_CRC_LEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

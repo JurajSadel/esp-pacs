@@ -35,32 +35,9 @@ impl From<crate::W<SCL_LOW_SPEC>> for W {
     }
 }
 #[doc = "Field `PERIOD` reader - This register is used to configure how many clock cycles SCL remains low."]
-pub struct PERIOD_R(crate::FieldReader<u32>);
-impl PERIOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PERIOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERIOD_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERIOD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PERIOD` writer - This register is used to configure how many clock cycles SCL remains low."]
-pub struct PERIOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERIOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type PERIOD_W<'a> = crate::FieldWriter<'a, u32, SCL_LOW_SPEC, u32, u32, 20, 0>;
 impl R {
     #[doc = "Bits 0:19 - This register is used to configure how many clock cycles SCL remains low."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:19 - This register is used to configure how many clock cycles SCL remains low."]
     #[inline(always)]
     pub fn period(&mut self) -> PERIOD_W {
-        PERIOD_W { w: self }
+        PERIOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

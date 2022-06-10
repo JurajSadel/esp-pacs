@@ -35,32 +35,9 @@ impl From<crate::W<UHCI0_INTR_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `UHCI0_INTR_MAP` reader - this register used to map uhci0 interrupt to one of core0's external interrupt"]
-pub struct UHCI0_INTR_MAP_R(crate::FieldReader<u8>);
-impl UHCI0_INTR_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UHCI0_INTR_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UHCI0_INTR_MAP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UHCI0_INTR_MAP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `UHCI0_INTR_MAP` writer - this register used to map uhci0 interrupt to one of core0's external interrupt"]
-pub struct UHCI0_INTR_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UHCI0_INTR_MAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type UHCI0_INTR_MAP_W<'a> = crate::FieldWriter<'a, u32, UHCI0_INTR_MAP_SPEC, u8, u8, 5, 0>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map uhci0 interrupt to one of core0's external interrupt"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:4 - this register used to map uhci0 interrupt to one of core0's external interrupt"]
     #[inline(always)]
     pub fn uhci0_intr_map(&mut self) -> UHCI0_INTR_MAP_W {
-        UHCI0_INTR_MAP_W { w: self }
+        UHCI0_INTR_MAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

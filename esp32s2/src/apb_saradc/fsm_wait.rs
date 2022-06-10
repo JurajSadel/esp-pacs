@@ -35,86 +35,17 @@ impl From<crate::W<FSM_WAIT_SPEC>> for W {
     }
 }
 #[doc = "Field `XPD_WAIT` reader - xpd wait"]
-pub struct XPD_WAIT_R(crate::FieldReader<u8>);
-impl XPD_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        XPD_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `XPD_WAIT` writer - xpd wait"]
-pub struct XPD_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XPD_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type XPD_WAIT_W<'a> = crate::FieldWriter<'a, u32, FSM_WAIT_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `RSTB_WAIT` reader - reset time"]
-pub struct RSTB_WAIT_R(crate::FieldReader<u8>);
-impl RSTB_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RSTB_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RSTB_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RSTB_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RSTB_WAIT` writer - reset time"]
-pub struct RSTB_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSTB_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type RSTB_WAIT_W<'a> = crate::FieldWriter<'a, u32, FSM_WAIT_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `STANDBY_WAIT` reader - standby wait"]
-pub struct STANDBY_WAIT_R(crate::FieldReader<u8>);
-impl STANDBY_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STANDBY_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STANDBY_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STANDBY_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `STANDBY_WAIT` writer - standby wait"]
-pub struct STANDBY_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STANDBY_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type STANDBY_WAIT_W<'a> = crate::FieldWriter<'a, u32, FSM_WAIT_SPEC, u8, u8, 8, 16>;
 impl R {
     #[doc = "Bits 0:7 - xpd wait"]
     #[inline(always)]
@@ -136,17 +67,17 @@ impl W {
     #[doc = "Bits 0:7 - xpd wait"]
     #[inline(always)]
     pub fn xpd_wait(&mut self) -> XPD_WAIT_W {
-        XPD_WAIT_W { w: self }
+        XPD_WAIT_W::new(self)
     }
     #[doc = "Bits 8:15 - reset time"]
     #[inline(always)]
     pub fn rstb_wait(&mut self) -> RSTB_WAIT_W {
-        RSTB_WAIT_W { w: self }
+        RSTB_WAIT_W::new(self)
     }
     #[doc = "Bits 16:23 - standby wait"]
     #[inline(always)]
     pub fn standby_wait(&mut self) -> STANDBY_WAIT_W {
-        STANDBY_WAIT_W { w: self }
+        STANDBY_WAIT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

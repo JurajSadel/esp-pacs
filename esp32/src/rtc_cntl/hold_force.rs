@@ -35,671 +35,77 @@ impl From<crate::W<HOLD_FORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC1_HOLD_FORCE` reader - "]
-pub struct ADC1_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl ADC1_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC1_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1_HOLD_FORCE` writer - "]
-pub struct ADC1_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type ADC1_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 0>;
 #[doc = "Field `ADC2_HOLD_FORCE` reader - "]
-pub struct ADC2_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl ADC2_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC2_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC2_HOLD_FORCE` writer - "]
-pub struct ADC2_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ADC2_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 1>;
 #[doc = "Field `PDAC1_HOLD_FORCE` reader - "]
-pub struct PDAC1_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl PDAC1_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_HOLD_FORCE` writer - "]
-pub struct PDAC1_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PDAC1_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 2>;
 #[doc = "Field `PDAC2_HOLD_FORCE` reader - "]
-pub struct PDAC2_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl PDAC2_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC2_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC2_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC2_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC2_HOLD_FORCE` writer - "]
-pub struct PDAC2_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC2_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type PDAC2_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 3>;
 #[doc = "Field `SENSE1_HOLD_FORCE` reader - "]
-pub struct SENSE1_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl SENSE1_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE1_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE1_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE1_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE1_HOLD_FORCE` writer - "]
-pub struct SENSE1_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE1_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SENSE1_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 4>;
 #[doc = "Field `SENSE2_HOLD_FORCE` reader - "]
-pub struct SENSE2_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl SENSE2_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE2_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE2_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE2_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE2_HOLD_FORCE` writer - "]
-pub struct SENSE2_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE2_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type SENSE2_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 5>;
 #[doc = "Field `SENSE3_HOLD_FORCE` reader - "]
-pub struct SENSE3_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl SENSE3_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE3_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE3_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE3_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE3_HOLD_FORCE` writer - "]
-pub struct SENSE3_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE3_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type SENSE3_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 6>;
 #[doc = "Field `SENSE4_HOLD_FORCE` reader - "]
-pub struct SENSE4_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl SENSE4_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE4_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE4_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE4_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE4_HOLD_FORCE` writer - "]
-pub struct SENSE4_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE4_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type SENSE4_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 7>;
 #[doc = "Field `TOUCH_PAD0_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD0_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl TOUCH_PAD0_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_PAD0_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD0_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD0_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_PAD0_HOLD_FORCE` writer - "]
-pub struct TOUCH_PAD0_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD0_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type TOUCH_PAD0_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 8>;
 #[doc = "Field `TOUCH_PAD1_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD1_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl TOUCH_PAD1_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_PAD1_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD1_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD1_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_PAD1_HOLD_FORCE` writer - "]
-pub struct TOUCH_PAD1_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD1_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type TOUCH_PAD1_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 9>;
 #[doc = "Field `TOUCH_PAD2_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD2_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl TOUCH_PAD2_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_PAD2_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD2_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD2_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_PAD2_HOLD_FORCE` writer - "]
-pub struct TOUCH_PAD2_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD2_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type TOUCH_PAD2_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 10>;
 #[doc = "Field `TOUCH_PAD3_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD3_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl TOUCH_PAD3_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_PAD3_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD3_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD3_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_PAD3_HOLD_FORCE` writer - "]
-pub struct TOUCH_PAD3_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD3_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type TOUCH_PAD3_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 11>;
 #[doc = "Field `TOUCH_PAD4_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD4_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl TOUCH_PAD4_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_PAD4_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD4_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD4_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_PAD4_HOLD_FORCE` writer - "]
-pub struct TOUCH_PAD4_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD4_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type TOUCH_PAD4_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 12>;
 #[doc = "Field `TOUCH_PAD5_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD5_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl TOUCH_PAD5_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_PAD5_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD5_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD5_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_PAD5_HOLD_FORCE` writer - "]
-pub struct TOUCH_PAD5_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD5_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type TOUCH_PAD5_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 13>;
 #[doc = "Field `TOUCH_PAD6_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD6_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl TOUCH_PAD6_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_PAD6_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD6_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD6_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_PAD6_HOLD_FORCE` writer - "]
-pub struct TOUCH_PAD6_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD6_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type TOUCH_PAD6_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 14>;
 #[doc = "Field `TOUCH_PAD7_HOLD_FORCE` reader - "]
-pub struct TOUCH_PAD7_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl TOUCH_PAD7_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_PAD7_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD7_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD7_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_PAD7_HOLD_FORCE` writer - "]
-pub struct TOUCH_PAD7_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD7_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type TOUCH_PAD7_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 15>;
 #[doc = "Field `X32P_HOLD_FORCE` reader - "]
-pub struct X32P_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl X32P_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        X32P_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for X32P_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type X32P_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `X32P_HOLD_FORCE` writer - "]
-pub struct X32P_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> X32P_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type X32P_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 16>;
 #[doc = "Field `X32N_HOLD_FORCE` reader - "]
-pub struct X32N_HOLD_FORCE_R(crate::FieldReader<bool>);
-impl X32N_HOLD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        X32N_HOLD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for X32N_HOLD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type X32N_HOLD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `X32N_HOLD_FORCE` writer - "]
-pub struct X32N_HOLD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> X32N_HOLD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type X32N_HOLD_FORCE_W<'a> = crate::BitWriter<'a, u32, HOLD_FORCE_SPEC, bool, 17>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -796,92 +202,92 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn adc1_hold_force(&mut self) -> ADC1_HOLD_FORCE_W {
-        ADC1_HOLD_FORCE_W { w: self }
+        ADC1_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn adc2_hold_force(&mut self) -> ADC2_HOLD_FORCE_W {
-        ADC2_HOLD_FORCE_W { w: self }
+        ADC2_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn pdac1_hold_force(&mut self) -> PDAC1_HOLD_FORCE_W {
-        PDAC1_HOLD_FORCE_W { w: self }
+        PDAC1_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn pdac2_hold_force(&mut self) -> PDAC2_HOLD_FORCE_W {
-        PDAC2_HOLD_FORCE_W { w: self }
+        PDAC2_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn sense1_hold_force(&mut self) -> SENSE1_HOLD_FORCE_W {
-        SENSE1_HOLD_FORCE_W { w: self }
+        SENSE1_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn sense2_hold_force(&mut self) -> SENSE2_HOLD_FORCE_W {
-        SENSE2_HOLD_FORCE_W { w: self }
+        SENSE2_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn sense3_hold_force(&mut self) -> SENSE3_HOLD_FORCE_W {
-        SENSE3_HOLD_FORCE_W { w: self }
+        SENSE3_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn sense4_hold_force(&mut self) -> SENSE4_HOLD_FORCE_W {
-        SENSE4_HOLD_FORCE_W { w: self }
+        SENSE4_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn touch_pad0_hold_force(&mut self) -> TOUCH_PAD0_HOLD_FORCE_W {
-        TOUCH_PAD0_HOLD_FORCE_W { w: self }
+        TOUCH_PAD0_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn touch_pad1_hold_force(&mut self) -> TOUCH_PAD1_HOLD_FORCE_W {
-        TOUCH_PAD1_HOLD_FORCE_W { w: self }
+        TOUCH_PAD1_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn touch_pad2_hold_force(&mut self) -> TOUCH_PAD2_HOLD_FORCE_W {
-        TOUCH_PAD2_HOLD_FORCE_W { w: self }
+        TOUCH_PAD2_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn touch_pad3_hold_force(&mut self) -> TOUCH_PAD3_HOLD_FORCE_W {
-        TOUCH_PAD3_HOLD_FORCE_W { w: self }
+        TOUCH_PAD3_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn touch_pad4_hold_force(&mut self) -> TOUCH_PAD4_HOLD_FORCE_W {
-        TOUCH_PAD4_HOLD_FORCE_W { w: self }
+        TOUCH_PAD4_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn touch_pad5_hold_force(&mut self) -> TOUCH_PAD5_HOLD_FORCE_W {
-        TOUCH_PAD5_HOLD_FORCE_W { w: self }
+        TOUCH_PAD5_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn touch_pad6_hold_force(&mut self) -> TOUCH_PAD6_HOLD_FORCE_W {
-        TOUCH_PAD6_HOLD_FORCE_W { w: self }
+        TOUCH_PAD6_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     pub fn touch_pad7_hold_force(&mut self) -> TOUCH_PAD7_HOLD_FORCE_W {
-        TOUCH_PAD7_HOLD_FORCE_W { w: self }
+        TOUCH_PAD7_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn x32p_hold_force(&mut self) -> X32P_HOLD_FORCE_W {
-        X32P_HOLD_FORCE_W { w: self }
+        X32P_HOLD_FORCE_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn x32n_hold_force(&mut self) -> X32N_HOLD_FORCE_W {
-        X32N_HOLD_FORCE_W { w: self }
+        X32N_HOLD_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

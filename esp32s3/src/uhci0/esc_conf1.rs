@@ -35,86 +35,17 @@ impl From<crate::W<ESC_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `ESC_SEQ0` reader - This register is used to define a char that need to be encoded, default is 0xdb that used as the first char of slip escape sequence."]
-pub struct ESC_SEQ0_R(crate::FieldReader<u8>);
-impl ESC_SEQ0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ESC_SEQ0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ESC_SEQ0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ESC_SEQ0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ESC_SEQ0` writer - This register is used to define a char that need to be encoded, default is 0xdb that used as the first char of slip escape sequence."]
-pub struct ESC_SEQ0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ESC_SEQ0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type ESC_SEQ0_W<'a> = crate::FieldWriter<'a, u32, ESC_CONF1_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `ESC_SEQ0_CHAR0` reader - This register is used to define the first char of slip escape sequence when encoding the UHCI_ESC_SEQ0, default is 0xdb."]
-pub struct ESC_SEQ0_CHAR0_R(crate::FieldReader<u8>);
-impl ESC_SEQ0_CHAR0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ESC_SEQ0_CHAR0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ESC_SEQ0_CHAR0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ESC_SEQ0_CHAR0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ESC_SEQ0_CHAR0` writer - This register is used to define the first char of slip escape sequence when encoding the UHCI_ESC_SEQ0, default is 0xdb."]
-pub struct ESC_SEQ0_CHAR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ESC_SEQ0_CHAR0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type ESC_SEQ0_CHAR0_W<'a> = crate::FieldWriter<'a, u32, ESC_CONF1_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `ESC_SEQ0_CHAR1` reader - This register is used to define the second char of slip escape sequence when encoding the UHCI_ESC_SEQ0, default is 0xdd."]
-pub struct ESC_SEQ0_CHAR1_R(crate::FieldReader<u8>);
-impl ESC_SEQ0_CHAR1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ESC_SEQ0_CHAR1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ESC_SEQ0_CHAR1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ESC_SEQ0_CHAR1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ESC_SEQ0_CHAR1` writer - This register is used to define the second char of slip escape sequence when encoding the UHCI_ESC_SEQ0, default is 0xdd."]
-pub struct ESC_SEQ0_CHAR1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ESC_SEQ0_CHAR1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type ESC_SEQ0_CHAR1_W<'a> = crate::FieldWriter<'a, u32, ESC_CONF1_SPEC, u8, u8, 8, 16>;
 impl R {
     #[doc = "Bits 0:7 - This register is used to define a char that need to be encoded, default is 0xdb that used as the first char of slip escape sequence."]
     #[inline(always)]
@@ -136,17 +67,17 @@ impl W {
     #[doc = "Bits 0:7 - This register is used to define a char that need to be encoded, default is 0xdb that used as the first char of slip escape sequence."]
     #[inline(always)]
     pub fn esc_seq0(&mut self) -> ESC_SEQ0_W {
-        ESC_SEQ0_W { w: self }
+        ESC_SEQ0_W::new(self)
     }
     #[doc = "Bits 8:15 - This register is used to define the first char of slip escape sequence when encoding the UHCI_ESC_SEQ0, default is 0xdb."]
     #[inline(always)]
     pub fn esc_seq0_char0(&mut self) -> ESC_SEQ0_CHAR0_W {
-        ESC_SEQ0_CHAR0_W { w: self }
+        ESC_SEQ0_CHAR0_W::new(self)
     }
     #[doc = "Bits 16:23 - This register is used to define the second char of slip escape sequence when encoding the UHCI_ESC_SEQ0, default is 0xdd."]
     #[inline(always)]
     pub fn esc_seq0_char1(&mut self) -> ESC_SEQ0_CHAR1_W {
-        ESC_SEQ0_CHAR1_W { w: self }
+        ESC_SEQ0_CHAR1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

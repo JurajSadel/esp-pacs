@@ -35,661 +35,78 @@ impl From<crate::W<I2S_TX_TDM_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_TX_TDM_CHAN0_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 0. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN0_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN0_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN0_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN0_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN0_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN0_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 0. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN0_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN0_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN0_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 0>;
 #[doc = "Field `I2S_TX_TDM_CHAN1_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 1. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN1_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN1_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN1_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN1_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN1_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN1_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 1. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN1_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN1_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN1_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 1>;
 #[doc = "Field `I2S_TX_TDM_CHAN2_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 2. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN2_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN2_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN2_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN2_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN2_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN2_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 2. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN2_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN2_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN2_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 2>;
 #[doc = "Field `I2S_TX_TDM_CHAN3_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 3. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN3_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN3_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN3_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN3_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN3_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN3_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 3. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN3_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN3_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN3_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 3>;
 #[doc = "Field `I2S_TX_TDM_CHAN4_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 4. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN4_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN4_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN4_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN4_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN4_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN4_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 4. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN4_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN4_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN4_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 4>;
 #[doc = "Field `I2S_TX_TDM_CHAN5_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 5. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN5_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN5_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN5_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN5_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN5_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN5_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 5. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN5_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN5_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN5_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 5>;
 #[doc = "Field `I2S_TX_TDM_CHAN6_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 6. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN6_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN6_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN6_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN6_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN6_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN6_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 6. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN6_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN6_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN6_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 6>;
 #[doc = "Field `I2S_TX_TDM_CHAN7_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 7. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN7_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN7_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN7_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN7_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN7_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN7_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 7. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN7_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN7_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN7_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 7>;
 #[doc = "Field `I2S_TX_TDM_CHAN8_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 8. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN8_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN8_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN8_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN8_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN8_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN8_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 8. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN8_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN8_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN8_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 8>;
 #[doc = "Field `I2S_TX_TDM_CHAN9_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 9. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN9_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN9_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN9_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN9_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN9_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN9_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 9. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN9_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN9_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN9_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 9>;
 #[doc = "Field `I2S_TX_TDM_CHAN10_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 10. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN10_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN10_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN10_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN10_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN10_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN10_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 10. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN10_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN10_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN10_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 10>;
 #[doc = "Field `I2S_TX_TDM_CHAN11_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 11. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN11_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN11_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN11_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN11_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN11_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN11_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 11. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN11_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN11_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN11_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 11>;
 #[doc = "Field `I2S_TX_TDM_CHAN12_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 12. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN12_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN12_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN12_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN12_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN12_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN12_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 12. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN12_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN12_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN12_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 12>;
 #[doc = "Field `I2S_TX_TDM_CHAN13_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 13. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN13_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN13_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN13_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN13_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN13_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN13_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 13. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN13_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN13_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN13_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 13>;
 #[doc = "Field `I2S_TX_TDM_CHAN14_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 14. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN14_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN14_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN14_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN14_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN14_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN14_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 14. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN14_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN14_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN14_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 14>;
 #[doc = "Field `I2S_TX_TDM_CHAN15_EN` reader - 1: Enable the valid data output of I2S TX TDM channel 15. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN15_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_CHAN15_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_CHAN15_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_CHAN15_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_CHAN15_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_CHAN15_EN` writer - 1: Enable the valid data output of I2S TX TDM channel 15. 0: Disable, just output 0 in this channel."]
-pub struct I2S_TX_TDM_CHAN15_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_CHAN15_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_CHAN15_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 15>;
 #[doc = "Field `I2S_TX_TDM_TOT_CHAN_NUM` reader - The total channel number of I2S TX TDM mode."]
-pub struct I2S_TX_TDM_TOT_CHAN_NUM_R(crate::FieldReader<u8>);
-impl I2S_TX_TDM_TOT_CHAN_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        I2S_TX_TDM_TOT_CHAN_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_TOT_CHAN_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_TOT_CHAN_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `I2S_TX_TDM_TOT_CHAN_NUM` writer - The total channel number of I2S TX TDM mode."]
-pub struct I2S_TX_TDM_TOT_CHAN_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_TOT_CHAN_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_TOT_CHAN_NUM_W<'a> =
+    crate::FieldWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, u8, u8, 4, 16>;
 #[doc = "Field `I2S_TX_TDM_SKIP_MSK_EN` reader - When DMA TX buffer stores the data of (REG_TX_TDM_TOT_CHAN_NUM + 1) channels, and only the data of the enabled channels is sent, then this bit should be set. Clear it when all the data stored in DMA TX buffer is for enabled channels."]
-pub struct I2S_TX_TDM_SKIP_MSK_EN_R(crate::FieldReader<bool>);
-impl I2S_TX_TDM_SKIP_MSK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_TDM_SKIP_MSK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_TDM_SKIP_MSK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_TDM_SKIP_MSK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_TX_TDM_SKIP_MSK_EN` writer - When DMA TX buffer stores the data of (REG_TX_TDM_TOT_CHAN_NUM + 1) channels, and only the data of the enabled channels is sent, then this bit should be set. Clear it when all the data stored in DMA TX buffer is for enabled channels."]
-pub struct I2S_TX_TDM_SKIP_MSK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_TX_TDM_SKIP_MSK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type I2S_TX_TDM_SKIP_MSK_EN_W<'a> = crate::BitWriter<'a, u32, I2S_TX_TDM_CTRL_SPEC, bool, 20>;
 impl R {
     #[doc = "Bit 0 - 1: Enable the valid data output of I2S TX TDM channel 0. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
@@ -786,92 +203,92 @@ impl W {
     #[doc = "Bit 0 - 1: Enable the valid data output of I2S TX TDM channel 0. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan0_en(&mut self) -> I2S_TX_TDM_CHAN0_EN_W {
-        I2S_TX_TDM_CHAN0_EN_W { w: self }
+        I2S_TX_TDM_CHAN0_EN_W::new(self)
     }
     #[doc = "Bit 1 - 1: Enable the valid data output of I2S TX TDM channel 1. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan1_en(&mut self) -> I2S_TX_TDM_CHAN1_EN_W {
-        I2S_TX_TDM_CHAN1_EN_W { w: self }
+        I2S_TX_TDM_CHAN1_EN_W::new(self)
     }
     #[doc = "Bit 2 - 1: Enable the valid data output of I2S TX TDM channel 2. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan2_en(&mut self) -> I2S_TX_TDM_CHAN2_EN_W {
-        I2S_TX_TDM_CHAN2_EN_W { w: self }
+        I2S_TX_TDM_CHAN2_EN_W::new(self)
     }
     #[doc = "Bit 3 - 1: Enable the valid data output of I2S TX TDM channel 3. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan3_en(&mut self) -> I2S_TX_TDM_CHAN3_EN_W {
-        I2S_TX_TDM_CHAN3_EN_W { w: self }
+        I2S_TX_TDM_CHAN3_EN_W::new(self)
     }
     #[doc = "Bit 4 - 1: Enable the valid data output of I2S TX TDM channel 4. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan4_en(&mut self) -> I2S_TX_TDM_CHAN4_EN_W {
-        I2S_TX_TDM_CHAN4_EN_W { w: self }
+        I2S_TX_TDM_CHAN4_EN_W::new(self)
     }
     #[doc = "Bit 5 - 1: Enable the valid data output of I2S TX TDM channel 5. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan5_en(&mut self) -> I2S_TX_TDM_CHAN5_EN_W {
-        I2S_TX_TDM_CHAN5_EN_W { w: self }
+        I2S_TX_TDM_CHAN5_EN_W::new(self)
     }
     #[doc = "Bit 6 - 1: Enable the valid data output of I2S TX TDM channel 6. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan6_en(&mut self) -> I2S_TX_TDM_CHAN6_EN_W {
-        I2S_TX_TDM_CHAN6_EN_W { w: self }
+        I2S_TX_TDM_CHAN6_EN_W::new(self)
     }
     #[doc = "Bit 7 - 1: Enable the valid data output of I2S TX TDM channel 7. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan7_en(&mut self) -> I2S_TX_TDM_CHAN7_EN_W {
-        I2S_TX_TDM_CHAN7_EN_W { w: self }
+        I2S_TX_TDM_CHAN7_EN_W::new(self)
     }
     #[doc = "Bit 8 - 1: Enable the valid data output of I2S TX TDM channel 8. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan8_en(&mut self) -> I2S_TX_TDM_CHAN8_EN_W {
-        I2S_TX_TDM_CHAN8_EN_W { w: self }
+        I2S_TX_TDM_CHAN8_EN_W::new(self)
     }
     #[doc = "Bit 9 - 1: Enable the valid data output of I2S TX TDM channel 9. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan9_en(&mut self) -> I2S_TX_TDM_CHAN9_EN_W {
-        I2S_TX_TDM_CHAN9_EN_W { w: self }
+        I2S_TX_TDM_CHAN9_EN_W::new(self)
     }
     #[doc = "Bit 10 - 1: Enable the valid data output of I2S TX TDM channel 10. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan10_en(&mut self) -> I2S_TX_TDM_CHAN10_EN_W {
-        I2S_TX_TDM_CHAN10_EN_W { w: self }
+        I2S_TX_TDM_CHAN10_EN_W::new(self)
     }
     #[doc = "Bit 11 - 1: Enable the valid data output of I2S TX TDM channel 11. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan11_en(&mut self) -> I2S_TX_TDM_CHAN11_EN_W {
-        I2S_TX_TDM_CHAN11_EN_W { w: self }
+        I2S_TX_TDM_CHAN11_EN_W::new(self)
     }
     #[doc = "Bit 12 - 1: Enable the valid data output of I2S TX TDM channel 12. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan12_en(&mut self) -> I2S_TX_TDM_CHAN12_EN_W {
-        I2S_TX_TDM_CHAN12_EN_W { w: self }
+        I2S_TX_TDM_CHAN12_EN_W::new(self)
     }
     #[doc = "Bit 13 - 1: Enable the valid data output of I2S TX TDM channel 13. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan13_en(&mut self) -> I2S_TX_TDM_CHAN13_EN_W {
-        I2S_TX_TDM_CHAN13_EN_W { w: self }
+        I2S_TX_TDM_CHAN13_EN_W::new(self)
     }
     #[doc = "Bit 14 - 1: Enable the valid data output of I2S TX TDM channel 14. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan14_en(&mut self) -> I2S_TX_TDM_CHAN14_EN_W {
-        I2S_TX_TDM_CHAN14_EN_W { w: self }
+        I2S_TX_TDM_CHAN14_EN_W::new(self)
     }
     #[doc = "Bit 15 - 1: Enable the valid data output of I2S TX TDM channel 15. 0: Disable, just output 0 in this channel."]
     #[inline(always)]
     pub fn i2s_tx_tdm_chan15_en(&mut self) -> I2S_TX_TDM_CHAN15_EN_W {
-        I2S_TX_TDM_CHAN15_EN_W { w: self }
+        I2S_TX_TDM_CHAN15_EN_W::new(self)
     }
     #[doc = "Bits 16:19 - The total channel number of I2S TX TDM mode."]
     #[inline(always)]
     pub fn i2s_tx_tdm_tot_chan_num(&mut self) -> I2S_TX_TDM_TOT_CHAN_NUM_W {
-        I2S_TX_TDM_TOT_CHAN_NUM_W { w: self }
+        I2S_TX_TDM_TOT_CHAN_NUM_W::new(self)
     }
     #[doc = "Bit 20 - When DMA TX buffer stores the data of (REG_TX_TDM_TOT_CHAN_NUM + 1) channels, and only the data of the enabled channels is sent, then this bit should be set. Clear it when all the data stored in DMA TX buffer is for enabled channels."]
     #[inline(always)]
     pub fn i2s_tx_tdm_skip_msk_en(&mut self) -> I2S_TX_TDM_SKIP_MSK_EN_W {
-        I2S_TX_TDM_SKIP_MSK_EN_W { w: self }
+        I2S_TX_TDM_SKIP_MSK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

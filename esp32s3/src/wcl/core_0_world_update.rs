@@ -20,22 +20,13 @@ impl From<crate::W<CORE_0_WORLD_UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_UPDATE` writer - This field is used to update configuration completed, can write any value,the hardware only checks the write operation of this register and does not case about its value"]
-pub struct CORE_0_UPDATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_UPDATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CORE_0_UPDATE_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_0_WORLD_UPDATE_SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31 - This field is used to update configuration completed, can write any value,the hardware only checks the write operation of this register and does not case about its value"]
     #[inline(always)]
     pub fn core_0_update(&mut self) -> CORE_0_UPDATE_W {
-        CORE_0_UPDATE_W { w: self }
+        CORE_0_UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

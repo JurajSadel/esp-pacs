@@ -14,20 +14,7 @@ impl From<crate::R<PRO_DRAM0_4_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_DRAM0_ILG_ST` reader - Record the illegitimate information of DBUS. \\[25:6\\]: store the bits \\[21:2\\] of DBUS address. \\[5\\]: 1 means atomic access, 0 means nonatomic access. \\[4\\]: 1 means write operation, 0 means read operation. \\[3:0\\]: DBUS0 bus byte enables."]
-pub struct PRO_DRAM0_ILG_ST_R(crate::FieldReader<u32>);
-impl PRO_DRAM0_ILG_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PRO_DRAM0_ILG_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DRAM0_ILG_ST_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DRAM0_ILG_ST_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:25 - Record the illegitimate information of DBUS. \\[25:6\\]: store the bits \\[21:2\\] of DBUS address. \\[5\\]: 1 means atomic access, 0 means nonatomic access. \\[4\\]: 1 means write operation, 0 means read operation. \\[3:0\\]: DBUS0 bus byte enables."]
     #[inline(always)]

@@ -14,80 +14,15 @@ impl From<crate::R<CH_TX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `MEM_RADDR_EX` reader - This register records the memory address offset when transmitter of CHANNEL%s is using the RAM."]
-pub struct MEM_RADDR_EX_R(crate::FieldReader<u16>);
-impl MEM_RADDR_EX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MEM_RADDR_EX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_RADDR_EX_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_RADDR_EX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APB_MEM_WADDR` reader - This register records the memory address offset when writes RAM over APB bus."]
-pub struct APB_MEM_WADDR_R(crate::FieldReader<u16>);
-impl APB_MEM_WADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        APB_MEM_WADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_MEM_WADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_MEM_WADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `STATE` reader - This register records the FSM status of CHANNEL%s."]
-pub struct STATE_R(crate::FieldReader<u8>);
-impl STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MEM_EMPTY` reader - This status bit will be set when the data to be set is more than memory size and the wraparound mode is disabled."]
-pub struct MEM_EMPTY_R(crate::FieldReader<bool>);
-impl MEM_EMPTY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_EMPTY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_EMPTY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_EMPTY_R = crate::BitReader<bool>;
 #[doc = "Field `APB_MEM_WR_ERR` reader - This status bit will be set if the offset address out of memory size when writes via APB bus."]
-pub struct APB_MEM_WR_ERR_R(crate::FieldReader<bool>);
-impl APB_MEM_WR_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_MEM_WR_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_MEM_WR_ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_MEM_WR_ERR_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:9 - This register records the memory address offset when transmitter of CHANNEL%s is using the RAM."]
     #[inline(always)]

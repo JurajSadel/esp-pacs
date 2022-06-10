@@ -35,338 +35,41 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SDA_FORCE_OUT` reader - SDA output mode. 0: open drain. 1: push pull."]
-pub struct SDA_FORCE_OUT_R(crate::FieldReader<bool>);
-impl SDA_FORCE_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDA_FORCE_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDA_FORCE_OUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDA_FORCE_OUT_R = crate::BitReader<bool>;
 #[doc = "Field `SDA_FORCE_OUT` writer - SDA output mode. 0: open drain. 1: push pull."]
-pub struct SDA_FORCE_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDA_FORCE_OUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SDA_FORCE_OUT_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 0>;
 #[doc = "Field `SCL_FORCE_OUT` reader - SCL output mode. 0: open drain. 1: push pull."]
-pub struct SCL_FORCE_OUT_R(crate::FieldReader<bool>);
-impl SCL_FORCE_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCL_FORCE_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_FORCE_OUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_FORCE_OUT_R = crate::BitReader<bool>;
 #[doc = "Field `SCL_FORCE_OUT` writer - SCL output mode. 0: open drain. 1: push pull."]
-pub struct SCL_FORCE_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_FORCE_OUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SCL_FORCE_OUT_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 1>;
 #[doc = "Field `MS_MODE` reader - Set this bit to configure RTC I²C as a master."]
-pub struct MS_MODE_R(crate::FieldReader<bool>);
-impl MS_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MS_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MS_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MS_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `MS_MODE` writer - Set this bit to configure RTC I²C as a master."]
-pub struct MS_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MS_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type MS_MODE_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 2>;
 #[doc = "Field `TRANS_START` reader - Set this bit to 1, RTC I2C starts sending data."]
-pub struct TRANS_START_R(crate::FieldReader<bool>);
-impl TRANS_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRANS_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRANS_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRANS_START_R = crate::BitReader<bool>;
 #[doc = "Field `TRANS_START` writer - Set this bit to 1, RTC I2C starts sending data."]
-pub struct TRANS_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRANS_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TRANS_START_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 3>;
 #[doc = "Field `TX_LSB_FIRST` reader - This bit is used to control the sending mode. 0: send data from the most significant bit. 1: send data from the least significant bit."]
-pub struct TX_LSB_FIRST_R(crate::FieldReader<bool>);
-impl TX_LSB_FIRST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_LSB_FIRST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_LSB_FIRST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_LSB_FIRST_R = crate::BitReader<bool>;
 #[doc = "Field `TX_LSB_FIRST` writer - This bit is used to control the sending mode. 0: send data from the most significant bit. 1: send data from the least significant bit."]
-pub struct TX_LSB_FIRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_LSB_FIRST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type TX_LSB_FIRST_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 4>;
 #[doc = "Field `RX_LSB_FIRST` reader - This bit is used to control the storage mode for received data. 0: receive data from the most significant bit. 1: receive data from the least significant bit."]
-pub struct RX_LSB_FIRST_R(crate::FieldReader<bool>);
-impl RX_LSB_FIRST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_LSB_FIRST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_LSB_FIRST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_LSB_FIRST_R = crate::BitReader<bool>;
 #[doc = "Field `RX_LSB_FIRST` writer - This bit is used to control the storage mode for received data. 0: receive data from the most significant bit. 1: receive data from the least significant bit."]
-pub struct RX_LSB_FIRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_LSB_FIRST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type RX_LSB_FIRST_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 5>;
 #[doc = "Field `CLK_GATE_EN` reader - RTC I²C controller clock gate."]
-pub struct CLK_GATE_EN_R(crate::FieldReader<bool>);
-impl CLK_GATE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_GATE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_GATE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_GATE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_GATE_EN` writer - RTC I²C controller clock gate."]
-pub struct CLK_GATE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_GATE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type CLK_GATE_EN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 29>;
 #[doc = "Field `RESET` reader - RTC I²C software reset."]
-pub struct RESET_R(crate::FieldReader<bool>);
-impl RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESET_R = crate::BitReader<bool>;
 #[doc = "Field `RESET` writer - RTC I²C software reset."]
-pub struct RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type RESET_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 30>;
 #[doc = "Field `CLK_EN` reader - rtc i2c reg clk gating"]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - rtc i2c reg clk gating"]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 0 - SDA output mode. 0: open drain. 1: push pull."]
     #[inline(always)]
@@ -418,47 +121,47 @@ impl W {
     #[doc = "Bit 0 - SDA output mode. 0: open drain. 1: push pull."]
     #[inline(always)]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W {
-        SDA_FORCE_OUT_W { w: self }
+        SDA_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 1 - SCL output mode. 0: open drain. 1: push pull."]
     #[inline(always)]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W {
-        SCL_FORCE_OUT_W { w: self }
+        SCL_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to configure RTC I²C as a master."]
     #[inline(always)]
     pub fn ms_mode(&mut self) -> MS_MODE_W {
-        MS_MODE_W { w: self }
+        MS_MODE_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to 1, RTC I2C starts sending data."]
     #[inline(always)]
     pub fn trans_start(&mut self) -> TRANS_START_W {
-        TRANS_START_W { w: self }
+        TRANS_START_W::new(self)
     }
     #[doc = "Bit 4 - This bit is used to control the sending mode. 0: send data from the most significant bit. 1: send data from the least significant bit."]
     #[inline(always)]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W {
-        TX_LSB_FIRST_W { w: self }
+        TX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 5 - This bit is used to control the storage mode for received data. 0: receive data from the most significant bit. 1: receive data from the least significant bit."]
     #[inline(always)]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W {
-        RX_LSB_FIRST_W { w: self }
+        RX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 29 - RTC I²C controller clock gate."]
     #[inline(always)]
     pub fn clk_gate_en(&mut self) -> CLK_GATE_EN_W {
-        CLK_GATE_EN_W { w: self }
+        CLK_GATE_EN_W::new(self)
     }
     #[doc = "Bit 30 - RTC I²C software reset."]
     #[inline(always)]
     pub fn reset(&mut self) -> RESET_W {
-        RESET_W { w: self }
+        RESET_W::new(self)
     }
     #[doc = "Bit 31 - rtc i2c reg clk gating"]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

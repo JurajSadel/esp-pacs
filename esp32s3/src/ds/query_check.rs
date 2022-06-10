@@ -14,35 +14,9 @@ impl From<crate::R<QUERY_CHECK_SPEC>> for R {
     }
 }
 #[doc = "Field `MD_ERROR` reader - MD checkout result. 1: The MD check fails. 0: The MD check passes."]
-pub struct MD_ERROR_R(crate::FieldReader<bool>);
-impl MD_ERROR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MD_ERROR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MD_ERROR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MD_ERROR_R = crate::BitReader<bool>;
 #[doc = "Field `PADDING_BAD` reader - padding checkout result. 1: The padding check fails. 0: The padding check passes."]
-pub struct PADDING_BAD_R(crate::FieldReader<bool>);
-impl PADDING_BAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PADDING_BAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PADDING_BAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PADDING_BAD_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - MD checkout result. 1: The MD check fails. 0: The MD check passes."]
     #[inline(always)]

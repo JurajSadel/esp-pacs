@@ -35,116 +35,20 @@ impl From<crate::W<PRO_DCACHE_TAG_POWER_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DCACHE_TAG_MEM_FORCE_ON` reader - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating."]
-pub struct PRO_DCACHE_TAG_MEM_FORCE_ON_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_TAG_MEM_FORCE_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_TAG_MEM_FORCE_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_TAG_MEM_FORCE_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_TAG_MEM_FORCE_ON_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_TAG_MEM_FORCE_ON` writer - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating."]
-pub struct PRO_DCACHE_TAG_MEM_FORCE_ON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_TAG_MEM_FORCE_ON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_DCACHE_TAG_MEM_FORCE_ON_W<'a> =
+    crate::BitWriter<'a, u32, PRO_DCACHE_TAG_POWER_CTRL_SPEC, bool, 0>;
 #[doc = "Field `PRO_DCACHE_TAG_MEM_FORCE_PD` reader - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down"]
-pub struct PRO_DCACHE_TAG_MEM_FORCE_PD_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_TAG_MEM_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_TAG_MEM_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_TAG_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_TAG_MEM_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_TAG_MEM_FORCE_PD` writer - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down"]
-pub struct PRO_DCACHE_TAG_MEM_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_TAG_MEM_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PRO_DCACHE_TAG_MEM_FORCE_PD_W<'a> =
+    crate::BitWriter<'a, u32, PRO_DCACHE_TAG_POWER_CTRL_SPEC, bool, 1>;
 #[doc = "Field `PRO_DCACHE_TAG_MEM_FORCE_PU` reader - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power up"]
-pub struct PRO_DCACHE_TAG_MEM_FORCE_PU_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_TAG_MEM_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_TAG_MEM_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_TAG_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_TAG_MEM_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_TAG_MEM_FORCE_PU` writer - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power up"]
-pub struct PRO_DCACHE_TAG_MEM_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_TAG_MEM_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PRO_DCACHE_TAG_MEM_FORCE_PU_W<'a> =
+    crate::BitWriter<'a, u32, PRO_DCACHE_TAG_POWER_CTRL_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 0 - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
@@ -166,17 +70,17 @@ impl W {
     #[doc = "Bit 0 - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn pro_dcache_tag_mem_force_on(&mut self) -> PRO_DCACHE_TAG_MEM_FORCE_ON_W {
-        PRO_DCACHE_TAG_MEM_FORCE_ON_W { w: self }
+        PRO_DCACHE_TAG_MEM_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down"]
     #[inline(always)]
     pub fn pro_dcache_tag_mem_force_pd(&mut self) -> PRO_DCACHE_TAG_MEM_FORCE_PD_W {
-        PRO_DCACHE_TAG_MEM_FORCE_PD_W { w: self }
+        PRO_DCACHE_TAG_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power up"]
     #[inline(always)]
     pub fn pro_dcache_tag_mem_force_pu(&mut self) -> PRO_DCACHE_TAG_MEM_FORCE_PU_W {
-        PRO_DCACHE_TAG_MEM_FORCE_PU_W { w: self }
+        PRO_DCACHE_TAG_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

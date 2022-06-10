@@ -14,20 +14,7 @@ impl From<crate::R<RTC_GPIO_IN_SPEC>> for R {
     }
 }
 #[doc = "Field `NEXT` reader - RTC GPIO input data"]
-pub struct NEXT_R(crate::FieldReader<u32>);
-impl NEXT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        NEXT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NEXT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NEXT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 10:31 - RTC GPIO input data"]
     #[inline(always)]

@@ -35,106 +35,17 @@ impl From<crate::W<DCACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_ENABLE` reader - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub struct DCACHE_ENABLE_R(crate::FieldReader<bool>);
-impl DCACHE_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_ENABLE` writer - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub struct DCACHE_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DCACHE_ENABLE_W<'a> = crate::BitWriter<'a, u32, DCACHE_CTRL_SPEC, bool, 0>;
 #[doc = "Field `DCACHE_SIZE_MODE` reader - The bit is used to configure cache memory size.0: 32KB, 1: 64KB"]
-pub struct DCACHE_SIZE_MODE_R(crate::FieldReader<bool>);
-impl DCACHE_SIZE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_SIZE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_SIZE_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_SIZE_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_SIZE_MODE` writer - The bit is used to configure cache memory size.0: 32KB, 1: 64KB"]
-pub struct DCACHE_SIZE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_SIZE_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type DCACHE_SIZE_MODE_W<'a> = crate::BitWriter<'a, u32, DCACHE_CTRL_SPEC, bool, 2>;
 #[doc = "Field `DCACHE_BLOCKSIZE_MODE` reader - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes,2: 64 bytes"]
-pub struct DCACHE_BLOCKSIZE_MODE_R(crate::FieldReader<u8>);
-impl DCACHE_BLOCKSIZE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DCACHE_BLOCKSIZE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_BLOCKSIZE_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_BLOCKSIZE_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DCACHE_BLOCKSIZE_MODE` writer - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes,2: 64 bytes"]
-pub struct DCACHE_BLOCKSIZE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_BLOCKSIZE_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
-        self.w
-    }
-}
+pub type DCACHE_BLOCKSIZE_MODE_W<'a> = crate::FieldWriter<'a, u32, DCACHE_CTRL_SPEC, u8, u8, 2, 3>;
 impl R {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
     pub fn dcache_enable(&mut self) -> DCACHE_ENABLE_W {
-        DCACHE_ENABLE_W { w: self }
+        DCACHE_ENABLE_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to configure cache memory size.0: 32KB, 1: 64KB"]
     #[inline(always)]
     pub fn dcache_size_mode(&mut self) -> DCACHE_SIZE_MODE_W {
-        DCACHE_SIZE_MODE_W { w: self }
+        DCACHE_SIZE_MODE_W::new(self)
     }
     #[doc = "Bits 3:4 - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes,2: 64 bytes"]
     #[inline(always)]
     pub fn dcache_blocksize_mode(&mut self) -> DCACHE_BLOCKSIZE_MODE_W {
-        DCACHE_BLOCKSIZE_MODE_W { w: self }
+        DCACHE_BLOCKSIZE_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

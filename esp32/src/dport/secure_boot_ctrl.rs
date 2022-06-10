@@ -35,42 +35,9 @@ impl From<crate::W<SECURE_BOOT_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_BOOTLOADER_SEL` reader - "]
-pub struct SW_BOOTLOADER_SEL_R(crate::FieldReader<bool>);
-impl SW_BOOTLOADER_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SW_BOOTLOADER_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_BOOTLOADER_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_BOOTLOADER_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SW_BOOTLOADER_SEL` writer - "]
-pub struct SW_BOOTLOADER_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_BOOTLOADER_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SW_BOOTLOADER_SEL_W<'a> = crate::BitWriter<'a, u32, SECURE_BOOT_CTRL_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn sw_bootloader_sel(&mut self) -> SW_BOOTLOADER_SEL_W {
-        SW_BOOTLOADER_SEL_W { w: self }
+        SW_BOOTLOADER_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

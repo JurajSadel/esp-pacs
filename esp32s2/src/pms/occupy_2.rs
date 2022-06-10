@@ -35,32 +35,9 @@ impl From<crate::W<OCCUPY_2_SPEC>> for W {
     }
 }
 #[doc = "Field `OCCUPY_MAC_DUMP` reader - Configure whether SRAM Block 18-21 is used as mac dump."]
-pub struct OCCUPY_MAC_DUMP_R(crate::FieldReader<u8>);
-impl OCCUPY_MAC_DUMP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OCCUPY_MAC_DUMP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OCCUPY_MAC_DUMP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OCCUPY_MAC_DUMP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OCCUPY_MAC_DUMP` writer - Configure whether SRAM Block 18-21 is used as mac dump."]
-pub struct OCCUPY_MAC_DUMP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OCCUPY_MAC_DUMP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type OCCUPY_MAC_DUMP_W<'a> = crate::FieldWriter<'a, u32, OCCUPY_2_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 18-21 is used as mac dump."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 18-21 is used as mac dump."]
     #[inline(always)]
     pub fn occupy_mac_dump(&mut self) -> OCCUPY_MAC_DUMP_W {
-        OCCUPY_MAC_DUMP_W { w: self }
+        OCCUPY_MAC_DUMP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

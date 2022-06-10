@@ -35,128 +35,27 @@ impl From<crate::W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC>> for W {
     }
 }
 #[doc = "Field `RECORD_PRO_PDEBUGLS0STAT` reader - "]
-pub struct RECORD_PRO_PDEBUGLS0STAT_R(crate::FieldReader<u32>);
-impl RECORD_PRO_PDEBUGLS0STAT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RECORD_PRO_PDEBUGLS0STAT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RECORD_PRO_PDEBUGLS0STAT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RECORD_PRO_PDEBUGLS0STAT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TYPE` reader - "]
-pub struct RECORD_PDEBUGLS0STAT_TYPE_R(crate::FieldReader<u8>);
-impl RECORD_PDEBUGLS0STAT_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RECORD_PDEBUGLS0STAT_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RECORD_PDEBUGLS0STAT_TYPE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RECORD_PDEBUGLS0STAT_TYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TYPE` writer - "]
-pub struct RECORD_PDEBUGLS0STAT_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RECORD_PDEBUGLS0STAT_TYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type RECORD_PDEBUGLS0STAT_TYPE_W<'a> =
+    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, u8, u8, 4, 0>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_SZ` reader - "]
-pub struct RECORD_PDEBUGLS0STAT_SZ_R(crate::FieldReader<u8>);
-impl RECORD_PDEBUGLS0STAT_SZ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RECORD_PDEBUGLS0STAT_SZ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RECORD_PDEBUGLS0STAT_SZ_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RECORD_PDEBUGLS0STAT_SZ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_SZ` writer - "]
-pub struct RECORD_PDEBUGLS0STAT_SZ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RECORD_PDEBUGLS0STAT_SZ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type RECORD_PDEBUGLS0STAT_SZ_W<'a> =
+    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, u8, u8, 4, 4>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_STCOH` reader - "]
-pub struct RECORD_PDEBUGLS0STAT_STCOH_R(crate::FieldReader<u8>);
-impl RECORD_PDEBUGLS0STAT_STCOH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RECORD_PDEBUGLS0STAT_STCOH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RECORD_PDEBUGLS0STAT_STCOH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RECORD_PDEBUGLS0STAT_STCOH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_STCOH` writer - "]
-pub struct RECORD_PDEBUGLS0STAT_STCOH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RECORD_PDEBUGLS0STAT_STCOH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
-        self.w
-    }
-}
+pub type RECORD_PDEBUGLS0STAT_STCOH_W<'a> =
+    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, u8, u8, 2, 17>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TGT` reader - "]
-pub struct RECORD_PDEBUGLS0STAT_TGT_R(crate::FieldReader<u8>);
-impl RECORD_PDEBUGLS0STAT_TGT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RECORD_PDEBUGLS0STAT_TGT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RECORD_PDEBUGLS0STAT_TGT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RECORD_PDEBUGLS0STAT_TGT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RECORD_PDEBUGLS0STAT_TGT` writer - "]
-pub struct RECORD_PDEBUGLS0STAT_TGT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RECORD_PDEBUGLS0STAT_TGT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | ((value as u32 & 0x0f) << 20);
-        self.w
-    }
-}
+pub type RECORD_PDEBUGLS0STAT_TGT_W<'a> =
+    crate::FieldWriter<'a, u32, PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC, u8, u8, 4, 20>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -188,22 +87,22 @@ impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
     pub fn record_pdebugls0stat_type(&mut self) -> RECORD_PDEBUGLS0STAT_TYPE_W {
-        RECORD_PDEBUGLS0STAT_TYPE_W { w: self }
+        RECORD_PDEBUGLS0STAT_TYPE_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     pub fn record_pdebugls0stat_sz(&mut self) -> RECORD_PDEBUGLS0STAT_SZ_W {
-        RECORD_PDEBUGLS0STAT_SZ_W { w: self }
+        RECORD_PDEBUGLS0STAT_SZ_W::new(self)
     }
     #[doc = "Bits 17:18"]
     #[inline(always)]
     pub fn record_pdebugls0stat_stcoh(&mut self) -> RECORD_PDEBUGLS0STAT_STCOH_W {
-        RECORD_PDEBUGLS0STAT_STCOH_W { w: self }
+        RECORD_PDEBUGLS0STAT_STCOH_W::new(self)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
     pub fn record_pdebugls0stat_tgt(&mut self) -> RECORD_PDEBUGLS0STAT_TGT_W {
-        RECORD_PDEBUGLS0STAT_TGT_W { w: self }
+        RECORD_PDEBUGLS0STAT_TGT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

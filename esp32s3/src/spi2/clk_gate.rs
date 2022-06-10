@@ -35,116 +35,17 @@ impl From<crate::W<CLK_GATE_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clk gate"]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - Set this bit to enable clk gate"]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, CLK_GATE_SPEC, bool, 0>;
 #[doc = "Field `MST_CLK_ACTIVE` reader - Set this bit to power on the SPI module clock."]
-pub struct MST_CLK_ACTIVE_R(crate::FieldReader<bool>);
-impl MST_CLK_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MST_CLK_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MST_CLK_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MST_CLK_ACTIVE_R = crate::BitReader<bool>;
 #[doc = "Field `MST_CLK_ACTIVE` writer - Set this bit to power on the SPI module clock."]
-pub struct MST_CLK_ACTIVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MST_CLK_ACTIVE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MST_CLK_ACTIVE_W<'a> = crate::BitWriter<'a, u32, CLK_GATE_SPEC, bool, 1>;
 #[doc = "Field `MST_CLK_SEL` reader - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
-pub struct MST_CLK_SEL_R(crate::FieldReader<bool>);
-impl MST_CLK_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MST_CLK_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MST_CLK_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MST_CLK_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `MST_CLK_SEL` writer - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
-pub struct MST_CLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MST_CLK_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type MST_CLK_SEL_W<'a> = crate::BitWriter<'a, u32, CLK_GATE_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable clk gate"]
     #[inline(always)]
@@ -166,17 +67,17 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable clk gate"]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to power on the SPI module clock."]
     #[inline(always)]
     pub fn mst_clk_active(&mut self) -> MST_CLK_ACTIVE_W {
-        MST_CLK_ACTIVE_W { w: self }
+        MST_CLK_ACTIVE_W::new(self)
     }
     #[doc = "Bit 2 - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
     #[inline(always)]
     pub fn mst_clk_sel(&mut self) -> MST_CLK_SEL_W {
-        MST_CLK_SEL_W { w: self }
+        MST_CLK_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,106 +35,17 @@ impl From<crate::W<TARGET1_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TARGET1_PERIOD` reader - target1 period"]
-pub struct TARGET1_PERIOD_R(crate::FieldReader<u32>);
-impl TARGET1_PERIOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TARGET1_PERIOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TARGET1_PERIOD_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TARGET1_PERIOD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TARGET1_PERIOD` writer - target1 period"]
-pub struct TARGET1_PERIOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TARGET1_PERIOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff_ffff) | (value as u32 & 0x03ff_ffff);
-        self.w
-    }
-}
+pub type TARGET1_PERIOD_W<'a> = crate::FieldWriter<'a, u32, TARGET1_CONF_SPEC, u32, u32, 26, 0>;
 #[doc = "Field `TARGET1_PERIOD_MODE` reader - Set target1 to period mode"]
-pub struct TARGET1_PERIOD_MODE_R(crate::FieldReader<bool>);
-impl TARGET1_PERIOD_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TARGET1_PERIOD_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TARGET1_PERIOD_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TARGET1_PERIOD_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `TARGET1_PERIOD_MODE` writer - Set target1 to period mode"]
-pub struct TARGET1_PERIOD_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TARGET1_PERIOD_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type TARGET1_PERIOD_MODE_W<'a> = crate::BitWriter<'a, u32, TARGET1_CONF_SPEC, bool, 30>;
 #[doc = "Field `TARGET1_TIMER_UNIT_SEL` reader - select which unit to compare"]
-pub struct TARGET1_TIMER_UNIT_SEL_R(crate::FieldReader<bool>);
-impl TARGET1_TIMER_UNIT_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TARGET1_TIMER_UNIT_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TARGET1_TIMER_UNIT_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TARGET1_TIMER_UNIT_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `TARGET1_TIMER_UNIT_SEL` writer - select which unit to compare"]
-pub struct TARGET1_TIMER_UNIT_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TARGET1_TIMER_UNIT_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type TARGET1_TIMER_UNIT_SEL_W<'a> = crate::BitWriter<'a, u32, TARGET1_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:25 - target1 period"]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bits 0:25 - target1 period"]
     #[inline(always)]
     pub fn target1_period(&mut self) -> TARGET1_PERIOD_W {
-        TARGET1_PERIOD_W { w: self }
+        TARGET1_PERIOD_W::new(self)
     }
     #[doc = "Bit 30 - Set target1 to period mode"]
     #[inline(always)]
     pub fn target1_period_mode(&mut self) -> TARGET1_PERIOD_MODE_W {
-        TARGET1_PERIOD_MODE_W { w: self }
+        TARGET1_PERIOD_MODE_W::new(self)
     }
     #[doc = "Bit 31 - select which unit to compare"]
     #[inline(always)]
     pub fn target1_timer_unit_sel(&mut self) -> TARGET1_TIMER_UNIT_SEL_W {
-        TARGET1_TIMER_UNIT_SEL_W { w: self }
+        TARGET1_TIMER_UNIT_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

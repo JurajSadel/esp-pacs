@@ -35,180 +35,25 @@ impl From<crate::W<PG_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `POWER_GLITCH_DSENSE` reader - power glitch desense"]
-pub struct POWER_GLITCH_DSENSE_R(crate::FieldReader<u8>);
-impl POWER_GLITCH_DSENSE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        POWER_GLITCH_DSENSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POWER_GLITCH_DSENSE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POWER_GLITCH_DSENSE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `POWER_GLITCH_DSENSE` writer - power glitch desense"]
-pub struct POWER_GLITCH_DSENSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POWER_GLITCH_DSENSE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
-        self.w
-    }
-}
+pub type POWER_GLITCH_DSENSE_W<'a> = crate::FieldWriter<'a, u32, PG_CTRL_SPEC, u8, u8, 2, 26>;
 #[doc = "Field `POWER_GLITCH_FORCE_PD` reader - force disable power glitch"]
-pub struct POWER_GLITCH_FORCE_PD_R(crate::FieldReader<bool>);
-impl POWER_GLITCH_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        POWER_GLITCH_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POWER_GLITCH_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POWER_GLITCH_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `POWER_GLITCH_FORCE_PD` writer - force disable power glitch"]
-pub struct POWER_GLITCH_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POWER_GLITCH_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type POWER_GLITCH_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, PG_CTRL_SPEC, bool, 28>;
 #[doc = "Field `POWER_GLITCH_FORCE_PU` reader - force enable power glitch"]
-pub struct POWER_GLITCH_FORCE_PU_R(crate::FieldReader<bool>);
-impl POWER_GLITCH_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        POWER_GLITCH_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POWER_GLITCH_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POWER_GLITCH_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `POWER_GLITCH_FORCE_PU` writer - force enable power glitch"]
-pub struct POWER_GLITCH_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POWER_GLITCH_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type POWER_GLITCH_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, PG_CTRL_SPEC, bool, 29>;
 #[doc = "Field `POWER_GLITCH_EFUSE_SEL` reader - use efuse value control power glitch enable"]
-pub struct POWER_GLITCH_EFUSE_SEL_R(crate::FieldReader<bool>);
-impl POWER_GLITCH_EFUSE_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        POWER_GLITCH_EFUSE_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POWER_GLITCH_EFUSE_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POWER_GLITCH_EFUSE_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `POWER_GLITCH_EFUSE_SEL` writer - use efuse value control power glitch enable"]
-pub struct POWER_GLITCH_EFUSE_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POWER_GLITCH_EFUSE_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type POWER_GLITCH_EFUSE_SEL_W<'a> = crate::BitWriter<'a, u32, PG_CTRL_SPEC, bool, 30>;
 #[doc = "Field `POWER_GLITCH_EN` reader - enable power glitch"]
-pub struct POWER_GLITCH_EN_R(crate::FieldReader<bool>);
-impl POWER_GLITCH_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        POWER_GLITCH_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POWER_GLITCH_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POWER_GLITCH_EN_R = crate::BitReader<bool>;
 #[doc = "Field `POWER_GLITCH_EN` writer - enable power glitch"]
-pub struct POWER_GLITCH_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POWER_GLITCH_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type POWER_GLITCH_EN_W<'a> = crate::BitWriter<'a, u32, PG_CTRL_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 26:27 - power glitch desense"]
     #[inline(always)]
@@ -240,27 +85,27 @@ impl W {
     #[doc = "Bits 26:27 - power glitch desense"]
     #[inline(always)]
     pub fn power_glitch_dsense(&mut self) -> POWER_GLITCH_DSENSE_W {
-        POWER_GLITCH_DSENSE_W { w: self }
+        POWER_GLITCH_DSENSE_W::new(self)
     }
     #[doc = "Bit 28 - force disable power glitch"]
     #[inline(always)]
     pub fn power_glitch_force_pd(&mut self) -> POWER_GLITCH_FORCE_PD_W {
-        POWER_GLITCH_FORCE_PD_W { w: self }
+        POWER_GLITCH_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 29 - force enable power glitch"]
     #[inline(always)]
     pub fn power_glitch_force_pu(&mut self) -> POWER_GLITCH_FORCE_PU_W {
-        POWER_GLITCH_FORCE_PU_W { w: self }
+        POWER_GLITCH_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 30 - use efuse value control power glitch enable"]
     #[inline(always)]
     pub fn power_glitch_efuse_sel(&mut self) -> POWER_GLITCH_EFUSE_SEL_W {
-        POWER_GLITCH_EFUSE_SEL_W { w: self }
+        POWER_GLITCH_EFUSE_SEL_W::new(self)
     }
     #[doc = "Bit 31 - enable power glitch"]
     #[inline(always)]
     pub fn power_glitch_en(&mut self) -> POWER_GLITCH_EN_W {
-        POWER_GLITCH_EN_W { w: self }
+        POWER_GLITCH_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

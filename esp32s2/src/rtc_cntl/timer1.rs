@@ -35,150 +35,25 @@ impl From<crate::W<TIMER1_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_STALL_EN` reader - Enables CPU stalling."]
-pub struct CPU_STALL_EN_R(crate::FieldReader<bool>);
-impl CPU_STALL_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CPU_STALL_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CPU_STALL_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CPU_STALL_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CPU_STALL_EN` writer - Enables CPU stalling."]
-pub struct CPU_STALL_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CPU_STALL_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CPU_STALL_EN_W<'a> = crate::BitWriter<'a, u32, TIMER1_SPEC, bool, 0>;
 #[doc = "Field `CPU_STALL_WAIT` reader - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
-pub struct CPU_STALL_WAIT_R(crate::FieldReader<u8>);
-impl CPU_STALL_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CPU_STALL_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CPU_STALL_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CPU_STALL_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CPU_STALL_WAIT` writer - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
-pub struct CPU_STALL_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CPU_STALL_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 1)) | ((value as u32 & 0x1f) << 1);
-        self.w
-    }
-}
+pub type CPU_STALL_WAIT_W<'a> = crate::FieldWriter<'a, u32, TIMER1_SPEC, u8, u8, 5, 1>;
 #[doc = "Field `CK8M_WAIT` reader - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
-pub struct CK8M_WAIT_R(crate::FieldReader<u8>);
-impl CK8M_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CK8M_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK8M_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK8M_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CK8M_WAIT` writer - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
-pub struct CK8M_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK8M_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 6)) | ((value as u32 & 0xff) << 6);
-        self.w
-    }
-}
+pub type CK8M_WAIT_W<'a> = crate::FieldWriter<'a, u32, TIMER1_SPEC, u8, u8, 8, 6>;
 #[doc = "Field `XTL_BUF_WAIT` reader - Sets the XTAL waiting cycle (using the RTC slow clock)."]
-pub struct XTL_BUF_WAIT_R(crate::FieldReader<u16>);
-impl XTL_BUF_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        XTL_BUF_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XTL_BUF_WAIT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XTL_BUF_WAIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `XTL_BUF_WAIT` writer - Sets the XTAL waiting cycle (using the RTC slow clock)."]
-pub struct XTL_BUF_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XTL_BUF_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 14)) | ((value as u32 & 0x03ff) << 14);
-        self.w
-    }
-}
+pub type XTL_BUF_WAIT_W<'a> = crate::FieldWriter<'a, u32, TIMER1_SPEC, u16, u16, 10, 14>;
 #[doc = "Field `PLL_BUF_WAIT` reader - Sets the PLL waiting cycle (using the RTC slow clock)."]
-pub struct PLL_BUF_WAIT_R(crate::FieldReader<u8>);
-impl PLL_BUF_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PLL_BUF_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLL_BUF_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLL_BUF_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PLL_BUF_WAIT` writer - Sets the PLL waiting cycle (using the RTC slow clock)."]
-pub struct PLL_BUF_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLL_BUF_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
-        self.w
-    }
-}
+pub type PLL_BUF_WAIT_W<'a> = crate::FieldWriter<'a, u32, TIMER1_SPEC, u8, u8, 8, 24>;
 impl R {
     #[doc = "Bit 0 - Enables CPU stalling."]
     #[inline(always)]
@@ -210,27 +85,27 @@ impl W {
     #[doc = "Bit 0 - Enables CPU stalling."]
     #[inline(always)]
     pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W {
-        CPU_STALL_EN_W { w: self }
+        CPU_STALL_EN_W::new(self)
     }
     #[doc = "Bits 1:5 - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
     #[inline(always)]
     pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W {
-        CPU_STALL_WAIT_W { w: self }
+        CPU_STALL_WAIT_W::new(self)
     }
     #[doc = "Bits 6:13 - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
     #[inline(always)]
     pub fn ck8m_wait(&mut self) -> CK8M_WAIT_W {
-        CK8M_WAIT_W { w: self }
+        CK8M_WAIT_W::new(self)
     }
     #[doc = "Bits 14:23 - Sets the XTAL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
     pub fn xtl_buf_wait(&mut self) -> XTL_BUF_WAIT_W {
-        XTL_BUF_WAIT_W { w: self }
+        XTL_BUF_WAIT_W::new(self)
     }
     #[doc = "Bits 24:31 - Sets the PLL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
     pub fn pll_buf_wait(&mut self) -> PLL_BUF_WAIT_W {
-        PLL_BUF_WAIT_W { w: self }
+        PLL_BUF_WAIT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

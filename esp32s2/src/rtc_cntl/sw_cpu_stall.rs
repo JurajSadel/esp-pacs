@@ -35,59 +35,13 @@ impl From<crate::W<SW_CPU_STALL_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_STALL_APPCPU_C1` reader - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
-pub struct SW_STALL_APPCPU_C1_R(crate::FieldReader<u8>);
-impl SW_STALL_APPCPU_C1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SW_STALL_APPCPU_C1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_STALL_APPCPU_C1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_STALL_APPCPU_C1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SW_STALL_APPCPU_C1` writer - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
-pub struct SW_STALL_APPCPU_C1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_STALL_APPCPU_C1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 20)) | ((value as u32 & 0x3f) << 20);
-        self.w
-    }
-}
+pub type SW_STALL_APPCPU_C1_W<'a> = crate::FieldWriter<'a, u32, SW_CPU_STALL_SPEC, u8, u8, 6, 20>;
 #[doc = "Field `SW_STALL_PROCPU_C1` reader - Set this bit to allow the SW to be able to send the CPU into stalling."]
-pub struct SW_STALL_PROCPU_C1_R(crate::FieldReader<u8>);
-impl SW_STALL_PROCPU_C1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SW_STALL_PROCPU_C1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_STALL_PROCPU_C1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_STALL_PROCPU_C1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SW_STALL_PROCPU_C1` writer - Set this bit to allow the SW to be able to send the CPU into stalling."]
-pub struct SW_STALL_PROCPU_C1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_STALL_PROCPU_C1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 26)) | ((value as u32 & 0x3f) << 26);
-        self.w
-    }
-}
+pub type SW_STALL_PROCPU_C1_W<'a> = crate::FieldWriter<'a, u32, SW_CPU_STALL_SPEC, u8, u8, 6, 26>;
 impl R {
     #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\] reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
     pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W {
-        SW_STALL_APPCPU_C1_W { w: self }
+        SW_STALL_APPCPU_C1_W::new(self)
     }
     #[doc = "Bits 26:31 - Set this bit to allow the SW to be able to send the CPU into stalling."]
     #[inline(always)]
     pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W {
-        SW_STALL_PROCPU_C1_W { w: self }
+        SW_STALL_PROCPU_C1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

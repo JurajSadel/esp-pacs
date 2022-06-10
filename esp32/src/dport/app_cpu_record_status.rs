@@ -14,20 +14,7 @@ impl From<crate::R<APP_CPU_RECORD_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `APP_CPU_RECORDING` reader - "]
-pub struct APP_CPU_RECORDING_R(crate::FieldReader<bool>);
-impl APP_CPU_RECORDING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CPU_RECORDING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CPU_RECORDING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CPU_RECORDING_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

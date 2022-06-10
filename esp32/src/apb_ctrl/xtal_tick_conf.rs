@@ -35,32 +35,9 @@ impl From<crate::W<XTAL_TICK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XTAL_TICK_NUM` reader - "]
-pub struct XTAL_TICK_NUM_R(crate::FieldReader<u8>);
-impl XTAL_TICK_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        XTAL_TICK_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XTAL_TICK_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XTAL_TICK_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `XTAL_TICK_NUM` writer - "]
-pub struct XTAL_TICK_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XTAL_TICK_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type XTAL_TICK_NUM_W<'a> = crate::FieldWriter<'a, u32, XTAL_TICK_CONF_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W {
-        XTAL_TICK_NUM_W { w: self }
+        XTAL_TICK_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

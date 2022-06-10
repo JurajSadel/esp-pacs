@@ -14,35 +14,9 @@ impl From<crate::R<SAR_TOUCH_STATUS0_SPEC>> for R {
     }
 }
 #[doc = "Field `TOUCH_DENOISE_DATA` reader - Denoise measure value from touch sensor 0."]
-pub struct TOUCH_DENOISE_DATA_R(crate::FieldReader<u32>);
-impl TOUCH_DENOISE_DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TOUCH_DENOISE_DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_DENOISE_DATA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_DENOISE_DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TOUCH_SCAN_CURR` reader - Current pad in scan status"]
-pub struct TOUCH_SCAN_CURR_R(crate::FieldReader<u8>);
-impl TOUCH_SCAN_CURR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_SCAN_CURR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_SCAN_CURR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_SCAN_CURR_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:21 - Denoise measure value from touch sensor 0."]
     #[inline(always)]

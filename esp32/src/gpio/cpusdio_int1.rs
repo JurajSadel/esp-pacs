@@ -35,175 +35,27 @@ impl From<crate::W<CPUSDIO_INT1_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_INT_H` reader - SDIO's extent GPIO32~39 interrupt"]
-pub struct SDIO_INT_H_R(crate::FieldReader<u8>);
-impl SDIO_INT_H_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SDIO_INT_H_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_INT_H_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_INT_H_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PIN_PAD_DRIVER` reader - "]
-pub struct PIN_PAD_DRIVER_R(crate::FieldReader<bool>);
-impl PIN_PAD_DRIVER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN_PAD_DRIVER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN_PAD_DRIVER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN_PAD_DRIVER_R = crate::BitReader<bool>;
 #[doc = "Field `PIN_PAD_DRIVER` writer - "]
-pub struct PIN_PAD_DRIVER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN_PAD_DRIVER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PIN_PAD_DRIVER_W<'a> = crate::BitWriter<'a, u32, CPUSDIO_INT1_SPEC, bool, 2>;
 #[doc = "Field `PIN_INT_TYPE` reader - "]
-pub struct PIN_INT_TYPE_R(crate::FieldReader<u8>);
-impl PIN_INT_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN_INT_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN_INT_TYPE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN_INT_TYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PIN_INT_TYPE` writer - "]
-pub struct PIN_INT_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN_INT_TYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 7)) | ((value as u32 & 7) << 7);
-        self.w
-    }
-}
+pub type PIN_INT_TYPE_W<'a> = crate::FieldWriter<'a, u32, CPUSDIO_INT1_SPEC, u8, u8, 3, 7>;
 #[doc = "Field `PIN_WAKEUP_ENABLE` reader - "]
-pub struct PIN_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
-impl PIN_WAKEUP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN_WAKEUP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN_WAKEUP_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `PIN_WAKEUP_ENABLE` writer - "]
-pub struct PIN_WAKEUP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN_WAKEUP_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type PIN_WAKEUP_ENABLE_W<'a> = crate::BitWriter<'a, u32, CPUSDIO_INT1_SPEC, bool, 10>;
 #[doc = "Field `PIN_CONFIG` reader - "]
-pub struct PIN_CONFIG_R(crate::FieldReader<u8>);
-impl PIN_CONFIG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN_CONFIG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN_CONFIG_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN_CONFIG_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PIN_CONFIG` writer - "]
-pub struct PIN_CONFIG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN_CONFIG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 11)) | ((value as u32 & 3) << 11);
-        self.w
-    }
-}
+pub type PIN_CONFIG_W<'a> = crate::FieldWriter<'a, u32, CPUSDIO_INT1_SPEC, u8, u8, 2, 11>;
 #[doc = "Field `PIN_INT_ENA` reader - "]
-pub struct PIN_INT_ENA_R(crate::FieldReader<u8>);
-impl PIN_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN_INT_ENA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN_INT_ENA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PIN_INT_ENA` writer - "]
-pub struct PIN_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN_INT_ENA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 13)) | ((value as u32 & 0x1f) << 13);
-        self.w
-    }
-}
+pub type PIN_INT_ENA_W<'a> = crate::FieldWriter<'a, u32, CPUSDIO_INT1_SPEC, u8, u8, 5, 13>;
 impl R {
     #[doc = "Bits 0:7 - SDIO's extent GPIO32~39 interrupt"]
     #[inline(always)]
@@ -240,27 +92,27 @@ impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn pin_pad_driver(&mut self) -> PIN_PAD_DRIVER_W {
-        PIN_PAD_DRIVER_W { w: self }
+        PIN_PAD_DRIVER_W::new(self)
     }
     #[doc = "Bits 7:9"]
     #[inline(always)]
     pub fn pin_int_type(&mut self) -> PIN_INT_TYPE_W {
-        PIN_INT_TYPE_W { w: self }
+        PIN_INT_TYPE_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn pin_wakeup_enable(&mut self) -> PIN_WAKEUP_ENABLE_W {
-        PIN_WAKEUP_ENABLE_W { w: self }
+        PIN_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
     pub fn pin_config(&mut self) -> PIN_CONFIG_W {
-        PIN_CONFIG_W { w: self }
+        PIN_CONFIG_W::new(self)
     }
     #[doc = "Bits 13:17"]
     #[inline(always)]
     pub fn pin_int_ena(&mut self) -> PIN_INT_ENA_W {
-        PIN_INT_ENA_W { w: self }
+        PIN_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

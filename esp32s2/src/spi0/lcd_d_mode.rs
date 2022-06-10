@@ -35,214 +35,33 @@ impl From<crate::W<LCD_D_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `D_DQS_MODE` reader - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_DQS_MODE_R(crate::FieldReader<u8>);
-impl D_DQS_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        D_DQS_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for D_DQS_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type D_DQS_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `D_DQS_MODE` writer - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_DQS_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D_DQS_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type D_DQS_MODE_W<'a> = crate::FieldWriter<'a, u32, LCD_D_MODE_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `D_CD_MODE` reader - the output spi_cd is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_CD_MODE_R(crate::FieldReader<u8>);
-impl D_CD_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        D_CD_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for D_CD_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type D_CD_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `D_CD_MODE` writer - the output spi_cd is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_CD_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D_CD_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
-        self.w
-    }
-}
+pub type D_CD_MODE_W<'a> = crate::FieldWriter<'a, u32, LCD_D_MODE_SPEC, u8, u8, 3, 3>;
 #[doc = "Field `D_DE_MODE` reader - the output spi_de is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_DE_MODE_R(crate::FieldReader<u8>);
-impl D_DE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        D_DE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for D_DE_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type D_DE_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `D_DE_MODE` writer - the output spi_de is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_DE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D_DE_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
-        self.w
-    }
-}
+pub type D_DE_MODE_W<'a> = crate::FieldWriter<'a, u32, LCD_D_MODE_SPEC, u8, u8, 3, 6>;
 #[doc = "Field `D_HSYNC_MODE` reader - the output spi_hsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_HSYNC_MODE_R(crate::FieldReader<u8>);
-impl D_HSYNC_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        D_HSYNC_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for D_HSYNC_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type D_HSYNC_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `D_HSYNC_MODE` writer - the output spi_hsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_HSYNC_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D_HSYNC_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
-        self.w
-    }
-}
+pub type D_HSYNC_MODE_W<'a> = crate::FieldWriter<'a, u32, LCD_D_MODE_SPEC, u8, u8, 3, 9>;
 #[doc = "Field `D_VSYNC_MODE` reader - the output spi_vsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_VSYNC_MODE_R(crate::FieldReader<u8>);
-impl D_VSYNC_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        D_VSYNC_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for D_VSYNC_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type D_VSYNC_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `D_VSYNC_MODE` writer - the output spi_vsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct D_VSYNC_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D_VSYNC_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
-        self.w
-    }
-}
+pub type D_VSYNC_MODE_W<'a> = crate::FieldWriter<'a, u32, LCD_D_MODE_SPEC, u8, u8, 3, 12>;
 #[doc = "Field `DE_IDLE_POL` reader - It is the idle value of spi_de."]
-pub struct DE_IDLE_POL_R(crate::FieldReader<bool>);
-impl DE_IDLE_POL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DE_IDLE_POL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DE_IDLE_POL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DE_IDLE_POL_R = crate::BitReader<bool>;
 #[doc = "Field `DE_IDLE_POL` writer - It is the idle value of spi_de."]
-pub struct DE_IDLE_POL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DE_IDLE_POL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type DE_IDLE_POL_W<'a> = crate::BitWriter<'a, u32, LCD_D_MODE_SPEC, bool, 15>;
 #[doc = "Field `HS_BLANK_EN` reader - 1: The pulse of spi_hsync is out in vertical blanking lines in seg-trans or one trans. 0: spi_hsync pulse is valid only in active region lines in seg-trans."]
-pub struct HS_BLANK_EN_R(crate::FieldReader<bool>);
-impl HS_BLANK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HS_BLANK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HS_BLANK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HS_BLANK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `HS_BLANK_EN` writer - 1: The pulse of spi_hsync is out in vertical blanking lines in seg-trans or one trans. 0: spi_hsync pulse is valid only in active region lines in seg-trans."]
-pub struct HS_BLANK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HS_BLANK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type HS_BLANK_EN_W<'a> = crate::BitWriter<'a, u32, LCD_D_MODE_SPEC, bool, 16>;
 impl R {
     #[doc = "Bits 0:2 - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
@@ -284,37 +103,37 @@ impl W {
     #[doc = "Bits 0:2 - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_dqs_mode(&mut self) -> D_DQS_MODE_W {
-        D_DQS_MODE_W { w: self }
+        D_DQS_MODE_W::new(self)
     }
     #[doc = "Bits 3:5 - the output spi_cd is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_cd_mode(&mut self) -> D_CD_MODE_W {
-        D_CD_MODE_W { w: self }
+        D_CD_MODE_W::new(self)
     }
     #[doc = "Bits 6:8 - the output spi_de is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_de_mode(&mut self) -> D_DE_MODE_W {
-        D_DE_MODE_W { w: self }
+        D_DE_MODE_W::new(self)
     }
     #[doc = "Bits 9:11 - the output spi_hsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_hsync_mode(&mut self) -> D_HSYNC_MODE_W {
-        D_HSYNC_MODE_W { w: self }
+        D_HSYNC_MODE_W::new(self)
     }
     #[doc = "Bits 12:14 - the output spi_vsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_vsync_mode(&mut self) -> D_VSYNC_MODE_W {
-        D_VSYNC_MODE_W { w: self }
+        D_VSYNC_MODE_W::new(self)
     }
     #[doc = "Bit 15 - It is the idle value of spi_de."]
     #[inline(always)]
     pub fn de_idle_pol(&mut self) -> DE_IDLE_POL_W {
-        DE_IDLE_POL_W { w: self }
+        DE_IDLE_POL_W::new(self)
     }
     #[doc = "Bit 16 - 1: The pulse of spi_hsync is out in vertical blanking lines in seg-trans or one trans. 0: spi_hsync pulse is valid only in active region lines in seg-trans."]
     #[inline(always)]
     pub fn hs_blank_en(&mut self) -> HS_BLANK_EN_W {
-        HS_BLANK_EN_W { w: self }
+        HS_BLANK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

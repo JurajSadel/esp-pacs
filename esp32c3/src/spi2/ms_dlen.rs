@@ -35,32 +35,9 @@ impl From<crate::W<MS_DLEN_SPEC>> for W {
     }
 }
 #[doc = "Field `MS_DATA_BITLEN` reader - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub struct MS_DATA_BITLEN_R(crate::FieldReader<u32>);
-impl MS_DATA_BITLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        MS_DATA_BITLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MS_DATA_BITLEN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MS_DATA_BITLEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MS_DATA_BITLEN` writer - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub struct MS_DATA_BITLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MS_DATA_BITLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0003_ffff) | (value as u32 & 0x0003_ffff);
-        self.w
-    }
-}
+pub type MS_DATA_BITLEN_W<'a> = crate::FieldWriter<'a, u32, MS_DLEN_SPEC, u32, u32, 18, 0>;
 impl R {
     #[doc = "Bits 0:17 - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:17 - The value of these bits is the configured SPI transmission data bit length in master mode DMA controlled transfer or CPU controlled transfer. The value is also the configured bit length in slave mode DMA RX controlled transfer. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
     pub fn ms_data_bitlen(&mut self) -> MS_DATA_BITLEN_W {
-        MS_DATA_BITLEN_W { w: self }
+        MS_DATA_BITLEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

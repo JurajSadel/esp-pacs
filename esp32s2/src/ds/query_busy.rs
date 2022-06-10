@@ -14,20 +14,7 @@ impl From<crate::R<QUERY_BUSY_SPEC>> for R {
     }
 }
 #[doc = "Field `QUERY_BUSY` reader - 1: The DS peripheral is busy. 0: The DS peripheral is idle."]
-pub struct QUERY_BUSY_R(crate::FieldReader<bool>);
-impl QUERY_BUSY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        QUERY_BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for QUERY_BUSY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type QUERY_BUSY_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - 1: The DS peripheral is busy. 0: The DS peripheral is idle."]
     #[inline(always)]

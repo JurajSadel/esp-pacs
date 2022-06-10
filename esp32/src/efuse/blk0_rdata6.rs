@@ -14,155 +14,25 @@ impl From<crate::R<BLK0_RDATA6_SPEC>> for R {
     }
 }
 #[doc = "Field `RD_CODING_SCHEME` reader - read for coding_scheme"]
-pub struct RD_CODING_SCHEME_R(crate::FieldReader<u8>);
-impl RD_CODING_SCHEME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_CODING_SCHEME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_CODING_SCHEME_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_CODING_SCHEME_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_CONSOLE_DEBUG_DISABLE` reader - read for console_debug_disable"]
-pub struct RD_CONSOLE_DEBUG_DISABLE_R(crate::FieldReader<bool>);
-impl RD_CONSOLE_DEBUG_DISABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_CONSOLE_DEBUG_DISABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_CONSOLE_DEBUG_DISABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_CONSOLE_DEBUG_DISABLE_R = crate::BitReader<bool>;
 #[doc = "Field `RD_DISABLE_SDIO_HOST` reader - "]
-pub struct RD_DISABLE_SDIO_HOST_R(crate::FieldReader<bool>);
-impl RD_DISABLE_SDIO_HOST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_DISABLE_SDIO_HOST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_DISABLE_SDIO_HOST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_DISABLE_SDIO_HOST_R = crate::BitReader<bool>;
 #[doc = "Field `RD_ABS_DONE_0` reader - read for abstract_done_0"]
-pub struct RD_ABS_DONE_0_R(crate::FieldReader<bool>);
-impl RD_ABS_DONE_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_ABS_DONE_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_ABS_DONE_0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_ABS_DONE_0_R = crate::BitReader<bool>;
 #[doc = "Field `RD_ABS_DONE_1` reader - read for abstract_done_1"]
-pub struct RD_ABS_DONE_1_R(crate::FieldReader<bool>);
-impl RD_ABS_DONE_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_ABS_DONE_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_ABS_DONE_1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_ABS_DONE_1_R = crate::BitReader<bool>;
 #[doc = "Field `RD_DISABLE_JTAG` reader - read for JTAG_disable"]
-pub struct RD_DISABLE_JTAG_R(crate::FieldReader<bool>);
-impl RD_DISABLE_JTAG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_DISABLE_JTAG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_DISABLE_JTAG_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_DISABLE_JTAG_R = crate::BitReader<bool>;
 #[doc = "Field `RD_DISABLE_DL_ENCRYPT` reader - read for download_dis_encrypt"]
-pub struct RD_DISABLE_DL_ENCRYPT_R(crate::FieldReader<bool>);
-impl RD_DISABLE_DL_ENCRYPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_DISABLE_DL_ENCRYPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_DISABLE_DL_ENCRYPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_DISABLE_DL_ENCRYPT_R = crate::BitReader<bool>;
 #[doc = "Field `RD_DISABLE_DL_DECRYPT` reader - read for download_dis_decrypt"]
-pub struct RD_DISABLE_DL_DECRYPT_R(crate::FieldReader<bool>);
-impl RD_DISABLE_DL_DECRYPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_DISABLE_DL_DECRYPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_DISABLE_DL_DECRYPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_DISABLE_DL_DECRYPT_R = crate::BitReader<bool>;
 #[doc = "Field `RD_DISABLE_DL_CACHE` reader - read for download_dis_cache"]
-pub struct RD_DISABLE_DL_CACHE_R(crate::FieldReader<bool>);
-impl RD_DISABLE_DL_CACHE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_DISABLE_DL_CACHE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_DISABLE_DL_CACHE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_DISABLE_DL_CACHE_R = crate::BitReader<bool>;
 #[doc = "Field `RD_KEY_STATUS` reader - read for key_status"]
-pub struct RD_KEY_STATUS_R(crate::FieldReader<bool>);
-impl RD_KEY_STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_KEY_STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_KEY_STATUS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_KEY_STATUS_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:1 - read for coding_scheme"]
     #[inline(always)]

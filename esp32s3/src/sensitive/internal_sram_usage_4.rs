@@ -35,32 +35,10 @@ impl From<crate::W<INTERNAL_SRAM_USAGE_4_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERNAL_SRAM_LOG_USAGE` reader - Set 1 to someone bit means corresponding internal SRAM level can be accessed by log bus."]
-pub struct INTERNAL_SRAM_LOG_USAGE_R(crate::FieldReader<u8>);
-impl INTERNAL_SRAM_LOG_USAGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INTERNAL_SRAM_LOG_USAGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERNAL_SRAM_LOG_USAGE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERNAL_SRAM_LOG_USAGE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `INTERNAL_SRAM_LOG_USAGE` writer - Set 1 to someone bit means corresponding internal SRAM level can be accessed by log bus."]
-pub struct INTERNAL_SRAM_LOG_USAGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERNAL_SRAM_LOG_USAGE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type INTERNAL_SRAM_LOG_USAGE_W<'a> =
+    crate::FieldWriter<'a, u32, INTERNAL_SRAM_USAGE_4_SPEC, u8, u8, 7, 0>;
 impl R {
     #[doc = "Bits 0:6 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by log bus."]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:6 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by log bus."]
     #[inline(always)]
     pub fn internal_sram_log_usage(&mut self) -> INTERNAL_SRAM_LOG_USAGE_W {
-        INTERNAL_SRAM_LOG_USAGE_W { w: self }
+        INTERNAL_SRAM_LOG_USAGE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

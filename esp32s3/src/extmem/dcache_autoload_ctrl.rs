@@ -35,259 +35,41 @@ impl From<crate::W<DCACHE_AUTOLOAD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_AUTOLOAD_SCT0_ENA` reader - The bits are used to enable the first section for autoload operation."]
-pub struct DCACHE_AUTOLOAD_SCT0_ENA_R(crate::FieldReader<bool>);
-impl DCACHE_AUTOLOAD_SCT0_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_AUTOLOAD_SCT0_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_AUTOLOAD_SCT0_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_AUTOLOAD_SCT0_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT0_ENA` writer - The bits are used to enable the first section for autoload operation."]
-pub struct DCACHE_AUTOLOAD_SCT0_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_AUTOLOAD_SCT0_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DCACHE_AUTOLOAD_SCT0_ENA_W<'a> =
+    crate::BitWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, bool, 0>;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT1_ENA` reader - The bits are used to enable the second section for autoload operation."]
-pub struct DCACHE_AUTOLOAD_SCT1_ENA_R(crate::FieldReader<bool>);
-impl DCACHE_AUTOLOAD_SCT1_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_AUTOLOAD_SCT1_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_AUTOLOAD_SCT1_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_AUTOLOAD_SCT1_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT1_ENA` writer - The bits are used to enable the second section for autoload operation."]
-pub struct DCACHE_AUTOLOAD_SCT1_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_AUTOLOAD_SCT1_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type DCACHE_AUTOLOAD_SCT1_ENA_W<'a> =
+    crate::BitWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, bool, 1>;
 #[doc = "Field `DCACHE_AUTOLOAD_ENA` reader - The bit is used to enable and disable autoload operation. It is combined with dcache_autoload_done. 1: enable, 0: disable."]
-pub struct DCACHE_AUTOLOAD_ENA_R(crate::FieldReader<bool>);
-impl DCACHE_AUTOLOAD_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_AUTOLOAD_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_AUTOLOAD_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_AUTOLOAD_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_AUTOLOAD_ENA` writer - The bit is used to enable and disable autoload operation. It is combined with dcache_autoload_done. 1: enable, 0: disable."]
-pub struct DCACHE_AUTOLOAD_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_AUTOLOAD_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type DCACHE_AUTOLOAD_ENA_W<'a> = crate::BitWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, bool, 2>;
 #[doc = "Field `DCACHE_AUTOLOAD_DONE` reader - The bit is used to indicate autoload operation is finished."]
-pub struct DCACHE_AUTOLOAD_DONE_R(crate::FieldReader<bool>);
-impl DCACHE_AUTOLOAD_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_AUTOLOAD_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_AUTOLOAD_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_AUTOLOAD_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_AUTOLOAD_ORDER` reader - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
-pub struct DCACHE_AUTOLOAD_ORDER_R(crate::FieldReader<bool>);
-impl DCACHE_AUTOLOAD_ORDER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_AUTOLOAD_ORDER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_AUTOLOAD_ORDER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_AUTOLOAD_ORDER_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_AUTOLOAD_ORDER` writer - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
-pub struct DCACHE_AUTOLOAD_ORDER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_AUTOLOAD_ORDER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type DCACHE_AUTOLOAD_ORDER_W<'a> =
+    crate::BitWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, bool, 4>;
 #[doc = "Field `DCACHE_AUTOLOAD_RQST` reader - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
-pub struct DCACHE_AUTOLOAD_RQST_R(crate::FieldReader<u8>);
-impl DCACHE_AUTOLOAD_RQST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DCACHE_AUTOLOAD_RQST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_AUTOLOAD_RQST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_AUTOLOAD_RQST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DCACHE_AUTOLOAD_RQST` writer - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
-pub struct DCACHE_AUTOLOAD_RQST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_AUTOLOAD_RQST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 5)) | ((value as u32 & 3) << 5);
-        self.w
-    }
-}
+pub type DCACHE_AUTOLOAD_RQST_W<'a> =
+    crate::FieldWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, u8, u8, 2, 5>;
 #[doc = "Field `DCACHE_AUTOLOAD_SIZE` reader - The bits are used to configure the numbers of the cache block for the issuing autoload operation."]
-pub struct DCACHE_AUTOLOAD_SIZE_R(crate::FieldReader<u8>);
-impl DCACHE_AUTOLOAD_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DCACHE_AUTOLOAD_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_AUTOLOAD_SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_AUTOLOAD_SIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DCACHE_AUTOLOAD_SIZE` writer - The bits are used to configure the numbers of the cache block for the issuing autoload operation."]
-pub struct DCACHE_AUTOLOAD_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_AUTOLOAD_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 7)) | ((value as u32 & 3) << 7);
-        self.w
-    }
-}
+pub type DCACHE_AUTOLOAD_SIZE_W<'a> =
+    crate::FieldWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, u8, u8, 2, 7>;
 #[doc = "Field `DCACHE_AUTOLOAD_BUFFER_CLEAR` reader - The bit is used to clear autoload buffer in dcache."]
-pub struct DCACHE_AUTOLOAD_BUFFER_CLEAR_R(crate::FieldReader<bool>);
-impl DCACHE_AUTOLOAD_BUFFER_CLEAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_AUTOLOAD_BUFFER_CLEAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_AUTOLOAD_BUFFER_CLEAR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_AUTOLOAD_BUFFER_CLEAR_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_AUTOLOAD_BUFFER_CLEAR` writer - The bit is used to clear autoload buffer in dcache."]
-pub struct DCACHE_AUTOLOAD_BUFFER_CLEAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_AUTOLOAD_BUFFER_CLEAR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type DCACHE_AUTOLOAD_BUFFER_CLEAR_W<'a> =
+    crate::BitWriter<'a, u32, DCACHE_AUTOLOAD_CTRL_SPEC, bool, 9>;
 impl R {
     #[doc = "Bit 0 - The bits are used to enable the first section for autoload operation."]
     #[inline(always)]
@@ -334,37 +116,37 @@ impl W {
     #[doc = "Bit 0 - The bits are used to enable the first section for autoload operation."]
     #[inline(always)]
     pub fn dcache_autoload_sct0_ena(&mut self) -> DCACHE_AUTOLOAD_SCT0_ENA_W {
-        DCACHE_AUTOLOAD_SCT0_ENA_W { w: self }
+        DCACHE_AUTOLOAD_SCT0_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The bits are used to enable the second section for autoload operation."]
     #[inline(always)]
     pub fn dcache_autoload_sct1_ena(&mut self) -> DCACHE_AUTOLOAD_SCT1_ENA_W {
-        DCACHE_AUTOLOAD_SCT1_ENA_W { w: self }
+        DCACHE_AUTOLOAD_SCT1_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to enable and disable autoload operation. It is combined with dcache_autoload_done. 1: enable, 0: disable."]
     #[inline(always)]
     pub fn dcache_autoload_ena(&mut self) -> DCACHE_AUTOLOAD_ENA_W {
-        DCACHE_AUTOLOAD_ENA_W { w: self }
+        DCACHE_AUTOLOAD_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
     #[inline(always)]
     pub fn dcache_autoload_order(&mut self) -> DCACHE_AUTOLOAD_ORDER_W {
-        DCACHE_AUTOLOAD_ORDER_W { w: self }
+        DCACHE_AUTOLOAD_ORDER_W::new(self)
     }
     #[doc = "Bits 5:6 - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
     #[inline(always)]
     pub fn dcache_autoload_rqst(&mut self) -> DCACHE_AUTOLOAD_RQST_W {
-        DCACHE_AUTOLOAD_RQST_W { w: self }
+        DCACHE_AUTOLOAD_RQST_W::new(self)
     }
     #[doc = "Bits 7:8 - The bits are used to configure the numbers of the cache block for the issuing autoload operation."]
     #[inline(always)]
     pub fn dcache_autoload_size(&mut self) -> DCACHE_AUTOLOAD_SIZE_W {
-        DCACHE_AUTOLOAD_SIZE_W { w: self }
+        DCACHE_AUTOLOAD_SIZE_W::new(self)
     }
     #[doc = "Bit 9 - The bit is used to clear autoload buffer in dcache."]
     #[inline(always)]
     pub fn dcache_autoload_buffer_clear(&mut self) -> DCACHE_AUTOLOAD_BUFFER_CLEAR_W {
-        DCACHE_AUTOLOAD_BUFFER_CLEAR_W { w: self }
+        DCACHE_AUTOLOAD_BUFFER_CLEAR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

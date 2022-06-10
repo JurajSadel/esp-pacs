@@ -14,125 +14,21 @@ impl From<crate::R<RD_REPEAT_DATA1_SPEC>> for R {
     }
 }
 #[doc = "Field `RPT4_RESERVED2` reader - Reserved (used for four backups method)."]
-pub struct RPT4_RESERVED2_R(crate::FieldReader<u16>);
-impl RPT4_RESERVED2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RPT4_RESERVED2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RPT4_RESERVED2_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RPT4_RESERVED2_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WDT_DELAY_SEL` reader - Selects RTC watchdog timeout threshold, in unit of slow clock cycle. 0: 40000. 1: 80000. 2: 160000. 3:320000."]
-pub struct WDT_DELAY_SEL_R(crate::FieldReader<u8>);
-impl WDT_DELAY_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WDT_DELAY_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WDT_DELAY_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WDT_DELAY_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_BOOT_CRYPT_CNT` reader - Set this bit to enable SPI boot encrypt/decrypt. Odd number of 1: enable. even number of 1: disable."]
-pub struct SPI_BOOT_CRYPT_CNT_R(crate::FieldReader<u8>);
-impl SPI_BOOT_CRYPT_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_BOOT_CRYPT_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_BOOT_CRYPT_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_BOOT_CRYPT_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE0` reader - Set this bit to enable revoking first secure boot key."]
-pub struct SECURE_BOOT_KEY_REVOKE0_R(crate::FieldReader<bool>);
-impl SECURE_BOOT_KEY_REVOKE0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECURE_BOOT_KEY_REVOKE0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECURE_BOOT_KEY_REVOKE0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECURE_BOOT_KEY_REVOKE0_R = crate::BitReader<bool>;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE1` reader - Set this bit to enable revoking second secure boot key."]
-pub struct SECURE_BOOT_KEY_REVOKE1_R(crate::FieldReader<bool>);
-impl SECURE_BOOT_KEY_REVOKE1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECURE_BOOT_KEY_REVOKE1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECURE_BOOT_KEY_REVOKE1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECURE_BOOT_KEY_REVOKE1_R = crate::BitReader<bool>;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE2` reader - Set this bit to enable revoking third secure boot key."]
-pub struct SECURE_BOOT_KEY_REVOKE2_R(crate::FieldReader<bool>);
-impl SECURE_BOOT_KEY_REVOKE2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECURE_BOOT_KEY_REVOKE2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECURE_BOOT_KEY_REVOKE2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECURE_BOOT_KEY_REVOKE2_R = crate::BitReader<bool>;
 #[doc = "Field `KEY_PURPOSE_0` reader - Purpose of Key0."]
-pub struct KEY_PURPOSE_0_R(crate::FieldReader<u8>);
-impl KEY_PURPOSE_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_PURPOSE_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_PURPOSE_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_PURPOSE_0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `KEY_PURPOSE_1` reader - Purpose of Key1."]
-pub struct KEY_PURPOSE_1_R(crate::FieldReader<u8>);
-impl KEY_PURPOSE_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_PURPOSE_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_PURPOSE_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_PURPOSE_1_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:15 - Reserved (used for four backups method)."]
     #[inline(always)]

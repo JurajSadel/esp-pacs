@@ -14,65 +14,13 @@ impl From<crate::R<RXFIFO_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_START_ADDR` reader - This is the offset address of the last receiving data as described in nonfifo_rx_thres_register."]
-pub struct RXFIFO_START_ADDR_R(crate::FieldReader<u8>);
-impl RXFIFO_START_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RXFIFO_START_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_START_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_START_ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RXFIFO_END_ADDR` reader - This is the offset address of the first receiving data as described in nonfifo_rx_thres_register."]
-pub struct RXFIFO_END_ADDR_R(crate::FieldReader<u8>);
-impl RXFIFO_END_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RXFIFO_END_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_END_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_END_ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TXFIFO_START_ADDR` reader - This is the offset address of the first sending data as described in nonfifo_tx_thres register."]
-pub struct TXFIFO_START_ADDR_R(crate::FieldReader<u8>);
-impl TXFIFO_START_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TXFIFO_START_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFIFO_START_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFIFO_START_ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TXFIFO_END_ADDR` reader - This is the offset address of the last sending data as described in nonfifo_tx_thres register."]
-pub struct TXFIFO_END_ADDR_R(crate::FieldReader<u8>);
-impl TXFIFO_END_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TXFIFO_END_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFIFO_END_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFIFO_END_ADDR_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:4 - This is the offset address of the last receiving data as described in nonfifo_rx_thres_register."]
     #[inline(always)]

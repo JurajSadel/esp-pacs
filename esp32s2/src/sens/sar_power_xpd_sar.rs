@@ -35,69 +35,13 @@ impl From<crate::W<SAR_POWER_XPD_SAR_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_XPD_SAR` reader - "]
-pub struct FORCE_XPD_SAR_R(crate::FieldReader<u8>);
-impl FORCE_XPD_SAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FORCE_XPD_SAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_XPD_SAR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_XPD_SAR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FORCE_XPD_SAR` writer - "]
-pub struct FORCE_XPD_SAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_XPD_SAR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
-        self.w
-    }
-}
+pub type FORCE_XPD_SAR_W<'a> = crate::FieldWriter<'a, u32, SAR_POWER_XPD_SAR_SPEC, u8, u8, 2, 29>;
 #[doc = "Field `SARCLK_EN` reader - "]
-pub struct SARCLK_EN_R(crate::FieldReader<bool>);
-impl SARCLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SARCLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARCLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARCLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SARCLK_EN` writer - "]
-pub struct SARCLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARCLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type SARCLK_EN_W<'a> = crate::BitWriter<'a, u32, SAR_POWER_XPD_SAR_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 29:30"]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 29:30"]
     #[inline(always)]
     pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W {
-        FORCE_XPD_SAR_W { w: self }
+        FORCE_XPD_SAR_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn sarclk_en(&mut self) -> SARCLK_EN_W {
-        SARCLK_EN_W { w: self }
+        SARCLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,57 +35,11 @@ impl From<crate::W<_1TXFIFO_POP_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC1_TXFIFO_RDATA` reader - "]
-pub struct SLC1_TXFIFO_RDATA_R(crate::FieldReader<u16>);
-impl SLC1_TXFIFO_RDATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SLC1_TXFIFO_RDATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TXFIFO_RDATA_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TXFIFO_RDATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC1_TXFIFO_POP` reader - "]
-pub struct SLC1_TXFIFO_POP_R(crate::FieldReader<bool>);
-impl SLC1_TXFIFO_POP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_TXFIFO_POP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TXFIFO_POP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TXFIFO_POP_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_TXFIFO_POP` writer - "]
-pub struct SLC1_TXFIFO_POP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_TXFIFO_POP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SLC1_TXFIFO_POP_W<'a> = crate::BitWriter<'a, u32, _1TXFIFO_POP_SPEC, bool, 16>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -102,7 +56,7 @@ impl W {
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn slc1_txfifo_pop(&mut self) -> SLC1_TXFIFO_POP_W {
-        SLC1_TXFIFO_POP_W { w: self }
+        SLC1_TXFIFO_POP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

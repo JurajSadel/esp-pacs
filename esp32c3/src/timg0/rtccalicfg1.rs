@@ -14,35 +14,9 @@ impl From<crate::R<RTCCALICFG1_SPEC>> for R {
     }
 }
 #[doc = "Field `RTC_CALI_CYCLING_DATA_VLD` reader - rtc_cali_cycling_data_vld"]
-pub struct RTC_CALI_CYCLING_DATA_VLD_R(crate::FieldReader<bool>);
-impl RTC_CALI_CYCLING_DATA_VLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_CALI_CYCLING_DATA_VLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_CALI_CYCLING_DATA_VLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_CALI_CYCLING_DATA_VLD_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_CALI_VALUE` reader - rtc_cali_value"]
-pub struct RTC_CALI_VALUE_R(crate::FieldReader<u32>);
-impl RTC_CALI_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RTC_CALI_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_CALI_VALUE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_CALI_VALUE_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bit 0 - rtc_cali_cycling_data_vld"]
     #[inline(always)]

@@ -20,22 +20,12 @@ impl From<crate::W<T1UPDATE_SPEC>> for W {
     }
 }
 #[doc = "Field `T1_UPDATE` writer - Write any value will trigger a timer 1 time-base counter value update (timer 1 current value will be stored in registers above)"]
-pub struct T1_UPDATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T1_UPDATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type T1_UPDATE_W<'a> = crate::FieldWriter<'a, u32, T1UPDATE_SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31 - Write any value will trigger a timer 1 time-base counter value update (timer 1 current value will be stored in registers above)"]
     #[inline(always)]
     pub fn t1_update(&mut self) -> T1_UPDATE_W {
-        T1_UPDATE_W { w: self }
+        T1_UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

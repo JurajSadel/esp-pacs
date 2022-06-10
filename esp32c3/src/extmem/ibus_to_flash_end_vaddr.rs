@@ -35,32 +35,10 @@ impl From<crate::W<IBUS_TO_FLASH_END_VADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `IBUS_TO_FLASH_END_VADDR` reader - The bits are used to configure the end virtual address of ibus to access flash. The register is used to give constraints to ibus access counter."]
-pub struct IBUS_TO_FLASH_END_VADDR_R(crate::FieldReader<u32>);
-impl IBUS_TO_FLASH_END_VADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        IBUS_TO_FLASH_END_VADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IBUS_TO_FLASH_END_VADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IBUS_TO_FLASH_END_VADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `IBUS_TO_FLASH_END_VADDR` writer - The bits are used to configure the end virtual address of ibus to access flash. The register is used to give constraints to ibus access counter."]
-pub struct IBUS_TO_FLASH_END_VADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IBUS_TO_FLASH_END_VADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type IBUS_TO_FLASH_END_VADDR_W<'a> =
+    crate::FieldWriter<'a, u32, IBUS_TO_FLASH_END_VADDR_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the end virtual address of ibus to access flash. The register is used to give constraints to ibus access counter."]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the end virtual address of ibus to access flash. The register is used to give constraints to ibus access counter."]
     #[inline(always)]
     pub fn ibus_to_flash_end_vaddr(&mut self) -> IBUS_TO_FLASH_END_VADDR_W {
-        IBUS_TO_FLASH_END_VADDR_W { w: self }
+        IBUS_TO_FLASH_END_VADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,20 +14,7 @@ impl From<crate::R<PRO_IRAM0_5_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_IRAM0_ILG_ST` reader - Record the illegitimate information of IBUS. \\[21:2\\]: store the bits \\[21:2\\] of IBUS address. \\[1\\]: 1 means data access, 0 means instruction access. \\[0\\]: 1 means write operation, 0 means read operation."]
-pub struct PRO_IRAM0_ILG_ST_R(crate::FieldReader<u32>);
-impl PRO_IRAM0_ILG_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PRO_IRAM0_ILG_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_IRAM0_ILG_ST_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_IRAM0_ILG_ST_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:21 - Record the illegitimate information of IBUS. \\[21:2\\]: store the bits \\[21:2\\] of IBUS address. \\[1\\]: 1 means data access, 0 means instruction access. \\[0\\]: 1 means write operation, 0 means read operation."]
     #[inline(always)]

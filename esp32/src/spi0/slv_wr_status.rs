@@ -35,32 +35,9 @@ impl From<crate::W<SLV_WR_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_WR_ST` reader - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
-pub struct SLV_WR_ST_R(crate::FieldReader<u32>);
-impl SLV_WR_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SLV_WR_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_WR_ST_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_WR_ST_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLV_WR_ST` writer - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
-pub struct SLV_WR_ST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_WR_ST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type SLV_WR_ST_W<'a> = crate::FieldWriter<'a, u32, SLV_WR_STATUS_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
     #[inline(always)]
     pub fn slv_wr_st(&mut self) -> SLV_WR_ST_W {
-        SLV_WR_ST_W { w: self }
+        SLV_WR_ST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

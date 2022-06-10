@@ -35,32 +35,9 @@ impl From<crate::W<FIB_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_FIB_SEL` reader - select use analog fib signal"]
-pub struct RTC_FIB_SEL_R(crate::FieldReader<u8>);
-impl RTC_FIB_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_FIB_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_FIB_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_FIB_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_FIB_SEL` writer - select use analog fib signal"]
-pub struct RTC_FIB_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_FIB_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type RTC_FIB_SEL_W<'a> = crate::FieldWriter<'a, u32, FIB_SEL_SPEC, u8, u8, 3, 0>;
 impl R {
     #[doc = "Bits 0:2 - select use analog fib signal"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:2 - select use analog fib signal"]
     #[inline(always)]
     pub fn rtc_fib_sel(&mut self) -> RTC_FIB_SEL_W {
-        RTC_FIB_SEL_W { w: self }
+        RTC_FIB_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<EFUSE_INT_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `EFUSE_INT_MAP` reader - reg_core0_efuse_int_map"]
-pub struct EFUSE_INT_MAP_R(crate::FieldReader<u8>);
-impl EFUSE_INT_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EFUSE_INT_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EFUSE_INT_MAP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EFUSE_INT_MAP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `EFUSE_INT_MAP` writer - reg_core0_efuse_int_map"]
-pub struct EFUSE_INT_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EFUSE_INT_MAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type EFUSE_INT_MAP_W<'a> = crate::FieldWriter<'a, u32, EFUSE_INT_MAP_SPEC, u8, u8, 5, 0>;
 impl R {
     #[doc = "Bits 0:4 - reg_core0_efuse_int_map"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:4 - reg_core0_efuse_int_map"]
     #[inline(always)]
     pub fn efuse_int_map(&mut self) -> EFUSE_INT_MAP_W {
-        EFUSE_INT_MAP_W { w: self }
+        EFUSE_INT_MAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,450 +35,55 @@ impl From<crate::W<PRO_CACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_CACHE_MODE` reader - "]
-pub struct PRO_CACHE_MODE_R(crate::FieldReader<bool>);
-impl PRO_CACHE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CACHE_MODE` writer - "]
-pub struct PRO_CACHE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CACHE_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PRO_CACHE_MODE_W<'a> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, 2>;
 #[doc = "Field `PRO_CACHE_ENABLE` reader - "]
-pub struct PRO_CACHE_ENABLE_R(crate::FieldReader<bool>);
-impl PRO_CACHE_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CACHE_ENABLE` writer - "]
-pub struct PRO_CACHE_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CACHE_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type PRO_CACHE_ENABLE_W<'a> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, 3>;
 #[doc = "Field `PRO_CACHE_FLUSH_ENA` reader - "]
-pub struct PRO_CACHE_FLUSH_ENA_R(crate::FieldReader<bool>);
-impl PRO_CACHE_FLUSH_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_FLUSH_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_FLUSH_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_FLUSH_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CACHE_FLUSH_ENA` writer - "]
-pub struct PRO_CACHE_FLUSH_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CACHE_FLUSH_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PRO_CACHE_FLUSH_ENA_W<'a> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, 4>;
 #[doc = "Field `PRO_CACHE_FLUSH_DONE` reader - "]
-pub struct PRO_CACHE_FLUSH_DONE_R(crate::FieldReader<bool>);
-impl PRO_CACHE_FLUSH_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_FLUSH_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_FLUSH_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_FLUSH_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CACHE_LOCK_0_EN` reader - "]
-pub struct PRO_CACHE_LOCK_0_EN_R(crate::FieldReader<bool>);
-impl PRO_CACHE_LOCK_0_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_LOCK_0_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_LOCK_0_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_LOCK_0_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CACHE_LOCK_0_EN` writer - "]
-pub struct PRO_CACHE_LOCK_0_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CACHE_LOCK_0_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type PRO_CACHE_LOCK_0_EN_W<'a> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, 6>;
 #[doc = "Field `PRO_CACHE_LOCK_1_EN` reader - "]
-pub struct PRO_CACHE_LOCK_1_EN_R(crate::FieldReader<bool>);
-impl PRO_CACHE_LOCK_1_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_LOCK_1_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_LOCK_1_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_LOCK_1_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CACHE_LOCK_1_EN` writer - "]
-pub struct PRO_CACHE_LOCK_1_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CACHE_LOCK_1_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type PRO_CACHE_LOCK_1_EN_W<'a> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, 7>;
 #[doc = "Field `PRO_CACHE_LOCK_2_EN` reader - "]
-pub struct PRO_CACHE_LOCK_2_EN_R(crate::FieldReader<bool>);
-impl PRO_CACHE_LOCK_2_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_LOCK_2_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_LOCK_2_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_LOCK_2_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CACHE_LOCK_2_EN` writer - "]
-pub struct PRO_CACHE_LOCK_2_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CACHE_LOCK_2_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type PRO_CACHE_LOCK_2_EN_W<'a> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, 8>;
 #[doc = "Field `PRO_CACHE_LOCK_3_EN` reader - "]
-pub struct PRO_CACHE_LOCK_3_EN_R(crate::FieldReader<bool>);
-impl PRO_CACHE_LOCK_3_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_LOCK_3_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_LOCK_3_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_LOCK_3_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CACHE_LOCK_3_EN` writer - "]
-pub struct PRO_CACHE_LOCK_3_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CACHE_LOCK_3_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type PRO_CACHE_LOCK_3_EN_W<'a> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, 9>;
 #[doc = "Field `PRO_SINGLE_IRAM_ENA` reader - "]
-pub struct PRO_SINGLE_IRAM_ENA_R(crate::FieldReader<bool>);
-impl PRO_SINGLE_IRAM_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_SINGLE_IRAM_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_SINGLE_IRAM_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_SINGLE_IRAM_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_SINGLE_IRAM_ENA` writer - "]
-pub struct PRO_SINGLE_IRAM_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_SINGLE_IRAM_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type PRO_SINGLE_IRAM_ENA_W<'a> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, 10>;
 #[doc = "Field `PRO_DRAM_SPLIT` reader - "]
-pub struct PRO_DRAM_SPLIT_R(crate::FieldReader<bool>);
-impl PRO_DRAM_SPLIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DRAM_SPLIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DRAM_SPLIT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DRAM_SPLIT_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DRAM_SPLIT` writer - "]
-pub struct PRO_DRAM_SPLIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DRAM_SPLIT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type PRO_DRAM_SPLIT_W<'a> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, 11>;
 #[doc = "Field `PRO_AHB_SPI_REQ` reader - "]
-pub struct PRO_AHB_SPI_REQ_R(crate::FieldReader<bool>);
-impl PRO_AHB_SPI_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_AHB_SPI_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_AHB_SPI_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_AHB_SPI_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_SLAVE_REQ` reader - "]
-pub struct PRO_SLAVE_REQ_R(crate::FieldReader<bool>);
-impl PRO_SLAVE_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_SLAVE_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_SLAVE_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_SLAVE_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `AHB_SPI_REQ` reader - "]
-pub struct AHB_SPI_REQ_R(crate::FieldReader<bool>);
-impl AHB_SPI_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AHB_SPI_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHB_SPI_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHB_SPI_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_REQ` reader - "]
-pub struct SLAVE_REQ_R(crate::FieldReader<bool>);
-impl SLAVE_REQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_REQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_REQ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_REQ_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DRAM_HL` reader - "]
-pub struct PRO_DRAM_HL_R(crate::FieldReader<bool>);
-impl PRO_DRAM_HL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DRAM_HL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DRAM_HL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DRAM_HL_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DRAM_HL` writer - "]
-pub struct PRO_DRAM_HL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DRAM_HL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type PRO_DRAM_HL_W<'a> = crate::BitWriter<'a, u32, PRO_CACHE_CTRL_SPEC, bool, 16>;
 impl R {
     #[doc = "Bit 2"]
     #[inline(always)]
@@ -560,52 +165,52 @@ impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn pro_cache_mode(&mut self) -> PRO_CACHE_MODE_W {
-        PRO_CACHE_MODE_W { w: self }
+        PRO_CACHE_MODE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn pro_cache_enable(&mut self) -> PRO_CACHE_ENABLE_W {
-        PRO_CACHE_ENABLE_W { w: self }
+        PRO_CACHE_ENABLE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn pro_cache_flush_ena(&mut self) -> PRO_CACHE_FLUSH_ENA_W {
-        PRO_CACHE_FLUSH_ENA_W { w: self }
+        PRO_CACHE_FLUSH_ENA_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn pro_cache_lock_0_en(&mut self) -> PRO_CACHE_LOCK_0_EN_W {
-        PRO_CACHE_LOCK_0_EN_W { w: self }
+        PRO_CACHE_LOCK_0_EN_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn pro_cache_lock_1_en(&mut self) -> PRO_CACHE_LOCK_1_EN_W {
-        PRO_CACHE_LOCK_1_EN_W { w: self }
+        PRO_CACHE_LOCK_1_EN_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn pro_cache_lock_2_en(&mut self) -> PRO_CACHE_LOCK_2_EN_W {
-        PRO_CACHE_LOCK_2_EN_W { w: self }
+        PRO_CACHE_LOCK_2_EN_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn pro_cache_lock_3_en(&mut self) -> PRO_CACHE_LOCK_3_EN_W {
-        PRO_CACHE_LOCK_3_EN_W { w: self }
+        PRO_CACHE_LOCK_3_EN_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn pro_single_iram_ena(&mut self) -> PRO_SINGLE_IRAM_ENA_W {
-        PRO_SINGLE_IRAM_ENA_W { w: self }
+        PRO_SINGLE_IRAM_ENA_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn pro_dram_split(&mut self) -> PRO_DRAM_SPLIT_W {
-        PRO_DRAM_SPLIT_W { w: self }
+        PRO_DRAM_SPLIT_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn pro_dram_hl(&mut self) -> PRO_DRAM_HL_W {
-        PRO_DRAM_HL_W { w: self }
+        PRO_DRAM_HL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

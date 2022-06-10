@@ -14,395 +14,57 @@ impl From<crate::R<CACHE_DBG_STATUS1_SPEC>> for R {
     }
 }
 #[doc = "Field `DBUS0_ACS_MSK_DCACHE_ST` reader - The bit is used to indicate interrupt by cpu access dcache while the dbus0 is disabled or dcache is disabled which include speculative access."]
-pub struct DBUS0_ACS_MSK_DCACHE_ST_R(crate::FieldReader<bool>);
-impl DBUS0_ACS_MSK_DCACHE_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS0_ACS_MSK_DCACHE_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS0_ACS_MSK_DCACHE_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS0_ACS_MSK_DCACHE_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS1_ACS_MSK_DCACHE_ST` reader - The bit is used to indicate interrupt by cpu access dcache while the dbus1 is disabled or dcache is disabled which include speculative access."]
-pub struct DBUS1_ACS_MSK_DCACHE_ST_R(crate::FieldReader<bool>);
-impl DBUS1_ACS_MSK_DCACHE_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS1_ACS_MSK_DCACHE_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS1_ACS_MSK_DCACHE_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS1_ACS_MSK_DCACHE_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS2_ACS_MSK_DCACHE_ST` reader - The bit is used to indicate interrupt by cpu access dcache while the dbus2 is disabled or dcache is disabled which include speculative access."]
-pub struct DBUS2_ACS_MSK_DCACHE_ST_R(crate::FieldReader<bool>);
-impl DBUS2_ACS_MSK_DCACHE_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS2_ACS_MSK_DCACHE_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS2_ACS_MSK_DCACHE_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS2_ACS_MSK_DCACHE_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS0_ACS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus0 counter overflow."]
-pub struct DBUS0_ACS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS0_ACS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS0_ACS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS0_ACS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS0_ACS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS1_ACS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus1 counter overflow."]
-pub struct DBUS1_ACS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS1_ACS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS1_ACS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS1_ACS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS1_ACS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS2_ACS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus2 counter overflow."]
-pub struct DBUS2_ACS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS2_ACS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS2_ACS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS2_ACS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS2_ACS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS0_ACS_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus0 miss counter overflow."]
-pub struct DBUS0_ACS_MISS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS0_ACS_MISS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS0_ACS_MISS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS0_ACS_MISS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS0_ACS_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS1_ACS_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus1 miss counter overflow."]
-pub struct DBUS1_ACS_MISS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS1_ACS_MISS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS1_ACS_MISS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS1_ACS_MISS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS1_ACS_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS2_ACS_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus2 miss counter overflow."]
-pub struct DBUS2_ACS_MISS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS2_ACS_MISS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS2_ACS_MISS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS2_ACS_MISS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS2_ACS_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS0_ACS_WB_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus0 eviction counter overflow."]
-pub struct DBUS0_ACS_WB_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS0_ACS_WB_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS0_ACS_WB_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS0_ACS_WB_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS0_ACS_WB_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS1_ACS_WB_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus1 eviction counter overflow."]
-pub struct DBUS1_ACS_WB_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS1_ACS_WB_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS1_ACS_WB_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS1_ACS_WB_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS1_ACS_WB_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS2_ACS_WB_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus2 eviction counter overflow."]
-pub struct DBUS2_ACS_WB_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS2_ACS_WB_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS2_ACS_WB_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS2_ACS_WB_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS2_ACS_WB_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS0_ABANDON_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus0 abandon counter overflow."]
-pub struct DBUS0_ABANDON_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS0_ABANDON_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS0_ABANDON_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS0_ABANDON_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS0_ABANDON_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS1_ABANDON_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus1 abandon counter overflow."]
-pub struct DBUS1_ABANDON_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS1_ABANDON_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS1_ABANDON_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS1_ABANDON_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS1_ABANDON_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS2_ABANDON_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus2 abandon counter overflow."]
-pub struct DBUS2_ABANDON_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS2_ABANDON_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS2_ABANDON_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS2_ABANDON_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS2_ABANDON_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DC_PRELOAD_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by pre-load miss counter overflow."]
-pub struct DC_PRELOAD_MISS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DC_PRELOAD_MISS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DC_PRELOAD_MISS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC_PRELOAD_MISS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DC_PRELOAD_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DC_PRELOAD_EVICT_CNT_OVF_ST` reader - The bit is used to indicate interrupt by pre-load eviction counter overflow."]
-pub struct DC_PRELOAD_EVICT_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DC_PRELOAD_EVICT_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DC_PRELOAD_EVICT_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC_PRELOAD_EVICT_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DC_PRELOAD_EVICT_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DC_PRELOAD_CNT_OVF_ST` reader - The bit is used to indicate interrupt by pre-load counter overflow."]
-pub struct DC_PRELOAD_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DC_PRELOAD_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DC_PRELOAD_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC_PRELOAD_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DC_PRELOAD_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DC_SYNC_SIZE_FAULT_ST` reader - The bit is used to indicate interrupt by manual sync configurations fault."]
-pub struct DC_SYNC_SIZE_FAULT_ST_R(crate::FieldReader<bool>);
-impl DC_SYNC_SIZE_FAULT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DC_SYNC_SIZE_FAULT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC_SYNC_SIZE_FAULT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DC_SYNC_SIZE_FAULT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DC_PRELOAD_SIZE_FAULT_ST` reader - The bit is used to indicate interrupt by manual pre-load configurations fault."]
-pub struct DC_PRELOAD_SIZE_FAULT_ST_R(crate::FieldReader<bool>);
-impl DC_PRELOAD_SIZE_FAULT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DC_PRELOAD_SIZE_FAULT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC_PRELOAD_SIZE_FAULT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DC_PRELOAD_SIZE_FAULT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_WRITE_FLASH_ST` reader - The bit is used to indicate interrupt by dcache trying to write flash."]
-pub struct DCACHE_WRITE_FLASH_ST_R(crate::FieldReader<bool>);
-impl DCACHE_WRITE_FLASH_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_WRITE_FLASH_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_WRITE_FLASH_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_WRITE_FLASH_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_REJECT_ST` reader - The bit is used to indicate interrupt by authentication fail."]
-pub struct DCACHE_REJECT_ST_R(crate::FieldReader<bool>);
-impl DCACHE_REJECT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_REJECT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_REJECT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_REJECT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_SET_PRELOAD_ILG_ST` reader - The bit is used to indicate interrupt by illegal writing preload registers of icache while icache is busy to issue lock,sync and pre-load operations."]
-pub struct DCACHE_SET_PRELOAD_ILG_ST_R(crate::FieldReader<bool>);
-impl DCACHE_SET_PRELOAD_ILG_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_SET_PRELOAD_ILG_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_SET_PRELOAD_ILG_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_SET_PRELOAD_ILG_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_SET_SYNC_ILG_ST` reader - The bit is used to indicate interrupt by illegal writing sync registers of icache while icache is busy to issue lock,sync and pre-load operations."]
-pub struct DCACHE_SET_SYNC_ILG_ST_R(crate::FieldReader<bool>);
-impl DCACHE_SET_SYNC_ILG_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_SET_SYNC_ILG_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_SET_SYNC_ILG_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_SET_SYNC_ILG_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_SET_LOCK_ILG_ST` reader - The bit is used to indicate interrupt by illegal writing lock registers of icache while icache is busy to issue lock,sync or pre-load operations."]
-pub struct DCACHE_SET_LOCK_ILG_ST_R(crate::FieldReader<bool>);
-impl DCACHE_SET_LOCK_ILG_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_SET_LOCK_ILG_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_SET_LOCK_ILG_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_SET_LOCK_ILG_ST_R = crate::BitReader<bool>;
 #[doc = "Field `MMU_ENTRY_FAULT_ST` reader - The bit is used to indicate interrupt by mmu entry fault."]
-pub struct MMU_ENTRY_FAULT_ST_R(crate::FieldReader<bool>);
-impl MMU_ENTRY_FAULT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MMU_ENTRY_FAULT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MMU_ENTRY_FAULT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MMU_ENTRY_FAULT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The bit is used to indicate interrupt by cpu access dcache while the dbus0 is disabled or dcache is disabled which include speculative access."]
     #[inline(always)]

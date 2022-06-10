@@ -35,32 +35,9 @@ impl From<crate::W<BT_BB_NMI_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `BT_BB_NMI_MAP` reader - this register used to map bb_bt_nmi interrupt to one of core1's external interrupt"]
-pub struct BT_BB_NMI_MAP_R(crate::FieldReader<u8>);
-impl BT_BB_NMI_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BT_BB_NMI_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BT_BB_NMI_MAP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BT_BB_NMI_MAP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BT_BB_NMI_MAP` writer - this register used to map bb_bt_nmi interrupt to one of core1's external interrupt"]
-pub struct BT_BB_NMI_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BT_BB_NMI_MAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type BT_BB_NMI_MAP_W<'a> = crate::FieldWriter<'a, u32, BT_BB_NMI_MAP_SPEC, u8, u8, 5, 0>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map bb_bt_nmi interrupt to one of core1's external interrupt"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:4 - this register used to map bb_bt_nmi interrupt to one of core1's external interrupt"]
     #[inline(always)]
     pub fn bt_bb_nmi_map(&mut self) -> BT_BB_NMI_MAP_W {
-        BT_BB_NMI_MAP_W { w: self }
+        BT_BB_NMI_MAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

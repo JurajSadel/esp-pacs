@@ -35,123 +35,23 @@ impl From<crate::W<RETENTION_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `RET_ICACHE_SIZE` reader - ******* Description ***********"]
-pub struct RET_ICACHE_SIZE_R(crate::FieldReader<u8>);
-impl RET_ICACHE_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RET_ICACHE_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RET_ICACHE_SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RET_ICACHE_SIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RET_ICACHE_SIZE` writer - ******* Description ***********"]
-pub struct RET_ICACHE_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RET_ICACHE_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 4)) | ((value as u32 & 0xff) << 4);
-        self.w
-    }
-}
+pub type RET_ICACHE_SIZE_W<'a> = crate::FieldWriter<'a, u32, RETENTION_CTRL2_SPEC, u8, u8, 8, 4>;
 #[doc = "Field `RET_ICACHE_VLD_SIZE` reader - ******* Description ***********"]
-pub struct RET_ICACHE_VLD_SIZE_R(crate::FieldReader<u8>);
-impl RET_ICACHE_VLD_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RET_ICACHE_VLD_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RET_ICACHE_VLD_SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RET_ICACHE_VLD_SIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RET_ICACHE_VLD_SIZE` writer - ******* Description ***********"]
-pub struct RET_ICACHE_VLD_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RET_ICACHE_VLD_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 13)) | ((value as u32 & 0xff) << 13);
-        self.w
-    }
-}
+pub type RET_ICACHE_VLD_SIZE_W<'a> =
+    crate::FieldWriter<'a, u32, RETENTION_CTRL2_SPEC, u8, u8, 8, 13>;
 #[doc = "Field `RET_ICACHE_START_POINT` reader - ******* Description ***********"]
-pub struct RET_ICACHE_START_POINT_R(crate::FieldReader<u8>);
-impl RET_ICACHE_START_POINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RET_ICACHE_START_POINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RET_ICACHE_START_POINT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RET_ICACHE_START_POINT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RET_ICACHE_START_POINT` writer - ******* Description ***********"]
-pub struct RET_ICACHE_START_POINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RET_ICACHE_START_POINT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 22)) | ((value as u32 & 0xff) << 22);
-        self.w
-    }
-}
+pub type RET_ICACHE_START_POINT_W<'a> =
+    crate::FieldWriter<'a, u32, RETENTION_CTRL2_SPEC, u8, u8, 8, 22>;
 #[doc = "Field `RET_ICACHE_ENABLE` reader - ******* Description ***********"]
-pub struct RET_ICACHE_ENABLE_R(crate::FieldReader<bool>);
-impl RET_ICACHE_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RET_ICACHE_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RET_ICACHE_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RET_ICACHE_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `RET_ICACHE_ENABLE` writer - ******* Description ***********"]
-pub struct RET_ICACHE_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RET_ICACHE_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type RET_ICACHE_ENABLE_W<'a> = crate::BitWriter<'a, u32, RETENTION_CTRL2_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 4:11 - ******* Description ***********"]
     #[inline(always)]
@@ -178,22 +78,22 @@ impl W {
     #[doc = "Bits 4:11 - ******* Description ***********"]
     #[inline(always)]
     pub fn ret_icache_size(&mut self) -> RET_ICACHE_SIZE_W {
-        RET_ICACHE_SIZE_W { w: self }
+        RET_ICACHE_SIZE_W::new(self)
     }
     #[doc = "Bits 13:20 - ******* Description ***********"]
     #[inline(always)]
     pub fn ret_icache_vld_size(&mut self) -> RET_ICACHE_VLD_SIZE_W {
-        RET_ICACHE_VLD_SIZE_W { w: self }
+        RET_ICACHE_VLD_SIZE_W::new(self)
     }
     #[doc = "Bits 22:29 - ******* Description ***********"]
     #[inline(always)]
     pub fn ret_icache_start_point(&mut self) -> RET_ICACHE_START_POINT_W {
-        RET_ICACHE_START_POINT_W { w: self }
+        RET_ICACHE_START_POINT_W::new(self)
     }
     #[doc = "Bit 31 - ******* Description ***********"]
     #[inline(always)]
     pub fn ret_icache_enable(&mut self) -> RET_ICACHE_ENABLE_W {
-        RET_ICACHE_ENABLE_W { w: self }
+        RET_ICACHE_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

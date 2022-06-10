@@ -35,79 +35,13 @@ impl From<crate::W<MEM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `USB_MEM_PD` reader - 1: power down usb memory."]
-pub struct USB_MEM_PD_R(crate::FieldReader<bool>);
-impl USB_MEM_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_MEM_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_MEM_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_MEM_PD_R = crate::BitReader<bool>;
 #[doc = "Field `USB_MEM_PD` writer - 1: power down usb memory."]
-pub struct USB_MEM_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USB_MEM_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type USB_MEM_PD_W<'a> = crate::BitWriter<'a, u32, MEM_CONF_SPEC, bool, 0>;
 #[doc = "Field `USB_MEM_CLK_EN` reader - 1: Force clock on for usb memory."]
-pub struct USB_MEM_CLK_EN_R(crate::FieldReader<bool>);
-impl USB_MEM_CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_MEM_CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_MEM_CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_MEM_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `USB_MEM_CLK_EN` writer - 1: Force clock on for usb memory."]
-pub struct USB_MEM_CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USB_MEM_CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type USB_MEM_CLK_EN_W<'a> = crate::BitWriter<'a, u32, MEM_CONF_SPEC, bool, 1>;
 impl R {
     #[doc = "Bit 0 - 1: power down usb memory."]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 0 - 1: power down usb memory."]
     #[inline(always)]
     pub fn usb_mem_pd(&mut self) -> USB_MEM_PD_W {
-        USB_MEM_PD_W { w: self }
+        USB_MEM_PD_W::new(self)
     }
     #[doc = "Bit 1 - 1: Force clock on for usb memory."]
     #[inline(always)]
     pub fn usb_mem_clk_en(&mut self) -> USB_MEM_CLK_EN_W {
-        USB_MEM_CLK_EN_W { w: self }
+        USB_MEM_CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

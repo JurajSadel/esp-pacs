@@ -35,32 +35,9 @@ impl From<crate::W<TEXT_IN_3_SPEC>> for W {
     }
 }
 #[doc = "Field `TEXT_IN_3` reader - This bits stores text_in_3 that is a part of source text material."]
-pub struct TEXT_IN_3_R(crate::FieldReader<u32>);
-impl TEXT_IN_3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TEXT_IN_3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TEXT_IN_3_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TEXT_IN_3_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TEXT_IN_3` writer - This bits stores text_in_3 that is a part of source text material."]
-pub struct TEXT_IN_3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEXT_IN_3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type TEXT_IN_3_W<'a> = crate::FieldWriter<'a, u32, TEXT_IN_3_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - This bits stores text_in_3 that is a part of source text material."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - This bits stores text_in_3 that is a part of source text material."]
     #[inline(always)]
     pub fn text_in_3(&mut self) -> TEXT_IN_3_W {
-        TEXT_IN_3_W { w: self }
+        TEXT_IN_3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

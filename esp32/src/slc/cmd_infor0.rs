@@ -14,20 +14,7 @@ impl From<crate::R<CMD_INFOR0_SPEC>> for R {
     }
 }
 #[doc = "Field `CMD_CONTENT0` reader - "]
-pub struct CMD_CONTENT0_R(crate::FieldReader<u32>);
-impl CMD_CONTENT0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CMD_CONTENT0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMD_CONTENT0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMD_CONTENT0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

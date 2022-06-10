@@ -14,50 +14,11 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `INT0_RAW` reader - Interrupt raw bit of system timer target 0."]
-pub struct INT0_RAW_R(crate::FieldReader<bool>);
-impl INT0_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INT0_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT0_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT0_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `INT1_RAW` reader - Interrupt raw bit of system timer target 1."]
-pub struct INT1_RAW_R(crate::FieldReader<bool>);
-impl INT1_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INT1_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT1_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT1_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `INT2_RAW` reader - Interrupt raw bit of system timer target 2."]
-pub struct INT2_RAW_R(crate::FieldReader<bool>);
-impl INT2_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INT2_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT2_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT2_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Interrupt raw bit of system timer target 0."]
     #[inline(always)]

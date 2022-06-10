@@ -35,32 +35,10 @@ impl From<crate::W<ICACHE_PRELOAD_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_PRELOAD_SIZE` reader - The bits are used to configure the length for preload operation. The bits are the counts of cache block. It should be combined with ICACHE_PRELOAD_ADDR_REG.."]
-pub struct ICACHE_PRELOAD_SIZE_R(crate::FieldReader<u16>);
-impl ICACHE_PRELOAD_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        ICACHE_PRELOAD_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_PRELOAD_SIZE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_PRELOAD_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ICACHE_PRELOAD_SIZE` writer - The bits are used to configure the length for preload operation. The bits are the counts of cache block. It should be combined with ICACHE_PRELOAD_ADDR_REG.."]
-pub struct ICACHE_PRELOAD_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ICACHE_PRELOAD_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type ICACHE_PRELOAD_SIZE_W<'a> =
+    crate::FieldWriter<'a, u32, ICACHE_PRELOAD_SIZE_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to configure the length for preload operation. The bits are the counts of cache block. It should be combined with ICACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:15 - The bits are used to configure the length for preload operation. The bits are the counts of cache block. It should be combined with ICACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
     pub fn icache_preload_size(&mut self) -> ICACHE_PRELOAD_SIZE_W {
-        ICACHE_PRELOAD_SIZE_W { w: self }
+        ICACHE_PRELOAD_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

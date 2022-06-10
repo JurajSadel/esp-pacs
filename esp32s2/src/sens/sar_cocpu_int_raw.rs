@@ -14,140 +14,23 @@ impl From<crate::R<SAR_COCPU_INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `COCPU_TOUCH_DONE_INT_RAW` reader - TOUCH_DONE_INT interrupt raw bit"]
-pub struct COCPU_TOUCH_DONE_INT_RAW_R(crate::FieldReader<bool>);
-impl COCPU_TOUCH_DONE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_TOUCH_DONE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_TOUCH_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_TOUCH_DONE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_TOUCH_INACTIVE_INT_RAW` reader - TOUCH_INACTIVE_INT interrupt raw bit"]
-pub struct COCPU_TOUCH_INACTIVE_INT_RAW_R(crate::FieldReader<bool>);
-impl COCPU_TOUCH_INACTIVE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_TOUCH_INACTIVE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_TOUCH_INACTIVE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_TOUCH_INACTIVE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_TOUCH_ACTIVE_INT_RAW` reader - TOUCH_ACTIVE_INT interrupt raw bit"]
-pub struct COCPU_TOUCH_ACTIVE_INT_RAW_R(crate::FieldReader<bool>);
-impl COCPU_TOUCH_ACTIVE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_TOUCH_ACTIVE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_TOUCH_ACTIVE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_TOUCH_ACTIVE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_SARADC1_INT_RAW` reader - SARADC1_DONE_INT interrupt raw bit"]
-pub struct COCPU_SARADC1_INT_RAW_R(crate::FieldReader<bool>);
-impl COCPU_SARADC1_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_SARADC1_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_SARADC1_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_SARADC1_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_SARADC2_INT_RAW` reader - SARADC2_DONE_INT interrupt raw bit"]
-pub struct COCPU_SARADC2_INT_RAW_R(crate::FieldReader<bool>);
-impl COCPU_SARADC2_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_SARADC2_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_SARADC2_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_SARADC2_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_TSENS_INT_RAW` reader - TSENS_DONE_INT interrupt raw bit"]
-pub struct COCPU_TSENS_INT_RAW_R(crate::FieldReader<bool>);
-impl COCPU_TSENS_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_TSENS_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_TSENS_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_TSENS_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_START_INT_RAW` reader - RISCV_START_INT interrupt raw bit"]
-pub struct COCPU_START_INT_RAW_R(crate::FieldReader<bool>);
-impl COCPU_START_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_START_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_START_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_START_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_SW_INT_RAW` reader - SW_INT interrupt raw bit"]
-pub struct COCPU_SW_INT_RAW_R(crate::FieldReader<bool>);
-impl COCPU_SW_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_SW_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_SW_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_SW_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_SWD_INT_RAW` reader - SWD_INT interrupt raw bit"]
-pub struct COCPU_SWD_INT_RAW_R(crate::FieldReader<bool>);
-impl COCPU_SWD_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_SWD_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_SWD_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_SWD_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - TOUCH_DONE_INT interrupt raw bit"]
     #[inline(always)]

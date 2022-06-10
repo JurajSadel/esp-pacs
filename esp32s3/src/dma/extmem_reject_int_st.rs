@@ -14,20 +14,7 @@ impl From<crate::R<EXTMEM_REJECT_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `EXTMEM_REJECT_INT_ST` reader - The raw interrupt status bit for the EXTMEM_REJECT_INT interrupt."]
-pub struct EXTMEM_REJECT_INT_ST_R(crate::FieldReader<bool>);
-impl EXTMEM_REJECT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXTMEM_REJECT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTMEM_REJECT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTMEM_REJECT_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the EXTMEM_REJECT_INT interrupt."]
     #[inline(always)]

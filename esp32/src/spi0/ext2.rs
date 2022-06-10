@@ -14,20 +14,7 @@ impl From<crate::R<EXT2_SPEC>> for R {
     }
 }
 #[doc = "Field `ST` reader - The status of spi state machine ."]
-pub struct ST_R(crate::FieldReader<u8>);
-impl ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ST_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:2 - The status of spi state machine ."]
     #[inline(always)]

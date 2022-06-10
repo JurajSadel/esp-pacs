@@ -35,207 +35,29 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_PCM_CONF` reader - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
-pub struct TX_PCM_CONF_R(crate::FieldReader<u8>);
-impl TX_PCM_CONF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_PCM_CONF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PCM_CONF_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PCM_CONF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_PCM_CONF` writer - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
-pub struct TX_PCM_CONF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PCM_CONF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type TX_PCM_CONF_W<'a> = crate::FieldWriter<'a, u32, CONF1_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `TX_PCM_BYPASS` reader - Set this bit to bypass Compress/Decompress module for transmitted data."]
-pub struct TX_PCM_BYPASS_R(crate::FieldReader<bool>);
-impl TX_PCM_BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_PCM_BYPASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PCM_BYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PCM_BYPASS_R = crate::BitReader<bool>;
 #[doc = "Field `TX_PCM_BYPASS` writer - Set this bit to bypass Compress/Decompress module for transmitted data."]
-pub struct TX_PCM_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PCM_BYPASS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TX_PCM_BYPASS_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 3>;
 #[doc = "Field `RX_PCM_CONF` reader - Compress/Decompress module configuration bits. 0: decompress received data 1:compress received data"]
-pub struct RX_PCM_CONF_R(crate::FieldReader<u8>);
-impl RX_PCM_CONF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_PCM_CONF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PCM_CONF_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_PCM_CONF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_PCM_CONF` writer - Compress/Decompress module configuration bits. 0: decompress received data 1:compress received data"]
-pub struct RX_PCM_CONF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PCM_CONF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 4)) | ((value as u32 & 7) << 4);
-        self.w
-    }
-}
+pub type RX_PCM_CONF_W<'a> = crate::FieldWriter<'a, u32, CONF1_SPEC, u8, u8, 3, 4>;
 #[doc = "Field `RX_PCM_BYPASS` reader - Set this bit to bypass Compress/Decompress module for received data."]
-pub struct RX_PCM_BYPASS_R(crate::FieldReader<bool>);
-impl RX_PCM_BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_PCM_BYPASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_PCM_BYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_PCM_BYPASS_R = crate::BitReader<bool>;
 #[doc = "Field `RX_PCM_BYPASS` writer - Set this bit to bypass Compress/Decompress module for received data."]
-pub struct RX_PCM_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_PCM_BYPASS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type RX_PCM_BYPASS_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 7>;
 #[doc = "Field `TX_STOP_EN` reader - Set this bit to stop the output of BCK signal and WS signal when TX FIFO is empty."]
-pub struct TX_STOP_EN_R(crate::FieldReader<bool>);
-impl TX_STOP_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_STOP_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_STOP_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_STOP_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TX_STOP_EN` writer - Set this bit to stop the output of BCK signal and WS signal when TX FIFO is empty."]
-pub struct TX_STOP_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_STOP_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type TX_STOP_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 8>;
 #[doc = "Field `TX_ZEROS_RM_EN` reader - Reserved."]
-pub struct TX_ZEROS_RM_EN_R(crate::FieldReader<bool>);
-impl TX_ZEROS_RM_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_ZEROS_RM_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_ZEROS_RM_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_ZEROS_RM_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TX_ZEROS_RM_EN` writer - Reserved."]
-pub struct TX_ZEROS_RM_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_ZEROS_RM_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type TX_ZEROS_RM_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 9>;
 impl R {
     #[doc = "Bits 0:2 - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
     #[inline(always)]
@@ -272,32 +94,32 @@ impl W {
     #[doc = "Bits 0:2 - Compress/Decompress module configuration bits. 0: decompress transmitted data 1:compress transmitted data"]
     #[inline(always)]
     pub fn tx_pcm_conf(&mut self) -> TX_PCM_CONF_W {
-        TX_PCM_CONF_W { w: self }
+        TX_PCM_CONF_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to bypass Compress/Decompress module for transmitted data."]
     #[inline(always)]
     pub fn tx_pcm_bypass(&mut self) -> TX_PCM_BYPASS_W {
-        TX_PCM_BYPASS_W { w: self }
+        TX_PCM_BYPASS_W::new(self)
     }
     #[doc = "Bits 4:6 - Compress/Decompress module configuration bits. 0: decompress received data 1:compress received data"]
     #[inline(always)]
     pub fn rx_pcm_conf(&mut self) -> RX_PCM_CONF_W {
-        RX_PCM_CONF_W { w: self }
+        RX_PCM_CONF_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to bypass Compress/Decompress module for received data."]
     #[inline(always)]
     pub fn rx_pcm_bypass(&mut self) -> RX_PCM_BYPASS_W {
-        RX_PCM_BYPASS_W { w: self }
+        RX_PCM_BYPASS_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to stop the output of BCK signal and WS signal when TX FIFO is empty."]
     #[inline(always)]
     pub fn tx_stop_en(&mut self) -> TX_STOP_EN_W {
-        TX_STOP_EN_W { w: self }
+        TX_STOP_EN_W::new(self)
     }
     #[doc = "Bit 9 - Reserved."]
     #[inline(always)]
     pub fn tx_zeros_rm_en(&mut self) -> TX_ZEROS_RM_EN_W {
-        TX_ZEROS_RM_EN_W { w: self }
+        TX_ZEROS_RM_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

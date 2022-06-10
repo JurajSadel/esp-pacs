@@ -35,32 +35,9 @@ impl From<crate::W<REG_MAP2_SPEC>> for W {
     }
 }
 #[doc = "Field `MAP2` reader - x"]
-pub struct MAP2_R(crate::FieldReader<u32>);
-impl MAP2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        MAP2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAP2_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAP2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MAP2` writer - x"]
-pub struct MAP2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MAP2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type MAP2_W<'a> = crate::FieldWriter<'a, u32, REG_MAP2_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
     pub fn map2(&mut self) -> MAP2_W {
-        MAP2_W { w: self }
+        MAP2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

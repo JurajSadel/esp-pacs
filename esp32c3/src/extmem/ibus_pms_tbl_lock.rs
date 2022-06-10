@@ -35,42 +35,9 @@ impl From<crate::W<IBUS_PMS_TBL_LOCK_SPEC>> for W {
     }
 }
 #[doc = "Field `IBUS_PMS_LOCK` reader - The bit is used to configure the ibus permission control section boundary0"]
-pub struct IBUS_PMS_LOCK_R(crate::FieldReader<bool>);
-impl IBUS_PMS_LOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IBUS_PMS_LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IBUS_PMS_LOCK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IBUS_PMS_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `IBUS_PMS_LOCK` writer - The bit is used to configure the ibus permission control section boundary0"]
-pub struct IBUS_PMS_LOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IBUS_PMS_LOCK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type IBUS_PMS_LOCK_W<'a> = crate::BitWriter<'a, u32, IBUS_PMS_TBL_LOCK_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - The bit is used to configure the ibus permission control section boundary0"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0 - The bit is used to configure the ibus permission control section boundary0"]
     #[inline(always)]
     pub fn ibus_pms_lock(&mut self) -> IBUS_PMS_LOCK_W {
-        IBUS_PMS_LOCK_W { w: self }
+        IBUS_PMS_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

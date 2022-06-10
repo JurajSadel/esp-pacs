@@ -14,35 +14,9 @@ impl From<crate::R<PRO_CACHE_STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_ICACHE_STATE` reader - The bit is used to indicate icache main fsm is in idle state or not. 1: in idle state, 0: not in idle state"]
-pub struct PRO_ICACHE_STATE_R(crate::FieldReader<u16>);
-impl PRO_ICACHE_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PRO_ICACHE_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ICACHE_STATE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ICACHE_STATE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_DCACHE_STATE` reader - The bit is used to indicate dcache main fsm is in idle state or not. 1: in idle state, 0: not in idle state"]
-pub struct PRO_DCACHE_STATE_R(crate::FieldReader<u16>);
-impl PRO_DCACHE_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PRO_DCACHE_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_STATE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_STATE_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:11 - The bit is used to indicate icache main fsm is in idle state or not. 1: in idle state, 0: not in idle state"]
     #[inline(always)]

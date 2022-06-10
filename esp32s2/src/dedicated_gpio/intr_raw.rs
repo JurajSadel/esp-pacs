@@ -14,125 +14,21 @@ impl From<crate::R<INTR_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO0` reader - This interrupt raw bit turns to high level when dedicated GPIO0 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub struct GPIO0_R(crate::FieldReader<bool>);
-impl GPIO0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO0_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO1` reader - This interrupt raw bit turns to high level when dedicated GPIO1 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub struct GPIO1_R(crate::FieldReader<bool>);
-impl GPIO1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO1_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO2` reader - This interrupt raw bit turns to high level when dedicated GPIO2 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub struct GPIO2_R(crate::FieldReader<bool>);
-impl GPIO2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO2_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO3` reader - This interrupt raw bit turns to high level when dedicated GPIO3 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub struct GPIO3_R(crate::FieldReader<bool>);
-impl GPIO3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO3_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO3_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO4` reader - This interrupt raw bit turns to high level when dedicated GPIO4 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub struct GPIO4_R(crate::FieldReader<bool>);
-impl GPIO4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO4_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO4_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO5` reader - This interrupt raw bit turns to high level when dedicated GPIO5 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub struct GPIO5_R(crate::FieldReader<bool>);
-impl GPIO5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO5_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO5_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO6` reader - This interrupt raw bit turns to high level when dedicated GPIO6 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub struct GPIO6_R(crate::FieldReader<bool>);
-impl GPIO6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO6_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO6_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO7` reader - This interrupt raw bit turns to high level when dedicated GPIO7 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
-pub struct GPIO7_R(crate::FieldReader<bool>);
-impl GPIO7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO7_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO7_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - This interrupt raw bit turns to high level when dedicated GPIO0 has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[inline(always)]

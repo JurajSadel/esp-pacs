@@ -14,50 +14,11 @@ impl From<crate::R<DMA_APBPERI_PMS_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR` reader - recorded dma's interrupt status when dma access violated permission"]
-pub struct DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool>);
-impl DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD` reader - recorded dma's world status when dma access violated permission"]
-pub struct DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_WORLD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_ADDR` reader - recorded dma's address bit\\[25:4\\] status when dma access violated permission, real address is 0x3c00_0000+addr*16"]
-pub struct DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_ADDR_R(crate::FieldReader<u32>);
-impl DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_STATUS_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bit 0 - recorded dma's interrupt status when dma access violated permission"]
     #[inline(always)]

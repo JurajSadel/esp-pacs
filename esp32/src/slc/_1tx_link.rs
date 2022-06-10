@@ -35,158 +35,23 @@ impl From<crate::W<_1TX_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC1_TXLINK_ADDR` reader - "]
-pub struct SLC1_TXLINK_ADDR_R(crate::FieldReader<u32>);
-impl SLC1_TXLINK_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SLC1_TXLINK_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TXLINK_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TXLINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLC1_TXLINK_ADDR` writer - "]
-pub struct SLC1_TXLINK_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_TXLINK_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type SLC1_TXLINK_ADDR_W<'a> = crate::FieldWriter<'a, u32, _1TX_LINK_SPEC, u32, u32, 20, 0>;
 #[doc = "Field `SLC1_TXLINK_STOP` reader - "]
-pub struct SLC1_TXLINK_STOP_R(crate::FieldReader<bool>);
-impl SLC1_TXLINK_STOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_TXLINK_STOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TXLINK_STOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TXLINK_STOP_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_TXLINK_STOP` writer - "]
-pub struct SLC1_TXLINK_STOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_TXLINK_STOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type SLC1_TXLINK_STOP_W<'a> = crate::BitWriter<'a, u32, _1TX_LINK_SPEC, bool, 28>;
 #[doc = "Field `SLC1_TXLINK_START` reader - "]
-pub struct SLC1_TXLINK_START_R(crate::FieldReader<bool>);
-impl SLC1_TXLINK_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_TXLINK_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TXLINK_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TXLINK_START_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_TXLINK_START` writer - "]
-pub struct SLC1_TXLINK_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_TXLINK_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type SLC1_TXLINK_START_W<'a> = crate::BitWriter<'a, u32, _1TX_LINK_SPEC, bool, 29>;
 #[doc = "Field `SLC1_TXLINK_RESTART` reader - "]
-pub struct SLC1_TXLINK_RESTART_R(crate::FieldReader<bool>);
-impl SLC1_TXLINK_RESTART_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_TXLINK_RESTART_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TXLINK_RESTART_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TXLINK_RESTART_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_TXLINK_RESTART` writer - "]
-pub struct SLC1_TXLINK_RESTART_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_TXLINK_RESTART_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type SLC1_TXLINK_RESTART_W<'a> = crate::BitWriter<'a, u32, _1TX_LINK_SPEC, bool, 30>;
 #[doc = "Field `SLC1_TXLINK_PARK` reader - "]
-pub struct SLC1_TXLINK_PARK_R(crate::FieldReader<bool>);
-impl SLC1_TXLINK_PARK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_TXLINK_PARK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TXLINK_PARK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TXLINK_PARK_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]
@@ -218,22 +83,22 @@ impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn slc1_txlink_addr(&mut self) -> SLC1_TXLINK_ADDR_W {
-        SLC1_TXLINK_ADDR_W { w: self }
+        SLC1_TXLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     pub fn slc1_txlink_stop(&mut self) -> SLC1_TXLINK_STOP_W {
-        SLC1_TXLINK_STOP_W { w: self }
+        SLC1_TXLINK_STOP_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     pub fn slc1_txlink_start(&mut self) -> SLC1_TXLINK_START_W {
-        SLC1_TXLINK_START_W { w: self }
+        SLC1_TXLINK_START_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     pub fn slc1_txlink_restart(&mut self) -> SLC1_TXLINK_RESTART_W {
-        SLC1_TXLINK_RESTART_W { w: self }
+        SLC1_TXLINK_RESTART_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

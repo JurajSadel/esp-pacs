@@ -35,59 +35,13 @@ impl From<crate::W<BUS_TIMING_0_SPEC>> for W {
     }
 }
 #[doc = "Field `BAUD_PRESC` reader - Baud Rate Prescaler, determines the frequency dividing ratio."]
-pub struct BAUD_PRESC_R(crate::FieldReader<u16>);
-impl BAUD_PRESC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        BAUD_PRESC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BAUD_PRESC_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BAUD_PRESC_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BAUD_PRESC` writer - Baud Rate Prescaler, determines the frequency dividing ratio."]
-pub struct BAUD_PRESC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BAUD_PRESC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff) | (value as u32 & 0x3fff);
-        self.w
-    }
-}
+pub type BAUD_PRESC_W<'a> = crate::FieldWriter<'a, u32, BUS_TIMING_0_SPEC, u16, u16, 14, 0>;
 #[doc = "Field `SYNC_JUMP_WIDTH` reader - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
-pub struct SYNC_JUMP_WIDTH_R(crate::FieldReader<u8>);
-impl SYNC_JUMP_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SYNC_JUMP_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYNC_JUMP_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYNC_JUMP_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SYNC_JUMP_WIDTH` writer - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
-pub struct SYNC_JUMP_WIDTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYNC_JUMP_WIDTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type SYNC_JUMP_WIDTH_W<'a> = crate::FieldWriter<'a, u32, BUS_TIMING_0_SPEC, u8, u8, 2, 14>;
 impl R {
     #[doc = "Bits 0:13 - Baud Rate Prescaler, determines the frequency dividing ratio."]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:13 - Baud Rate Prescaler, determines the frequency dividing ratio."]
     #[inline(always)]
     pub fn baud_presc(&mut self) -> BAUD_PRESC_W {
-        BAUD_PRESC_W { w: self }
+        BAUD_PRESC_W::new(self)
     }
     #[doc = "Bits 14:15 - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
     #[inline(always)]
     pub fn sync_jump_width(&mut self) -> SYNC_JUMP_WIDTH_W {
-        SYNC_JUMP_WIDTH_W { w: self }
+        SYNC_JUMP_WIDTH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

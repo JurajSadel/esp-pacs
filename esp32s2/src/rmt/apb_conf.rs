@@ -35,227 +35,29 @@ impl From<crate::W<APB_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_FIFO_MASK` reader - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
-pub struct APB_FIFO_MASK_R(crate::FieldReader<bool>);
-impl APB_FIFO_MASK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_FIFO_MASK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_FIFO_MASK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_FIFO_MASK_R = crate::BitReader<bool>;
 #[doc = "Field `APB_FIFO_MASK` writer - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
-pub struct APB_FIFO_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_FIFO_MASK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type APB_FIFO_MASK_W<'a> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, 0>;
 #[doc = "Field `MEM_TX_WRAP_EN` reader - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
-pub struct MEM_TX_WRAP_EN_R(crate::FieldReader<bool>);
-impl MEM_TX_WRAP_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_TX_WRAP_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_TX_WRAP_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_TX_WRAP_EN_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_TX_WRAP_EN` writer - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
-pub struct MEM_TX_WRAP_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_TX_WRAP_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MEM_TX_WRAP_EN_W<'a> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, 1>;
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - Set this bit to enable the clock for RMT memory."]
-pub struct MEM_CLK_FORCE_ON_R(crate::FieldReader<bool>);
-impl MEM_CLK_FORCE_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_CLK_FORCE_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_CLK_FORCE_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_CLK_FORCE_ON_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - Set this bit to enable the clock for RMT memory."]
-pub struct MEM_CLK_FORCE_ON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_CLK_FORCE_ON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type MEM_CLK_FORCE_ON_W<'a> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, 2>;
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to power down RMT memory."]
-pub struct MEM_FORCE_PD_R(crate::FieldReader<bool>);
-impl MEM_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_FORCE_PD` writer - Set this bit to power down RMT memory."]
-pub struct MEM_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type MEM_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, 3>;
 #[doc = "Field `MEM_FORCE_PU` reader - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
-pub struct MEM_FORCE_PU_R(crate::FieldReader<bool>);
-impl MEM_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_FORCE_PU` writer - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
-pub struct MEM_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type MEM_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, 4>;
 #[doc = "Field `CLK_EN` reader - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, APB_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
     pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W {
-        APB_FIFO_MASK_W { w: self }
+        APB_FIFO_MASK_W::new(self)
     }
     #[doc = "Bit 1 - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
     #[inline(always)]
     pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W {
-        MEM_TX_WRAP_EN_W { w: self }
+        MEM_TX_WRAP_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable the clock for RMT memory."]
     #[inline(always)]
     pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W {
-        MEM_CLK_FORCE_ON_W { w: self }
+        MEM_CLK_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to power down RMT memory."]
     #[inline(always)]
     pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W {
-        MEM_FORCE_PD_W { w: self }
+        MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 4 - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
     #[inline(always)]
     pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W {
-        MEM_FORCE_PU_W { w: self }
+        MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 31 - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

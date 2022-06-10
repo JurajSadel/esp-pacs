@@ -35,79 +35,13 @@ impl From<crate::W<CPU_PERI_RST_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `RST_EN_ASSIST_DEBUG` reader - Set 1 to let assist_debug module reset"]
-pub struct RST_EN_ASSIST_DEBUG_R(crate::FieldReader<bool>);
-impl RST_EN_ASSIST_DEBUG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RST_EN_ASSIST_DEBUG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RST_EN_ASSIST_DEBUG_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RST_EN_ASSIST_DEBUG_R = crate::BitReader<bool>;
 #[doc = "Field `RST_EN_ASSIST_DEBUG` writer - Set 1 to let assist_debug module reset"]
-pub struct RST_EN_ASSIST_DEBUG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RST_EN_ASSIST_DEBUG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type RST_EN_ASSIST_DEBUG_W<'a> = crate::BitWriter<'a, u32, CPU_PERI_RST_EN_SPEC, bool, 6>;
 #[doc = "Field `RST_EN_DEDICATED_GPIO` reader - Set 1 to let dedicated_gpio module reset"]
-pub struct RST_EN_DEDICATED_GPIO_R(crate::FieldReader<bool>);
-impl RST_EN_DEDICATED_GPIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RST_EN_DEDICATED_GPIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RST_EN_DEDICATED_GPIO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RST_EN_DEDICATED_GPIO_R = crate::BitReader<bool>;
 #[doc = "Field `RST_EN_DEDICATED_GPIO` writer - Set 1 to let dedicated_gpio module reset"]
-pub struct RST_EN_DEDICATED_GPIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RST_EN_DEDICATED_GPIO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type RST_EN_DEDICATED_GPIO_W<'a> = crate::BitWriter<'a, u32, CPU_PERI_RST_EN_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 6 - Set 1 to let assist_debug module reset"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 6 - Set 1 to let assist_debug module reset"]
     #[inline(always)]
     pub fn rst_en_assist_debug(&mut self) -> RST_EN_ASSIST_DEBUG_W {
-        RST_EN_ASSIST_DEBUG_W { w: self }
+        RST_EN_ASSIST_DEBUG_W::new(self)
     }
     #[doc = "Bit 7 - Set 1 to let dedicated_gpio module reset"]
     #[inline(always)]
     pub fn rst_en_dedicated_gpio(&mut self) -> RST_EN_DEDICATED_GPIO_W {
-        RST_EN_DEDICATED_GPIO_W { w: self }
+        RST_EN_DEDICATED_GPIO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -20,24 +20,15 @@ impl From<crate::W<JTAG_CTRL_4_SPEC>> for W {
     }
 }
 #[doc = "Field `CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_4` writer - Stores the 128 to 159 bits of the 256 bits register used to cancel the temporary disable of eFuse to JTAG."]
-pub struct CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_4_W<'a> =
+    crate::FieldWriter<'a, u32, JTAG_CTRL_4_SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31 - Stores the 128 to 159 bits of the 256 bits register used to cancel the temporary disable of eFuse to JTAG."]
     #[inline(always)]
     pub fn cancel_efuse_disable_jtag_temporary_4(
         &mut self,
     ) -> CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_4_W {
-        CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_4_W { w: self }
+        CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

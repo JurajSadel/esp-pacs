@@ -35,59 +35,13 @@ impl From<crate::W<CONF_CHAN_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_CHAN_MOD` reader - "]
-pub struct TX_CHAN_MOD_R(crate::FieldReader<u8>);
-impl TX_CHAN_MOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_CHAN_MOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_CHAN_MOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_CHAN_MOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_CHAN_MOD` writer - "]
-pub struct TX_CHAN_MOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_CHAN_MOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type TX_CHAN_MOD_W<'a> = crate::FieldWriter<'a, u32, CONF_CHAN_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `RX_CHAN_MOD` reader - "]
-pub struct RX_CHAN_MOD_R(crate::FieldReader<u8>);
-impl RX_CHAN_MOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_CHAN_MOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_CHAN_MOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_CHAN_MOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_CHAN_MOD` writer - "]
-pub struct RX_CHAN_MOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_CHAN_MOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
-        self.w
-    }
-}
+pub type RX_CHAN_MOD_W<'a> = crate::FieldWriter<'a, u32, CONF_CHAN_SPEC, u8, u8, 2, 3>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn tx_chan_mod(&mut self) -> TX_CHAN_MOD_W {
-        TX_CHAN_MOD_W { w: self }
+        TX_CHAN_MOD_W::new(self)
     }
     #[doc = "Bits 3:4"]
     #[inline(always)]
     pub fn rx_chan_mod(&mut self) -> RX_CHAN_MOD_W {
-        RX_CHAN_MOD_W { w: self }
+        RX_CHAN_MOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,554 +35,67 @@ impl From<crate::W<PRO_DCACHE_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DCACHE_ENABLE` reader - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub struct PRO_DCACHE_ENABLE_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_ENABLE` writer - The bit is used to activate the data cache. 0: disable, 1: enable"]
-pub struct PRO_DCACHE_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_DCACHE_ENABLE_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 0>;
 #[doc = "Field `PRO_DCACHE_SETSIZE_MODE` reader - The bit is used to configure cache memory size.0: 8KB, 1: 16KB"]
-pub struct PRO_DCACHE_SETSIZE_MODE_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_SETSIZE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_SETSIZE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_SETSIZE_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_SETSIZE_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_SETSIZE_MODE` writer - The bit is used to configure cache memory size.0: 8KB, 1: 16KB"]
-pub struct PRO_DCACHE_SETSIZE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_SETSIZE_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PRO_DCACHE_SETSIZE_MODE_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 2>;
 #[doc = "Field `PRO_DCACHE_BLOCKSIZE_MODE` reader - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
-pub struct PRO_DCACHE_BLOCKSIZE_MODE_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_BLOCKSIZE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_BLOCKSIZE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_BLOCKSIZE_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_BLOCKSIZE_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_BLOCKSIZE_MODE` writer - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
-pub struct PRO_DCACHE_BLOCKSIZE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_BLOCKSIZE_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type PRO_DCACHE_BLOCKSIZE_MODE_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 3>;
 #[doc = "Field `PRO_DCACHE_INVALIDATE_ENA` reader - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub struct PRO_DCACHE_INVALIDATE_ENA_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_INVALIDATE_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_INVALIDATE_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_INVALIDATE_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_INVALIDATE_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_INVALIDATE_ENA` writer - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub struct PRO_DCACHE_INVALIDATE_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_INVALIDATE_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type PRO_DCACHE_INVALIDATE_ENA_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 8>;
 #[doc = "Field `PRO_DCACHE_INVALIDATE_DONE` reader - The bit is used to indicate invalidate operation is finished."]
-pub struct PRO_DCACHE_INVALIDATE_DONE_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_INVALIDATE_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_INVALIDATE_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_INVALIDATE_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_INVALIDATE_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_FLUSH_ENA` reader - The bit is used to enable flush operation. It will be cleared by hardware after flush operation done."]
-pub struct PRO_DCACHE_FLUSH_ENA_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_FLUSH_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_FLUSH_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_FLUSH_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_FLUSH_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_FLUSH_ENA` writer - The bit is used to enable flush operation. It will be cleared by hardware after flush operation done."]
-pub struct PRO_DCACHE_FLUSH_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_FLUSH_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type PRO_DCACHE_FLUSH_ENA_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 10>;
 #[doc = "Field `PRO_DCACHE_FLUSH_DONE` reader - The bit is used to indicate flush operation is finished."]
-pub struct PRO_DCACHE_FLUSH_DONE_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_FLUSH_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_FLUSH_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_FLUSH_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_FLUSH_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_CLEAN_ENA` reader - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
-pub struct PRO_DCACHE_CLEAN_ENA_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_CLEAN_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_CLEAN_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_CLEAN_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_CLEAN_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_CLEAN_ENA` writer - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
-pub struct PRO_DCACHE_CLEAN_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_CLEAN_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type PRO_DCACHE_CLEAN_ENA_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 12>;
 #[doc = "Field `PRO_DCACHE_CLEAN_DONE` reader - The bit is used to indicate clean operation is finished."]
-pub struct PRO_DCACHE_CLEAN_DONE_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_CLEAN_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_CLEAN_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_CLEAN_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_CLEAN_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_LOCK0_EN` reader - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK0_ADDR_REG and PRO_DCACHE_LOCK0_SIZE_REG."]
-pub struct PRO_DCACHE_LOCK0_EN_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_LOCK0_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_LOCK0_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_LOCK0_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_LOCK0_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_LOCK0_EN` writer - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK0_ADDR_REG and PRO_DCACHE_LOCK0_SIZE_REG."]
-pub struct PRO_DCACHE_LOCK0_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_LOCK0_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type PRO_DCACHE_LOCK0_EN_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 14>;
 #[doc = "Field `PRO_DCACHE_LOCK1_EN` reader - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK1_ADDR_REG and PRO_DCACHE_LOCK1_SIZE_REG."]
-pub struct PRO_DCACHE_LOCK1_EN_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_LOCK1_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_LOCK1_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_LOCK1_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_LOCK1_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_LOCK1_EN` writer - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK1_ADDR_REG and PRO_DCACHE_LOCK1_SIZE_REG."]
-pub struct PRO_DCACHE_LOCK1_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_LOCK1_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type PRO_DCACHE_LOCK1_EN_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 15>;
 #[doc = "Field `PRO_DCACHE_AUTOLOAD_ENA` reader - The bit is used to enable and disable conditional-preload operation. It is combined with pre_dcache_autoload_done. 1: enable, 0: disable."]
-pub struct PRO_DCACHE_AUTOLOAD_ENA_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_AUTOLOAD_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_AUTOLOAD_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_AUTOLOAD_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_AUTOLOAD_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_AUTOLOAD_ENA` writer - The bit is used to enable and disable conditional-preload operation. It is combined with pre_dcache_autoload_done. 1: enable, 0: disable."]
-pub struct PRO_DCACHE_AUTOLOAD_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_AUTOLOAD_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type PRO_DCACHE_AUTOLOAD_ENA_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 18>;
 #[doc = "Field `PRO_DCACHE_AUTOLOAD_DONE` reader - The bit is used to indicate conditional-preload operation is finished."]
-pub struct PRO_DCACHE_AUTOLOAD_DONE_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_AUTOLOAD_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_AUTOLOAD_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_AUTOLOAD_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_AUTOLOAD_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_PRELOAD_ENA` reader - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
-pub struct PRO_DCACHE_PRELOAD_ENA_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_PRELOAD_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_PRELOAD_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_PRELOAD_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_PRELOAD_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_PRELOAD_ENA` writer - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
-pub struct PRO_DCACHE_PRELOAD_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_PRELOAD_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type PRO_DCACHE_PRELOAD_ENA_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 20>;
 #[doc = "Field `PRO_DCACHE_PRELOAD_DONE` reader - The bit is used to indicate preload operation is finished."]
-pub struct PRO_DCACHE_PRELOAD_DONE_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_PRELOAD_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_PRELOAD_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_PRELOAD_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_PRELOAD_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_UNLOCK_ENA` reader - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
-pub struct PRO_DCACHE_UNLOCK_ENA_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_UNLOCK_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_UNLOCK_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_UNLOCK_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_UNLOCK_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_UNLOCK_ENA` writer - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
-pub struct PRO_DCACHE_UNLOCK_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_UNLOCK_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type PRO_DCACHE_UNLOCK_ENA_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 22>;
 #[doc = "Field `PRO_DCACHE_UNLOCK_DONE` reader - The bit is used to indicate unlock operation is finished."]
-pub struct PRO_DCACHE_UNLOCK_DONE_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_UNLOCK_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_UNLOCK_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_UNLOCK_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_UNLOCK_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_LOCK_ENA` reader - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
-pub struct PRO_DCACHE_LOCK_ENA_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_LOCK_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_LOCK_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_LOCK_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_LOCK_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_LOCK_ENA` writer - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
-pub struct PRO_DCACHE_LOCK_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_LOCK_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type PRO_DCACHE_LOCK_ENA_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_CTRL_SPEC, bool, 24>;
 #[doc = "Field `PRO_DCACHE_LOCK_DONE` reader - The bit is used to indicate lock operation is finished."]
-pub struct PRO_DCACHE_LOCK_DONE_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_LOCK_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_LOCK_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_LOCK_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_LOCK_DONE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
@@ -684,62 +197,62 @@ impl W {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
     pub fn pro_dcache_enable(&mut self) -> PRO_DCACHE_ENABLE_W {
-        PRO_DCACHE_ENABLE_W { w: self }
+        PRO_DCACHE_ENABLE_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to configure cache memory size.0: 8KB, 1: 16KB"]
     #[inline(always)]
     pub fn pro_dcache_setsize_mode(&mut self) -> PRO_DCACHE_SETSIZE_MODE_W {
-        PRO_DCACHE_SETSIZE_MODE_W { w: self }
+        PRO_DCACHE_SETSIZE_MODE_W::new(self)
     }
     #[doc = "Bit 3 - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
     #[inline(always)]
     pub fn pro_dcache_blocksize_mode(&mut self) -> PRO_DCACHE_BLOCKSIZE_MODE_W {
-        PRO_DCACHE_BLOCKSIZE_MODE_W { w: self }
+        PRO_DCACHE_BLOCKSIZE_MODE_W::new(self)
     }
     #[doc = "Bit 8 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
     pub fn pro_dcache_invalidate_ena(&mut self) -> PRO_DCACHE_INVALIDATE_ENA_W {
-        PRO_DCACHE_INVALIDATE_ENA_W { w: self }
+        PRO_DCACHE_INVALIDATE_ENA_W::new(self)
     }
     #[doc = "Bit 10 - The bit is used to enable flush operation. It will be cleared by hardware after flush operation done."]
     #[inline(always)]
     pub fn pro_dcache_flush_ena(&mut self) -> PRO_DCACHE_FLUSH_ENA_W {
-        PRO_DCACHE_FLUSH_ENA_W { w: self }
+        PRO_DCACHE_FLUSH_ENA_W::new(self)
     }
     #[doc = "Bit 12 - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
     #[inline(always)]
     pub fn pro_dcache_clean_ena(&mut self) -> PRO_DCACHE_CLEAN_ENA_W {
-        PRO_DCACHE_CLEAN_ENA_W { w: self }
+        PRO_DCACHE_CLEAN_ENA_W::new(self)
     }
     #[doc = "Bit 14 - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK0_ADDR_REG and PRO_DCACHE_LOCK0_SIZE_REG."]
     #[inline(always)]
     pub fn pro_dcache_lock0_en(&mut self) -> PRO_DCACHE_LOCK0_EN_W {
-        PRO_DCACHE_LOCK0_EN_W { w: self }
+        PRO_DCACHE_LOCK0_EN_W::new(self)
     }
     #[doc = "Bit 15 - The bit is used to enable pre-lock operation which is combined with PRO_DCACHE_LOCK1_ADDR_REG and PRO_DCACHE_LOCK1_SIZE_REG."]
     #[inline(always)]
     pub fn pro_dcache_lock1_en(&mut self) -> PRO_DCACHE_LOCK1_EN_W {
-        PRO_DCACHE_LOCK1_EN_W { w: self }
+        PRO_DCACHE_LOCK1_EN_W::new(self)
     }
     #[doc = "Bit 18 - The bit is used to enable and disable conditional-preload operation. It is combined with pre_dcache_autoload_done. 1: enable, 0: disable."]
     #[inline(always)]
     pub fn pro_dcache_autoload_ena(&mut self) -> PRO_DCACHE_AUTOLOAD_ENA_W {
-        PRO_DCACHE_AUTOLOAD_ENA_W { w: self }
+        PRO_DCACHE_AUTOLOAD_ENA_W::new(self)
     }
     #[doc = "Bit 20 - The bit is used to enable preload operation. It will be cleared by hardware after preload operation done."]
     #[inline(always)]
     pub fn pro_dcache_preload_ena(&mut self) -> PRO_DCACHE_PRELOAD_ENA_W {
-        PRO_DCACHE_PRELOAD_ENA_W { w: self }
+        PRO_DCACHE_PRELOAD_ENA_W::new(self)
     }
     #[doc = "Bit 22 - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
     #[inline(always)]
     pub fn pro_dcache_unlock_ena(&mut self) -> PRO_DCACHE_UNLOCK_ENA_W {
-        PRO_DCACHE_UNLOCK_ENA_W { w: self }
+        PRO_DCACHE_UNLOCK_ENA_W::new(self)
     }
     #[doc = "Bit 24 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
     #[inline(always)]
     pub fn pro_dcache_lock_ena(&mut self) -> PRO_DCACHE_LOCK_ENA_W {
-        PRO_DCACHE_LOCK_ENA_W { w: self }
+        PRO_DCACHE_LOCK_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

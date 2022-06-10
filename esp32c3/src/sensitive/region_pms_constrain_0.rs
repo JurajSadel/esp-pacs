@@ -35,42 +35,10 @@ impl From<crate::W<REGION_PMS_CONSTRAIN_0_SPEC>> for W {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_LOCK` reader - region_pms_constrain_lock"]
-pub struct REGION_PMS_CONSTRAIN_LOCK_R(crate::FieldReader<bool>);
-impl REGION_PMS_CONSTRAIN_LOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        REGION_PMS_CONSTRAIN_LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGION_PMS_CONSTRAIN_LOCK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGION_PMS_CONSTRAIN_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_LOCK` writer - region_pms_constrain_lock"]
-pub struct REGION_PMS_CONSTRAIN_LOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGION_PMS_CONSTRAIN_LOCK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type REGION_PMS_CONSTRAIN_LOCK_W<'a> =
+    crate::BitWriter<'a, u32, REGION_PMS_CONSTRAIN_0_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - region_pms_constrain_lock"]
     #[inline(always)]
@@ -82,7 +50,7 @@ impl W {
     #[doc = "Bit 0 - region_pms_constrain_lock"]
     #[inline(always)]
     pub fn region_pms_constrain_lock(&mut self) -> REGION_PMS_CONSTRAIN_LOCK_W {
-        REGION_PMS_CONSTRAIN_LOCK_W { w: self }
+        REGION_PMS_CONSTRAIN_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<MODEXP_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `MODEXP_MODE` reader - This register contains the mode of modular exponentiation."]
-pub struct MODEXP_MODE_R(crate::FieldReader<u8>);
-impl MODEXP_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MODEXP_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MODEXP_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MODEXP_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MODEXP_MODE` writer - This register contains the mode of modular exponentiation."]
-pub struct MODEXP_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODEXP_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type MODEXP_MODE_W<'a> = crate::FieldWriter<'a, u32, MODEXP_MODE_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1 - This register contains the mode of modular exponentiation."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:1 - This register contains the mode of modular exponentiation."]
     #[inline(always)]
     pub fn modexp_mode(&mut self) -> MODEXP_MODE_W {
-        MODEXP_MODE_W { w: self }
+        MODEXP_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

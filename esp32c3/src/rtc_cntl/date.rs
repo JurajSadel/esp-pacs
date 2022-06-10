@@ -35,32 +35,9 @@ impl From<crate::W<DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_CNTL_DATE` reader - verision"]
-pub struct RTC_CNTL_DATE_R(crate::FieldReader<u32>);
-impl RTC_CNTL_DATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RTC_CNTL_DATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_CNTL_DATE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_CNTL_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RTC_CNTL_DATE` writer - verision"]
-pub struct RTC_CNTL_DATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_CNTL_DATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff_ffff) | (value as u32 & 0x0fff_ffff);
-        self.w
-    }
-}
+pub type RTC_CNTL_DATE_W<'a> = crate::FieldWriter<'a, u32, DATE_SPEC, u32, u32, 28, 0>;
 impl R {
     #[doc = "Bits 0:27 - verision"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:27 - verision"]
     #[inline(always)]
     pub fn rtc_cntl_date(&mut self) -> RTC_CNTL_DATE_W {
-        RTC_CNTL_DATE_W { w: self }
+        RTC_CNTL_DATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

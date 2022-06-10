@@ -35,106 +35,17 @@ impl From<crate::W<TIMING_CALI_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMING_CLK_ENA` reader - The bit is used to enable timing adjust clock for all reading operations."]
-pub struct TIMING_CLK_ENA_R(crate::FieldReader<bool>);
-impl TIMING_CLK_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMING_CLK_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMING_CLK_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMING_CLK_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TIMING_CLK_ENA` writer - The bit is used to enable timing adjust clock for all reading operations."]
-pub struct TIMING_CLK_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMING_CLK_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TIMING_CLK_ENA_W<'a> = crate::BitWriter<'a, u32, TIMING_CALI_SPEC, bool, 0>;
 #[doc = "Field `TIMING_CALI` reader - The bit is used to enable timing auto-calibration for all reading operations."]
-pub struct TIMING_CALI_R(crate::FieldReader<bool>);
-impl TIMING_CALI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMING_CALI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMING_CALI_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMING_CALI_R = crate::BitReader<bool>;
 #[doc = "Field `TIMING_CALI` writer - The bit is used to enable timing auto-calibration for all reading operations."]
-pub struct TIMING_CALI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMING_CALI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type TIMING_CALI_W<'a> = crate::BitWriter<'a, u32, TIMING_CALI_SPEC, bool, 1>;
 #[doc = "Field `EXTRA_DUMMY_CYCLELEN` reader - add extra dummy spi clock cycle length for spi clock calibration."]
-pub struct EXTRA_DUMMY_CYCLELEN_R(crate::FieldReader<u8>);
-impl EXTRA_DUMMY_CYCLELEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EXTRA_DUMMY_CYCLELEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTRA_DUMMY_CYCLELEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `EXTRA_DUMMY_CYCLELEN` writer - add extra dummy spi clock cycle length for spi clock calibration."]
-pub struct EXTRA_DUMMY_CYCLELEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTRA_DUMMY_CYCLELEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 2)) | ((value as u32 & 7) << 2);
-        self.w
-    }
-}
+pub type EXTRA_DUMMY_CYCLELEN_W<'a> = crate::FieldWriter<'a, u32, TIMING_CALI_SPEC, u8, u8, 3, 2>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable timing adjust clock for all reading operations."]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bit 0 - The bit is used to enable timing adjust clock for all reading operations."]
     #[inline(always)]
     pub fn timing_clk_ena(&mut self) -> TIMING_CLK_ENA_W {
-        TIMING_CLK_ENA_W { w: self }
+        TIMING_CLK_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to enable timing auto-calibration for all reading operations."]
     #[inline(always)]
     pub fn timing_cali(&mut self) -> TIMING_CALI_W {
-        TIMING_CALI_W { w: self }
+        TIMING_CALI_W::new(self)
     }
     #[doc = "Bits 2:4 - add extra dummy spi clock cycle length for spi clock calibration."]
     #[inline(always)]
     pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W {
-        EXTRA_DUMMY_CYCLELEN_W { w: self }
+        EXTRA_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

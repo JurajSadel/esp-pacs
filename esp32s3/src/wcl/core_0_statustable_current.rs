@@ -35,32 +35,10 @@ impl From<crate::W<CORE_0_STATUSTABLE_CURRENT_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_STATUSTABLE_CURRENT` reader - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1,bit2 represents the current field of STATUSTABLE2"]
-pub struct CORE_0_STATUSTABLE_CURRENT_R(crate::FieldReader<u16>);
-impl CORE_0_STATUSTABLE_CURRENT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CORE_0_STATUSTABLE_CURRENT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_STATUSTABLE_CURRENT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_STATUSTABLE_CURRENT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CORE_0_STATUSTABLE_CURRENT` writer - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1,bit2 represents the current field of STATUSTABLE2"]
-pub struct CORE_0_STATUSTABLE_CURRENT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_STATUSTABLE_CURRENT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1fff << 1)) | ((value as u32 & 0x1fff) << 1);
-        self.w
-    }
-}
+pub type CORE_0_STATUSTABLE_CURRENT_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_0_STATUSTABLE_CURRENT_SPEC, u16, u16, 13, 1>;
 impl R {
     #[doc = "Bits 1:13 - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1,bit2 represents the current field of STATUSTABLE2"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 1:13 - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1,bit2 represents the current field of STATUSTABLE2"]
     #[inline(always)]
     pub fn core_0_statustable_current(&mut self) -> CORE_0_STATUSTABLE_CURRENT_W {
-        CORE_0_STATUSTABLE_CURRENT_W { w: self }
+        CORE_0_STATUSTABLE_CURRENT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

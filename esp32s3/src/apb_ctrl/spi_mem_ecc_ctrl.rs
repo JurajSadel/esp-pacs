@@ -35,59 +35,13 @@ impl From<crate::W<SPI_MEM_ECC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_PAGE_SIZE` reader - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub struct FLASH_PAGE_SIZE_R(crate::FieldReader<u8>);
-impl FLASH_PAGE_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FLASH_PAGE_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_PAGE_SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_PAGE_SIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FLASH_PAGE_SIZE` writer - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub struct FLASH_PAGE_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_PAGE_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
-        self.w
-    }
-}
+pub type FLASH_PAGE_SIZE_W<'a> = crate::FieldWriter<'a, u32, SPI_MEM_ECC_CTRL_SPEC, u8, u8, 2, 18>;
 #[doc = "Field `SRAM_PAGE_SIZE` reader - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub struct SRAM_PAGE_SIZE_R(crate::FieldReader<u8>);
-impl SRAM_PAGE_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SRAM_PAGE_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRAM_PAGE_SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRAM_PAGE_SIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SRAM_PAGE_SIZE` writer - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
-pub struct SRAM_PAGE_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_PAGE_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
-        self.w
-    }
-}
+pub type SRAM_PAGE_SIZE_W<'a> = crate::FieldWriter<'a, u32, SPI_MEM_ECC_CTRL_SPEC, u8, u8, 2, 20>;
 impl R {
     #[doc = "Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
     pub fn flash_page_size(&mut self) -> FLASH_PAGE_SIZE_W {
-        FLASH_PAGE_SIZE_W { w: self }
+        FLASH_PAGE_SIZE_W::new(self)
     }
     #[doc = "Bits 20:21 - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
     pub fn sram_page_size(&mut self) -> SRAM_PAGE_SIZE_W {
-        SRAM_PAGE_SIZE_W { w: self }
+        SRAM_PAGE_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,260 +14,39 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_START_INT_ST` reader - This is the masked interrupt bit for UHCI_RX_START_INT interrupt when UHCI_RX_START_INT_ENA is set to 1."]
-pub struct RX_START_INT_ST_R(crate::FieldReader<bool>);
-impl RX_START_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_START_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_START_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_START_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TX_START_INT_ST` reader - This is the masked interrupt bit for UHCI_TX_START_INT interrupt when UHCI_TX_START_INT_ENA is set to 1."]
-pub struct TX_START_INT_ST_R(crate::FieldReader<bool>);
-impl TX_START_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_START_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_START_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_START_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RX_HUNG_INT_ST` reader - This is the masked interrupt bit for UHCI_RX_HUNG_INT interrupt when UHCI_RX_HUNG_INT_ENA is set to 1."]
-pub struct RX_HUNG_INT_ST_R(crate::FieldReader<bool>);
-impl RX_HUNG_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_HUNG_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_HUNG_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_HUNG_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TX_HUNG_INT_ST` reader - This is the masked interrupt bit for UHCI_TX_HUNG_INT interrupt when UHCI_TX_HUNG_INT_ENA is set to 1."]
-pub struct TX_HUNG_INT_ST_R(crate::FieldReader<bool>);
-impl TX_HUNG_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_HUNG_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_HUNG_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_HUNG_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_DONE_INT_ST` reader - This is the masked interrupt bit for UHCI_IN_DONE_INT interrupt when UHCI_IN_DONE_INT_ENA is set to 1."]
-pub struct IN_DONE_INT_ST_R(crate::FieldReader<bool>);
-impl IN_DONE_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_DONE_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_DONE_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_SUC_EOF_INT_ST` reader - This is the masked interrupt bit for UHCI_IN_SUC_EOF_INT interrupt when UHCI_IN_SUC_EOF_INT_ENA is set to 1."]
-pub struct IN_SUC_EOF_INT_ST_R(crate::FieldReader<bool>);
-impl IN_SUC_EOF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_SUC_EOF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_SUC_EOF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_SUC_EOF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_ERR_EOF_INT_ST` reader - This is the masked interrupt bit for UHCI_IN_ERR_EOF_INT interrupt when UHCI_IN_ERR_EOF_INT_ENA is set to 1."]
-pub struct IN_ERR_EOF_INT_ST_R(crate::FieldReader<bool>);
-impl IN_ERR_EOF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_ERR_EOF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_ERR_EOF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_ERR_EOF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DONE_INT_ST` reader - This is the masked interrupt bit for UHCI_OUT_DONE_INT interrupt when UHCI_OUT_DONE_INT_ENA is set to 1."]
-pub struct OUT_DONE_INT_ST_R(crate::FieldReader<bool>);
-impl OUT_DONE_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DONE_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DONE_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EOF_INT_ST` reader - This is the masked interrupt bit for UHCI_OUT_EOF_INT interrupt when UHCI_OUT_EOF_INT_ENA is set to 1."]
-pub struct OUT_EOF_INT_ST_R(crate::FieldReader<bool>);
-impl OUT_EOF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EOF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EOF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EOF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_DSCR_ERR_INT_ST` reader - This is the masked interrupt bit for UHCI_IN_DSCR_ERR_INT interrupt when UHCI_IN_DSCR_ERR_INT is set to 1."]
-pub struct IN_DSCR_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl IN_DSCR_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_DSCR_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_DSCR_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_DSCR_ERR_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DSCR_ERR_INT_ST` reader - This is the masked interrupt bit for UHCI_OUT_DSCR_ERR_INT interrupt when UHCI_OUT_DSCR_ERR_INT_ENA is set to 1."]
-pub struct OUT_DSCR_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl OUT_DSCR_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DSCR_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DSCR_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DSCR_ERR_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_DSCR_EMPTY_INT_ST` reader - This is the masked interrupt bit for UHCI_IN_DSCR_EMPTY_INT interrupt when UHCI_IN_DSCR_EMPTY_INT_ENA is set to 1."]
-pub struct IN_DSCR_EMPTY_INT_ST_R(crate::FieldReader<bool>);
-impl IN_DSCR_EMPTY_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_DSCR_EMPTY_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_DSCR_EMPTY_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_DSCR_EMPTY_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUTLINK_EOF_ERR_INT_ST` reader - This is the masked interrupt bit for UHCI_OUTLINK_EOF_ERR_INT interrupt when UHCI_OUTLINK_EOF_ERR_INT_ENA is set to 1."]
-pub struct OUTLINK_EOF_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl OUTLINK_EOF_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTLINK_EOF_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_EOF_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_EOF_ERR_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_TOTAL_EOF_INT_ST` reader - This is the masked interrupt bit for UHCI_OUT_TOTAL_EOF_INT interrupt when UHCI_OUT_TOTAL_EOF_INT_ENA is set to 1."]
-pub struct OUT_TOTAL_EOF_INT_ST_R(crate::FieldReader<bool>);
-impl OUT_TOTAL_EOF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_TOTAL_EOF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_TOTAL_EOF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_TOTAL_EOF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `SEND_S_REG_Q_INT_ST` reader - This is the masked interrupt bit for UHCI_SEND_S_REG_Q_INT interrupt when UHCI_SEND_S_REG_Q_INT_ENA is set to 1."]
-pub struct SEND_S_REG_Q_INT_ST_R(crate::FieldReader<bool>);
-impl SEND_S_REG_Q_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SEND_S_REG_Q_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEND_S_REG_Q_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEND_S_REG_Q_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `SEND_A_REG_Q_INT_ST` reader - This is the masked interrupt bit for UHCI_SEND_A_REG_Q_INT interrupt when UHCI_SEND_A_REG_Q_INT_ENA is set to 1."]
-pub struct SEND_A_REG_Q_INT_ST_R(crate::FieldReader<bool>);
-impl SEND_A_REG_Q_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SEND_A_REG_Q_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEND_A_REG_Q_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEND_A_REG_Q_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_INFIFO_FULL_WM_INT_ST` reader - This is the masked interrupt bit for UHCI_DMA_INFIFO_FULL_WM_INT INTERRUPT when UHCI_DMA_INFIFO_FULL_WM_INT_ENA is set to 1."]
-pub struct DMA_INFIFO_FULL_WM_INT_ST_R(crate::FieldReader<bool>);
-impl DMA_INFIFO_FULL_WM_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_INFIFO_FULL_WM_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_INFIFO_FULL_WM_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_INFIFO_FULL_WM_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - This is the masked interrupt bit for UHCI_RX_START_INT interrupt when UHCI_RX_START_INT_ENA is set to 1."]
     #[inline(always)]

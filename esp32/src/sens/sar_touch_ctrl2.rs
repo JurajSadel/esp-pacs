@@ -35,195 +35,28 @@ impl From<crate::W<SAR_TOUCH_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_MEAS_EN` reader - 10-bit register to indicate which pads are \"touched\""]
-pub struct TOUCH_MEAS_EN_R(crate::FieldReader<u16>);
-impl TOUCH_MEAS_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TOUCH_MEAS_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_MEAS_EN_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_MEAS_EN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_MEAS_DONE` reader - fsm set 1 to indicate touch touch meas is done"]
-pub struct TOUCH_MEAS_DONE_R(crate::FieldReader<bool>);
-impl TOUCH_MEAS_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_MEAS_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_MEAS_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_MEAS_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_START_FSM_EN` reader - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm 0: TOUCH_START & TOUCH_XPD is controlled by registers"]
-pub struct TOUCH_START_FSM_EN_R(crate::FieldReader<bool>);
-impl TOUCH_START_FSM_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_START_FSM_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_START_FSM_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_START_FSM_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_START_FSM_EN` writer - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm 0: TOUCH_START & TOUCH_XPD is controlled by registers"]
-pub struct TOUCH_START_FSM_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_START_FSM_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type TOUCH_START_FSM_EN_W<'a> = crate::BitWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, bool, 11>;
 #[doc = "Field `TOUCH_START_EN` reader - 1: start touch fsm valid when reg_touch_start_force is set"]
-pub struct TOUCH_START_EN_R(crate::FieldReader<bool>);
-impl TOUCH_START_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_START_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_START_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_START_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_START_EN` writer - 1: start touch fsm valid when reg_touch_start_force is set"]
-pub struct TOUCH_START_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_START_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type TOUCH_START_EN_W<'a> = crate::BitWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, bool, 12>;
 #[doc = "Field `TOUCH_START_FORCE` reader - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
-pub struct TOUCH_START_FORCE_R(crate::FieldReader<bool>);
-impl TOUCH_START_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_START_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_START_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_START_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_START_FORCE` writer - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
-pub struct TOUCH_START_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_START_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type TOUCH_START_FORCE_W<'a> = crate::BitWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, bool, 13>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` reader - sleep cycles for timer"]
-pub struct TOUCH_SLEEP_CYCLES_R(crate::FieldReader<u16>);
-impl TOUCH_SLEEP_CYCLES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TOUCH_SLEEP_CYCLES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_SLEEP_CYCLES_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_SLEEP_CYCLES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_SLEEP_CYCLES` writer - sleep cycles for timer"]
-pub struct TOUCH_SLEEP_CYCLES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_SLEEP_CYCLES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 14)) | ((value as u32 & 0xffff) << 14);
-        self.w
-    }
-}
+pub type TOUCH_SLEEP_CYCLES_W<'a> =
+    crate::FieldWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, u16, u16, 16, 14>;
 #[doc = "Field `TOUCH_MEAS_EN_CLR` writer - to clear reg_touch_meas_en"]
-pub struct TOUCH_MEAS_EN_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_MEAS_EN_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type TOUCH_MEAS_EN_CLR_W<'a> = crate::BitWriter<'a, u32, SAR_TOUCH_CTRL2_SPEC, bool, 30>;
 impl R {
     #[doc = "Bits 0:9 - 10-bit register to indicate which pads are \"touched\""]
     #[inline(always)]
@@ -260,27 +93,27 @@ impl W {
     #[doc = "Bit 11 - 1: TOUCH_START & TOUCH_XPD is controlled by touch fsm 0: TOUCH_START & TOUCH_XPD is controlled by registers"]
     #[inline(always)]
     pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W {
-        TOUCH_START_FSM_EN_W { w: self }
+        TOUCH_START_FSM_EN_W::new(self)
     }
     #[doc = "Bit 12 - 1: start touch fsm valid when reg_touch_start_force is set"]
     #[inline(always)]
     pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W {
-        TOUCH_START_EN_W { w: self }
+        TOUCH_START_EN_W::new(self)
     }
     #[doc = "Bit 13 - 1: to start touch fsm by SW 0: to start touch fsm by timer"]
     #[inline(always)]
     pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W {
-        TOUCH_START_FORCE_W { w: self }
+        TOUCH_START_FORCE_W::new(self)
     }
     #[doc = "Bits 14:29 - sleep cycles for timer"]
     #[inline(always)]
     pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W {
-        TOUCH_SLEEP_CYCLES_W { w: self }
+        TOUCH_SLEEP_CYCLES_W::new(self)
     }
     #[doc = "Bit 30 - to clear reg_touch_meas_en"]
     #[inline(always)]
     pub fn touch_meas_en_clr(&mut self) -> TOUCH_MEAS_EN_CLR_W {
-        TOUCH_MEAS_EN_CLR_W { w: self }
+        TOUCH_MEAS_EN_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

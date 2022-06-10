@@ -14,35 +14,9 @@ impl From<crate::R<DMA_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_RX_EN` reader - spi dma read data status bit."]
-pub struct DMA_RX_EN_R(crate::FieldReader<bool>);
-impl DMA_RX_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_RX_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_RX_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_RX_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_TX_EN` reader - spi dma write data status bit."]
-pub struct DMA_TX_EN_R(crate::FieldReader<bool>);
-impl DMA_TX_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_TX_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_TX_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_TX_EN_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - spi dma read data status bit."]
     #[inline(always)]

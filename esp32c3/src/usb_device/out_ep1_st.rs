@@ -14,65 +14,13 @@ impl From<crate::R<OUT_EP1_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `OUT_EP1_STATE` reader - State of OUT Endpoint 1."]
-pub struct OUT_EP1_STATE_R(crate::FieldReader<u8>);
-impl OUT_EP1_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_EP1_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EP1_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EP1_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUT_EP1_WR_ADDR` reader - Write data address of OUT endpoint 1. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is detected, there are USB_DEVICE_OUT_EP1_WR_ADDR-2 bytes data in OUT EP1."]
-pub struct OUT_EP1_WR_ADDR_R(crate::FieldReader<u8>);
-impl OUT_EP1_WR_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_EP1_WR_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EP1_WR_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EP1_WR_ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUT_EP1_RD_ADDR` reader - Read data address of OUT endpoint 1."]
-pub struct OUT_EP1_RD_ADDR_R(crate::FieldReader<u8>);
-impl OUT_EP1_RD_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_EP1_RD_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EP1_RD_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EP1_RD_ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUT_EP1_REC_DATA_CNT` reader - Data count in OUT endpoint 1 when one packet is received."]
-pub struct OUT_EP1_REC_DATA_CNT_R(crate::FieldReader<u8>);
-impl OUT_EP1_REC_DATA_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_EP1_REC_DATA_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EP1_REC_DATA_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EP1_REC_DATA_CNT_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:1 - State of OUT Endpoint 1."]
     #[inline(always)]

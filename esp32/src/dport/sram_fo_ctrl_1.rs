@@ -35,42 +35,9 @@ impl From<crate::W<SRAM_FO_CTRL_1_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_FO_1` reader - "]
-pub struct SRAM_FO_1_R(crate::FieldReader<bool>);
-impl SRAM_FO_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SRAM_FO_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRAM_FO_1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRAM_FO_1_R = crate::BitReader<bool>;
 #[doc = "Field `SRAM_FO_1` writer - "]
-pub struct SRAM_FO_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_FO_1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SRAM_FO_1_W<'a> = crate::BitWriter<'a, u32, SRAM_FO_CTRL_1_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn sram_fo_1(&mut self) -> SRAM_FO_1_W {
-        SRAM_FO_1_W { w: self }
+        SRAM_FO_1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

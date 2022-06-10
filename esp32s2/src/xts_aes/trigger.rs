@@ -20,32 +20,12 @@ impl From<crate::W<TRIGGER_SPEC>> for W {
     }
 }
 #[doc = "Field `TRIGGER` writer - Set to enable manual encryption."]
-pub struct TRIGGER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRIGGER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TRIGGER_W<'a> = crate::BitWriter<'a, u32, TRIGGER_SPEC, bool, 0>;
 impl W {
     #[doc = "Bit 0 - Set to enable manual encryption."]
     #[inline(always)]
     pub fn trigger(&mut self) -> TRIGGER_W {
-        TRIGGER_W { w: self }
+        TRIGGER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

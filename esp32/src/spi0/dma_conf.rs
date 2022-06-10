@@ -35,523 +35,61 @@ impl From<crate::W<DMA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_RST` reader - The bit is used to reset in dma fsm and in data fifo pointer."]
-pub struct IN_RST_R(crate::FieldReader<bool>);
-impl IN_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_RST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_RST` writer - The bit is used to reset in dma fsm and in data fifo pointer."]
-pub struct IN_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type IN_RST_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 2>;
 #[doc = "Field `OUT_RST` reader - The bit is used to reset out dma fsm and out data fifo pointer."]
-pub struct OUT_RST_R(crate::FieldReader<bool>);
-impl OUT_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_RST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_RST` writer - The bit is used to reset out dma fsm and out data fifo pointer."]
-pub struct OUT_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type OUT_RST_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 3>;
 #[doc = "Field `AHBM_FIFO_RST` reader - reset spi dma ahb master fifo pointer."]
-pub struct AHBM_FIFO_RST_R(crate::FieldReader<bool>);
-impl AHBM_FIFO_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AHBM_FIFO_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHBM_FIFO_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHBM_FIFO_RST_R = crate::BitReader<bool>;
 #[doc = "Field `AHBM_FIFO_RST` writer - reset spi dma ahb master fifo pointer."]
-pub struct AHBM_FIFO_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AHBM_FIFO_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type AHBM_FIFO_RST_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 4>;
 #[doc = "Field `AHBM_RST` reader - reset spi dma ahb master."]
-pub struct AHBM_RST_R(crate::FieldReader<bool>);
-impl AHBM_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AHBM_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHBM_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHBM_RST_R = crate::BitReader<bool>;
 #[doc = "Field `AHBM_RST` writer - reset spi dma ahb master."]
-pub struct AHBM_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AHBM_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type AHBM_RST_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 5>;
 #[doc = "Field `IN_LOOP_TEST` reader - Set bit to test in link."]
-pub struct IN_LOOP_TEST_R(crate::FieldReader<bool>);
-impl IN_LOOP_TEST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_LOOP_TEST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_LOOP_TEST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_LOOP_TEST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_LOOP_TEST` writer - Set bit to test in link."]
-pub struct IN_LOOP_TEST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_LOOP_TEST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type IN_LOOP_TEST_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 6>;
 #[doc = "Field `OUT_LOOP_TEST` reader - Set bit to test out link."]
-pub struct OUT_LOOP_TEST_R(crate::FieldReader<bool>);
-impl OUT_LOOP_TEST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_LOOP_TEST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_LOOP_TEST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_LOOP_TEST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_LOOP_TEST` writer - Set bit to test out link."]
-pub struct OUT_LOOP_TEST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_LOOP_TEST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type OUT_LOOP_TEST_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 7>;
 #[doc = "Field `OUT_AUTO_WRBACK` reader - when the link is empty jump to next automatically."]
-pub struct OUT_AUTO_WRBACK_R(crate::FieldReader<bool>);
-impl OUT_AUTO_WRBACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_AUTO_WRBACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_AUTO_WRBACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_AUTO_WRBACK_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_AUTO_WRBACK` writer - when the link is empty jump to next automatically."]
-pub struct OUT_AUTO_WRBACK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_AUTO_WRBACK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type OUT_AUTO_WRBACK_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 8>;
 #[doc = "Field `OUT_EOF_MODE` reader - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
-pub struct OUT_EOF_MODE_R(crate::FieldReader<bool>);
-impl OUT_EOF_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EOF_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EOF_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EOF_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EOF_MODE` writer - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
-pub struct OUT_EOF_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_EOF_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type OUT_EOF_MODE_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 9>;
 #[doc = "Field `OUTDSCR_BURST_EN` reader - read descriptor use burst mode when read data for memory."]
-pub struct OUTDSCR_BURST_EN_R(crate::FieldReader<bool>);
-impl OUTDSCR_BURST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTDSCR_BURST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTDSCR_BURST_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTDSCR_BURST_EN_R = crate::BitReader<bool>;
 #[doc = "Field `OUTDSCR_BURST_EN` writer - read descriptor use burst mode when read data for memory."]
-pub struct OUTDSCR_BURST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTDSCR_BURST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type OUTDSCR_BURST_EN_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 10>;
 #[doc = "Field `INDSCR_BURST_EN` reader - read descriptor use burst mode when write data to memory."]
-pub struct INDSCR_BURST_EN_R(crate::FieldReader<bool>);
-impl INDSCR_BURST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INDSCR_BURST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INDSCR_BURST_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INDSCR_BURST_EN_R = crate::BitReader<bool>;
 #[doc = "Field `INDSCR_BURST_EN` writer - read descriptor use burst mode when write data to memory."]
-pub struct INDSCR_BURST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INDSCR_BURST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type INDSCR_BURST_EN_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 11>;
 #[doc = "Field `OUT_DATA_BURST_EN` reader - spi dma read data from memory in burst mode."]
-pub struct OUT_DATA_BURST_EN_R(crate::FieldReader<bool>);
-impl OUT_DATA_BURST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DATA_BURST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DATA_BURST_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DATA_BURST_EN_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DATA_BURST_EN` writer - spi dma read data from memory in burst mode."]
-pub struct OUT_DATA_BURST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_DATA_BURST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type OUT_DATA_BURST_EN_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 12>;
 #[doc = "Field `DMA_RX_STOP` reader - spi dma read data stop when in continue tx/rx mode."]
-pub struct DMA_RX_STOP_R(crate::FieldReader<bool>);
-impl DMA_RX_STOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_RX_STOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_RX_STOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_RX_STOP_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_RX_STOP` writer - spi dma read data stop when in continue tx/rx mode."]
-pub struct DMA_RX_STOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_RX_STOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type DMA_RX_STOP_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 14>;
 #[doc = "Field `DMA_TX_STOP` reader - spi dma write data stop when in continue tx/rx mode."]
-pub struct DMA_TX_STOP_R(crate::FieldReader<bool>);
-impl DMA_TX_STOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_TX_STOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_TX_STOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_TX_STOP_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_TX_STOP` writer - spi dma write data stop when in continue tx/rx mode."]
-pub struct DMA_TX_STOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_TX_STOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type DMA_TX_STOP_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 15>;
 #[doc = "Field `DMA_CONTINUE` reader - spi dma continue tx/rx data."]
-pub struct DMA_CONTINUE_R(crate::FieldReader<bool>);
-impl DMA_CONTINUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_CONTINUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_CONTINUE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_CONTINUE_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_CONTINUE` writer - spi dma continue tx/rx data."]
-pub struct DMA_CONTINUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_CONTINUE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type DMA_CONTINUE_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 16>;
 impl R {
     #[doc = "Bit 2 - The bit is used to reset in dma fsm and in data fifo pointer."]
     #[inline(always)]
@@ -628,72 +166,72 @@ impl W {
     #[doc = "Bit 2 - The bit is used to reset in dma fsm and in data fifo pointer."]
     #[inline(always)]
     pub fn in_rst(&mut self) -> IN_RST_W {
-        IN_RST_W { w: self }
+        IN_RST_W::new(self)
     }
     #[doc = "Bit 3 - The bit is used to reset out dma fsm and out data fifo pointer."]
     #[inline(always)]
     pub fn out_rst(&mut self) -> OUT_RST_W {
-        OUT_RST_W { w: self }
+        OUT_RST_W::new(self)
     }
     #[doc = "Bit 4 - reset spi dma ahb master fifo pointer."]
     #[inline(always)]
     pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W {
-        AHBM_FIFO_RST_W { w: self }
+        AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 5 - reset spi dma ahb master."]
     #[inline(always)]
     pub fn ahbm_rst(&mut self) -> AHBM_RST_W {
-        AHBM_RST_W { w: self }
+        AHBM_RST_W::new(self)
     }
     #[doc = "Bit 6 - Set bit to test in link."]
     #[inline(always)]
     pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W {
-        IN_LOOP_TEST_W { w: self }
+        IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 7 - Set bit to test out link."]
     #[inline(always)]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W {
-        OUT_LOOP_TEST_W { w: self }
+        OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 8 - when the link is empty jump to next automatically."]
     #[inline(always)]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W {
-        OUT_AUTO_WRBACK_W { w: self }
+        OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 9 - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
     #[inline(always)]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W {
-        OUT_EOF_MODE_W { w: self }
+        OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 10 - read descriptor use burst mode when read data for memory."]
     #[inline(always)]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W {
-        OUTDSCR_BURST_EN_W { w: self }
+        OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 11 - read descriptor use burst mode when write data to memory."]
     #[inline(always)]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W {
-        INDSCR_BURST_EN_W { w: self }
+        INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 12 - spi dma read data from memory in burst mode."]
     #[inline(always)]
     pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W {
-        OUT_DATA_BURST_EN_W { w: self }
+        OUT_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 14 - spi dma read data stop when in continue tx/rx mode."]
     #[inline(always)]
     pub fn dma_rx_stop(&mut self) -> DMA_RX_STOP_W {
-        DMA_RX_STOP_W { w: self }
+        DMA_RX_STOP_W::new(self)
     }
     #[doc = "Bit 15 - spi dma write data stop when in continue tx/rx mode."]
     #[inline(always)]
     pub fn dma_tx_stop(&mut self) -> DMA_TX_STOP_W {
-        DMA_TX_STOP_W { w: self }
+        DMA_TX_STOP_W::new(self)
     }
     #[doc = "Bit 16 - spi dma continue tx/rx data."]
     #[inline(always)]
     pub fn dma_continue(&mut self) -> DMA_CONTINUE_W {
-        DMA_CONTINUE_W { w: self }
+        DMA_CONTINUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

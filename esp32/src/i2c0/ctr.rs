@@ -35,301 +35,37 @@ impl From<crate::W<CTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SDA_FORCE_OUT` reader - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
-pub struct SDA_FORCE_OUT_R(crate::FieldReader<bool>);
-impl SDA_FORCE_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDA_FORCE_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDA_FORCE_OUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDA_FORCE_OUT_R = crate::BitReader<bool>;
 #[doc = "Field `SDA_FORCE_OUT` writer - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
-pub struct SDA_FORCE_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDA_FORCE_OUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SDA_FORCE_OUT_W<'a> = crate::BitWriter<'a, u32, CTR_SPEC, bool, 0>;
 #[doc = "Field `SCL_FORCE_OUT` reader - 1: normally ouput scl clock 0: exchange the function of scl_o and scl_oe (scl_o is the original internal output scl signal scl_oe is the enable bit for the internal output scl signal)"]
-pub struct SCL_FORCE_OUT_R(crate::FieldReader<bool>);
-impl SCL_FORCE_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCL_FORCE_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_FORCE_OUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_FORCE_OUT_R = crate::BitReader<bool>;
 #[doc = "Field `SCL_FORCE_OUT` writer - 1: normally ouput scl clock 0: exchange the function of scl_o and scl_oe (scl_o is the original internal output scl signal scl_oe is the enable bit for the internal output scl signal)"]
-pub struct SCL_FORCE_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_FORCE_OUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SCL_FORCE_OUT_W<'a> = crate::BitWriter<'a, u32, CTR_SPEC, bool, 1>;
 #[doc = "Field `SAMPLE_SCL_LEVEL` reader - Set this bit to sample data in SCL low level. clear this bit to sample data in SCL high level."]
-pub struct SAMPLE_SCL_LEVEL_R(crate::FieldReader<bool>);
-impl SAMPLE_SCL_LEVEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAMPLE_SCL_LEVEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAMPLE_SCL_LEVEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAMPLE_SCL_LEVEL_R = crate::BitReader<bool>;
 #[doc = "Field `SAMPLE_SCL_LEVEL` writer - Set this bit to sample data in SCL low level. clear this bit to sample data in SCL high level."]
-pub struct SAMPLE_SCL_LEVEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAMPLE_SCL_LEVEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type SAMPLE_SCL_LEVEL_W<'a> = crate::BitWriter<'a, u32, CTR_SPEC, bool, 2>;
 #[doc = "Field `MS_MODE` reader - Set this bit to configure the module as i2c master clear this bit to configure the module as i2c slave."]
-pub struct MS_MODE_R(crate::FieldReader<bool>);
-impl MS_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MS_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MS_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MS_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `MS_MODE` writer - Set this bit to configure the module as i2c master clear this bit to configure the module as i2c slave."]
-pub struct MS_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MS_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type MS_MODE_W<'a> = crate::BitWriter<'a, u32, CTR_SPEC, bool, 4>;
 #[doc = "Field `TRANS_START` reader - Set this bit to start sending data in txfifo."]
-pub struct TRANS_START_R(crate::FieldReader<bool>);
-impl TRANS_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRANS_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRANS_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRANS_START_R = crate::BitReader<bool>;
 #[doc = "Field `TRANS_START` writer - Set this bit to start sending data in txfifo."]
-pub struct TRANS_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRANS_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type TRANS_START_W<'a> = crate::BitWriter<'a, u32, CTR_SPEC, bool, 5>;
 #[doc = "Field `TX_LSB_FIRST` reader - This bit is used to control the sending mode for data need to be send. 1: receive data from most significant bit 0: receive data from least significant bit"]
-pub struct TX_LSB_FIRST_R(crate::FieldReader<bool>);
-impl TX_LSB_FIRST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_LSB_FIRST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_LSB_FIRST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_LSB_FIRST_R = crate::BitReader<bool>;
 #[doc = "Field `TX_LSB_FIRST` writer - This bit is used to control the sending mode for data need to be send. 1: receive data from most significant bit 0: receive data from least significant bit"]
-pub struct TX_LSB_FIRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_LSB_FIRST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type TX_LSB_FIRST_W<'a> = crate::BitWriter<'a, u32, CTR_SPEC, bool, 6>;
 #[doc = "Field `RX_LSB_FIRST` reader - This bit is used to control the storage mode for received datas. 1: receive data from most significant bit 0: receive data from least significant bit"]
-pub struct RX_LSB_FIRST_R(crate::FieldReader<bool>);
-impl RX_LSB_FIRST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_LSB_FIRST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_LSB_FIRST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_LSB_FIRST_R = crate::BitReader<bool>;
 #[doc = "Field `RX_LSB_FIRST` writer - This bit is used to control the storage mode for received datas. 1: receive data from most significant bit 0: receive data from least significant bit"]
-pub struct RX_LSB_FIRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_LSB_FIRST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type RX_LSB_FIRST_W<'a> = crate::BitWriter<'a, u32, CTR_SPEC, bool, 7>;
 #[doc = "Field `CLK_EN` reader - This is the clock gating control bit for reading or writing registers."]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - This is the clock gating control bit for reading or writing registers."]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, CTR_SPEC, bool, 8>;
 impl R {
     #[doc = "Bit 0 - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
     #[inline(always)]
@@ -376,42 +112,42 @@ impl W {
     #[doc = "Bit 0 - 1: normally ouput sda data 0: exchange the function of sda_o and sda_oe (sda_o is the original internal output sda signal sda_oe is the enable bit for the internal output sda signal)"]
     #[inline(always)]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W {
-        SDA_FORCE_OUT_W { w: self }
+        SDA_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 1 - 1: normally ouput scl clock 0: exchange the function of scl_o and scl_oe (scl_o is the original internal output scl signal scl_oe is the enable bit for the internal output scl signal)"]
     #[inline(always)]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W {
-        SCL_FORCE_OUT_W { w: self }
+        SCL_FORCE_OUT_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to sample data in SCL low level. clear this bit to sample data in SCL high level."]
     #[inline(always)]
     pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W {
-        SAMPLE_SCL_LEVEL_W { w: self }
+        SAMPLE_SCL_LEVEL_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to configure the module as i2c master clear this bit to configure the module as i2c slave."]
     #[inline(always)]
     pub fn ms_mode(&mut self) -> MS_MODE_W {
-        MS_MODE_W { w: self }
+        MS_MODE_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to start sending data in txfifo."]
     #[inline(always)]
     pub fn trans_start(&mut self) -> TRANS_START_W {
-        TRANS_START_W { w: self }
+        TRANS_START_W::new(self)
     }
     #[doc = "Bit 6 - This bit is used to control the sending mode for data need to be send. 1: receive data from most significant bit 0: receive data from least significant bit"]
     #[inline(always)]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W {
-        TX_LSB_FIRST_W { w: self }
+        TX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 7 - This bit is used to control the storage mode for received datas. 1: receive data from most significant bit 0: receive data from least significant bit"]
     #[inline(always)]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W {
-        RX_LSB_FIRST_W { w: self }
+        RX_LSB_FIRST_W::new(self)
     }
     #[doc = "Bit 8 - This is the clock gating control bit for reading or writing registers."]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

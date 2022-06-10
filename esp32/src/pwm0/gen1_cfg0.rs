@@ -35,86 +35,17 @@ impl From<crate::W<GEN1_CFG0_SPEC>> for W {
     }
 }
 #[doc = "Field `GEN1_CFG_UPMETHOD` reader - "]
-pub struct GEN1_CFG_UPMETHOD_R(crate::FieldReader<u8>);
-impl GEN1_CFG_UPMETHOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GEN1_CFG_UPMETHOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GEN1_CFG_UPMETHOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GEN1_CFG_UPMETHOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GEN1_CFG_UPMETHOD` writer - "]
-pub struct GEN1_CFG_UPMETHOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEN1_CFG_UPMETHOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type GEN1_CFG_UPMETHOD_W<'a> = crate::FieldWriter<'a, u32, GEN1_CFG0_SPEC, u8, u8, 4, 0>;
 #[doc = "Field `GEN1_T0_SEL` reader - "]
-pub struct GEN1_T0_SEL_R(crate::FieldReader<u8>);
-impl GEN1_T0_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GEN1_T0_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GEN1_T0_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GEN1_T0_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GEN1_T0_SEL` writer - "]
-pub struct GEN1_T0_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEN1_T0_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 4)) | ((value as u32 & 7) << 4);
-        self.w
-    }
-}
+pub type GEN1_T0_SEL_W<'a> = crate::FieldWriter<'a, u32, GEN1_CFG0_SPEC, u8, u8, 3, 4>;
 #[doc = "Field `GEN1_T1_SEL` reader - "]
-pub struct GEN1_T1_SEL_R(crate::FieldReader<u8>);
-impl GEN1_T1_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GEN1_T1_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GEN1_T1_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GEN1_T1_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GEN1_T1_SEL` writer - "]
-pub struct GEN1_T1_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEN1_T1_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 7)) | ((value as u32 & 7) << 7);
-        self.w
-    }
-}
+pub type GEN1_T1_SEL_W<'a> = crate::FieldWriter<'a, u32, GEN1_CFG0_SPEC, u8, u8, 3, 7>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -136,17 +67,17 @@ impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
     pub fn gen1_cfg_upmethod(&mut self) -> GEN1_CFG_UPMETHOD_W {
-        GEN1_CFG_UPMETHOD_W { w: self }
+        GEN1_CFG_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
     pub fn gen1_t0_sel(&mut self) -> GEN1_T0_SEL_W {
-        GEN1_T0_SEL_W { w: self }
+        GEN1_T0_SEL_W::new(self)
     }
     #[doc = "Bits 7:9"]
     #[inline(always)]
     pub fn gen1_t1_sel(&mut self) -> GEN1_T1_SEL_W {
-        GEN1_T1_SEL_W { w: self }
+        GEN1_T1_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -20,22 +20,12 @@ impl From<crate::W<LACTLOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `LACT_LOAD` writer - "]
-pub struct LACT_LOAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LACT_LOAD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type LACT_LOAD_W<'a> = crate::FieldWriter<'a, u32, LACTLOAD_SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn lact_load(&mut self) -> LACT_LOAD_W {
-        LACT_LOAD_W { w: self }
+        LACT_LOAD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

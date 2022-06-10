@@ -14,20 +14,7 @@ impl From<crate::R<DEC_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DEC_WARNINGS` reader - the decode result of 3/4 coding scheme has warning"]
-pub struct DEC_WARNINGS_R(crate::FieldReader<u16>);
-impl DEC_WARNINGS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DEC_WARNINGS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DEC_WARNINGS_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DEC_WARNINGS_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:11 - the decode result of 3/4 coding scheme has warning"]
     #[inline(always)]

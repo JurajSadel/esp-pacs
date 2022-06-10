@@ -35,32 +35,10 @@ impl From<crate::W<SCL_MAIN_ST_TIME_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_MAIN_ST_TO_I2C` reader - The threshold value of SCL_MAIN_FSM state unchanged period.nIt should be o more than 23"]
-pub struct SCL_MAIN_ST_TO_I2C_R(crate::FieldReader<u8>);
-impl SCL_MAIN_ST_TO_I2C_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCL_MAIN_ST_TO_I2C_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_MAIN_ST_TO_I2C_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_MAIN_ST_TO_I2C_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCL_MAIN_ST_TO_I2C` writer - The threshold value of SCL_MAIN_FSM state unchanged period.nIt should be o more than 23"]
-pub struct SCL_MAIN_ST_TO_I2C_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_MAIN_ST_TO_I2C_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type SCL_MAIN_ST_TO_I2C_W<'a> =
+    crate::FieldWriter<'a, u32, SCL_MAIN_ST_TIME_OUT_SPEC, u8, u8, 5, 0>;
 impl R {
     #[doc = "Bits 0:4 - The threshold value of SCL_MAIN_FSM state unchanged period.nIt should be o more than 23"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:4 - The threshold value of SCL_MAIN_FSM state unchanged period.nIt should be o more than 23"]
     #[inline(always)]
     pub fn scl_main_st_to_i2c(&mut self) -> SCL_MAIN_ST_TO_I2C_W {
-        SCL_MAIN_ST_TO_I2C_W { w: self }
+        SCL_MAIN_ST_TO_I2C_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

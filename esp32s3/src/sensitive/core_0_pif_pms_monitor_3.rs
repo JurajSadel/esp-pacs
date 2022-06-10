@@ -14,20 +14,7 @@ impl From<crate::R<CORE_0_PIF_PMS_MONITOR_3_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HADDR` reader - Record address information when core0 initiate illegal access."]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HADDR_R(crate::FieldReader<u32>);
-impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Record address information when core0 initiate illegal access."]
     #[inline(always)]

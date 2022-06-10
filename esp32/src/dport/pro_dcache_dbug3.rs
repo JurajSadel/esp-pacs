@@ -35,272 +35,41 @@ impl From<crate::W<PRO_DCACHE_DBUG3_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_MMU_RDATA` reader - "]
-pub struct PRO_MMU_RDATA_R(crate::FieldReader<u16>);
-impl PRO_MMU_RDATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PRO_MMU_RDATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_MMU_RDATA_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_MMU_RDATA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA` reader - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_R(crate::FieldReader<u8>);
-impl PRO_CPU_DISABLED_CACHE_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PRO_CPU_DISABLED_CACHE_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CPU_DISABLED_CACHE_IA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_OPPOSITE` reader - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_R(crate::FieldReader<bool>);
-impl PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_OPPOSITE` writer - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'a> =
+    crate::BitWriter<'a, u32, PRO_DCACHE_DBUG3_SPEC, bool, 9>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DRAM1` reader - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_DRAM1_R(crate::FieldReader<bool>);
-impl PRO_CPU_DISABLED_CACHE_IA_DRAM1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CPU_DISABLED_CACHE_IA_DRAM1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CPU_DISABLED_CACHE_IA_DRAM1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_DRAM1_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DRAM1` writer - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_DRAM1_W<'a> =
+    crate::BitWriter<'a, u32, PRO_DCACHE_DBUG3_SPEC, bool, 10>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IROM0` reader - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_IROM0_R(crate::FieldReader<bool>);
-impl PRO_CPU_DISABLED_CACHE_IA_IROM0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CPU_DISABLED_CACHE_IA_IROM0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CPU_DISABLED_CACHE_IA_IROM0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_IROM0_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IROM0` writer - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_IROM0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CPU_DISABLED_CACHE_IA_IROM0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_IROM0_W<'a> =
+    crate::BitWriter<'a, u32, PRO_DCACHE_DBUG3_SPEC, bool, 11>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM1` reader - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_IRAM1_R(crate::FieldReader<bool>);
-impl PRO_CPU_DISABLED_CACHE_IA_IRAM1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CPU_DISABLED_CACHE_IA_IRAM1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CPU_DISABLED_CACHE_IA_IRAM1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_IRAM1_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM1` writer - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_IRAM1_W<'a> =
+    crate::BitWriter<'a, u32, PRO_DCACHE_DBUG3_SPEC, bool, 12>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM0` reader - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_IRAM0_R(crate::FieldReader<bool>);
-impl PRO_CPU_DISABLED_CACHE_IA_IRAM0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CPU_DISABLED_CACHE_IA_IRAM0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CPU_DISABLED_CACHE_IA_IRAM0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_IRAM0_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_IRAM0` writer - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_IRAM0_W<'a> =
+    crate::BitWriter<'a, u32, PRO_DCACHE_DBUG3_SPEC, bool, 13>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DROM0` reader - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_DROM0_R(crate::FieldReader<bool>);
-impl PRO_CPU_DISABLED_CACHE_IA_DROM0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CPU_DISABLED_CACHE_IA_DROM0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CPU_DISABLED_CACHE_IA_DROM0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_DROM0_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CPU_DISABLED_CACHE_IA_DROM0` writer - "]
-pub struct PRO_CPU_DISABLED_CACHE_IA_DROM0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CPU_DISABLED_CACHE_IA_DROM0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type PRO_CPU_DISABLED_CACHE_IA_DROM0_W<'a> =
+    crate::BitWriter<'a, u32, PRO_DCACHE_DBUG3_SPEC, bool, 14>;
 #[doc = "Field `PRO_CACHE_IRAM0_PID_ERROR` reader - "]
-pub struct PRO_CACHE_IRAM0_PID_ERROR_R(crate::FieldReader<bool>);
-impl PRO_CACHE_IRAM0_PID_ERROR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_IRAM0_PID_ERROR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_IRAM0_PID_ERROR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_IRAM0_PID_ERROR_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:8"]
     #[inline(always)]
@@ -352,32 +121,32 @@ impl W {
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_opposite(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W {
-        PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W { w: self }
+        PRO_CPU_DISABLED_CACHE_IA_OPPOSITE_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_dram1(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_DRAM1_W {
-        PRO_CPU_DISABLED_CACHE_IA_DRAM1_W { w: self }
+        PRO_CPU_DISABLED_CACHE_IA_DRAM1_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_irom0(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_IROM0_W {
-        PRO_CPU_DISABLED_CACHE_IA_IROM0_W { w: self }
+        PRO_CPU_DISABLED_CACHE_IA_IROM0_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_iram1(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_IRAM1_W {
-        PRO_CPU_DISABLED_CACHE_IA_IRAM1_W { w: self }
+        PRO_CPU_DISABLED_CACHE_IA_IRAM1_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_iram0(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_IRAM0_W {
-        PRO_CPU_DISABLED_CACHE_IA_IRAM0_W { w: self }
+        PRO_CPU_DISABLED_CACHE_IA_IRAM0_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn pro_cpu_disabled_cache_ia_drom0(&mut self) -> PRO_CPU_DISABLED_CACHE_IA_DROM0_W {
-        PRO_CPU_DISABLED_CACHE_IA_DROM0_W { w: self }
+        PRO_CPU_DISABLED_CACHE_IA_DROM0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

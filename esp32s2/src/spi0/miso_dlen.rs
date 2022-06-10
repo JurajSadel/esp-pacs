@@ -35,32 +35,9 @@ impl From<crate::W<MISO_DLEN_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_MISO_DBITLEN` reader - The length in bits of read-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub struct USR_MISO_DBITLEN_R(crate::FieldReader<u32>);
-impl USR_MISO_DBITLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        USR_MISO_DBITLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_MISO_DBITLEN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_MISO_DBITLEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `USR_MISO_DBITLEN` writer - The length in bits of read-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub struct USR_MISO_DBITLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_MISO_DBITLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x007f_ffff) | (value as u32 & 0x007f_ffff);
-        self.w
-    }
-}
+pub type USR_MISO_DBITLEN_W<'a> = crate::FieldWriter<'a, u32, MISO_DLEN_SPEC, u32, u32, 23, 0>;
 impl R {
     #[doc = "Bits 0:22 - The length in bits of read-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:22 - The length in bits of read-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_miso_dbitlen(&mut self) -> USR_MISO_DBITLEN_W {
-        USR_MISO_DBITLEN_W { w: self }
+        USR_MISO_DBITLEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

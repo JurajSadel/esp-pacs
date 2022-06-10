@@ -14,20 +14,7 @@ impl From<crate::R<DONE_SPEC>> for R {
     }
 }
 #[doc = "Field `FLASH_DONE` reader - Set this bit when encryption operation is complete."]
-pub struct FLASH_DONE_R(crate::FieldReader<bool>);
-impl FLASH_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_DONE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Set this bit when encryption operation is complete."]
     #[inline(always)]

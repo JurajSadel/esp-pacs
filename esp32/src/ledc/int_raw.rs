@@ -14,365 +14,53 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `HSTIMER0_OVF_INT_RAW` reader - The interrupt raw bit for high speed channel0 counter overflow."]
-pub struct HSTIMER0_OVF_INT_RAW_R(crate::FieldReader<bool>);
-impl HSTIMER0_OVF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HSTIMER0_OVF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HSTIMER0_OVF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HSTIMER0_OVF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `HSTIMER1_OVF_INT_RAW` reader - The interrupt raw bit for high speed channel1 counter overflow."]
-pub struct HSTIMER1_OVF_INT_RAW_R(crate::FieldReader<bool>);
-impl HSTIMER1_OVF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HSTIMER1_OVF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HSTIMER1_OVF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HSTIMER1_OVF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `HSTIMER2_OVF_INT_RAW` reader - The interrupt raw bit for high speed channel2 counter overflow."]
-pub struct HSTIMER2_OVF_INT_RAW_R(crate::FieldReader<bool>);
-impl HSTIMER2_OVF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HSTIMER2_OVF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HSTIMER2_OVF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HSTIMER2_OVF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `HSTIMER3_OVF_INT_RAW` reader - The interrupt raw bit for high speed channel3 counter overflow."]
-pub struct HSTIMER3_OVF_INT_RAW_R(crate::FieldReader<bool>);
-impl HSTIMER3_OVF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HSTIMER3_OVF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HSTIMER3_OVF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HSTIMER3_OVF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `LSTIMER0_OVF_INT_RAW` reader - The interrupt raw bit for low speed channel0 counter overflow."]
-pub struct LSTIMER0_OVF_INT_RAW_R(crate::FieldReader<bool>);
-impl LSTIMER0_OVF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER0_OVF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER0_OVF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER0_OVF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `LSTIMER1_OVF_INT_RAW` reader - The interrupt raw bit for low speed channel1 counter overflow."]
-pub struct LSTIMER1_OVF_INT_RAW_R(crate::FieldReader<bool>);
-impl LSTIMER1_OVF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER1_OVF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER1_OVF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER1_OVF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `LSTIMER2_OVF_INT_RAW` reader - The interrupt raw bit for low speed channel2 counter overflow."]
-pub struct LSTIMER2_OVF_INT_RAW_R(crate::FieldReader<bool>);
-impl LSTIMER2_OVF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER2_OVF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER2_OVF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER2_OVF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `LSTIMER3_OVF_INT_RAW` reader - The interrupt raw bit for low speed channel3 counter overflow."]
-pub struct LSTIMER3_OVF_INT_RAW_R(crate::FieldReader<bool>);
-impl LSTIMER3_OVF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER3_OVF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER3_OVF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER3_OVF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_HSCH0_INT_RAW` reader - The interrupt raw bit for high speed channel 0 duty change done."]
-pub struct DUTY_CHNG_END_HSCH0_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_HSCH0_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_HSCH0_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_HSCH0_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_HSCH0_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_HSCH1_INT_RAW` reader - The interrupt raw bit for high speed channel 1 duty change done."]
-pub struct DUTY_CHNG_END_HSCH1_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_HSCH1_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_HSCH1_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_HSCH1_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_HSCH1_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_HSCH2_INT_RAW` reader - The interrupt raw bit for high speed channel 2 duty change done."]
-pub struct DUTY_CHNG_END_HSCH2_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_HSCH2_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_HSCH2_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_HSCH2_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_HSCH2_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_HSCH3_INT_RAW` reader - The interrupt raw bit for high speed channel 3 duty change done."]
-pub struct DUTY_CHNG_END_HSCH3_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_HSCH3_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_HSCH3_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_HSCH3_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_HSCH3_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_HSCH4_INT_RAW` reader - The interrupt raw bit for high speed channel 4 duty change done."]
-pub struct DUTY_CHNG_END_HSCH4_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_HSCH4_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_HSCH4_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_HSCH4_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_HSCH4_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_HSCH5_INT_RAW` reader - The interrupt raw bit for high speed channel 5 duty change done."]
-pub struct DUTY_CHNG_END_HSCH5_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_HSCH5_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_HSCH5_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_HSCH5_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_HSCH5_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_HSCH6_INT_RAW` reader - The interrupt raw bit for high speed channel 6 duty change done."]
-pub struct DUTY_CHNG_END_HSCH6_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_HSCH6_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_HSCH6_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_HSCH6_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_HSCH6_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_HSCH7_INT_RAW` reader - The interrupt raw bit for high speed channel 7 duty change done."]
-pub struct DUTY_CHNG_END_HSCH7_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_HSCH7_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_HSCH7_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_HSCH7_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_HSCH7_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH0_INT_RAW` reader - The interrupt raw bit for low speed channel 0 duty change done."]
-pub struct DUTY_CHNG_END_LSCH0_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH0_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH0_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH0_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH0_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH1_INT_RAW` reader - The interrupt raw bit for low speed channel 1 duty change done."]
-pub struct DUTY_CHNG_END_LSCH1_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH1_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH1_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH1_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH1_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH2_INT_RAW` reader - The interrupt raw bit for low speed channel 2 duty change done."]
-pub struct DUTY_CHNG_END_LSCH2_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH2_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH2_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH2_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH2_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH3_INT_RAW` reader - The interrupt raw bit for low speed channel 3 duty change done."]
-pub struct DUTY_CHNG_END_LSCH3_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH3_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH3_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH3_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH3_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH4_INT_RAW` reader - The interrupt raw bit for low speed channel 4 duty change done."]
-pub struct DUTY_CHNG_END_LSCH4_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH4_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH4_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH4_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH4_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH5_INT_RAW` reader - The interrupt raw bit for low speed channel 5 duty change done."]
-pub struct DUTY_CHNG_END_LSCH5_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH5_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH5_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH5_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH5_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH6_INT_RAW` reader - The interrupt raw bit for low speed channel 6 duty change done."]
-pub struct DUTY_CHNG_END_LSCH6_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH6_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH6_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH6_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH6_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH7_INT_RAW` reader - The interrupt raw bit for low speed channel 7 duty change done."]
-pub struct DUTY_CHNG_END_LSCH7_INT_RAW_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH7_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH7_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH7_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH7_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The interrupt raw bit for high speed channel0 counter overflow."]
     #[inline(always)]

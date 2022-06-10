@@ -35,195 +35,27 @@ impl From<crate::W<DMA_IN_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `INLINK_ADDR` reader - This register is used to specify the least significant 20 bits of the first receive descriptor's address."]
-pub struct INLINK_ADDR_R(crate::FieldReader<u32>);
-impl INLINK_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INLINK_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `INLINK_ADDR` writer - This register is used to specify the least significant 20 bits of the first receive descriptor's address."]
-pub struct INLINK_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INLINK_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type INLINK_ADDR_W<'a> = crate::FieldWriter<'a, u32, DMA_IN_LINK_SPEC, u32, u32, 20, 0>;
 #[doc = "Field `INLINK_AUTO_RET` reader - This is the enable bit to return to current receive descriptor's address, when there are some errors in current packet."]
-pub struct INLINK_AUTO_RET_R(crate::FieldReader<bool>);
-impl INLINK_AUTO_RET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INLINK_AUTO_RET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_AUTO_RET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_AUTO_RET_R = crate::BitReader<bool>;
 #[doc = "Field `INLINK_AUTO_RET` writer - This is the enable bit to return to current receive descriptor's address, when there are some errors in current packet."]
-pub struct INLINK_AUTO_RET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INLINK_AUTO_RET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type INLINK_AUTO_RET_W<'a> = crate::BitWriter<'a, u32, DMA_IN_LINK_SPEC, bool, 20>;
 #[doc = "Field `INLINK_STOP` reader - Set this bit to stop dealing with the receive descriptors."]
-pub struct INLINK_STOP_R(crate::FieldReader<bool>);
-impl INLINK_STOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INLINK_STOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_STOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_STOP_R = crate::BitReader<bool>;
 #[doc = "Field `INLINK_STOP` writer - Set this bit to stop dealing with the receive descriptors."]
-pub struct INLINK_STOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INLINK_STOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type INLINK_STOP_W<'a> = crate::BitWriter<'a, u32, DMA_IN_LINK_SPEC, bool, 28>;
 #[doc = "Field `INLINK_START` reader - Set this bit to start dealing with the receive descriptors."]
-pub struct INLINK_START_R(crate::FieldReader<bool>);
-impl INLINK_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INLINK_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_START_R = crate::BitReader<bool>;
 #[doc = "Field `INLINK_START` writer - Set this bit to start dealing with the receive descriptors."]
-pub struct INLINK_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INLINK_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type INLINK_START_W<'a> = crate::BitWriter<'a, u32, DMA_IN_LINK_SPEC, bool, 29>;
 #[doc = "Field `INLINK_RESTART` reader - Set this bit to restart new receive descriptors."]
-pub struct INLINK_RESTART_R(crate::FieldReader<bool>);
-impl INLINK_RESTART_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INLINK_RESTART_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_RESTART_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_RESTART_R = crate::BitReader<bool>;
 #[doc = "Field `INLINK_RESTART` writer - Set this bit to restart new receive descriptors."]
-pub struct INLINK_RESTART_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INLINK_RESTART_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type INLINK_RESTART_W<'a> = crate::BitWriter<'a, u32, DMA_IN_LINK_SPEC, bool, 30>;
 #[doc = "Field `INLINK_PARK` reader - 1: the receive descriptor's FSM is in idle state. 0: the receive descriptor's FSM is working."]
-pub struct INLINK_PARK_R(crate::FieldReader<bool>);
-impl INLINK_PARK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INLINK_PARK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_PARK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_PARK_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:19 - This register is used to specify the least significant 20 bits of the first receive descriptor's address."]
     #[inline(always)]
@@ -260,27 +92,27 @@ impl W {
     #[doc = "Bits 0:19 - This register is used to specify the least significant 20 bits of the first receive descriptor's address."]
     #[inline(always)]
     pub fn inlink_addr(&mut self) -> INLINK_ADDR_W {
-        INLINK_ADDR_W { w: self }
+        INLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 20 - This is the enable bit to return to current receive descriptor's address, when there are some errors in current packet."]
     #[inline(always)]
     pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W {
-        INLINK_AUTO_RET_W { w: self }
+        INLINK_AUTO_RET_W::new(self)
     }
     #[doc = "Bit 28 - Set this bit to stop dealing with the receive descriptors."]
     #[inline(always)]
     pub fn inlink_stop(&mut self) -> INLINK_STOP_W {
-        INLINK_STOP_W { w: self }
+        INLINK_STOP_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to start dealing with the receive descriptors."]
     #[inline(always)]
     pub fn inlink_start(&mut self) -> INLINK_START_W {
-        INLINK_START_W { w: self }
+        INLINK_START_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to restart new receive descriptors."]
     #[inline(always)]
     pub fn inlink_restart(&mut self) -> INLINK_RESTART_W {
-        INLINK_RESTART_W { w: self }
+        INLINK_RESTART_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

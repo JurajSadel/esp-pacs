@@ -35,116 +35,17 @@ impl From<crate::W<ROM_MPU_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `SHARE_ROM_MPU_ENA` reader - "]
-pub struct SHARE_ROM_MPU_ENA_R(crate::FieldReader<bool>);
-impl SHARE_ROM_MPU_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SHARE_ROM_MPU_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SHARE_ROM_MPU_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SHARE_ROM_MPU_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `SHARE_ROM_MPU_ENA` writer - "]
-pub struct SHARE_ROM_MPU_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SHARE_ROM_MPU_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SHARE_ROM_MPU_ENA_W<'a> = crate::BitWriter<'a, u32, ROM_MPU_ENA_SPEC, bool, 0>;
 #[doc = "Field `PRO_ROM_MPU_ENA` reader - "]
-pub struct PRO_ROM_MPU_ENA_R(crate::FieldReader<bool>);
-impl PRO_ROM_MPU_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ROM_MPU_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ROM_MPU_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ROM_MPU_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_ROM_MPU_ENA` writer - "]
-pub struct PRO_ROM_MPU_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ROM_MPU_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PRO_ROM_MPU_ENA_W<'a> = crate::BitWriter<'a, u32, ROM_MPU_ENA_SPEC, bool, 1>;
 #[doc = "Field `APP_ROM_MPU_ENA` reader - "]
-pub struct APP_ROM_MPU_ENA_R(crate::FieldReader<bool>);
-impl APP_ROM_MPU_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_ROM_MPU_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_ROM_MPU_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_ROM_MPU_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `APP_ROM_MPU_ENA` writer - "]
-pub struct APP_ROM_MPU_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_ROM_MPU_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type APP_ROM_MPU_ENA_W<'a> = crate::BitWriter<'a, u32, ROM_MPU_ENA_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -166,17 +67,17 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn share_rom_mpu_ena(&mut self) -> SHARE_ROM_MPU_ENA_W {
-        SHARE_ROM_MPU_ENA_W { w: self }
+        SHARE_ROM_MPU_ENA_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn pro_rom_mpu_ena(&mut self) -> PRO_ROM_MPU_ENA_W {
-        PRO_ROM_MPU_ENA_W { w: self }
+        PRO_ROM_MPU_ENA_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn app_rom_mpu_ena(&mut self) -> APP_ROM_MPU_ENA_W {
-        APP_ROM_MPU_ENA_W { w: self }
+        APP_ROM_MPU_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

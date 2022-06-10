@@ -35,227 +35,29 @@ impl From<crate::W<PAD_HOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN0_HOLD` reader - the hold configure of rtc gpio0"]
-pub struct RTC_GPIO_PIN0_HOLD_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN0_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN0_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN0_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN0_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN0_HOLD` writer - the hold configure of rtc gpio0"]
-pub struct RTC_GPIO_PIN0_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN0_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN0_HOLD_W<'a> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, 0>;
 #[doc = "Field `RTC_GPIO_PIN1_HOLD` reader - the hold configure of rtc gpio1"]
-pub struct RTC_GPIO_PIN1_HOLD_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN1_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN1_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN1_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN1_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN1_HOLD` writer - the hold configure of rtc gpio1"]
-pub struct RTC_GPIO_PIN1_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN1_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN1_HOLD_W<'a> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, 1>;
 #[doc = "Field `RTC_GPIO_PIN2_HOLD` reader - the hold configure of rtc gpio2"]
-pub struct RTC_GPIO_PIN2_HOLD_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN2_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN2_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN2_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN2_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN2_HOLD` writer - the hold configure of rtc gpio2"]
-pub struct RTC_GPIO_PIN2_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN2_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN2_HOLD_W<'a> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, 2>;
 #[doc = "Field `RTC_GPIO_PIN3_HOLD` reader - the hold configure of rtc gpio3"]
-pub struct RTC_GPIO_PIN3_HOLD_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN3_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN3_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN3_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN3_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN3_HOLD` writer - the hold configure of rtc gpio3"]
-pub struct RTC_GPIO_PIN3_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN3_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN3_HOLD_W<'a> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, 3>;
 #[doc = "Field `RTC_GPIO_PIN4_HOLD` reader - the hold configure of rtc gpio4"]
-pub struct RTC_GPIO_PIN4_HOLD_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN4_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN4_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN4_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN4_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN4_HOLD` writer - the hold configure of rtc gpio4"]
-pub struct RTC_GPIO_PIN4_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN4_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN4_HOLD_W<'a> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, 4>;
 #[doc = "Field `RTC_GPIO_PIN5_HOLD` reader - the hold configure of rtc gpio5"]
-pub struct RTC_GPIO_PIN5_HOLD_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN5_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN5_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN5_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN5_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN5_HOLD` writer - the hold configure of rtc gpio5"]
-pub struct RTC_GPIO_PIN5_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN5_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN5_HOLD_W<'a> = crate::BitWriter<'a, u32, PAD_HOLD_SPEC, bool, 5>;
 impl R {
     #[doc = "Bit 0 - the hold configure of rtc gpio0"]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 0 - the hold configure of rtc gpio0"]
     #[inline(always)]
     pub fn rtc_gpio_pin0_hold(&mut self) -> RTC_GPIO_PIN0_HOLD_W {
-        RTC_GPIO_PIN0_HOLD_W { w: self }
+        RTC_GPIO_PIN0_HOLD_W::new(self)
     }
     #[doc = "Bit 1 - the hold configure of rtc gpio1"]
     #[inline(always)]
     pub fn rtc_gpio_pin1_hold(&mut self) -> RTC_GPIO_PIN1_HOLD_W {
-        RTC_GPIO_PIN1_HOLD_W { w: self }
+        RTC_GPIO_PIN1_HOLD_W::new(self)
     }
     #[doc = "Bit 2 - the hold configure of rtc gpio2"]
     #[inline(always)]
     pub fn rtc_gpio_pin2_hold(&mut self) -> RTC_GPIO_PIN2_HOLD_W {
-        RTC_GPIO_PIN2_HOLD_W { w: self }
+        RTC_GPIO_PIN2_HOLD_W::new(self)
     }
     #[doc = "Bit 3 - the hold configure of rtc gpio3"]
     #[inline(always)]
     pub fn rtc_gpio_pin3_hold(&mut self) -> RTC_GPIO_PIN3_HOLD_W {
-        RTC_GPIO_PIN3_HOLD_W { w: self }
+        RTC_GPIO_PIN3_HOLD_W::new(self)
     }
     #[doc = "Bit 4 - the hold configure of rtc gpio4"]
     #[inline(always)]
     pub fn rtc_gpio_pin4_hold(&mut self) -> RTC_GPIO_PIN4_HOLD_W {
-        RTC_GPIO_PIN4_HOLD_W { w: self }
+        RTC_GPIO_PIN4_HOLD_W::new(self)
     }
     #[doc = "Bit 5 - the hold configure of rtc gpio5"]
     #[inline(always)]
     pub fn rtc_gpio_pin5_hold(&mut self) -> RTC_GPIO_PIN5_HOLD_W {
-        RTC_GPIO_PIN5_HOLD_W { w: self }
+        RTC_GPIO_PIN5_HOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

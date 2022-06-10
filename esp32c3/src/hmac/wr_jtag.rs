@@ -20,22 +20,12 @@ impl From<crate::W<WR_JTAG_SPEC>> for W {
     }
 }
 #[doc = "Field `WR_JTAG` writer - 32-bit of key to be compared."]
-pub struct WR_JTAG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WR_JTAG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type WR_JTAG_W<'a> = crate::FieldWriter<'a, u32, WR_JTAG_SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31 - 32-bit of key to be compared."]
     #[inline(always)]
     pub fn wr_jtag(&mut self) -> WR_JTAG_W {
-        WR_JTAG_W { w: self }
+        WR_JTAG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

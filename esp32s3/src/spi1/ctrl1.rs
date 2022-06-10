@@ -35,59 +35,13 @@ impl From<crate::W<CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_MODE` reader - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
-pub struct CLK_MODE_R(crate::FieldReader<u8>);
-impl CLK_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CLK_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CLK_MODE` writer - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
-pub struct CLK_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type CLK_MODE_W<'a> = crate::FieldWriter<'a, u32, CTRL1_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `CS_HOLD_DLY_RES` reader - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or * 256) SPI_CLK cycles."]
-pub struct CS_HOLD_DLY_RES_R(crate::FieldReader<u16>);
-impl CS_HOLD_DLY_RES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CS_HOLD_DLY_RES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_HOLD_DLY_RES_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_HOLD_DLY_RES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CS_HOLD_DLY_RES` writer - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or * 256) SPI_CLK cycles."]
-pub struct CS_HOLD_DLY_RES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_HOLD_DLY_RES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 2)) | ((value as u32 & 0x03ff) << 2);
-        self.w
-    }
-}
+pub type CS_HOLD_DLY_RES_W<'a> = crate::FieldWriter<'a, u32, CTRL1_SPEC, u16, u16, 10, 2>;
 impl R {
     #[doc = "Bits 0:1 - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:1 - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
     pub fn clk_mode(&mut self) -> CLK_MODE_W {
-        CLK_MODE_W { w: self }
+        CLK_MODE_W::new(self)
     }
     #[doc = "Bits 2:11 - After RES/DP/HPM/PES/PER command is sent, SPI1 may waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or * 256) SPI_CLK cycles."]
     #[inline(always)]
     pub fn cs_hold_dly_res(&mut self) -> CS_HOLD_DLY_RES_W {
-        CS_HOLD_DLY_RES_W { w: self }
+        CS_HOLD_DLY_RES_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

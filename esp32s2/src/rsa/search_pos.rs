@@ -35,32 +35,9 @@ impl From<crate::W<SEARCH_POS_SPEC>> for W {
     }
 }
 #[doc = "Field `SEARCH_POS` reader - Is used to configure the starting address when the acceleration option of search is used."]
-pub struct SEARCH_POS_R(crate::FieldReader<u16>);
-impl SEARCH_POS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SEARCH_POS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEARCH_POS_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEARCH_POS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SEARCH_POS` writer - Is used to configure the starting address when the acceleration option of search is used."]
-pub struct SEARCH_POS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEARCH_POS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type SEARCH_POS_W<'a> = crate::FieldWriter<'a, u32, SEARCH_POS_SPEC, u16, u16, 12, 0>;
 impl R {
     #[doc = "Bits 0:11 - Is used to configure the starting address when the acceleration option of search is used."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:11 - Is used to configure the starting address when the acceleration option of search is used."]
     #[inline(always)]
     pub fn search_pos(&mut self) -> SEARCH_POS_W {
-        SEARCH_POS_W { w: self }
+        SEARCH_POS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

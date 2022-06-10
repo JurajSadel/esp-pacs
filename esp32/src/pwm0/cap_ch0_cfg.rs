@@ -35,155 +35,23 @@ impl From<crate::W<CAP_CH0_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CAP0_EN` reader - "]
-pub struct CAP0_EN_R(crate::FieldReader<bool>);
-impl CAP0_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAP0_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAP0_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAP0_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CAP0_EN` writer - "]
-pub struct CAP0_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAP0_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CAP0_EN_W<'a> = crate::BitWriter<'a, u32, CAP_CH0_CFG_SPEC, bool, 0>;
 #[doc = "Field `CAP0_MODE` reader - "]
-pub struct CAP0_MODE_R(crate::FieldReader<u8>);
-impl CAP0_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CAP0_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAP0_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAP0_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CAP0_MODE` writer - "]
-pub struct CAP0_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAP0_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
-        self.w
-    }
-}
+pub type CAP0_MODE_W<'a> = crate::FieldWriter<'a, u32, CAP_CH0_CFG_SPEC, u8, u8, 2, 1>;
 #[doc = "Field `CAP0_PRESCALE` reader - "]
-pub struct CAP0_PRESCALE_R(crate::FieldReader<u8>);
-impl CAP0_PRESCALE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CAP0_PRESCALE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAP0_PRESCALE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAP0_PRESCALE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CAP0_PRESCALE` writer - "]
-pub struct CAP0_PRESCALE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAP0_PRESCALE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 3)) | ((value as u32 & 0xff) << 3);
-        self.w
-    }
-}
+pub type CAP0_PRESCALE_W<'a> = crate::FieldWriter<'a, u32, CAP_CH0_CFG_SPEC, u8, u8, 8, 3>;
 #[doc = "Field `CAP0_IN_INVERT` reader - "]
-pub struct CAP0_IN_INVERT_R(crate::FieldReader<bool>);
-impl CAP0_IN_INVERT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAP0_IN_INVERT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAP0_IN_INVERT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAP0_IN_INVERT_R = crate::BitReader<bool>;
 #[doc = "Field `CAP0_IN_INVERT` writer - "]
-pub struct CAP0_IN_INVERT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAP0_IN_INVERT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type CAP0_IN_INVERT_W<'a> = crate::BitWriter<'a, u32, CAP_CH0_CFG_SPEC, bool, 11>;
 #[doc = "Field `CAP0_SW` writer - "]
-pub struct CAP0_SW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAP0_SW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type CAP0_SW_W<'a> = crate::BitWriter<'a, u32, CAP_CH0_CFG_SPEC, bool, 12>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -210,27 +78,27 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn cap0_en(&mut self) -> CAP0_EN_W {
-        CAP0_EN_W { w: self }
+        CAP0_EN_W::new(self)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
     pub fn cap0_mode(&mut self) -> CAP0_MODE_W {
-        CAP0_MODE_W { w: self }
+        CAP0_MODE_W::new(self)
     }
     #[doc = "Bits 3:10"]
     #[inline(always)]
     pub fn cap0_prescale(&mut self) -> CAP0_PRESCALE_W {
-        CAP0_PRESCALE_W { w: self }
+        CAP0_PRESCALE_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn cap0_in_invert(&mut self) -> CAP0_IN_INVERT_W {
-        CAP0_IN_INVERT_W { w: self }
+        CAP0_IN_INVERT_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn cap0_sw(&mut self) -> CAP0_SW_W {
-        CAP0_SW_W { w: self }
+        CAP0_SW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,167 +35,35 @@ impl From<crate::W<DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0` reader - backup's permission(store,load) in data region0 of SRAM"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0` writer - backup's permission(store,load) in data region0 of SRAM"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1` reader - backup's permission(store,load) in data region1 of SRAM"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1` writer - backup's permission(store,load) in data region1 of SRAM"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2` reader - backup's permission(store,load) in data region2 of SRAM"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2` writer - backup's permission(store,load) in data region2 of SRAM"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3` reader - backup's permission(store,load) in data region3 of SRAM"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3` writer - backup's permission(store,load) in data region3 of SRAM"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0` reader - backup's permission(store,load) in dcache data sram block0"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0` writer - backup's permission(store,load) in dcache data sram block0"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1` reader - backup's permission(store,load) in dcache data sram block1"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1` writer - backup's permission(store,load) in dcache data sram block1"]
-pub struct DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 10>;
 impl R {
     #[doc = "Bits 0:1 - backup's permission(store,load) in data region0 of SRAM"]
     #[inline(always)]
@@ -250,42 +118,42 @@ impl W {
     pub fn dma_apbperi_backup_pms_constrain_sram_pms_0(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_W {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_W { w: self }
+        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_0_W::new(self)
     }
     #[doc = "Bits 2:3 - backup's permission(store,load) in data region1 of SRAM"]
     #[inline(always)]
     pub fn dma_apbperi_backup_pms_constrain_sram_pms_1(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_W {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_W { w: self }
+        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_1_W::new(self)
     }
     #[doc = "Bits 4:5 - backup's permission(store,load) in data region2 of SRAM"]
     #[inline(always)]
     pub fn dma_apbperi_backup_pms_constrain_sram_pms_2(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_W {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_W { w: self }
+        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_2_W::new(self)
     }
     #[doc = "Bits 6:7 - backup's permission(store,load) in data region3 of SRAM"]
     #[inline(always)]
     pub fn dma_apbperi_backup_pms_constrain_sram_pms_3(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_W {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_W { w: self }
+        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_PMS_3_W::new(self)
     }
     #[doc = "Bits 8:9 - backup's permission(store,load) in dcache data sram block0"]
     #[inline(always)]
     pub fn dma_apbperi_backup_pms_constrain_sram_cachedataarray_pms_0(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W { w: self }
+        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W::new(self)
     }
     #[doc = "Bits 10:11 - backup's permission(store,load) in dcache data sram block1"]
     #[inline(always)]
     pub fn dma_apbperi_backup_pms_constrain_sram_cachedataarray_pms_1(
         &mut self,
     ) -> DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W {
-        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W { w: self }
+        DMA_APBPERI_BACKUP_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

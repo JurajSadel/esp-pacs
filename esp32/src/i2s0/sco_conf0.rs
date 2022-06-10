@@ -35,153 +35,21 @@ impl From<crate::W<SCO_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `SCO_WITH_I2S_EN` reader - "]
-pub struct SCO_WITH_I2S_EN_R(crate::FieldReader<bool>);
-impl SCO_WITH_I2S_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCO_WITH_I2S_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCO_WITH_I2S_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCO_WITH_I2S_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SCO_WITH_I2S_EN` writer - "]
-pub struct SCO_WITH_I2S_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCO_WITH_I2S_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SCO_WITH_I2S_EN_W<'a> = crate::BitWriter<'a, u32, SCO_CONF0_SPEC, bool, 0>;
 #[doc = "Field `SCO_NO_I2S_EN` reader - "]
-pub struct SCO_NO_I2S_EN_R(crate::FieldReader<bool>);
-impl SCO_NO_I2S_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCO_NO_I2S_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCO_NO_I2S_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCO_NO_I2S_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SCO_NO_I2S_EN` writer - "]
-pub struct SCO_NO_I2S_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCO_NO_I2S_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SCO_NO_I2S_EN_W<'a> = crate::BitWriter<'a, u32, SCO_CONF0_SPEC, bool, 1>;
 #[doc = "Field `CVSD_ENC_START` reader - "]
-pub struct CVSD_ENC_START_R(crate::FieldReader<bool>);
-impl CVSD_ENC_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CVSD_ENC_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CVSD_ENC_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CVSD_ENC_START_R = crate::BitReader<bool>;
 #[doc = "Field `CVSD_ENC_START` writer - "]
-pub struct CVSD_ENC_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CVSD_ENC_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CVSD_ENC_START_W<'a> = crate::BitWriter<'a, u32, SCO_CONF0_SPEC, bool, 2>;
 #[doc = "Field `CVSD_ENC_RESET` reader - "]
-pub struct CVSD_ENC_RESET_R(crate::FieldReader<bool>);
-impl CVSD_ENC_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CVSD_ENC_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CVSD_ENC_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CVSD_ENC_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `CVSD_ENC_RESET` writer - "]
-pub struct CVSD_ENC_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CVSD_ENC_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CVSD_ENC_RESET_W<'a> = crate::BitWriter<'a, u32, SCO_CONF0_SPEC, bool, 3>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -208,22 +76,22 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn sco_with_i2s_en(&mut self) -> SCO_WITH_I2S_EN_W {
-        SCO_WITH_I2S_EN_W { w: self }
+        SCO_WITH_I2S_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn sco_no_i2s_en(&mut self) -> SCO_NO_I2S_EN_W {
-        SCO_NO_I2S_EN_W { w: self }
+        SCO_NO_I2S_EN_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn cvsd_enc_start(&mut self) -> CVSD_ENC_START_W {
-        CVSD_ENC_START_W { w: self }
+        CVSD_ENC_START_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn cvsd_enc_reset(&mut self) -> CVSD_ENC_RESET_W {
-        CVSD_ENC_RESET_W { w: self }
+        CVSD_ENC_RESET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

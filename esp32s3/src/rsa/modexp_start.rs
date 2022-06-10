@@ -20,32 +20,12 @@ impl From<crate::W<MODEXP_START_SPEC>> for W {
     }
 }
 #[doc = "Field `MODEXP_START` writer - Set this bit to 1 to start the modular exponentiation."]
-pub struct MODEXP_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODEXP_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type MODEXP_START_W<'a> = crate::BitWriter<'a, u32, MODEXP_START_SPEC, bool, 0>;
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to start the modular exponentiation."]
     #[inline(always)]
     pub fn modexp_start(&mut self) -> MODEXP_START_W {
-        MODEXP_START_W { w: self }
+        MODEXP_START_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

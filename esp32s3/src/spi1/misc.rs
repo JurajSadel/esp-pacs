@@ -35,190 +35,25 @@ impl From<crate::W<MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `CS0_DIS` reader - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
-pub struct CS0_DIS_R(crate::FieldReader<bool>);
-impl CS0_DIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CS0_DIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS0_DIS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS0_DIS_R = crate::BitReader<bool>;
 #[doc = "Field `CS0_DIS` writer - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
-pub struct CS0_DIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS0_DIS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CS0_DIS_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 0>;
 #[doc = "Field `CS1_DIS` reader - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
-pub struct CS1_DIS_R(crate::FieldReader<bool>);
-impl CS1_DIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CS1_DIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS1_DIS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS1_DIS_R = crate::BitReader<bool>;
 #[doc = "Field `CS1_DIS` writer - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
-pub struct CS1_DIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS1_DIS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CS1_DIS_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 1>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
-pub struct CK_IDLE_EDGE_R(crate::FieldReader<bool>);
-impl CK_IDLE_EDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CK_IDLE_EDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK_IDLE_EDGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK_IDLE_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
-pub struct CK_IDLE_EDGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK_IDLE_EDGE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type CK_IDLE_EDGE_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 9>;
 #[doc = "Field `CS_KEEP_ACTIVE` reader - SPI_CS line keep low when the bit is set."]
-pub struct CS_KEEP_ACTIVE_R(crate::FieldReader<bool>);
-impl CS_KEEP_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CS_KEEP_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_KEEP_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_KEEP_ACTIVE_R = crate::BitReader<bool>;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - SPI_CS line keep low when the bit is set."]
-pub struct CS_KEEP_ACTIVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_KEEP_ACTIVE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type CS_KEEP_ACTIVE_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 10>;
 #[doc = "Field `AUTO_PER` reader - Set this bit to enable auto PER function. Hardware will sent out PER command if PES command is sent."]
-pub struct AUTO_PER_R(crate::FieldReader<bool>);
-impl AUTO_PER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AUTO_PER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AUTO_PER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AUTO_PER_R = crate::BitReader<bool>;
 #[doc = "Field `AUTO_PER` writer - Set this bit to enable auto PER function. Hardware will sent out PER command if PES command is sent."]
-pub struct AUTO_PER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUTO_PER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type AUTO_PER_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 11>;
 impl R {
     #[doc = "Bit 0 - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
     #[inline(always)]
@@ -250,27 +85,27 @@ impl W {
     #[doc = "Bit 0 - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
     #[inline(always)]
     pub fn cs0_dis(&mut self) -> CS0_DIS_W {
-        CS0_DIS_W { w: self }
+        CS0_DIS_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
     #[inline(always)]
     pub fn cs1_dis(&mut self) -> CS1_DIS_W {
-        CS1_DIS_W { w: self }
+        CS1_DIS_W::new(self)
     }
     #[doc = "Bit 9 - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
     #[inline(always)]
     pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W {
-        CK_IDLE_EDGE_W { w: self }
+        CK_IDLE_EDGE_W::new(self)
     }
     #[doc = "Bit 10 - SPI_CS line keep low when the bit is set."]
     #[inline(always)]
     pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W {
-        CS_KEEP_ACTIVE_W { w: self }
+        CS_KEEP_ACTIVE_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to enable auto PER function. Hardware will sent out PER command if PES command is sent."]
     #[inline(always)]
     pub fn auto_per(&mut self) -> AUTO_PER_W {
-        AUTO_PER_W { w: self }
+        AUTO_PER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

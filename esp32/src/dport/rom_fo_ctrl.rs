@@ -35,106 +35,17 @@ impl From<crate::W<ROM_FO_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ROM_FO` reader - "]
-pub struct PRO_ROM_FO_R(crate::FieldReader<bool>);
-impl PRO_ROM_FO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ROM_FO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ROM_FO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ROM_FO_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_ROM_FO` writer - "]
-pub struct PRO_ROM_FO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ROM_FO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_ROM_FO_W<'a> = crate::BitWriter<'a, u32, ROM_FO_CTRL_SPEC, bool, 0>;
 #[doc = "Field `APP_ROM_FO` reader - "]
-pub struct APP_ROM_FO_R(crate::FieldReader<bool>);
-impl APP_ROM_FO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_ROM_FO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_ROM_FO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_ROM_FO_R = crate::BitReader<bool>;
 #[doc = "Field `APP_ROM_FO` writer - "]
-pub struct APP_ROM_FO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_ROM_FO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type APP_ROM_FO_W<'a> = crate::BitWriter<'a, u32, ROM_FO_CTRL_SPEC, bool, 1>;
 #[doc = "Field `SHARE_ROM_FO` reader - "]
-pub struct SHARE_ROM_FO_R(crate::FieldReader<u8>);
-impl SHARE_ROM_FO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SHARE_ROM_FO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SHARE_ROM_FO_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SHARE_ROM_FO_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SHARE_ROM_FO` writer - "]
-pub struct SHARE_ROM_FO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SHARE_ROM_FO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 2)) | ((value as u32 & 0x3f) << 2);
-        self.w
-    }
-}
+pub type SHARE_ROM_FO_W<'a> = crate::FieldWriter<'a, u32, ROM_FO_CTRL_SPEC, u8, u8, 6, 2>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro_rom_fo(&mut self) -> PRO_ROM_FO_W {
-        PRO_ROM_FO_W { w: self }
+        PRO_ROM_FO_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn app_rom_fo(&mut self) -> APP_ROM_FO_W {
-        APP_ROM_FO_W { w: self }
+        APP_ROM_FO_W::new(self)
     }
     #[doc = "Bits 2:7"]
     #[inline(always)]
     pub fn share_rom_fo(&mut self) -> SHARE_ROM_FO_W {
-        SHARE_ROM_FO_W { w: self }
+        SHARE_ROM_FO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,175 +35,23 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_CLR` reader - "]
-pub struct SLAVE_TRANS_COMPLETE_INT_CLR_R(crate::FieldReader<bool>);
-impl SLAVE_TRANS_COMPLETE_INT_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_TRANS_COMPLETE_INT_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_TRANS_COMPLETE_INT_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_TRANS_COMPLETE_INT_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_TRANS_COMPLETE_INT_CLR` writer - "]
-pub struct SLAVE_TRANS_COMPLETE_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_TRANS_COMPLETE_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SLAVE_TRANS_COMPLETE_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 4>;
 #[doc = "Field `ARBITRATION_LOST_INT_CLR` reader - "]
-pub struct ARBITRATION_LOST_INT_CLR_R(crate::FieldReader<bool>);
-impl ARBITRATION_LOST_INT_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARBITRATION_LOST_INT_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARBITRATION_LOST_INT_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARBITRATION_LOST_INT_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `ARBITRATION_LOST_INT_CLR` writer - "]
-pub struct ARBITRATION_LOST_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ARBITRATION_LOST_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type ARBITRATION_LOST_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 5>;
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_CLR` reader - "]
-pub struct MASTER_TRANS_COMPLETE_INT_CLR_R(crate::FieldReader<bool>);
-impl MASTER_TRANS_COMPLETE_INT_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASTER_TRANS_COMPLETE_INT_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASTER_TRANS_COMPLETE_INT_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASTER_TRANS_COMPLETE_INT_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `MASTER_TRANS_COMPLETE_INT_CLR` writer - "]
-pub struct MASTER_TRANS_COMPLETE_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASTER_TRANS_COMPLETE_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type MASTER_TRANS_COMPLETE_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 6>;
 #[doc = "Field `TRANS_COMPLETE_INT_CLR` reader - "]
-pub struct TRANS_COMPLETE_INT_CLR_R(crate::FieldReader<bool>);
-impl TRANS_COMPLETE_INT_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRANS_COMPLETE_INT_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRANS_COMPLETE_INT_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRANS_COMPLETE_INT_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `TRANS_COMPLETE_INT_CLR` writer - "]
-pub struct TRANS_COMPLETE_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRANS_COMPLETE_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type TRANS_COMPLETE_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 7>;
 #[doc = "Field `TIME_OUT_INT_CLR` writer - "]
-pub struct TIME_OUT_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIME_OUT_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type TIME_OUT_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 8>;
 impl R {
     #[doc = "Bit 4"]
     #[inline(always)]
@@ -230,27 +78,27 @@ impl W {
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn slave_trans_complete_int_clr(&mut self) -> SLAVE_TRANS_COMPLETE_INT_CLR_W {
-        SLAVE_TRANS_COMPLETE_INT_CLR_W { w: self }
+        SLAVE_TRANS_COMPLETE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn arbitration_lost_int_clr(&mut self) -> ARBITRATION_LOST_INT_CLR_W {
-        ARBITRATION_LOST_INT_CLR_W { w: self }
+        ARBITRATION_LOST_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn master_trans_complete_int_clr(&mut self) -> MASTER_TRANS_COMPLETE_INT_CLR_W {
-        MASTER_TRANS_COMPLETE_INT_CLR_W { w: self }
+        MASTER_TRANS_COMPLETE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn trans_complete_int_clr(&mut self) -> TRANS_COMPLETE_INT_CLR_W {
-        TRANS_COMPLETE_INT_CLR_W { w: self }
+        TRANS_COMPLETE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn time_out_int_clr(&mut self) -> TIME_OUT_INT_CLR_W {
-        TIME_OUT_INT_CLR_W { w: self }
+        TIME_OUT_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

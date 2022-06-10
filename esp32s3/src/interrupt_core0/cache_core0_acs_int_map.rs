@@ -35,32 +35,10 @@ impl From<crate::W<CACHE_CORE0_ACS_INT_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_CORE0_ACS_INT_MAP` reader - this register used to map cache_core0_acs interrupt to one of core0's external interrupt"]
-pub struct CACHE_CORE0_ACS_INT_MAP_R(crate::FieldReader<u8>);
-impl CACHE_CORE0_ACS_INT_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CACHE_CORE0_ACS_INT_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_CORE0_ACS_INT_MAP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_CORE0_ACS_INT_MAP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CACHE_CORE0_ACS_INT_MAP` writer - this register used to map cache_core0_acs interrupt to one of core0's external interrupt"]
-pub struct CACHE_CORE0_ACS_INT_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_CORE0_ACS_INT_MAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type CACHE_CORE0_ACS_INT_MAP_W<'a> =
+    crate::FieldWriter<'a, u32, CACHE_CORE0_ACS_INT_MAP_SPEC, u8, u8, 5, 0>;
 impl R {
     #[doc = "Bits 0:4 - this register used to map cache_core0_acs interrupt to one of core0's external interrupt"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:4 - this register used to map cache_core0_acs interrupt to one of core0's external interrupt"]
     #[inline(always)]
     pub fn cache_core0_acs_int_map(&mut self) -> CACHE_CORE0_ACS_INT_MAP_W {
-        CACHE_CORE0_ACS_INT_MAP_W { w: self }
+        CACHE_CORE0_ACS_INT_MAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

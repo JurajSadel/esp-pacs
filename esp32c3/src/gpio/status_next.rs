@@ -14,20 +14,7 @@ impl From<crate::R<STATUS_NEXT_SPEC>> for R {
     }
 }
 #[doc = "Field `STATUS_INTERRUPT_NEXT` reader - GPIO interrupt source register for GPIO0-25"]
-pub struct STATUS_INTERRUPT_NEXT_R(crate::FieldReader<u32>);
-impl STATUS_INTERRUPT_NEXT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        STATUS_INTERRUPT_NEXT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS_INTERRUPT_NEXT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATUS_INTERRUPT_NEXT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:25 - GPIO interrupt source register for GPIO0-25"]
     #[inline(always)]

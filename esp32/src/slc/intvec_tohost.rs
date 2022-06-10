@@ -20,39 +20,19 @@ impl From<crate::W<INTVEC_TOHOST_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_TOHOST_INTVEC` writer - "]
-pub struct SLC0_TOHOST_INTVEC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_TOHOST_INTVEC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SLC0_TOHOST_INTVEC_W<'a> = crate::FieldWriter<'a, u32, INTVEC_TOHOST_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `SLC1_TOHOST_INTVEC` writer - "]
-pub struct SLC1_TOHOST_INTVEC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_TOHOST_INTVEC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type SLC1_TOHOST_INTVEC_W<'a> = crate::FieldWriter<'a, u32, INTVEC_TOHOST_SPEC, u8, u8, 8, 16>;
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn slc0_tohost_intvec(&mut self) -> SLC0_TOHOST_INTVEC_W {
-        SLC0_TOHOST_INTVEC_W { w: self }
+        SLC0_TOHOST_INTVEC_W::new(self)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
     pub fn slc1_tohost_intvec(&mut self) -> SLC1_TOHOST_INTVEC_W {
-        SLC1_TOHOST_INTVEC_W { w: self }
+        SLC1_TOHOST_INTVEC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

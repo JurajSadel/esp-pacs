@@ -35,94 +35,15 @@ impl From<crate::W<PRO_DPORT_6_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DPORT_ILG_CLR` reader - The clear signal for PeriBus1 access interrupt."]
-pub struct PRO_DPORT_ILG_CLR_R(crate::FieldReader<bool>);
-impl PRO_DPORT_ILG_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DPORT_ILG_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DPORT_ILG_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DPORT_ILG_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DPORT_ILG_CLR` writer - The clear signal for PeriBus1 access interrupt."]
-pub struct PRO_DPORT_ILG_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DPORT_ILG_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_DPORT_ILG_CLR_W<'a> = crate::BitWriter<'a, u32, PRO_DPORT_6_SPEC, bool, 0>;
 #[doc = "Field `PRO_DPORT_ILG_EN` reader - The enable signal for PeriBus1 access interrupt."]
-pub struct PRO_DPORT_ILG_EN_R(crate::FieldReader<bool>);
-impl PRO_DPORT_ILG_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DPORT_ILG_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DPORT_ILG_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DPORT_ILG_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DPORT_ILG_EN` writer - The enable signal for PeriBus1 access interrupt."]
-pub struct PRO_DPORT_ILG_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DPORT_ILG_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PRO_DPORT_ILG_EN_W<'a> = crate::BitWriter<'a, u32, PRO_DPORT_6_SPEC, bool, 1>;
 #[doc = "Field `PRO_DPORT_ILG_INTR` reader - PeriBus1 access interrupt signal."]
-pub struct PRO_DPORT_ILG_INTR_R(crate::FieldReader<bool>);
-impl PRO_DPORT_ILG_INTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DPORT_ILG_INTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DPORT_ILG_INTR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DPORT_ILG_INTR_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The clear signal for PeriBus1 access interrupt."]
     #[inline(always)]
@@ -144,12 +65,12 @@ impl W {
     #[doc = "Bit 0 - The clear signal for PeriBus1 access interrupt."]
     #[inline(always)]
     pub fn pro_dport_ilg_clr(&mut self) -> PRO_DPORT_ILG_CLR_W {
-        PRO_DPORT_ILG_CLR_W { w: self }
+        PRO_DPORT_ILG_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The enable signal for PeriBus1 access interrupt."]
     #[inline(always)]
     pub fn pro_dport_ilg_en(&mut self) -> PRO_DPORT_ILG_EN_W {
-        PRO_DPORT_ILG_EN_W { w: self }
+        PRO_DPORT_ILG_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

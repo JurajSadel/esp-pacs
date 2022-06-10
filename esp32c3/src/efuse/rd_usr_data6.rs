@@ -14,20 +14,7 @@ impl From<crate::R<RD_USR_DATA6_SPEC>> for R {
     }
 }
 #[doc = "Field `USR_DATA6` reader - Stores the sixth 32 bits of BLOCK3 (user)."]
-pub struct USR_DATA6_R(crate::FieldReader<u32>);
-impl USR_DATA6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        USR_DATA6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_DATA6_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_DATA6_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the sixth 32 bits of BLOCK3 (user)."]
     #[inline(always)]

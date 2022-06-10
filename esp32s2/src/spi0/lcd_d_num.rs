@@ -35,140 +35,25 @@ impl From<crate::W<LCD_D_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `D_DQS_NUM` reader - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct D_DQS_NUM_R(crate::FieldReader<u8>);
-impl D_DQS_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        D_DQS_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for D_DQS_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type D_DQS_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `D_DQS_NUM` writer - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct D_DQS_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D_DQS_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type D_DQS_NUM_W<'a> = crate::FieldWriter<'a, u32, LCD_D_NUM_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `D_CD_NUM` reader - the output spi_cd is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct D_CD_NUM_R(crate::FieldReader<u8>);
-impl D_CD_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        D_CD_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for D_CD_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type D_CD_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `D_CD_NUM` writer - the output spi_cd is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct D_CD_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D_CD_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type D_CD_NUM_W<'a> = crate::FieldWriter<'a, u32, LCD_D_NUM_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `D_DE_NUM` reader - the output spi_de is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct D_DE_NUM_R(crate::FieldReader<u8>);
-impl D_DE_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        D_DE_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for D_DE_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type D_DE_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `D_DE_NUM` writer - the output spi_de is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct D_DE_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D_DE_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type D_DE_NUM_W<'a> = crate::FieldWriter<'a, u32, LCD_D_NUM_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `D_HSYNC_NUM` reader - the output spi_hsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct D_HSYNC_NUM_R(crate::FieldReader<u8>);
-impl D_HSYNC_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        D_HSYNC_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for D_HSYNC_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type D_HSYNC_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `D_HSYNC_NUM` writer - the output spi_hsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct D_HSYNC_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D_HSYNC_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type D_HSYNC_NUM_W<'a> = crate::FieldWriter<'a, u32, LCD_D_NUM_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `D_VSYNC_NUM` reader - the output spi_vsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct D_VSYNC_NUM_R(crate::FieldReader<u8>);
-impl D_VSYNC_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        D_VSYNC_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for D_VSYNC_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type D_VSYNC_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `D_VSYNC_NUM` writer - the output spi_vsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
-pub struct D_VSYNC_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> D_VSYNC_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type D_VSYNC_NUM_W<'a> = crate::FieldWriter<'a, u32, LCD_D_NUM_SPEC, u8, u8, 2, 8>;
 impl R {
     #[doc = "Bits 0:1 - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
@@ -200,27 +85,27 @@ impl W {
     #[doc = "Bits 0:1 - the output spi_dqs is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_dqs_num(&mut self) -> D_DQS_NUM_W {
-        D_DQS_NUM_W { w: self }
+        D_DQS_NUM_W::new(self)
     }
     #[doc = "Bits 2:3 - the output spi_cd is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_cd_num(&mut self) -> D_CD_NUM_W {
-        D_CD_NUM_W { w: self }
+        D_CD_NUM_W::new(self)
     }
     #[doc = "Bits 4:5 - the output spi_de is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_de_num(&mut self) -> D_DE_NUM_W {
-        D_DE_NUM_W { w: self }
+        D_DE_NUM_W::new(self)
     }
     #[doc = "Bits 6:7 - the output spi_hsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_hsync_num(&mut self) -> D_HSYNC_NUM_W {
-        D_HSYNC_NUM_W { w: self }
+        D_HSYNC_NUM_W::new(self)
     }
     #[doc = "Bits 8:9 - the output spi_vsync is delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
     pub fn d_vsync_num(&mut self) -> D_VSYNC_NUM_W {
-        D_VSYNC_NUM_W { w: self }
+        D_VSYNC_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,20 +14,7 @@ impl From<crate::R<CONTINUE_SPEC>> for R {
     }
 }
 #[doc = "Field `CONTINUE` reader - reserved."]
-pub struct CONTINUE_R(crate::FieldReader<u32>);
-impl CONTINUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CONTINUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONTINUE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONTINUE_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 1:31 - reserved."]
     #[inline(always)]

@@ -35,150 +35,25 @@ impl From<crate::W<CLKM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLKM_DIV_NUM` reader - Integral I2S clock divider value"]
-pub struct CLKM_DIV_NUM_R(crate::FieldReader<u8>);
-impl CLKM_DIV_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CLKM_DIV_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKM_DIV_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLKM_DIV_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CLKM_DIV_NUM` writer - Integral I2S clock divider value"]
-pub struct CLKM_DIV_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLKM_DIV_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type CLKM_DIV_NUM_W<'a> = crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `CLKM_DIV_B` reader - Fractional clock divider numerator value"]
-pub struct CLKM_DIV_B_R(crate::FieldReader<u8>);
-impl CLKM_DIV_B_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CLKM_DIV_B_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKM_DIV_B_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLKM_DIV_B_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CLKM_DIV_B` writer - Fractional clock divider numerator value"]
-pub struct CLKM_DIV_B_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLKM_DIV_B_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 8)) | ((value as u32 & 0x3f) << 8);
-        self.w
-    }
-}
+pub type CLKM_DIV_B_W<'a> = crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 6, 8>;
 #[doc = "Field `CLKM_DIV_A` reader - Fractional clock divider denominator value"]
-pub struct CLKM_DIV_A_R(crate::FieldReader<u8>);
-impl CLKM_DIV_A_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CLKM_DIV_A_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLKM_DIV_A_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLKM_DIV_A_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CLKM_DIV_A` writer - Fractional clock divider denominator value"]
-pub struct CLKM_DIV_A_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLKM_DIV_A_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 14)) | ((value as u32 & 0x3f) << 14);
-        self.w
-    }
-}
+pub type CLKM_DIV_A_W<'a> = crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 6, 14>;
 #[doc = "Field `CLK_EN` reader - reg clk en"]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - reg clk en"]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, CLKM_CONF_SPEC, bool, 20>;
 #[doc = "Field `CLK_SEL` reader - Set this bit to enable clk_apll"]
-pub struct CLK_SEL_R(crate::FieldReader<u8>);
-impl CLK_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CLK_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CLK_SEL` writer - Set this bit to enable clk_apll"]
-pub struct CLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 21)) | ((value as u32 & 3) << 21);
-        self.w
-    }
-}
+pub type CLK_SEL_W<'a> = crate::FieldWriter<'a, u32, CLKM_CONF_SPEC, u8, u8, 2, 21>;
 impl R {
     #[doc = "Bits 0:7 - Integral I2S clock divider value"]
     #[inline(always)]
@@ -210,27 +85,27 @@ impl W {
     #[doc = "Bits 0:7 - Integral I2S clock divider value"]
     #[inline(always)]
     pub fn clkm_div_num(&mut self) -> CLKM_DIV_NUM_W {
-        CLKM_DIV_NUM_W { w: self }
+        CLKM_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 8:13 - Fractional clock divider numerator value"]
     #[inline(always)]
     pub fn clkm_div_b(&mut self) -> CLKM_DIV_B_W {
-        CLKM_DIV_B_W { w: self }
+        CLKM_DIV_B_W::new(self)
     }
     #[doc = "Bits 14:19 - Fractional clock divider denominator value"]
     #[inline(always)]
     pub fn clkm_div_a(&mut self) -> CLKM_DIV_A_W {
-        CLKM_DIV_A_W { w: self }
+        CLKM_DIV_A_W::new(self)
     }
     #[doc = "Bit 20 - reg clk en"]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Bits 21:22 - Set this bit to enable clk_apll"]
     #[inline(always)]
     pub fn clk_sel(&mut self) -> CLK_SEL_W {
-        CLK_SEL_W { w: self }
+        CLK_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

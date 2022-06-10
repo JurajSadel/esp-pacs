@@ -35,160 +35,25 @@ impl From<crate::W<LSCH0_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `DUTY_SCALE_LSCH0` reader - reg_duty_scale_lsch0."]
-pub struct DUTY_SCALE_LSCH0_R(crate::FieldReader<u16>);
-impl DUTY_SCALE_LSCH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DUTY_SCALE_LSCH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_SCALE_LSCH0_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_SCALE_LSCH0_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DUTY_SCALE_LSCH0` writer - reg_duty_scale_lsch0."]
-pub struct DUTY_SCALE_LSCH0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DUTY_SCALE_LSCH0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type DUTY_SCALE_LSCH0_W<'a> = crate::FieldWriter<'a, u32, LSCH0_CONF1_SPEC, u16, u16, 10, 0>;
 #[doc = "Field `DUTY_CYCLE_LSCH0` reader - reg_duty_cycle_lsch0."]
-pub struct DUTY_CYCLE_LSCH0_R(crate::FieldReader<u16>);
-impl DUTY_CYCLE_LSCH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DUTY_CYCLE_LSCH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CYCLE_LSCH0_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CYCLE_LSCH0_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DUTY_CYCLE_LSCH0` writer - reg_duty_cycle_lsch0."]
-pub struct DUTY_CYCLE_LSCH0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DUTY_CYCLE_LSCH0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 10)) | ((value as u32 & 0x03ff) << 10);
-        self.w
-    }
-}
+pub type DUTY_CYCLE_LSCH0_W<'a> = crate::FieldWriter<'a, u32, LSCH0_CONF1_SPEC, u16, u16, 10, 10>;
 #[doc = "Field `DUTY_NUM_LSCH0` reader - reg_duty_num_lsch0."]
-pub struct DUTY_NUM_LSCH0_R(crate::FieldReader<u16>);
-impl DUTY_NUM_LSCH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DUTY_NUM_LSCH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_NUM_LSCH0_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_NUM_LSCH0_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DUTY_NUM_LSCH0` writer - reg_duty_num_lsch0."]
-pub struct DUTY_NUM_LSCH0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DUTY_NUM_LSCH0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 20)) | ((value as u32 & 0x03ff) << 20);
-        self.w
-    }
-}
+pub type DUTY_NUM_LSCH0_W<'a> = crate::FieldWriter<'a, u32, LSCH0_CONF1_SPEC, u16, u16, 10, 20>;
 #[doc = "Field `DUTY_INC_LSCH0` reader - reg_duty_inc_lsch0."]
-pub struct DUTY_INC_LSCH0_R(crate::FieldReader<bool>);
-impl DUTY_INC_LSCH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_INC_LSCH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_INC_LSCH0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_INC_LSCH0_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_INC_LSCH0` writer - reg_duty_inc_lsch0."]
-pub struct DUTY_INC_LSCH0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DUTY_INC_LSCH0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type DUTY_INC_LSCH0_W<'a> = crate::BitWriter<'a, u32, LSCH0_CONF1_SPEC, bool, 30>;
 #[doc = "Field `DUTY_START_LSCH0` reader - reg_duty_start_lsch0."]
-pub struct DUTY_START_LSCH0_R(crate::FieldReader<bool>);
-impl DUTY_START_LSCH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_START_LSCH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_START_LSCH0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_START_LSCH0_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_START_LSCH0` writer - reg_duty_start_lsch0."]
-pub struct DUTY_START_LSCH0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DUTY_START_LSCH0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type DUTY_START_LSCH0_W<'a> = crate::BitWriter<'a, u32, LSCH0_CONF1_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:9 - reg_duty_scale_lsch0."]
     #[inline(always)]
@@ -220,27 +85,27 @@ impl W {
     #[doc = "Bits 0:9 - reg_duty_scale_lsch0."]
     #[inline(always)]
     pub fn duty_scale_lsch0(&mut self) -> DUTY_SCALE_LSCH0_W {
-        DUTY_SCALE_LSCH0_W { w: self }
+        DUTY_SCALE_LSCH0_W::new(self)
     }
     #[doc = "Bits 10:19 - reg_duty_cycle_lsch0."]
     #[inline(always)]
     pub fn duty_cycle_lsch0(&mut self) -> DUTY_CYCLE_LSCH0_W {
-        DUTY_CYCLE_LSCH0_W { w: self }
+        DUTY_CYCLE_LSCH0_W::new(self)
     }
     #[doc = "Bits 20:29 - reg_duty_num_lsch0."]
     #[inline(always)]
     pub fn duty_num_lsch0(&mut self) -> DUTY_NUM_LSCH0_W {
-        DUTY_NUM_LSCH0_W { w: self }
+        DUTY_NUM_LSCH0_W::new(self)
     }
     #[doc = "Bit 30 - reg_duty_inc_lsch0."]
     #[inline(always)]
     pub fn duty_inc_lsch0(&mut self) -> DUTY_INC_LSCH0_W {
-        DUTY_INC_LSCH0_W { w: self }
+        DUTY_INC_LSCH0_W::new(self)
     }
     #[doc = "Bit 31 - reg_duty_start_lsch0."]
     #[inline(always)]
     pub fn duty_start_lsch0(&mut self) -> DUTY_START_LSCH0_W {
-        DUTY_START_LSCH0_W { w: self }
+        DUTY_START_LSCH0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

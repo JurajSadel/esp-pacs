@@ -14,65 +14,13 @@ impl From<crate::R<BACKUP_BUS_PMS_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR` reader - backup_bus_pms_monitor_violate_intr"]
-pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool>);
-impl BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_INTR_R = crate::BitReader<bool>;
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS` reader - backup_bus_pms_monitor_violate_status_htrans"]
-pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HTRANS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE` reader - backup_bus_pms_monitor_violate_status_hsize"]
-pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE` reader - backup_bus_pms_monitor_violate_status_hwrite"]
-pub struct BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R(crate::FieldReader<bool>);
-impl BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - backup_bus_pms_monitor_violate_intr"]
     #[inline(always)]

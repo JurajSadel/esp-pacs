@@ -35,96 +35,17 @@ impl From<crate::W<BUS_TIMING_1_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME_SEG1` reader - The width of PBS1."]
-pub struct TIME_SEG1_R(crate::FieldReader<u8>);
-impl TIME_SEG1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIME_SEG1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_SEG1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_SEG1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIME_SEG1` writer - The width of PBS1."]
-pub struct TIME_SEG1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIME_SEG1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type TIME_SEG1_W<'a> = crate::FieldWriter<'a, u32, BUS_TIMING_1_SPEC, u8, u8, 4, 0>;
 #[doc = "Field `TIME_SEG2` reader - The width of PBS2."]
-pub struct TIME_SEG2_R(crate::FieldReader<u8>);
-impl TIME_SEG2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIME_SEG2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_SEG2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_SEG2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIME_SEG2` writer - The width of PBS2."]
-pub struct TIME_SEG2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIME_SEG2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 4)) | ((value as u32 & 7) << 4);
-        self.w
-    }
-}
+pub type TIME_SEG2_W<'a> = crate::FieldWriter<'a, u32, BUS_TIMING_1_SPEC, u8, u8, 3, 4>;
 #[doc = "Field `TIME_SAMP` reader - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
-pub struct TIME_SAMP_R(crate::FieldReader<bool>);
-impl TIME_SAMP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIME_SAMP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_SAMP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_SAMP_R = crate::BitReader<bool>;
 #[doc = "Field `TIME_SAMP` writer - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
-pub struct TIME_SAMP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIME_SAMP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type TIME_SAMP_W<'a> = crate::BitWriter<'a, u32, BUS_TIMING_1_SPEC, bool, 7>;
 impl R {
     #[doc = "Bits 0:3 - The width of PBS1."]
     #[inline(always)]
@@ -146,17 +67,17 @@ impl W {
     #[doc = "Bits 0:3 - The width of PBS1."]
     #[inline(always)]
     pub fn time_seg1(&mut self) -> TIME_SEG1_W {
-        TIME_SEG1_W { w: self }
+        TIME_SEG1_W::new(self)
     }
     #[doc = "Bits 4:6 - The width of PBS2."]
     #[inline(always)]
     pub fn time_seg2(&mut self) -> TIME_SEG2_W {
-        TIME_SEG2_W { w: self }
+        TIME_SEG2_W::new(self)
     }
     #[doc = "Bit 7 - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
     #[inline(always)]
     pub fn time_samp(&mut self) -> TIME_SAMP_W {
-        TIME_SAMP_W { w: self }
+        TIME_SAMP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

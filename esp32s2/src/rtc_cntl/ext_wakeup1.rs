@@ -35,54 +35,11 @@ impl From<crate::W<EXT_WAKEUP1_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL` reader - Selects a RTC GPIO to be the EXT1 wakeup source."]
-pub struct SEL_R(crate::FieldReader<u32>);
-impl SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEL_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEL_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SEL` writer - Selects a RTC GPIO to be the EXT1 wakeup source."]
-pub struct SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x003f_ffff) | (value as u32 & 0x003f_ffff);
-        self.w
-    }
-}
+pub type SEL_W<'a> = crate::FieldWriter<'a, u32, EXT_WAKEUP1_SPEC, u32, u32, 22, 0>;
 #[doc = "Field `STATUS_CLR` writer - Clears the EXT1 wakeup status."]
-pub struct STATUS_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type STATUS_CLR_W<'a> = crate::BitWriter<'a, u32, EXT_WAKEUP1_SPEC, bool, 22>;
 impl R {
     #[doc = "Bits 0:21 - Selects a RTC GPIO to be the EXT1 wakeup source."]
     #[inline(always)]
@@ -94,12 +51,12 @@ impl W {
     #[doc = "Bits 0:21 - Selects a RTC GPIO to be the EXT1 wakeup source."]
     #[inline(always)]
     pub fn sel(&mut self) -> SEL_W {
-        SEL_W { w: self }
+        SEL_W::new(self)
     }
     #[doc = "Bit 22 - Clears the EXT1 wakeup status."]
     #[inline(always)]
     pub fn status_clr(&mut self) -> STATUS_CLR_W {
-        STATUS_CLR_W { w: self }
+        STATUS_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

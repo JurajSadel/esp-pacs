@@ -35,140 +35,25 @@ impl From<crate::W<TOUCH_DAC1_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_PAD14_DAC` reader - configure touch pad dac14"]
-pub struct TOUCH_PAD14_DAC_R(crate::FieldReader<u8>);
-impl TOUCH_PAD14_DAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_PAD14_DAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD14_DAC_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD14_DAC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TOUCH_PAD14_DAC` writer - configure touch pad dac14"]
-pub struct TOUCH_PAD14_DAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD14_DAC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 17)) | ((value as u32 & 7) << 17);
-        self.w
-    }
-}
+pub type TOUCH_PAD14_DAC_W<'a> = crate::FieldWriter<'a, u32, TOUCH_DAC1_SPEC, u8, u8, 3, 17>;
 #[doc = "Field `TOUCH_PAD13_DAC` reader - configure touch pad dac13"]
-pub struct TOUCH_PAD13_DAC_R(crate::FieldReader<u8>);
-impl TOUCH_PAD13_DAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_PAD13_DAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD13_DAC_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD13_DAC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TOUCH_PAD13_DAC` writer - configure touch pad dac13"]
-pub struct TOUCH_PAD13_DAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD13_DAC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 20)) | ((value as u32 & 7) << 20);
-        self.w
-    }
-}
+pub type TOUCH_PAD13_DAC_W<'a> = crate::FieldWriter<'a, u32, TOUCH_DAC1_SPEC, u8, u8, 3, 20>;
 #[doc = "Field `TOUCH_PAD12_DAC` reader - configure touch pad dac12"]
-pub struct TOUCH_PAD12_DAC_R(crate::FieldReader<u8>);
-impl TOUCH_PAD12_DAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_PAD12_DAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD12_DAC_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD12_DAC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TOUCH_PAD12_DAC` writer - configure touch pad dac12"]
-pub struct TOUCH_PAD12_DAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD12_DAC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 23)) | ((value as u32 & 7) << 23);
-        self.w
-    }
-}
+pub type TOUCH_PAD12_DAC_W<'a> = crate::FieldWriter<'a, u32, TOUCH_DAC1_SPEC, u8, u8, 3, 23>;
 #[doc = "Field `TOUCH_PAD11_DAC` reader - configure touch pad dac11"]
-pub struct TOUCH_PAD11_DAC_R(crate::FieldReader<u8>);
-impl TOUCH_PAD11_DAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_PAD11_DAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD11_DAC_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD11_DAC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TOUCH_PAD11_DAC` writer - configure touch pad dac11"]
-pub struct TOUCH_PAD11_DAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD11_DAC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 26)) | ((value as u32 & 7) << 26);
-        self.w
-    }
-}
+pub type TOUCH_PAD11_DAC_W<'a> = crate::FieldWriter<'a, u32, TOUCH_DAC1_SPEC, u8, u8, 3, 26>;
 #[doc = "Field `TOUCH_PAD10_DAC` reader - configure touch pad dac10"]
-pub struct TOUCH_PAD10_DAC_R(crate::FieldReader<u8>);
-impl TOUCH_PAD10_DAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_PAD10_DAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD10_DAC_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD10_DAC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TOUCH_PAD10_DAC` writer - configure touch pad dac10"]
-pub struct TOUCH_PAD10_DAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_PAD10_DAC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 29)) | ((value as u32 & 7) << 29);
-        self.w
-    }
-}
+pub type TOUCH_PAD10_DAC_W<'a> = crate::FieldWriter<'a, u32, TOUCH_DAC1_SPEC, u8, u8, 3, 29>;
 impl R {
     #[doc = "Bits 17:19 - configure touch pad dac14"]
     #[inline(always)]
@@ -200,27 +85,27 @@ impl W {
     #[doc = "Bits 17:19 - configure touch pad dac14"]
     #[inline(always)]
     pub fn touch_pad14_dac(&mut self) -> TOUCH_PAD14_DAC_W {
-        TOUCH_PAD14_DAC_W { w: self }
+        TOUCH_PAD14_DAC_W::new(self)
     }
     #[doc = "Bits 20:22 - configure touch pad dac13"]
     #[inline(always)]
     pub fn touch_pad13_dac(&mut self) -> TOUCH_PAD13_DAC_W {
-        TOUCH_PAD13_DAC_W { w: self }
+        TOUCH_PAD13_DAC_W::new(self)
     }
     #[doc = "Bits 23:25 - configure touch pad dac12"]
     #[inline(always)]
     pub fn touch_pad12_dac(&mut self) -> TOUCH_PAD12_DAC_W {
-        TOUCH_PAD12_DAC_W { w: self }
+        TOUCH_PAD12_DAC_W::new(self)
     }
     #[doc = "Bits 26:28 - configure touch pad dac11"]
     #[inline(always)]
     pub fn touch_pad11_dac(&mut self) -> TOUCH_PAD11_DAC_W {
-        TOUCH_PAD11_DAC_W { w: self }
+        TOUCH_PAD11_DAC_W::new(self)
     }
     #[doc = "Bits 29:31 - configure touch pad dac10"]
     #[inline(always)]
     pub fn touch_pad10_dac(&mut self) -> TOUCH_PAD10_DAC_W {
-        TOUCH_PAD10_DAC_W { w: self }
+        TOUCH_PAD10_DAC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

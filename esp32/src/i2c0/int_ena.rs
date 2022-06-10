@@ -35,486 +35,57 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_ENA` reader - The enable bit for rxfifo_full_int interrupt."]
-pub struct RXFIFO_FULL_INT_ENA_R(crate::FieldReader<bool>);
-impl RXFIFO_FULL_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXFIFO_FULL_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_FULL_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_FULL_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFO_FULL_INT_ENA` writer - The enable bit for rxfifo_full_int interrupt."]
-pub struct RXFIFO_FULL_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXFIFO_FULL_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type RXFIFO_FULL_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 0>;
 #[doc = "Field `TXFIFO_EMPTY_INT_ENA` reader - The enable bit for txfifo_empty_int interrupt."]
-pub struct TXFIFO_EMPTY_INT_ENA_R(crate::FieldReader<bool>);
-impl TXFIFO_EMPTY_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXFIFO_EMPTY_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFIFO_EMPTY_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFIFO_EMPTY_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TXFIFO_EMPTY_INT_ENA` writer - The enable bit for txfifo_empty_int interrupt."]
-pub struct TXFIFO_EMPTY_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXFIFO_EMPTY_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type TXFIFO_EMPTY_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 1>;
 #[doc = "Field `RXFIFO_OVF_INT_ENA` reader - The enable bit for rxfifo_ovf_int interrupt."]
-pub struct RXFIFO_OVF_INT_ENA_R(crate::FieldReader<bool>);
-impl RXFIFO_OVF_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXFIFO_OVF_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_OVF_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFO_OVF_INT_ENA` writer - The enable bit for rxfifo_ovf_int interrupt."]
-pub struct RXFIFO_OVF_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXFIFO_OVF_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type RXFIFO_OVF_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 2>;
 #[doc = "Field `END_DETECT_INT_ENA` reader - The enable bit for end_detect_int interrupt."]
-pub struct END_DETECT_INT_ENA_R(crate::FieldReader<bool>);
-impl END_DETECT_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        END_DETECT_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for END_DETECT_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type END_DETECT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `END_DETECT_INT_ENA` writer - The enable bit for end_detect_int interrupt."]
-pub struct END_DETECT_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> END_DETECT_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type END_DETECT_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 3>;
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ENA` reader - The enable bit for slave_tran_comp_int interrupt."]
-pub struct SLAVE_TRAN_COMP_INT_ENA_R(crate::FieldReader<bool>);
-impl SLAVE_TRAN_COMP_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_TRAN_COMP_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_TRAN_COMP_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_TRAN_COMP_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ENA` writer - The enable bit for slave_tran_comp_int interrupt."]
-pub struct SLAVE_TRAN_COMP_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_TRAN_COMP_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SLAVE_TRAN_COMP_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 4>;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` reader - The enable bit for arbitration_lost_int interrupt."]
-pub struct ARBITRATION_LOST_INT_ENA_R(crate::FieldReader<bool>);
-impl ARBITRATION_LOST_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARBITRATION_LOST_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARBITRATION_LOST_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARBITRATION_LOST_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `ARBITRATION_LOST_INT_ENA` writer - The enable bit for arbitration_lost_int interrupt."]
-pub struct ARBITRATION_LOST_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ARBITRATION_LOST_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type ARBITRATION_LOST_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 5>;
 #[doc = "Field `MASTER_TRAN_COMP_INT_ENA` reader - The enable bit for master_tran_comp_int interrupt."]
-pub struct MASTER_TRAN_COMP_INT_ENA_R(crate::FieldReader<bool>);
-impl MASTER_TRAN_COMP_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASTER_TRAN_COMP_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASTER_TRAN_COMP_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASTER_TRAN_COMP_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `MASTER_TRAN_COMP_INT_ENA` writer - The enable bit for master_tran_comp_int interrupt."]
-pub struct MASTER_TRAN_COMP_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASTER_TRAN_COMP_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type MASTER_TRAN_COMP_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 6>;
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` reader - The enable bit for trans_complete_int interrupt."]
-pub struct TRANS_COMPLETE_INT_ENA_R(crate::FieldReader<bool>);
-impl TRANS_COMPLETE_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRANS_COMPLETE_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRANS_COMPLETE_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRANS_COMPLETE_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TRANS_COMPLETE_INT_ENA` writer - The enable bit for trans_complete_int interrupt."]
-pub struct TRANS_COMPLETE_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRANS_COMPLETE_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type TRANS_COMPLETE_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 7>;
 #[doc = "Field `TIME_OUT_INT_ENA` reader - The enable bit for time_out_int interrupt."]
-pub struct TIME_OUT_INT_ENA_R(crate::FieldReader<bool>);
-impl TIME_OUT_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIME_OUT_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_OUT_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_OUT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TIME_OUT_INT_ENA` writer - The enable bit for time_out_int interrupt."]
-pub struct TIME_OUT_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIME_OUT_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type TIME_OUT_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 8>;
 #[doc = "Field `TRANS_START_INT_ENA` reader - The enable bit for trans_start_int interrupt."]
-pub struct TRANS_START_INT_ENA_R(crate::FieldReader<bool>);
-impl TRANS_START_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRANS_START_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRANS_START_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRANS_START_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TRANS_START_INT_ENA` writer - The enable bit for trans_start_int interrupt."]
-pub struct TRANS_START_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRANS_START_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type TRANS_START_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 9>;
 #[doc = "Field `ACK_ERR_INT_ENA` reader - The enable bit for ack_err_int interrupt."]
-pub struct ACK_ERR_INT_ENA_R(crate::FieldReader<bool>);
-impl ACK_ERR_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ACK_ERR_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ACK_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ACK_ERR_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `ACK_ERR_INT_ENA` writer - The enable bit for ack_err_int interrupt."]
-pub struct ACK_ERR_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ACK_ERR_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type ACK_ERR_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 10>;
 #[doc = "Field `RX_REC_FULL_INT_ENA` reader - The enable bit for rx_rec_full_int interrupt."]
-pub struct RX_REC_FULL_INT_ENA_R(crate::FieldReader<bool>);
-impl RX_REC_FULL_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_REC_FULL_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_REC_FULL_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_REC_FULL_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RX_REC_FULL_INT_ENA` writer - The enable bit for rx_rec_full_int interrupt."]
-pub struct RX_REC_FULL_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_REC_FULL_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type RX_REC_FULL_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 11>;
 #[doc = "Field `TX_SEND_EMPTY_INT_ENA` reader - The enable bit for tx_send_empty_int interrupt."]
-pub struct TX_SEND_EMPTY_INT_ENA_R(crate::FieldReader<bool>);
-impl TX_SEND_EMPTY_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_SEND_EMPTY_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_SEND_EMPTY_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_SEND_EMPTY_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TX_SEND_EMPTY_INT_ENA` writer - The enable bit for tx_send_empty_int interrupt."]
-pub struct TX_SEND_EMPTY_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_SEND_EMPTY_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type TX_SEND_EMPTY_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 12>;
 impl R {
     #[doc = "Bit 0 - The enable bit for rxfifo_full_int interrupt."]
     #[inline(always)]
@@ -586,67 +157,67 @@ impl W {
     #[doc = "Bit 0 - The enable bit for rxfifo_full_int interrupt."]
     #[inline(always)]
     pub fn rxfifo_full_int_ena(&mut self) -> RXFIFO_FULL_INT_ENA_W {
-        RXFIFO_FULL_INT_ENA_W { w: self }
+        RXFIFO_FULL_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The enable bit for txfifo_empty_int interrupt."]
     #[inline(always)]
     pub fn txfifo_empty_int_ena(&mut self) -> TXFIFO_EMPTY_INT_ENA_W {
-        TXFIFO_EMPTY_INT_ENA_W { w: self }
+        TXFIFO_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The enable bit for rxfifo_ovf_int interrupt."]
     #[inline(always)]
     pub fn rxfifo_ovf_int_ena(&mut self) -> RXFIFO_OVF_INT_ENA_W {
-        RXFIFO_OVF_INT_ENA_W { w: self }
+        RXFIFO_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The enable bit for end_detect_int interrupt."]
     #[inline(always)]
     pub fn end_detect_int_ena(&mut self) -> END_DETECT_INT_ENA_W {
-        END_DETECT_INT_ENA_W { w: self }
+        END_DETECT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The enable bit for slave_tran_comp_int interrupt."]
     #[inline(always)]
     pub fn slave_tran_comp_int_ena(&mut self) -> SLAVE_TRAN_COMP_INT_ENA_W {
-        SLAVE_TRAN_COMP_INT_ENA_W { w: self }
+        SLAVE_TRAN_COMP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The enable bit for arbitration_lost_int interrupt."]
     #[inline(always)]
     pub fn arbitration_lost_int_ena(&mut self) -> ARBITRATION_LOST_INT_ENA_W {
-        ARBITRATION_LOST_INT_ENA_W { w: self }
+        ARBITRATION_LOST_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The enable bit for master_tran_comp_int interrupt."]
     #[inline(always)]
     pub fn master_tran_comp_int_ena(&mut self) -> MASTER_TRAN_COMP_INT_ENA_W {
-        MASTER_TRAN_COMP_INT_ENA_W { w: self }
+        MASTER_TRAN_COMP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The enable bit for trans_complete_int interrupt."]
     #[inline(always)]
     pub fn trans_complete_int_ena(&mut self) -> TRANS_COMPLETE_INT_ENA_W {
-        TRANS_COMPLETE_INT_ENA_W { w: self }
+        TRANS_COMPLETE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - The enable bit for time_out_int interrupt."]
     #[inline(always)]
     pub fn time_out_int_ena(&mut self) -> TIME_OUT_INT_ENA_W {
-        TIME_OUT_INT_ENA_W { w: self }
+        TIME_OUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - The enable bit for trans_start_int interrupt."]
     #[inline(always)]
     pub fn trans_start_int_ena(&mut self) -> TRANS_START_INT_ENA_W {
-        TRANS_START_INT_ENA_W { w: self }
+        TRANS_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - The enable bit for ack_err_int interrupt."]
     #[inline(always)]
     pub fn ack_err_int_ena(&mut self) -> ACK_ERR_INT_ENA_W {
-        ACK_ERR_INT_ENA_W { w: self }
+        ACK_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - The enable bit for rx_rec_full_int interrupt."]
     #[inline(always)]
     pub fn rx_rec_full_int_ena(&mut self) -> RX_REC_FULL_INT_ENA_W {
-        RX_REC_FULL_INT_ENA_W { w: self }
+        RX_REC_FULL_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - The enable bit for tx_send_empty_int interrupt."]
     #[inline(always)]
     pub fn tx_send_empty_int_ena(&mut self) -> TX_SEND_EMPTY_INT_ENA_W {
-        TX_SEND_EMPTY_INT_ENA_W { w: self }
+        TX_SEND_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

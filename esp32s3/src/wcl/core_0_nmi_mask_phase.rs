@@ -14,20 +14,7 @@ impl From<crate::R<CORE_0_NMI_MASK_PHASE_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_NMI_MASK_PHASE` reader - this bit is used to indicates whether the NMI interrupt is being masked, 1 means NMI interrupt is being masked"]
-pub struct CORE_0_NMI_MASK_PHASE_R(crate::FieldReader<bool>);
-impl CORE_0_NMI_MASK_PHASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_NMI_MASK_PHASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_NMI_MASK_PHASE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_NMI_MASK_PHASE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - this bit is used to indicates whether the NMI interrupt is being masked, 1 means NMI interrupt is being masked"]
     #[inline(always)]

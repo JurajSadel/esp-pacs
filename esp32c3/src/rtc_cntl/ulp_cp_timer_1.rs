@@ -35,32 +35,10 @@ impl From<crate::W<ULP_CP_TIMER_1_SPEC>> for W {
     }
 }
 #[doc = "Field `ULP_CP_TIMER_SLP_CYCLE` reader - sleep cycles for ULP-coprocessor timer"]
-pub struct ULP_CP_TIMER_SLP_CYCLE_R(crate::FieldReader<u32>);
-impl ULP_CP_TIMER_SLP_CYCLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        ULP_CP_TIMER_SLP_CYCLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ULP_CP_TIMER_SLP_CYCLE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ULP_CP_TIMER_SLP_CYCLE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ULP_CP_TIMER_SLP_CYCLE` writer - sleep cycles for ULP-coprocessor timer"]
-pub struct ULP_CP_TIMER_SLP_CYCLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ULP_CP_TIMER_SLP_CYCLE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x00ff_ffff << 8)) | ((value as u32 & 0x00ff_ffff) << 8);
-        self.w
-    }
-}
+pub type ULP_CP_TIMER_SLP_CYCLE_W<'a> =
+    crate::FieldWriter<'a, u32, ULP_CP_TIMER_1_SPEC, u32, u32, 24, 8>;
 impl R {
     #[doc = "Bits 8:31 - sleep cycles for ULP-coprocessor timer"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 8:31 - sleep cycles for ULP-coprocessor timer"]
     #[inline(always)]
     pub fn ulp_cp_timer_slp_cycle(&mut self) -> ULP_CP_TIMER_SLP_CYCLE_W {
-        ULP_CP_TIMER_SLP_CYCLE_W { w: self }
+        ULP_CP_TIMER_SLP_CYCLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

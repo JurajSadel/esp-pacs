@@ -35,465 +35,55 @@ impl From<crate::W<CH_TX_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_START` writer - reg_tx_start_ch0."]
-pub struct TX_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TX_START_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 0>;
 #[doc = "Field `MEM_RD_RST` writer - reg_mem_rd_rst_ch0."]
-pub struct MEM_RD_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_RD_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MEM_RD_RST_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 1>;
 #[doc = "Field `APB_MEM_RST` writer - reg_apb_mem_rst_ch0."]
-pub struct APB_MEM_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_MEM_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type APB_MEM_RST_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 2>;
 #[doc = "Field `TX_CONTI_MODE` reader - reg_tx_conti_mode_ch0."]
-pub struct TX_CONTI_MODE_R(crate::FieldReader<bool>);
-impl TX_CONTI_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_CONTI_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_CONTI_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_CONTI_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `TX_CONTI_MODE` writer - reg_tx_conti_mode_ch0."]
-pub struct TX_CONTI_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_CONTI_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TX_CONTI_MODE_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 3>;
 #[doc = "Field `MEM_TX_WRAP_EN` reader - reg_mem_tx_wrap_en_ch0."]
-pub struct MEM_TX_WRAP_EN_R(crate::FieldReader<bool>);
-impl MEM_TX_WRAP_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_TX_WRAP_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_TX_WRAP_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_TX_WRAP_EN_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_TX_WRAP_EN` writer - reg_mem_tx_wrap_en_ch0."]
-pub struct MEM_TX_WRAP_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_TX_WRAP_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type MEM_TX_WRAP_EN_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 4>;
 #[doc = "Field `IDLE_OUT_LV` reader - reg_idle_out_lv_ch0."]
-pub struct IDLE_OUT_LV_R(crate::FieldReader<bool>);
-impl IDLE_OUT_LV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IDLE_OUT_LV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IDLE_OUT_LV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IDLE_OUT_LV_R = crate::BitReader<bool>;
 #[doc = "Field `IDLE_OUT_LV` writer - reg_idle_out_lv_ch0."]
-pub struct IDLE_OUT_LV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IDLE_OUT_LV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type IDLE_OUT_LV_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 5>;
 #[doc = "Field `IDLE_OUT_EN` reader - reg_idle_out_en_ch0."]
-pub struct IDLE_OUT_EN_R(crate::FieldReader<bool>);
-impl IDLE_OUT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IDLE_OUT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IDLE_OUT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IDLE_OUT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `IDLE_OUT_EN` writer - reg_idle_out_en_ch0."]
-pub struct IDLE_OUT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IDLE_OUT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type IDLE_OUT_EN_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 6>;
 #[doc = "Field `TX_STOP` reader - reg_tx_stop_ch0."]
-pub struct TX_STOP_R(crate::FieldReader<bool>);
-impl TX_STOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_STOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_STOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_STOP_R = crate::BitReader<bool>;
 #[doc = "Field `TX_STOP` writer - reg_tx_stop_ch0."]
-pub struct TX_STOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_STOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type TX_STOP_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 7>;
 #[doc = "Field `DIV_CNT` reader - reg_div_cnt_ch0."]
-pub struct DIV_CNT_R(crate::FieldReader<u8>);
-impl DIV_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DIV_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIV_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIV_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DIV_CNT` writer - reg_div_cnt_ch0."]
-pub struct DIV_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIV_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type DIV_CNT_W<'a> = crate::FieldWriter<'a, u32, CH_TX_CONF0_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `MEM_SIZE` reader - reg_mem_size_ch0."]
-pub struct MEM_SIZE_R(crate::FieldReader<u8>);
-impl MEM_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MEM_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_SIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MEM_SIZE` writer - reg_mem_size_ch0."]
-pub struct MEM_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 16)) | ((value as u32 & 7) << 16);
-        self.w
-    }
-}
+pub type MEM_SIZE_W<'a> = crate::FieldWriter<'a, u32, CH_TX_CONF0_SPEC, u8, u8, 3, 16>;
 #[doc = "Field `CARRIER_EFF_EN` reader - reg_carrier_eff_en_ch0."]
-pub struct CARRIER_EFF_EN_R(crate::FieldReader<bool>);
-impl CARRIER_EFF_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARRIER_EFF_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER_EFF_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER_EFF_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CARRIER_EFF_EN` writer - reg_carrier_eff_en_ch0."]
-pub struct CARRIER_EFF_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER_EFF_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type CARRIER_EFF_EN_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 20>;
 #[doc = "Field `CARRIER_EN` reader - reg_carrier_en_ch0."]
-pub struct CARRIER_EN_R(crate::FieldReader<bool>);
-impl CARRIER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARRIER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CARRIER_EN` writer - reg_carrier_en_ch0."]
-pub struct CARRIER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type CARRIER_EN_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 21>;
 #[doc = "Field `CARRIER_OUT_LV` reader - reg_carrier_out_lv_ch0."]
-pub struct CARRIER_OUT_LV_R(crate::FieldReader<bool>);
-impl CARRIER_OUT_LV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARRIER_OUT_LV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER_OUT_LV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER_OUT_LV_R = crate::BitReader<bool>;
 #[doc = "Field `CARRIER_OUT_LV` writer - reg_carrier_out_lv_ch0."]
-pub struct CARRIER_OUT_LV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER_OUT_LV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type CARRIER_OUT_LV_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 22>;
 #[doc = "Field `AFIFO_RST` writer - reg_afifo_rst_ch0."]
-pub struct AFIFO_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AFIFO_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type AFIFO_RST_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 23>;
 #[doc = "Field `CONF_UPDATE` writer - reg_reg_conf_update_ch0."]
-pub struct CONF_UPDATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONF_UPDATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type CONF_UPDATE_W<'a> = crate::BitWriter<'a, u32, CH_TX_CONF0_SPEC, bool, 24>;
 impl R {
     #[doc = "Bit 3 - reg_tx_conti_mode_ch0."]
     #[inline(always)]
@@ -550,77 +140,77 @@ impl W {
     #[doc = "Bit 0 - reg_tx_start_ch0."]
     #[inline(always)]
     pub fn tx_start(&mut self) -> TX_START_W {
-        TX_START_W { w: self }
+        TX_START_W::new(self)
     }
     #[doc = "Bit 1 - reg_mem_rd_rst_ch0."]
     #[inline(always)]
     pub fn mem_rd_rst(&mut self) -> MEM_RD_RST_W {
-        MEM_RD_RST_W { w: self }
+        MEM_RD_RST_W::new(self)
     }
     #[doc = "Bit 2 - reg_apb_mem_rst_ch0."]
     #[inline(always)]
     pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W {
-        APB_MEM_RST_W { w: self }
+        APB_MEM_RST_W::new(self)
     }
     #[doc = "Bit 3 - reg_tx_conti_mode_ch0."]
     #[inline(always)]
     pub fn tx_conti_mode(&mut self) -> TX_CONTI_MODE_W {
-        TX_CONTI_MODE_W { w: self }
+        TX_CONTI_MODE_W::new(self)
     }
     #[doc = "Bit 4 - reg_mem_tx_wrap_en_ch0."]
     #[inline(always)]
     pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W {
-        MEM_TX_WRAP_EN_W { w: self }
+        MEM_TX_WRAP_EN_W::new(self)
     }
     #[doc = "Bit 5 - reg_idle_out_lv_ch0."]
     #[inline(always)]
     pub fn idle_out_lv(&mut self) -> IDLE_OUT_LV_W {
-        IDLE_OUT_LV_W { w: self }
+        IDLE_OUT_LV_W::new(self)
     }
     #[doc = "Bit 6 - reg_idle_out_en_ch0."]
     #[inline(always)]
     pub fn idle_out_en(&mut self) -> IDLE_OUT_EN_W {
-        IDLE_OUT_EN_W { w: self }
+        IDLE_OUT_EN_W::new(self)
     }
     #[doc = "Bit 7 - reg_tx_stop_ch0."]
     #[inline(always)]
     pub fn tx_stop(&mut self) -> TX_STOP_W {
-        TX_STOP_W { w: self }
+        TX_STOP_W::new(self)
     }
     #[doc = "Bits 8:15 - reg_div_cnt_ch0."]
     #[inline(always)]
     pub fn div_cnt(&mut self) -> DIV_CNT_W {
-        DIV_CNT_W { w: self }
+        DIV_CNT_W::new(self)
     }
     #[doc = "Bits 16:18 - reg_mem_size_ch0."]
     #[inline(always)]
     pub fn mem_size(&mut self) -> MEM_SIZE_W {
-        MEM_SIZE_W { w: self }
+        MEM_SIZE_W::new(self)
     }
     #[doc = "Bit 20 - reg_carrier_eff_en_ch0."]
     #[inline(always)]
     pub fn carrier_eff_en(&mut self) -> CARRIER_EFF_EN_W {
-        CARRIER_EFF_EN_W { w: self }
+        CARRIER_EFF_EN_W::new(self)
     }
     #[doc = "Bit 21 - reg_carrier_en_ch0."]
     #[inline(always)]
     pub fn carrier_en(&mut self) -> CARRIER_EN_W {
-        CARRIER_EN_W { w: self }
+        CARRIER_EN_W::new(self)
     }
     #[doc = "Bit 22 - reg_carrier_out_lv_ch0."]
     #[inline(always)]
     pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W {
-        CARRIER_OUT_LV_W { w: self }
+        CARRIER_OUT_LV_W::new(self)
     }
     #[doc = "Bit 23 - reg_afifo_rst_ch0."]
     #[inline(always)]
     pub fn afifo_rst(&mut self) -> AFIFO_RST_W {
-        AFIFO_RST_W { w: self }
+        AFIFO_RST_W::new(self)
     }
     #[doc = "Bit 24 - reg_reg_conf_update_ch0."]
     #[inline(always)]
     pub fn conf_update(&mut self) -> CONF_UPDATE_W {
-        CONF_UPDATE_W { w: self }
+        CONF_UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

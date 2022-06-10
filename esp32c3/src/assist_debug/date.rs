@@ -35,32 +35,9 @@ impl From<crate::W<DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `ASSIST_DEBUG_DATE` reader - reg_assist_debug_date"]
-pub struct ASSIST_DEBUG_DATE_R(crate::FieldReader<u32>);
-impl ASSIST_DEBUG_DATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        ASSIST_DEBUG_DATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ASSIST_DEBUG_DATE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ASSIST_DEBUG_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ASSIST_DEBUG_DATE` writer - reg_assist_debug_date"]
-pub struct ASSIST_DEBUG_DATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ASSIST_DEBUG_DATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff_ffff) | (value as u32 & 0x0fff_ffff);
-        self.w
-    }
-}
+pub type ASSIST_DEBUG_DATE_W<'a> = crate::FieldWriter<'a, u32, DATE_SPEC, u32, u32, 28, 0>;
 impl R {
     #[doc = "Bits 0:27 - reg_assist_debug_date"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:27 - reg_assist_debug_date"]
     #[inline(always)]
     pub fn assist_debug_date(&mut self) -> ASSIST_DEBUG_DATE_W {
-        ASSIST_DEBUG_DATE_W { w: self }
+        ASSIST_DEBUG_DATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

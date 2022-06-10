@@ -35,143 +35,21 @@ impl From<crate::W<TZ2_CFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `TZ2_CLR_OST` reader - a rising edge will clear on going one-shot mode action"]
-pub struct TZ2_CLR_OST_R(crate::FieldReader<bool>);
-impl TZ2_CLR_OST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TZ2_CLR_OST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TZ2_CLR_OST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TZ2_CLR_OST_R = crate::BitReader<bool>;
 #[doc = "Field `TZ2_CLR_OST` writer - a rising edge will clear on going one-shot mode action"]
-pub struct TZ2_CLR_OST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TZ2_CLR_OST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TZ2_CLR_OST_W<'a> = crate::BitWriter<'a, u32, TZ2_CFG1_SPEC, bool, 0>;
 #[doc = "Field `TZ2_CBCPULSE` reader - cycle-by-cycle mode action refresh moment selection. Bit0: TEZ, bit1:TEP"]
-pub struct TZ2_CBCPULSE_R(crate::FieldReader<u8>);
-impl TZ2_CBCPULSE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TZ2_CBCPULSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TZ2_CBCPULSE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TZ2_CBCPULSE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TZ2_CBCPULSE` writer - cycle-by-cycle mode action refresh moment selection. Bit0: TEZ, bit1:TEP"]
-pub struct TZ2_CBCPULSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TZ2_CBCPULSE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
-        self.w
-    }
-}
+pub type TZ2_CBCPULSE_W<'a> = crate::FieldWriter<'a, u32, TZ2_CFG1_SPEC, u8, u8, 2, 1>;
 #[doc = "Field `TZ2_FORCE_CBC` reader - a toggle trigger a cycle-by-cycle mode action"]
-pub struct TZ2_FORCE_CBC_R(crate::FieldReader<bool>);
-impl TZ2_FORCE_CBC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TZ2_FORCE_CBC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TZ2_FORCE_CBC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TZ2_FORCE_CBC_R = crate::BitReader<bool>;
 #[doc = "Field `TZ2_FORCE_CBC` writer - a toggle trigger a cycle-by-cycle mode action"]
-pub struct TZ2_FORCE_CBC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TZ2_FORCE_CBC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TZ2_FORCE_CBC_W<'a> = crate::BitWriter<'a, u32, TZ2_CFG1_SPEC, bool, 3>;
 #[doc = "Field `TZ2_FORCE_OST` reader - a toggle (software negate its value) triggers a one-shot mode action"]
-pub struct TZ2_FORCE_OST_R(crate::FieldReader<bool>);
-impl TZ2_FORCE_OST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TZ2_FORCE_OST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TZ2_FORCE_OST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TZ2_FORCE_OST_R = crate::BitReader<bool>;
 #[doc = "Field `TZ2_FORCE_OST` writer - a toggle (software negate its value) triggers a one-shot mode action"]
-pub struct TZ2_FORCE_OST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TZ2_FORCE_OST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type TZ2_FORCE_OST_W<'a> = crate::BitWriter<'a, u32, TZ2_CFG1_SPEC, bool, 4>;
 impl R {
     #[doc = "Bit 0 - a rising edge will clear on going one-shot mode action"]
     #[inline(always)]
@@ -198,22 +76,22 @@ impl W {
     #[doc = "Bit 0 - a rising edge will clear on going one-shot mode action"]
     #[inline(always)]
     pub fn tz2_clr_ost(&mut self) -> TZ2_CLR_OST_W {
-        TZ2_CLR_OST_W { w: self }
+        TZ2_CLR_OST_W::new(self)
     }
     #[doc = "Bits 1:2 - cycle-by-cycle mode action refresh moment selection. Bit0: TEZ, bit1:TEP"]
     #[inline(always)]
     pub fn tz2_cbcpulse(&mut self) -> TZ2_CBCPULSE_W {
-        TZ2_CBCPULSE_W { w: self }
+        TZ2_CBCPULSE_W::new(self)
     }
     #[doc = "Bit 3 - a toggle trigger a cycle-by-cycle mode action"]
     #[inline(always)]
     pub fn tz2_force_cbc(&mut self) -> TZ2_FORCE_CBC_W {
-        TZ2_FORCE_CBC_W { w: self }
+        TZ2_FORCE_CBC_W::new(self)
     }
     #[doc = "Bit 4 - a toggle (software negate its value) triggers a one-shot mode action"]
     #[inline(always)]
     pub fn tz2_force_ost(&mut self) -> TZ2_FORCE_OST_W {
-        TZ2_FORCE_OST_W { w: self }
+        TZ2_FORCE_OST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,392 +35,51 @@ impl From<crate::W<APP_CACHE_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_CACHE_MASK_IRAM0` reader - "]
-pub struct APP_CACHE_MASK_IRAM0_R(crate::FieldReader<bool>);
-impl APP_CACHE_MASK_IRAM0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CACHE_MASK_IRAM0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CACHE_MASK_IRAM0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CACHE_MASK_IRAM0_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CACHE_MASK_IRAM0` writer - "]
-pub struct APP_CACHE_MASK_IRAM0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CACHE_MASK_IRAM0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type APP_CACHE_MASK_IRAM0_W<'a> = crate::BitWriter<'a, u32, APP_CACHE_CTRL1_SPEC, bool, 0>;
 #[doc = "Field `APP_CACHE_MASK_IRAM1` reader - "]
-pub struct APP_CACHE_MASK_IRAM1_R(crate::FieldReader<bool>);
-impl APP_CACHE_MASK_IRAM1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CACHE_MASK_IRAM1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CACHE_MASK_IRAM1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CACHE_MASK_IRAM1_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CACHE_MASK_IRAM1` writer - "]
-pub struct APP_CACHE_MASK_IRAM1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CACHE_MASK_IRAM1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type APP_CACHE_MASK_IRAM1_W<'a> = crate::BitWriter<'a, u32, APP_CACHE_CTRL1_SPEC, bool, 1>;
 #[doc = "Field `APP_CACHE_MASK_IROM0` reader - "]
-pub struct APP_CACHE_MASK_IROM0_R(crate::FieldReader<bool>);
-impl APP_CACHE_MASK_IROM0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CACHE_MASK_IROM0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CACHE_MASK_IROM0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CACHE_MASK_IROM0_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CACHE_MASK_IROM0` writer - "]
-pub struct APP_CACHE_MASK_IROM0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CACHE_MASK_IROM0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type APP_CACHE_MASK_IROM0_W<'a> = crate::BitWriter<'a, u32, APP_CACHE_CTRL1_SPEC, bool, 2>;
 #[doc = "Field `APP_CACHE_MASK_DRAM1` reader - "]
-pub struct APP_CACHE_MASK_DRAM1_R(crate::FieldReader<bool>);
-impl APP_CACHE_MASK_DRAM1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CACHE_MASK_DRAM1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CACHE_MASK_DRAM1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CACHE_MASK_DRAM1_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CACHE_MASK_DRAM1` writer - "]
-pub struct APP_CACHE_MASK_DRAM1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CACHE_MASK_DRAM1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type APP_CACHE_MASK_DRAM1_W<'a> = crate::BitWriter<'a, u32, APP_CACHE_CTRL1_SPEC, bool, 3>;
 #[doc = "Field `APP_CACHE_MASK_DROM0` reader - "]
-pub struct APP_CACHE_MASK_DROM0_R(crate::FieldReader<bool>);
-impl APP_CACHE_MASK_DROM0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CACHE_MASK_DROM0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CACHE_MASK_DROM0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CACHE_MASK_DROM0_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CACHE_MASK_DROM0` writer - "]
-pub struct APP_CACHE_MASK_DROM0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CACHE_MASK_DROM0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type APP_CACHE_MASK_DROM0_W<'a> = crate::BitWriter<'a, u32, APP_CACHE_CTRL1_SPEC, bool, 4>;
 #[doc = "Field `APP_CACHE_MASK_OPSDRAM` reader - "]
-pub struct APP_CACHE_MASK_OPSDRAM_R(crate::FieldReader<bool>);
-impl APP_CACHE_MASK_OPSDRAM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CACHE_MASK_OPSDRAM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CACHE_MASK_OPSDRAM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CACHE_MASK_OPSDRAM_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CACHE_MASK_OPSDRAM` writer - "]
-pub struct APP_CACHE_MASK_OPSDRAM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CACHE_MASK_OPSDRAM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type APP_CACHE_MASK_OPSDRAM_W<'a> = crate::BitWriter<'a, u32, APP_CACHE_CTRL1_SPEC, bool, 5>;
 #[doc = "Field `APP_CMMU_SRAM_PAGE_MODE` reader - "]
-pub struct APP_CMMU_SRAM_PAGE_MODE_R(crate::FieldReader<u8>);
-impl APP_CMMU_SRAM_PAGE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        APP_CMMU_SRAM_PAGE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CMMU_SRAM_PAGE_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CMMU_SRAM_PAGE_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `APP_CMMU_SRAM_PAGE_MODE` writer - "]
-pub struct APP_CMMU_SRAM_PAGE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CMMU_SRAM_PAGE_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
-        self.w
-    }
-}
+pub type APP_CMMU_SRAM_PAGE_MODE_W<'a> =
+    crate::FieldWriter<'a, u32, APP_CACHE_CTRL1_SPEC, u8, u8, 3, 6>;
 #[doc = "Field `APP_CMMU_FLASH_PAGE_MODE` reader - "]
-pub struct APP_CMMU_FLASH_PAGE_MODE_R(crate::FieldReader<u8>);
-impl APP_CMMU_FLASH_PAGE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        APP_CMMU_FLASH_PAGE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CMMU_FLASH_PAGE_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CMMU_FLASH_PAGE_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `APP_CMMU_FLASH_PAGE_MODE` writer - "]
-pub struct APP_CMMU_FLASH_PAGE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CMMU_FLASH_PAGE_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 9)) | ((value as u32 & 3) << 9);
-        self.w
-    }
-}
+pub type APP_CMMU_FLASH_PAGE_MODE_W<'a> =
+    crate::FieldWriter<'a, u32, APP_CACHE_CTRL1_SPEC, u8, u8, 2, 9>;
 #[doc = "Field `APP_CMMU_FORCE_ON` reader - "]
-pub struct APP_CMMU_FORCE_ON_R(crate::FieldReader<bool>);
-impl APP_CMMU_FORCE_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CMMU_FORCE_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CMMU_FORCE_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CMMU_FORCE_ON_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CMMU_FORCE_ON` writer - "]
-pub struct APP_CMMU_FORCE_ON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CMMU_FORCE_ON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type APP_CMMU_FORCE_ON_W<'a> = crate::BitWriter<'a, u32, APP_CACHE_CTRL1_SPEC, bool, 11>;
 #[doc = "Field `APP_CMMU_PD` reader - "]
-pub struct APP_CMMU_PD_R(crate::FieldReader<bool>);
-impl APP_CMMU_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CMMU_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CMMU_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CMMU_PD_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CMMU_PD` writer - "]
-pub struct APP_CMMU_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CMMU_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type APP_CMMU_PD_W<'a> = crate::BitWriter<'a, u32, APP_CACHE_CTRL1_SPEC, bool, 12>;
 #[doc = "Field `APP_CACHE_MMU_IA_CLR` reader - "]
-pub struct APP_CACHE_MMU_IA_CLR_R(crate::FieldReader<bool>);
-impl APP_CACHE_MMU_IA_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CACHE_MMU_IA_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CACHE_MMU_IA_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CACHE_MMU_IA_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CACHE_MMU_IA_CLR` writer - "]
-pub struct APP_CACHE_MMU_IA_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CACHE_MMU_IA_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type APP_CACHE_MMU_IA_CLR_W<'a> = crate::BitWriter<'a, u32, APP_CACHE_CTRL1_SPEC, bool, 13>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -482,57 +141,57 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn app_cache_mask_iram0(&mut self) -> APP_CACHE_MASK_IRAM0_W {
-        APP_CACHE_MASK_IRAM0_W { w: self }
+        APP_CACHE_MASK_IRAM0_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn app_cache_mask_iram1(&mut self) -> APP_CACHE_MASK_IRAM1_W {
-        APP_CACHE_MASK_IRAM1_W { w: self }
+        APP_CACHE_MASK_IRAM1_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn app_cache_mask_irom0(&mut self) -> APP_CACHE_MASK_IROM0_W {
-        APP_CACHE_MASK_IROM0_W { w: self }
+        APP_CACHE_MASK_IROM0_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn app_cache_mask_dram1(&mut self) -> APP_CACHE_MASK_DRAM1_W {
-        APP_CACHE_MASK_DRAM1_W { w: self }
+        APP_CACHE_MASK_DRAM1_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn app_cache_mask_drom0(&mut self) -> APP_CACHE_MASK_DROM0_W {
-        APP_CACHE_MASK_DROM0_W { w: self }
+        APP_CACHE_MASK_DROM0_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn app_cache_mask_opsdram(&mut self) -> APP_CACHE_MASK_OPSDRAM_W {
-        APP_CACHE_MASK_OPSDRAM_W { w: self }
+        APP_CACHE_MASK_OPSDRAM_W::new(self)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
     pub fn app_cmmu_sram_page_mode(&mut self) -> APP_CMMU_SRAM_PAGE_MODE_W {
-        APP_CMMU_SRAM_PAGE_MODE_W { w: self }
+        APP_CMMU_SRAM_PAGE_MODE_W::new(self)
     }
     #[doc = "Bits 9:10"]
     #[inline(always)]
     pub fn app_cmmu_flash_page_mode(&mut self) -> APP_CMMU_FLASH_PAGE_MODE_W {
-        APP_CMMU_FLASH_PAGE_MODE_W { w: self }
+        APP_CMMU_FLASH_PAGE_MODE_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn app_cmmu_force_on(&mut self) -> APP_CMMU_FORCE_ON_W {
-        APP_CMMU_FORCE_ON_W { w: self }
+        APP_CMMU_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn app_cmmu_pd(&mut self) -> APP_CMMU_PD_W {
-        APP_CMMU_PD_W { w: self }
+        APP_CMMU_PD_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn app_cache_mmu_ia_clr(&mut self) -> APP_CACHE_MMU_IA_CLR_W {
-        APP_CACHE_MMU_IA_CLR_W { w: self }
+        APP_CACHE_MMU_IA_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,245 +14,37 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `LSTIMER0_OVF_INT_ST` reader - reg_lstimer0_ovf_int_st."]
-pub struct LSTIMER0_OVF_INT_ST_R(crate::FieldReader<bool>);
-impl LSTIMER0_OVF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER0_OVF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER0_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER0_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `LSTIMER1_OVF_INT_ST` reader - reg_lstimer1_ovf_int_st."]
-pub struct LSTIMER1_OVF_INT_ST_R(crate::FieldReader<bool>);
-impl LSTIMER1_OVF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER1_OVF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER1_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER1_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `LSTIMER2_OVF_INT_ST` reader - reg_lstimer2_ovf_int_st."]
-pub struct LSTIMER2_OVF_INT_ST_R(crate::FieldReader<bool>);
-impl LSTIMER2_OVF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER2_OVF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER2_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER2_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `LSTIMER3_OVF_INT_ST` reader - reg_lstimer3_ovf_int_st."]
-pub struct LSTIMER3_OVF_INT_ST_R(crate::FieldReader<bool>);
-impl LSTIMER3_OVF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER3_OVF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER3_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER3_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH0_INT_ST` reader - reg_duty_chng_end_lsch0_int_st."]
-pub struct DUTY_CHNG_END_LSCH0_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH0_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH0_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH0_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH0_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH1_INT_ST` reader - reg_duty_chng_end_lsch1_int_st."]
-pub struct DUTY_CHNG_END_LSCH1_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH2_INT_ST` reader - reg_duty_chng_end_lsch2_int_st."]
-pub struct DUTY_CHNG_END_LSCH2_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH3_INT_ST` reader - reg_duty_chng_end_lsch3_int_st."]
-pub struct DUTY_CHNG_END_LSCH3_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH3_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH3_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH3_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH3_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH4_INT_ST` reader - reg_duty_chng_end_lsch4_int_st."]
-pub struct DUTY_CHNG_END_LSCH4_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH4_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH4_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH4_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH4_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_LSCH5_INT_ST` reader - reg_duty_chng_end_lsch5_int_st."]
-pub struct DUTY_CHNG_END_LSCH5_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_LSCH5_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_LSCH5_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_LSCH5_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_LSCH5_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_LSCH0_INT_ST` reader - reg_ovf_cnt_lsch0_int_st."]
-pub struct OVF_CNT_LSCH0_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_LSCH0_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_LSCH0_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_LSCH0_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_LSCH0_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_LSCH1_INT_ST` reader - reg_ovf_cnt_lsch1_int_st."]
-pub struct OVF_CNT_LSCH1_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_LSCH1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_LSCH1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_LSCH1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_LSCH1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_LSCH2_INT_ST` reader - reg_ovf_cnt_lsch2_int_st."]
-pub struct OVF_CNT_LSCH2_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_LSCH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_LSCH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_LSCH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_LSCH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_LSCH3_INT_ST` reader - reg_ovf_cnt_lsch3_int_st."]
-pub struct OVF_CNT_LSCH3_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_LSCH3_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_LSCH3_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_LSCH3_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_LSCH3_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_LSCH4_INT_ST` reader - reg_ovf_cnt_lsch4_int_st."]
-pub struct OVF_CNT_LSCH4_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_LSCH4_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_LSCH4_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_LSCH4_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_LSCH4_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_LSCH5_INT_ST` reader - reg_ovf_cnt_lsch5_int_st."]
-pub struct OVF_CNT_LSCH5_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_LSCH5_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_LSCH5_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_LSCH5_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_LSCH5_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - reg_lstimer0_ovf_int_st."]
     #[inline(always)]

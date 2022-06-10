@@ -35,32 +35,9 @@ impl From<crate::W<TIMER2_SPEC>> for W {
     }
 }
 #[doc = "Field `MIN_TIME_CK8M_OFF` reader - minimal cycles in slow_clk_rtc for CK8M in power down state"]
-pub struct MIN_TIME_CK8M_OFF_R(crate::FieldReader<u8>);
-impl MIN_TIME_CK8M_OFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MIN_TIME_CK8M_OFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MIN_TIME_CK8M_OFF_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MIN_TIME_CK8M_OFF_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MIN_TIME_CK8M_OFF` writer - minimal cycles in slow_clk_rtc for CK8M in power down state"]
-pub struct MIN_TIME_CK8M_OFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MIN_TIME_CK8M_OFF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
-        self.w
-    }
-}
+pub type MIN_TIME_CK8M_OFF_W<'a> = crate::FieldWriter<'a, u32, TIMER2_SPEC, u8, u8, 8, 24>;
 impl R {
     #[doc = "Bits 24:31 - minimal cycles in slow_clk_rtc for CK8M in power down state"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 24:31 - minimal cycles in slow_clk_rtc for CK8M in power down state"]
     #[inline(always)]
     pub fn min_time_ck8m_off(&mut self) -> MIN_TIME_CK8M_OFF_W {
-        MIN_TIME_CK8M_OFF_W { w: self }
+        MIN_TIME_CK8M_OFF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

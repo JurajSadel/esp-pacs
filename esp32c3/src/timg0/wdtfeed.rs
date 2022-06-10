@@ -20,22 +20,12 @@ impl From<crate::W<WDTFEED_SPEC>> for W {
     }
 }
 #[doc = "Field `WDT_FEED` writer - wdt_feed"]
-pub struct WDT_FEED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDT_FEED_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type WDT_FEED_W<'a> = crate::FieldWriter<'a, u32, WDTFEED_SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31 - wdt_feed"]
     #[inline(always)]
     pub fn wdt_feed(&mut self) -> WDT_FEED_W {
-        WDT_FEED_W { w: self }
+        WDT_FEED_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

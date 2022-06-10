@@ -35,32 +35,9 @@ impl From<crate::W<AT_CMD_GAPTOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_GAP_TOUT` reader - This register is used to configure the duration time between the at_cmd chars. when the duration time is less than this register value it will not take the datas as continous at_cmd chars."]
-pub struct RX_GAP_TOUT_R(crate::FieldReader<u32>);
-impl RX_GAP_TOUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RX_GAP_TOUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_GAP_TOUT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_GAP_TOUT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RX_GAP_TOUT` writer - This register is used to configure the duration time between the at_cmd chars. when the duration time is less than this register value it will not take the datas as continous at_cmd chars."]
-pub struct RX_GAP_TOUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_GAP_TOUT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
-        self.w
-    }
-}
+pub type RX_GAP_TOUT_W<'a> = crate::FieldWriter<'a, u32, AT_CMD_GAPTOUT_SPEC, u32, u32, 24, 0>;
 impl R {
     #[doc = "Bits 0:23 - This register is used to configure the duration time between the at_cmd chars. when the duration time is less than this register value it will not take the datas as continous at_cmd chars."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:23 - This register is used to configure the duration time between the at_cmd chars. when the duration time is less than this register value it will not take the datas as continous at_cmd chars."]
     #[inline(always)]
     pub fn rx_gap_tout(&mut self) -> RX_GAP_TOUT_W {
-        RX_GAP_TOUT_W { w: self }
+        RX_GAP_TOUT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

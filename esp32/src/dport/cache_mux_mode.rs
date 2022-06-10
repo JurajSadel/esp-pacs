@@ -35,32 +35,9 @@ impl From<crate::W<CACHE_MUX_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_MUX_MODE` reader - "]
-pub struct CACHE_MUX_MODE_R(crate::FieldReader<u8>);
-impl CACHE_MUX_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CACHE_MUX_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_MUX_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_MUX_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CACHE_MUX_MODE` writer - "]
-pub struct CACHE_MUX_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_MUX_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type CACHE_MUX_MODE_W<'a> = crate::FieldWriter<'a, u32, CACHE_MUX_MODE_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn cache_mux_mode(&mut self) -> CACHE_MUX_MODE_W {
-        CACHE_MUX_MODE_W { w: self }
+        CACHE_MUX_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

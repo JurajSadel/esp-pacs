@@ -35,32 +35,9 @@ impl From<crate::W<EXT3_SPEC>> for W {
     }
 }
 #[doc = "Field `INT_HOLD_ENA` reader - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set if the other SPI is busy the SPI will be hold. 1(3): hold at ¡°idle¡± phase 2: hold at ¡°prepare¡± phase."]
-pub struct INT_HOLD_ENA_R(crate::FieldReader<u8>);
-impl INT_HOLD_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INT_HOLD_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT_HOLD_ENA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT_HOLD_ENA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `INT_HOLD_ENA` writer - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set if the other SPI is busy the SPI will be hold. 1(3): hold at ¡°idle¡± phase 2: hold at ¡°prepare¡± phase."]
-pub struct INT_HOLD_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT_HOLD_ENA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type INT_HOLD_ENA_W<'a> = crate::FieldWriter<'a, u32, EXT3_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1 - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set if the other SPI is busy the SPI will be hold. 1(3): hold at ¡°idle¡± phase 2: hold at ¡°prepare¡± phase."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:1 - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set if the other SPI is busy the SPI will be hold. 1(3): hold at ¡°idle¡± phase 2: hold at ¡°prepare¡± phase."]
     #[inline(always)]
     pub fn int_hold_ena(&mut self) -> INT_HOLD_ENA_W {
-        INT_HOLD_ENA_W { w: self }
+        INT_HOLD_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

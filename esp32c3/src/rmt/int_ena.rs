@@ -35,311 +35,42 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Fields `CH(0-1)_TX_END_INT_ENA` reader - reg_ch%s_tx_end_int_ena."]
-pub struct CH_TX_END_INT_ENA_R(crate::FieldReader<bool>);
-impl CH_TX_END_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_END_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_END_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_END_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-1)_TX_END_INT_ENA` writer - reg_ch%s_tx_end_int_ena."]
-pub struct CH_TX_END_INT_ENA_W<'a> {
-    w: &'a mut W,
-    offset: usize,
-}
-impl<'a> CH_TX_END_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << self.offset)) | ((value as u32 & 1) << self.offset);
-        self.w
-    }
-}
+pub type CH_TX_END_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
 #[doc = "Fields `CH(2-3)_RX_END_INT_ENA` reader - reg_ch2_rx_end_int_ena."]
-pub struct CH_RX_END_INT_ENA_R(crate::FieldReader<bool>);
-impl CH_RX_END_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_RX_END_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_RX_END_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_RX_END_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(2-3)_RX_END_INT_ENA` writer - reg_ch2_rx_end_int_ena."]
-pub struct CH_RX_END_INT_ENA_W<'a> {
-    w: &'a mut W,
-    offset: usize,
-}
-impl<'a> CH_RX_END_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << self.offset)) | ((value as u32 & 1) << self.offset);
-        self.w
-    }
-}
+pub type CH_RX_END_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
 #[doc = "Fields `CH(0-1)_TX_ERR_INT_ENA` reader - reg_ch%s_err_int_ena."]
-pub struct CH_TX_ERR_INT_ENA_R(crate::FieldReader<bool>);
-impl CH_TX_ERR_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_ERR_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_ERR_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-1)_TX_ERR_INT_ENA` writer - reg_ch%s_err_int_ena."]
-pub struct CH_TX_ERR_INT_ENA_W<'a> {
-    w: &'a mut W,
-    offset: usize,
-}
-impl<'a> CH_TX_ERR_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << self.offset)) | ((value as u32 & 1) << self.offset);
-        self.w
-    }
-}
+pub type CH_TX_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
 #[doc = "Fields `CH(2-3)_RX_ERR_INT_ENA` reader - reg_ch2_err_int_ena."]
-pub struct CH_RX_ERR_INT_ENA_R(crate::FieldReader<bool>);
-impl CH_RX_ERR_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_RX_ERR_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_RX_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_RX_ERR_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(2-3)_RX_ERR_INT_ENA` writer - reg_ch2_err_int_ena."]
-pub struct CH_RX_ERR_INT_ENA_W<'a> {
-    w: &'a mut W,
-    offset: usize,
-}
-impl<'a> CH_RX_ERR_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << self.offset)) | ((value as u32 & 1) << self.offset);
-        self.w
-    }
-}
+pub type CH_RX_ERR_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
 #[doc = "Fields `CH(0-1)_TX_THR_EVENT_INT_ENA` reader - reg_ch%s_tx_thr_event_int_ena."]
-pub struct CH_TX_THR_EVENT_INT_ENA_R(crate::FieldReader<bool>);
-impl CH_TX_THR_EVENT_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_THR_EVENT_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_THR_EVENT_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_THR_EVENT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-1)_TX_THR_EVENT_INT_ENA` writer - reg_ch%s_tx_thr_event_int_ena."]
-pub struct CH_TX_THR_EVENT_INT_ENA_W<'a> {
-    w: &'a mut W,
-    offset: usize,
-}
-impl<'a> CH_TX_THR_EVENT_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << self.offset)) | ((value as u32 & 1) << self.offset);
-        self.w
-    }
-}
+pub type CH_TX_THR_EVENT_INT_ENA_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
 #[doc = "Field `CH2_RX_THR_EVENT_INT_ENA` reader - reg_ch2_rx_thr_event_int_ena."]
-pub struct CH2_RX_THR_EVENT_INT_ENA_R(crate::FieldReader<bool>);
-impl CH2_RX_THR_EVENT_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH2_RX_THR_EVENT_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH2_RX_THR_EVENT_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH2_RX_THR_EVENT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CH2_RX_THR_EVENT_INT_ENA` writer - reg_ch2_rx_thr_event_int_ena."]
-pub struct CH2_RX_THR_EVENT_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH2_RX_THR_EVENT_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type CH2_RX_THR_EVENT_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 10>;
 #[doc = "Field `CH3_RX_THR_EVENT_INT_ENA` reader - reg_ch3_rx_thr_event_int_ena."]
-pub struct CH3_RX_THR_EVENT_INT_ENA_R(crate::FieldReader<bool>);
-impl CH3_RX_THR_EVENT_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH3_RX_THR_EVENT_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH3_RX_THR_EVENT_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH3_RX_THR_EVENT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CH3_RX_THR_EVENT_INT_ENA` writer - reg_ch3_rx_thr_event_int_ena."]
-pub struct CH3_RX_THR_EVENT_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3_RX_THR_EVENT_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type CH3_RX_THR_EVENT_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 11>;
 #[doc = "Fields `CH(0-1)_TX_LOOP_INT_ENA` reader - reg_ch%s_tx_loop_int_ena."]
-pub struct CH_TX_LOOP_INT_ENA_R(crate::FieldReader<bool>);
-impl CH_TX_LOOP_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_LOOP_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_LOOP_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_LOOP_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-1)_TX_LOOP_INT_ENA` writer - reg_ch%s_tx_loop_int_ena."]
-pub struct CH_TX_LOOP_INT_ENA_W<'a> {
-    w: &'a mut W,
-    offset: usize,
-}
-impl<'a> CH_TX_LOOP_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << self.offset)) | ((value as u32 & 1) << self.offset);
-        self.w
-    }
-}
+pub type CH_TX_LOOP_INT_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, O>;
 impl R {
     #[doc = "reg_ch(0-1)_tx_end_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_tx_end_int_ena(&self, n: usize) -> CH_TX_END_INT_ENA_R {
+    pub unsafe fn ch_tx_end_int_ena(&self, n: u8) -> CH_TX_END_INT_ENA_R {
         CH_TX_END_INT_ENA_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - reg_ch0_tx_end_int_ena."]
@@ -354,7 +85,7 @@ impl R {
     }
     #[doc = "reg_ch2_rx_end_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_rx_end_int_ena(&self, n: usize) -> CH_RX_END_INT_ENA_R {
+    pub unsafe fn ch_rx_end_int_ena(&self, n: u8) -> CH_RX_END_INT_ENA_R {
         CH_RX_END_INT_ENA_R::new(((self.bits >> (n - 2 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_ch2_rx_end_int_ena."]
@@ -369,7 +100,7 @@ impl R {
     }
     #[doc = "reg_ch(0-1)_err_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_tx_err_int_ena(&self, n: usize) -> CH_TX_ERR_INT_ENA_R {
+    pub unsafe fn ch_tx_err_int_ena(&self, n: u8) -> CH_TX_ERR_INT_ENA_R {
         CH_TX_ERR_INT_ENA_R::new(((self.bits >> (n + 4)) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_ch0_err_int_ena."]
@@ -384,7 +115,7 @@ impl R {
     }
     #[doc = "reg_ch2_err_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_rx_err_int_ena(&self, n: usize) -> CH_RX_ERR_INT_ENA_R {
+    pub unsafe fn ch_rx_err_int_ena(&self, n: u8) -> CH_RX_ERR_INT_ENA_R {
         CH_RX_ERR_INT_ENA_R::new(((self.bits >> (n - 2 + 6)) & 1) != 0)
     }
     #[doc = "Bit 6 - reg_ch2_err_int_ena."]
@@ -399,7 +130,7 @@ impl R {
     }
     #[doc = "reg_ch(0-1)_tx_thr_event_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_tx_thr_event_int_ena(&self, n: usize) -> CH_TX_THR_EVENT_INT_ENA_R {
+    pub unsafe fn ch_tx_thr_event_int_ena(&self, n: u8) -> CH_TX_THR_EVENT_INT_ENA_R {
         CH_TX_THR_EVENT_INT_ENA_R::new(((self.bits >> (n + 8)) & 1) != 0)
     }
     #[doc = "Bit 8 - reg_ch0_tx_thr_event_int_ena."]
@@ -424,7 +155,7 @@ impl R {
     }
     #[doc = "reg_ch(0-1)_tx_loop_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_tx_loop_int_ena(&self, n: usize) -> CH_TX_LOOP_INT_ENA_R {
+    pub unsafe fn ch_tx_loop_int_ena(&self, n: u8) -> CH_TX_LOOP_INT_ENA_R {
         CH_TX_LOOP_INT_ENA_R::new(((self.bits >> (n + 12)) & 1) != 0)
     }
     #[doc = "Bit 12 - reg_ch0_tx_loop_int_ena."]
@@ -441,124 +172,103 @@ impl R {
 impl W {
     #[doc = "reg_ch(0-1)_tx_end_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_tx_end_int_ena(&mut self, n: usize) -> CH_TX_END_INT_ENA_W {
-        CH_TX_END_INT_ENA_W { w: self, offset: n }
+    pub unsafe fn ch_tx_end_int_ena<const O: u8>(&mut self) -> CH_TX_END_INT_ENA_W<O> {
+        CH_TX_END_INT_ENA_W::new(self)
     }
     #[doc = "Bit 0 - reg_ch0_tx_end_int_ena."]
     #[inline(always)]
-    pub fn ch0_tx_end_int_ena(&mut self) -> CH_TX_END_INT_ENA_W {
-        CH_TX_END_INT_ENA_W { w: self, offset: 0 }
+    pub fn ch0_tx_end_int_ena(&mut self) -> CH_TX_END_INT_ENA_W<0> {
+        CH_TX_END_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - reg_ch1_tx_end_int_ena."]
     #[inline(always)]
-    pub fn ch1_tx_end_int_ena(&mut self) -> CH_TX_END_INT_ENA_W {
-        CH_TX_END_INT_ENA_W { w: self, offset: 1 }
+    pub fn ch1_tx_end_int_ena(&mut self) -> CH_TX_END_INT_ENA_W<1> {
+        CH_TX_END_INT_ENA_W::new(self)
     }
     #[doc = "reg_ch2_rx_end_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_rx_end_int_ena(&mut self, n: usize) -> CH_RX_END_INT_ENA_W {
-        CH_RX_END_INT_ENA_W {
-            w: self,
-            offset: n - 2 + 2,
-        }
+    pub unsafe fn ch_rx_end_int_ena<const O: u8>(&mut self) -> CH_RX_END_INT_ENA_W<O> {
+        CH_RX_END_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - reg_ch2_rx_end_int_ena."]
     #[inline(always)]
-    pub fn ch2_rx_end_int_ena(&mut self) -> CH_RX_END_INT_ENA_W {
-        CH_RX_END_INT_ENA_W { w: self, offset: 2 }
+    pub fn ch2_rx_end_int_ena(&mut self) -> CH_RX_END_INT_ENA_W<2> {
+        CH_RX_END_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - reg_ch2_rx_end_int_ena."]
     #[inline(always)]
-    pub fn ch3_rx_end_int_ena(&mut self) -> CH_RX_END_INT_ENA_W {
-        CH_RX_END_INT_ENA_W { w: self, offset: 3 }
+    pub fn ch3_rx_end_int_ena(&mut self) -> CH_RX_END_INT_ENA_W<3> {
+        CH_RX_END_INT_ENA_W::new(self)
     }
     #[doc = "reg_ch(0-1)_err_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_tx_err_int_ena(&mut self, n: usize) -> CH_TX_ERR_INT_ENA_W {
-        CH_TX_ERR_INT_ENA_W {
-            w: self,
-            offset: n + 4,
-        }
+    pub unsafe fn ch_tx_err_int_ena<const O: u8>(&mut self) -> CH_TX_ERR_INT_ENA_W<O> {
+        CH_TX_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - reg_ch0_err_int_ena."]
     #[inline(always)]
-    pub fn ch0_tx_err_int_ena(&mut self) -> CH_TX_ERR_INT_ENA_W {
-        CH_TX_ERR_INT_ENA_W { w: self, offset: 4 }
+    pub fn ch0_tx_err_int_ena(&mut self) -> CH_TX_ERR_INT_ENA_W<4> {
+        CH_TX_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - reg_ch1_err_int_ena."]
     #[inline(always)]
-    pub fn ch1_tx_err_int_ena(&mut self) -> CH_TX_ERR_INT_ENA_W {
-        CH_TX_ERR_INT_ENA_W { w: self, offset: 5 }
+    pub fn ch1_tx_err_int_ena(&mut self) -> CH_TX_ERR_INT_ENA_W<5> {
+        CH_TX_ERR_INT_ENA_W::new(self)
     }
     #[doc = "reg_ch2_err_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_rx_err_int_ena(&mut self, n: usize) -> CH_RX_ERR_INT_ENA_W {
-        CH_RX_ERR_INT_ENA_W {
-            w: self,
-            offset: n - 2 + 6,
-        }
+    pub unsafe fn ch_rx_err_int_ena<const O: u8>(&mut self) -> CH_RX_ERR_INT_ENA_W<O> {
+        CH_RX_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - reg_ch2_err_int_ena."]
     #[inline(always)]
-    pub fn ch2_rx_err_int_ena(&mut self) -> CH_RX_ERR_INT_ENA_W {
-        CH_RX_ERR_INT_ENA_W { w: self, offset: 6 }
+    pub fn ch2_rx_err_int_ena(&mut self) -> CH_RX_ERR_INT_ENA_W<6> {
+        CH_RX_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - reg_ch2_err_int_ena."]
     #[inline(always)]
-    pub fn ch3_rx_err_int_ena(&mut self) -> CH_RX_ERR_INT_ENA_W {
-        CH_RX_ERR_INT_ENA_W { w: self, offset: 7 }
+    pub fn ch3_rx_err_int_ena(&mut self) -> CH_RX_ERR_INT_ENA_W<7> {
+        CH_RX_ERR_INT_ENA_W::new(self)
     }
     #[doc = "reg_ch(0-1)_tx_thr_event_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_tx_thr_event_int_ena(&mut self, n: usize) -> CH_TX_THR_EVENT_INT_ENA_W {
-        CH_TX_THR_EVENT_INT_ENA_W {
-            w: self,
-            offset: n + 8,
-        }
+    pub unsafe fn ch_tx_thr_event_int_ena<const O: u8>(&mut self) -> CH_TX_THR_EVENT_INT_ENA_W<O> {
+        CH_TX_THR_EVENT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - reg_ch0_tx_thr_event_int_ena."]
     #[inline(always)]
-    pub fn ch0_tx_thr_event_int_ena(&mut self) -> CH_TX_THR_EVENT_INT_ENA_W {
-        CH_TX_THR_EVENT_INT_ENA_W { w: self, offset: 8 }
+    pub fn ch0_tx_thr_event_int_ena(&mut self) -> CH_TX_THR_EVENT_INT_ENA_W<8> {
+        CH_TX_THR_EVENT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - reg_ch1_tx_thr_event_int_ena."]
     #[inline(always)]
-    pub fn ch1_tx_thr_event_int_ena(&mut self) -> CH_TX_THR_EVENT_INT_ENA_W {
-        CH_TX_THR_EVENT_INT_ENA_W { w: self, offset: 9 }
+    pub fn ch1_tx_thr_event_int_ena(&mut self) -> CH_TX_THR_EVENT_INT_ENA_W<9> {
+        CH_TX_THR_EVENT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - reg_ch2_rx_thr_event_int_ena."]
     #[inline(always)]
     pub fn ch2_rx_thr_event_int_ena(&mut self) -> CH2_RX_THR_EVENT_INT_ENA_W {
-        CH2_RX_THR_EVENT_INT_ENA_W { w: self }
+        CH2_RX_THR_EVENT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - reg_ch3_rx_thr_event_int_ena."]
     #[inline(always)]
     pub fn ch3_rx_thr_event_int_ena(&mut self) -> CH3_RX_THR_EVENT_INT_ENA_W {
-        CH3_RX_THR_EVENT_INT_ENA_W { w: self }
+        CH3_RX_THR_EVENT_INT_ENA_W::new(self)
     }
     #[doc = "reg_ch(0-1)_tx_loop_int_ena."]
     #[inline(always)]
-    pub unsafe fn ch_tx_loop_int_ena(&mut self, n: usize) -> CH_TX_LOOP_INT_ENA_W {
-        CH_TX_LOOP_INT_ENA_W {
-            w: self,
-            offset: n + 12,
-        }
+    pub unsafe fn ch_tx_loop_int_ena<const O: u8>(&mut self) -> CH_TX_LOOP_INT_ENA_W<O> {
+        CH_TX_LOOP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - reg_ch0_tx_loop_int_ena."]
     #[inline(always)]
-    pub fn ch0_tx_loop_int_ena(&mut self) -> CH_TX_LOOP_INT_ENA_W {
-        CH_TX_LOOP_INT_ENA_W {
-            w: self,
-            offset: 12,
-        }
+    pub fn ch0_tx_loop_int_ena(&mut self) -> CH_TX_LOOP_INT_ENA_W<12> {
+        CH_TX_LOOP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13 - reg_ch1_tx_loop_int_ena."]
     #[inline(always)]
-    pub fn ch1_tx_loop_int_ena(&mut self) -> CH_TX_LOOP_INT_ENA_W {
-        CH_TX_LOOP_INT_ENA_W {
-            w: self,
-            offset: 13,
-        }
+    pub fn ch1_tx_loop_int_ena(&mut self) -> CH_TX_LOOP_INT_ENA_W<13> {
+        CH_TX_LOOP_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

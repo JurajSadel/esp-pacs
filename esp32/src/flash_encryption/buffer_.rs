@@ -20,22 +20,12 @@ impl From<crate::W<BUFFER__SPEC>> for W {
     }
 }
 #[doc = "Field `BUFFER` writer - Data buffers for encryption."]
-pub struct BUFFER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BUFFER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type BUFFER_W<'a> = crate::FieldWriter<'a, u32, BUFFER__SPEC, u8, u8, 8, 0>;
 impl W {
     #[doc = "Bits 0:7 - Data buffers for encryption."]
     #[inline(always)]
     pub fn buffer(&mut self) -> BUFFER_W {
-        BUFFER_W { w: self }
+        BUFFER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

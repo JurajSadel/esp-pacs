@@ -14,80 +14,15 @@ impl From<crate::R<SAR_COCPU_DEBUG_SPEC>> for R {
     }
 }
 #[doc = "Field `COCPU_PC` reader - ULP-RISCV Program counter"]
-pub struct COCPU_PC_R(crate::FieldReader<u16>);
-impl COCPU_PC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        COCPU_PC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_PC_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_PC_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `COCPU_MEM_VLD` reader - ULP-RISCV memory valid output"]
-pub struct COCPU_MEM_VLD_R(crate::FieldReader<bool>);
-impl COCPU_MEM_VLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_MEM_VLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_MEM_VLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_MEM_VLD_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_MEM_RDY` reader - ULP-RISCV memory ready input"]
-pub struct COCPU_MEM_RDY_R(crate::FieldReader<bool>);
-impl COCPU_MEM_RDY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_MEM_RDY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_MEM_RDY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_MEM_RDY_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_MEM_WEN` reader - ULP-RISCV memory write enable output"]
-pub struct COCPU_MEM_WEN_R(crate::FieldReader<u8>);
-impl COCPU_MEM_WEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        COCPU_MEM_WEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_MEM_WEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_MEM_WEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `COCPU_MEM_ADDR` reader - ULP-RISCV memory address output"]
-pub struct COCPU_MEM_ADDR_R(crate::FieldReader<u16>);
-impl COCPU_MEM_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        COCPU_MEM_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_MEM_ADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_MEM_ADDR_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:12 - ULP-RISCV Program counter"]
     #[inline(always)]

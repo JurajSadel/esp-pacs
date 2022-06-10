@@ -35,32 +35,9 @@ impl From<crate::W<AT_CMD_PRECNT_SPEC>> for W {
     }
 }
 #[doc = "Field `PRE_IDLE_NUM` reader - This register is used to configure the idle duration time before the first at_cmd is received by receiver."]
-pub struct PRE_IDLE_NUM_R(crate::FieldReader<u16>);
-impl PRE_IDLE_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PRE_IDLE_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRE_IDLE_NUM_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRE_IDLE_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRE_IDLE_NUM` writer - This register is used to configure the idle duration time before the first at_cmd is received by receiver."]
-pub struct PRE_IDLE_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRE_IDLE_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type PRE_IDLE_NUM_W<'a> = crate::FieldWriter<'a, u32, AT_CMD_PRECNT_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure the idle duration time before the first at_cmd is received by receiver."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:15 - This register is used to configure the idle duration time before the first at_cmd is received by receiver."]
     #[inline(always)]
     pub fn pre_idle_num(&mut self) -> PRE_IDLE_NUM_W {
-        PRE_IDLE_NUM_W { w: self }
+        PRE_IDLE_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

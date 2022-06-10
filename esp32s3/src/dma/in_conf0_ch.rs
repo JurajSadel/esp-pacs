@@ -35,190 +35,25 @@ impl From<crate::W<IN_CONF0_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_RST_CH` reader - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
-pub struct IN_RST_CH_R(crate::FieldReader<bool>);
-impl IN_RST_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_RST_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_RST_CH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_RST_CH_R = crate::BitReader<bool>;
 #[doc = "Field `IN_RST_CH` writer - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
-pub struct IN_RST_CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_RST_CH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type IN_RST_CH_W<'a> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, 0>;
 #[doc = "Field `IN_LOOP_TEST_CH` reader - reserved"]
-pub struct IN_LOOP_TEST_CH_R(crate::FieldReader<bool>);
-impl IN_LOOP_TEST_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_LOOP_TEST_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_LOOP_TEST_CH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_LOOP_TEST_CH_R = crate::BitReader<bool>;
 #[doc = "Field `IN_LOOP_TEST_CH` writer - reserved"]
-pub struct IN_LOOP_TEST_CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_LOOP_TEST_CH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type IN_LOOP_TEST_CH_W<'a> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, 1>;
 #[doc = "Field `INDSCR_BURST_EN_CH` reader - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
-pub struct INDSCR_BURST_EN_CH_R(crate::FieldReader<bool>);
-impl INDSCR_BURST_EN_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INDSCR_BURST_EN_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INDSCR_BURST_EN_CH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INDSCR_BURST_EN_CH_R = crate::BitReader<bool>;
 #[doc = "Field `INDSCR_BURST_EN_CH` writer - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
-pub struct INDSCR_BURST_EN_CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INDSCR_BURST_EN_CH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type INDSCR_BURST_EN_CH_W<'a> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, 2>;
 #[doc = "Field `IN_DATA_BURST_EN_CH` reader - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
-pub struct IN_DATA_BURST_EN_CH_R(crate::FieldReader<bool>);
-impl IN_DATA_BURST_EN_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_DATA_BURST_EN_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_DATA_BURST_EN_CH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_DATA_BURST_EN_CH_R = crate::BitReader<bool>;
 #[doc = "Field `IN_DATA_BURST_EN_CH` writer - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
-pub struct IN_DATA_BURST_EN_CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_DATA_BURST_EN_CH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type IN_DATA_BURST_EN_CH_W<'a> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, 3>;
 #[doc = "Field `MEM_TRANS_EN_CH` reader - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
-pub struct MEM_TRANS_EN_CH_R(crate::FieldReader<bool>);
-impl MEM_TRANS_EN_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_TRANS_EN_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_TRANS_EN_CH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_TRANS_EN_CH_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_TRANS_EN_CH` writer - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
-pub struct MEM_TRANS_EN_CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_TRANS_EN_CH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type MEM_TRANS_EN_CH_W<'a> = crate::BitWriter<'a, u32, IN_CONF0_CH_SPEC, bool, 4>;
 impl R {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
     #[inline(always)]
@@ -250,27 +85,27 @@ impl W {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 0 Rx FSM and Rx FIFO pointer."]
     #[inline(always)]
     pub fn in_rst_ch(&mut self) -> IN_RST_CH_W {
-        IN_RST_CH_W { w: self }
+        IN_RST_CH_W::new(self)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
     pub fn in_loop_test_ch(&mut self) -> IN_LOOP_TEST_CH_W {
-        IN_LOOP_TEST_CH_W { w: self }
+        IN_LOOP_TEST_CH_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
     pub fn indscr_burst_en_ch(&mut self) -> INDSCR_BURST_EN_CH_W {
-        INDSCR_BURST_EN_CH_W { w: self }
+        INDSCR_BURST_EN_CH_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to 1 to enable INCR burst transfer for Rx channel 0 receiving data when accessing internal SRAM."]
     #[inline(always)]
     pub fn in_data_burst_en_ch(&mut self) -> IN_DATA_BURST_EN_CH_W {
-        IN_DATA_BURST_EN_CH_W { w: self }
+        IN_DATA_BURST_EN_CH_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit 1 to enable automatic transmitting data from memory to memory via DMA."]
     #[inline(always)]
     pub fn mem_trans_en_ch(&mut self) -> MEM_TRANS_EN_CH_W {
-        MEM_TRANS_EN_CH_W { w: self }
+        MEM_TRANS_EN_CH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

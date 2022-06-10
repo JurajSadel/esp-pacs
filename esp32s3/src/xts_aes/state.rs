@@ -14,20 +14,7 @@ impl From<crate::R<STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `STATE` reader - Those bits indicates the status of the Manual Encryption block. 0X0 (XTS_AES_IDLE): idle. 0X1 (XTS_AES_BUSY): busy with encryption. 0X2 (XTS_AES_DONE): encryption is completed, but the encrypted result is not accessible to SPI. 0X3 (XTS_AES_AVAILABLE) encrypted result is accessible and available to SPI."]
-pub struct STATE_R(crate::FieldReader<u8>);
-impl STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:1 - Those bits indicates the status of the Manual Encryption block. 0X0 (XTS_AES_IDLE): idle. 0X1 (XTS_AES_BUSY): busy with encryption. 0X2 (XTS_AES_DONE): encryption is completed, but the encrypted result is not accessible to SPI. 0X3 (XTS_AES_AVAILABLE) encrypted result is accessible and available to SPI."]
     #[inline(always)]

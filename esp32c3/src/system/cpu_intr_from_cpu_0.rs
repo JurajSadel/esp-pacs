@@ -35,42 +35,9 @@ impl From<crate::W<CPU_INTR_FROM_CPU_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_INTR_FROM_CPU_0` reader - reg_cpu_intr_from_cpu_0"]
-pub struct CPU_INTR_FROM_CPU_0_R(crate::FieldReader<bool>);
-impl CPU_INTR_FROM_CPU_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CPU_INTR_FROM_CPU_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CPU_INTR_FROM_CPU_0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CPU_INTR_FROM_CPU_0_R = crate::BitReader<bool>;
 #[doc = "Field `CPU_INTR_FROM_CPU_0` writer - reg_cpu_intr_from_cpu_0"]
-pub struct CPU_INTR_FROM_CPU_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CPU_INTR_FROM_CPU_0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CPU_INTR_FROM_CPU_0_W<'a> = crate::BitWriter<'a, u32, CPU_INTR_FROM_CPU_0_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - reg_cpu_intr_from_cpu_0"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0 - reg_cpu_intr_from_cpu_0"]
     #[inline(always)]
     pub fn cpu_intr_from_cpu_0(&mut self) -> CPU_INTR_FROM_CPU_0_W {
-        CPU_INTR_FROM_CPU_0_W { w: self }
+        CPU_INTR_FROM_CPU_0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

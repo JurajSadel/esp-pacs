@@ -14,20 +14,7 @@ impl From<crate::R<RND_DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `RND_DATA` reader - reg_rnd_data"]
-pub struct RND_DATA_R(crate::FieldReader<u32>);
-impl RND_DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RND_DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RND_DATA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RND_DATA_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_rnd_data"]
     #[inline(always)]

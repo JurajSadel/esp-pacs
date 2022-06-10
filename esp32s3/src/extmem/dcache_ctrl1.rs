@@ -35,79 +35,13 @@ impl From<crate::W<DCACHE_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_SHUT_CORE0_BUS` reader - The bit is used to disable core0 dbus, 0: enable, 1: disable"]
-pub struct DCACHE_SHUT_CORE0_BUS_R(crate::FieldReader<bool>);
-impl DCACHE_SHUT_CORE0_BUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_SHUT_CORE0_BUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_SHUT_CORE0_BUS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_SHUT_CORE0_BUS_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_SHUT_CORE0_BUS` writer - The bit is used to disable core0 dbus, 0: enable, 1: disable"]
-pub struct DCACHE_SHUT_CORE0_BUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_SHUT_CORE0_BUS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DCACHE_SHUT_CORE0_BUS_W<'a> = crate::BitWriter<'a, u32, DCACHE_CTRL1_SPEC, bool, 0>;
 #[doc = "Field `DCACHE_SHUT_CORE1_BUS` reader - The bit is used to disable core1 dbus, 0: enable, 1: disable"]
-pub struct DCACHE_SHUT_CORE1_BUS_R(crate::FieldReader<bool>);
-impl DCACHE_SHUT_CORE1_BUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_SHUT_CORE1_BUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_SHUT_CORE1_BUS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_SHUT_CORE1_BUS_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_SHUT_CORE1_BUS` writer - The bit is used to disable core1 dbus, 0: enable, 1: disable"]
-pub struct DCACHE_SHUT_CORE1_BUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_SHUT_CORE1_BUS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type DCACHE_SHUT_CORE1_BUS_W<'a> = crate::BitWriter<'a, u32, DCACHE_CTRL1_SPEC, bool, 1>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable core0 dbus, 0: enable, 1: disable"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 0 - The bit is used to disable core0 dbus, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn dcache_shut_core0_bus(&mut self) -> DCACHE_SHUT_CORE0_BUS_W {
-        DCACHE_SHUT_CORE0_BUS_W { w: self }
+        DCACHE_SHUT_CORE0_BUS_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to disable core1 dbus, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn dcache_shut_core1_bus(&mut self) -> DCACHE_SHUT_CORE1_BUS_W {
-        DCACHE_SHUT_CORE1_BUS_W { w: self }
+        DCACHE_SHUT_CORE1_BUS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

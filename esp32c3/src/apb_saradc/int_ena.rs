@@ -35,227 +35,29 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_SARADC_THRES1_LOW_INT_ENA` reader - saradc thres1 low interrupt enable"]
-pub struct APB_SARADC_THRES1_LOW_INT_ENA_R(crate::FieldReader<bool>);
-impl APB_SARADC_THRES1_LOW_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC_THRES1_LOW_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC_THRES1_LOW_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC_THRES1_LOW_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC_THRES1_LOW_INT_ENA` writer - saradc thres1 low interrupt enable"]
-pub struct APB_SARADC_THRES1_LOW_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_SARADC_THRES1_LOW_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type APB_SARADC_THRES1_LOW_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 26>;
 #[doc = "Field `APB_SARADC_THRES0_LOW_INT_ENA` reader - saradc thres0 low interrupt enable"]
-pub struct APB_SARADC_THRES0_LOW_INT_ENA_R(crate::FieldReader<bool>);
-impl APB_SARADC_THRES0_LOW_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC_THRES0_LOW_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC_THRES0_LOW_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC_THRES0_LOW_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC_THRES0_LOW_INT_ENA` writer - saradc thres0 low interrupt enable"]
-pub struct APB_SARADC_THRES0_LOW_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_SARADC_THRES0_LOW_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type APB_SARADC_THRES0_LOW_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 27>;
 #[doc = "Field `APB_SARADC_THRES1_HIGH_INT_ENA` reader - saradc thres1 high interrupt enable"]
-pub struct APB_SARADC_THRES1_HIGH_INT_ENA_R(crate::FieldReader<bool>);
-impl APB_SARADC_THRES1_HIGH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC_THRES1_HIGH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC_THRES1_HIGH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC_THRES1_HIGH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC_THRES1_HIGH_INT_ENA` writer - saradc thres1 high interrupt enable"]
-pub struct APB_SARADC_THRES1_HIGH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_SARADC_THRES1_HIGH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type APB_SARADC_THRES1_HIGH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 28>;
 #[doc = "Field `APB_SARADC_THRES0_HIGH_INT_ENA` reader - saradc thres0 high interrupt enable"]
-pub struct APB_SARADC_THRES0_HIGH_INT_ENA_R(crate::FieldReader<bool>);
-impl APB_SARADC_THRES0_HIGH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC_THRES0_HIGH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC_THRES0_HIGH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC_THRES0_HIGH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC_THRES0_HIGH_INT_ENA` writer - saradc thres0 high interrupt enable"]
-pub struct APB_SARADC_THRES0_HIGH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_SARADC_THRES0_HIGH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type APB_SARADC_THRES0_HIGH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 29>;
 #[doc = "Field `APB_SARADC2_DONE_INT_ENA` reader - saradc2 done interrupt enable"]
-pub struct APB_SARADC2_DONE_INT_ENA_R(crate::FieldReader<bool>);
-impl APB_SARADC2_DONE_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC2_DONE_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC2_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC2_DONE_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC2_DONE_INT_ENA` writer - saradc2 done interrupt enable"]
-pub struct APB_SARADC2_DONE_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_SARADC2_DONE_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type APB_SARADC2_DONE_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 30>;
 #[doc = "Field `APB_SARADC1_DONE_INT_ENA` reader - saradc1 done interrupt enable"]
-pub struct APB_SARADC1_DONE_INT_ENA_R(crate::FieldReader<bool>);
-impl APB_SARADC1_DONE_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC1_DONE_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC1_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC1_DONE_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC1_DONE_INT_ENA` writer - saradc1 done interrupt enable"]
-pub struct APB_SARADC1_DONE_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_SARADC1_DONE_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type APB_SARADC1_DONE_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 26 - saradc thres1 low interrupt enable"]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 26 - saradc thres1 low interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc_thres1_low_int_ena(&mut self) -> APB_SARADC_THRES1_LOW_INT_ENA_W {
-        APB_SARADC_THRES1_LOW_INT_ENA_W { w: self }
+        APB_SARADC_THRES1_LOW_INT_ENA_W::new(self)
     }
     #[doc = "Bit 27 - saradc thres0 low interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc_thres0_low_int_ena(&mut self) -> APB_SARADC_THRES0_LOW_INT_ENA_W {
-        APB_SARADC_THRES0_LOW_INT_ENA_W { w: self }
+        APB_SARADC_THRES0_LOW_INT_ENA_W::new(self)
     }
     #[doc = "Bit 28 - saradc thres1 high interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc_thres1_high_int_ena(&mut self) -> APB_SARADC_THRES1_HIGH_INT_ENA_W {
-        APB_SARADC_THRES1_HIGH_INT_ENA_W { w: self }
+        APB_SARADC_THRES1_HIGH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 29 - saradc thres0 high interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc_thres0_high_int_ena(&mut self) -> APB_SARADC_THRES0_HIGH_INT_ENA_W {
-        APB_SARADC_THRES0_HIGH_INT_ENA_W { w: self }
+        APB_SARADC_THRES0_HIGH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 30 - saradc2 done interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc2_done_int_ena(&mut self) -> APB_SARADC2_DONE_INT_ENA_W {
-        APB_SARADC2_DONE_INT_ENA_W { w: self }
+        APB_SARADC2_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 31 - saradc1 done interrupt enable"]
     #[inline(always)]
     pub fn apb_saradc1_done_int_ena(&mut self) -> APB_SARADC1_DONE_INT_ENA_W {
-        APB_SARADC1_DONE_INT_ENA_W { w: self }
+        APB_SARADC1_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

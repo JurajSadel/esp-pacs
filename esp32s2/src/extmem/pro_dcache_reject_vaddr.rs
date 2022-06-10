@@ -14,20 +14,7 @@ impl From<crate::R<PRO_DCACHE_REJECT_VADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_DCACHE_CPU_VADDR` reader - The bits are used to indicate the virtual address of CPU access dcache when authentication fail."]
-pub struct PRO_DCACHE_CPU_VADDR_R(crate::FieldReader<u32>);
-impl PRO_DCACHE_CPU_VADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PRO_DCACHE_CPU_VADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_CPU_VADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_CPU_VADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to indicate the virtual address of CPU access dcache when authentication fail."]
     #[inline(always)]

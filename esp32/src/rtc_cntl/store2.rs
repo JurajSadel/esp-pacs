@@ -35,32 +35,9 @@ impl From<crate::W<STORE2_SPEC>> for W {
     }
 }
 #[doc = "Field `SCRATCH2` reader - 32-bit general purpose retention register"]
-pub struct SCRATCH2_R(crate::FieldReader<u32>);
-impl SCRATCH2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SCRATCH2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCRATCH2_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCRATCH2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SCRATCH2` writer - 32-bit general purpose retention register"]
-pub struct SCRATCH2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCRATCH2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type SCRATCH2_W<'a> = crate::FieldWriter<'a, u32, STORE2_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - 32-bit general purpose retention register"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - 32-bit general purpose retention register"]
     #[inline(always)]
     pub fn scratch2(&mut self) -> SCRATCH2_W {
-        SCRATCH2_W { w: self }
+        SCRATCH2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

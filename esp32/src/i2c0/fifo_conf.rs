@@ -35,261 +35,37 @@ impl From<crate::W<FIFO_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_THRHD` reader - "]
-pub struct RXFIFO_FULL_THRHD_R(crate::FieldReader<u8>);
-impl RXFIFO_FULL_THRHD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RXFIFO_FULL_THRHD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_FULL_THRHD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_FULL_THRHD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RXFIFO_FULL_THRHD` writer - "]
-pub struct RXFIFO_FULL_THRHD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXFIFO_FULL_THRHD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type RXFIFO_FULL_THRHD_W<'a> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 5, 0>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` reader - Config txfifo empty threhd value when using apb fifo access"]
-pub struct TXFIFO_EMPTY_THRHD_R(crate::FieldReader<u8>);
-impl TXFIFO_EMPTY_THRHD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TXFIFO_EMPTY_THRHD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFIFO_EMPTY_THRHD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFIFO_EMPTY_THRHD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TXFIFO_EMPTY_THRHD` writer - Config txfifo empty threhd value when using apb fifo access"]
-pub struct TXFIFO_EMPTY_THRHD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXFIFO_EMPTY_THRHD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 5)) | ((value as u32 & 0x1f) << 5);
-        self.w
-    }
-}
+pub type TXFIFO_EMPTY_THRHD_W<'a> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 5, 5>;
 #[doc = "Field `NONFIFO_EN` reader - Set this bit to enble apb nonfifo access."]
-pub struct NONFIFO_EN_R(crate::FieldReader<bool>);
-impl NONFIFO_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NONFIFO_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NONFIFO_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NONFIFO_EN_R = crate::BitReader<bool>;
 #[doc = "Field `NONFIFO_EN` writer - Set this bit to enble apb nonfifo access."]
-pub struct NONFIFO_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NONFIFO_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type NONFIFO_EN_W<'a> = crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, 10>;
 #[doc = "Field `FIFO_ADDR_CFG_EN` reader - When this bit is set to 1 then the byte after address represent the offset address of I2C Slave's ram."]
-pub struct FIFO_ADDR_CFG_EN_R(crate::FieldReader<bool>);
-impl FIFO_ADDR_CFG_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FIFO_ADDR_CFG_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFO_ADDR_CFG_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFO_ADDR_CFG_EN_R = crate::BitReader<bool>;
 #[doc = "Field `FIFO_ADDR_CFG_EN` writer - When this bit is set to 1 then the byte after address represent the offset address of I2C Slave's ram."]
-pub struct FIFO_ADDR_CFG_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FIFO_ADDR_CFG_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type FIFO_ADDR_CFG_EN_W<'a> = crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, 11>;
 #[doc = "Field `RX_FIFO_RST` reader - Set this bit to reset rx fifo when using apb fifo access."]
-pub struct RX_FIFO_RST_R(crate::FieldReader<bool>);
-impl RX_FIFO_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_FIFO_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_FIFO_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_FIFO_RST_R = crate::BitReader<bool>;
 #[doc = "Field `RX_FIFO_RST` writer - Set this bit to reset rx fifo when using apb fifo access."]
-pub struct RX_FIFO_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_FIFO_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type RX_FIFO_RST_W<'a> = crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, 12>;
 #[doc = "Field `TX_FIFO_RST` reader - Set this bit to reset tx fifo when using apb fifo access."]
-pub struct TX_FIFO_RST_R(crate::FieldReader<bool>);
-impl TX_FIFO_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_FIFO_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_FIFO_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_FIFO_RST_R = crate::BitReader<bool>;
 #[doc = "Field `TX_FIFO_RST` writer - Set this bit to reset tx fifo when using apb fifo access."]
-pub struct TX_FIFO_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_FIFO_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type TX_FIFO_RST_W<'a> = crate::BitWriter<'a, u32, FIFO_CONF_SPEC, bool, 13>;
 #[doc = "Field `NONFIFO_RX_THRES` reader - when I2C receives more than nonfifo_rx_thres data it will produce rx_send_full_int_raw interrupt and update the current offset address of the receiving data."]
-pub struct NONFIFO_RX_THRES_R(crate::FieldReader<u8>);
-impl NONFIFO_RX_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        NONFIFO_RX_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NONFIFO_RX_THRES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NONFIFO_RX_THRES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NONFIFO_RX_THRES` writer - when I2C receives more than nonfifo_rx_thres data it will produce rx_send_full_int_raw interrupt and update the current offset address of the receiving data."]
-pub struct NONFIFO_RX_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NONFIFO_RX_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 14)) | ((value as u32 & 0x3f) << 14);
-        self.w
-    }
-}
+pub type NONFIFO_RX_THRES_W<'a> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 6, 14>;
 #[doc = "Field `NONFIFO_TX_THRES` reader - when I2C sends more than nonfifo_tx_thres data it will produce tx_send_empty_int_raw interrupt and update the current offset address of the sending data."]
-pub struct NONFIFO_TX_THRES_R(crate::FieldReader<u8>);
-impl NONFIFO_TX_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        NONFIFO_TX_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NONFIFO_TX_THRES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NONFIFO_TX_THRES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `NONFIFO_TX_THRES` writer - when I2C sends more than nonfifo_tx_thres data it will produce tx_send_empty_int_raw interrupt and update the current offset address of the sending data."]
-pub struct NONFIFO_TX_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NONFIFO_TX_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 20)) | ((value as u32 & 0x3f) << 20);
-        self.w
-    }
-}
+pub type NONFIFO_TX_THRES_W<'a> = crate::FieldWriter<'a, u32, FIFO_CONF_SPEC, u8, u8, 6, 20>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -336,42 +112,42 @@ impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
     pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W {
-        RXFIFO_FULL_THRHD_W { w: self }
+        RXFIFO_FULL_THRHD_W::new(self)
     }
     #[doc = "Bits 5:9 - Config txfifo empty threhd value when using apb fifo access"]
     #[inline(always)]
     pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W {
-        TXFIFO_EMPTY_THRHD_W { w: self }
+        TXFIFO_EMPTY_THRHD_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to enble apb nonfifo access."]
     #[inline(always)]
     pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W {
-        NONFIFO_EN_W { w: self }
+        NONFIFO_EN_W::new(self)
     }
     #[doc = "Bit 11 - When this bit is set to 1 then the byte after address represent the offset address of I2C Slave's ram."]
     #[inline(always)]
     pub fn fifo_addr_cfg_en(&mut self) -> FIFO_ADDR_CFG_EN_W {
-        FIFO_ADDR_CFG_EN_W { w: self }
+        FIFO_ADDR_CFG_EN_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to reset rx fifo when using apb fifo access."]
     #[inline(always)]
     pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W {
-        RX_FIFO_RST_W { w: self }
+        RX_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to reset tx fifo when using apb fifo access."]
     #[inline(always)]
     pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W {
-        TX_FIFO_RST_W { w: self }
+        TX_FIFO_RST_W::new(self)
     }
     #[doc = "Bits 14:19 - when I2C receives more than nonfifo_rx_thres data it will produce rx_send_full_int_raw interrupt and update the current offset address of the receiving data."]
     #[inline(always)]
     pub fn nonfifo_rx_thres(&mut self) -> NONFIFO_RX_THRES_W {
-        NONFIFO_RX_THRES_W { w: self }
+        NONFIFO_RX_THRES_W::new(self)
     }
     #[doc = "Bits 20:25 - when I2C sends more than nonfifo_tx_thres data it will produce tx_send_empty_int_raw interrupt and update the current offset address of the sending data."]
     #[inline(always)]
     pub fn nonfifo_tx_thres(&mut self) -> NONFIFO_TX_THRES_W {
-        NONFIFO_TX_THRES_W { w: self }
+        NONFIFO_TX_THRES_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

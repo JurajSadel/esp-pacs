@@ -35,32 +35,9 @@ impl From<crate::W<SRAM_CTRL_0_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_FO` reader - This field is used to force on clock gate of internal SRAM."]
-pub struct SRAM_FO_R(crate::FieldReader<u32>);
-impl SRAM_FO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SRAM_FO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRAM_FO_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRAM_FO_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SRAM_FO` writer - This field is used to force on clock gate of internal SRAM."]
-pub struct SRAM_FO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_FO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x003f_ffff) | (value as u32 & 0x003f_ffff);
-        self.w
-    }
-}
+pub type SRAM_FO_W<'a> = crate::FieldWriter<'a, u32, SRAM_CTRL_0_SPEC, u32, u32, 22, 0>;
 impl R {
     #[doc = "Bits 0:21 - This field is used to force on clock gate of internal SRAM."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:21 - This field is used to force on clock gate of internal SRAM."]
     #[inline(always)]
     pub fn sram_fo(&mut self) -> SRAM_FO_W {
-        SRAM_FO_W { w: self }
+        SRAM_FO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

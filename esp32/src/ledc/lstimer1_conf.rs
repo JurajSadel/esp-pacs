@@ -35,234 +35,33 @@ impl From<crate::W<LSTIMER1_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `LSTIMER1_DUTY_RES` reader - This register controls the range of the counter in low speed timer1. the counter range is \\[0 2**reg_lstimer1_lim\\] the max bit width for counter is 20."]
-pub struct LSTIMER1_DUTY_RES_R(crate::FieldReader<u8>);
-impl LSTIMER1_DUTY_RES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LSTIMER1_DUTY_RES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER1_DUTY_RES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER1_DUTY_RES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LSTIMER1_DUTY_RES` writer - This register controls the range of the counter in low speed timer1. the counter range is \\[0 2**reg_lstimer1_lim\\] the max bit width for counter is 20."]
-pub struct LSTIMER1_DUTY_RES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LSTIMER1_DUTY_RES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type LSTIMER1_DUTY_RES_W<'a> = crate::FieldWriter<'a, u32, LSTIMER1_CONF_SPEC, u8, u8, 5, 0>;
 #[doc = "Field `DIV_NUM_LSTIMER1` reader - This register is used to configure parameter for divider in low speed timer1 the least significant eight bits represent the decimal part."]
-pub struct DIV_NUM_LSTIMER1_R(crate::FieldReader<u32>);
-impl DIV_NUM_LSTIMER1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DIV_NUM_LSTIMER1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIV_NUM_LSTIMER1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIV_NUM_LSTIMER1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DIV_NUM_LSTIMER1` writer - This register is used to configure parameter for divider in low speed timer1 the least significant eight bits represent the decimal part."]
-pub struct DIV_NUM_LSTIMER1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIV_NUM_LSTIMER1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0003_ffff << 5)) | ((value as u32 & 0x0003_ffff) << 5);
-        self.w
-    }
-}
+pub type DIV_NUM_LSTIMER1_W<'a> = crate::FieldWriter<'a, u32, LSTIMER1_CONF_SPEC, u32, u32, 18, 5>;
 #[doc = "Field `LSTIMER1_PAUSE` reader - This bit is used to pause the counter in low speed timer1."]
-pub struct LSTIMER1_PAUSE_R(crate::FieldReader<bool>);
-impl LSTIMER1_PAUSE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER1_PAUSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER1_PAUSE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER1_PAUSE_R = crate::BitReader<bool>;
 #[doc = "Field `LSTIMER1_PAUSE` writer - This bit is used to pause the counter in low speed timer1."]
-pub struct LSTIMER1_PAUSE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LSTIMER1_PAUSE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type LSTIMER1_PAUSE_W<'a> = crate::BitWriter<'a, u32, LSTIMER1_CONF_SPEC, bool, 23>;
 #[doc = "Field `LSTIMER1_RST` reader - This bit is used to reset low speed timer1 the counter will be 0 after reset."]
-pub struct LSTIMER1_RST_R(crate::FieldReader<bool>);
-impl LSTIMER1_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER1_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER1_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `LSTIMER1_RST` writer - This bit is used to reset low speed timer1 the counter will be 0 after reset."]
-pub struct LSTIMER1_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LSTIMER1_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type LSTIMER1_RST_W<'a> = crate::BitWriter<'a, u32, LSTIMER1_CONF_SPEC, bool, 24>;
 #[doc = "Field `TICK_SEL_LSTIMER1` reader - This bit is used to choose slow_clk or ref_tick for low speed timer1. 1'b1:slow_clk 0:ref_tick"]
-pub struct TICK_SEL_LSTIMER1_R(crate::FieldReader<bool>);
-impl TICK_SEL_LSTIMER1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TICK_SEL_LSTIMER1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TICK_SEL_LSTIMER1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TICK_SEL_LSTIMER1_R = crate::BitReader<bool>;
 #[doc = "Field `TICK_SEL_LSTIMER1` writer - This bit is used to choose slow_clk or ref_tick for low speed timer1. 1'b1:slow_clk 0:ref_tick"]
-pub struct TICK_SEL_LSTIMER1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TICK_SEL_LSTIMER1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type TICK_SEL_LSTIMER1_W<'a> = crate::BitWriter<'a, u32, LSTIMER1_CONF_SPEC, bool, 25>;
 #[doc = "Field `LSTIMER1_PARA_UP` reader - Set this bit to update reg_div_num_lstime1 and reg_lstimer1_lim."]
-pub struct LSTIMER1_PARA_UP_R(crate::FieldReader<bool>);
-impl LSTIMER1_PARA_UP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LSTIMER1_PARA_UP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER1_PARA_UP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER1_PARA_UP_R = crate::BitReader<bool>;
 #[doc = "Field `LSTIMER1_PARA_UP` writer - Set this bit to update reg_div_num_lstime1 and reg_lstimer1_lim."]
-pub struct LSTIMER1_PARA_UP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LSTIMER1_PARA_UP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type LSTIMER1_PARA_UP_W<'a> = crate::BitWriter<'a, u32, LSTIMER1_CONF_SPEC, bool, 26>;
 #[doc = "Field `LSTIMER1_LIM` reader - "]
-pub struct LSTIMER1_LIM_R(crate::FieldReader<u8>);
-impl LSTIMER1_LIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LSTIMER1_LIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER1_LIM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER1_LIM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LSTIMER1_LIM` writer - "]
-pub struct LSTIMER1_LIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LSTIMER1_LIM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 31)) | ((value as u32 & 0x1f) << 31);
-        self.w
-    }
-}
+pub type LSTIMER1_LIM_W<'a> = crate::FieldWriter<'a, u32, LSTIMER1_CONF_SPEC, u8, u8, 5, 31>;
 impl R {
     #[doc = "Bits 0:4 - This register controls the range of the counter in low speed timer1. the counter range is \\[0 2**reg_lstimer1_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
@@ -304,37 +103,37 @@ impl W {
     #[doc = "Bits 0:4 - This register controls the range of the counter in low speed timer1. the counter range is \\[0 2**reg_lstimer1_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
     pub fn lstimer1_duty_res(&mut self) -> LSTIMER1_DUTY_RES_W {
-        LSTIMER1_DUTY_RES_W { w: self }
+        LSTIMER1_DUTY_RES_W::new(self)
     }
     #[doc = "Bits 5:22 - This register is used to configure parameter for divider in low speed timer1 the least significant eight bits represent the decimal part."]
     #[inline(always)]
     pub fn div_num_lstimer1(&mut self) -> DIV_NUM_LSTIMER1_W {
-        DIV_NUM_LSTIMER1_W { w: self }
+        DIV_NUM_LSTIMER1_W::new(self)
     }
     #[doc = "Bit 23 - This bit is used to pause the counter in low speed timer1."]
     #[inline(always)]
     pub fn lstimer1_pause(&mut self) -> LSTIMER1_PAUSE_W {
-        LSTIMER1_PAUSE_W { w: self }
+        LSTIMER1_PAUSE_W::new(self)
     }
     #[doc = "Bit 24 - This bit is used to reset low speed timer1 the counter will be 0 after reset."]
     #[inline(always)]
     pub fn lstimer1_rst(&mut self) -> LSTIMER1_RST_W {
-        LSTIMER1_RST_W { w: self }
+        LSTIMER1_RST_W::new(self)
     }
     #[doc = "Bit 25 - This bit is used to choose slow_clk or ref_tick for low speed timer1. 1'b1:slow_clk 0:ref_tick"]
     #[inline(always)]
     pub fn tick_sel_lstimer1(&mut self) -> TICK_SEL_LSTIMER1_W {
-        TICK_SEL_LSTIMER1_W { w: self }
+        TICK_SEL_LSTIMER1_W::new(self)
     }
     #[doc = "Bit 26 - Set this bit to update reg_div_num_lstime1 and reg_lstimer1_lim."]
     #[inline(always)]
     pub fn lstimer1_para_up(&mut self) -> LSTIMER1_PARA_UP_W {
-        LSTIMER1_PARA_UP_W { w: self }
+        LSTIMER1_PARA_UP_W::new(self)
     }
     #[doc = "Bits 31:35"]
     #[inline(always)]
     pub fn lstimer1_lim(&mut self) -> LSTIMER1_LIM_W {
-        LSTIMER1_LIM_W { w: self }
+        LSTIMER1_LIM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

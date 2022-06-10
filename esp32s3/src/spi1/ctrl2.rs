@@ -35,42 +35,9 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SYNC_RESET` reader - The FSM will be reset."]
-pub struct SYNC_RESET_R(crate::FieldReader<bool>);
-impl SYNC_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SYNC_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYNC_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYNC_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `SYNC_RESET` writer - The FSM will be reset."]
-pub struct SYNC_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SYNC_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type SYNC_RESET_W<'a> = crate::BitWriter<'a, u32, CTRL2_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]
     pub fn sync_reset(&mut self) -> SYNC_RESET_W {
-        SYNC_RESET_W { w: self }
+        SYNC_RESET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

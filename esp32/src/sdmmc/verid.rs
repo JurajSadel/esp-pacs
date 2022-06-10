@@ -14,20 +14,7 @@ impl From<crate::R<VERID_SPEC>> for R {
     }
 }
 #[doc = "Field `VERSIONID` reader - Hardware version register. Can also be read by fireware."]
-pub struct VERSIONID_R(crate::FieldReader<u32>);
-impl VERSIONID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        VERSIONID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VERSIONID_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VERSIONID_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Hardware version register. Can also be read by fireware."]
     #[inline(always)]

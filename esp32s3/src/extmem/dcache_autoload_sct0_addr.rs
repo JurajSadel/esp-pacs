@@ -35,32 +35,10 @@ impl From<crate::W<DCACHE_AUTOLOAD_SCT0_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_AUTOLOAD_SCT0_ADDR` reader - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
-pub struct DCACHE_AUTOLOAD_SCT0_ADDR_R(crate::FieldReader<u32>);
-impl DCACHE_AUTOLOAD_SCT0_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DCACHE_AUTOLOAD_SCT0_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_AUTOLOAD_SCT0_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_AUTOLOAD_SCT0_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DCACHE_AUTOLOAD_SCT0_ADDR` writer - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
-pub struct DCACHE_AUTOLOAD_SCT0_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_AUTOLOAD_SCT0_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type DCACHE_AUTOLOAD_SCT0_ADDR_W<'a> =
+    crate::FieldWriter<'a, u32, DCACHE_AUTOLOAD_SCT0_ADDR_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
     #[inline(always)]
     pub fn dcache_autoload_sct0_addr(&mut self) -> DCACHE_AUTOLOAD_SCT0_ADDR_W {
-        DCACHE_AUTOLOAD_SCT0_ADDR_W { w: self }
+        DCACHE_AUTOLOAD_SCT0_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,59 +35,13 @@ impl From<crate::W<AHB_TEST_SPEC>> for W {
     }
 }
 #[doc = "Field `AHB_TESTMODE` reader - "]
-pub struct AHB_TESTMODE_R(crate::FieldReader<u8>);
-impl AHB_TESTMODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        AHB_TESTMODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHB_TESTMODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHB_TESTMODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `AHB_TESTMODE` writer - "]
-pub struct AHB_TESTMODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AHB_TESTMODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type AHB_TESTMODE_W<'a> = crate::FieldWriter<'a, u32, AHB_TEST_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `AHB_TESTADDR` reader - "]
-pub struct AHB_TESTADDR_R(crate::FieldReader<u8>);
-impl AHB_TESTADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        AHB_TESTADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHB_TESTADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHB_TESTADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `AHB_TESTADDR` writer - "]
-pub struct AHB_TESTADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AHB_TESTADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type AHB_TESTADDR_W<'a> = crate::FieldWriter<'a, u32, AHB_TEST_SPEC, u8, u8, 2, 4>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn ahb_testmode(&mut self) -> AHB_TESTMODE_W {
-        AHB_TESTMODE_W { w: self }
+        AHB_TESTMODE_W::new(self)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
     pub fn ahb_testaddr(&mut self) -> AHB_TESTADDR_W {
-        AHB_TESTADDR_W { w: self }
+        AHB_TESTADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

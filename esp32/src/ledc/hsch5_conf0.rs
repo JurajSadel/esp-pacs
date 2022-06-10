@@ -35,106 +35,17 @@ impl From<crate::W<HSCH5_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_SEL_HSCH5` reader - There are four high speed timers the two bits are used to select one of them for high speed channel5. 2'b00: seletc hstimer0. 2'b01: select hstimer1. 2'b10: select hstimer2. 2'b11: select hstimer3."]
-pub struct TIMER_SEL_HSCH5_R(crate::FieldReader<u8>);
-impl TIMER_SEL_HSCH5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER_SEL_HSCH5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER_SEL_HSCH5_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER_SEL_HSCH5_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER_SEL_HSCH5` writer - There are four high speed timers the two bits are used to select one of them for high speed channel5. 2'b00: seletc hstimer0. 2'b01: select hstimer1. 2'b10: select hstimer2. 2'b11: select hstimer3."]
-pub struct TIMER_SEL_HSCH5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER_SEL_HSCH5_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type TIMER_SEL_HSCH5_W<'a> = crate::FieldWriter<'a, u32, HSCH5_CONF0_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `SIG_OUT_EN_HSCH5` reader - This is the output enable control bit for high speed channel5."]
-pub struct SIG_OUT_EN_HSCH5_R(crate::FieldReader<bool>);
-impl SIG_OUT_EN_HSCH5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SIG_OUT_EN_HSCH5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SIG_OUT_EN_HSCH5_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SIG_OUT_EN_HSCH5_R = crate::BitReader<bool>;
 #[doc = "Field `SIG_OUT_EN_HSCH5` writer - This is the output enable control bit for high speed channel5."]
-pub struct SIG_OUT_EN_HSCH5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SIG_OUT_EN_HSCH5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type SIG_OUT_EN_HSCH5_W<'a> = crate::BitWriter<'a, u32, HSCH5_CONF0_SPEC, bool, 2>;
 #[doc = "Field `IDLE_LV_HSCH5` reader - This bit is used to control the output value when high speed channel5 is off."]
-pub struct IDLE_LV_HSCH5_R(crate::FieldReader<bool>);
-impl IDLE_LV_HSCH5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IDLE_LV_HSCH5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IDLE_LV_HSCH5_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IDLE_LV_HSCH5_R = crate::BitReader<bool>;
 #[doc = "Field `IDLE_LV_HSCH5` writer - This bit is used to control the output value when high speed channel5 is off."]
-pub struct IDLE_LV_HSCH5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IDLE_LV_HSCH5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type IDLE_LV_HSCH5_W<'a> = crate::BitWriter<'a, u32, HSCH5_CONF0_SPEC, bool, 3>;
 impl R {
     #[doc = "Bits 0:1 - There are four high speed timers the two bits are used to select one of them for high speed channel5. 2'b00: seletc hstimer0. 2'b01: select hstimer1. 2'b10: select hstimer2. 2'b11: select hstimer3."]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bits 0:1 - There are four high speed timers the two bits are used to select one of them for high speed channel5. 2'b00: seletc hstimer0. 2'b01: select hstimer1. 2'b10: select hstimer2. 2'b11: select hstimer3."]
     #[inline(always)]
     pub fn timer_sel_hsch5(&mut self) -> TIMER_SEL_HSCH5_W {
-        TIMER_SEL_HSCH5_W { w: self }
+        TIMER_SEL_HSCH5_W::new(self)
     }
     #[doc = "Bit 2 - This is the output enable control bit for high speed channel5."]
     #[inline(always)]
     pub fn sig_out_en_hsch5(&mut self) -> SIG_OUT_EN_HSCH5_W {
-        SIG_OUT_EN_HSCH5_W { w: self }
+        SIG_OUT_EN_HSCH5_W::new(self)
     }
     #[doc = "Bit 3 - This bit is used to control the output value when high speed channel5 is off."]
     #[inline(always)]
     pub fn idle_lv_hsch5(&mut self) -> IDLE_LV_HSCH5_W {
-        IDLE_LV_HSCH5_W { w: self }
+        IDLE_LV_HSCH5_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

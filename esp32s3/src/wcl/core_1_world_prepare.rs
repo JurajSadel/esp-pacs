@@ -35,32 +35,10 @@ impl From<crate::W<CORE_1_WORLD_PREPARE_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_WORLD_PREPARE` reader - This field to used to set world to enter,2'b01 means WORLD0, 2'b10 means WORLD1"]
-pub struct CORE_1_WORLD_PREPARE_R(crate::FieldReader<u8>);
-impl CORE_1_WORLD_PREPARE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_1_WORLD_PREPARE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_WORLD_PREPARE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_WORLD_PREPARE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_1_WORLD_PREPARE` writer - This field to used to set world to enter,2'b01 means WORLD0, 2'b10 means WORLD1"]
-pub struct CORE_1_WORLD_PREPARE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_WORLD_PREPARE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type CORE_1_WORLD_PREPARE_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_1_WORLD_PREPARE_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1 - This field to used to set world to enter,2'b01 means WORLD0, 2'b10 means WORLD1"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:1 - This field to used to set world to enter,2'b01 means WORLD0, 2'b10 means WORLD1"]
     #[inline(always)]
     pub fn core_1_world_prepare(&mut self) -> CORE_1_WORLD_PREPARE_W {
-        CORE_1_WORLD_PREPARE_W { w: self }
+        CORE_1_WORLD_PREPARE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

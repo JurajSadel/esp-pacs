@@ -35,32 +35,9 @@ impl From<crate::W<DT0_FED_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DT0_FED` reader - "]
-pub struct DT0_FED_R(crate::FieldReader<u16>);
-impl DT0_FED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DT0_FED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_FED_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_FED_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DT0_FED` writer - "]
-pub struct DT0_FED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_FED_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type DT0_FED_W<'a> = crate::FieldWriter<'a, u32, DT0_FED_CFG_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn dt0_fed(&mut self) -> DT0_FED_W {
-        DT0_FED_W { w: self }
+        DT0_FED_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

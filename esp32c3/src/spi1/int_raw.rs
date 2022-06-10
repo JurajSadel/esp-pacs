@@ -14,80 +14,15 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `PER_END_INT_RAW` reader - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed. 0: Others."]
-pub struct PER_END_INT_RAW_R(crate::FieldReader<bool>);
-impl PER_END_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PER_END_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PER_END_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PER_END_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `PES_END_INT_RAW` reader - The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended. 0: Others."]
-pub struct PES_END_INT_RAW_R(crate::FieldReader<bool>);
-impl PES_END_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PES_END_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PES_END_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PES_END_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `WPE_END_INT_RAW` reader - The raw bit for SPI_MEM_WPE_END_INT interrupt. 1: Triggered when WRSR/PP/SE/BE/CE is sent and flash is already idle. 0: Others."]
-pub struct WPE_END_INT_RAW_R(crate::FieldReader<bool>);
-impl WPE_END_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WPE_END_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WPE_END_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WPE_END_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_ST_END_INT_RAW` reader - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi1_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
-pub struct SLV_ST_END_INT_RAW_R(crate::FieldReader<bool>);
-impl SLV_ST_END_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_ST_END_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_ST_END_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_ST_END_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `MST_ST_END_INT_RAW` reader - The raw bit for SPI_MEM_MST_ST_END_INT interrupt. 1: Triggered when spi1_mst_st is changed from non idle state to idle state. 0: Others."]
-pub struct MST_ST_END_INT_RAW_R(crate::FieldReader<bool>);
-impl MST_ST_END_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MST_ST_END_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MST_ST_END_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MST_ST_END_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed. 0: Others."]
     #[inline(always)]

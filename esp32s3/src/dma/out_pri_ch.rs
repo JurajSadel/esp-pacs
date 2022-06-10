@@ -35,32 +35,9 @@ impl From<crate::W<OUT_PRI_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_PRI_CH` reader - The priority of Tx channel 0. The larger of the value, the higher of the priority."]
-pub struct TX_PRI_CH_R(crate::FieldReader<u8>);
-impl TX_PRI_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_PRI_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PRI_CH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PRI_CH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_PRI_CH` writer - The priority of Tx channel 0. The larger of the value, the higher of the priority."]
-pub struct TX_PRI_CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PRI_CH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type TX_PRI_CH_W<'a> = crate::FieldWriter<'a, u32, OUT_PRI_CH_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - The priority of Tx channel 0. The larger of the value, the higher of the priority."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:3 - The priority of Tx channel 0. The larger of the value, the higher of the priority."]
     #[inline(always)]
     pub fn tx_pri_ch(&mut self) -> TX_PRI_CH_W {
-        TX_PRI_CH_W { w: self }
+        TX_PRI_CH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

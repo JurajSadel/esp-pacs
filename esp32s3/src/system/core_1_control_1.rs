@@ -35,32 +35,10 @@ impl From<crate::W<CORE_1_CONTROL_1_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTROL_CORE_1_MESSAGE` reader - it's only a R/W register, no function, software can write any value"]
-pub struct CONTROL_CORE_1_MESSAGE_R(crate::FieldReader<u32>);
-impl CONTROL_CORE_1_MESSAGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CONTROL_CORE_1_MESSAGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONTROL_CORE_1_MESSAGE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONTROL_CORE_1_MESSAGE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CONTROL_CORE_1_MESSAGE` writer - it's only a R/W register, no function, software can write any value"]
-pub struct CONTROL_CORE_1_MESSAGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONTROL_CORE_1_MESSAGE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CONTROL_CORE_1_MESSAGE_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_1_CONTROL_1_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - it's only a R/W register, no function, software can write any value"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:31 - it's only a R/W register, no function, software can write any value"]
     #[inline(always)]
     pub fn control_core_1_message(&mut self) -> CONTROL_CORE_1_MESSAGE_W {
-        CONTROL_CORE_1_MESSAGE_W { w: self }
+        CONTROL_CORE_1_MESSAGE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,20 +14,7 @@ impl From<crate::R<STRAP_SPEC>> for R {
     }
 }
 #[doc = "Field `STRAPPING` reader - pad strapping register"]
-pub struct STRAPPING_R(crate::FieldReader<u16>);
-impl STRAPPING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        STRAPPING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STRAPPING_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STRAPPING_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - pad strapping register"]
     #[inline(always)]

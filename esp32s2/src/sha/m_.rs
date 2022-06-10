@@ -35,32 +35,9 @@ impl From<crate::W<M__SPEC>> for W {
     }
 }
 #[doc = "Field `M_0` reader - Stores the %sth 32-bit piece of the message."]
-pub struct M_0_R(crate::FieldReader<u32>);
-impl M_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        M_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for M_0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type M_0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `M_0` writer - Stores the %sth 32-bit piece of the message."]
-pub struct M_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> M_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type M_0_W<'a> = crate::FieldWriter<'a, u32, M__SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - Stores the %sth 32-bit piece of the message."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - Stores the %sth 32-bit piece of the message."]
     #[inline(always)]
     pub fn m_0(&mut self) -> M_0_W {
-        M_0_W { w: self }
+        M_0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

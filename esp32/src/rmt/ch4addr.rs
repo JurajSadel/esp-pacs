@@ -14,20 +14,7 @@ impl From<crate::R<CH4ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_MEM_ADDR` reader - The ram relative address in channel4 by apb fifo access"]
-pub struct APB_MEM_ADDR_R(crate::FieldReader<u32>);
-impl APB_MEM_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        APB_MEM_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_MEM_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_MEM_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The ram relative address in channel4 by apb fifo access"]
     #[inline(always)]

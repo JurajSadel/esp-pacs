@@ -35,42 +35,10 @@ impl From<crate::W<PRO_BOOT_LOCATION_0_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_BOOT_LOCATION_LOCK` reader - Lock register. Setting to 1 locks boot remap permission control registers."]
-pub struct PRO_BOOT_LOCATION_LOCK_R(crate::FieldReader<bool>);
-impl PRO_BOOT_LOCATION_LOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_BOOT_LOCATION_LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_BOOT_LOCATION_LOCK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_BOOT_LOCATION_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_BOOT_LOCATION_LOCK` writer - Lock register. Setting to 1 locks boot remap permission control registers."]
-pub struct PRO_BOOT_LOCATION_LOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_BOOT_LOCATION_LOCK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_BOOT_LOCATION_LOCK_W<'a> =
+    crate::BitWriter<'a, u32, PRO_BOOT_LOCATION_0_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks boot remap permission control registers."]
     #[inline(always)]
@@ -82,7 +50,7 @@ impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks boot remap permission control registers."]
     #[inline(always)]
     pub fn pro_boot_location_lock(&mut self) -> PRO_BOOT_LOCATION_LOCK_W {
-        PRO_BOOT_LOCATION_LOCK_W { w: self }
+        PRO_BOOT_LOCATION_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

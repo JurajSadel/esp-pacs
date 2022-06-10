@@ -35,180 +35,25 @@ impl From<crate::W<DMA_OUT_LINK_SPEC>> for W {
     }
 }
 #[doc = "Field `OUTLINK_ADDR` reader - The address of the first outlink descriptor."]
-pub struct OUTLINK_ADDR_R(crate::FieldReader<u32>);
-impl OUTLINK_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        OUTLINK_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `OUTLINK_ADDR` writer - The address of the first outlink descriptor."]
-pub struct OUTLINK_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTLINK_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type OUTLINK_ADDR_W<'a> = crate::FieldWriter<'a, u32, DMA_OUT_LINK_SPEC, u32, u32, 20, 0>;
 #[doc = "Field `OUTLINK_STOP` reader - Set the bit to stop to use outlink descriptor."]
-pub struct OUTLINK_STOP_R(crate::FieldReader<bool>);
-impl OUTLINK_STOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTLINK_STOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_STOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_STOP_R = crate::BitReader<bool>;
 #[doc = "Field `OUTLINK_STOP` writer - Set the bit to stop to use outlink descriptor."]
-pub struct OUTLINK_STOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTLINK_STOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type OUTLINK_STOP_W<'a> = crate::BitWriter<'a, u32, DMA_OUT_LINK_SPEC, bool, 28>;
 #[doc = "Field `OUTLINK_START` reader - Set the bit to start to use outlink descriptor."]
-pub struct OUTLINK_START_R(crate::FieldReader<bool>);
-impl OUTLINK_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTLINK_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_START_R = crate::BitReader<bool>;
 #[doc = "Field `OUTLINK_START` writer - Set the bit to start to use outlink descriptor."]
-pub struct OUTLINK_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTLINK_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type OUTLINK_START_W<'a> = crate::BitWriter<'a, u32, DMA_OUT_LINK_SPEC, bool, 29>;
 #[doc = "Field `OUTLINK_RESTART` reader - Set the bit to mount on new outlink descriptors."]
-pub struct OUTLINK_RESTART_R(crate::FieldReader<bool>);
-impl OUTLINK_RESTART_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTLINK_RESTART_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_RESTART_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_RESTART_R = crate::BitReader<bool>;
 #[doc = "Field `OUTLINK_RESTART` writer - Set the bit to mount on new outlink descriptors."]
-pub struct OUTLINK_RESTART_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTLINK_RESTART_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type OUTLINK_RESTART_W<'a> = crate::BitWriter<'a, u32, DMA_OUT_LINK_SPEC, bool, 30>;
 #[doc = "Field `DMA_TX_ENA` reader - spi dma write data status bit."]
-pub struct DMA_TX_ENA_R(crate::FieldReader<bool>);
-impl DMA_TX_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_TX_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_TX_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_TX_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_TX_ENA` writer - spi dma write data status bit."]
-pub struct DMA_TX_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_TX_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type DMA_TX_ENA_W<'a> = crate::BitWriter<'a, u32, DMA_OUT_LINK_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:19 - The address of the first outlink descriptor."]
     #[inline(always)]
@@ -240,27 +85,27 @@ impl W {
     #[doc = "Bits 0:19 - The address of the first outlink descriptor."]
     #[inline(always)]
     pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W {
-        OUTLINK_ADDR_W { w: self }
+        OUTLINK_ADDR_W::new(self)
     }
     #[doc = "Bit 28 - Set the bit to stop to use outlink descriptor."]
     #[inline(always)]
     pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W {
-        OUTLINK_STOP_W { w: self }
+        OUTLINK_STOP_W::new(self)
     }
     #[doc = "Bit 29 - Set the bit to start to use outlink descriptor."]
     #[inline(always)]
     pub fn outlink_start(&mut self) -> OUTLINK_START_W {
-        OUTLINK_START_W { w: self }
+        OUTLINK_START_W::new(self)
     }
     #[doc = "Bit 30 - Set the bit to mount on new outlink descriptors."]
     #[inline(always)]
     pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W {
-        OUTLINK_RESTART_W { w: self }
+        OUTLINK_RESTART_W::new(self)
     }
     #[doc = "Bit 31 - spi dma write data status bit."]
     #[inline(always)]
     pub fn dma_tx_ena(&mut self) -> DMA_TX_ENA_W {
-        DMA_TX_ENA_W { w: self }
+        DMA_TX_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

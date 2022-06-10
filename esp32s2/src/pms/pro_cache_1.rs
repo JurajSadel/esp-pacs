@@ -35,32 +35,9 @@ impl From<crate::W<PRO_CACHE_1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_CACHE_CONNECT` reader - Configure which SRAM Block will be occupied by Icache or Dcache."]
-pub struct PRO_CACHE_CONNECT_R(crate::FieldReader<u16>);
-impl PRO_CACHE_CONNECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PRO_CACHE_CONNECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_CONNECT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_CONNECT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_CACHE_CONNECT` writer - Configure which SRAM Block will be occupied by Icache or Dcache."]
-pub struct PRO_CACHE_CONNECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CACHE_CONNECT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type PRO_CACHE_CONNECT_W<'a> = crate::FieldWriter<'a, u32, PRO_CACHE_1_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15 - Configure which SRAM Block will be occupied by Icache or Dcache."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:15 - Configure which SRAM Block will be occupied by Icache or Dcache."]
     #[inline(always)]
     pub fn pro_cache_connect(&mut self) -> PRO_CACHE_CONNECT_W {
-        PRO_CACHE_CONNECT_W { w: self }
+        PRO_CACHE_CONNECT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,254 +35,33 @@ impl From<crate::W<RS485_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `RS485_EN` reader - Set this bit to choose RS485 mode."]
-pub struct RS485_EN_R(crate::FieldReader<bool>);
-impl RS485_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RS485_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RS485_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RS485_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RS485_EN` writer - Set this bit to choose RS485 mode."]
-pub struct RS485_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RS485_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type RS485_EN_W<'a> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, 0>;
 #[doc = "Field `DL0_EN` reader - Set this bit to delay the stop bit by 1 bit."]
-pub struct DL0_EN_R(crate::FieldReader<bool>);
-impl DL0_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DL0_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DL0_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DL0_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DL0_EN` writer - Set this bit to delay the stop bit by 1 bit."]
-pub struct DL0_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DL0_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type DL0_EN_W<'a> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, 1>;
 #[doc = "Field `DL1_EN` reader - Set this bit to delay the stop bit by 1 bit."]
-pub struct DL1_EN_R(crate::FieldReader<bool>);
-impl DL1_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DL1_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DL1_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DL1_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DL1_EN` writer - Set this bit to delay the stop bit by 1 bit."]
-pub struct DL1_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DL1_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type DL1_EN_W<'a> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, 2>;
 #[doc = "Field `RS485TX_RX_EN` reader - Set this bit to enable the receiver could receive data when the transmitter is transmitting data in RS485 mode."]
-pub struct RS485TX_RX_EN_R(crate::FieldReader<bool>);
-impl RS485TX_RX_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RS485TX_RX_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RS485TX_RX_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RS485TX_RX_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RS485TX_RX_EN` writer - Set this bit to enable the receiver could receive data when the transmitter is transmitting data in RS485 mode."]
-pub struct RS485TX_RX_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RS485TX_RX_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type RS485TX_RX_EN_W<'a> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, 3>;
 #[doc = "Field `RS485RXBY_TX_EN` reader - 1: enable RS485 transmitter to send data when RS485 receiver line is busy. 0: RS485 transmitter should not send data when its receiver is busy."]
-pub struct RS485RXBY_TX_EN_R(crate::FieldReader<bool>);
-impl RS485RXBY_TX_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RS485RXBY_TX_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RS485RXBY_TX_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RS485RXBY_TX_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RS485RXBY_TX_EN` writer - 1: enable RS485 transmitter to send data when RS485 receiver line is busy. 0: RS485 transmitter should not send data when its receiver is busy."]
-pub struct RS485RXBY_TX_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RS485RXBY_TX_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type RS485RXBY_TX_EN_W<'a> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, 4>;
 #[doc = "Field `RS485_RX_DLY_NUM` reader - This register is used to delay the receiver's internal data signal."]
-pub struct RS485_RX_DLY_NUM_R(crate::FieldReader<bool>);
-impl RS485_RX_DLY_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RS485_RX_DLY_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RS485_RX_DLY_NUM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RS485_RX_DLY_NUM_R = crate::BitReader<bool>;
 #[doc = "Field `RS485_RX_DLY_NUM` writer - This register is used to delay the receiver's internal data signal."]
-pub struct RS485_RX_DLY_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RS485_RX_DLY_NUM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type RS485_RX_DLY_NUM_W<'a> = crate::BitWriter<'a, u32, RS485_CONF_SPEC, bool, 5>;
 #[doc = "Field `RS485_TX_DLY_NUM` reader - This register is used to delay the transmitter's internal data signal."]
-pub struct RS485_TX_DLY_NUM_R(crate::FieldReader<u8>);
-impl RS485_TX_DLY_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RS485_TX_DLY_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RS485_TX_DLY_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RS485_TX_DLY_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RS485_TX_DLY_NUM` writer - This register is used to delay the transmitter's internal data signal."]
-pub struct RS485_TX_DLY_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RS485_TX_DLY_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 6)) | ((value as u32 & 0x0f) << 6);
-        self.w
-    }
-}
+pub type RS485_TX_DLY_NUM_W<'a> = crate::FieldWriter<'a, u32, RS485_CONF_SPEC, u8, u8, 4, 6>;
 impl R {
     #[doc = "Bit 0 - Set this bit to choose RS485 mode."]
     #[inline(always)]
@@ -324,37 +103,37 @@ impl W {
     #[doc = "Bit 0 - Set this bit to choose RS485 mode."]
     #[inline(always)]
     pub fn rs485_en(&mut self) -> RS485_EN_W {
-        RS485_EN_W { w: self }
+        RS485_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
     pub fn dl0_en(&mut self) -> DL0_EN_W {
-        DL0_EN_W { w: self }
+        DL0_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
     pub fn dl1_en(&mut self) -> DL1_EN_W {
-        DL1_EN_W { w: self }
+        DL1_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable the receiver could receive data when the transmitter is transmitting data in RS485 mode."]
     #[inline(always)]
     pub fn rs485tx_rx_en(&mut self) -> RS485TX_RX_EN_W {
-        RS485TX_RX_EN_W { w: self }
+        RS485TX_RX_EN_W::new(self)
     }
     #[doc = "Bit 4 - 1: enable RS485 transmitter to send data when RS485 receiver line is busy. 0: RS485 transmitter should not send data when its receiver is busy."]
     #[inline(always)]
     pub fn rs485rxby_tx_en(&mut self) -> RS485RXBY_TX_EN_W {
-        RS485RXBY_TX_EN_W { w: self }
+        RS485RXBY_TX_EN_W::new(self)
     }
     #[doc = "Bit 5 - This register is used to delay the receiver's internal data signal."]
     #[inline(always)]
     pub fn rs485_rx_dly_num(&mut self) -> RS485_RX_DLY_NUM_W {
-        RS485_RX_DLY_NUM_W { w: self }
+        RS485_RX_DLY_NUM_W::new(self)
     }
     #[doc = "Bits 6:9 - This register is used to delay the transmitter's internal data signal."]
     #[inline(always)]
     pub fn rs485_tx_dly_num(&mut self) -> RS485_TX_DLY_NUM_W {
-        RS485_TX_DLY_NUM_W { w: self }
+        RS485_TX_DLY_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,50 +14,11 @@ impl From<crate::R<STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `TX_IDLE` reader - "]
-pub struct TX_IDLE_R(crate::FieldReader<bool>);
-impl TX_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_IDLE_R = crate::BitReader<bool>;
 #[doc = "Field `TX_FIFO_RESET_BACK` reader - "]
-pub struct TX_FIFO_RESET_BACK_R(crate::FieldReader<bool>);
-impl TX_FIFO_RESET_BACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_FIFO_RESET_BACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_FIFO_RESET_BACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_FIFO_RESET_BACK_R = crate::BitReader<bool>;
 #[doc = "Field `RX_FIFO_RESET_BACK` reader - "]
-pub struct RX_FIFO_RESET_BACK_R(crate::FieldReader<bool>);
-impl RX_FIFO_RESET_BACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_FIFO_RESET_BACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_FIFO_RESET_BACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_FIFO_RESET_BACK_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `OP_CODE` reader - 0x5A5A: Operate programming command. 0x5AA5: Operate read command."]
-pub struct OP_CODE_R(crate::FieldReader<u16>);
-impl OP_CODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        OP_CODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OP_CODE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OP_CODE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `OP_CODE` writer - 0x5A5A: Operate programming command. 0x5AA5: Operate read command."]
-pub struct OP_CODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OP_CODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type OP_CODE_W<'a> = crate::FieldWriter<'a, u32, CONF_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15 - 0x5A5A: Operate programming command. 0x5AA5: Operate read command."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:15 - 0x5A5A: Operate programming command. 0x5AA5: Operate read command."]
     #[inline(always)]
     pub fn op_code(&mut self) -> OP_CODE_W {
-        OP_CODE_W { w: self }
+        OP_CODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

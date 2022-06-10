@@ -14,80 +14,15 @@ impl From<crate::R<CORE_0_PIF_PMS_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR` reader - core_0_pif_pms_monitor_violate_intr"]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool>);
-impl CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_PIF_PMS_MONITOR_VIOLATE_INTR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0` reader - core_0_pif_pms_monitor_violate_status_hport_0"]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R(crate::FieldReader<bool>);
-impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HPORT_0_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE` reader - core_0_pif_pms_monitor_violate_status_hsize"]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R(crate::FieldReader<u8>);
-impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HSIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE` reader - core_0_pif_pms_monitor_violate_status_hwrite"]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R(crate::FieldReader<bool>);
-impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWRITE_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD` reader - core_0_pif_pms_monitor_violate_status_hworld"]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R(crate::FieldReader<u8>);
-impl CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_PIF_PMS_MONITOR_VIOLATE_STATUS_HWORLD_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - core_0_pif_pms_monitor_violate_intr"]
     #[inline(always)]

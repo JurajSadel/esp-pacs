@@ -14,20 +14,7 @@ impl From<crate::R<IDLE_SPEC>> for R {
     }
 }
 #[doc = "Field `IDLE` reader - AES Idle register. Reads ’zero’ while the AES Accelerator is busy processing; reads ’one’ otherwise."]
-pub struct IDLE_R(crate::FieldReader<bool>);
-impl IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IDLE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - AES Idle register. Reads ’zero’ while the AES Accelerator is busy processing; reads ’one’ otherwise."]
     #[inline(always)]

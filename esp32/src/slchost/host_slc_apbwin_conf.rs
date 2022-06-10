@@ -35,106 +35,19 @@ impl From<crate::W<HOST_SLC_APBWIN_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLC_APBWIN_ADDR` reader - "]
-pub struct HOST_SLC_APBWIN_ADDR_R(crate::FieldReader<u32>);
-impl HOST_SLC_APBWIN_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        HOST_SLC_APBWIN_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC_APBWIN_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC_APBWIN_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `HOST_SLC_APBWIN_ADDR` writer - "]
-pub struct HOST_SLC_APBWIN_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_SLC_APBWIN_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff_ffff) | (value as u32 & 0x0fff_ffff);
-        self.w
-    }
-}
+pub type HOST_SLC_APBWIN_ADDR_W<'a> =
+    crate::FieldWriter<'a, u32, HOST_SLC_APBWIN_CONF_SPEC, u32, u32, 28, 0>;
 #[doc = "Field `HOST_SLC_APBWIN_WR` reader - "]
-pub struct HOST_SLC_APBWIN_WR_R(crate::FieldReader<bool>);
-impl HOST_SLC_APBWIN_WR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC_APBWIN_WR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC_APBWIN_WR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC_APBWIN_WR_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC_APBWIN_WR` writer - "]
-pub struct HOST_SLC_APBWIN_WR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_SLC_APBWIN_WR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type HOST_SLC_APBWIN_WR_W<'a> = crate::BitWriter<'a, u32, HOST_SLC_APBWIN_CONF_SPEC, bool, 28>;
 #[doc = "Field `HOST_SLC_APBWIN_START` reader - "]
-pub struct HOST_SLC_APBWIN_START_R(crate::FieldReader<bool>);
-impl HOST_SLC_APBWIN_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC_APBWIN_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC_APBWIN_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC_APBWIN_START_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC_APBWIN_START` writer - "]
-pub struct HOST_SLC_APBWIN_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_SLC_APBWIN_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type HOST_SLC_APBWIN_START_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC_APBWIN_CONF_SPEC, bool, 29>;
 impl R {
     #[doc = "Bits 0:27"]
     #[inline(always)]
@@ -156,17 +69,17 @@ impl W {
     #[doc = "Bits 0:27"]
     #[inline(always)]
     pub fn host_slc_apbwin_addr(&mut self) -> HOST_SLC_APBWIN_ADDR_W {
-        HOST_SLC_APBWIN_ADDR_W { w: self }
+        HOST_SLC_APBWIN_ADDR_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     pub fn host_slc_apbwin_wr(&mut self) -> HOST_SLC_APBWIN_WR_W {
-        HOST_SLC_APBWIN_WR_W { w: self }
+        HOST_SLC_APBWIN_WR_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     pub fn host_slc_apbwin_start(&mut self) -> HOST_SLC_APBWIN_START_W {
-        HOST_SLC_APBWIN_START_W { w: self }
+        HOST_SLC_APBWIN_START_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,65 +14,13 @@ impl From<crate::R<SDIO_CRC_ST0_SPEC>> for R {
     }
 }
 #[doc = "Field `DAT0_CRC_ERR_CNT` reader - "]
-pub struct DAT0_CRC_ERR_CNT_R(crate::FieldReader<u8>);
-impl DAT0_CRC_ERR_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DAT0_CRC_ERR_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DAT0_CRC_ERR_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DAT0_CRC_ERR_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DAT1_CRC_ERR_CNT` reader - "]
-pub struct DAT1_CRC_ERR_CNT_R(crate::FieldReader<u8>);
-impl DAT1_CRC_ERR_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DAT1_CRC_ERR_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DAT1_CRC_ERR_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DAT1_CRC_ERR_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DAT2_CRC_ERR_CNT` reader - "]
-pub struct DAT2_CRC_ERR_CNT_R(crate::FieldReader<u8>);
-impl DAT2_CRC_ERR_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DAT2_CRC_ERR_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DAT2_CRC_ERR_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DAT2_CRC_ERR_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DAT3_CRC_ERR_CNT` reader - "]
-pub struct DAT3_CRC_ERR_CNT_R(crate::FieldReader<u8>);
-impl DAT3_CRC_ERR_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DAT3_CRC_ERR_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DAT3_CRC_ERR_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DAT3_CRC_ERR_CNT_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]

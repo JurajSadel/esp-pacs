@@ -35,32 +35,10 @@ impl From<crate::W<PERI_BACKUP_APB_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_APB_START_ADDR` reader - reg_backup_apb_start_addr"]
-pub struct BACKUP_APB_START_ADDR_R(crate::FieldReader<u32>);
-impl BACKUP_APB_START_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BACKUP_APB_START_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_APB_START_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_APB_START_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BACKUP_APB_START_ADDR` writer - reg_backup_apb_start_addr"]
-pub struct BACKUP_APB_START_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_APB_START_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type BACKUP_APB_START_ADDR_W<'a> =
+    crate::FieldWriter<'a, u32, PERI_BACKUP_APB_ADDR_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - reg_backup_apb_start_addr"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:31 - reg_backup_apb_start_addr"]
     #[inline(always)]
     pub fn backup_apb_start_addr(&mut self) -> BACKUP_APB_START_ADDR_W {
-        BACKUP_APB_START_ADDR_W { w: self }
+        BACKUP_APB_START_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,185 +14,29 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `JTAG_IN_FLUSH_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
-pub struct JTAG_IN_FLUSH_INT_ST_R(crate::FieldReader<bool>);
-impl JTAG_IN_FLUSH_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        JTAG_IN_FLUSH_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for JTAG_IN_FLUSH_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type JTAG_IN_FLUSH_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `SOF_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_SOF_INT interrupt."]
-pub struct SOF_INT_ST_R(crate::FieldReader<bool>);
-impl SOF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SOF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SOF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SOF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `SERIAL_OUT_RECV_PKT_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_SERIAL_OUT_RECV_PKT_INT interrupt."]
-pub struct SERIAL_OUT_RECV_PKT_INT_ST_R(crate::FieldReader<bool>);
-impl SERIAL_OUT_RECV_PKT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SERIAL_OUT_RECV_PKT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SERIAL_OUT_RECV_PKT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SERIAL_OUT_RECV_PKT_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `SERIAL_IN_EMPTY_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_SERIAL_IN_EMPTY_INT interrupt."]
-pub struct SERIAL_IN_EMPTY_INT_ST_R(crate::FieldReader<bool>);
-impl SERIAL_IN_EMPTY_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SERIAL_IN_EMPTY_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SERIAL_IN_EMPTY_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SERIAL_IN_EMPTY_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `PID_ERR_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_PID_ERR_INT interrupt."]
-pub struct PID_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl PID_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PID_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PID_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PID_ERR_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `CRC5_ERR_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_CRC5_ERR_INT interrupt."]
-pub struct CRC5_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl CRC5_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRC5_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRC5_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRC5_ERR_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `CRC16_ERR_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_CRC16_ERR_INT interrupt."]
-pub struct CRC16_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl CRC16_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRC16_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRC16_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRC16_ERR_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `STUFF_ERR_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_STUFF_ERR_INT interrupt."]
-pub struct STUFF_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl STUFF_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STUFF_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STUFF_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STUFF_ERR_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_TOKEN_REC_IN_EP1_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_IN_TOKEN_REC_IN_EP1_INT interrupt."]
-pub struct IN_TOKEN_REC_IN_EP1_INT_ST_R(crate::FieldReader<bool>);
-impl IN_TOKEN_REC_IN_EP1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_TOKEN_REC_IN_EP1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_TOKEN_REC_IN_EP1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_TOKEN_REC_IN_EP1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `USB_BUS_RESET_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_USB_BUS_RESET_INT interrupt."]
-pub struct USB_BUS_RESET_INT_ST_R(crate::FieldReader<bool>);
-impl USB_BUS_RESET_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_BUS_RESET_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_BUS_RESET_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_BUS_RESET_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EP1_ZERO_PAYLOAD_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_OUT_EP1_ZERO_PAYLOAD_INT interrupt."]
-pub struct OUT_EP1_ZERO_PAYLOAD_INT_ST_R(crate::FieldReader<bool>);
-impl OUT_EP1_ZERO_PAYLOAD_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EP1_ZERO_PAYLOAD_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EP1_ZERO_PAYLOAD_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EP1_ZERO_PAYLOAD_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EP2_ZERO_PAYLOAD_INT_ST` reader - The raw interrupt status bit for the USB_DEVICE_OUT_EP2_ZERO_PAYLOAD_INT interrupt."]
-pub struct OUT_EP2_ZERO_PAYLOAD_INT_ST_R(crate::FieldReader<bool>);
-impl OUT_EP2_ZERO_PAYLOAD_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EP2_ZERO_PAYLOAD_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EP2_ZERO_PAYLOAD_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EP2_ZERO_PAYLOAD_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the USB_DEVICE_JTAG_IN_FLUSH_INT interrupt."]
     #[inline(always)]

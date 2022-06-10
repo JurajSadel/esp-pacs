@@ -20,32 +20,12 @@ impl From<crate::W<SET_RESULT_FINISH_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_RESULT_END` writer - After read result from upstream, then let hmac back to idle."]
-pub struct SET_RESULT_END_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SET_RESULT_END_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SET_RESULT_END_W<'a> = crate::BitWriter<'a, u32, SET_RESULT_FINISH_SPEC, bool, 0>;
 impl W {
     #[doc = "Bit 0 - After read result from upstream, then let hmac back to idle."]
     #[inline(always)]
     pub fn set_result_end(&mut self) -> SET_RESULT_END_W {
-        SET_RESULT_END_W { w: self }
+        SET_RESULT_END_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

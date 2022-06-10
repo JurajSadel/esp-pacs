@@ -35,32 +35,9 @@ impl From<crate::W<PGM_DATA5_SPEC>> for W {
     }
 }
 #[doc = "Field `PGM_DATA_5` reader - The content of the 5th 32-bit data to be programmed."]
-pub struct PGM_DATA_5_R(crate::FieldReader<u32>);
-impl PGM_DATA_5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PGM_DATA_5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PGM_DATA_5_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PGM_DATA_5_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PGM_DATA_5` writer - The content of the 5th 32-bit data to be programmed."]
-pub struct PGM_DATA_5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PGM_DATA_5_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type PGM_DATA_5_W<'a> = crate::FieldWriter<'a, u32, PGM_DATA5_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - The content of the 5th 32-bit data to be programmed."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - The content of the 5th 32-bit data to be programmed."]
     #[inline(always)]
     pub fn pgm_data_5(&mut self) -> PGM_DATA_5_W {
-        PGM_DATA_5_W { w: self }
+        PGM_DATA_5_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

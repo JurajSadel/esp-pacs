@@ -35,106 +35,17 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `CONF_BITLEN` reader - Define the APB cycles of SPI_CONF state. Can be configured in CONF state."]
-pub struct CONF_BITLEN_R(crate::FieldReader<u32>);
-impl CONF_BITLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CONF_BITLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONF_BITLEN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONF_BITLEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CONF_BITLEN` writer - Define the APB cycles of SPI_CONF state. Can be configured in CONF state."]
-pub struct CONF_BITLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONF_BITLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0003_ffff) | (value as u32 & 0x0003_ffff);
-        self.w
-    }
-}
+pub type CONF_BITLEN_W<'a> = crate::FieldWriter<'a, u32, CMD_SPEC, u32, u32, 18, 0>;
 #[doc = "Field `UPDATE` reader - Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode."]
-pub struct UPDATE_R(crate::FieldReader<bool>);
-impl UPDATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UPDATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UPDATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UPDATE_R = crate::BitReader<bool>;
 #[doc = "Field `UPDATE` writer - Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode."]
-pub struct UPDATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UPDATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type UPDATE_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 23>;
 #[doc = "Field `USR` reader - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
-pub struct USR_R(crate::FieldReader<bool>);
-impl USR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_R = crate::BitReader<bool>;
 #[doc = "Field `USR` writer - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
-pub struct USR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type USR_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 24>;
 impl R {
     #[doc = "Bits 0:17 - Define the APB cycles of SPI_CONF state. Can be configured in CONF state."]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bits 0:17 - Define the APB cycles of SPI_CONF state. Can be configured in CONF state."]
     #[inline(always)]
     pub fn conf_bitlen(&mut self) -> CONF_BITLEN_W {
-        CONF_BITLEN_W { w: self }
+        CONF_BITLEN_W::new(self)
     }
     #[doc = "Bit 23 - Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode."]
     #[inline(always)]
     pub fn update(&mut self) -> UPDATE_W {
-        UPDATE_W { w: self }
+        UPDATE_W::new(self)
     }
     #[doc = "Bit 24 - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
     #[inline(always)]
     pub fn usr(&mut self) -> USR_W {
-        USR_W { w: self }
+        USR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

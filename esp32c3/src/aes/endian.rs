@@ -35,32 +35,9 @@ impl From<crate::W<ENDIAN_SPEC>> for W {
     }
 }
 #[doc = "Field `ENDIAN` reader - endian. \\[1:0\\] key endian, \\[3:2\\] text_in endian or in_stream endian, \\[5:4\\] text_out endian or out_stream endian"]
-pub struct ENDIAN_R(crate::FieldReader<u8>);
-impl ENDIAN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ENDIAN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENDIAN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENDIAN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ENDIAN` writer - endian. \\[1:0\\] key endian, \\[3:2\\] text_in endian or in_stream endian, \\[5:4\\] text_out endian or out_stream endian"]
-pub struct ENDIAN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENDIAN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type ENDIAN_W<'a> = crate::FieldWriter<'a, u32, ENDIAN_SPEC, u8, u8, 6, 0>;
 impl R {
     #[doc = "Bits 0:5 - endian. \\[1:0\\] key endian, \\[3:2\\] text_in endian or in_stream endian, \\[5:4\\] text_out endian or out_stream endian"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:5 - endian. \\[1:0\\] key endian, \\[3:2\\] text_in endian or in_stream endian, \\[5:4\\] text_out endian or out_stream endian"]
     #[inline(always)]
     pub fn endian(&mut self) -> ENDIAN_W {
-        ENDIAN_W { w: self }
+        ENDIAN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

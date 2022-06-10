@@ -35,42 +35,9 @@ impl From<crate::W<APPCPU_CTRL_B_SPEC>> for W {
     }
 }
 #[doc = "Field `APPCPU_CLKGATE_EN` reader - "]
-pub struct APPCPU_CLKGATE_EN_R(crate::FieldReader<bool>);
-impl APPCPU_CLKGATE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APPCPU_CLKGATE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APPCPU_CLKGATE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APPCPU_CLKGATE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `APPCPU_CLKGATE_EN` writer - "]
-pub struct APPCPU_CLKGATE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APPCPU_CLKGATE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type APPCPU_CLKGATE_EN_W<'a> = crate::BitWriter<'a, u32, APPCPU_CTRL_B_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn appcpu_clkgate_en(&mut self) -> APPCPU_CLKGATE_EN_W {
-        APPCPU_CLKGATE_EN_W { w: self }
+        APPCPU_CLKGATE_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

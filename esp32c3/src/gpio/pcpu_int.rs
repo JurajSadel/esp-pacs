@@ -14,20 +14,7 @@ impl From<crate::R<PCPU_INT_SPEC>> for R {
     }
 }
 #[doc = "Field `PROCPU_INT` reader - GPIO PRO_CPU interrupt status register for GPIO0-25"]
-pub struct PROCPU_INT_R(crate::FieldReader<u32>);
-impl PROCPU_INT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PROCPU_INT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROCPU_INT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PROCPU_INT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:25 - GPIO PRO_CPU interrupt status register for GPIO0-25"]
     #[inline(always)]

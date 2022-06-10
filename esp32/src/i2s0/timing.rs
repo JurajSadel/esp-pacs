@@ -35,413 +35,61 @@ impl From<crate::W<TIMING_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_BCK_IN_DELAY` reader - "]
-pub struct TX_BCK_IN_DELAY_R(crate::FieldReader<u8>);
-impl TX_BCK_IN_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_BCK_IN_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_BCK_IN_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_BCK_IN_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_BCK_IN_DELAY` writer - "]
-pub struct TX_BCK_IN_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_BCK_IN_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type TX_BCK_IN_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `TX_WS_IN_DELAY` reader - "]
-pub struct TX_WS_IN_DELAY_R(crate::FieldReader<u8>);
-impl TX_WS_IN_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_WS_IN_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_WS_IN_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_WS_IN_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_WS_IN_DELAY` writer - "]
-pub struct TX_WS_IN_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_WS_IN_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type TX_WS_IN_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `RX_BCK_IN_DELAY` reader - "]
-pub struct RX_BCK_IN_DELAY_R(crate::FieldReader<u8>);
-impl RX_BCK_IN_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_BCK_IN_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_BCK_IN_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_BCK_IN_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_BCK_IN_DELAY` writer - "]
-pub struct RX_BCK_IN_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_BCK_IN_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type RX_BCK_IN_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `RX_WS_IN_DELAY` reader - "]
-pub struct RX_WS_IN_DELAY_R(crate::FieldReader<u8>);
-impl RX_WS_IN_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_WS_IN_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_WS_IN_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_WS_IN_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_WS_IN_DELAY` writer - "]
-pub struct RX_WS_IN_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_WS_IN_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type RX_WS_IN_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `RX_SD_IN_DELAY` reader - "]
-pub struct RX_SD_IN_DELAY_R(crate::FieldReader<u8>);
-impl RX_SD_IN_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_SD_IN_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_SD_IN_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_SD_IN_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_SD_IN_DELAY` writer - "]
-pub struct RX_SD_IN_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_SD_IN_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type RX_SD_IN_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `TX_BCK_OUT_DELAY` reader - "]
-pub struct TX_BCK_OUT_DELAY_R(crate::FieldReader<u8>);
-impl TX_BCK_OUT_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_BCK_OUT_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_BCK_OUT_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_BCK_OUT_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_BCK_OUT_DELAY` writer - "]
-pub struct TX_BCK_OUT_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_BCK_OUT_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type TX_BCK_OUT_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 10>;
 #[doc = "Field `TX_WS_OUT_DELAY` reader - "]
-pub struct TX_WS_OUT_DELAY_R(crate::FieldReader<u8>);
-impl TX_WS_OUT_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_WS_OUT_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_WS_OUT_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_WS_OUT_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_WS_OUT_DELAY` writer - "]
-pub struct TX_WS_OUT_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_WS_OUT_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type TX_WS_OUT_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 12>;
 #[doc = "Field `TX_SD_OUT_DELAY` reader - "]
-pub struct TX_SD_OUT_DELAY_R(crate::FieldReader<u8>);
-impl TX_SD_OUT_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_SD_OUT_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_SD_OUT_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_SD_OUT_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_SD_OUT_DELAY` writer - "]
-pub struct TX_SD_OUT_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_SD_OUT_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type TX_SD_OUT_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 14>;
 #[doc = "Field `RX_WS_OUT_DELAY` reader - "]
-pub struct RX_WS_OUT_DELAY_R(crate::FieldReader<u8>);
-impl RX_WS_OUT_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_WS_OUT_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_WS_OUT_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_WS_OUT_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_WS_OUT_DELAY` writer - "]
-pub struct RX_WS_OUT_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_WS_OUT_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type RX_WS_OUT_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 16>;
 #[doc = "Field `RX_BCK_OUT_DELAY` reader - "]
-pub struct RX_BCK_OUT_DELAY_R(crate::FieldReader<u8>);
-impl RX_BCK_OUT_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_BCK_OUT_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_BCK_OUT_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_BCK_OUT_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_BCK_OUT_DELAY` writer - "]
-pub struct RX_BCK_OUT_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_BCK_OUT_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
-        self.w
-    }
-}
+pub type RX_BCK_OUT_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 18>;
 #[doc = "Field `TX_DSYNC_SW` reader - "]
-pub struct TX_DSYNC_SW_R(crate::FieldReader<bool>);
-impl TX_DSYNC_SW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_DSYNC_SW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DSYNC_SW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_DSYNC_SW_R = crate::BitReader<bool>;
 #[doc = "Field `TX_DSYNC_SW` writer - "]
-pub struct TX_DSYNC_SW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DSYNC_SW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type TX_DSYNC_SW_W<'a> = crate::BitWriter<'a, u32, TIMING_SPEC, bool, 20>;
 #[doc = "Field `RX_DSYNC_SW` reader - "]
-pub struct RX_DSYNC_SW_R(crate::FieldReader<bool>);
-impl RX_DSYNC_SW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_DSYNC_SW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_DSYNC_SW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_DSYNC_SW_R = crate::BitReader<bool>;
 #[doc = "Field `RX_DSYNC_SW` writer - "]
-pub struct RX_DSYNC_SW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_DSYNC_SW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type RX_DSYNC_SW_W<'a> = crate::BitWriter<'a, u32, TIMING_SPEC, bool, 21>;
 #[doc = "Field `DATA_ENABLE_DELAY` reader - "]
-pub struct DATA_ENABLE_DELAY_R(crate::FieldReader<u8>);
-impl DATA_ENABLE_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DATA_ENABLE_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_ENABLE_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATA_ENABLE_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DATA_ENABLE_DELAY` writer - "]
-pub struct DATA_ENABLE_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATA_ENABLE_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
-        self.w
-    }
-}
+pub type DATA_ENABLE_DELAY_W<'a> = crate::FieldWriter<'a, u32, TIMING_SPEC, u8, u8, 2, 22>;
 #[doc = "Field `TX_BCK_IN_INV` reader - "]
-pub struct TX_BCK_IN_INV_R(crate::FieldReader<bool>);
-impl TX_BCK_IN_INV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_BCK_IN_INV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_BCK_IN_INV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_BCK_IN_INV_R = crate::BitReader<bool>;
 #[doc = "Field `TX_BCK_IN_INV` writer - "]
-pub struct TX_BCK_IN_INV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_BCK_IN_INV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type TX_BCK_IN_INV_W<'a> = crate::BitWriter<'a, u32, TIMING_SPEC, bool, 24>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -518,72 +166,72 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn tx_bck_in_delay(&mut self) -> TX_BCK_IN_DELAY_W {
-        TX_BCK_IN_DELAY_W { w: self }
+        TX_BCK_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
     pub fn tx_ws_in_delay(&mut self) -> TX_WS_IN_DELAY_W {
-        TX_WS_IN_DELAY_W { w: self }
+        TX_WS_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
     pub fn rx_bck_in_delay(&mut self) -> RX_BCK_IN_DELAY_W {
-        RX_BCK_IN_DELAY_W { w: self }
+        RX_BCK_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
     pub fn rx_ws_in_delay(&mut self) -> RX_WS_IN_DELAY_W {
-        RX_WS_IN_DELAY_W { w: self }
+        RX_WS_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     pub fn rx_sd_in_delay(&mut self) -> RX_SD_IN_DELAY_W {
-        RX_SD_IN_DELAY_W { w: self }
+        RX_SD_IN_DELAY_W::new(self)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
     pub fn tx_bck_out_delay(&mut self) -> TX_BCK_OUT_DELAY_W {
-        TX_BCK_OUT_DELAY_W { w: self }
+        TX_BCK_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     pub fn tx_ws_out_delay(&mut self) -> TX_WS_OUT_DELAY_W {
-        TX_WS_OUT_DELAY_W { w: self }
+        TX_WS_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     pub fn tx_sd_out_delay(&mut self) -> TX_SD_OUT_DELAY_W {
-        TX_SD_OUT_DELAY_W { w: self }
+        TX_SD_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     pub fn rx_ws_out_delay(&mut self) -> RX_WS_OUT_DELAY_W {
-        RX_WS_OUT_DELAY_W { w: self }
+        RX_WS_OUT_DELAY_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     pub fn rx_bck_out_delay(&mut self) -> RX_BCK_OUT_DELAY_W {
-        RX_BCK_OUT_DELAY_W { w: self }
+        RX_BCK_OUT_DELAY_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn tx_dsync_sw(&mut self) -> TX_DSYNC_SW_W {
-        TX_DSYNC_SW_W { w: self }
+        TX_DSYNC_SW_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     pub fn rx_dsync_sw(&mut self) -> RX_DSYNC_SW_W {
-        RX_DSYNC_SW_W { w: self }
+        RX_DSYNC_SW_W::new(self)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
     pub fn data_enable_delay(&mut self) -> DATA_ENABLE_DELAY_W {
-        DATA_ENABLE_DELAY_W { w: self }
+        DATA_ENABLE_DELAY_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     pub fn tx_bck_in_inv(&mut self) -> TX_BCK_IN_INV_W {
-        TX_BCK_IN_INV_W { w: self }
+        TX_BCK_IN_INV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

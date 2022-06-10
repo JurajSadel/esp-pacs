@@ -35,32 +35,9 @@ impl From<crate::W<ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE` reader - GPIO0~17 output enable"]
-pub struct ENABLE_R(crate::FieldReader<u32>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ENABLE` writer - GPIO0~17 output enable"]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0003_ffff << 14)) | ((value as u32 & 0x0003_ffff) << 14);
-        self.w
-    }
-}
+pub type ENABLE_W<'a> = crate::FieldWriter<'a, u32, ENABLE_SPEC, u32, u32, 18, 14>;
 impl R {
     #[doc = "Bits 14:31 - GPIO0~17 output enable"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 14:31 - GPIO0~17 output enable"]
     #[inline(always)]
     pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+        ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,50 +14,11 @@ impl From<crate::R<CORE_0_IRAM0_EXCEPTION_MONITOR_0_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_IRAM0_RECORDING_ADDR_0` reader - reg_core_0_iram0_recording_addr_0"]
-pub struct CORE_0_IRAM0_RECORDING_ADDR_0_R(crate::FieldReader<u32>);
-impl CORE_0_IRAM0_RECORDING_ADDR_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_0_IRAM0_RECORDING_ADDR_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_IRAM0_RECORDING_ADDR_0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_IRAM0_RECORDING_ADDR_0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_0_IRAM0_RECORDING_WR_0` reader - reg_core_0_iram0_recording_wr_0"]
-pub struct CORE_0_IRAM0_RECORDING_WR_0_R(crate::FieldReader<bool>);
-impl CORE_0_IRAM0_RECORDING_WR_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_IRAM0_RECORDING_WR_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_IRAM0_RECORDING_WR_0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_IRAM0_RECORDING_WR_0_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_IRAM0_RECORDING_LOADSTORE_0` reader - reg_core_0_iram0_recording_loadstore_0"]
-pub struct CORE_0_IRAM0_RECORDING_LOADSTORE_0_R(crate::FieldReader<bool>);
-impl CORE_0_IRAM0_RECORDING_LOADSTORE_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_IRAM0_RECORDING_LOADSTORE_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_IRAM0_RECORDING_LOADSTORE_0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_IRAM0_RECORDING_LOADSTORE_0_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:23 - reg_core_0_iram0_recording_addr_0"]
     #[inline(always)]

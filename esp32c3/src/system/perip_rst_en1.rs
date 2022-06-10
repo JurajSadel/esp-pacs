@@ -35,375 +35,45 @@ impl From<crate::W<PERIP_RST_EN1_SPEC>> for W {
     }
 }
 #[doc = "Field `CRYPTO_AES_RST` reader - reg_crypto_aes_rst"]
-pub struct CRYPTO_AES_RST_R(crate::FieldReader<bool>);
-impl CRYPTO_AES_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_AES_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_AES_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_AES_RST_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_AES_RST` writer - reg_crypto_aes_rst"]
-pub struct CRYPTO_AES_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_AES_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CRYPTO_AES_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, 1>;
 #[doc = "Field `CRYPTO_SHA_RST` reader - reg_crypto_sha_rst"]
-pub struct CRYPTO_SHA_RST_R(crate::FieldReader<bool>);
-impl CRYPTO_SHA_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_SHA_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_SHA_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_SHA_RST_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_SHA_RST` writer - reg_crypto_sha_rst"]
-pub struct CRYPTO_SHA_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_SHA_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CRYPTO_SHA_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, 2>;
 #[doc = "Field `CRYPTO_RSA_RST` reader - reg_crypto_rsa_rst"]
-pub struct CRYPTO_RSA_RST_R(crate::FieldReader<bool>);
-impl CRYPTO_RSA_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_RSA_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_RSA_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_RSA_RST_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_RSA_RST` writer - reg_crypto_rsa_rst"]
-pub struct CRYPTO_RSA_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_RSA_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CRYPTO_RSA_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, 3>;
 #[doc = "Field `CRYPTO_DS_RST` reader - reg_crypto_ds_rst"]
-pub struct CRYPTO_DS_RST_R(crate::FieldReader<bool>);
-impl CRYPTO_DS_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_DS_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_DS_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_DS_RST_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_DS_RST` writer - reg_crypto_ds_rst"]
-pub struct CRYPTO_DS_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_DS_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type CRYPTO_DS_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, 4>;
 #[doc = "Field `CRYPTO_HMAC_RST` reader - reg_crypto_hmac_rst"]
-pub struct CRYPTO_HMAC_RST_R(crate::FieldReader<bool>);
-impl CRYPTO_HMAC_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_HMAC_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_HMAC_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_HMAC_RST_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_HMAC_RST` writer - reg_crypto_hmac_rst"]
-pub struct CRYPTO_HMAC_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_HMAC_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CRYPTO_HMAC_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, 5>;
 #[doc = "Field `DMA_RST` reader - reg_dma_rst"]
-pub struct DMA_RST_R(crate::FieldReader<bool>);
-impl DMA_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_RST_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_RST` writer - reg_dma_rst"]
-pub struct DMA_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type DMA_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, 6>;
 #[doc = "Field `SDIO_HOST_RST` reader - reg_sdio_host_rst"]
-pub struct SDIO_HOST_RST_R(crate::FieldReader<bool>);
-impl SDIO_HOST_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_HOST_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_HOST_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_HOST_RST_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_HOST_RST` writer - reg_sdio_host_rst"]
-pub struct SDIO_HOST_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_HOST_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type SDIO_HOST_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, 7>;
 #[doc = "Field `LCD_CAM_RST` reader - reg_lcd_cam_rst"]
-pub struct LCD_CAM_RST_R(crate::FieldReader<bool>);
-impl LCD_CAM_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_CAM_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_CAM_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_CAM_RST_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_CAM_RST` writer - reg_lcd_cam_rst"]
-pub struct LCD_CAM_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_CAM_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type LCD_CAM_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, 8>;
 #[doc = "Field `UART2_RST` reader - reg_uart2_rst"]
-pub struct UART2_RST_R(crate::FieldReader<bool>);
-impl UART2_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART2_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART2_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART2_RST_R = crate::BitReader<bool>;
 #[doc = "Field `UART2_RST` writer - reg_uart2_rst"]
-pub struct UART2_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART2_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type UART2_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, 9>;
 #[doc = "Field `TSENS_RST` reader - reg_tsens_rst"]
-pub struct TSENS_RST_R(crate::FieldReader<bool>);
-impl TSENS_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TSENS_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TSENS_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TSENS_RST_R = crate::BitReader<bool>;
 #[doc = "Field `TSENS_RST` writer - reg_tsens_rst"]
-pub struct TSENS_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TSENS_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type TSENS_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN1_SPEC, bool, 10>;
 impl R {
     #[doc = "Bit 1 - reg_crypto_aes_rst"]
     #[inline(always)]
@@ -460,52 +130,52 @@ impl W {
     #[doc = "Bit 1 - reg_crypto_aes_rst"]
     #[inline(always)]
     pub fn crypto_aes_rst(&mut self) -> CRYPTO_AES_RST_W {
-        CRYPTO_AES_RST_W { w: self }
+        CRYPTO_AES_RST_W::new(self)
     }
     #[doc = "Bit 2 - reg_crypto_sha_rst"]
     #[inline(always)]
     pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W {
-        CRYPTO_SHA_RST_W { w: self }
+        CRYPTO_SHA_RST_W::new(self)
     }
     #[doc = "Bit 3 - reg_crypto_rsa_rst"]
     #[inline(always)]
     pub fn crypto_rsa_rst(&mut self) -> CRYPTO_RSA_RST_W {
-        CRYPTO_RSA_RST_W { w: self }
+        CRYPTO_RSA_RST_W::new(self)
     }
     #[doc = "Bit 4 - reg_crypto_ds_rst"]
     #[inline(always)]
     pub fn crypto_ds_rst(&mut self) -> CRYPTO_DS_RST_W {
-        CRYPTO_DS_RST_W { w: self }
+        CRYPTO_DS_RST_W::new(self)
     }
     #[doc = "Bit 5 - reg_crypto_hmac_rst"]
     #[inline(always)]
     pub fn crypto_hmac_rst(&mut self) -> CRYPTO_HMAC_RST_W {
-        CRYPTO_HMAC_RST_W { w: self }
+        CRYPTO_HMAC_RST_W::new(self)
     }
     #[doc = "Bit 6 - reg_dma_rst"]
     #[inline(always)]
     pub fn dma_rst(&mut self) -> DMA_RST_W {
-        DMA_RST_W { w: self }
+        DMA_RST_W::new(self)
     }
     #[doc = "Bit 7 - reg_sdio_host_rst"]
     #[inline(always)]
     pub fn sdio_host_rst(&mut self) -> SDIO_HOST_RST_W {
-        SDIO_HOST_RST_W { w: self }
+        SDIO_HOST_RST_W::new(self)
     }
     #[doc = "Bit 8 - reg_lcd_cam_rst"]
     #[inline(always)]
     pub fn lcd_cam_rst(&mut self) -> LCD_CAM_RST_W {
-        LCD_CAM_RST_W { w: self }
+        LCD_CAM_RST_W::new(self)
     }
     #[doc = "Bit 9 - reg_uart2_rst"]
     #[inline(always)]
     pub fn uart2_rst(&mut self) -> UART2_RST_W {
-        UART2_RST_W { w: self }
+        UART2_RST_W::new(self)
     }
     #[doc = "Bit 10 - reg_tsens_rst"]
     #[inline(always)]
     pub fn tsens_rst(&mut self) -> TSENS_RST_W {
-        TSENS_RST_W { w: self }
+        TSENS_RST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

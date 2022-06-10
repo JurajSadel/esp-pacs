@@ -35,32 +35,9 @@ impl From<crate::W<SDA_SAMPLE_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME` reader - This register is used to configure the clock num I2C used to sample data on SDA after the posedge of SCL"]
-pub struct TIME_R(crate::FieldReader<u16>);
-impl TIME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TIME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIME` writer - This register is used to configure the clock num I2C used to sample data on SDA after the posedge of SCL"]
-pub struct TIME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIME_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type TIME_W<'a> = crate::FieldWriter<'a, u32, SDA_SAMPLE_SPEC, u16, u16, 10, 0>;
 impl R {
     #[doc = "Bits 0:9 - This register is used to configure the clock num I2C used to sample data on SDA after the posedge of SCL"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:9 - This register is used to configure the clock num I2C used to sample data on SDA after the posedge of SCL"]
     #[inline(always)]
     pub fn time(&mut self) -> TIME_W {
-        TIME_W { w: self }
+        TIME_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,65 +14,13 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `PER_END_INT_ST` reader - The status bit for SPI_MEM_PER_END_INT interrupt."]
-pub struct PER_END_INT_ST_R(crate::FieldReader<bool>);
-impl PER_END_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PER_END_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PER_END_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PER_END_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `PES_END_INT_ST` reader - The status bit for SPI_MEM_PES_END_INT interrupt."]
-pub struct PES_END_INT_ST_R(crate::FieldReader<bool>);
-impl PES_END_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PES_END_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PES_END_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PES_END_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TOTAL_TRANS_END_INT_ST` reader - The status bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
-pub struct TOTAL_TRANS_END_INT_ST_R(crate::FieldReader<bool>);
-impl TOTAL_TRANS_END_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOTAL_TRANS_END_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOTAL_TRANS_END_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOTAL_TRANS_END_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `BROWN_OUT_INT_ST` reader - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
-pub struct BROWN_OUT_INT_ST_R(crate::FieldReader<bool>);
-impl BROWN_OUT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BROWN_OUT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BROWN_OUT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BROWN_OUT_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The status bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]

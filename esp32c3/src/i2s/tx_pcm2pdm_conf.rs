@@ -35,389 +35,58 @@ impl From<crate::W<TX_PCM2PDM_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_PDM_HP_BYPASS` reader - I2S TX PDM bypass hp filter or not. The option has been removed."]
-pub struct TX_PDM_HP_BYPASS_R(crate::FieldReader<bool>);
-impl TX_PDM_HP_BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_PDM_HP_BYPASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_HP_BYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_HP_BYPASS_R = crate::BitReader<bool>;
 #[doc = "Field `TX_PDM_HP_BYPASS` writer - I2S TX PDM bypass hp filter or not. The option has been removed."]
-pub struct TX_PDM_HP_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_HP_BYPASS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TX_PDM_HP_BYPASS_W<'a> = crate::BitWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, bool, 0>;
 #[doc = "Field `TX_PDM_SINC_OSR2` reader - I2S TX PDM OSR2 value"]
-pub struct TX_PDM_SINC_OSR2_R(crate::FieldReader<u8>);
-impl TX_PDM_SINC_OSR2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_PDM_SINC_OSR2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_SINC_OSR2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_SINC_OSR2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_PDM_SINC_OSR2` writer - I2S TX PDM OSR2 value"]
-pub struct TX_PDM_SINC_OSR2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_SINC_OSR2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 1)) | ((value as u32 & 0x0f) << 1);
-        self.w
-    }
-}
+pub type TX_PDM_SINC_OSR2_W<'a> = crate::FieldWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, u8, u8, 4, 1>;
 #[doc = "Field `TX_PDM_PRESCALE` reader - I2S TX PDM prescale for sigmadelta"]
-pub struct TX_PDM_PRESCALE_R(crate::FieldReader<u8>);
-impl TX_PDM_PRESCALE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_PDM_PRESCALE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_PRESCALE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_PRESCALE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_PDM_PRESCALE` writer - I2S TX PDM prescale for sigmadelta"]
-pub struct TX_PDM_PRESCALE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_PRESCALE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 5)) | ((value as u32 & 0xff) << 5);
-        self.w
-    }
-}
+pub type TX_PDM_PRESCALE_W<'a> = crate::FieldWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, u8, u8, 8, 5>;
 #[doc = "Field `TX_PDM_HP_IN_SHIFT` reader - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_HP_IN_SHIFT_R(crate::FieldReader<u8>);
-impl TX_PDM_HP_IN_SHIFT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_PDM_HP_IN_SHIFT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_HP_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_HP_IN_SHIFT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_PDM_HP_IN_SHIFT` writer - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_HP_IN_SHIFT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_HP_IN_SHIFT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 13)) | ((value as u32 & 3) << 13);
-        self.w
-    }
-}
+pub type TX_PDM_HP_IN_SHIFT_W<'a> =
+    crate::FieldWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, u8, u8, 2, 13>;
 #[doc = "Field `TX_PDM_LP_IN_SHIFT` reader - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_LP_IN_SHIFT_R(crate::FieldReader<u8>);
-impl TX_PDM_LP_IN_SHIFT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_PDM_LP_IN_SHIFT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_LP_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_LP_IN_SHIFT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_PDM_LP_IN_SHIFT` writer - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_LP_IN_SHIFT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_LP_IN_SHIFT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 15)) | ((value as u32 & 3) << 15);
-        self.w
-    }
-}
+pub type TX_PDM_LP_IN_SHIFT_W<'a> =
+    crate::FieldWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, u8, u8, 2, 15>;
 #[doc = "Field `TX_PDM_SINC_IN_SHIFT` reader - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_SINC_IN_SHIFT_R(crate::FieldReader<u8>);
-impl TX_PDM_SINC_IN_SHIFT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_PDM_SINC_IN_SHIFT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_SINC_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_SINC_IN_SHIFT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_PDM_SINC_IN_SHIFT` writer - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_SINC_IN_SHIFT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_SINC_IN_SHIFT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
-        self.w
-    }
-}
+pub type TX_PDM_SINC_IN_SHIFT_W<'a> =
+    crate::FieldWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, u8, u8, 2, 17>;
 #[doc = "Field `TX_PDM_SIGMADELTA_IN_SHIFT` reader - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_SIGMADELTA_IN_SHIFT_R(crate::FieldReader<u8>);
-impl TX_PDM_SIGMADELTA_IN_SHIFT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_PDM_SIGMADELTA_IN_SHIFT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_SIGMADELTA_IN_SHIFT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_SIGMADELTA_IN_SHIFT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_PDM_SIGMADELTA_IN_SHIFT` writer - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
-pub struct TX_PDM_SIGMADELTA_IN_SHIFT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_SIGMADELTA_IN_SHIFT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 19)) | ((value as u32 & 3) << 19);
-        self.w
-    }
-}
+pub type TX_PDM_SIGMADELTA_IN_SHIFT_W<'a> =
+    crate::FieldWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, u8, u8, 2, 19>;
 #[doc = "Field `TX_PDM_SIGMADELTA_DITHER2` reader - I2S TX PDM sigmadelta dither2 value"]
-pub struct TX_PDM_SIGMADELTA_DITHER2_R(crate::FieldReader<bool>);
-impl TX_PDM_SIGMADELTA_DITHER2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_PDM_SIGMADELTA_DITHER2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_SIGMADELTA_DITHER2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_SIGMADELTA_DITHER2_R = crate::BitReader<bool>;
 #[doc = "Field `TX_PDM_SIGMADELTA_DITHER2` writer - I2S TX PDM sigmadelta dither2 value"]
-pub struct TX_PDM_SIGMADELTA_DITHER2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_SIGMADELTA_DITHER2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type TX_PDM_SIGMADELTA_DITHER2_W<'a> =
+    crate::BitWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, bool, 21>;
 #[doc = "Field `TX_PDM_SIGMADELTA_DITHER` reader - I2S TX PDM sigmadelta dither value"]
-pub struct TX_PDM_SIGMADELTA_DITHER_R(crate::FieldReader<bool>);
-impl TX_PDM_SIGMADELTA_DITHER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_PDM_SIGMADELTA_DITHER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_SIGMADELTA_DITHER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_SIGMADELTA_DITHER_R = crate::BitReader<bool>;
 #[doc = "Field `TX_PDM_SIGMADELTA_DITHER` writer - I2S TX PDM sigmadelta dither value"]
-pub struct TX_PDM_SIGMADELTA_DITHER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_SIGMADELTA_DITHER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type TX_PDM_SIGMADELTA_DITHER_W<'a> = crate::BitWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, bool, 22>;
 #[doc = "Field `TX_PDM_DAC_2OUT_EN` reader - I2S TX PDM dac mode enable"]
-pub struct TX_PDM_DAC_2OUT_EN_R(crate::FieldReader<bool>);
-impl TX_PDM_DAC_2OUT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_PDM_DAC_2OUT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_DAC_2OUT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_DAC_2OUT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TX_PDM_DAC_2OUT_EN` writer - I2S TX PDM dac mode enable"]
-pub struct TX_PDM_DAC_2OUT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_DAC_2OUT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type TX_PDM_DAC_2OUT_EN_W<'a> = crate::BitWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, bool, 23>;
 #[doc = "Field `TX_PDM_DAC_MODE_EN` reader - I2S TX PDM dac 2channel enable"]
-pub struct TX_PDM_DAC_MODE_EN_R(crate::FieldReader<bool>);
-impl TX_PDM_DAC_MODE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_PDM_DAC_MODE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_PDM_DAC_MODE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_PDM_DAC_MODE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TX_PDM_DAC_MODE_EN` writer - I2S TX PDM dac 2channel enable"]
-pub struct TX_PDM_DAC_MODE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_PDM_DAC_MODE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type TX_PDM_DAC_MODE_EN_W<'a> = crate::BitWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, bool, 24>;
 #[doc = "Field `PCM2PDM_CONV_EN` reader - I2S TX PDM Converter enable"]
-pub struct PCM2PDM_CONV_EN_R(crate::FieldReader<bool>);
-impl PCM2PDM_CONV_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PCM2PDM_CONV_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PCM2PDM_CONV_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PCM2PDM_CONV_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PCM2PDM_CONV_EN` writer - I2S TX PDM Converter enable"]
-pub struct PCM2PDM_CONV_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PCM2PDM_CONV_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type PCM2PDM_CONV_EN_W<'a> = crate::BitWriter<'a, u32, TX_PCM2PDM_CONF_SPEC, bool, 25>;
 impl R {
     #[doc = "Bit 0 - I2S TX PDM bypass hp filter or not. The option has been removed."]
     #[inline(always)]
@@ -484,62 +153,62 @@ impl W {
     #[doc = "Bit 0 - I2S TX PDM bypass hp filter or not. The option has been removed."]
     #[inline(always)]
     pub fn tx_pdm_hp_bypass(&mut self) -> TX_PDM_HP_BYPASS_W {
-        TX_PDM_HP_BYPASS_W { w: self }
+        TX_PDM_HP_BYPASS_W::new(self)
     }
     #[doc = "Bits 1:4 - I2S TX PDM OSR2 value"]
     #[inline(always)]
     pub fn tx_pdm_sinc_osr2(&mut self) -> TX_PDM_SINC_OSR2_W {
-        TX_PDM_SINC_OSR2_W { w: self }
+        TX_PDM_SINC_OSR2_W::new(self)
     }
     #[doc = "Bits 5:12 - I2S TX PDM prescale for sigmadelta"]
     #[inline(always)]
     pub fn tx_pdm_prescale(&mut self) -> TX_PDM_PRESCALE_W {
-        TX_PDM_PRESCALE_W { w: self }
+        TX_PDM_PRESCALE_W::new(self)
     }
     #[doc = "Bits 13:14 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
     pub fn tx_pdm_hp_in_shift(&mut self) -> TX_PDM_HP_IN_SHIFT_W {
-        TX_PDM_HP_IN_SHIFT_W { w: self }
+        TX_PDM_HP_IN_SHIFT_W::new(self)
     }
     #[doc = "Bits 15:16 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
     pub fn tx_pdm_lp_in_shift(&mut self) -> TX_PDM_LP_IN_SHIFT_W {
-        TX_PDM_LP_IN_SHIFT_W { w: self }
+        TX_PDM_LP_IN_SHIFT_W::new(self)
     }
     #[doc = "Bits 17:18 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
     pub fn tx_pdm_sinc_in_shift(&mut self) -> TX_PDM_SINC_IN_SHIFT_W {
-        TX_PDM_SINC_IN_SHIFT_W { w: self }
+        TX_PDM_SINC_IN_SHIFT_W::new(self)
     }
     #[doc = "Bits 19:20 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
     pub fn tx_pdm_sigmadelta_in_shift(&mut self) -> TX_PDM_SIGMADELTA_IN_SHIFT_W {
-        TX_PDM_SIGMADELTA_IN_SHIFT_W { w: self }
+        TX_PDM_SIGMADELTA_IN_SHIFT_W::new(self)
     }
     #[doc = "Bit 21 - I2S TX PDM sigmadelta dither2 value"]
     #[inline(always)]
     pub fn tx_pdm_sigmadelta_dither2(&mut self) -> TX_PDM_SIGMADELTA_DITHER2_W {
-        TX_PDM_SIGMADELTA_DITHER2_W { w: self }
+        TX_PDM_SIGMADELTA_DITHER2_W::new(self)
     }
     #[doc = "Bit 22 - I2S TX PDM sigmadelta dither value"]
     #[inline(always)]
     pub fn tx_pdm_sigmadelta_dither(&mut self) -> TX_PDM_SIGMADELTA_DITHER_W {
-        TX_PDM_SIGMADELTA_DITHER_W { w: self }
+        TX_PDM_SIGMADELTA_DITHER_W::new(self)
     }
     #[doc = "Bit 23 - I2S TX PDM dac mode enable"]
     #[inline(always)]
     pub fn tx_pdm_dac_2out_en(&mut self) -> TX_PDM_DAC_2OUT_EN_W {
-        TX_PDM_DAC_2OUT_EN_W { w: self }
+        TX_PDM_DAC_2OUT_EN_W::new(self)
     }
     #[doc = "Bit 24 - I2S TX PDM dac 2channel enable"]
     #[inline(always)]
     pub fn tx_pdm_dac_mode_en(&mut self) -> TX_PDM_DAC_MODE_EN_W {
-        TX_PDM_DAC_MODE_EN_W { w: self }
+        TX_PDM_DAC_MODE_EN_W::new(self)
     }
     #[doc = "Bit 25 - I2S TX PDM Converter enable"]
     #[inline(always)]
     pub fn pcm2pdm_conv_en(&mut self) -> PCM2PDM_CONV_EN_W {
-        PCM2PDM_CONV_EN_W { w: self }
+        PCM2PDM_CONV_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

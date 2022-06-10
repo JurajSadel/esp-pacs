@@ -35,227 +35,29 @@ impl From<crate::W<SUS_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_SUS` reader - The status of flash suspend. This bit is set when PES command is sent, and cleared when PER is sent. Only used in SPI1."]
-pub struct FLASH_SUS_R(crate::FieldReader<bool>);
-impl FLASH_SUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_SUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_SUS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_SUS_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_SUS` writer - The status of flash suspend. This bit is set when PES command is sent, and cleared when PER is sent. Only used in SPI1."]
-pub struct FLASH_SUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_SUS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type FLASH_SUS_W<'a> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, 0>;
 #[doc = "Field `FLASH_HPM_DLY_256` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after HPM command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after HPM command is sent."]
-pub struct FLASH_HPM_DLY_256_R(crate::FieldReader<bool>);
-impl FLASH_HPM_DLY_256_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_HPM_DLY_256_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_HPM_DLY_256_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_HPM_DLY_256_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_HPM_DLY_256` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after HPM command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after HPM command is sent."]
-pub struct FLASH_HPM_DLY_256_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_HPM_DLY_256_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type FLASH_HPM_DLY_256_W<'a> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, 2>;
 #[doc = "Field `FLASH_RES_DLY_256` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after RES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after RES command is sent."]
-pub struct FLASH_RES_DLY_256_R(crate::FieldReader<bool>);
-impl FLASH_RES_DLY_256_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_RES_DLY_256_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_RES_DLY_256_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_RES_DLY_256_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_RES_DLY_256` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after RES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after RES command is sent."]
-pub struct FLASH_RES_DLY_256_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_RES_DLY_256_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type FLASH_RES_DLY_256_W<'a> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, 3>;
 #[doc = "Field `FLASH_DP_DLY_256` reader - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after DP command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after DP command is sent."]
-pub struct FLASH_DP_DLY_256_R(crate::FieldReader<bool>);
-impl FLASH_DP_DLY_256_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_DP_DLY_256_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_DP_DLY_256_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_DP_DLY_256_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_DP_DLY_256` writer - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after DP command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after DP command is sent."]
-pub struct FLASH_DP_DLY_256_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_DP_DLY_256_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type FLASH_DP_DLY_256_W<'a> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, 4>;
 #[doc = "Field `FLASH_PER_DLY_256` reader - Valid when SPI_MEM_FLASH_PER_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after PER command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PER command is sent."]
-pub struct FLASH_PER_DLY_256_R(crate::FieldReader<bool>);
-impl FLASH_PER_DLY_256_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_PER_DLY_256_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_PER_DLY_256_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_PER_DLY_256_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_PER_DLY_256` writer - Valid when SPI_MEM_FLASH_PER_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after PER command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PER command is sent."]
-pub struct FLASH_PER_DLY_256_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_PER_DLY_256_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type FLASH_PER_DLY_256_W<'a> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, 5>;
 #[doc = "Field `FLASH_PES_DLY_256` reader - Valid when SPI_MEM_FLASH_PES_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after PES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PES command is sent."]
-pub struct FLASH_PES_DLY_256_R(crate::FieldReader<bool>);
-impl FLASH_PES_DLY_256_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_PES_DLY_256_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_PES_DLY_256_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_PES_DLY_256_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_PES_DLY_256` writer - Valid when SPI_MEM_FLASH_PES_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after PES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PES command is sent."]
-pub struct FLASH_PES_DLY_256_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_PES_DLY_256_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type FLASH_PES_DLY_256_W<'a> = crate::BitWriter<'a, u32, SUS_STATUS_SPEC, bool, 6>;
 impl R {
     #[doc = "Bit 0 - The status of flash suspend. This bit is set when PES command is sent, and cleared when PER is sent. Only used in SPI1."]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 0 - The status of flash suspend. This bit is set when PES command is sent, and cleared when PER is sent. Only used in SPI1."]
     #[inline(always)]
     pub fn flash_sus(&mut self) -> FLASH_SUS_W {
-        FLASH_SUS_W { w: self }
+        FLASH_SUS_W::new(self)
     }
     #[doc = "Bit 2 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after HPM command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after HPM command is sent."]
     #[inline(always)]
     pub fn flash_hpm_dly_256(&mut self) -> FLASH_HPM_DLY_256_W {
-        FLASH_HPM_DLY_256_W { w: self }
+        FLASH_HPM_DLY_256_W::new(self)
     }
     #[doc = "Bit 3 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after RES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after RES command is sent."]
     #[inline(always)]
     pub fn flash_res_dly_256(&mut self) -> FLASH_RES_DLY_256_W {
-        FLASH_RES_DLY_256_W { w: self }
+        FLASH_RES_DLY_256_W::new(self)
     }
     #[doc = "Bit 4 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after DP command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after DP command is sent."]
     #[inline(always)]
     pub fn flash_dp_dly_256(&mut self) -> FLASH_DP_DLY_256_W {
-        FLASH_DP_DLY_256_W { w: self }
+        FLASH_DP_DLY_256_W::new(self)
     }
     #[doc = "Bit 5 - Valid when SPI_MEM_FLASH_PER_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after PER command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PER command is sent."]
     #[inline(always)]
     pub fn flash_per_dly_256(&mut self) -> FLASH_PER_DLY_256_W {
-        FLASH_PER_DLY_256_W { w: self }
+        FLASH_PER_DLY_256_W::new(self)
     }
     #[doc = "Bit 6 - Valid when SPI_MEM_FLASH_PES_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 256) SPI_CLK cycles after PES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PES command is sent."]
     #[inline(always)]
     pub fn flash_pes_dly_256(&mut self) -> FLASH_PES_DLY_256_W {
-        FLASH_PES_DLY_256_W { w: self }
+        FLASH_PES_DLY_256_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

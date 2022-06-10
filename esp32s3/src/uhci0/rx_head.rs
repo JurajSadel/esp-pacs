@@ -14,20 +14,7 @@ impl From<crate::R<RX_HEAD_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_HEAD` reader - This register stores the header of the current received packet."]
-pub struct RX_HEAD_R(crate::FieldReader<u32>);
-impl RX_HEAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RX_HEAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_HEAD_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_HEAD_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the header of the current received packet."]
     #[inline(always)]

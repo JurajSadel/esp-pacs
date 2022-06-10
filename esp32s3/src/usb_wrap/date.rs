@@ -35,32 +35,9 @@ impl From<crate::W<DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `USB_WRAP_DATE` reader - Date register"]
-pub struct USB_WRAP_DATE_R(crate::FieldReader<u32>);
-impl USB_WRAP_DATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        USB_WRAP_DATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_WRAP_DATE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_WRAP_DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `USB_WRAP_DATE` writer - Date register"]
-pub struct USB_WRAP_DATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USB_WRAP_DATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type USB_WRAP_DATE_W<'a> = crate::FieldWriter<'a, u32, DATE_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - Date register"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - Date register"]
     #[inline(always)]
     pub fn usb_wrap_date(&mut self) -> USB_WRAP_DATE_W {
-        USB_WRAP_DATE_W { w: self }
+        USB_WRAP_DATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

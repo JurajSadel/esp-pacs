@@ -14,35 +14,9 @@ impl From<crate::R<_0_DSCR_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_RX_DSCR_CNT_LAT` reader - "]
-pub struct SLC0_RX_DSCR_CNT_LAT_R(crate::FieldReader<u16>);
-impl SLC0_RX_DSCR_CNT_LAT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SLC0_RX_DSCR_CNT_LAT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_DSCR_CNT_LAT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_DSCR_CNT_LAT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC0_RX_GET_EOF_OCC` reader - "]
-pub struct SLC0_RX_GET_EOF_OCC_R(crate::FieldReader<bool>);
-impl SLC0_RX_GET_EOF_OCC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_RX_GET_EOF_OCC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_GET_EOF_OCC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_GET_EOF_OCC_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:9"]
     #[inline(always)]

@@ -35,355 +35,47 @@ impl From<crate::W<DMA_INT_RAW_SPEC>> for W {
     }
 }
 #[doc = "Field `INLINK_DSCR_EMPTY_INT_RAW` reader - The raw bit for lack of enough inlink descriptors. Can be configured in CONF state."]
-pub struct INLINK_DSCR_EMPTY_INT_RAW_R(crate::FieldReader<bool>);
-impl INLINK_DSCR_EMPTY_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INLINK_DSCR_EMPTY_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_DSCR_EMPTY_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_DSCR_EMPTY_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `OUTLINK_DSCR_ERROR_INT_RAW` reader - The raw bit for outlink descriptor error. Can be configured in CONF state."]
-pub struct OUTLINK_DSCR_ERROR_INT_RAW_R(crate::FieldReader<bool>);
-impl OUTLINK_DSCR_ERROR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTLINK_DSCR_ERROR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_DSCR_ERROR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_DSCR_ERROR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `INLINK_DSCR_ERROR_INT_RAW` reader - The raw bit for inlink descriptor error. Can be configured in CONF state."]
-pub struct INLINK_DSCR_ERROR_INT_RAW_R(crate::FieldReader<bool>);
-impl INLINK_DSCR_ERROR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INLINK_DSCR_ERROR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_DSCR_ERROR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_DSCR_ERROR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `IN_DONE_INT_RAW` reader - The raw bit for completing usage of a inlink descriptor. Can be configured in CONF state."]
-pub struct IN_DONE_INT_RAW_R(crate::FieldReader<bool>);
-impl IN_DONE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_DONE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_DONE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `IN_ERR_EOF_INT_RAW` reader - The raw bit for receiving error. Can be configured in CONF state."]
-pub struct IN_ERR_EOF_INT_RAW_R(crate::FieldReader<bool>);
-impl IN_ERR_EOF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_ERR_EOF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_ERR_EOF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_ERR_EOF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `IN_SUC_EOF_INT_RAW` reader - The raw bit for completing receiving all the packets from host. Can be configured in CONF state."]
-pub struct IN_SUC_EOF_INT_RAW_R(crate::FieldReader<bool>);
-impl IN_SUC_EOF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_SUC_EOF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_SUC_EOF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_SUC_EOF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DONE_INT_RAW` reader - The raw bit for completing usage of a outlink descriptor. Can be configured in CONF state."]
-pub struct OUT_DONE_INT_RAW_R(crate::FieldReader<bool>);
-impl OUT_DONE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DONE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DONE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EOF_INT_RAW` reader - The raw bit for sending a packet to host done. Can be configured in CONF state."]
-pub struct OUT_EOF_INT_RAW_R(crate::FieldReader<bool>);
-impl OUT_EOF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EOF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EOF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EOF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_TOTAL_EOF_INT_RAW` reader - The raw bit for sending all the packets to host done. Can be configured in CONF state."]
-pub struct OUT_TOTAL_EOF_INT_RAW_R(crate::FieldReader<bool>);
-impl OUT_TOTAL_EOF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_TOTAL_EOF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_TOTAL_EOF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_TOTAL_EOF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `INFIFO_FULL_ERR_INT_RAW` reader - 1:SPI_DMA_INFIFO_FULL and spi_push_data_prep are valid, which means that DMA Rx buffer is full but push is valid. 0: Others. Can not be changed by CONF_buf."]
-pub struct INFIFO_FULL_ERR_INT_RAW_R(crate::FieldReader<bool>);
-impl INFIFO_FULL_ERR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INFIFO_FULL_ERR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INFIFO_FULL_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INFIFO_FULL_ERR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `OUTFIFO_EMPTY_ERR_INT_RAW` reader - 1:SPI_DMA_OUTFIFO_EMPTY and spi_pop_data_prep are valid, which means that there is no data to pop but pop is valid. 0: Others. Can not be changed by CONF_buf."]
-pub struct OUTFIFO_EMPTY_ERR_INT_RAW_R(crate::FieldReader<bool>);
-impl OUTFIFO_EMPTY_ERR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTFIFO_EMPTY_ERR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTFIFO_EMPTY_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTFIFO_EMPTY_ERR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_CMD6_INT_RAW` reader - The raw bit for SPI slave CMD6 interrupt."]
-pub struct SLV_CMD6_INT_RAW_R(crate::FieldReader<bool>);
-impl SLV_CMD6_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_CMD6_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_CMD6_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_CMD6_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_CMD6_INT_RAW` writer - The raw bit for SPI slave CMD6 interrupt."]
-pub struct SLV_CMD6_INT_RAW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_CMD6_INT_RAW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type SLV_CMD6_INT_RAW_W<'a> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, 11>;
 #[doc = "Field `SLV_CMD7_INT_RAW` reader - The raw bit for SPI slave CMD7 interrupt."]
-pub struct SLV_CMD7_INT_RAW_R(crate::FieldReader<bool>);
-impl SLV_CMD7_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_CMD7_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_CMD7_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_CMD7_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_CMD7_INT_RAW` writer - The raw bit for SPI slave CMD7 interrupt."]
-pub struct SLV_CMD7_INT_RAW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_CMD7_INT_RAW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type SLV_CMD7_INT_RAW_W<'a> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, 12>;
 #[doc = "Field `SLV_CMD8_INT_RAW` reader - The raw bit for SPI slave CMD8 interrupt."]
-pub struct SLV_CMD8_INT_RAW_R(crate::FieldReader<bool>);
-impl SLV_CMD8_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_CMD8_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_CMD8_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_CMD8_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_CMD8_INT_RAW` writer - The raw bit for SPI slave CMD8 interrupt."]
-pub struct SLV_CMD8_INT_RAW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_CMD8_INT_RAW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type SLV_CMD8_INT_RAW_W<'a> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, 13>;
 #[doc = "Field `SLV_CMD9_INT_RAW` reader - The raw bit for SPI slave CMD9 interrupt."]
-pub struct SLV_CMD9_INT_RAW_R(crate::FieldReader<bool>);
-impl SLV_CMD9_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_CMD9_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_CMD9_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_CMD9_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_CMD9_INT_RAW` writer - The raw bit for SPI slave CMD9 interrupt."]
-pub struct SLV_CMD9_INT_RAW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_CMD9_INT_RAW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type SLV_CMD9_INT_RAW_W<'a> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, 14>;
 #[doc = "Field `SLV_CMDA_INT_RAW` reader - The raw bit for SPI slave CMDA interrupt."]
-pub struct SLV_CMDA_INT_RAW_R(crate::FieldReader<bool>);
-impl SLV_CMDA_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_CMDA_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_CMDA_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_CMDA_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_CMDA_INT_RAW` writer - The raw bit for SPI slave CMDA interrupt."]
-pub struct SLV_CMDA_INT_RAW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_CMDA_INT_RAW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type SLV_CMDA_INT_RAW_W<'a> = crate::BitWriter<'a, u32, DMA_INT_RAW_SPEC, bool, 15>;
 impl R {
     #[doc = "Bit 0 - The raw bit for lack of enough inlink descriptors. Can be configured in CONF state."]
     #[inline(always)]
@@ -470,27 +162,27 @@ impl W {
     #[doc = "Bit 11 - The raw bit for SPI slave CMD6 interrupt."]
     #[inline(always)]
     pub fn slv_cmd6_int_raw(&mut self) -> SLV_CMD6_INT_RAW_W {
-        SLV_CMD6_INT_RAW_W { w: self }
+        SLV_CMD6_INT_RAW_W::new(self)
     }
     #[doc = "Bit 12 - The raw bit for SPI slave CMD7 interrupt."]
     #[inline(always)]
     pub fn slv_cmd7_int_raw(&mut self) -> SLV_CMD7_INT_RAW_W {
-        SLV_CMD7_INT_RAW_W { w: self }
+        SLV_CMD7_INT_RAW_W::new(self)
     }
     #[doc = "Bit 13 - The raw bit for SPI slave CMD8 interrupt."]
     #[inline(always)]
     pub fn slv_cmd8_int_raw(&mut self) -> SLV_CMD8_INT_RAW_W {
-        SLV_CMD8_INT_RAW_W { w: self }
+        SLV_CMD8_INT_RAW_W::new(self)
     }
     #[doc = "Bit 14 - The raw bit for SPI slave CMD9 interrupt."]
     #[inline(always)]
     pub fn slv_cmd9_int_raw(&mut self) -> SLV_CMD9_INT_RAW_W {
-        SLV_CMD9_INT_RAW_W { w: self }
+        SLV_CMD9_INT_RAW_W::new(self)
     }
     #[doc = "Bit 15 - The raw bit for SPI slave CMDA interrupt."]
     #[inline(always)]
     pub fn slv_cmda_int_raw(&mut self) -> SLV_CMDA_INT_RAW_W {
-        SLV_CMDA_INT_RAW_W { w: self }
+        SLV_CMDA_INT_RAW_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

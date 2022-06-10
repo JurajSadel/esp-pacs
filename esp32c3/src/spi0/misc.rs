@@ -35,227 +35,29 @@ impl From<crate::W<MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `TRANS_END` reader - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
-pub struct TRANS_END_R(crate::FieldReader<bool>);
-impl TRANS_END_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRANS_END_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRANS_END_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRANS_END_R = crate::BitReader<bool>;
 #[doc = "Field `TRANS_END` writer - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
-pub struct TRANS_END_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRANS_END_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TRANS_END_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 3>;
 #[doc = "Field `TRANS_END_INT_ENA` reader - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
-pub struct TRANS_END_INT_ENA_R(crate::FieldReader<bool>);
-impl TRANS_END_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRANS_END_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRANS_END_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRANS_END_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TRANS_END_INT_ENA` writer - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
-pub struct TRANS_END_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRANS_END_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type TRANS_END_INT_ENA_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 4>;
 #[doc = "Field `CSPI_ST_TRANS_END` reader - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
-pub struct CSPI_ST_TRANS_END_R(crate::FieldReader<bool>);
-impl CSPI_ST_TRANS_END_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CSPI_ST_TRANS_END_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CSPI_ST_TRANS_END_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CSPI_ST_TRANS_END_R = crate::BitReader<bool>;
 #[doc = "Field `CSPI_ST_TRANS_END` writer - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
-pub struct CSPI_ST_TRANS_END_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CSPI_ST_TRANS_END_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CSPI_ST_TRANS_END_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 5>;
 #[doc = "Field `CSPI_ST_TRANS_END_INT_ENA` reader - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
-pub struct CSPI_ST_TRANS_END_INT_ENA_R(crate::FieldReader<bool>);
-impl CSPI_ST_TRANS_END_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CSPI_ST_TRANS_END_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CSPI_ST_TRANS_END_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CSPI_ST_TRANS_END_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CSPI_ST_TRANS_END_INT_ENA` writer - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
-pub struct CSPI_ST_TRANS_END_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CSPI_ST_TRANS_END_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CSPI_ST_TRANS_END_INT_ENA_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 6>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
-pub struct CK_IDLE_EDGE_R(crate::FieldReader<bool>);
-impl CK_IDLE_EDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CK_IDLE_EDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK_IDLE_EDGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK_IDLE_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
-pub struct CK_IDLE_EDGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK_IDLE_EDGE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type CK_IDLE_EDGE_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 9>;
 #[doc = "Field `CS_KEEP_ACTIVE` reader - spi cs line keep low when the bit is set."]
-pub struct CS_KEEP_ACTIVE_R(crate::FieldReader<bool>);
-impl CS_KEEP_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CS_KEEP_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_KEEP_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_KEEP_ACTIVE_R = crate::BitReader<bool>;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - spi cs line keep low when the bit is set."]
-pub struct CS_KEEP_ACTIVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_KEEP_ACTIVE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type CS_KEEP_ACTIVE_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 10>;
 impl R {
     #[doc = "Bit 3 - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 3 - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
     pub fn trans_end(&mut self) -> TRANS_END_W {
-        TRANS_END_W { w: self }
+        TRANS_END_W::new(self)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
     pub fn trans_end_int_ena(&mut self) -> TRANS_END_INT_ENA_W {
-        TRANS_END_INT_ENA_W { w: self }
+        TRANS_END_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
     #[inline(always)]
     pub fn cspi_st_trans_end(&mut self) -> CSPI_ST_TRANS_END_W {
-        CSPI_ST_TRANS_END_W { w: self }
+        CSPI_ST_TRANS_END_W::new(self)
     }
     #[doc = "Bit 6 - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
     #[inline(always)]
     pub fn cspi_st_trans_end_int_ena(&mut self) -> CSPI_ST_TRANS_END_INT_ENA_W {
-        CSPI_ST_TRANS_END_INT_ENA_W { w: self }
+        CSPI_ST_TRANS_END_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
     pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W {
-        CK_IDLE_EDGE_W { w: self }
+        CK_IDLE_EDGE_W::new(self)
     }
     #[doc = "Bit 10 - spi cs line keep low when the bit is set."]
     #[inline(always)]
     pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W {
-        CS_KEEP_ACTIVE_W { w: self }
+        CS_KEEP_ACTIVE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

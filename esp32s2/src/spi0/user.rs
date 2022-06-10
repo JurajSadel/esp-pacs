@@ -35,1115 +35,125 @@ impl From<crate::W<USER_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUTDIN` reader - Set the bit to enable full duplex communication. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct DOUTDIN_R(crate::FieldReader<bool>);
-impl DOUTDIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DOUTDIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOUTDIN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DOUTDIN_R = crate::BitReader<bool>;
 #[doc = "Field `DOUTDIN` writer - Set the bit to enable full duplex communication. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct DOUTDIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOUTDIN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DOUTDIN_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 0>;
 #[doc = "Field `QPI_MODE` reader - Both for master mode and slave mode. 1: spi controller is in QPI mode. 0: others. Can be configured in CONF state."]
-pub struct QPI_MODE_R(crate::FieldReader<bool>);
-impl QPI_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        QPI_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for QPI_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type QPI_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `QPI_MODE` writer - Both for master mode and slave mode. 1: spi controller is in QPI mode. 0: others. Can be configured in CONF state."]
-pub struct QPI_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> QPI_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type QPI_MODE_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 3>;
 #[doc = "Field `OPI_MODE` reader - Just for master mode. 1: spi controller is in OPI mode (all in 8-bit mode). 0: others. Can be configured in CONF state."]
-pub struct OPI_MODE_R(crate::FieldReader<bool>);
-impl OPI_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OPI_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OPI_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OPI_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `OPI_MODE` writer - Just for master mode. 1: spi controller is in OPI mode (all in 8-bit mode). 0: others. Can be configured in CONF state."]
-pub struct OPI_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OPI_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type OPI_MODE_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 4>;
 #[doc = "Field `TSCK_I_EDGE` reader - In the slave mode, this bit can be used to change the polarity of tsck. 0: tsck = spi_ck_i. 1:tsck = !spi_ck_i."]
-pub struct TSCK_I_EDGE_R(crate::FieldReader<bool>);
-impl TSCK_I_EDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TSCK_I_EDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TSCK_I_EDGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TSCK_I_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `TSCK_I_EDGE` writer - In the slave mode, this bit can be used to change the polarity of tsck. 0: tsck = spi_ck_i. 1:tsck = !spi_ck_i."]
-pub struct TSCK_I_EDGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TSCK_I_EDGE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type TSCK_I_EDGE_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 5>;
 #[doc = "Field `CS_HOLD` reader - spi cs keep low when spi is in done phase. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct CS_HOLD_R(crate::FieldReader<bool>);
-impl CS_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CS_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `CS_HOLD` writer - spi cs keep low when spi is in done phase. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct CS_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CS_HOLD_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 6>;
 #[doc = "Field `CS_SETUP` reader - spi cs is enable when spi is in prepare phase. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct CS_SETUP_R(crate::FieldReader<bool>);
-impl CS_SETUP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CS_SETUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_SETUP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_SETUP_R = crate::BitReader<bool>;
 #[doc = "Field `CS_SETUP` writer - spi cs is enable when spi is in prepare phase. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct CS_SETUP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_SETUP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type CS_SETUP_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 7>;
 #[doc = "Field `RSCK_I_EDGE` reader - In the slave mode, this bit can be used to change the polarity of rsck. 0: rsck = !spi_ck_i. 1:rsck = spi_ck_i."]
-pub struct RSCK_I_EDGE_R(crate::FieldReader<bool>);
-impl RSCK_I_EDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RSCK_I_EDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RSCK_I_EDGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RSCK_I_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `RSCK_I_EDGE` writer - In the slave mode, this bit can be used to change the polarity of rsck. 0: rsck = !spi_ck_i. 1:rsck = spi_ck_i."]
-pub struct RSCK_I_EDGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSCK_I_EDGE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type RSCK_I_EDGE_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 8>;
 #[doc = "Field `CK_OUT_EDGE` reader - the bit combined with SPI_DOUT_MODE register to set mosi signal delay mode. Can be configured in CONF state."]
-pub struct CK_OUT_EDGE_R(crate::FieldReader<bool>);
-impl CK_OUT_EDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CK_OUT_EDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK_OUT_EDGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK_OUT_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `CK_OUT_EDGE` writer - the bit combined with SPI_DOUT_MODE register to set mosi signal delay mode. Can be configured in CONF state."]
-pub struct CK_OUT_EDGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK_OUT_EDGE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type CK_OUT_EDGE_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 9>;
 #[doc = "Field `RD_BYTE_ORDER` reader - In read-data (MISO) phase 1: big-endian 0: little_endian. Can be configured in CONF state."]
-pub struct RD_BYTE_ORDER_R(crate::FieldReader<bool>);
-impl RD_BYTE_ORDER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_BYTE_ORDER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_BYTE_ORDER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_BYTE_ORDER_R = crate::BitReader<bool>;
 #[doc = "Field `RD_BYTE_ORDER` writer - In read-data (MISO) phase 1: big-endian 0: little_endian. Can be configured in CONF state."]
-pub struct RD_BYTE_ORDER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RD_BYTE_ORDER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type RD_BYTE_ORDER_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 10>;
 #[doc = "Field `WR_BYTE_ORDER` reader - In command address write-data (MOSI) phases 1: big-endian 0: litte_endian. Can be configured in CONF state."]
-pub struct WR_BYTE_ORDER_R(crate::FieldReader<bool>);
-impl WR_BYTE_ORDER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WR_BYTE_ORDER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WR_BYTE_ORDER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WR_BYTE_ORDER_R = crate::BitReader<bool>;
 #[doc = "Field `WR_BYTE_ORDER` writer - In command address write-data (MOSI) phases 1: big-endian 0: litte_endian. Can be configured in CONF state."]
-pub struct WR_BYTE_ORDER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WR_BYTE_ORDER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type WR_BYTE_ORDER_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 11>;
 #[doc = "Field `FWRITE_DUAL` reader - In the write operations read-data phase is in 2-bit mode. Can be configured in CONF state."]
-pub struct FWRITE_DUAL_R(crate::FieldReader<bool>);
-impl FWRITE_DUAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FWRITE_DUAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FWRITE_DUAL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FWRITE_DUAL_R = crate::BitReader<bool>;
 #[doc = "Field `FWRITE_DUAL` writer - In the write operations read-data phase is in 2-bit mode. Can be configured in CONF state."]
-pub struct FWRITE_DUAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FWRITE_DUAL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type FWRITE_DUAL_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 12>;
 #[doc = "Field `FWRITE_QUAD` reader - In the write operations read-data phase is in 4-bit mode. Can be configured in CONF state."]
-pub struct FWRITE_QUAD_R(crate::FieldReader<bool>);
-impl FWRITE_QUAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FWRITE_QUAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FWRITE_QUAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FWRITE_QUAD_R = crate::BitReader<bool>;
 #[doc = "Field `FWRITE_QUAD` writer - In the write operations read-data phase is in 4-bit mode. Can be configured in CONF state."]
-pub struct FWRITE_QUAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FWRITE_QUAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type FWRITE_QUAD_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 13>;
 #[doc = "Field `FWRITE_OCT` reader - In the write operations read-data phase is in 8-bit mode. Can be configured in CONF state."]
-pub struct FWRITE_OCT_R(crate::FieldReader<bool>);
-impl FWRITE_OCT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FWRITE_OCT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FWRITE_OCT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FWRITE_OCT_R = crate::BitReader<bool>;
 #[doc = "Field `FWRITE_OCT` writer - In the write operations read-data phase is in 8-bit mode. Can be configured in CONF state."]
-pub struct FWRITE_OCT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FWRITE_OCT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type FWRITE_OCT_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 14>;
 #[doc = "Field `USR_CONF_NXT` reader - 1: Enable the DMA CONF phase of next seg-trans operation, which means seg-trans will continue. 0: The seg-trans will end after the current SPI seg-trans or this is not seg-trans mode. Can be configured in CONF state."]
-pub struct USR_CONF_NXT_R(crate::FieldReader<bool>);
-impl USR_CONF_NXT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_CONF_NXT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_CONF_NXT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_CONF_NXT_R = crate::BitReader<bool>;
 #[doc = "Field `USR_CONF_NXT` writer - 1: Enable the DMA CONF phase of next seg-trans operation, which means seg-trans will continue. 0: The seg-trans will end after the current SPI seg-trans or this is not seg-trans mode. Can be configured in CONF state."]
-pub struct USR_CONF_NXT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_CONF_NXT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type USR_CONF_NXT_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 15>;
 #[doc = "Field `SIO` reader - Set the bit to enable 3-line half duplex communication mosi and miso signals share the same pin. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct SIO_R(crate::FieldReader<bool>);
-impl SIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SIO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SIO_R = crate::BitReader<bool>;
 #[doc = "Field `SIO` writer - Set the bit to enable 3-line half duplex communication mosi and miso signals share the same pin. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct SIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SIO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SIO_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 16>;
 #[doc = "Field `USR_HOLD_POL` reader - It is combined with hold bits to set the polarity of spi hold line 1: spi will be held when spi hold line is high 0: spi will be held when spi hold line is low. Can be configured in CONF state."]
-pub struct USR_HOLD_POL_R(crate::FieldReader<bool>);
-impl USR_HOLD_POL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_HOLD_POL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_HOLD_POL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_HOLD_POL_R = crate::BitReader<bool>;
 #[doc = "Field `USR_HOLD_POL` writer - It is combined with hold bits to set the polarity of spi hold line 1: spi will be held when spi hold line is high 0: spi will be held when spi hold line is low. Can be configured in CONF state."]
-pub struct USR_HOLD_POL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_HOLD_POL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type USR_HOLD_POL_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 17>;
 #[doc = "Field `USR_DOUT_HOLD` reader - spi is hold at data out state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_DOUT_HOLD_R(crate::FieldReader<bool>);
-impl USR_DOUT_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_DOUT_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_DOUT_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_DOUT_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `USR_DOUT_HOLD` writer - spi is hold at data out state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_DOUT_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_DOUT_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type USR_DOUT_HOLD_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 18>;
 #[doc = "Field `USR_DIN_HOLD` reader - spi is hold at data in state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_DIN_HOLD_R(crate::FieldReader<bool>);
-impl USR_DIN_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_DIN_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_DIN_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_DIN_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `USR_DIN_HOLD` writer - spi is hold at data in state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_DIN_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_DIN_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type USR_DIN_HOLD_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 19>;
 #[doc = "Field `USR_DUMMY_HOLD` reader - spi is hold at dummy state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_DUMMY_HOLD_R(crate::FieldReader<bool>);
-impl USR_DUMMY_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_DUMMY_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_DUMMY_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_DUMMY_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `USR_DUMMY_HOLD` writer - spi is hold at dummy state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_DUMMY_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_DUMMY_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type USR_DUMMY_HOLD_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 20>;
 #[doc = "Field `USR_ADDR_HOLD` reader - spi is hold at address state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_ADDR_HOLD_R(crate::FieldReader<bool>);
-impl USR_ADDR_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_ADDR_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_ADDR_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_ADDR_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `USR_ADDR_HOLD` writer - spi is hold at address state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_ADDR_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_ADDR_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type USR_ADDR_HOLD_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 21>;
 #[doc = "Field `USR_CMD_HOLD` reader - spi is hold at command state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_CMD_HOLD_R(crate::FieldReader<bool>);
-impl USR_CMD_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_CMD_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_CMD_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_CMD_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `USR_CMD_HOLD` writer - spi is hold at command state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_CMD_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_CMD_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type USR_CMD_HOLD_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 22>;
 #[doc = "Field `USR_PREP_HOLD` reader - spi is hold at prepare state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_PREP_HOLD_R(crate::FieldReader<bool>);
-impl USR_PREP_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_PREP_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_PREP_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_PREP_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `USR_PREP_HOLD` writer - spi is hold at prepare state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
-pub struct USR_PREP_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_PREP_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type USR_PREP_HOLD_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 23>;
 #[doc = "Field `USR_MISO_HIGHPART` reader - read-data phase only access to high-part of the buffer SPI_BUF8~SPI_BUF17. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct USR_MISO_HIGHPART_R(crate::FieldReader<bool>);
-impl USR_MISO_HIGHPART_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_MISO_HIGHPART_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_MISO_HIGHPART_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_MISO_HIGHPART_R = crate::BitReader<bool>;
 #[doc = "Field `USR_MISO_HIGHPART` writer - read-data phase only access to high-part of the buffer SPI_BUF8~SPI_BUF17. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct USR_MISO_HIGHPART_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_MISO_HIGHPART_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type USR_MISO_HIGHPART_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 24>;
 #[doc = "Field `USR_MOSI_HIGHPART` reader - write-data phase only access to high-part of the buffer SPI_BUF8~SPI_BUF17. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct USR_MOSI_HIGHPART_R(crate::FieldReader<bool>);
-impl USR_MOSI_HIGHPART_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_MOSI_HIGHPART_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_MOSI_HIGHPART_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_MOSI_HIGHPART_R = crate::BitReader<bool>;
 #[doc = "Field `USR_MOSI_HIGHPART` writer - write-data phase only access to high-part of the buffer SPI_BUF8~SPI_BUF17. 1: enable 0: disable. Can be configured in CONF state."]
-pub struct USR_MOSI_HIGHPART_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_MOSI_HIGHPART_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type USR_MOSI_HIGHPART_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 25>;
 #[doc = "Field `USR_DUMMY_IDLE` reader - spi clock is disable in dummy phase when the bit is enable. Can be configured in CONF state."]
-pub struct USR_DUMMY_IDLE_R(crate::FieldReader<bool>);
-impl USR_DUMMY_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_DUMMY_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_DUMMY_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_DUMMY_IDLE_R = crate::BitReader<bool>;
 #[doc = "Field `USR_DUMMY_IDLE` writer - spi clock is disable in dummy phase when the bit is enable. Can be configured in CONF state."]
-pub struct USR_DUMMY_IDLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_DUMMY_IDLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type USR_DUMMY_IDLE_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 26>;
 #[doc = "Field `USR_MOSI` reader - This bit enable the write-data phase of an operation. Can be configured in CONF state."]
-pub struct USR_MOSI_R(crate::FieldReader<bool>);
-impl USR_MOSI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_MOSI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_MOSI_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_MOSI_R = crate::BitReader<bool>;
 #[doc = "Field `USR_MOSI` writer - This bit enable the write-data phase of an operation. Can be configured in CONF state."]
-pub struct USR_MOSI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_MOSI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type USR_MOSI_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 27>;
 #[doc = "Field `USR_MISO` reader - This bit enable the read-data phase of an operation. Can be configured in CONF state."]
-pub struct USR_MISO_R(crate::FieldReader<bool>);
-impl USR_MISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_MISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_MISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_MISO_R = crate::BitReader<bool>;
 #[doc = "Field `USR_MISO` writer - This bit enable the read-data phase of an operation. Can be configured in CONF state."]
-pub struct USR_MISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_MISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type USR_MISO_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 28>;
 #[doc = "Field `USR_DUMMY` reader - This bit enable the dummy phase of an operation. Can be configured in CONF state."]
-pub struct USR_DUMMY_R(crate::FieldReader<bool>);
-impl USR_DUMMY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_DUMMY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_DUMMY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_DUMMY_R = crate::BitReader<bool>;
 #[doc = "Field `USR_DUMMY` writer - This bit enable the dummy phase of an operation. Can be configured in CONF state."]
-pub struct USR_DUMMY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_DUMMY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type USR_DUMMY_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 29>;
 #[doc = "Field `USR_ADDR` reader - This bit enable the address phase of an operation. Can be configured in CONF state."]
-pub struct USR_ADDR_R(crate::FieldReader<bool>);
-impl USR_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_ADDR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_ADDR_R = crate::BitReader<bool>;
 #[doc = "Field `USR_ADDR` writer - This bit enable the address phase of an operation. Can be configured in CONF state."]
-pub struct USR_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_ADDR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type USR_ADDR_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 30>;
 #[doc = "Field `USR_COMMAND` reader - This bit enable the command phase of an operation. Can be configured in CONF state."]
-pub struct USR_COMMAND_R(crate::FieldReader<bool>);
-impl USR_COMMAND_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USR_COMMAND_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_COMMAND_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_COMMAND_R = crate::BitReader<bool>;
 #[doc = "Field `USR_COMMAND` writer - This bit enable the command phase of an operation. Can be configured in CONF state."]
-pub struct USR_COMMAND_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_COMMAND_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type USR_COMMAND_W<'a> = crate::BitWriter<'a, u32, USER_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 0 - Set the bit to enable full duplex communication. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
@@ -1300,152 +310,152 @@ impl W {
     #[doc = "Bit 0 - Set the bit to enable full duplex communication. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn doutdin(&mut self) -> DOUTDIN_W {
-        DOUTDIN_W { w: self }
+        DOUTDIN_W::new(self)
     }
     #[doc = "Bit 3 - Both for master mode and slave mode. 1: spi controller is in QPI mode. 0: others. Can be configured in CONF state."]
     #[inline(always)]
     pub fn qpi_mode(&mut self) -> QPI_MODE_W {
-        QPI_MODE_W { w: self }
+        QPI_MODE_W::new(self)
     }
     #[doc = "Bit 4 - Just for master mode. 1: spi controller is in OPI mode (all in 8-bit mode). 0: others. Can be configured in CONF state."]
     #[inline(always)]
     pub fn opi_mode(&mut self) -> OPI_MODE_W {
-        OPI_MODE_W { w: self }
+        OPI_MODE_W::new(self)
     }
     #[doc = "Bit 5 - In the slave mode, this bit can be used to change the polarity of tsck. 0: tsck = spi_ck_i. 1:tsck = !spi_ck_i."]
     #[inline(always)]
     pub fn tsck_i_edge(&mut self) -> TSCK_I_EDGE_W {
-        TSCK_I_EDGE_W { w: self }
+        TSCK_I_EDGE_W::new(self)
     }
     #[doc = "Bit 6 - spi cs keep low when spi is in done phase. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_hold(&mut self) -> CS_HOLD_W {
-        CS_HOLD_W { w: self }
+        CS_HOLD_W::new(self)
     }
     #[doc = "Bit 7 - spi cs is enable when spi is in prepare phase. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_setup(&mut self) -> CS_SETUP_W {
-        CS_SETUP_W { w: self }
+        CS_SETUP_W::new(self)
     }
     #[doc = "Bit 8 - In the slave mode, this bit can be used to change the polarity of rsck. 0: rsck = !spi_ck_i. 1:rsck = spi_ck_i."]
     #[inline(always)]
     pub fn rsck_i_edge(&mut self) -> RSCK_I_EDGE_W {
-        RSCK_I_EDGE_W { w: self }
+        RSCK_I_EDGE_W::new(self)
     }
     #[doc = "Bit 9 - the bit combined with SPI_DOUT_MODE register to set mosi signal delay mode. Can be configured in CONF state."]
     #[inline(always)]
     pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W {
-        CK_OUT_EDGE_W { w: self }
+        CK_OUT_EDGE_W::new(self)
     }
     #[doc = "Bit 10 - In read-data (MISO) phase 1: big-endian 0: little_endian. Can be configured in CONF state."]
     #[inline(always)]
     pub fn rd_byte_order(&mut self) -> RD_BYTE_ORDER_W {
-        RD_BYTE_ORDER_W { w: self }
+        RD_BYTE_ORDER_W::new(self)
     }
     #[doc = "Bit 11 - In command address write-data (MOSI) phases 1: big-endian 0: litte_endian. Can be configured in CONF state."]
     #[inline(always)]
     pub fn wr_byte_order(&mut self) -> WR_BYTE_ORDER_W {
-        WR_BYTE_ORDER_W { w: self }
+        WR_BYTE_ORDER_W::new(self)
     }
     #[doc = "Bit 12 - In the write operations read-data phase is in 2-bit mode. Can be configured in CONF state."]
     #[inline(always)]
     pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W {
-        FWRITE_DUAL_W { w: self }
+        FWRITE_DUAL_W::new(self)
     }
     #[doc = "Bit 13 - In the write operations read-data phase is in 4-bit mode. Can be configured in CONF state."]
     #[inline(always)]
     pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W {
-        FWRITE_QUAD_W { w: self }
+        FWRITE_QUAD_W::new(self)
     }
     #[doc = "Bit 14 - In the write operations read-data phase is in 8-bit mode. Can be configured in CONF state."]
     #[inline(always)]
     pub fn fwrite_oct(&mut self) -> FWRITE_OCT_W {
-        FWRITE_OCT_W { w: self }
+        FWRITE_OCT_W::new(self)
     }
     #[doc = "Bit 15 - 1: Enable the DMA CONF phase of next seg-trans operation, which means seg-trans will continue. 0: The seg-trans will end after the current SPI seg-trans or this is not seg-trans mode. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_conf_nxt(&mut self) -> USR_CONF_NXT_W {
-        USR_CONF_NXT_W { w: self }
+        USR_CONF_NXT_W::new(self)
     }
     #[doc = "Bit 16 - Set the bit to enable 3-line half duplex communication mosi and miso signals share the same pin. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn sio(&mut self) -> SIO_W {
-        SIO_W { w: self }
+        SIO_W::new(self)
     }
     #[doc = "Bit 17 - It is combined with hold bits to set the polarity of spi hold line 1: spi will be held when spi hold line is high 0: spi will be held when spi hold line is low. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_hold_pol(&mut self) -> USR_HOLD_POL_W {
-        USR_HOLD_POL_W { w: self }
+        USR_HOLD_POL_W::new(self)
     }
     #[doc = "Bit 18 - spi is hold at data out state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_dout_hold(&mut self) -> USR_DOUT_HOLD_W {
-        USR_DOUT_HOLD_W { w: self }
+        USR_DOUT_HOLD_W::new(self)
     }
     #[doc = "Bit 19 - spi is hold at data in state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_din_hold(&mut self) -> USR_DIN_HOLD_W {
-        USR_DIN_HOLD_W { w: self }
+        USR_DIN_HOLD_W::new(self)
     }
     #[doc = "Bit 20 - spi is hold at dummy state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_dummy_hold(&mut self) -> USR_DUMMY_HOLD_W {
-        USR_DUMMY_HOLD_W { w: self }
+        USR_DUMMY_HOLD_W::new(self)
     }
     #[doc = "Bit 21 - spi is hold at address state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_addr_hold(&mut self) -> USR_ADDR_HOLD_W {
-        USR_ADDR_HOLD_W { w: self }
+        USR_ADDR_HOLD_W::new(self)
     }
     #[doc = "Bit 22 - spi is hold at command state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_cmd_hold(&mut self) -> USR_CMD_HOLD_W {
-        USR_CMD_HOLD_W { w: self }
+        USR_CMD_HOLD_W::new(self)
     }
     #[doc = "Bit 23 - spi is hold at prepare state the bit are combined with SPI_USR_HOLD_POL bit. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_prep_hold(&mut self) -> USR_PREP_HOLD_W {
-        USR_PREP_HOLD_W { w: self }
+        USR_PREP_HOLD_W::new(self)
     }
     #[doc = "Bit 24 - read-data phase only access to high-part of the buffer SPI_BUF8~SPI_BUF17. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W {
-        USR_MISO_HIGHPART_W { w: self }
+        USR_MISO_HIGHPART_W::new(self)
     }
     #[doc = "Bit 25 - write-data phase only access to high-part of the buffer SPI_BUF8~SPI_BUF17. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W {
-        USR_MOSI_HIGHPART_W { w: self }
+        USR_MOSI_HIGHPART_W::new(self)
     }
     #[doc = "Bit 26 - spi clock is disable in dummy phase when the bit is enable. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W {
-        USR_DUMMY_IDLE_W { w: self }
+        USR_DUMMY_IDLE_W::new(self)
     }
     #[doc = "Bit 27 - This bit enable the write-data phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_mosi(&mut self) -> USR_MOSI_W {
-        USR_MOSI_W { w: self }
+        USR_MOSI_W::new(self)
     }
     #[doc = "Bit 28 - This bit enable the read-data phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_miso(&mut self) -> USR_MISO_W {
-        USR_MISO_W { w: self }
+        USR_MISO_W::new(self)
     }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_dummy(&mut self) -> USR_DUMMY_W {
-        USR_DUMMY_W { w: self }
+        USR_DUMMY_W::new(self)
     }
     #[doc = "Bit 30 - This bit enable the address phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_addr(&mut self) -> USR_ADDR_W {
-        USR_ADDR_W { w: self }
+        USR_ADDR_W::new(self)
     }
     #[doc = "Bit 31 - This bit enable the command phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_command(&mut self) -> USR_COMMAND_W {
-        USR_COMMAND_W { w: self }
+        USR_COMMAND_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

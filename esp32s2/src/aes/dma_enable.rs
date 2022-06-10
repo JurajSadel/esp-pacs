@@ -35,42 +35,9 @@ impl From<crate::W<DMA_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_ENABLE` reader - Defines the working mode of the AES Accelerator. For details, see Table 1. 1'h0: typical AES operation 1'h1: DMA-AES operation"]
-pub struct DMA_ENABLE_R(crate::FieldReader<bool>);
-impl DMA_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_ENABLE` writer - Defines the working mode of the AES Accelerator. For details, see Table 1. 1'h0: typical AES operation 1'h1: DMA-AES operation"]
-pub struct DMA_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DMA_ENABLE_W<'a> = crate::BitWriter<'a, u32, DMA_ENABLE_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - Defines the working mode of the AES Accelerator. For details, see Table 1. 1'h0: typical AES operation 1'h1: DMA-AES operation"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0 - Defines the working mode of the AES Accelerator. For details, see Table 1. 1'h0: typical AES operation 1'h1: DMA-AES operation"]
     #[inline(always)]
     pub fn dma_enable(&mut self) -> DMA_ENABLE_W {
-        DMA_ENABLE_W { w: self }
+        DMA_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

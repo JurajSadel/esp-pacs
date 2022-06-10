@@ -35,123 +35,23 @@ impl From<crate::W<RETENTION_CTRL3_SPEC>> for W {
     }
 }
 #[doc = "Field `RET_DCACHE_SIZE` reader - ******* Description ***********"]
-pub struct RET_DCACHE_SIZE_R(crate::FieldReader<u16>);
-impl RET_DCACHE_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RET_DCACHE_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RET_DCACHE_SIZE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RET_DCACHE_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RET_DCACHE_SIZE` writer - ******* Description ***********"]
-pub struct RET_DCACHE_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RET_DCACHE_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01ff << 4)) | ((value as u32 & 0x01ff) << 4);
-        self.w
-    }
-}
+pub type RET_DCACHE_SIZE_W<'a> = crate::FieldWriter<'a, u32, RETENTION_CTRL3_SPEC, u16, u16, 9, 4>;
 #[doc = "Field `RET_DCACHE_VLD_SIZE` reader - ******* Description ***********"]
-pub struct RET_DCACHE_VLD_SIZE_R(crate::FieldReader<u16>);
-impl RET_DCACHE_VLD_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RET_DCACHE_VLD_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RET_DCACHE_VLD_SIZE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RET_DCACHE_VLD_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RET_DCACHE_VLD_SIZE` writer - ******* Description ***********"]
-pub struct RET_DCACHE_VLD_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RET_DCACHE_VLD_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01ff << 13)) | ((value as u32 & 0x01ff) << 13);
-        self.w
-    }
-}
+pub type RET_DCACHE_VLD_SIZE_W<'a> =
+    crate::FieldWriter<'a, u32, RETENTION_CTRL3_SPEC, u16, u16, 9, 13>;
 #[doc = "Field `RET_DCACHE_START_POINT` reader - ******* Description ***********"]
-pub struct RET_DCACHE_START_POINT_R(crate::FieldReader<u16>);
-impl RET_DCACHE_START_POINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RET_DCACHE_START_POINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RET_DCACHE_START_POINT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RET_DCACHE_START_POINT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RET_DCACHE_START_POINT` writer - ******* Description ***********"]
-pub struct RET_DCACHE_START_POINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RET_DCACHE_START_POINT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01ff << 22)) | ((value as u32 & 0x01ff) << 22);
-        self.w
-    }
-}
+pub type RET_DCACHE_START_POINT_W<'a> =
+    crate::FieldWriter<'a, u32, RETENTION_CTRL3_SPEC, u16, u16, 9, 22>;
 #[doc = "Field `RET_DCACHE_ENABLE` reader - ******* Description ***********"]
-pub struct RET_DCACHE_ENABLE_R(crate::FieldReader<bool>);
-impl RET_DCACHE_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RET_DCACHE_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RET_DCACHE_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RET_DCACHE_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `RET_DCACHE_ENABLE` writer - ******* Description ***********"]
-pub struct RET_DCACHE_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RET_DCACHE_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type RET_DCACHE_ENABLE_W<'a> = crate::BitWriter<'a, u32, RETENTION_CTRL3_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 4:12 - ******* Description ***********"]
     #[inline(always)]
@@ -178,22 +78,22 @@ impl W {
     #[doc = "Bits 4:12 - ******* Description ***********"]
     #[inline(always)]
     pub fn ret_dcache_size(&mut self) -> RET_DCACHE_SIZE_W {
-        RET_DCACHE_SIZE_W { w: self }
+        RET_DCACHE_SIZE_W::new(self)
     }
     #[doc = "Bits 13:21 - ******* Description ***********"]
     #[inline(always)]
     pub fn ret_dcache_vld_size(&mut self) -> RET_DCACHE_VLD_SIZE_W {
-        RET_DCACHE_VLD_SIZE_W { w: self }
+        RET_DCACHE_VLD_SIZE_W::new(self)
     }
     #[doc = "Bits 22:30 - ******* Description ***********"]
     #[inline(always)]
     pub fn ret_dcache_start_point(&mut self) -> RET_DCACHE_START_POINT_W {
-        RET_DCACHE_START_POINT_W { w: self }
+        RET_DCACHE_START_POINT_W::new(self)
     }
     #[doc = "Bit 31 - ******* Description ***********"]
     #[inline(always)]
     pub fn ret_dcache_enable(&mut self) -> RET_DCACHE_ENABLE_W {
-        RET_DCACHE_ENABLE_W { w: self }
+        RET_DCACHE_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<TARGET0_HI_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_TARGET0_HI` reader - System timer target 0, high 32 bits."]
-pub struct TIMER_TARGET0_HI_R(crate::FieldReader<u32>);
-impl TIMER_TARGET0_HI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TIMER_TARGET0_HI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER_TARGET0_HI_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER_TARGET0_HI_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIMER_TARGET0_HI` writer - System timer target 0, high 32 bits."]
-pub struct TIMER_TARGET0_HI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER_TARGET0_HI_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type TIMER_TARGET0_HI_W<'a> = crate::FieldWriter<'a, u32, TARGET0_HI_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - System timer target 0, high 32 bits."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - System timer target 0, high 32 bits."]
     #[inline(always)]
     pub fn timer_target0_hi(&mut self) -> TIMER_TARGET0_HI_W {
-        TIMER_TARGET0_HI_W { w: self }
+        TIMER_TARGET0_HI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

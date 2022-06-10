@@ -20,113 +20,33 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_DONE_INT_CLR` writer - Set this bit to clear the i2s_rx_done_int interrupt"]
-pub struct RX_DONE_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_DONE_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type RX_DONE_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 0>;
 #[doc = "Field `TX_DONE_INT_CLR` writer - Set this bit to clear the i2s_tx_done_int interrupt"]
-pub struct TX_DONE_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DONE_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type TX_DONE_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 1>;
 #[doc = "Field `RX_HUNG_INT_CLR` writer - Set this bit to clear the i2s_rx_hung_int interrupt"]
-pub struct RX_HUNG_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_HUNG_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type RX_HUNG_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 2>;
 #[doc = "Field `TX_HUNG_INT_CLR` writer - Set this bit to clear the i2s_tx_hung_int interrupt"]
-pub struct TX_HUNG_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_HUNG_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TX_HUNG_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 3>;
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the i2s_rx_done_int interrupt"]
     #[inline(always)]
     pub fn rx_done_int_clr(&mut self) -> RX_DONE_INT_CLR_W {
-        RX_DONE_INT_CLR_W { w: self }
+        RX_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear the i2s_tx_done_int interrupt"]
     #[inline(always)]
     pub fn tx_done_int_clr(&mut self) -> TX_DONE_INT_CLR_W {
-        TX_DONE_INT_CLR_W { w: self }
+        TX_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear the i2s_rx_hung_int interrupt"]
     #[inline(always)]
     pub fn rx_hung_int_clr(&mut self) -> RX_HUNG_INT_CLR_W {
-        RX_HUNG_INT_CLR_W { w: self }
+        RX_HUNG_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to clear the i2s_tx_hung_int interrupt"]
     #[inline(always)]
     pub fn tx_hung_int_clr(&mut self) -> TX_HUNG_INT_CLR_W {
-        TX_HUNG_INT_CLR_W { w: self }
+        TX_HUNG_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

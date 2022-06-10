@@ -35,133 +35,21 @@ impl From<crate::W<FILTER_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_FILTER_THRES` reader - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
-pub struct SCL_FILTER_THRES_R(crate::FieldReader<u8>);
-impl SCL_FILTER_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCL_FILTER_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_FILTER_THRES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_FILTER_THRES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCL_FILTER_THRES` writer - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
-pub struct SCL_FILTER_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_FILTER_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type SCL_FILTER_THRES_W<'a> = crate::FieldWriter<'a, u32, FILTER_CFG_SPEC, u8, u8, 4, 0>;
 #[doc = "Field `SDA_FILTER_THRES` reader - When a pulse on the SDA input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
-pub struct SDA_FILTER_THRES_R(crate::FieldReader<u8>);
-impl SDA_FILTER_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SDA_FILTER_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDA_FILTER_THRES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDA_FILTER_THRES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SDA_FILTER_THRES` writer - When a pulse on the SDA input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
-pub struct SDA_FILTER_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDA_FILTER_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type SDA_FILTER_THRES_W<'a> = crate::FieldWriter<'a, u32, FILTER_CFG_SPEC, u8, u8, 4, 4>;
 #[doc = "Field `SCL_FILTER_EN` reader - This is the filter enable bit for SCL."]
-pub struct SCL_FILTER_EN_R(crate::FieldReader<bool>);
-impl SCL_FILTER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCL_FILTER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_FILTER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_FILTER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SCL_FILTER_EN` writer - This is the filter enable bit for SCL."]
-pub struct SCL_FILTER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_FILTER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type SCL_FILTER_EN_W<'a> = crate::BitWriter<'a, u32, FILTER_CFG_SPEC, bool, 8>;
 #[doc = "Field `SDA_FILTER_EN` reader - This is the filter enable bit for SDA."]
-pub struct SDA_FILTER_EN_R(crate::FieldReader<bool>);
-impl SDA_FILTER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDA_FILTER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDA_FILTER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDA_FILTER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SDA_FILTER_EN` writer - This is the filter enable bit for SDA."]
-pub struct SDA_FILTER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDA_FILTER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type SDA_FILTER_EN_W<'a> = crate::BitWriter<'a, u32, FILTER_CFG_SPEC, bool, 9>;
 impl R {
     #[doc = "Bits 0:3 - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
@@ -188,22 +76,22 @@ impl W {
     #[doc = "Bits 0:3 - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
     pub fn scl_filter_thres(&mut self) -> SCL_FILTER_THRES_W {
-        SCL_FILTER_THRES_W { w: self }
+        SCL_FILTER_THRES_W::new(self)
     }
     #[doc = "Bits 4:7 - When a pulse on the SDA input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
     pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W {
-        SDA_FILTER_THRES_W { w: self }
+        SDA_FILTER_THRES_W::new(self)
     }
     #[doc = "Bit 8 - This is the filter enable bit for SCL."]
     #[inline(always)]
     pub fn scl_filter_en(&mut self) -> SCL_FILTER_EN_W {
-        SCL_FILTER_EN_W { w: self }
+        SCL_FILTER_EN_W::new(self)
     }
     #[doc = "Bit 9 - This is the filter enable bit for SDA."]
     #[inline(always)]
     pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W {
-        SDA_FILTER_EN_W { w: self }
+        SDA_FILTER_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

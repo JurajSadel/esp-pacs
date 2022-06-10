@@ -35,69 +35,13 @@ impl From<crate::W<CLOCK_DIVIDER_SPEC>> for W {
     }
 }
 #[doc = "Field `CD` reader - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
-pub struct CD_R(crate::FieldReader<u8>);
-impl CD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CD` writer - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
-pub struct CD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type CD_W<'a> = crate::FieldWriter<'a, u32, CLOCK_DIVIDER_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `CLOCK_OFF` reader - This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin"]
-pub struct CLOCK_OFF_R(crate::FieldReader<bool>);
-impl CLOCK_OFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLOCK_OFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLOCK_OFF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLOCK_OFF_R = crate::BitReader<bool>;
 #[doc = "Field `CLOCK_OFF` writer - This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin"]
-pub struct CLOCK_OFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLOCK_OFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type CLOCK_OFF_W<'a> = crate::BitWriter<'a, u32, CLOCK_DIVIDER_SPEC, bool, 8>;
 impl R {
     #[doc = "Bits 0:7 - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:7 - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
     #[inline(always)]
     pub fn cd(&mut self) -> CD_W {
-        CD_W { w: self }
+        CD_W::new(self)
     }
     #[doc = "Bit 8 - This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin"]
     #[inline(always)]
     pub fn clock_off(&mut self) -> CLOCK_OFF_W {
-        CLOCK_OFF_W { w: self }
+        CLOCK_OFF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

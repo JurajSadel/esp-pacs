@@ -35,69 +35,14 @@ impl From<crate::W<RETENTION_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RETENTION_CPU_LINK_ADDR` reader - ******* Description ***********"]
-pub struct RETENTION_CPU_LINK_ADDR_R(crate::FieldReader<u32>);
-impl RETENTION_CPU_LINK_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RETENTION_CPU_LINK_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RETENTION_CPU_LINK_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RETENTION_CPU_LINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RETENTION_CPU_LINK_ADDR` writer - ******* Description ***********"]
-pub struct RETENTION_CPU_LINK_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RETENTION_CPU_LINK_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff_ffff) | (value as u32 & 0x07ff_ffff);
-        self.w
-    }
-}
+pub type RETENTION_CPU_LINK_ADDR_W<'a> =
+    crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u32, u32, 27, 0>;
 #[doc = "Field `NOBYPASS_CPU_ISO_RST` reader - ******* Description ***********"]
-pub struct NOBYPASS_CPU_ISO_RST_R(crate::FieldReader<bool>);
-impl NOBYPASS_CPU_ISO_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NOBYPASS_CPU_ISO_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NOBYPASS_CPU_ISO_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NOBYPASS_CPU_ISO_RST_R = crate::BitReader<bool>;
 #[doc = "Field `NOBYPASS_CPU_ISO_RST` writer - ******* Description ***********"]
-pub struct NOBYPASS_CPU_ISO_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NOBYPASS_CPU_ISO_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type NOBYPASS_CPU_ISO_RST_W<'a> = crate::BitWriter<'a, u32, RETENTION_CTRL_SPEC, bool, 27>;
 impl R {
     #[doc = "Bits 0:26 - ******* Description ***********"]
     #[inline(always)]
@@ -114,12 +59,12 @@ impl W {
     #[doc = "Bits 0:26 - ******* Description ***********"]
     #[inline(always)]
     pub fn retention_cpu_link_addr(&mut self) -> RETENTION_CPU_LINK_ADDR_W {
-        RETENTION_CPU_LINK_ADDR_W { w: self }
+        RETENTION_CPU_LINK_ADDR_W::new(self)
     }
     #[doc = "Bit 27 - ******* Description ***********"]
     #[inline(always)]
     pub fn nobypass_cpu_iso_rst(&mut self) -> NOBYPASS_CPU_ISO_RST_W {
-        NOBYPASS_CPU_ISO_RST_W { w: self }
+        NOBYPASS_CPU_ISO_RST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

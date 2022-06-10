@@ -20,22 +20,13 @@ impl From<crate::W<RTC_GPIO_STATUS_W1TC_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_GPIO_STATUS_INT_W1TC` writer - RTC GPIO 0 ~ 21 interrupt status write 1 to clear"]
-pub struct RTC_GPIO_STATUS_INT_W1TC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_STATUS_INT_W1TC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x003f_ffff << 10)) | ((value as u32 & 0x003f_ffff) << 10);
-        self.w
-    }
-}
+pub type RTC_GPIO_STATUS_INT_W1TC_W<'a> =
+    crate::FieldWriter<'a, u32, RTC_GPIO_STATUS_W1TC_SPEC, u32, u32, 22, 10>;
 impl W {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 interrupt status write 1 to clear"]
     #[inline(always)]
     pub fn rtc_gpio_status_int_w1tc(&mut self) -> RTC_GPIO_STATUS_INT_W1TC_W {
-        RTC_GPIO_STATUS_INT_W1TC_W { w: self }
+        RTC_GPIO_STATUS_INT_W1TC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

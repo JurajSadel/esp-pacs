@@ -35,79 +35,13 @@ impl From<crate::W<CACHE_SYNC_INT_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_SYNC_INT_ST` reader - The bit is used to indicate the interrupt by icache sync done."]
-pub struct ICACHE_SYNC_INT_ST_R(crate::FieldReader<bool>);
-impl ICACHE_SYNC_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_SYNC_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_SYNC_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_SYNC_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `ICACHE_SYNC_INT_ENA` reader - The bit is used to enable the interrupt by icache sync done."]
-pub struct ICACHE_SYNC_INT_ENA_R(crate::FieldReader<bool>);
-impl ICACHE_SYNC_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_SYNC_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_SYNC_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_SYNC_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `ICACHE_SYNC_INT_ENA` writer - The bit is used to enable the interrupt by icache sync done."]
-pub struct ICACHE_SYNC_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ICACHE_SYNC_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ICACHE_SYNC_INT_ENA_W<'a> = crate::BitWriter<'a, u32, CACHE_SYNC_INT_CTRL_SPEC, bool, 1>;
 #[doc = "Field `ICACHE_SYNC_INT_CLR` writer - The bit is used to clear the interrupt by icache sync done."]
-pub struct ICACHE_SYNC_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ICACHE_SYNC_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type ICACHE_SYNC_INT_CLR_W<'a> = crate::BitWriter<'a, u32, CACHE_SYNC_INT_CTRL_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 0 - The bit is used to indicate the interrupt by icache sync done."]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 1 - The bit is used to enable the interrupt by icache sync done."]
     #[inline(always)]
     pub fn icache_sync_int_ena(&mut self) -> ICACHE_SYNC_INT_ENA_W {
-        ICACHE_SYNC_INT_ENA_W { w: self }
+        ICACHE_SYNC_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to clear the interrupt by icache sync done."]
     #[inline(always)]
     pub fn icache_sync_int_clr(&mut self) -> ICACHE_SYNC_INT_CLR_W {
-        ICACHE_SYNC_INT_CLR_W { w: self }
+        ICACHE_SYNC_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,69 +35,13 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_CLK_SEL` reader - This bit is used to select clock source for the 4 timers . 1: APB_CLK. 2: RTC8M_CLK. 3: XTAL_CLK."]
-pub struct APB_CLK_SEL_R(crate::FieldReader<u8>);
-impl APB_CLK_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        APB_CLK_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_CLK_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_CLK_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `APB_CLK_SEL` writer - This bit is used to select clock source for the 4 timers . 1: APB_CLK. 2: RTC8M_CLK. 3: XTAL_CLK."]
-pub struct APB_CLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_CLK_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type APB_CLK_SEL_W<'a> = crate::FieldWriter<'a, u32, CONF_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `CLK_EN` reader - This bit is used to control clock. 1: Force clock on for register. 0: Support clock only when application writes registers."]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - This bit is used to control clock. 1: Force clock on for register. 0: Support clock only when application writes registers."]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:1 - This bit is used to select clock source for the 4 timers . 1: APB_CLK. 2: RTC8M_CLK. 3: XTAL_CLK."]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:1 - This bit is used to select clock source for the 4 timers . 1: APB_CLK. 2: RTC8M_CLK. 3: XTAL_CLK."]
     #[inline(always)]
     pub fn apb_clk_sel(&mut self) -> APB_CLK_SEL_W {
-        APB_CLK_SEL_W { w: self }
+        APB_CLK_SEL_W::new(self)
     }
     #[doc = "Bit 31 - This bit is used to control clock. 1: Force clock on for register. 0: Support clock only when application writes registers."]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

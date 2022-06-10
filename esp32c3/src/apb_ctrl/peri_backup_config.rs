@@ -35,197 +35,32 @@ impl From<crate::W<PERI_BACKUP_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_BACKUP_FLOW_ERR` reader - reg_peri_backup_flow_err"]
-pub struct PERI_BACKUP_FLOW_ERR_R(crate::FieldReader<u8>);
-impl PERI_BACKUP_FLOW_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PERI_BACKUP_FLOW_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERI_BACKUP_FLOW_ERR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERI_BACKUP_FLOW_ERR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PERI_BACKUP_BURST_LIMIT` reader - reg_peri_backup_burst_limit"]
-pub struct PERI_BACKUP_BURST_LIMIT_R(crate::FieldReader<u8>);
-impl PERI_BACKUP_BURST_LIMIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PERI_BACKUP_BURST_LIMIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERI_BACKUP_BURST_LIMIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERI_BACKUP_BURST_LIMIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PERI_BACKUP_BURST_LIMIT` writer - reg_peri_backup_burst_limit"]
-pub struct PERI_BACKUP_BURST_LIMIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERI_BACKUP_BURST_LIMIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 4)) | ((value as u32 & 0x1f) << 4);
-        self.w
-    }
-}
+pub type PERI_BACKUP_BURST_LIMIT_W<'a> =
+    crate::FieldWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, u8, u8, 5, 4>;
 #[doc = "Field `PERI_BACKUP_TOUT_THRES` reader - reg_peri_backup_tout_thres"]
-pub struct PERI_BACKUP_TOUT_THRES_R(crate::FieldReader<u16>);
-impl PERI_BACKUP_TOUT_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PERI_BACKUP_TOUT_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERI_BACKUP_TOUT_THRES_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERI_BACKUP_TOUT_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PERI_BACKUP_TOUT_THRES` writer - reg_peri_backup_tout_thres"]
-pub struct PERI_BACKUP_TOUT_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERI_BACKUP_TOUT_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 9)) | ((value as u32 & 0x03ff) << 9);
-        self.w
-    }
-}
+pub type PERI_BACKUP_TOUT_THRES_W<'a> =
+    crate::FieldWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, u16, u16, 10, 9>;
 #[doc = "Field `PERI_BACKUP_SIZE` reader - reg_peri_backup_size"]
-pub struct PERI_BACKUP_SIZE_R(crate::FieldReader<u16>);
-impl PERI_BACKUP_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PERI_BACKUP_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERI_BACKUP_SIZE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERI_BACKUP_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PERI_BACKUP_SIZE` writer - reg_peri_backup_size"]
-pub struct PERI_BACKUP_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERI_BACKUP_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 19)) | ((value as u32 & 0x03ff) << 19);
-        self.w
-    }
-}
+pub type PERI_BACKUP_SIZE_W<'a> =
+    crate::FieldWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, u16, u16, 10, 19>;
 #[doc = "Field `PERI_BACKUP_START` writer - reg_peri_backup_start"]
-pub struct PERI_BACKUP_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERI_BACKUP_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type PERI_BACKUP_START_W<'a> = crate::BitWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, bool, 29>;
 #[doc = "Field `PERI_BACKUP_TO_MEM` reader - reg_peri_backup_to_mem"]
-pub struct PERI_BACKUP_TO_MEM_R(crate::FieldReader<bool>);
-impl PERI_BACKUP_TO_MEM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PERI_BACKUP_TO_MEM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERI_BACKUP_TO_MEM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERI_BACKUP_TO_MEM_R = crate::BitReader<bool>;
 #[doc = "Field `PERI_BACKUP_TO_MEM` writer - reg_peri_backup_to_mem"]
-pub struct PERI_BACKUP_TO_MEM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERI_BACKUP_TO_MEM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type PERI_BACKUP_TO_MEM_W<'a> = crate::BitWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, bool, 30>;
 #[doc = "Field `PERI_BACKUP_ENA` reader - reg_peri_backup_ena"]
-pub struct PERI_BACKUP_ENA_R(crate::FieldReader<bool>);
-impl PERI_BACKUP_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PERI_BACKUP_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERI_BACKUP_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERI_BACKUP_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PERI_BACKUP_ENA` writer - reg_peri_backup_ena"]
-pub struct PERI_BACKUP_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERI_BACKUP_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type PERI_BACKUP_ENA_W<'a> = crate::BitWriter<'a, u32, PERI_BACKUP_CONFIG_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 1:2 - reg_peri_backup_flow_err"]
     #[inline(always)]
@@ -262,32 +97,32 @@ impl W {
     #[doc = "Bits 4:8 - reg_peri_backup_burst_limit"]
     #[inline(always)]
     pub fn peri_backup_burst_limit(&mut self) -> PERI_BACKUP_BURST_LIMIT_W {
-        PERI_BACKUP_BURST_LIMIT_W { w: self }
+        PERI_BACKUP_BURST_LIMIT_W::new(self)
     }
     #[doc = "Bits 9:18 - reg_peri_backup_tout_thres"]
     #[inline(always)]
     pub fn peri_backup_tout_thres(&mut self) -> PERI_BACKUP_TOUT_THRES_W {
-        PERI_BACKUP_TOUT_THRES_W { w: self }
+        PERI_BACKUP_TOUT_THRES_W::new(self)
     }
     #[doc = "Bits 19:28 - reg_peri_backup_size"]
     #[inline(always)]
     pub fn peri_backup_size(&mut self) -> PERI_BACKUP_SIZE_W {
-        PERI_BACKUP_SIZE_W { w: self }
+        PERI_BACKUP_SIZE_W::new(self)
     }
     #[doc = "Bit 29 - reg_peri_backup_start"]
     #[inline(always)]
     pub fn peri_backup_start(&mut self) -> PERI_BACKUP_START_W {
-        PERI_BACKUP_START_W { w: self }
+        PERI_BACKUP_START_W::new(self)
     }
     #[doc = "Bit 30 - reg_peri_backup_to_mem"]
     #[inline(always)]
     pub fn peri_backup_to_mem(&mut self) -> PERI_BACKUP_TO_MEM_W {
-        PERI_BACKUP_TO_MEM_W { w: self }
+        PERI_BACKUP_TO_MEM_W::new(self)
     }
     #[doc = "Bit 31 - reg_peri_backup_ena"]
     #[inline(always)]
     pub fn peri_backup_ena(&mut self) -> PERI_BACKUP_ENA_W {
-        PERI_BACKUP_ENA_W { w: self }
+        PERI_BACKUP_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

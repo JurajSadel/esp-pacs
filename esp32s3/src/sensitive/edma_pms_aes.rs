@@ -35,59 +35,13 @@ impl From<crate::W<EDMA_PMS_AES_SPEC>> for W {
     }
 }
 #[doc = "Field `ATTR1` reader - This field is used to configure the permission of AES accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub struct ATTR1_R(crate::FieldReader<u8>);
-impl ATTR1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ATTR1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ATTR1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ATTR1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ATTR1` writer - This field is used to configure the permission of AES accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub struct ATTR1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ATTR1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type ATTR1_W<'a> = crate::FieldWriter<'a, u32, EDMA_PMS_AES_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `ATTR2` reader - This field is used to configure the permission of AES accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub struct ATTR2_R(crate::FieldReader<u8>);
-impl ATTR2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ATTR2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ATTR2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ATTR2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ATTR2` writer - This field is used to configure the permission of AES accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
-pub struct ATTR2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ATTR2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type ATTR2_W<'a> = crate::FieldWriter<'a, u32, EDMA_PMS_AES_SPEC, u8, u8, 2, 2>;
 impl R {
     #[doc = "Bits 0:1 - This field is used to configure the permission of AES accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:1 - This field is used to configure the permission of AES accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
     pub fn attr1(&mut self) -> ATTR1_W {
-        ATTR1_W { w: self }
+        ATTR1_W::new(self)
     }
     #[doc = "Bits 2:3 - This field is used to configure the permission of AES accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
     pub fn attr2(&mut self) -> ATTR2_W {
-        ATTR2_W { w: self }
+        ATTR2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

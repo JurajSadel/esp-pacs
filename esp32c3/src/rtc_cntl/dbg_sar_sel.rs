@@ -35,32 +35,9 @@ impl From<crate::W<DBG_SAR_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_DEBUG_SEL` reader - use for debug"]
-pub struct SAR_DEBUG_SEL_R(crate::FieldReader<u8>);
-impl SAR_DEBUG_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR_DEBUG_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_DEBUG_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_DEBUG_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR_DEBUG_SEL` writer - use for debug"]
-pub struct SAR_DEBUG_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_DEBUG_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 27)) | ((value as u32 & 0x1f) << 27);
-        self.w
-    }
-}
+pub type SAR_DEBUG_SEL_W<'a> = crate::FieldWriter<'a, u32, DBG_SAR_SEL_SPEC, u8, u8, 5, 27>;
 impl R {
     #[doc = "Bits 27:31 - use for debug"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 27:31 - use for debug"]
     #[inline(always)]
     pub fn sar_debug_sel(&mut self) -> SAR_DEBUG_SEL_W {
-        SAR_DEBUG_SEL_W { w: self }
+        SAR_DEBUG_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

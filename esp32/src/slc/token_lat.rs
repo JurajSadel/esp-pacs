@@ -14,35 +14,9 @@ impl From<crate::R<TOKEN_LAT_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_TOKEN` reader - "]
-pub struct SLC0_TOKEN_R(crate::FieldReader<u16>);
-impl SLC0_TOKEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SLC0_TOKEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_TOKEN_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_TOKEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC1_TOKEN` reader - "]
-pub struct SLC1_TOKEN_R(crate::FieldReader<u16>);
-impl SLC1_TOKEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SLC1_TOKEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TOKEN_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TOKEN_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]

@@ -35,106 +35,17 @@ impl From<crate::W<FUNC_IN_SEL_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_SEL` reader - Selection control for peripheral input signal m, selects a pad from the 54 GPIO matrix pads to connect this input signal. Or selects 0x38 for a constantly high input or 0x3C for a constantly low input."]
-pub struct IN_SEL_R(crate::FieldReader<u8>);
-impl IN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `IN_SEL` writer - Selection control for peripheral input signal m, selects a pad from the 54 GPIO matrix pads to connect this input signal. Or selects 0x38 for a constantly high input or 0x3C for a constantly low input."]
-pub struct IN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type IN_SEL_W<'a> = crate::FieldWriter<'a, u32, FUNC_IN_SEL_CFG_SPEC, u8, u8, 6, 0>;
 #[doc = "Field `IN_INV_SEL` reader - Invert the input value. 1: invert enabled; 0: invert disabled."]
-pub struct IN_INV_SEL_R(crate::FieldReader<bool>);
-impl IN_INV_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_INV_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_INV_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_INV_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `IN_INV_SEL` writer - Invert the input value. 1: invert enabled; 0: invert disabled."]
-pub struct IN_INV_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_INV_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type IN_INV_SEL_W<'a> = crate::BitWriter<'a, u32, FUNC_IN_SEL_CFG_SPEC, bool, 6>;
 #[doc = "Field `SEL` reader - Bypass GPIO matrix. 1: route signals via GPIO matrix, 0: connect signals directly to peripheral configured in IO_MUX."]
-pub struct SEL_R(crate::FieldReader<bool>);
-impl SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SEL` writer - Bypass GPIO matrix. 1: route signals via GPIO matrix, 0: connect signals directly to peripheral configured in IO_MUX."]
-pub struct SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type SEL_W<'a> = crate::BitWriter<'a, u32, FUNC_IN_SEL_CFG_SPEC, bool, 7>;
 impl R {
     #[doc = "Bits 0:5 - Selection control for peripheral input signal m, selects a pad from the 54 GPIO matrix pads to connect this input signal. Or selects 0x38 for a constantly high input or 0x3C for a constantly low input."]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bits 0:5 - Selection control for peripheral input signal m, selects a pad from the 54 GPIO matrix pads to connect this input signal. Or selects 0x38 for a constantly high input or 0x3C for a constantly low input."]
     #[inline(always)]
     pub fn in_sel(&mut self) -> IN_SEL_W {
-        IN_SEL_W { w: self }
+        IN_SEL_W::new(self)
     }
     #[doc = "Bit 6 - Invert the input value. 1: invert enabled; 0: invert disabled."]
     #[inline(always)]
     pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W {
-        IN_INV_SEL_W { w: self }
+        IN_INV_SEL_W::new(self)
     }
     #[doc = "Bit 7 - Bypass GPIO matrix. 1: route signals via GPIO matrix, 0: connect signals directly to peripheral configured in IO_MUX."]
     #[inline(always)]
     pub fn sel(&mut self) -> SEL_W {
-        SEL_W { w: self }
+        SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

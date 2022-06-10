@@ -35,59 +35,13 @@ impl From<crate::W<FSM_SPEC>> for W {
     }
 }
 #[doc = "Field `SAMPLE_NUM` reader - sample number"]
-pub struct SAMPLE_NUM_R(crate::FieldReader<u8>);
-impl SAMPLE_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAMPLE_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAMPLE_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAMPLE_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAMPLE_NUM` writer - sample number"]
-pub struct SAMPLE_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAMPLE_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type SAMPLE_NUM_W<'a> = crate::FieldWriter<'a, u32, FSM_SPEC, u8, u8, 8, 16>;
 #[doc = "Field `SAMPLE_CYCLE` reader - sample cycles"]
-pub struct SAMPLE_CYCLE_R(crate::FieldReader<u8>);
-impl SAMPLE_CYCLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAMPLE_CYCLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAMPLE_CYCLE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAMPLE_CYCLE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAMPLE_CYCLE` writer - sample cycles"]
-pub struct SAMPLE_CYCLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAMPLE_CYCLE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
-        self.w
-    }
-}
+pub type SAMPLE_CYCLE_W<'a> = crate::FieldWriter<'a, u32, FSM_SPEC, u8, u8, 8, 24>;
 impl R {
     #[doc = "Bits 16:23 - sample number"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 16:23 - sample number"]
     #[inline(always)]
     pub fn sample_num(&mut self) -> SAMPLE_NUM_W {
-        SAMPLE_NUM_W { w: self }
+        SAMPLE_NUM_W::new(self)
     }
     #[doc = "Bits 24:31 - sample cycles"]
     #[inline(always)]
     pub fn sample_cycle(&mut self) -> SAMPLE_CYCLE_W {
-        SAMPLE_CYCLE_W { w: self }
+        SAMPLE_CYCLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

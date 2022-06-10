@@ -14,20 +14,7 @@ impl From<crate::R<APP_CPU_RECORD_PDEBUGLS0DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `RECORD_APP_PDEBUGLS0DATA` reader - "]
-pub struct RECORD_APP_PDEBUGLS0DATA_R(crate::FieldReader<u32>);
-impl RECORD_APP_PDEBUGLS0DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RECORD_APP_PDEBUGLS0DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RECORD_APP_PDEBUGLS0DATA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RECORD_APP_PDEBUGLS0DATA_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

@@ -35,153 +35,21 @@ impl From<crate::W<CACHE_FCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_REQ_EN` reader - For SPI0 Cache access enable 1: enable 0:disable."]
-pub struct CACHE_REQ_EN_R(crate::FieldReader<bool>);
-impl CACHE_REQ_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACHE_REQ_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_REQ_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_REQ_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CACHE_REQ_EN` writer - For SPI0 Cache access enable 1: enable 0:disable."]
-pub struct CACHE_REQ_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_REQ_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CACHE_REQ_EN_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 0>;
 #[doc = "Field `CACHE_USR_CMD_4BYTE` reader - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
-pub struct CACHE_USR_CMD_4BYTE_R(crate::FieldReader<bool>);
-impl CACHE_USR_CMD_4BYTE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACHE_USR_CMD_4BYTE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_USR_CMD_4BYTE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_USR_CMD_4BYTE_R = crate::BitReader<bool>;
 #[doc = "Field `CACHE_USR_CMD_4BYTE` writer - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
-pub struct CACHE_USR_CMD_4BYTE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_USR_CMD_4BYTE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CACHE_USR_CMD_4BYTE_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 1>;
 #[doc = "Field `CACHE_FLASH_USR_CMD` reader - For SPI0 cache read flash for user define command 1: enable 0:disable."]
-pub struct CACHE_FLASH_USR_CMD_R(crate::FieldReader<bool>);
-impl CACHE_FLASH_USR_CMD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACHE_FLASH_USR_CMD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_FLASH_USR_CMD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_FLASH_USR_CMD_R = crate::BitReader<bool>;
 #[doc = "Field `CACHE_FLASH_USR_CMD` writer - For SPI0 cache read flash for user define command 1: enable 0:disable."]
-pub struct CACHE_FLASH_USR_CMD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_FLASH_USR_CMD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CACHE_FLASH_USR_CMD_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 2>;
 #[doc = "Field `CACHE_FLASH_PES_EN` reader - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
-pub struct CACHE_FLASH_PES_EN_R(crate::FieldReader<bool>);
-impl CACHE_FLASH_PES_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACHE_FLASH_PES_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_FLASH_PES_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_FLASH_PES_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CACHE_FLASH_PES_EN` writer - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
-pub struct CACHE_FLASH_PES_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_FLASH_PES_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CACHE_FLASH_PES_EN_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 3>;
 impl R {
     #[doc = "Bit 0 - For SPI0 Cache access enable 1: enable 0:disable."]
     #[inline(always)]
@@ -208,22 +76,22 @@ impl W {
     #[doc = "Bit 0 - For SPI0 Cache access enable 1: enable 0:disable."]
     #[inline(always)]
     pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W {
-        CACHE_REQ_EN_W { w: self }
+        CACHE_REQ_EN_W::new(self)
     }
     #[doc = "Bit 1 - For SPI0 cache read flash with 4 bytes command 1: enable 0:disable."]
     #[inline(always)]
     pub fn cache_usr_cmd_4byte(&mut self) -> CACHE_USR_CMD_4BYTE_W {
-        CACHE_USR_CMD_4BYTE_W { w: self }
+        CACHE_USR_CMD_4BYTE_W::new(self)
     }
     #[doc = "Bit 2 - For SPI0 cache read flash for user define command 1: enable 0:disable."]
     #[inline(always)]
     pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W {
-        CACHE_FLASH_USR_CMD_W { w: self }
+        CACHE_FLASH_USR_CMD_W::new(self)
     }
     #[doc = "Bit 3 - For SPI0 spi1 send suspend command before cache read flash 1: enable 0:disable."]
     #[inline(always)]
     pub fn cache_flash_pes_en(&mut self) -> CACHE_FLASH_PES_EN_W {
-        CACHE_FLASH_PES_EN_W { w: self }
+        CACHE_FLASH_PES_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,10 @@ impl From<crate::W<SHROM_MPU_TABLE14_SPEC>> for W {
     }
 }
 #[doc = "Field `SHROM_MPU_TABLE14` reader - "]
-pub struct SHROM_MPU_TABLE14_R(crate::FieldReader<u8>);
-impl SHROM_MPU_TABLE14_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SHROM_MPU_TABLE14_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SHROM_MPU_TABLE14_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SHROM_MPU_TABLE14_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SHROM_MPU_TABLE14` writer - "]
-pub struct SHROM_MPU_TABLE14_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SHROM_MPU_TABLE14_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type SHROM_MPU_TABLE14_W<'a> =
+    crate::FieldWriter<'a, u32, SHROM_MPU_TABLE14_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn shrom_mpu_table14(&mut self) -> SHROM_MPU_TABLE14_W {
-        SHROM_MPU_TABLE14_W { w: self }
+        SHROM_MPU_TABLE14_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

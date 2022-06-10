@@ -14,35 +14,9 @@ impl From<crate::R<CHADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_MEM_WADDR` reader - This register records the memory address offset when writes RAM over APB bus."]
-pub struct APB_MEM_WADDR_R(crate::FieldReader<u16>);
-impl APB_MEM_WADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        APB_MEM_WADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_MEM_WADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_MEM_WADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APB_MEM_RADDR` reader - This register records the memory address offset when reads RAM over APB bus."]
-pub struct APB_MEM_RADDR_R(crate::FieldReader<u16>);
-impl APB_MEM_RADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        APB_MEM_RADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_MEM_RADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_MEM_RADDR_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:8 - This register records the memory address offset when writes RAM over APB bus."]
     #[inline(always)]

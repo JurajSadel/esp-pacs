@@ -35,153 +35,21 @@ impl From<crate::W<BBPD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DC_EST_FORCE_PD` reader - "]
-pub struct DC_EST_FORCE_PD_R(crate::FieldReader<bool>);
-impl DC_EST_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DC_EST_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC_EST_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DC_EST_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `DC_EST_FORCE_PD` writer - "]
-pub struct DC_EST_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DC_EST_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DC_EST_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, BBPD_CTRL_SPEC, bool, 0>;
 #[doc = "Field `DC_EST_FORCE_PU` reader - "]
-pub struct DC_EST_FORCE_PU_R(crate::FieldReader<bool>);
-impl DC_EST_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DC_EST_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC_EST_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DC_EST_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `DC_EST_FORCE_PU` writer - "]
-pub struct DC_EST_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DC_EST_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type DC_EST_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, BBPD_CTRL_SPEC, bool, 1>;
 #[doc = "Field `FFT_FORCE_PD` reader - "]
-pub struct FFT_FORCE_PD_R(crate::FieldReader<bool>);
-impl FFT_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FFT_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FFT_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FFT_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `FFT_FORCE_PD` writer - "]
-pub struct FFT_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FFT_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type FFT_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, BBPD_CTRL_SPEC, bool, 2>;
 #[doc = "Field `FFT_FORCE_PU` reader - "]
-pub struct FFT_FORCE_PU_R(crate::FieldReader<bool>);
-impl FFT_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FFT_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FFT_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FFT_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `FFT_FORCE_PU` writer - "]
-pub struct FFT_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FFT_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type FFT_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, BBPD_CTRL_SPEC, bool, 3>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -208,22 +76,22 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn dc_est_force_pd(&mut self) -> DC_EST_FORCE_PD_W {
-        DC_EST_FORCE_PD_W { w: self }
+        DC_EST_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn dc_est_force_pu(&mut self) -> DC_EST_FORCE_PU_W {
-        DC_EST_FORCE_PU_W { w: self }
+        DC_EST_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn fft_force_pd(&mut self) -> FFT_FORCE_PD_W {
-        FFT_FORCE_PD_W { w: self }
+        FFT_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn fft_force_pu(&mut self) -> FFT_FORCE_PU_W {
-        FFT_FORCE_PU_W { w: self }
+        FFT_FORCE_PU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

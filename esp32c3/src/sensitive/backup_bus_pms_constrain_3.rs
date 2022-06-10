@@ -35,194 +35,40 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SPI_2` reader - backup_bus_pms_constrain_spi_2"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_SPI_2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_SPI_2` writer - backup_bus_pms_constrain_spi_2"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W<'a> =
+    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL` reader - backup_bus_pms_constrain_apb_ctrl"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL` writer - backup_bus_pms_constrain_apb_ctrl"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W<'a> =
+    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CAN` reader - backup_bus_pms_constrain_can"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_CAN_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_CONSTRAIN_CAN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_CONSTRAIN_CAN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_CAN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_CAN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_CAN` writer - backup_bus_pms_constrain_can"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_CAN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_BUS_PMS_CONSTRAIN_CAN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_CAN_W<'a> =
+    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, u8, u8, 2, 10>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2S1` reader - backup_bus_pms_constrain_i2s1"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_I2S1_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_CONSTRAIN_I2S1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_CONSTRAIN_I2S1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_I2S1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_I2S1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_I2S1` writer - backup_bus_pms_constrain_i2s1"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_I2S1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_BUS_PMS_CONSTRAIN_I2S1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_I2S1_W<'a> =
+    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, u8, u8, 2, 14>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RWBT` reader - backup_bus_pms_constrain_rwbt"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_RWBT_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_CONSTRAIN_RWBT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_CONSTRAIN_RWBT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_RWBT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_RWBT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RWBT` writer - backup_bus_pms_constrain_rwbt"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_RWBT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_BUS_PMS_CONSTRAIN_RWBT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
-        self.w
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_RWBT_W<'a> =
+    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, u8, u8, 2, 22>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC` reader - backup_bus_pms_constrain_wifimac"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC` writer - backup_bus_pms_constrain_wifimac"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
-        self.w
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W<'a> =
+    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, u8, u8, 2, 26>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PWR` reader - backup_bus_pms_constrain_pwr"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_PWR_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_CONSTRAIN_PWR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_CONSTRAIN_PWR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_PWR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_PWR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_PWR` writer - backup_bus_pms_constrain_pwr"]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_PWR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_BUS_PMS_CONSTRAIN_PWR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
-        self.w
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_PWR_W<'a> =
+    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_3_SPEC, u8, u8, 2, 28>;
 impl R {
     #[doc = "Bits 0:1 - backup_bus_pms_constrain_spi_2"]
     #[inline(always)]
@@ -264,37 +110,37 @@ impl W {
     #[doc = "Bits 0:1 - backup_bus_pms_constrain_spi_2"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_spi_2(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W {
-        BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W { w: self }
+        BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W::new(self)
     }
     #[doc = "Bits 4:5 - backup_bus_pms_constrain_apb_ctrl"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_apb_ctrl(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W {
-        BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W { w: self }
+        BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W::new(self)
     }
     #[doc = "Bits 10:11 - backup_bus_pms_constrain_can"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_can(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_CAN_W {
-        BACKUP_BUS_PMS_CONSTRAIN_CAN_W { w: self }
+        BACKUP_BUS_PMS_CONSTRAIN_CAN_W::new(self)
     }
     #[doc = "Bits 14:15 - backup_bus_pms_constrain_i2s1"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_i2s1(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_I2S1_W {
-        BACKUP_BUS_PMS_CONSTRAIN_I2S1_W { w: self }
+        BACKUP_BUS_PMS_CONSTRAIN_I2S1_W::new(self)
     }
     #[doc = "Bits 22:23 - backup_bus_pms_constrain_rwbt"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_rwbt(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_RWBT_W {
-        BACKUP_BUS_PMS_CONSTRAIN_RWBT_W { w: self }
+        BACKUP_BUS_PMS_CONSTRAIN_RWBT_W::new(self)
     }
     #[doc = "Bits 26:27 - backup_bus_pms_constrain_wifimac"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_wifimac(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W {
-        BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W { w: self }
+        BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W::new(self)
     }
     #[doc = "Bits 28:29 - backup_bus_pms_constrain_pwr"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_pwr(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_PWR_W {
-        BACKUP_BUS_PMS_CONSTRAIN_PWR_W { w: self }
+        BACKUP_BUS_PMS_CONSTRAIN_PWR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

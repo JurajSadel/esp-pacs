@@ -35,389 +35,53 @@ impl From<crate::W<DBG_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_GPIO_PIN5_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN5_MUX_SEL_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN5_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN5_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN5_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN5_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN5_MUX_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN5_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN5_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN5_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, 2>;
 #[doc = "Field `RTC_GPIO_PIN4_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN4_MUX_SEL_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN4_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN4_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN4_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN4_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN4_MUX_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN4_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN4_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN4_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, 3>;
 #[doc = "Field `RTC_GPIO_PIN3_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN3_MUX_SEL_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN3_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN3_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN3_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN3_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN3_MUX_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN3_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN3_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN3_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, 4>;
 #[doc = "Field `RTC_GPIO_PIN2_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN2_MUX_SEL_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN2_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN2_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN2_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN2_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN2_MUX_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN2_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN2_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN2_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, 5>;
 #[doc = "Field `RTC_GPIO_PIN1_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN1_MUX_SEL_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN1_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN1_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN1_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN1_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN1_MUX_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN1_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN1_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN1_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, 6>;
 #[doc = "Field `RTC_GPIO_PIN0_MUX_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN0_MUX_SEL_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN0_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN0_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN0_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN0_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN0_MUX_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN0_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN0_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN0_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, DBG_MAP_SPEC, bool, 7>;
 #[doc = "Field `RTC_GPIO_PIN5_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN5_FUN_SEL_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN5_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN5_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN5_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN5_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN5_FUN_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN5_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN5_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN5_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, 8>;
 #[doc = "Field `RTC_GPIO_PIN4_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN4_FUN_SEL_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN4_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN4_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN4_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN4_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN4_FUN_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN4_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN4_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u32 & 0x0f) << 12);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN4_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, 12>;
 #[doc = "Field `RTC_GPIO_PIN3_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN3_FUN_SEL_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN3_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN3_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN3_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN3_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN3_FUN_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN3_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN3_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN3_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, 16>;
 #[doc = "Field `RTC_GPIO_PIN2_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN2_FUN_SEL_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN2_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN2_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN2_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN2_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN2_FUN_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN2_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN2_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | ((value as u32 & 0x0f) << 20);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN2_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, 20>;
 #[doc = "Field `RTC_GPIO_PIN1_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN1_FUN_SEL_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN1_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN1_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN1_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN1_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN1_FUN_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN1_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN1_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN1_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, 24>;
 #[doc = "Field `RTC_GPIO_PIN0_FUN_SEL` reader - use for debug"]
-pub struct RTC_GPIO_PIN0_FUN_SEL_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN0_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN0_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN0_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN0_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN0_FUN_SEL` writer - use for debug"]
-pub struct RTC_GPIO_PIN0_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN0_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN0_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, DBG_MAP_SPEC, u8, u8, 4, 28>;
 impl R {
     #[doc = "Bit 2 - use for debug"]
     #[inline(always)]
@@ -484,62 +148,62 @@ impl W {
     #[doc = "Bit 2 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin5_mux_sel(&mut self) -> RTC_GPIO_PIN5_MUX_SEL_W {
-        RTC_GPIO_PIN5_MUX_SEL_W { w: self }
+        RTC_GPIO_PIN5_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 3 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin4_mux_sel(&mut self) -> RTC_GPIO_PIN4_MUX_SEL_W {
-        RTC_GPIO_PIN4_MUX_SEL_W { w: self }
+        RTC_GPIO_PIN4_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 4 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin3_mux_sel(&mut self) -> RTC_GPIO_PIN3_MUX_SEL_W {
-        RTC_GPIO_PIN3_MUX_SEL_W { w: self }
+        RTC_GPIO_PIN3_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 5 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin2_mux_sel(&mut self) -> RTC_GPIO_PIN2_MUX_SEL_W {
-        RTC_GPIO_PIN2_MUX_SEL_W { w: self }
+        RTC_GPIO_PIN2_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 6 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin1_mux_sel(&mut self) -> RTC_GPIO_PIN1_MUX_SEL_W {
-        RTC_GPIO_PIN1_MUX_SEL_W { w: self }
+        RTC_GPIO_PIN1_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 7 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin0_mux_sel(&mut self) -> RTC_GPIO_PIN0_MUX_SEL_W {
-        RTC_GPIO_PIN0_MUX_SEL_W { w: self }
+        RTC_GPIO_PIN0_MUX_SEL_W::new(self)
     }
     #[doc = "Bits 8:11 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin5_fun_sel(&mut self) -> RTC_GPIO_PIN5_FUN_SEL_W {
-        RTC_GPIO_PIN5_FUN_SEL_W { w: self }
+        RTC_GPIO_PIN5_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 12:15 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin4_fun_sel(&mut self) -> RTC_GPIO_PIN4_FUN_SEL_W {
-        RTC_GPIO_PIN4_FUN_SEL_W { w: self }
+        RTC_GPIO_PIN4_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 16:19 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin3_fun_sel(&mut self) -> RTC_GPIO_PIN3_FUN_SEL_W {
-        RTC_GPIO_PIN3_FUN_SEL_W { w: self }
+        RTC_GPIO_PIN3_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 20:23 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin2_fun_sel(&mut self) -> RTC_GPIO_PIN2_FUN_SEL_W {
-        RTC_GPIO_PIN2_FUN_SEL_W { w: self }
+        RTC_GPIO_PIN2_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 24:27 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin1_fun_sel(&mut self) -> RTC_GPIO_PIN1_FUN_SEL_W {
-        RTC_GPIO_PIN1_FUN_SEL_W { w: self }
+        RTC_GPIO_PIN1_FUN_SEL_W::new(self)
     }
     #[doc = "Bits 28:31 - use for debug"]
     #[inline(always)]
     pub fn rtc_gpio_pin0_fun_sel(&mut self) -> RTC_GPIO_PIN0_FUN_SEL_W {
-        RTC_GPIO_PIN0_FUN_SEL_W { w: self }
+        RTC_GPIO_PIN0_FUN_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

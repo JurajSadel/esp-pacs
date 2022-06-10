@@ -14,140 +14,23 @@ impl From<crate::R<MEM_ACCESS_DBUG0_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_ROM_MPU_AD` reader - "]
-pub struct PRO_ROM_MPU_AD_R(crate::FieldReader<bool>);
-impl PRO_ROM_MPU_AD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ROM_MPU_AD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ROM_MPU_AD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ROM_MPU_AD_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_ROM_IA` reader - "]
-pub struct PRO_ROM_IA_R(crate::FieldReader<bool>);
-impl PRO_ROM_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ROM_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ROM_IA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ROM_IA_R = crate::BitReader<bool>;
 #[doc = "Field `APP_ROM_MPU_AD` reader - "]
-pub struct APP_ROM_MPU_AD_R(crate::FieldReader<bool>);
-impl APP_ROM_MPU_AD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_ROM_MPU_AD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_ROM_MPU_AD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_ROM_MPU_AD_R = crate::BitReader<bool>;
 #[doc = "Field `APP_ROM_IA` reader - "]
-pub struct APP_ROM_IA_R(crate::FieldReader<bool>);
-impl APP_ROM_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_ROM_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_ROM_IA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_ROM_IA_R = crate::BitReader<bool>;
 #[doc = "Field `SHARE_ROM_MPU_AD` reader - "]
-pub struct SHARE_ROM_MPU_AD_R(crate::FieldReader<u8>);
-impl SHARE_ROM_MPU_AD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SHARE_ROM_MPU_AD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SHARE_ROM_MPU_AD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SHARE_ROM_MPU_AD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SHARE_ROM_IA` reader - "]
-pub struct SHARE_ROM_IA_R(crate::FieldReader<u8>);
-impl SHARE_ROM_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SHARE_ROM_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SHARE_ROM_IA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SHARE_ROM_IA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `INTERNAL_SRAM_MMU_AD` reader - "]
-pub struct INTERNAL_SRAM_MMU_AD_R(crate::FieldReader<u8>);
-impl INTERNAL_SRAM_MMU_AD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INTERNAL_SRAM_MMU_AD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERNAL_SRAM_MMU_AD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERNAL_SRAM_MMU_AD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `INTERNAL_SRAM_IA` reader - "]
-pub struct INTERNAL_SRAM_IA_R(crate::FieldReader<u16>);
-impl INTERNAL_SRAM_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        INTERNAL_SRAM_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERNAL_SRAM_IA_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERNAL_SRAM_IA_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `INTERNAL_SRAM_MMU_MULTI_HIT` reader - "]
-pub struct INTERNAL_SRAM_MMU_MULTI_HIT_R(crate::FieldReader<u8>);
-impl INTERNAL_SRAM_MMU_MULTI_HIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INTERNAL_SRAM_MMU_MULTI_HIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERNAL_SRAM_MMU_MULTI_HIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERNAL_SRAM_MMU_MULTI_HIT_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<WR_TIM_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `PWR_ON_NUM` reader - Configures the power up time for VDDQ."]
-pub struct PWR_ON_NUM_R(crate::FieldReader<u16>);
-impl PWR_ON_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PWR_ON_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWR_ON_NUM_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWR_ON_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PWR_ON_NUM` writer - Configures the power up time for VDDQ."]
-pub struct PWR_ON_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWR_ON_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 8)) | ((value as u32 & 0xffff) << 8);
-        self.w
-    }
-}
+pub type PWR_ON_NUM_W<'a> = crate::FieldWriter<'a, u32, WR_TIM_CONF1_SPEC, u16, u16, 16, 8>;
 impl R {
     #[doc = "Bits 8:23 - Configures the power up time for VDDQ."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 8:23 - Configures the power up time for VDDQ."]
     #[inline(always)]
     pub fn pwr_on_num(&mut self) -> PWR_ON_NUM_W {
-        PWR_ON_NUM_W { w: self }
+        PWR_ON_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,79 +35,15 @@ impl From<crate::W<DMA_APBPERI_PMS_MONITOR_1_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR` reader - Set 1 to clear dma_pms_monitor_violate interrupt"]
-pub struct DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_R(crate::FieldReader<bool>);
-impl DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR` writer - Set 1 to clear dma_pms_monitor_violate interrupt"]
-pub struct DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W<'a> =
+    crate::BitWriter<'a, u32, DMA_APBPERI_PMS_MONITOR_1_SPEC, bool, 0>;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_EN` reader - Set 1 to enable dma pms monitor, if dma access violated permission, will trigger interrupt."]
-pub struct DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_R(crate::FieldReader<bool>);
-impl DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_EN` writer - Set 1 to enable dma pms monitor, if dma access violated permission, will trigger interrupt."]
-pub struct DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W<'a> =
+    crate::BitWriter<'a, u32, DMA_APBPERI_PMS_MONITOR_1_SPEC, bool, 1>;
 impl R {
     #[doc = "Bit 0 - Set 1 to clear dma_pms_monitor_violate interrupt"]
     #[inline(always)]
@@ -124,12 +60,12 @@ impl W {
     #[doc = "Bit 0 - Set 1 to clear dma_pms_monitor_violate interrupt"]
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_violate_clr(&mut self) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W { w: self }
+        DMA_APBPERI_PMS_MONITOR_VIOLATE_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Set 1 to enable dma pms monitor, if dma access violated permission, will trigger interrupt."]
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_violate_en(&mut self) -> DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W {
-        DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W { w: self }
+        DMA_APBPERI_PMS_MONITOR_VIOLATE_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

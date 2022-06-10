@@ -35,128 +35,23 @@ impl From<crate::W<BLK3_RDATA3_SPEC>> for W {
     }
 }
 #[doc = "Field `BLK3_DOUT3` reader - read for BLOCK3"]
-pub struct BLK3_DOUT3_R(crate::FieldReader<u32>);
-impl BLK3_DOUT3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BLK3_DOUT3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BLK3_DOUT3_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BLK3_DOUT3_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RD_ADC1_TP_LOW` reader - ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub struct RD_ADC1_TP_LOW_R(crate::FieldReader<u8>);
-impl RD_ADC1_TP_LOW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_ADC1_TP_LOW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_ADC1_TP_LOW_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_ADC1_TP_LOW_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_ADC1_TP_LOW` writer - ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub struct RD_ADC1_TP_LOW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RD_ADC1_TP_LOW_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type RD_ADC1_TP_LOW_W<'a> = crate::FieldWriter<'a, u32, BLK3_RDATA3_SPEC, u8, u8, 7, 0>;
 #[doc = "Field `RD_ADC1_TP_HIGH` reader - ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub struct RD_ADC1_TP_HIGH_R(crate::FieldReader<u16>);
-impl RD_ADC1_TP_HIGH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RD_ADC1_TP_HIGH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_ADC1_TP_HIGH_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_ADC1_TP_HIGH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RD_ADC1_TP_HIGH` writer - ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub struct RD_ADC1_TP_HIGH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RD_ADC1_TP_HIGH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01ff << 7)) | ((value as u32 & 0x01ff) << 7);
-        self.w
-    }
-}
+pub type RD_ADC1_TP_HIGH_W<'a> = crate::FieldWriter<'a, u32, BLK3_RDATA3_SPEC, u16, u16, 9, 7>;
 #[doc = "Field `RD_ADC2_TP_LOW` reader - ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub struct RD_ADC2_TP_LOW_R(crate::FieldReader<u8>);
-impl RD_ADC2_TP_LOW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_ADC2_TP_LOW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_ADC2_TP_LOW_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_ADC2_TP_LOW_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_ADC2_TP_LOW` writer - ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub struct RD_ADC2_TP_LOW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RD_ADC2_TP_LOW_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7f << 16)) | ((value as u32 & 0x7f) << 16);
-        self.w
-    }
-}
+pub type RD_ADC2_TP_LOW_W<'a> = crate::FieldWriter<'a, u32, BLK3_RDATA3_SPEC, u8, u8, 7, 16>;
 #[doc = "Field `RD_ADC2_TP_HIGH` reader - ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub struct RD_ADC2_TP_HIGH_R(crate::FieldReader<u16>);
-impl RD_ADC2_TP_HIGH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RD_ADC2_TP_HIGH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_ADC2_TP_HIGH_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_ADC2_TP_HIGH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RD_ADC2_TP_HIGH` writer - ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
-pub struct RD_ADC2_TP_HIGH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RD_ADC2_TP_HIGH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01ff << 23)) | ((value as u32 & 0x01ff) << 23);
-        self.w
-    }
-}
+pub type RD_ADC2_TP_HIGH_W<'a> = crate::FieldWriter<'a, u32, BLK3_RDATA3_SPEC, u16, u16, 9, 23>;
 impl R {
     #[doc = "Bits 0:31 - read for BLOCK3"]
     #[inline(always)]
@@ -188,22 +83,22 @@ impl W {
     #[doc = "Bits 0:6 - ADC1 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
     #[inline(always)]
     pub fn rd_adc1_tp_low(&mut self) -> RD_ADC1_TP_LOW_W {
-        RD_ADC1_TP_LOW_W { w: self }
+        RD_ADC1_TP_LOW_W::new(self)
     }
     #[doc = "Bits 7:15 - ADC1 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
     #[inline(always)]
     pub fn rd_adc1_tp_high(&mut self) -> RD_ADC1_TP_HIGH_W {
-        RD_ADC1_TP_HIGH_W { w: self }
+        RD_ADC1_TP_HIGH_W::new(self)
     }
     #[doc = "Bits 16:22 - ADC2 Two Point calibration low point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
     #[inline(always)]
     pub fn rd_adc2_tp_low(&mut self) -> RD_ADC2_TP_LOW_W {
-        RD_ADC2_TP_LOW_W { w: self }
+        RD_ADC2_TP_LOW_W::new(self)
     }
     #[doc = "Bits 23:31 - ADC2 Two Point calibration high point. Only valid if EFUSE_RD_BLK3_PART_RESERVE"]
     #[inline(always)]
     pub fn rd_adc2_tp_high(&mut self) -> RD_ADC2_TP_HIGH_W {
-        RD_ADC2_TP_HIGH_W { w: self }
+        RD_ADC2_TP_HIGH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

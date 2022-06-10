@@ -14,140 +14,23 @@ impl From<crate::R<HCON_SPEC>> for R {
     }
 }
 #[doc = "Field `CARD_TYPE` reader - Hardware support SDIO and MMC."]
-pub struct CARD_TYPE_R(crate::FieldReader<bool>);
-impl CARD_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARD_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARD_TYPE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARD_TYPE_R = crate::BitReader<bool>;
 #[doc = "Field `CARD_NUM` reader - Support card number is 2."]
-pub struct CARD_NUM_R(crate::FieldReader<u8>);
-impl CARD_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CARD_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARD_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARD_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BUS_TYPE` reader - Register config is APB bus."]
-pub struct BUS_TYPE_R(crate::FieldReader<bool>);
-impl BUS_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BUS_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUS_TYPE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUS_TYPE_R = crate::BitReader<bool>;
 #[doc = "Field `DATA_WIDTH` reader - Regisger data widht is 32."]
-pub struct DATA_WIDTH_R(crate::FieldReader<u8>);
-impl DATA_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DATA_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATA_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADDR_WIDTH` reader - Register address width is 32."]
-pub struct ADDR_WIDTH_R(crate::FieldReader<u8>);
-impl ADDR_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADDR_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADDR_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADDR_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_WIDTH` reader - DMA data witdth is 32."]
-pub struct DMA_WIDTH_R(crate::FieldReader<u8>);
-impl DMA_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RAM_INDISE` reader - Inside RAM in SDMMC module."]
-pub struct RAM_INDISE_R(crate::FieldReader<bool>);
-impl RAM_INDISE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RAM_INDISE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAM_INDISE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RAM_INDISE_R = crate::BitReader<bool>;
 #[doc = "Field `HOLD` reader - Have a hold regiser in data path ."]
-pub struct HOLD_R(crate::FieldReader<bool>);
-impl HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `NUM_CLK_DIV` reader - Have 4 clk divider in design ."]
-pub struct NUM_CLK_DIV_R(crate::FieldReader<u8>);
-impl NUM_CLK_DIV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        NUM_CLK_DIV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NUM_CLK_DIV_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NUM_CLK_DIV_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - Hardware support SDIO and MMC."]
     #[inline(always)]

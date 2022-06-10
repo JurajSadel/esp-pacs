@@ -35,42 +35,9 @@ impl From<crate::W<APP_BOOT_REMAP_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_BOOT_REMAP` reader - "]
-pub struct APP_BOOT_REMAP_R(crate::FieldReader<bool>);
-impl APP_BOOT_REMAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_BOOT_REMAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_BOOT_REMAP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_BOOT_REMAP_R = crate::BitReader<bool>;
 #[doc = "Field `APP_BOOT_REMAP` writer - "]
-pub struct APP_BOOT_REMAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_BOOT_REMAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type APP_BOOT_REMAP_W<'a> = crate::BitWriter<'a, u32, APP_BOOT_REMAP_CTRL_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn app_boot_remap(&mut self) -> APP_BOOT_REMAP_W {
-        APP_BOOT_REMAP_W { w: self }
+        APP_BOOT_REMAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,50 +14,11 @@ impl From<crate::R<CORE0_DBUS_REJECT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE0_DBUS_TAG_ATTR` reader - The bits are used to indicate the attribute of data from external memory when authentication fail. 0: invalidate, 1: execute-able, 2: read-able, 4: write-able."]
-pub struct CORE0_DBUS_TAG_ATTR_R(crate::FieldReader<u8>);
-impl CORE0_DBUS_TAG_ATTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE0_DBUS_TAG_ATTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE0_DBUS_TAG_ATTR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE0_DBUS_TAG_ATTR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE0_DBUS_ATTR` reader - The bits are used to indicate the attribute of CPU access dbus when authentication fail. 0: invalidate, 1: execute-able, 2: read-able, 4: write-able."]
-pub struct CORE0_DBUS_ATTR_R(crate::FieldReader<u8>);
-impl CORE0_DBUS_ATTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE0_DBUS_ATTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE0_DBUS_ATTR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE0_DBUS_ATTR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE0_DBUS_WORLD` reader - The bit is used to indicate the world of CPU access dbus when authentication fail. 0: WORLD0, 1: WORLD1"]
-pub struct CORE0_DBUS_WORLD_R(crate::FieldReader<bool>);
-impl CORE0_DBUS_WORLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE0_DBUS_WORLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE0_DBUS_WORLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE0_DBUS_WORLD_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:2 - The bits are used to indicate the attribute of data from external memory when authentication fail. 0: invalidate, 1: execute-able, 2: read-able, 4: write-able."]
     #[inline(always)]

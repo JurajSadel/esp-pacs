@@ -14,125 +14,21 @@ impl From<crate::R<INTR_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO0_INT_ST` reader - This is the status bit for DEDIC_GPIO0_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub struct GPIO0_INT_ST_R(crate::FieldReader<bool>);
-impl GPIO0_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO0_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO0_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO0_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO1_INT_ST` reader - This is the status bit for DEDIC_GPIO1_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub struct GPIO1_INT_ST_R(crate::FieldReader<bool>);
-impl GPIO1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO2_INT_ST` reader - This is the status bit for DEDIC_GPIO2_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub struct GPIO2_INT_ST_R(crate::FieldReader<bool>);
-impl GPIO2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO3_INT_ST` reader - This is the status bit for DEDIC_GPIO3_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub struct GPIO3_INT_ST_R(crate::FieldReader<bool>);
-impl GPIO3_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO3_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO3_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO3_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO4_INT_ST` reader - This is the status bit for DEDIC_GPIO4_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub struct GPIO4_INT_ST_R(crate::FieldReader<bool>);
-impl GPIO4_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO4_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO4_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO4_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO5_INT_ST` reader - This is the status bit for DEDIC_GPIO5_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub struct GPIO5_INT_ST_R(crate::FieldReader<bool>);
-impl GPIO5_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO5_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO5_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO5_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO6_INT_ST` reader - This is the status bit for DEDIC_GPIO6_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub struct GPIO6_INT_ST_R(crate::FieldReader<bool>);
-impl GPIO6_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO6_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO6_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO6_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO7_INT_ST` reader - This is the status bit for DEDIC_GPIO7_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
-pub struct GPIO7_INT_ST_R(crate::FieldReader<bool>);
-impl GPIO7_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO7_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO7_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO7_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - This is the status bit for DEDIC_GPIO0_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[inline(always)]

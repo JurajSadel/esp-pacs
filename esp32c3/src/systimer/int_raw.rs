@@ -14,50 +14,11 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `TARGET0_INT_RAW` reader - interupt0 raw"]
-pub struct TARGET0_INT_RAW_R(crate::FieldReader<bool>);
-impl TARGET0_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TARGET0_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TARGET0_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TARGET0_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `TARGET1_INT_RAW` reader - interupt1 raw"]
-pub struct TARGET1_INT_RAW_R(crate::FieldReader<bool>);
-impl TARGET1_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TARGET1_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TARGET1_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TARGET1_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `TARGET2_INT_RAW` reader - interupt2 raw"]
-pub struct TARGET2_INT_RAW_R(crate::FieldReader<bool>);
-impl TARGET2_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TARGET2_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TARGET2_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TARGET2_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - interupt0 raw"]
     #[inline(always)]

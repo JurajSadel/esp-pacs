@@ -14,80 +14,15 @@ impl From<crate::R<CORE_1_IRAM0_PMS_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR` reader - recorded core1 iram0 pms monitor interrupt status."]
-pub struct CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool>);
-impl CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR` reader - recorded core1 iram0 wr status, only if loadstore is 1 have meaning, 1(store), 0(load)."]
-pub struct CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R(crate::FieldReader<bool>);
-impl CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE` reader - recorded core1 iram0 loadstore status, indicated the type of operation, 0(fetch), 1(load/store)."]
-pub struct CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE_R(crate::FieldReader<bool>);
-impl CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_LOADSTORE_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD` reader - recorded core1 iram0 world status, 0x01 means world0, 0x10 means world1."]
-pub struct CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R(crate::FieldReader<u8>);
-impl CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR` reader - recorded core1 iram0 address \\[25:2\\] status when core1 iram0 violated permission, the real address is 0x40000000+addr*4"]
-pub struct CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R(crate::FieldReader<u32>);
-impl CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_IRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bit 0 - recorded core1 iram0 pms monitor interrupt status."]
     #[inline(always)]

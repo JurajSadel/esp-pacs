@@ -35,170 +35,25 @@ impl From<crate::W<TIMER2_SYNC_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER2_SYNCI_EN` reader - "]
-pub struct TIMER2_SYNCI_EN_R(crate::FieldReader<bool>);
-impl TIMER2_SYNCI_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER2_SYNCI_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER2_SYNCI_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER2_SYNCI_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER2_SYNCI_EN` writer - "]
-pub struct TIMER2_SYNCI_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER2_SYNCI_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TIMER2_SYNCI_EN_W<'a> = crate::BitWriter<'a, u32, TIMER2_SYNC_SPEC, bool, 0>;
 #[doc = "Field `SW` reader - "]
-pub struct SW_R(crate::FieldReader<bool>);
-impl SW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_R = crate::BitReader<bool>;
 #[doc = "Field `SW` writer - "]
-pub struct SW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SW_W<'a> = crate::BitWriter<'a, u32, TIMER2_SYNC_SPEC, bool, 1>;
 #[doc = "Field `TIMER2_SYNCO_SEL` reader - "]
-pub struct TIMER2_SYNCO_SEL_R(crate::FieldReader<u8>);
-impl TIMER2_SYNCO_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER2_SYNCO_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER2_SYNCO_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER2_SYNCO_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER2_SYNCO_SEL` writer - "]
-pub struct TIMER2_SYNCO_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER2_SYNCO_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type TIMER2_SYNCO_SEL_W<'a> = crate::FieldWriter<'a, u32, TIMER2_SYNC_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `TIMER2_PHASE` reader - "]
-pub struct TIMER2_PHASE_R(crate::FieldReader<u16>);
-impl TIMER2_PHASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TIMER2_PHASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER2_PHASE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER2_PHASE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIMER2_PHASE` writer - "]
-pub struct TIMER2_PHASE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER2_PHASE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 4)) | ((value as u32 & 0xffff) << 4);
-        self.w
-    }
-}
+pub type TIMER2_PHASE_W<'a> = crate::FieldWriter<'a, u32, TIMER2_SYNC_SPEC, u16, u16, 16, 4>;
 #[doc = "Field `TIMER2_PHASE_DIRECTION` reader - "]
-pub struct TIMER2_PHASE_DIRECTION_R(crate::FieldReader<bool>);
-impl TIMER2_PHASE_DIRECTION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER2_PHASE_DIRECTION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER2_PHASE_DIRECTION_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER2_PHASE_DIRECTION_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER2_PHASE_DIRECTION` writer - "]
-pub struct TIMER2_PHASE_DIRECTION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER2_PHASE_DIRECTION_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type TIMER2_PHASE_DIRECTION_W<'a> = crate::BitWriter<'a, u32, TIMER2_SYNC_SPEC, bool, 20>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -230,27 +85,27 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn timer2_synci_en(&mut self) -> TIMER2_SYNCI_EN_W {
-        TIMER2_SYNCI_EN_W { w: self }
+        TIMER2_SYNCI_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn sw(&mut self) -> SW_W {
-        SW_W { w: self }
+        SW_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
     pub fn timer2_synco_sel(&mut self) -> TIMER2_SYNCO_SEL_W {
-        TIMER2_SYNCO_SEL_W { w: self }
+        TIMER2_SYNCO_SEL_W::new(self)
     }
     #[doc = "Bits 4:19"]
     #[inline(always)]
     pub fn timer2_phase(&mut self) -> TIMER2_PHASE_W {
-        TIMER2_PHASE_W { w: self }
+        TIMER2_PHASE_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn timer2_phase_direction(&mut self) -> TIMER2_PHASE_DIRECTION_W {
-        TIMER2_PHASE_DIRECTION_W { w: self }
+        TIMER2_PHASE_DIRECTION_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

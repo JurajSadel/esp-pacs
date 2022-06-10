@@ -35,523 +35,61 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_CHECK_OWNER` reader - "]
-pub struct SLC0_CHECK_OWNER_R(crate::FieldReader<bool>);
-impl SLC0_CHECK_OWNER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_CHECK_OWNER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_CHECK_OWNER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_CHECK_OWNER_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_CHECK_OWNER` writer - "]
-pub struct SLC0_CHECK_OWNER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_CHECK_OWNER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SLC0_CHECK_OWNER_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 0>;
 #[doc = "Field `SLC0_TX_CHECK_SUM_EN` reader - "]
-pub struct SLC0_TX_CHECK_SUM_EN_R(crate::FieldReader<bool>);
-impl SLC0_TX_CHECK_SUM_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_TX_CHECK_SUM_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_TX_CHECK_SUM_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_TX_CHECK_SUM_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_TX_CHECK_SUM_EN` writer - "]
-pub struct SLC0_TX_CHECK_SUM_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_TX_CHECK_SUM_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SLC0_TX_CHECK_SUM_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 1>;
 #[doc = "Field `SLC0_RX_CHECK_SUM_EN` reader - "]
-pub struct SLC0_RX_CHECK_SUM_EN_R(crate::FieldReader<bool>);
-impl SLC0_RX_CHECK_SUM_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_RX_CHECK_SUM_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_CHECK_SUM_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_CHECK_SUM_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_RX_CHECK_SUM_EN` writer - "]
-pub struct SLC0_RX_CHECK_SUM_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_RX_CHECK_SUM_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type SLC0_RX_CHECK_SUM_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 2>;
 #[doc = "Field `CMD_HOLD_EN` reader - "]
-pub struct CMD_HOLD_EN_R(crate::FieldReader<bool>);
-impl CMD_HOLD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CMD_HOLD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMD_HOLD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMD_HOLD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CMD_HOLD_EN` writer - "]
-pub struct CMD_HOLD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CMD_HOLD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CMD_HOLD_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 3>;
 #[doc = "Field `SLC0_LEN_AUTO_CLR` reader - "]
-pub struct SLC0_LEN_AUTO_CLR_R(crate::FieldReader<bool>);
-impl SLC0_LEN_AUTO_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_LEN_AUTO_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_LEN_AUTO_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_LEN_AUTO_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_LEN_AUTO_CLR` writer - "]
-pub struct SLC0_LEN_AUTO_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_LEN_AUTO_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SLC0_LEN_AUTO_CLR_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 4>;
 #[doc = "Field `SLC0_TX_STITCH_EN` reader - "]
-pub struct SLC0_TX_STITCH_EN_R(crate::FieldReader<bool>);
-impl SLC0_TX_STITCH_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_TX_STITCH_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_TX_STITCH_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_TX_STITCH_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_TX_STITCH_EN` writer - "]
-pub struct SLC0_TX_STITCH_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_TX_STITCH_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type SLC0_TX_STITCH_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 5>;
 #[doc = "Field `SLC0_RX_STITCH_EN` reader - "]
-pub struct SLC0_RX_STITCH_EN_R(crate::FieldReader<bool>);
-impl SLC0_RX_STITCH_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_RX_STITCH_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_STITCH_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_STITCH_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_RX_STITCH_EN` writer - "]
-pub struct SLC0_RX_STITCH_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_RX_STITCH_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type SLC0_RX_STITCH_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 6>;
 #[doc = "Field `SLC1_CHECK_OWNER` reader - "]
-pub struct SLC1_CHECK_OWNER_R(crate::FieldReader<bool>);
-impl SLC1_CHECK_OWNER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_CHECK_OWNER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_CHECK_OWNER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_CHECK_OWNER_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_CHECK_OWNER` writer - "]
-pub struct SLC1_CHECK_OWNER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_CHECK_OWNER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SLC1_CHECK_OWNER_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 16>;
 #[doc = "Field `SLC1_TX_CHECK_SUM_EN` reader - "]
-pub struct SLC1_TX_CHECK_SUM_EN_R(crate::FieldReader<bool>);
-impl SLC1_TX_CHECK_SUM_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_TX_CHECK_SUM_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TX_CHECK_SUM_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TX_CHECK_SUM_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_TX_CHECK_SUM_EN` writer - "]
-pub struct SLC1_TX_CHECK_SUM_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_TX_CHECK_SUM_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type SLC1_TX_CHECK_SUM_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 17>;
 #[doc = "Field `SLC1_RX_CHECK_SUM_EN` reader - "]
-pub struct SLC1_RX_CHECK_SUM_EN_R(crate::FieldReader<bool>);
-impl SLC1_RX_CHECK_SUM_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_RX_CHECK_SUM_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_RX_CHECK_SUM_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_RX_CHECK_SUM_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_RX_CHECK_SUM_EN` writer - "]
-pub struct SLC1_RX_CHECK_SUM_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_RX_CHECK_SUM_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type SLC1_RX_CHECK_SUM_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 18>;
 #[doc = "Field `HOST_INT_LEVEL_SEL` reader - "]
-pub struct HOST_INT_LEVEL_SEL_R(crate::FieldReader<bool>);
-impl HOST_INT_LEVEL_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_INT_LEVEL_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_INT_LEVEL_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_INT_LEVEL_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_INT_LEVEL_SEL` writer - "]
-pub struct HOST_INT_LEVEL_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_INT_LEVEL_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type HOST_INT_LEVEL_SEL_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 19>;
 #[doc = "Field `SLC1_TX_STITCH_EN` reader - "]
-pub struct SLC1_TX_STITCH_EN_R(crate::FieldReader<bool>);
-impl SLC1_TX_STITCH_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_TX_STITCH_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TX_STITCH_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TX_STITCH_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_TX_STITCH_EN` writer - "]
-pub struct SLC1_TX_STITCH_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_TX_STITCH_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type SLC1_TX_STITCH_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 20>;
 #[doc = "Field `SLC1_RX_STITCH_EN` reader - "]
-pub struct SLC1_RX_STITCH_EN_R(crate::FieldReader<bool>);
-impl SLC1_RX_STITCH_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_RX_STITCH_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_RX_STITCH_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_RX_STITCH_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_RX_STITCH_EN` writer - "]
-pub struct SLC1_RX_STITCH_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_RX_STITCH_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type SLC1_RX_STITCH_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 21>;
 #[doc = "Field `CLK_EN` reader - "]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - "]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 22>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -628,72 +166,72 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn slc0_check_owner(&mut self) -> SLC0_CHECK_OWNER_W {
-        SLC0_CHECK_OWNER_W { w: self }
+        SLC0_CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn slc0_tx_check_sum_en(&mut self) -> SLC0_TX_CHECK_SUM_EN_W {
-        SLC0_TX_CHECK_SUM_EN_W { w: self }
+        SLC0_TX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn slc0_rx_check_sum_en(&mut self) -> SLC0_RX_CHECK_SUM_EN_W {
-        SLC0_RX_CHECK_SUM_EN_W { w: self }
+        SLC0_RX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn cmd_hold_en(&mut self) -> CMD_HOLD_EN_W {
-        CMD_HOLD_EN_W { w: self }
+        CMD_HOLD_EN_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn slc0_len_auto_clr(&mut self) -> SLC0_LEN_AUTO_CLR_W {
-        SLC0_LEN_AUTO_CLR_W { w: self }
+        SLC0_LEN_AUTO_CLR_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn slc0_tx_stitch_en(&mut self) -> SLC0_TX_STITCH_EN_W {
-        SLC0_TX_STITCH_EN_W { w: self }
+        SLC0_TX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn slc0_rx_stitch_en(&mut self) -> SLC0_RX_STITCH_EN_W {
-        SLC0_RX_STITCH_EN_W { w: self }
+        SLC0_RX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn slc1_check_owner(&mut self) -> SLC1_CHECK_OWNER_W {
-        SLC1_CHECK_OWNER_W { w: self }
+        SLC1_CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn slc1_tx_check_sum_en(&mut self) -> SLC1_TX_CHECK_SUM_EN_W {
-        SLC1_TX_CHECK_SUM_EN_W { w: self }
+        SLC1_TX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn slc1_rx_check_sum_en(&mut self) -> SLC1_RX_CHECK_SUM_EN_W {
-        SLC1_RX_CHECK_SUM_EN_W { w: self }
+        SLC1_RX_CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     pub fn host_int_level_sel(&mut self) -> HOST_INT_LEVEL_SEL_W {
-        HOST_INT_LEVEL_SEL_W { w: self }
+        HOST_INT_LEVEL_SEL_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn slc1_tx_stitch_en(&mut self) -> SLC1_TX_STITCH_EN_W {
-        SLC1_TX_STITCH_EN_W { w: self }
+        SLC1_TX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     pub fn slc1_rx_stitch_en(&mut self) -> SLC1_RX_STITCH_EN_W {
-        SLC1_RX_STITCH_EN_W { w: self }
+        SLC1_RX_STITCH_EN_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

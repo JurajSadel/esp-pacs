@@ -35,32 +35,9 @@ impl From<crate::W<I2C_MST_INT_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_MST_INT_MAP` reader - reg_core0_i2c_mst_int_map"]
-pub struct I2C_MST_INT_MAP_R(crate::FieldReader<u8>);
-impl I2C_MST_INT_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        I2C_MST_INT_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2C_MST_INT_MAP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2C_MST_INT_MAP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `I2C_MST_INT_MAP` writer - reg_core0_i2c_mst_int_map"]
-pub struct I2C_MST_INT_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_MST_INT_MAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type I2C_MST_INT_MAP_W<'a> = crate::FieldWriter<'a, u32, I2C_MST_INT_MAP_SPEC, u8, u8, 5, 0>;
 impl R {
     #[doc = "Bits 0:4 - reg_core0_i2c_mst_int_map"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:4 - reg_core0_i2c_mst_int_map"]
     #[inline(always)]
     pub fn i2c_mst_int_map(&mut self) -> I2C_MST_INT_MAP_W {
-        I2C_MST_INT_MAP_W { w: self }
+        I2C_MST_INT_MAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

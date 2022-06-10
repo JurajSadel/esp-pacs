@@ -35,59 +35,13 @@ impl From<crate::W<PLC_CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `CVSD_SEG_MOD` reader - "]
-pub struct CVSD_SEG_MOD_R(crate::FieldReader<u8>);
-impl CVSD_SEG_MOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CVSD_SEG_MOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CVSD_SEG_MOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CVSD_SEG_MOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CVSD_SEG_MOD` writer - "]
-pub struct CVSD_SEG_MOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CVSD_SEG_MOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type CVSD_SEG_MOD_W<'a> = crate::FieldWriter<'a, u32, PLC_CONF2_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `MIN_PERIOD` reader - "]
-pub struct MIN_PERIOD_R(crate::FieldReader<u8>);
-impl MIN_PERIOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MIN_PERIOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MIN_PERIOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MIN_PERIOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MIN_PERIOD` writer - "]
-pub struct MIN_PERIOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MIN_PERIOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 2)) | ((value as u32 & 0x1f) << 2);
-        self.w
-    }
-}
+pub type MIN_PERIOD_W<'a> = crate::FieldWriter<'a, u32, PLC_CONF2_SPEC, u8, u8, 5, 2>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn cvsd_seg_mod(&mut self) -> CVSD_SEG_MOD_W {
-        CVSD_SEG_MOD_W { w: self }
+        CVSD_SEG_MOD_W::new(self)
     }
     #[doc = "Bits 2:6"]
     #[inline(always)]
     pub fn min_period(&mut self) -> MIN_PERIOD_W {
-        MIN_PERIOD_W { w: self }
+        MIN_PERIOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,133 +35,21 @@ impl From<crate::W<QUICK_SENT_SPEC>> for W {
     }
 }
 #[doc = "Field `SINGLE_SEND_NUM` reader - This register is used to specify the single_send mode."]
-pub struct SINGLE_SEND_NUM_R(crate::FieldReader<u8>);
-impl SINGLE_SEND_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SINGLE_SEND_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SINGLE_SEND_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SINGLE_SEND_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SINGLE_SEND_NUM` writer - This register is used to specify the single_send mode."]
-pub struct SINGLE_SEND_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SINGLE_SEND_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type SINGLE_SEND_NUM_W<'a> = crate::FieldWriter<'a, u32, QUICK_SENT_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `SINGLE_SEND_EN` reader - Set this bit to enable single_send mode to send short packets."]
-pub struct SINGLE_SEND_EN_R(crate::FieldReader<bool>);
-impl SINGLE_SEND_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SINGLE_SEND_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SINGLE_SEND_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SINGLE_SEND_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SINGLE_SEND_EN` writer - Set this bit to enable single_send mode to send short packets."]
-pub struct SINGLE_SEND_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SINGLE_SEND_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type SINGLE_SEND_EN_W<'a> = crate::BitWriter<'a, u32, QUICK_SENT_SPEC, bool, 3>;
 #[doc = "Field `ALWAYS_SEND_NUM` reader - This register is used to specify the always_send mode."]
-pub struct ALWAYS_SEND_NUM_R(crate::FieldReader<u8>);
-impl ALWAYS_SEND_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ALWAYS_SEND_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALWAYS_SEND_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALWAYS_SEND_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ALWAYS_SEND_NUM` writer - This register is used to specify the always_send mode."]
-pub struct ALWAYS_SEND_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALWAYS_SEND_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 4)) | ((value as u32 & 7) << 4);
-        self.w
-    }
-}
+pub type ALWAYS_SEND_NUM_W<'a> = crate::FieldWriter<'a, u32, QUICK_SENT_SPEC, u8, u8, 3, 4>;
 #[doc = "Field `ALWAYS_SEND_EN` reader - Set this bit to enable always_send mode to send short packets."]
-pub struct ALWAYS_SEND_EN_R(crate::FieldReader<bool>);
-impl ALWAYS_SEND_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ALWAYS_SEND_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALWAYS_SEND_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALWAYS_SEND_EN_R = crate::BitReader<bool>;
 #[doc = "Field `ALWAYS_SEND_EN` writer - Set this bit to enable always_send mode to send short packets."]
-pub struct ALWAYS_SEND_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALWAYS_SEND_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type ALWAYS_SEND_EN_W<'a> = crate::BitWriter<'a, u32, QUICK_SENT_SPEC, bool, 7>;
 impl R {
     #[doc = "Bits 0:2 - This register is used to specify the single_send mode."]
     #[inline(always)]
@@ -188,22 +76,22 @@ impl W {
     #[doc = "Bits 0:2 - This register is used to specify the single_send mode."]
     #[inline(always)]
     pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W {
-        SINGLE_SEND_NUM_W { w: self }
+        SINGLE_SEND_NUM_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable single_send mode to send short packets."]
     #[inline(always)]
     pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W {
-        SINGLE_SEND_EN_W { w: self }
+        SINGLE_SEND_EN_W::new(self)
     }
     #[doc = "Bits 4:6 - This register is used to specify the always_send mode."]
     #[inline(always)]
     pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W {
-        ALWAYS_SEND_NUM_W { w: self }
+        ALWAYS_SEND_NUM_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to enable always_send mode to send short packets."]
     #[inline(always)]
     pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W {
-        ALWAYS_SEND_EN_W { w: self }
+        ALWAYS_SEND_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

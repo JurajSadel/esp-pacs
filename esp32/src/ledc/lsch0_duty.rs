@@ -14,20 +14,7 @@ impl From<crate::R<LSCH0_DUTY_SPEC>> for R {
     }
 }
 #[doc = "Field `DUTY_LSCH0` reader - This register represents the current duty of the output signal for low speed channel0."]
-pub struct DUTY_LSCH0_R(crate::FieldReader<u32>);
-impl DUTY_LSCH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DUTY_LSCH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_LSCH0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_LSCH0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:24 - This register represents the current duty of the output signal for low speed channel0."]
     #[inline(always)]

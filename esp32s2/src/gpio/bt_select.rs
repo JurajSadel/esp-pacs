@@ -35,32 +35,9 @@ impl From<crate::W<BT_SELECT_SPEC>> for W {
     }
 }
 #[doc = "Field `BT_SEL` reader - Reserved"]
-pub struct BT_SEL_R(crate::FieldReader<u32>);
-impl BT_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BT_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BT_SEL_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BT_SEL_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BT_SEL` writer - Reserved"]
-pub struct BT_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BT_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type BT_SEL_W<'a> = crate::FieldWriter<'a, u32, BT_SELECT_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - Reserved"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - Reserved"]
     #[inline(always)]
     pub fn bt_sel(&mut self) -> BT_SEL_W {
-        BT_SEL_W { w: self }
+        BT_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

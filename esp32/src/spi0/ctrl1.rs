@@ -35,59 +35,13 @@ impl From<crate::W<CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `CS_HOLD_DELAY_RES` reader - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
-pub struct CS_HOLD_DELAY_RES_R(crate::FieldReader<u16>);
-impl CS_HOLD_DELAY_RES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CS_HOLD_DELAY_RES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_HOLD_DELAY_RES_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_HOLD_DELAY_RES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CS_HOLD_DELAY_RES` writer - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
-pub struct CS_HOLD_DELAY_RES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_HOLD_DELAY_RES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 16)) | ((value as u32 & 0x0fff) << 16);
-        self.w
-    }
-}
+pub type CS_HOLD_DELAY_RES_W<'a> = crate::FieldWriter<'a, u32, CTRL1_SPEC, u16, u16, 12, 16>;
 #[doc = "Field `CS_HOLD_DELAY` reader - SPI cs signal is delayed by spi clock cycles"]
-pub struct CS_HOLD_DELAY_R(crate::FieldReader<u8>);
-impl CS_HOLD_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CS_HOLD_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_HOLD_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_HOLD_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CS_HOLD_DELAY` writer - SPI cs signal is delayed by spi clock cycles"]
-pub struct CS_HOLD_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_HOLD_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+pub type CS_HOLD_DELAY_W<'a> = crate::FieldWriter<'a, u32, CTRL1_SPEC, u8, u8, 4, 28>;
 impl R {
     #[doc = "Bits 16:27 - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 16:27 - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
     #[inline(always)]
     pub fn cs_hold_delay_res(&mut self) -> CS_HOLD_DELAY_RES_W {
-        CS_HOLD_DELAY_RES_W { w: self }
+        CS_HOLD_DELAY_RES_W::new(self)
     }
     #[doc = "Bits 28:31 - SPI cs signal is delayed by spi clock cycles"]
     #[inline(always)]
     pub fn cs_hold_delay(&mut self) -> CS_HOLD_DELAY_W {
-        CS_HOLD_DELAY_W { w: self }
+        CS_HOLD_DELAY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

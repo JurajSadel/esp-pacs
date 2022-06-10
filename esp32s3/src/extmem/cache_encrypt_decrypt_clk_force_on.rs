@@ -35,116 +35,20 @@ impl From<crate::W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_FORCE_ON_MANUAL_CRYPT` reader - The bit is used to close clock gating of manual crypt clock. 1: close gating, 0: open clock gating."]
-pub struct CLK_FORCE_ON_MANUAL_CRYPT_R(crate::FieldReader<bool>);
-impl CLK_FORCE_ON_MANUAL_CRYPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_FORCE_ON_MANUAL_CRYPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_FORCE_ON_MANUAL_CRYPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_FORCE_ON_MANUAL_CRYPT_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_FORCE_ON_MANUAL_CRYPT` writer - The bit is used to close clock gating of manual crypt clock. 1: close gating, 0: open clock gating."]
-pub struct CLK_FORCE_ON_MANUAL_CRYPT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_FORCE_ON_MANUAL_CRYPT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CLK_FORCE_ON_MANUAL_CRYPT_W<'a> =
+    crate::BitWriter<'a, u32, CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC, bool, 0>;
 #[doc = "Field `CLK_FORCE_ON_AUTO_CRYPT` reader - The bit is used to close clock gating of automatic crypt clock. 1: close gating, 0: open clock gating."]
-pub struct CLK_FORCE_ON_AUTO_CRYPT_R(crate::FieldReader<bool>);
-impl CLK_FORCE_ON_AUTO_CRYPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_FORCE_ON_AUTO_CRYPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_FORCE_ON_AUTO_CRYPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_FORCE_ON_AUTO_CRYPT_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_FORCE_ON_AUTO_CRYPT` writer - The bit is used to close clock gating of automatic crypt clock. 1: close gating, 0: open clock gating."]
-pub struct CLK_FORCE_ON_AUTO_CRYPT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_FORCE_ON_AUTO_CRYPT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CLK_FORCE_ON_AUTO_CRYPT_W<'a> =
+    crate::BitWriter<'a, u32, CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC, bool, 1>;
 #[doc = "Field `CLK_FORCE_ON_CRYPT` reader - The bit is used to close clock gating of external memory encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
-pub struct CLK_FORCE_ON_CRYPT_R(crate::FieldReader<bool>);
-impl CLK_FORCE_ON_CRYPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_FORCE_ON_CRYPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_FORCE_ON_CRYPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_FORCE_ON_CRYPT_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_FORCE_ON_CRYPT` writer - The bit is used to close clock gating of external memory encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
-pub struct CLK_FORCE_ON_CRYPT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_FORCE_ON_CRYPT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CLK_FORCE_ON_CRYPT_W<'a> =
+    crate::BitWriter<'a, u32, CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 0 - The bit is used to close clock gating of manual crypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
@@ -166,17 +70,17 @@ impl W {
     #[doc = "Bit 0 - The bit is used to close clock gating of manual crypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn clk_force_on_manual_crypt(&mut self) -> CLK_FORCE_ON_MANUAL_CRYPT_W {
-        CLK_FORCE_ON_MANUAL_CRYPT_W { w: self }
+        CLK_FORCE_ON_MANUAL_CRYPT_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to close clock gating of automatic crypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn clk_force_on_auto_crypt(&mut self) -> CLK_FORCE_ON_AUTO_CRYPT_W {
-        CLK_FORCE_ON_AUTO_CRYPT_W { w: self }
+        CLK_FORCE_ON_AUTO_CRYPT_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to close clock gating of external memory encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn clk_force_on_crypt(&mut self) -> CLK_FORCE_ON_CRYPT_W {
-        CLK_FORCE_ON_CRYPT_W { w: self }
+        CLK_FORCE_ON_CRYPT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

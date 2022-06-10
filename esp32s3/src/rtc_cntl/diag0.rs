@@ -14,20 +14,7 @@ impl From<crate::R<DIAG0_SPEC>> for R {
     }
 }
 #[doc = "Field `RTC_LOW_POWER_DIAG1` reader - No public"]
-pub struct RTC_LOW_POWER_DIAG1_R(crate::FieldReader<u32>);
-impl RTC_LOW_POWER_DIAG1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RTC_LOW_POWER_DIAG1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_LOW_POWER_DIAG1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_LOW_POWER_DIAG1_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - No public"]
     #[inline(always)]

@@ -14,200 +14,31 @@ impl From<crate::R<INT_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_ST` reader - The masked interrupt status for rxfifo_full_int interrupt."]
-pub struct RXFIFO_FULL_INT_ST_R(crate::FieldReader<bool>);
-impl RXFIFO_FULL_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXFIFO_FULL_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_FULL_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_FULL_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TXFIFO_EMPTY_INT_ST` reader - The masked interrupt status for txfifo_empty_int interrupt."]
-pub struct TXFIFO_EMPTY_INT_ST_R(crate::FieldReader<bool>);
-impl TXFIFO_EMPTY_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXFIFO_EMPTY_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFIFO_EMPTY_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFIFO_EMPTY_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFO_OVF_INT_ST` reader - The masked interrupt status for rxfifo_ovf_int interrupt."]
-pub struct RXFIFO_OVF_INT_ST_R(crate::FieldReader<bool>);
-impl RXFIFO_OVF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXFIFO_OVF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `END_DETECT_INT_ST` reader - The masked interrupt status for end_detect_int interrupt."]
-pub struct END_DETECT_INT_ST_R(crate::FieldReader<bool>);
-impl END_DETECT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        END_DETECT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for END_DETECT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type END_DETECT_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_TRAN_COMP_INT_ST` reader - The masked interrupt status for slave_tran_comp_int interrupt."]
-pub struct SLAVE_TRAN_COMP_INT_ST_R(crate::FieldReader<bool>);
-impl SLAVE_TRAN_COMP_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_TRAN_COMP_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_TRAN_COMP_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_TRAN_COMP_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `ARBITRATION_LOST_INT_ST` reader - The masked interrupt status for arbitration_lost_int interrupt."]
-pub struct ARBITRATION_LOST_INT_ST_R(crate::FieldReader<bool>);
-impl ARBITRATION_LOST_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARBITRATION_LOST_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARBITRATION_LOST_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARBITRATION_LOST_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `MASTER_TRAN_COMP_INT_ST` reader - The masked interrupt status for master_tran_comp_int interrupt."]
-pub struct MASTER_TRAN_COMP_INT_ST_R(crate::FieldReader<bool>);
-impl MASTER_TRAN_COMP_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASTER_TRAN_COMP_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASTER_TRAN_COMP_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASTER_TRAN_COMP_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TRANS_COMPLETE_INT_ST` reader - The masked interrupt status for trans_complete_int interrupt."]
-pub struct TRANS_COMPLETE_INT_ST_R(crate::FieldReader<bool>);
-impl TRANS_COMPLETE_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRANS_COMPLETE_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRANS_COMPLETE_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRANS_COMPLETE_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TIME_OUT_INT_ST` reader - The masked interrupt status for time_out_int interrupt."]
-pub struct TIME_OUT_INT_ST_R(crate::FieldReader<bool>);
-impl TIME_OUT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIME_OUT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_OUT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_OUT_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TRANS_START_INT_ST` reader - The masked interrupt status for trans_start_int interrupt."]
-pub struct TRANS_START_INT_ST_R(crate::FieldReader<bool>);
-impl TRANS_START_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRANS_START_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRANS_START_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRANS_START_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `ACK_ERR_INT_ST` reader - The masked interrupt status for ack_err_int interrupt."]
-pub struct ACK_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl ACK_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ACK_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ACK_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ACK_ERR_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RX_REC_FULL_INT_ST` reader - The masked interrupt status for rx_rec_full_int interrupt."]
-pub struct RX_REC_FULL_INT_ST_R(crate::FieldReader<bool>);
-impl RX_REC_FULL_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_REC_FULL_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_REC_FULL_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_REC_FULL_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TX_SEND_EMPTY_INT_ST` reader - The masked interrupt status for tx_send_empty_int interrupt."]
-pub struct TX_SEND_EMPTY_INT_ST_R(crate::FieldReader<bool>);
-impl TX_SEND_EMPTY_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_SEND_EMPTY_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_SEND_EMPTY_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_SEND_EMPTY_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The masked interrupt status for rxfifo_full_int interrupt."]
     #[inline(always)]

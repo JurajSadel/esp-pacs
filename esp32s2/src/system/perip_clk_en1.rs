@@ -35,227 +35,29 @@ impl From<crate::W<PERIP_CLK_EN1_SPEC>> for W {
     }
 }
 #[doc = "Field `CRYPTO_AES_CLK_EN` reader - Set this bit to enable clock of cryptography AES."]
-pub struct CRYPTO_AES_CLK_EN_R(crate::FieldReader<bool>);
-impl CRYPTO_AES_CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_AES_CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_AES_CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_AES_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_AES_CLK_EN` writer - Set this bit to enable clock of cryptography AES."]
-pub struct CRYPTO_AES_CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_AES_CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CRYPTO_AES_CLK_EN_W<'a> = crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, 1>;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` reader - Set this bit to enable clock of cryptography SHA."]
-pub struct CRYPTO_SHA_CLK_EN_R(crate::FieldReader<bool>);
-impl CRYPTO_SHA_CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_SHA_CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_SHA_CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_SHA_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_SHA_CLK_EN` writer - Set this bit to enable clock of cryptography SHA."]
-pub struct CRYPTO_SHA_CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_SHA_CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CRYPTO_SHA_CLK_EN_W<'a> = crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, 2>;
 #[doc = "Field `CRYPTO_RSA_CLK_EN` reader - Set this bit to enable clock of cryptography RSA."]
-pub struct CRYPTO_RSA_CLK_EN_R(crate::FieldReader<bool>);
-impl CRYPTO_RSA_CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_RSA_CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_RSA_CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_RSA_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_RSA_CLK_EN` writer - Set this bit to enable clock of cryptography RSA."]
-pub struct CRYPTO_RSA_CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_RSA_CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CRYPTO_RSA_CLK_EN_W<'a> = crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, 3>;
 #[doc = "Field `CRYPTO_DS_CLK_EN` reader - Set this bit to enable clock of cryptography Digital Signature."]
-pub struct CRYPTO_DS_CLK_EN_R(crate::FieldReader<bool>);
-impl CRYPTO_DS_CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_DS_CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_DS_CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_DS_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_DS_CLK_EN` writer - Set this bit to enable clock of cryptography Digital Signature."]
-pub struct CRYPTO_DS_CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_DS_CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type CRYPTO_DS_CLK_EN_W<'a> = crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, 4>;
 #[doc = "Field `CRYPTO_HMAC_CLK_EN` reader - Set this bit to enable clock of cryptography HMAC."]
-pub struct CRYPTO_HMAC_CLK_EN_R(crate::FieldReader<bool>);
-impl CRYPTO_HMAC_CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_HMAC_CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_HMAC_CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_HMAC_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_HMAC_CLK_EN` writer - Set this bit to enable clock of cryptography HMAC."]
-pub struct CRYPTO_HMAC_CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_HMAC_CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CRYPTO_HMAC_CLK_EN_W<'a> = crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, 5>;
 #[doc = "Field `CRYPTO_DMA_CLK_EN` reader - Set this bit to enable clock of cryptography DMA."]
-pub struct CRYPTO_DMA_CLK_EN_R(crate::FieldReader<bool>);
-impl CRYPTO_DMA_CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRYPTO_DMA_CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRYPTO_DMA_CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRYPTO_DMA_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CRYPTO_DMA_CLK_EN` writer - Set this bit to enable clock of cryptography DMA."]
-pub struct CRYPTO_DMA_CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRYPTO_DMA_CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CRYPTO_DMA_CLK_EN_W<'a> = crate::BitWriter<'a, u32, PERIP_CLK_EN1_SPEC, bool, 6>;
 impl R {
     #[doc = "Bit 1 - Set this bit to enable clock of cryptography AES."]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 1 - Set this bit to enable clock of cryptography AES."]
     #[inline(always)]
     pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W {
-        CRYPTO_AES_CLK_EN_W { w: self }
+        CRYPTO_AES_CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable clock of cryptography SHA."]
     #[inline(always)]
     pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W {
-        CRYPTO_SHA_CLK_EN_W { w: self }
+        CRYPTO_SHA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable clock of cryptography RSA."]
     #[inline(always)]
     pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W {
-        CRYPTO_RSA_CLK_EN_W { w: self }
+        CRYPTO_RSA_CLK_EN_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable clock of cryptography Digital Signature."]
     #[inline(always)]
     pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W {
-        CRYPTO_DS_CLK_EN_W { w: self }
+        CRYPTO_DS_CLK_EN_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable clock of cryptography HMAC."]
     #[inline(always)]
     pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W {
-        CRYPTO_HMAC_CLK_EN_W { w: self }
+        CRYPTO_HMAC_CLK_EN_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to enable clock of cryptography DMA."]
     #[inline(always)]
     pub fn crypto_dma_clk_en(&mut self) -> CRYPTO_DMA_CLK_EN_W {
-        CRYPTO_DMA_CLK_EN_W { w: self }
+        CRYPTO_DMA_CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

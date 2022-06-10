@@ -35,153 +35,21 @@ impl From<crate::W<LC_DMA_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_VSYNC_INT_ENA` reader - The enable bit for LCD frame end interrupt."]
-pub struct LCD_VSYNC_INT_ENA_R(crate::FieldReader<bool>);
-impl LCD_VSYNC_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_VSYNC_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_VSYNC_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_VSYNC_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_VSYNC_INT_ENA` writer - The enable bit for LCD frame end interrupt."]
-pub struct LCD_VSYNC_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_VSYNC_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type LCD_VSYNC_INT_ENA_W<'a> = crate::BitWriter<'a, u32, LC_DMA_INT_ENA_SPEC, bool, 0>;
 #[doc = "Field `LCD_TRANS_DONE_INT_ENA` reader - The enable bit for lcd transfer end interrupt."]
-pub struct LCD_TRANS_DONE_INT_ENA_R(crate::FieldReader<bool>);
-impl LCD_TRANS_DONE_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_TRANS_DONE_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_TRANS_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_TRANS_DONE_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_TRANS_DONE_INT_ENA` writer - The enable bit for lcd transfer end interrupt."]
-pub struct LCD_TRANS_DONE_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_TRANS_DONE_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type LCD_TRANS_DONE_INT_ENA_W<'a> = crate::BitWriter<'a, u32, LC_DMA_INT_ENA_SPEC, bool, 1>;
 #[doc = "Field `CAM_VSYNC_INT_ENA` reader - The enable bit for Camera frame end interrupt."]
-pub struct CAM_VSYNC_INT_ENA_R(crate::FieldReader<bool>);
-impl CAM_VSYNC_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAM_VSYNC_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAM_VSYNC_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAM_VSYNC_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CAM_VSYNC_INT_ENA` writer - The enable bit for Camera frame end interrupt."]
-pub struct CAM_VSYNC_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAM_VSYNC_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CAM_VSYNC_INT_ENA_W<'a> = crate::BitWriter<'a, u32, LC_DMA_INT_ENA_SPEC, bool, 2>;
 #[doc = "Field `CAM_HS_INT_ENA` reader - The enable bit for Camera line interrupt."]
-pub struct CAM_HS_INT_ENA_R(crate::FieldReader<bool>);
-impl CAM_HS_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAM_HS_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAM_HS_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAM_HS_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CAM_HS_INT_ENA` writer - The enable bit for Camera line interrupt."]
-pub struct CAM_HS_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAM_HS_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CAM_HS_INT_ENA_W<'a> = crate::BitWriter<'a, u32, LC_DMA_INT_ENA_SPEC, bool, 3>;
 impl R {
     #[doc = "Bit 0 - The enable bit for LCD frame end interrupt."]
     #[inline(always)]
@@ -208,22 +76,22 @@ impl W {
     #[doc = "Bit 0 - The enable bit for LCD frame end interrupt."]
     #[inline(always)]
     pub fn lcd_vsync_int_ena(&mut self) -> LCD_VSYNC_INT_ENA_W {
-        LCD_VSYNC_INT_ENA_W { w: self }
+        LCD_VSYNC_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The enable bit for lcd transfer end interrupt."]
     #[inline(always)]
     pub fn lcd_trans_done_int_ena(&mut self) -> LCD_TRANS_DONE_INT_ENA_W {
-        LCD_TRANS_DONE_INT_ENA_W { w: self }
+        LCD_TRANS_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The enable bit for Camera frame end interrupt."]
     #[inline(always)]
     pub fn cam_vsync_int_ena(&mut self) -> CAM_VSYNC_INT_ENA_W {
-        CAM_VSYNC_INT_ENA_W { w: self }
+        CAM_VSYNC_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The enable bit for Camera line interrupt."]
     #[inline(always)]
     pub fn cam_hs_int_ena(&mut self) -> CAM_HS_INT_ENA_W {
-        CAM_HS_INT_ENA_W { w: self }
+        CAM_HS_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -20,32 +20,12 @@ impl From<crate::W<SHA512_CONTINUE_SPEC>> for W {
     }
 }
 #[doc = "Field `SHA512_CONTINUE` writer - Write 1 to continue the SHA-512 operation with subsequent blocks."]
-pub struct SHA512_CONTINUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SHA512_CONTINUE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SHA512_CONTINUE_W<'a> = crate::BitWriter<'a, u32, SHA512_CONTINUE_SPEC, bool, 0>;
 impl W {
     #[doc = "Bit 0 - Write 1 to continue the SHA-512 operation with subsequent blocks."]
     #[inline(always)]
     pub fn sha512_continue(&mut self) -> SHA512_CONTINUE_W {
-        SHA512_CONTINUE_W { w: self }
+        SHA512_CONTINUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

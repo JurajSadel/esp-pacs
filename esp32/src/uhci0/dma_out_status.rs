@@ -14,35 +14,9 @@ impl From<crate::R<DMA_OUT_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `OUT_FULL` reader - 1:DMA out link descriptor's fifo is full."]
-pub struct OUT_FULL_R(crate::FieldReader<bool>);
-impl OUT_FULL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_FULL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_FULL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_FULL_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EMPTY` reader - 1:DMA in link descriptor's fifo is empty."]
-pub struct OUT_EMPTY_R(crate::FieldReader<bool>);
-impl OUT_EMPTY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EMPTY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EMPTY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EMPTY_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - 1:DMA out link descriptor's fifo is full."]
     #[inline(always)]

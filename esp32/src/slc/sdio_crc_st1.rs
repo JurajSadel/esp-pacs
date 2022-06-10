@@ -35,57 +35,11 @@ impl From<crate::W<SDIO_CRC_ST1_SPEC>> for W {
     }
 }
 #[doc = "Field `CMD_CRC_ERR_CNT` reader - "]
-pub struct CMD_CRC_ERR_CNT_R(crate::FieldReader<u8>);
-impl CMD_CRC_ERR_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CMD_CRC_ERR_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMD_CRC_ERR_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMD_CRC_ERR_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ERR_CNT_CLR` reader - "]
-pub struct ERR_CNT_CLR_R(crate::FieldReader<bool>);
-impl ERR_CNT_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ERR_CNT_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERR_CNT_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ERR_CNT_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `ERR_CNT_CLR` writer - "]
-pub struct ERR_CNT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERR_CNT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type ERR_CNT_CLR_W<'a> = crate::BitWriter<'a, u32, SDIO_CRC_ST1_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -102,7 +56,7 @@ impl W {
     #[doc = "Bit 31"]
     #[inline(always)]
     pub fn err_cnt_clr(&mut self) -> ERR_CNT_CLR_W {
-        ERR_CNT_CLR_W { w: self }
+        ERR_CNT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

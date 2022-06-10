@@ -20,22 +20,12 @@ impl From<crate::W<ENABLE_W1TS_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE_W1TS` writer - GPIO0~17 output enable write 1 to set"]
-pub struct ENABLE_W1TS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W1TS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0003_ffff << 14)) | ((value as u32 & 0x0003_ffff) << 14);
-        self.w
-    }
-}
+pub type ENABLE_W1TS_W<'a> = crate::FieldWriter<'a, u32, ENABLE_W1TS_SPEC, u32, u32, 18, 14>;
 impl W {
     #[doc = "Bits 14:31 - GPIO0~17 output enable write 1 to set"]
     #[inline(always)]
     pub fn enable_w1ts(&mut self) -> ENABLE_W1TS_W {
-        ENABLE_W1TS_W { w: self }
+        ENABLE_W1TS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

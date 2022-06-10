@@ -35,32 +35,9 @@ impl From<crate::W<TO_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME_OUT` reader - Timeout threshold"]
-pub struct TIME_OUT_R(crate::FieldReader<u32>);
-impl TIME_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TIME_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_OUT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_OUT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIME_OUT` writer - Timeout threshold"]
-pub struct TIME_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIME_OUT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type TIME_OUT_W<'a> = crate::FieldWriter<'a, u32, TO_SPEC, u32, u32, 20, 0>;
 impl R {
     #[doc = "Bits 0:19 - Timeout threshold"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:19 - Timeout threshold"]
     #[inline(always)]
     pub fn time_out(&mut self) -> TIME_OUT_W {
-        TIME_OUT_W { w: self }
+        TIME_OUT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

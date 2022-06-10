@@ -35,47 +35,11 @@ impl From<crate::W<CMD3_SPEC>> for W {
     }
 }
 #[doc = "Field `COMMAND3` reader - Content of command 3. For more information, please refer to the register I2C_COMD3_REG in Chapter I²C Controller."]
-pub struct COMMAND3_R(crate::FieldReader<u16>);
-impl COMMAND3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        COMMAND3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COMMAND3_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COMMAND3_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `COMMAND3` writer - Content of command 3. For more information, please refer to the register I2C_COMD3_REG in Chapter I²C Controller."]
-pub struct COMMAND3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COMMAND3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff) | (value as u32 & 0x3fff);
-        self.w
-    }
-}
+pub type COMMAND3_W<'a> = crate::FieldWriter<'a, u32, CMD3_SPEC, u16, u16, 14, 0>;
 #[doc = "Field `COMMAND3_DONE` reader - When command 3 is done, this bit changes to 1."]
-pub struct COMMAND3_DONE_R(crate::FieldReader<bool>);
-impl COMMAND3_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COMMAND3_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COMMAND3_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COMMAND3_DONE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:13 - Content of command 3. For more information, please refer to the register I2C_COMD3_REG in Chapter I²C Controller."]
     #[inline(always)]
@@ -92,7 +56,7 @@ impl W {
     #[doc = "Bits 0:13 - Content of command 3. For more information, please refer to the register I2C_COMD3_REG in Chapter I²C Controller."]
     #[inline(always)]
     pub fn command3(&mut self) -> COMMAND3_W {
-        COMMAND3_W { w: self }
+        COMMAND3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,10 @@ impl From<crate::W<CORE_0_WORLD_IRAM0_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_WORLD_IRAM0` reader - this field is used to read current world of Iram0 bus"]
-pub struct CORE_0_WORLD_IRAM0_R(crate::FieldReader<u8>);
-impl CORE_0_WORLD_IRAM0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_0_WORLD_IRAM0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_WORLD_IRAM0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_WORLD_IRAM0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_0_WORLD_IRAM0` writer - this field is used to read current world of Iram0 bus"]
-pub struct CORE_0_WORLD_IRAM0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_WORLD_IRAM0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type CORE_0_WORLD_IRAM0_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_0_WORLD_IRAM0_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1 - this field is used to read current world of Iram0 bus"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:1 - this field is used to read current world of Iram0 bus"]
     #[inline(always)]
     pub fn core_0_world_iram0(&mut self) -> CORE_0_WORLD_IRAM0_W {
-        CORE_0_WORLD_IRAM0_W { w: self }
+        CORE_0_WORLD_IRAM0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

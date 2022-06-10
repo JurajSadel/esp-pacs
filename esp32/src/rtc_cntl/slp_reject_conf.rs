@@ -35,168 +35,23 @@ impl From<crate::W<SLP_REJECT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_REJECT_EN` reader - enable GPIO reject"]
-pub struct GPIO_REJECT_EN_R(crate::FieldReader<bool>);
-impl GPIO_REJECT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO_REJECT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO_REJECT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO_REJECT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO_REJECT_EN` writer - enable GPIO reject"]
-pub struct GPIO_REJECT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO_REJECT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type GPIO_REJECT_EN_W<'a> = crate::BitWriter<'a, u32, SLP_REJECT_CONF_SPEC, bool, 24>;
 #[doc = "Field `SDIO_REJECT_EN` reader - enable SDIO reject"]
-pub struct SDIO_REJECT_EN_R(crate::FieldReader<bool>);
-impl SDIO_REJECT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_REJECT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_REJECT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_REJECT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_REJECT_EN` writer - enable SDIO reject"]
-pub struct SDIO_REJECT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_REJECT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type SDIO_REJECT_EN_W<'a> = crate::BitWriter<'a, u32, SLP_REJECT_CONF_SPEC, bool, 25>;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` reader - enable reject for light sleep"]
-pub struct LIGHT_SLP_REJECT_EN_R(crate::FieldReader<bool>);
-impl LIGHT_SLP_REJECT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LIGHT_SLP_REJECT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LIGHT_SLP_REJECT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LIGHT_SLP_REJECT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `LIGHT_SLP_REJECT_EN` writer - enable reject for light sleep"]
-pub struct LIGHT_SLP_REJECT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LIGHT_SLP_REJECT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type LIGHT_SLP_REJECT_EN_W<'a> = crate::BitWriter<'a, u32, SLP_REJECT_CONF_SPEC, bool, 26>;
 #[doc = "Field `DEEP_SLP_REJECT_EN` reader - enable reject for deep sleep"]
-pub struct DEEP_SLP_REJECT_EN_R(crate::FieldReader<bool>);
-impl DEEP_SLP_REJECT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DEEP_SLP_REJECT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DEEP_SLP_REJECT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DEEP_SLP_REJECT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DEEP_SLP_REJECT_EN` writer - enable reject for deep sleep"]
-pub struct DEEP_SLP_REJECT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DEEP_SLP_REJECT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type DEEP_SLP_REJECT_EN_W<'a> = crate::BitWriter<'a, u32, SLP_REJECT_CONF_SPEC, bool, 27>;
 #[doc = "Field `REJECT_CAUSE` reader - sleep reject cause"]
-pub struct REJECT_CAUSE_R(crate::FieldReader<u8>);
-impl REJECT_CAUSE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REJECT_CAUSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REJECT_CAUSE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REJECT_CAUSE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 24 - enable GPIO reject"]
     #[inline(always)]
@@ -228,22 +83,22 @@ impl W {
     #[doc = "Bit 24 - enable GPIO reject"]
     #[inline(always)]
     pub fn gpio_reject_en(&mut self) -> GPIO_REJECT_EN_W {
-        GPIO_REJECT_EN_W { w: self }
+        GPIO_REJECT_EN_W::new(self)
     }
     #[doc = "Bit 25 - enable SDIO reject"]
     #[inline(always)]
     pub fn sdio_reject_en(&mut self) -> SDIO_REJECT_EN_W {
-        SDIO_REJECT_EN_W { w: self }
+        SDIO_REJECT_EN_W::new(self)
     }
     #[doc = "Bit 26 - enable reject for light sleep"]
     #[inline(always)]
     pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W {
-        LIGHT_SLP_REJECT_EN_W { w: self }
+        LIGHT_SLP_REJECT_EN_W::new(self)
     }
     #[doc = "Bit 27 - enable reject for deep sleep"]
     #[inline(always)]
     pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W {
-        DEEP_SLP_REJECT_EN_W { w: self }
+        DEEP_SLP_REJECT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

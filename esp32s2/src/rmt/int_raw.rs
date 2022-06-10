@@ -14,84 +14,19 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Fields `CH(0-3)_TX_END_INT_RAW` reader - The interrupt raw bit for CHANNEL%s. Triggered when transmission done."]
-pub struct CH_TX_END_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_TX_END_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_END_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_END_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_END_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-3)_RX_END_INT_RAW` reader - The interrupt raw bit for CHANNEL%s. Triggered when reception done."]
-pub struct CH_RX_END_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_RX_END_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_RX_END_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_RX_END_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_RX_END_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-3)_ERR_INT_RAW` reader - The interrupt raw bit for CHANNEL%s. Triggered when error occurs."]
-pub struct CH_ERR_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_ERR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_ERR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_ERR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-3)_TX_THR_EVENT_INT_RAW` reader - The interrupt raw bit for CHANNEL%s. Triggered when transmitter sent more data than configured value."]
-pub struct CH_TX_THR_EVENT_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_TX_THR_EVENT_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_THR_EVENT_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_THR_EVENT_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-3)_TX_LOOP_INT_RAW` reader - The interrupt raw bit for CHANNEL%s. Triggered when the loop count reaches the configured threshold value."]
-pub struct CH_TX_LOOP_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_TX_LOOP_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_LOOP_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_LOOP_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_LOOP_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "The interrupt raw bit for CHANNEL(0-3). Triggered when transmission done."]
     #[inline(always)]
-    pub unsafe fn ch_tx_end_int_raw(&self, n: usize) -> CH_TX_END_INT_RAW_R {
+    pub unsafe fn ch_tx_end_int_raw(&self, n: u8) -> CH_TX_END_INT_RAW_R {
         CH_TX_END_INT_RAW_R::new(((self.bits >> (n * 3)) & 1) != 0)
     }
     #[doc = "Bit 0 - The interrupt raw bit for CHANNEL0. Triggered when transmission done."]
@@ -116,7 +51,7 @@ impl R {
     }
     #[doc = "The interrupt raw bit for CHANNEL(0-3). Triggered when reception done."]
     #[inline(always)]
-    pub unsafe fn ch_rx_end_int_raw(&self, n: usize) -> CH_RX_END_INT_RAW_R {
+    pub unsafe fn ch_rx_end_int_raw(&self, n: u8) -> CH_RX_END_INT_RAW_R {
         CH_RX_END_INT_RAW_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt raw bit for CHANNEL0. Triggered when reception done."]
@@ -141,7 +76,7 @@ impl R {
     }
     #[doc = "The interrupt raw bit for CHANNEL(0-3). Triggered when error occurs."]
     #[inline(always)]
-    pub unsafe fn ch_err_int_raw(&self, n: usize) -> CH_ERR_INT_RAW_R {
+    pub unsafe fn ch_err_int_raw(&self, n: u8) -> CH_ERR_INT_RAW_R {
         CH_ERR_INT_RAW_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - The interrupt raw bit for CHANNEL0. Triggered when error occurs."]
@@ -166,7 +101,7 @@ impl R {
     }
     #[doc = "The interrupt raw bit for CHANNEL(0-3). Triggered when transmitter sent more data than configured value."]
     #[inline(always)]
-    pub unsafe fn ch_tx_thr_event_int_raw(&self, n: usize) -> CH_TX_THR_EVENT_INT_RAW_R {
+    pub unsafe fn ch_tx_thr_event_int_raw(&self, n: u8) -> CH_TX_THR_EVENT_INT_RAW_R {
         CH_TX_THR_EVENT_INT_RAW_R::new(((self.bits >> (n + 12)) & 1) != 0)
     }
     #[doc = "Bit 12 - The interrupt raw bit for CHANNEL0. Triggered when transmitter sent more data than configured value."]
@@ -191,7 +126,7 @@ impl R {
     }
     #[doc = "The interrupt raw bit for CHANNEL(0-3). Triggered when the loop count reaches the configured threshold value."]
     #[inline(always)]
-    pub unsafe fn ch_tx_loop_int_raw(&self, n: usize) -> CH_TX_LOOP_INT_RAW_R {
+    pub unsafe fn ch_tx_loop_int_raw(&self, n: u8) -> CH_TX_LOOP_INT_RAW_R {
         CH_TX_LOOP_INT_RAW_R::new(((self.bits >> (n + 16)) & 1) != 0)
     }
     #[doc = "Bit 16 - The interrupt raw bit for CHANNEL0. Triggered when the loop count reaches the configured threshold value."]

@@ -35,248 +35,45 @@ impl From<crate::W<SPI_SMEM_DIN_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_SMEM_DIN0_NUM` reader - SPI_D input delay number."]
-pub struct SPI_SMEM_DIN0_NUM_R(crate::FieldReader<u8>);
-impl SPI_SMEM_DIN0_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_DIN0_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_DIN0_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_DIN0_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_DIN0_NUM` writer - SPI_D input delay number."]
-pub struct SPI_SMEM_DIN0_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_DIN0_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type SPI_SMEM_DIN0_NUM_W<'a> = crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `SPI_SMEM_DIN1_NUM` reader - SPI_Q input delay number."]
-pub struct SPI_SMEM_DIN1_NUM_R(crate::FieldReader<u8>);
-impl SPI_SMEM_DIN1_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_DIN1_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_DIN1_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_DIN1_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_DIN1_NUM` writer - SPI_Q input delay number."]
-pub struct SPI_SMEM_DIN1_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_DIN1_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type SPI_SMEM_DIN1_NUM_W<'a> = crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `SPI_SMEM_DIN2_NUM` reader - SPI_WP input delay number."]
-pub struct SPI_SMEM_DIN2_NUM_R(crate::FieldReader<u8>);
-impl SPI_SMEM_DIN2_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_DIN2_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_DIN2_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_DIN2_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_DIN2_NUM` writer - SPI_WP input delay number."]
-pub struct SPI_SMEM_DIN2_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_DIN2_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type SPI_SMEM_DIN2_NUM_W<'a> = crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `SPI_SMEM_DIN3_NUM` reader - SPI_HD input delay number."]
-pub struct SPI_SMEM_DIN3_NUM_R(crate::FieldReader<u8>);
-impl SPI_SMEM_DIN3_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_DIN3_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_DIN3_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_DIN3_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_DIN3_NUM` writer - SPI_HD input delay number."]
-pub struct SPI_SMEM_DIN3_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_DIN3_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type SPI_SMEM_DIN3_NUM_W<'a> = crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `SPI_SMEM_DIN4_NUM` reader - SPI_IO4 input delay number."]
-pub struct SPI_SMEM_DIN4_NUM_R(crate::FieldReader<u8>);
-impl SPI_SMEM_DIN4_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_DIN4_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_DIN4_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_DIN4_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_DIN4_NUM` writer - SPI_IO4 input delay number."]
-pub struct SPI_SMEM_DIN4_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_DIN4_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type SPI_SMEM_DIN4_NUM_W<'a> = crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `SPI_SMEM_DIN5_NUM` reader - SPI_IO5 input delay number."]
-pub struct SPI_SMEM_DIN5_NUM_R(crate::FieldReader<u8>);
-impl SPI_SMEM_DIN5_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_DIN5_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_DIN5_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_DIN5_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_DIN5_NUM` writer - SPI_IO5 input delay number."]
-pub struct SPI_SMEM_DIN5_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_DIN5_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type SPI_SMEM_DIN5_NUM_W<'a> =
+    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, 10>;
 #[doc = "Field `SPI_SMEM_DIN6_NUM` reader - SPI_IO6 input delay number."]
-pub struct SPI_SMEM_DIN6_NUM_R(crate::FieldReader<u8>);
-impl SPI_SMEM_DIN6_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_DIN6_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_DIN6_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_DIN6_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_DIN6_NUM` writer - SPI_IO6 input delay number."]
-pub struct SPI_SMEM_DIN6_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_DIN6_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type SPI_SMEM_DIN6_NUM_W<'a> =
+    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, 12>;
 #[doc = "Field `SPI_SMEM_DIN7_NUM` reader - SPI_IO7 input delay number."]
-pub struct SPI_SMEM_DIN7_NUM_R(crate::FieldReader<u8>);
-impl SPI_SMEM_DIN7_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_DIN7_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_DIN7_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_DIN7_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_DIN7_NUM` writer - SPI_IO7 input delay number."]
-pub struct SPI_SMEM_DIN7_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_DIN7_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type SPI_SMEM_DIN7_NUM_W<'a> =
+    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, 14>;
 #[doc = "Field `SPI_SMEM_DINS_NUM` reader - SPI_DQS input delay number."]
-pub struct SPI_SMEM_DINS_NUM_R(crate::FieldReader<u8>);
-impl SPI_SMEM_DINS_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_DINS_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_DINS_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_DINS_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_DINS_NUM` writer - SPI_DQS input delay number."]
-pub struct SPI_SMEM_DINS_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_DINS_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type SPI_SMEM_DINS_NUM_W<'a> =
+    crate::FieldWriter<'a, u32, SPI_SMEM_DIN_NUM_SPEC, u8, u8, 2, 16>;
 impl R {
     #[doc = "Bits 0:1 - SPI_D input delay number."]
     #[inline(always)]
@@ -328,47 +125,47 @@ impl W {
     #[doc = "Bits 0:1 - SPI_D input delay number."]
     #[inline(always)]
     pub fn spi_smem_din0_num(&mut self) -> SPI_SMEM_DIN0_NUM_W {
-        SPI_SMEM_DIN0_NUM_W { w: self }
+        SPI_SMEM_DIN0_NUM_W::new(self)
     }
     #[doc = "Bits 2:3 - SPI_Q input delay number."]
     #[inline(always)]
     pub fn spi_smem_din1_num(&mut self) -> SPI_SMEM_DIN1_NUM_W {
-        SPI_SMEM_DIN1_NUM_W { w: self }
+        SPI_SMEM_DIN1_NUM_W::new(self)
     }
     #[doc = "Bits 4:5 - SPI_WP input delay number."]
     #[inline(always)]
     pub fn spi_smem_din2_num(&mut self) -> SPI_SMEM_DIN2_NUM_W {
-        SPI_SMEM_DIN2_NUM_W { w: self }
+        SPI_SMEM_DIN2_NUM_W::new(self)
     }
     #[doc = "Bits 6:7 - SPI_HD input delay number."]
     #[inline(always)]
     pub fn spi_smem_din3_num(&mut self) -> SPI_SMEM_DIN3_NUM_W {
-        SPI_SMEM_DIN3_NUM_W { w: self }
+        SPI_SMEM_DIN3_NUM_W::new(self)
     }
     #[doc = "Bits 8:9 - SPI_IO4 input delay number."]
     #[inline(always)]
     pub fn spi_smem_din4_num(&mut self) -> SPI_SMEM_DIN4_NUM_W {
-        SPI_SMEM_DIN4_NUM_W { w: self }
+        SPI_SMEM_DIN4_NUM_W::new(self)
     }
     #[doc = "Bits 10:11 - SPI_IO5 input delay number."]
     #[inline(always)]
     pub fn spi_smem_din5_num(&mut self) -> SPI_SMEM_DIN5_NUM_W {
-        SPI_SMEM_DIN5_NUM_W { w: self }
+        SPI_SMEM_DIN5_NUM_W::new(self)
     }
     #[doc = "Bits 12:13 - SPI_IO6 input delay number."]
     #[inline(always)]
     pub fn spi_smem_din6_num(&mut self) -> SPI_SMEM_DIN6_NUM_W {
-        SPI_SMEM_DIN6_NUM_W { w: self }
+        SPI_SMEM_DIN6_NUM_W::new(self)
     }
     #[doc = "Bits 14:15 - SPI_IO7 input delay number."]
     #[inline(always)]
     pub fn spi_smem_din7_num(&mut self) -> SPI_SMEM_DIN7_NUM_W {
-        SPI_SMEM_DIN7_NUM_W { w: self }
+        SPI_SMEM_DIN7_NUM_W::new(self)
     }
     #[doc = "Bits 16:17 - SPI_DQS input delay number."]
     #[inline(always)]
     pub fn spi_smem_dins_num(&mut self) -> SPI_SMEM_DINS_NUM_W {
-        SPI_SMEM_DINS_NUM_W { w: self }
+        SPI_SMEM_DINS_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

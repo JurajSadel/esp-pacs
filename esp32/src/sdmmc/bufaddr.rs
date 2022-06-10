@@ -14,20 +14,7 @@ impl From<crate::R<BUFADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `BUFADDR` reader - Host Buffer Address Pointer, updated by IDMAC during operation and cleared on reset. This register points to the current Data Buffer Address being accessed by the IDMAC."]
-pub struct BUFADDR_R(crate::FieldReader<u32>);
-impl BUFADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BUFADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUFADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUFADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Host Buffer Address Pointer, updated by IDMAC during operation and cleared on reset. This register points to the current Data Buffer Address being accessed by the IDMAC."]
     #[inline(always)]

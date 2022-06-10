@@ -35,69 +35,13 @@ impl From<crate::W<OUT_PUSH_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `OUTFIFO_WDATA_CH` reader - This register stores the data that need to be pushed into DMA FIFO."]
-pub struct OUTFIFO_WDATA_CH_R(crate::FieldReader<u16>);
-impl OUTFIFO_WDATA_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        OUTFIFO_WDATA_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTFIFO_WDATA_CH_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTFIFO_WDATA_CH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `OUTFIFO_WDATA_CH` writer - This register stores the data that need to be pushed into DMA FIFO."]
-pub struct OUTFIFO_WDATA_CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTFIFO_WDATA_CH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01ff) | (value as u32 & 0x01ff);
-        self.w
-    }
-}
+pub type OUTFIFO_WDATA_CH_W<'a> = crate::FieldWriter<'a, u32, OUT_PUSH_CH_SPEC, u16, u16, 9, 0>;
 #[doc = "Field `OUTFIFO_PUSH_CH` reader - Set this bit to push data into DMA FIFO."]
-pub struct OUTFIFO_PUSH_CH_R(crate::FieldReader<bool>);
-impl OUTFIFO_PUSH_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTFIFO_PUSH_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTFIFO_PUSH_CH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTFIFO_PUSH_CH_R = crate::BitReader<bool>;
 #[doc = "Field `OUTFIFO_PUSH_CH` writer - Set this bit to push data into DMA FIFO."]
-pub struct OUTFIFO_PUSH_CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTFIFO_PUSH_CH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type OUTFIFO_PUSH_CH_W<'a> = crate::BitWriter<'a, u32, OUT_PUSH_CH_SPEC, bool, 9>;
 impl R {
     #[doc = "Bits 0:8 - This register stores the data that need to be pushed into DMA FIFO."]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:8 - This register stores the data that need to be pushed into DMA FIFO."]
     #[inline(always)]
     pub fn outfifo_wdata_ch(&mut self) -> OUTFIFO_WDATA_CH_W {
-        OUTFIFO_WDATA_CH_W { w: self }
+        OUTFIFO_WDATA_CH_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to push data into DMA FIFO."]
     #[inline(always)]
     pub fn outfifo_push_ch(&mut self) -> OUTFIFO_PUSH_CH_W {
-        OUTFIFO_PUSH_CH_W { w: self }
+        OUTFIFO_PUSH_CH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

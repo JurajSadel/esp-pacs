@@ -14,20 +14,7 @@ impl From<crate::R<CAP_CH0_SPEC>> for R {
     }
 }
 #[doc = "Field `CAP0_VALUE` reader - "]
-pub struct CAP0_VALUE_R(crate::FieldReader<u32>);
-impl CAP0_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CAP0_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAP0_VALUE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAP0_VALUE_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

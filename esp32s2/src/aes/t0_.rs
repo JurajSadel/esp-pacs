@@ -14,20 +14,7 @@ impl From<crate::R<T0__SPEC>> for R {
     }
 }
 #[doc = "Field `T0_0` reader - This register stores the %sth 32-bit piece of 128-bit T0"]
-pub struct T0_0_R(crate::FieldReader<u32>);
-impl T0_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        T0_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the %sth 32-bit piece of 128-bit T0"]
     #[inline(always)]

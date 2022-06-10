@@ -35,893 +35,101 @@ impl From<crate::W<DIG_ISO_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_OFF` reader - "]
-pub struct FORCE_OFF_R(crate::FieldReader<bool>);
-impl FORCE_OFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_OFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_OFF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_OFF_R = crate::BitReader<bool>;
 #[doc = "Field `FORCE_OFF` writer - "]
-pub struct FORCE_OFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_OFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type FORCE_OFF_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 7>;
 #[doc = "Field `FORCE_ON` reader - "]
-pub struct FORCE_ON_R(crate::FieldReader<bool>);
-impl FORCE_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_ON_R = crate::BitReader<bool>;
 #[doc = "Field `FORCE_ON` writer - "]
-pub struct FORCE_ON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_ON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type FORCE_ON_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 8>;
 #[doc = "Field `DG_PAD_AUTOHOLD` reader - Indicates the auto-hold status of the digital GPIOs."]
-pub struct DG_PAD_AUTOHOLD_R(crate::FieldReader<bool>);
-impl DG_PAD_AUTOHOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DG_PAD_AUTOHOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DG_PAD_AUTOHOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DG_PAD_AUTOHOLD_R = crate::BitReader<bool>;
 #[doc = "Field `CLR_DG_PAD_AUTOHOLD` writer - Se this bit to clear the auto-hold enabler for the digital GPIOs."]
-pub struct CLR_DG_PAD_AUTOHOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLR_DG_PAD_AUTOHOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type CLR_DG_PAD_AUTOHOLD_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 10>;
 #[doc = "Field `DG_PAD_AUTOHOLD_EN` reader - Se this bit to allow the digital GPIOs to enter the autohold status."]
-pub struct DG_PAD_AUTOHOLD_EN_R(crate::FieldReader<bool>);
-impl DG_PAD_AUTOHOLD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DG_PAD_AUTOHOLD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DG_PAD_AUTOHOLD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DG_PAD_AUTOHOLD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DG_PAD_AUTOHOLD_EN` writer - Se this bit to allow the digital GPIOs to enter the autohold status."]
-pub struct DG_PAD_AUTOHOLD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DG_PAD_AUTOHOLD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type DG_PAD_AUTOHOLD_EN_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 11>;
 #[doc = "Field `DG_PAD_FORCE_NOISO` reader - Set this bit to disable the force isolation to the digital GPIOs."]
-pub struct DG_PAD_FORCE_NOISO_R(crate::FieldReader<bool>);
-impl DG_PAD_FORCE_NOISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DG_PAD_FORCE_NOISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DG_PAD_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DG_PAD_FORCE_NOISO_R = crate::BitReader<bool>;
 #[doc = "Field `DG_PAD_FORCE_NOISO` writer - Set this bit to disable the force isolation to the digital GPIOs."]
-pub struct DG_PAD_FORCE_NOISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DG_PAD_FORCE_NOISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type DG_PAD_FORCE_NOISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 12>;
 #[doc = "Field `DG_PAD_FORCE_ISO` reader - Set this bit to force isolate the digital GPIOs."]
-pub struct DG_PAD_FORCE_ISO_R(crate::FieldReader<bool>);
-impl DG_PAD_FORCE_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DG_PAD_FORCE_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DG_PAD_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DG_PAD_FORCE_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `DG_PAD_FORCE_ISO` writer - Set this bit to force isolate the digital GPIOs."]
-pub struct DG_PAD_FORCE_ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DG_PAD_FORCE_ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type DG_PAD_FORCE_ISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 13>;
 #[doc = "Field `DG_PAD_FORCE_UNHOLD` reader - Set this bit the force unhold the digital GPIOs."]
-pub struct DG_PAD_FORCE_UNHOLD_R(crate::FieldReader<bool>);
-impl DG_PAD_FORCE_UNHOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DG_PAD_FORCE_UNHOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DG_PAD_FORCE_UNHOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DG_PAD_FORCE_UNHOLD_R = crate::BitReader<bool>;
 #[doc = "Field `DG_PAD_FORCE_UNHOLD` writer - Set this bit the force unhold the digital GPIOs."]
-pub struct DG_PAD_FORCE_UNHOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DG_PAD_FORCE_UNHOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type DG_PAD_FORCE_UNHOLD_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 14>;
 #[doc = "Field `DG_PAD_FORCE_HOLD` reader - Set this bit the force hold the digital GPIOs."]
-pub struct DG_PAD_FORCE_HOLD_R(crate::FieldReader<bool>);
-impl DG_PAD_FORCE_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DG_PAD_FORCE_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DG_PAD_FORCE_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DG_PAD_FORCE_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `DG_PAD_FORCE_HOLD` writer - Set this bit the force hold the digital GPIOs."]
-pub struct DG_PAD_FORCE_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DG_PAD_FORCE_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type DG_PAD_FORCE_HOLD_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 15>;
 #[doc = "Field `ROM0_FORCE_ISO` reader - ROM force ISO"]
-pub struct ROM0_FORCE_ISO_R(crate::FieldReader<bool>);
-impl ROM0_FORCE_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ROM0_FORCE_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ROM0_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ROM0_FORCE_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `ROM0_FORCE_ISO` writer - ROM force ISO"]
-pub struct ROM0_FORCE_ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ROM0_FORCE_ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type ROM0_FORCE_ISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 16>;
 #[doc = "Field `ROM0_FORCE_NOISO` reader - ROM force no ISO"]
-pub struct ROM0_FORCE_NOISO_R(crate::FieldReader<bool>);
-impl ROM0_FORCE_NOISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ROM0_FORCE_NOISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ROM0_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ROM0_FORCE_NOISO_R = crate::BitReader<bool>;
 #[doc = "Field `ROM0_FORCE_NOISO` writer - ROM force no ISO"]
-pub struct ROM0_FORCE_NOISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ROM0_FORCE_NOISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type ROM0_FORCE_NOISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 17>;
 #[doc = "Field `INTER_RAM0_FORCE_ISO` reader - internal SRAM 0 force ISO"]
-pub struct INTER_RAM0_FORCE_ISO_R(crate::FieldReader<bool>);
-impl INTER_RAM0_FORCE_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_RAM0_FORCE_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_RAM0_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_RAM0_FORCE_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_RAM0_FORCE_ISO` writer - internal SRAM 0 force ISO"]
-pub struct INTER_RAM0_FORCE_ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_RAM0_FORCE_ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type INTER_RAM0_FORCE_ISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 18>;
 #[doc = "Field `INTER_RAM0_FORCE_NOISO` reader - internal SRAM 0 force no ISO"]
-pub struct INTER_RAM0_FORCE_NOISO_R(crate::FieldReader<bool>);
-impl INTER_RAM0_FORCE_NOISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_RAM0_FORCE_NOISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_RAM0_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_RAM0_FORCE_NOISO_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_RAM0_FORCE_NOISO` writer - internal SRAM 0 force no ISO"]
-pub struct INTER_RAM0_FORCE_NOISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_RAM0_FORCE_NOISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type INTER_RAM0_FORCE_NOISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 19>;
 #[doc = "Field `INTER_RAM1_FORCE_ISO` reader - internal SRAM 1 force ISO"]
-pub struct INTER_RAM1_FORCE_ISO_R(crate::FieldReader<bool>);
-impl INTER_RAM1_FORCE_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_RAM1_FORCE_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_RAM1_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_RAM1_FORCE_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_RAM1_FORCE_ISO` writer - internal SRAM 1 force ISO"]
-pub struct INTER_RAM1_FORCE_ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_RAM1_FORCE_ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type INTER_RAM1_FORCE_ISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 20>;
 #[doc = "Field `INTER_RAM1_FORCE_NOISO` reader - internal SRAM 1 force no ISO"]
-pub struct INTER_RAM1_FORCE_NOISO_R(crate::FieldReader<bool>);
-impl INTER_RAM1_FORCE_NOISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_RAM1_FORCE_NOISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_RAM1_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_RAM1_FORCE_NOISO_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_RAM1_FORCE_NOISO` writer - internal SRAM 1 force no ISO"]
-pub struct INTER_RAM1_FORCE_NOISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_RAM1_FORCE_NOISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type INTER_RAM1_FORCE_NOISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 21>;
 #[doc = "Field `INTER_RAM2_FORCE_ISO` reader - internal SRAM 2 force ISO"]
-pub struct INTER_RAM2_FORCE_ISO_R(crate::FieldReader<bool>);
-impl INTER_RAM2_FORCE_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_RAM2_FORCE_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_RAM2_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_RAM2_FORCE_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_RAM2_FORCE_ISO` writer - internal SRAM 2 force ISO"]
-pub struct INTER_RAM2_FORCE_ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_RAM2_FORCE_ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type INTER_RAM2_FORCE_ISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 22>;
 #[doc = "Field `INTER_RAM2_FORCE_NOISO` reader - internal SRAM 2 force no ISO"]
-pub struct INTER_RAM2_FORCE_NOISO_R(crate::FieldReader<bool>);
-impl INTER_RAM2_FORCE_NOISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_RAM2_FORCE_NOISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_RAM2_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_RAM2_FORCE_NOISO_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_RAM2_FORCE_NOISO` writer - internal SRAM 2 force no ISO"]
-pub struct INTER_RAM2_FORCE_NOISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_RAM2_FORCE_NOISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type INTER_RAM2_FORCE_NOISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 23>;
 #[doc = "Field `INTER_RAM3_FORCE_ISO` reader - internal SRAM 3 force ISO"]
-pub struct INTER_RAM3_FORCE_ISO_R(crate::FieldReader<bool>);
-impl INTER_RAM3_FORCE_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_RAM3_FORCE_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_RAM3_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_RAM3_FORCE_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_RAM3_FORCE_ISO` writer - internal SRAM 3 force ISO"]
-pub struct INTER_RAM3_FORCE_ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_RAM3_FORCE_ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type INTER_RAM3_FORCE_ISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 24>;
 #[doc = "Field `INTER_RAM3_FORCE_NOISO` reader - internal SRAM 3 force no ISO"]
-pub struct INTER_RAM3_FORCE_NOISO_R(crate::FieldReader<bool>);
-impl INTER_RAM3_FORCE_NOISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_RAM3_FORCE_NOISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_RAM3_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_RAM3_FORCE_NOISO_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_RAM3_FORCE_NOISO` writer - internal SRAM 3 force no ISO"]
-pub struct INTER_RAM3_FORCE_NOISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_RAM3_FORCE_NOISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type INTER_RAM3_FORCE_NOISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 25>;
 #[doc = "Field `INTER_RAM4_FORCE_ISO` reader - internal SRAM 4 force ISO"]
-pub struct INTER_RAM4_FORCE_ISO_R(crate::FieldReader<bool>);
-impl INTER_RAM4_FORCE_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_RAM4_FORCE_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_RAM4_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_RAM4_FORCE_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_RAM4_FORCE_ISO` writer - internal SRAM 4 force ISO"]
-pub struct INTER_RAM4_FORCE_ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_RAM4_FORCE_ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type INTER_RAM4_FORCE_ISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 26>;
 #[doc = "Field `INTER_RAM4_FORCE_NOISO` reader - internal SRAM 4 force no ISO"]
-pub struct INTER_RAM4_FORCE_NOISO_R(crate::FieldReader<bool>);
-impl INTER_RAM4_FORCE_NOISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_RAM4_FORCE_NOISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_RAM4_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_RAM4_FORCE_NOISO_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_RAM4_FORCE_NOISO` writer - internal SRAM 4 force no ISO"]
-pub struct INTER_RAM4_FORCE_NOISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_RAM4_FORCE_NOISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type INTER_RAM4_FORCE_NOISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 27>;
 #[doc = "Field `WIFI_FORCE_ISO` reader - Set this bit to force isolate the Wi-Fi circuits."]
-pub struct WIFI_FORCE_ISO_R(crate::FieldReader<bool>);
-impl WIFI_FORCE_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WIFI_FORCE_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WIFI_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WIFI_FORCE_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `WIFI_FORCE_ISO` writer - Set this bit to force isolate the Wi-Fi circuits."]
-pub struct WIFI_FORCE_ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WIFI_FORCE_ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type WIFI_FORCE_ISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 28>;
 #[doc = "Field `WIFI_FORCE_NOISO` reader - Set this bit to disable the force isolation to the Wi-Fi circuits."]
-pub struct WIFI_FORCE_NOISO_R(crate::FieldReader<bool>);
-impl WIFI_FORCE_NOISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WIFI_FORCE_NOISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WIFI_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WIFI_FORCE_NOISO_R = crate::BitReader<bool>;
 #[doc = "Field `WIFI_FORCE_NOISO` writer - Set this bit to disable the force isolation to the Wi-Fi circuits."]
-pub struct WIFI_FORCE_NOISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WIFI_FORCE_NOISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type WIFI_FORCE_NOISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 29>;
 #[doc = "Field `DG_WRAP_FORCE_ISO` reader - Set this bit to force isolate the digital system."]
-pub struct DG_WRAP_FORCE_ISO_R(crate::FieldReader<bool>);
-impl DG_WRAP_FORCE_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DG_WRAP_FORCE_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DG_WRAP_FORCE_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DG_WRAP_FORCE_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `DG_WRAP_FORCE_ISO` writer - Set this bit to force isolate the digital system."]
-pub struct DG_WRAP_FORCE_ISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DG_WRAP_FORCE_ISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type DG_WRAP_FORCE_ISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 30>;
 #[doc = "Field `DG_WRAP_FORCE_NOISO` reader - Set this bit to disable the force isolation to the digital system."]
-pub struct DG_WRAP_FORCE_NOISO_R(crate::FieldReader<bool>);
-impl DG_WRAP_FORCE_NOISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DG_WRAP_FORCE_NOISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DG_WRAP_FORCE_NOISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DG_WRAP_FORCE_NOISO_R = crate::BitReader<bool>;
 #[doc = "Field `DG_WRAP_FORCE_NOISO` writer - Set this bit to disable the force isolation to the digital system."]
-pub struct DG_WRAP_FORCE_NOISO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DG_WRAP_FORCE_NOISO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type DG_WRAP_FORCE_NOISO_W<'a> = crate::BitWriter<'a, u32, DIG_ISO_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 7"]
     #[inline(always)]
@@ -1048,122 +256,122 @@ impl W {
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn force_off(&mut self) -> FORCE_OFF_W {
-        FORCE_OFF_W { w: self }
+        FORCE_OFF_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn force_on(&mut self) -> FORCE_ON_W {
-        FORCE_ON_W { w: self }
+        FORCE_ON_W::new(self)
     }
     #[doc = "Bit 10 - Se this bit to clear the auto-hold enabler for the digital GPIOs."]
     #[inline(always)]
     pub fn clr_dg_pad_autohold(&mut self) -> CLR_DG_PAD_AUTOHOLD_W {
-        CLR_DG_PAD_AUTOHOLD_W { w: self }
+        CLR_DG_PAD_AUTOHOLD_W::new(self)
     }
     #[doc = "Bit 11 - Se this bit to allow the digital GPIOs to enter the autohold status."]
     #[inline(always)]
     pub fn dg_pad_autohold_en(&mut self) -> DG_PAD_AUTOHOLD_EN_W {
-        DG_PAD_AUTOHOLD_EN_W { w: self }
+        DG_PAD_AUTOHOLD_EN_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to disable the force isolation to the digital GPIOs."]
     #[inline(always)]
     pub fn dg_pad_force_noiso(&mut self) -> DG_PAD_FORCE_NOISO_W {
-        DG_PAD_FORCE_NOISO_W { w: self }
+        DG_PAD_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to force isolate the digital GPIOs."]
     #[inline(always)]
     pub fn dg_pad_force_iso(&mut self) -> DG_PAD_FORCE_ISO_W {
-        DG_PAD_FORCE_ISO_W { w: self }
+        DG_PAD_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit the force unhold the digital GPIOs."]
     #[inline(always)]
     pub fn dg_pad_force_unhold(&mut self) -> DG_PAD_FORCE_UNHOLD_W {
-        DG_PAD_FORCE_UNHOLD_W { w: self }
+        DG_PAD_FORCE_UNHOLD_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit the force hold the digital GPIOs."]
     #[inline(always)]
     pub fn dg_pad_force_hold(&mut self) -> DG_PAD_FORCE_HOLD_W {
-        DG_PAD_FORCE_HOLD_W { w: self }
+        DG_PAD_FORCE_HOLD_W::new(self)
     }
     #[doc = "Bit 16 - ROM force ISO"]
     #[inline(always)]
     pub fn rom0_force_iso(&mut self) -> ROM0_FORCE_ISO_W {
-        ROM0_FORCE_ISO_W { w: self }
+        ROM0_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 17 - ROM force no ISO"]
     #[inline(always)]
     pub fn rom0_force_noiso(&mut self) -> ROM0_FORCE_NOISO_W {
-        ROM0_FORCE_NOISO_W { w: self }
+        ROM0_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 18 - internal SRAM 0 force ISO"]
     #[inline(always)]
     pub fn inter_ram0_force_iso(&mut self) -> INTER_RAM0_FORCE_ISO_W {
-        INTER_RAM0_FORCE_ISO_W { w: self }
+        INTER_RAM0_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 19 - internal SRAM 0 force no ISO"]
     #[inline(always)]
     pub fn inter_ram0_force_noiso(&mut self) -> INTER_RAM0_FORCE_NOISO_W {
-        INTER_RAM0_FORCE_NOISO_W { w: self }
+        INTER_RAM0_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 20 - internal SRAM 1 force ISO"]
     #[inline(always)]
     pub fn inter_ram1_force_iso(&mut self) -> INTER_RAM1_FORCE_ISO_W {
-        INTER_RAM1_FORCE_ISO_W { w: self }
+        INTER_RAM1_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 21 - internal SRAM 1 force no ISO"]
     #[inline(always)]
     pub fn inter_ram1_force_noiso(&mut self) -> INTER_RAM1_FORCE_NOISO_W {
-        INTER_RAM1_FORCE_NOISO_W { w: self }
+        INTER_RAM1_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 22 - internal SRAM 2 force ISO"]
     #[inline(always)]
     pub fn inter_ram2_force_iso(&mut self) -> INTER_RAM2_FORCE_ISO_W {
-        INTER_RAM2_FORCE_ISO_W { w: self }
+        INTER_RAM2_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 23 - internal SRAM 2 force no ISO"]
     #[inline(always)]
     pub fn inter_ram2_force_noiso(&mut self) -> INTER_RAM2_FORCE_NOISO_W {
-        INTER_RAM2_FORCE_NOISO_W { w: self }
+        INTER_RAM2_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 24 - internal SRAM 3 force ISO"]
     #[inline(always)]
     pub fn inter_ram3_force_iso(&mut self) -> INTER_RAM3_FORCE_ISO_W {
-        INTER_RAM3_FORCE_ISO_W { w: self }
+        INTER_RAM3_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 25 - internal SRAM 3 force no ISO"]
     #[inline(always)]
     pub fn inter_ram3_force_noiso(&mut self) -> INTER_RAM3_FORCE_NOISO_W {
-        INTER_RAM3_FORCE_NOISO_W { w: self }
+        INTER_RAM3_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 26 - internal SRAM 4 force ISO"]
     #[inline(always)]
     pub fn inter_ram4_force_iso(&mut self) -> INTER_RAM4_FORCE_ISO_W {
-        INTER_RAM4_FORCE_ISO_W { w: self }
+        INTER_RAM4_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 27 - internal SRAM 4 force no ISO"]
     #[inline(always)]
     pub fn inter_ram4_force_noiso(&mut self) -> INTER_RAM4_FORCE_NOISO_W {
-        INTER_RAM4_FORCE_NOISO_W { w: self }
+        INTER_RAM4_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 28 - Set this bit to force isolate the Wi-Fi circuits."]
     #[inline(always)]
     pub fn wifi_force_iso(&mut self) -> WIFI_FORCE_ISO_W {
-        WIFI_FORCE_ISO_W { w: self }
+        WIFI_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 29 - Set this bit to disable the force isolation to the Wi-Fi circuits."]
     #[inline(always)]
     pub fn wifi_force_noiso(&mut self) -> WIFI_FORCE_NOISO_W {
-        WIFI_FORCE_NOISO_W { w: self }
+        WIFI_FORCE_NOISO_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to force isolate the digital system."]
     #[inline(always)]
     pub fn dg_wrap_force_iso(&mut self) -> DG_WRAP_FORCE_ISO_W {
-        DG_WRAP_FORCE_ISO_W { w: self }
+        DG_WRAP_FORCE_ISO_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to disable the force isolation to the digital system."]
     #[inline(always)]
     pub fn dg_wrap_force_noiso(&mut self) -> DG_WRAP_FORCE_NOISO_W {
-        DG_WRAP_FORCE_NOISO_W { w: self }
+        DG_WRAP_FORCE_NOISO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

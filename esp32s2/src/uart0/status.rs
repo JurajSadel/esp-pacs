@@ -14,125 +14,21 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFIFO_CNT` reader - Stores the number of valid data bytes in RX FIFO."]
-pub struct RXFIFO_CNT_R(crate::FieldReader<u16>);
-impl RXFIFO_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RXFIFO_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_CNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_CNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DSRN` reader - This register represents the level of the internal UART DSR signal."]
-pub struct DSRN_R(crate::FieldReader<bool>);
-impl DSRN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DSRN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DSRN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DSRN_R = crate::BitReader<bool>;
 #[doc = "Field `CTSN` reader - This register represents the level of the internal UART CTS signal."]
-pub struct CTSN_R(crate::FieldReader<bool>);
-impl CTSN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CTSN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CTSN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CTSN_R = crate::BitReader<bool>;
 #[doc = "Field `RXD` reader - This register represents the level of the internal UART RXD signal."]
-pub struct RXD_R(crate::FieldReader<bool>);
-impl RXD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXD_R = crate::BitReader<bool>;
 #[doc = "Field `TXFIFO_CNT` reader - Stores the number of data bytes in TX FIFO."]
-pub struct TXFIFO_CNT_R(crate::FieldReader<u16>);
-impl TXFIFO_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TXFIFO_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFIFO_CNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFIFO_CNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DTRN` reader - This bit represents the level of the internal UART DTR signal."]
-pub struct DTRN_R(crate::FieldReader<bool>);
-impl DTRN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DTRN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTRN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DTRN_R = crate::BitReader<bool>;
 #[doc = "Field `RTSN` reader - This bit represents the level of the internal UART RTS signal."]
-pub struct RTSN_R(crate::FieldReader<bool>);
-impl RTSN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTSN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTSN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTSN_R = crate::BitReader<bool>;
 #[doc = "Field `TXD` reader - This bit represents the level of the internal UART TXD signal."]
-pub struct TXD_R(crate::FieldReader<bool>);
-impl TXD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXD_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:9 - Stores the number of valid data bytes in RX FIFO."]
     #[inline(always)]

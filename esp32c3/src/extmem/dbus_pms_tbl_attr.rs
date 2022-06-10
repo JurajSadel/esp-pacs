@@ -35,59 +35,15 @@ impl From<crate::W<DBUS_PMS_TBL_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `DBUS_PMS_SCT1_ATTR` reader - The bit is used to configure attribute of the dbus permission control section1, bit0: load in world0, bit2: load in world1"]
-pub struct DBUS_PMS_SCT1_ATTR_R(crate::FieldReader<u8>);
-impl DBUS_PMS_SCT1_ATTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DBUS_PMS_SCT1_ATTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS_PMS_SCT1_ATTR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS_PMS_SCT1_ATTR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DBUS_PMS_SCT1_ATTR` writer - The bit is used to configure attribute of the dbus permission control section1, bit0: load in world0, bit2: load in world1"]
-pub struct DBUS_PMS_SCT1_ATTR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DBUS_PMS_SCT1_ATTR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type DBUS_PMS_SCT1_ATTR_W<'a> =
+    crate::FieldWriter<'a, u32, DBUS_PMS_TBL_ATTR_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `DBUS_PMS_SCT2_ATTR` reader - The bit is used to configure attribute of the dbus permission control section2, bit0: load in world0, bit2: load in world1"]
-pub struct DBUS_PMS_SCT2_ATTR_R(crate::FieldReader<u8>);
-impl DBUS_PMS_SCT2_ATTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DBUS_PMS_SCT2_ATTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS_PMS_SCT2_ATTR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS_PMS_SCT2_ATTR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DBUS_PMS_SCT2_ATTR` writer - The bit is used to configure attribute of the dbus permission control section2, bit0: load in world0, bit2: load in world1"]
-pub struct DBUS_PMS_SCT2_ATTR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DBUS_PMS_SCT2_ATTR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type DBUS_PMS_SCT2_ATTR_W<'a> =
+    crate::FieldWriter<'a, u32, DBUS_PMS_TBL_ATTR_SPEC, u8, u8, 2, 2>;
 impl R {
     #[doc = "Bits 0:1 - The bit is used to configure attribute of the dbus permission control section1, bit0: load in world0, bit2: load in world1"]
     #[inline(always)]
@@ -104,12 +60,12 @@ impl W {
     #[doc = "Bits 0:1 - The bit is used to configure attribute of the dbus permission control section1, bit0: load in world0, bit2: load in world1"]
     #[inline(always)]
     pub fn dbus_pms_sct1_attr(&mut self) -> DBUS_PMS_SCT1_ATTR_W {
-        DBUS_PMS_SCT1_ATTR_W { w: self }
+        DBUS_PMS_SCT1_ATTR_W::new(self)
     }
     #[doc = "Bits 2:3 - The bit is used to configure attribute of the dbus permission control section2, bit0: load in world0, bit2: load in world1"]
     #[inline(always)]
     pub fn dbus_pms_sct2_attr(&mut self) -> DBUS_PMS_SCT2_ATTR_W {
-        DBUS_PMS_SCT2_ATTR_W { w: self }
+        DBUS_PMS_SCT2_ATTR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

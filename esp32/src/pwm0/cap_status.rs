@@ -14,50 +14,11 @@ impl From<crate::R<CAP_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `CAP0_EDGE` reader - "]
-pub struct CAP0_EDGE_R(crate::FieldReader<bool>);
-impl CAP0_EDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAP0_EDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAP0_EDGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAP0_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `CAP1_EDGE` reader - "]
-pub struct CAP1_EDGE_R(crate::FieldReader<bool>);
-impl CAP1_EDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAP1_EDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAP1_EDGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAP1_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `CAP2_EDGE` reader - "]
-pub struct CAP2_EDGE_R(crate::FieldReader<bool>);
-impl CAP2_EDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAP2_EDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAP2_EDGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAP2_EDGE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

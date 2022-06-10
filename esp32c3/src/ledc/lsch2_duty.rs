@@ -35,32 +35,9 @@ impl From<crate::W<LSCH2_DUTY_SPEC>> for W {
     }
 }
 #[doc = "Field `DUTY_LSCH2` reader - reg_duty_lsch2."]
-pub struct DUTY_LSCH2_R(crate::FieldReader<u32>);
-impl DUTY_LSCH2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DUTY_LSCH2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_LSCH2_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_LSCH2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DUTY_LSCH2` writer - reg_duty_lsch2."]
-pub struct DUTY_LSCH2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DUTY_LSCH2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0007_ffff) | (value as u32 & 0x0007_ffff);
-        self.w
-    }
-}
+pub type DUTY_LSCH2_W<'a> = crate::FieldWriter<'a, u32, LSCH2_DUTY_SPEC, u32, u32, 19, 0>;
 impl R {
     #[doc = "Bits 0:18 - reg_duty_lsch2."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:18 - reg_duty_lsch2."]
     #[inline(always)]
     pub fn duty_lsch2(&mut self) -> DUTY_LSCH2_W {
-        DUTY_LSCH2_W { w: self }
+        DUTY_LSCH2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

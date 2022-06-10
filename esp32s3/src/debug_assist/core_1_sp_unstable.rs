@@ -35,32 +35,10 @@ impl From<crate::W<CORE_1_SP_UNSTABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_SP_UNSTABLE` reader - unstable period when window change,during this period no check stackpointer"]
-pub struct CORE_1_SP_UNSTABLE_R(crate::FieldReader<u8>);
-impl CORE_1_SP_UNSTABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_1_SP_UNSTABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_SP_UNSTABLE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_SP_UNSTABLE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_1_SP_UNSTABLE` writer - unstable period when window change,during this period no check stackpointer"]
-pub struct CORE_1_SP_UNSTABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_SP_UNSTABLE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type CORE_1_SP_UNSTABLE_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_1_SP_UNSTABLE_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - unstable period when window change,during this period no check stackpointer"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:7 - unstable period when window change,during this period no check stackpointer"]
     #[inline(always)]
     pub fn core_1_sp_unstable(&mut self) -> CORE_1_SP_UNSTABLE_W {
-        CORE_1_SP_UNSTABLE_W { w: self }
+        CORE_1_SP_UNSTABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

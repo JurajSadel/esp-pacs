@@ -35,429 +35,53 @@ impl From<crate::W<DT0_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DT0_FED_UPMETHOD` reader - "]
-pub struct DT0_FED_UPMETHOD_R(crate::FieldReader<u8>);
-impl DT0_FED_UPMETHOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DT0_FED_UPMETHOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_FED_UPMETHOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_FED_UPMETHOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DT0_FED_UPMETHOD` writer - "]
-pub struct DT0_FED_UPMETHOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_FED_UPMETHOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type DT0_FED_UPMETHOD_W<'a> = crate::FieldWriter<'a, u32, DT0_CFG_SPEC, u8, u8, 4, 0>;
 #[doc = "Field `DT0_RED_UPMETHOD` reader - "]
-pub struct DT0_RED_UPMETHOD_R(crate::FieldReader<u8>);
-impl DT0_RED_UPMETHOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DT0_RED_UPMETHOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_RED_UPMETHOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_RED_UPMETHOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DT0_RED_UPMETHOD` writer - "]
-pub struct DT0_RED_UPMETHOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_RED_UPMETHOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type DT0_RED_UPMETHOD_W<'a> = crate::FieldWriter<'a, u32, DT0_CFG_SPEC, u8, u8, 4, 4>;
 #[doc = "Field `DT0_DEB_MODE` reader - "]
-pub struct DT0_DEB_MODE_R(crate::FieldReader<bool>);
-impl DT0_DEB_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DT0_DEB_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_DEB_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_DEB_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `DT0_DEB_MODE` writer - "]
-pub struct DT0_DEB_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_DEB_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type DT0_DEB_MODE_W<'a> = crate::BitWriter<'a, u32, DT0_CFG_SPEC, bool, 8>;
 #[doc = "Field `DT0_A_OUTSWAP` reader - "]
-pub struct DT0_A_OUTSWAP_R(crate::FieldReader<bool>);
-impl DT0_A_OUTSWAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DT0_A_OUTSWAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_A_OUTSWAP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_A_OUTSWAP_R = crate::BitReader<bool>;
 #[doc = "Field `DT0_A_OUTSWAP` writer - "]
-pub struct DT0_A_OUTSWAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_A_OUTSWAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type DT0_A_OUTSWAP_W<'a> = crate::BitWriter<'a, u32, DT0_CFG_SPEC, bool, 9>;
 #[doc = "Field `DT0_B_OUTSWAP` reader - "]
-pub struct DT0_B_OUTSWAP_R(crate::FieldReader<bool>);
-impl DT0_B_OUTSWAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DT0_B_OUTSWAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_B_OUTSWAP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_B_OUTSWAP_R = crate::BitReader<bool>;
 #[doc = "Field `DT0_B_OUTSWAP` writer - "]
-pub struct DT0_B_OUTSWAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_B_OUTSWAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type DT0_B_OUTSWAP_W<'a> = crate::BitWriter<'a, u32, DT0_CFG_SPEC, bool, 10>;
 #[doc = "Field `DT0_RED_INSEL` reader - "]
-pub struct DT0_RED_INSEL_R(crate::FieldReader<bool>);
-impl DT0_RED_INSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DT0_RED_INSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_RED_INSEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_RED_INSEL_R = crate::BitReader<bool>;
 #[doc = "Field `DT0_RED_INSEL` writer - "]
-pub struct DT0_RED_INSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_RED_INSEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type DT0_RED_INSEL_W<'a> = crate::BitWriter<'a, u32, DT0_CFG_SPEC, bool, 11>;
 #[doc = "Field `DT0_FED_INSEL` reader - "]
-pub struct DT0_FED_INSEL_R(crate::FieldReader<bool>);
-impl DT0_FED_INSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DT0_FED_INSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_FED_INSEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_FED_INSEL_R = crate::BitReader<bool>;
 #[doc = "Field `DT0_FED_INSEL` writer - "]
-pub struct DT0_FED_INSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_FED_INSEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type DT0_FED_INSEL_W<'a> = crate::BitWriter<'a, u32, DT0_CFG_SPEC, bool, 12>;
 #[doc = "Field `DT0_RED_OUTINVERT` reader - "]
-pub struct DT0_RED_OUTINVERT_R(crate::FieldReader<bool>);
-impl DT0_RED_OUTINVERT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DT0_RED_OUTINVERT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_RED_OUTINVERT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_RED_OUTINVERT_R = crate::BitReader<bool>;
 #[doc = "Field `DT0_RED_OUTINVERT` writer - "]
-pub struct DT0_RED_OUTINVERT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_RED_OUTINVERT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type DT0_RED_OUTINVERT_W<'a> = crate::BitWriter<'a, u32, DT0_CFG_SPEC, bool, 13>;
 #[doc = "Field `DT0_FED_OUTINVERT` reader - "]
-pub struct DT0_FED_OUTINVERT_R(crate::FieldReader<bool>);
-impl DT0_FED_OUTINVERT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DT0_FED_OUTINVERT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_FED_OUTINVERT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_FED_OUTINVERT_R = crate::BitReader<bool>;
 #[doc = "Field `DT0_FED_OUTINVERT` writer - "]
-pub struct DT0_FED_OUTINVERT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_FED_OUTINVERT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type DT0_FED_OUTINVERT_W<'a> = crate::BitWriter<'a, u32, DT0_CFG_SPEC, bool, 14>;
 #[doc = "Field `DT0_A_OUTBYPASS` reader - "]
-pub struct DT0_A_OUTBYPASS_R(crate::FieldReader<bool>);
-impl DT0_A_OUTBYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DT0_A_OUTBYPASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_A_OUTBYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_A_OUTBYPASS_R = crate::BitReader<bool>;
 #[doc = "Field `DT0_A_OUTBYPASS` writer - "]
-pub struct DT0_A_OUTBYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_A_OUTBYPASS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type DT0_A_OUTBYPASS_W<'a> = crate::BitWriter<'a, u32, DT0_CFG_SPEC, bool, 15>;
 #[doc = "Field `DT0_B_OUTBYPASS` reader - "]
-pub struct DT0_B_OUTBYPASS_R(crate::FieldReader<bool>);
-impl DT0_B_OUTBYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DT0_B_OUTBYPASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_B_OUTBYPASS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_B_OUTBYPASS_R = crate::BitReader<bool>;
 #[doc = "Field `DT0_B_OUTBYPASS` writer - "]
-pub struct DT0_B_OUTBYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_B_OUTBYPASS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type DT0_B_OUTBYPASS_W<'a> = crate::BitWriter<'a, u32, DT0_CFG_SPEC, bool, 16>;
 #[doc = "Field `DT0_CLK_SEL` reader - "]
-pub struct DT0_CLK_SEL_R(crate::FieldReader<bool>);
-impl DT0_CLK_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DT0_CLK_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_CLK_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_CLK_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `DT0_CLK_SEL` writer - "]
-pub struct DT0_CLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_CLK_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type DT0_CLK_SEL_W<'a> = crate::BitWriter<'a, u32, DT0_CFG_SPEC, bool, 17>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]
@@ -524,62 +148,62 @@ impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
     pub fn dt0_fed_upmethod(&mut self) -> DT0_FED_UPMETHOD_W {
-        DT0_FED_UPMETHOD_W { w: self }
+        DT0_FED_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
     pub fn dt0_red_upmethod(&mut self) -> DT0_RED_UPMETHOD_W {
-        DT0_RED_UPMETHOD_W { w: self }
+        DT0_RED_UPMETHOD_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn dt0_deb_mode(&mut self) -> DT0_DEB_MODE_W {
-        DT0_DEB_MODE_W { w: self }
+        DT0_DEB_MODE_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn dt0_a_outswap(&mut self) -> DT0_A_OUTSWAP_W {
-        DT0_A_OUTSWAP_W { w: self }
+        DT0_A_OUTSWAP_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn dt0_b_outswap(&mut self) -> DT0_B_OUTSWAP_W {
-        DT0_B_OUTSWAP_W { w: self }
+        DT0_B_OUTSWAP_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn dt0_red_insel(&mut self) -> DT0_RED_INSEL_W {
-        DT0_RED_INSEL_W { w: self }
+        DT0_RED_INSEL_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn dt0_fed_insel(&mut self) -> DT0_FED_INSEL_W {
-        DT0_FED_INSEL_W { w: self }
+        DT0_FED_INSEL_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn dt0_red_outinvert(&mut self) -> DT0_RED_OUTINVERT_W {
-        DT0_RED_OUTINVERT_W { w: self }
+        DT0_RED_OUTINVERT_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn dt0_fed_outinvert(&mut self) -> DT0_FED_OUTINVERT_W {
-        DT0_FED_OUTINVERT_W { w: self }
+        DT0_FED_OUTINVERT_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     pub fn dt0_a_outbypass(&mut self) -> DT0_A_OUTBYPASS_W {
-        DT0_A_OUTBYPASS_W { w: self }
+        DT0_A_OUTBYPASS_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn dt0_b_outbypass(&mut self) -> DT0_B_OUTBYPASS_W {
-        DT0_B_OUTBYPASS_W { w: self }
+        DT0_B_OUTBYPASS_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn dt0_clk_sel(&mut self) -> DT0_CLK_SEL_W {
-        DT0_CLK_SEL_W { w: self }
+        DT0_CLK_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

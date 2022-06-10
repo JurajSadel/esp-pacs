@@ -35,116 +35,17 @@ impl From<crate::W<CACHE_CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_CLK_ON` reader - Set this bit to enable clock of i-cache."]
-pub struct PRO_ICACHE_CLK_ON_R(crate::FieldReader<bool>);
-impl PRO_ICACHE_CLK_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ICACHE_CLK_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ICACHE_CLK_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ICACHE_CLK_ON_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_ICACHE_CLK_ON` writer - Set this bit to enable clock of i-cache."]
-pub struct PRO_ICACHE_CLK_ON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ICACHE_CLK_ON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_ICACHE_CLK_ON_W<'a> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, 0>;
 #[doc = "Field `PRO_DCACHE_CLK_ON` reader - Set this bit to enable clock of d-cache."]
-pub struct PRO_DCACHE_CLK_ON_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_CLK_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_CLK_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_CLK_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_CLK_ON_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_CLK_ON` writer - Set this bit to enable clock of d-cache."]
-pub struct PRO_DCACHE_CLK_ON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_CLK_ON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PRO_DCACHE_CLK_ON_W<'a> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, 1>;
 #[doc = "Field `PRO_CACHE_RESET` reader - Set this bit to reset cache."]
-pub struct PRO_CACHE_RESET_R(crate::FieldReader<bool>);
-impl PRO_CACHE_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CACHE_RESET` writer - Set this bit to reset cache."]
-pub struct PRO_CACHE_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_CACHE_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PRO_CACHE_RESET_W<'a> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable clock of i-cache."]
     #[inline(always)]
@@ -166,17 +67,17 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable clock of i-cache."]
     #[inline(always)]
     pub fn pro_icache_clk_on(&mut self) -> PRO_ICACHE_CLK_ON_W {
-        PRO_ICACHE_CLK_ON_W { w: self }
+        PRO_ICACHE_CLK_ON_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable clock of d-cache."]
     #[inline(always)]
     pub fn pro_dcache_clk_on(&mut self) -> PRO_DCACHE_CLK_ON_W {
-        PRO_DCACHE_CLK_ON_W { w: self }
+        PRO_DCACHE_CLK_ON_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset cache."]
     #[inline(always)]
     pub fn pro_cache_reset(&mut self) -> PRO_CACHE_RESET_W {
-        PRO_CACHE_RESET_W { w: self }
+        PRO_CACHE_RESET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

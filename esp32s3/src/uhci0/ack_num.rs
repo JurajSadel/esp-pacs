@@ -35,54 +35,11 @@ impl From<crate::W<ACK_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `ACK_NUM` reader - This ACK number used in software flow control."]
-pub struct ACK_NUM_R(crate::FieldReader<u8>);
-impl ACK_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ACK_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ACK_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ACK_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ACK_NUM` writer - This ACK number used in software flow control."]
-pub struct ACK_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ACK_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type ACK_NUM_W<'a> = crate::FieldWriter<'a, u32, ACK_NUM_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `LOAD` writer - Set this bit to 1, the value configured by UHCI_ACK_NUM would be loaded."]
-pub struct LOAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type LOAD_W<'a> = crate::BitWriter<'a, u32, ACK_NUM_SPEC, bool, 3>;
 impl R {
     #[doc = "Bits 0:2 - This ACK number used in software flow control."]
     #[inline(always)]
@@ -94,12 +51,12 @@ impl W {
     #[doc = "Bits 0:2 - This ACK number used in software flow control."]
     #[inline(always)]
     pub fn ack_num(&mut self) -> ACK_NUM_W {
-        ACK_NUM_W { w: self }
+        ACK_NUM_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to 1, the value configured by UHCI_ACK_NUM would be loaded."]
     #[inline(always)]
     pub fn load(&mut self) -> LOAD_W {
-        LOAD_W { w: self }
+        LOAD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

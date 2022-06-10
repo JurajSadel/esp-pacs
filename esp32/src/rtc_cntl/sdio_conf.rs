@@ -35,249 +35,35 @@ impl From<crate::W<SDIO_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_PD_EN` reader - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
-pub struct SDIO_PD_EN_R(crate::FieldReader<bool>);
-impl SDIO_PD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_PD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_PD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_PD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_PD_EN` writer - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
-pub struct SDIO_PD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_PD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type SDIO_PD_EN_W<'a> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, 21>;
 #[doc = "Field `SDIO_FORCE` reader - 1: use SW option to control SDIO_REG 0: use state machine"]
-pub struct SDIO_FORCE_R(crate::FieldReader<bool>);
-impl SDIO_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_FORCE` writer - 1: use SW option to control SDIO_REG 0: use state machine"]
-pub struct SDIO_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type SDIO_FORCE_W<'a> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, 22>;
 #[doc = "Field `SDIO_TIEH` reader - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
-pub struct SDIO_TIEH_R(crate::FieldReader<bool>);
-impl SDIO_TIEH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_TIEH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_TIEH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_TIEH_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_TIEH` writer - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
-pub struct SDIO_TIEH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_TIEH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type SDIO_TIEH_W<'a> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, 23>;
 #[doc = "Field `REG1P8_READY` reader - read only register for REG1P8_READY"]
-pub struct REG1P8_READY_R(crate::FieldReader<bool>);
-impl REG1P8_READY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        REG1P8_READY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REG1P8_READY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REG1P8_READY_R = crate::BitReader<bool>;
 #[doc = "Field `DREFL_SDIO` reader - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
-pub struct DREFL_SDIO_R(crate::FieldReader<u8>);
-impl DREFL_SDIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DREFL_SDIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DREFL_SDIO_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DREFL_SDIO_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DREFL_SDIO` writer - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
-pub struct DREFL_SDIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DREFL_SDIO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 25)) | ((value as u32 & 3) << 25);
-        self.w
-    }
-}
+pub type DREFL_SDIO_W<'a> = crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 2, 25>;
 #[doc = "Field `DREFM_SDIO` reader - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
-pub struct DREFM_SDIO_R(crate::FieldReader<u8>);
-impl DREFM_SDIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DREFM_SDIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DREFM_SDIO_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DREFM_SDIO_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DREFM_SDIO` writer - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
-pub struct DREFM_SDIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DREFM_SDIO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 27)) | ((value as u32 & 3) << 27);
-        self.w
-    }
-}
+pub type DREFM_SDIO_W<'a> = crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 2, 27>;
 #[doc = "Field `DREFH_SDIO` reader - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
-pub struct DREFH_SDIO_R(crate::FieldReader<u8>);
-impl DREFH_SDIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DREFH_SDIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DREFH_SDIO_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DREFH_SDIO_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DREFH_SDIO` writer - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
-pub struct DREFH_SDIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DREFH_SDIO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
-        self.w
-    }
-}
+pub type DREFH_SDIO_W<'a> = crate::FieldWriter<'a, u32, SDIO_CONF_SPEC, u8, u8, 2, 29>;
 #[doc = "Field `XPD_SDIO` reader - SW option for XPD_SDIO_REG. Only active when reg_sdio_force = 1"]
-pub struct XPD_SDIO_R(crate::FieldReader<bool>);
-impl XPD_SDIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_SDIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_SDIO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_SDIO_R = crate::BitReader<bool>;
 #[doc = "Field `XPD_SDIO` writer - SW option for XPD_SDIO_REG. Only active when reg_sdio_force = 1"]
-pub struct XPD_SDIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XPD_SDIO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type XPD_SDIO_W<'a> = crate::BitWriter<'a, u32, SDIO_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 21 - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
     #[inline(always)]
@@ -324,37 +110,37 @@ impl W {
     #[doc = "Bit 21 - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
     #[inline(always)]
     pub fn sdio_pd_en(&mut self) -> SDIO_PD_EN_W {
-        SDIO_PD_EN_W { w: self }
+        SDIO_PD_EN_W::new(self)
     }
     #[doc = "Bit 22 - 1: use SW option to control SDIO_REG 0: use state machine"]
     #[inline(always)]
     pub fn sdio_force(&mut self) -> SDIO_FORCE_W {
-        SDIO_FORCE_W { w: self }
+        SDIO_FORCE_W::new(self)
     }
     #[doc = "Bit 23 - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W {
-        SDIO_TIEH_W { w: self }
+        SDIO_TIEH_W::new(self)
     }
     #[doc = "Bits 25:26 - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     pub fn drefl_sdio(&mut self) -> DREFL_SDIO_W {
-        DREFL_SDIO_W { w: self }
+        DREFL_SDIO_W::new(self)
     }
     #[doc = "Bits 27:28 - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     pub fn drefm_sdio(&mut self) -> DREFM_SDIO_W {
-        DREFM_SDIO_W { w: self }
+        DREFM_SDIO_W::new(self)
     }
     #[doc = "Bits 29:30 - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     pub fn drefh_sdio(&mut self) -> DREFH_SDIO_W {
-        DREFH_SDIO_W { w: self }
+        DREFH_SDIO_W::new(self)
     }
     #[doc = "Bit 31 - SW option for XPD_SDIO_REG. Only active when reg_sdio_force = 1"]
     #[inline(always)]
     pub fn xpd_sdio(&mut self) -> XPD_SDIO_W {
-        XPD_SDIO_W { w: self }
+        XPD_SDIO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

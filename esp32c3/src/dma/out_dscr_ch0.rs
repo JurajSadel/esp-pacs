@@ -14,20 +14,7 @@ impl From<crate::R<OUT_DSCR_CH0_SPEC>> for R {
     }
 }
 #[doc = "Field `OUTLINK_DSCR_CH0` reader - The address of the current outlink descriptor y."]
-pub struct OUTLINK_DSCR_CH0_R(crate::FieldReader<u32>);
-impl OUTLINK_DSCR_CH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        OUTLINK_DSCR_CH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_DSCR_CH0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_DSCR_CH0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The address of the current outlink descriptor y."]
     #[inline(always)]

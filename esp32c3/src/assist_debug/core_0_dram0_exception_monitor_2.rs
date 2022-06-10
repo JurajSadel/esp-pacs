@@ -14,50 +14,11 @@ impl From<crate::R<CORE_0_DRAM0_EXCEPTION_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_DRAM0_RECORDING_ADDR_1` reader - reg_core_0_dram0_recording_addr_1"]
-pub struct CORE_0_DRAM0_RECORDING_ADDR_1_R(crate::FieldReader<u32>);
-impl CORE_0_DRAM0_RECORDING_ADDR_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_0_DRAM0_RECORDING_ADDR_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_DRAM0_RECORDING_ADDR_1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_DRAM0_RECORDING_ADDR_1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_0_DRAM0_RECORDING_WR_1` reader - reg_core_0_dram0_recording_wr_1"]
-pub struct CORE_0_DRAM0_RECORDING_WR_1_R(crate::FieldReader<bool>);
-impl CORE_0_DRAM0_RECORDING_WR_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_DRAM0_RECORDING_WR_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_DRAM0_RECORDING_WR_1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_DRAM0_RECORDING_WR_1_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_DRAM0_RECORDING_BYTEEN_1` reader - reg_core_0_dram0_recording_byteen_1"]
-pub struct CORE_0_DRAM0_RECORDING_BYTEEN_1_R(crate::FieldReader<u8>);
-impl CORE_0_DRAM0_RECORDING_BYTEEN_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_0_DRAM0_RECORDING_BYTEEN_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_DRAM0_RECORDING_BYTEEN_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_DRAM0_RECORDING_BYTEEN_1_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:23 - reg_core_0_dram0_recording_addr_1"]
     #[inline(always)]

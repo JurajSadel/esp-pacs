@@ -35,59 +35,13 @@ impl From<crate::W<TIMER1_CFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER1_START` reader - "]
-pub struct TIMER1_START_R(crate::FieldReader<u8>);
-impl TIMER1_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER1_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER1_START_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER1_START_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER1_START` writer - "]
-pub struct TIMER1_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER1_START_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type TIMER1_START_W<'a> = crate::FieldWriter<'a, u32, TIMER1_CFG1_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `TIMER1_MOD` reader - "]
-pub struct TIMER1_MOD_R(crate::FieldReader<u8>);
-impl TIMER1_MOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER1_MOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER1_MOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER1_MOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER1_MOD` writer - "]
-pub struct TIMER1_MOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER1_MOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
-        self.w
-    }
-}
+pub type TIMER1_MOD_W<'a> = crate::FieldWriter<'a, u32, TIMER1_CFG1_SPEC, u8, u8, 2, 3>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn timer1_start(&mut self) -> TIMER1_START_W {
-        TIMER1_START_W { w: self }
+        TIMER1_START_W::new(self)
     }
     #[doc = "Bits 3:4"]
     #[inline(always)]
     pub fn timer1_mod(&mut self) -> TIMER1_MOD_W {
-        TIMER1_MOD_W { w: self }
+        TIMER1_MOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

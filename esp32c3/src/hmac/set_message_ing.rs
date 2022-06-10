@@ -20,32 +20,12 @@ impl From<crate::W<SET_MESSAGE_ING_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_TEXT_ING` writer - Continue typical hmac."]
-pub struct SET_TEXT_ING_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SET_TEXT_ING_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SET_TEXT_ING_W<'a> = crate::BitWriter<'a, u32, SET_MESSAGE_ING_SPEC, bool, 0>;
 impl W {
     #[doc = "Bit 0 - Continue typical hmac."]
     #[inline(always)]
     pub fn set_text_ing(&mut self) -> SET_TEXT_ING_W {
-        SET_TEXT_ING_W { w: self }
+        SET_TEXT_ING_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

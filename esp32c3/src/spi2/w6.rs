@@ -35,32 +35,9 @@ impl From<crate::W<W6_SPEC>> for W {
     }
 }
 #[doc = "Field `BUF6` reader - data buffer"]
-pub struct BUF6_R(crate::FieldReader<u32>);
-impl BUF6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BUF6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUF6_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUF6_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BUF6` writer - data buffer"]
-pub struct BUF6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BUF6_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type BUF6_W<'a> = crate::FieldWriter<'a, u32, W6_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - data buffer"]
     #[inline(always)]
     pub fn buf6(&mut self) -> BUF6_W {
-        BUF6_W { w: self }
+        BUF6_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

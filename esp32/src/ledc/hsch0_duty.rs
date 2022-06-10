@@ -14,20 +14,7 @@ impl From<crate::R<HSCH0_DUTY_SPEC>> for R {
     }
 }
 #[doc = "Field `DUTY_HSCH0` reader - This register represents the current duty of the output signal for high speed channel0."]
-pub struct DUTY_HSCH0_R(crate::FieldReader<u32>);
-impl DUTY_HSCH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DUTY_HSCH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_HSCH0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_HSCH0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:24 - This register represents the current duty of the output signal for high speed channel0."]
     #[inline(always)]

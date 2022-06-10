@@ -35,47 +35,11 @@ impl From<crate::W<CMD4_SPEC>> for W {
     }
 }
 #[doc = "Field `COMMAND4` reader - command4"]
-pub struct COMMAND4_R(crate::FieldReader<u16>);
-impl COMMAND4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        COMMAND4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COMMAND4_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COMMAND4_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `COMMAND4` writer - command4"]
-pub struct COMMAND4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COMMAND4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff) | (value as u32 & 0x3fff);
-        self.w
-    }
-}
+pub type COMMAND4_W<'a> = crate::FieldWriter<'a, u32, CMD4_SPEC, u16, u16, 14, 0>;
 #[doc = "Field `COMMAND4_DONE` reader - command4_done"]
-pub struct COMMAND4_DONE_R(crate::FieldReader<bool>);
-impl COMMAND4_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COMMAND4_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COMMAND4_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COMMAND4_DONE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:13 - command4"]
     #[inline(always)]
@@ -92,7 +56,7 @@ impl W {
     #[doc = "Bits 0:13 - command4"]
     #[inline(always)]
     pub fn command4(&mut self) -> COMMAND4_W {
-        COMMAND4_W { w: self }
+        COMMAND4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

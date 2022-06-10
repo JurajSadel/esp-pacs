@@ -14,20 +14,7 @@ impl From<crate::R<QUERY_IDLE_SPEC>> for R {
     }
 }
 #[doc = "Field `QUERY_IDLE` reader - query rsa idle. 1'b0: busy, 1'b1: idle"]
-pub struct QUERY_IDLE_R(crate::FieldReader<bool>);
-impl QUERY_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        QUERY_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for QUERY_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type QUERY_IDLE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - query rsa idle. 1'b0: busy, 1'b1: idle"]
     #[inline(always)]

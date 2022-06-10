@@ -14,20 +14,7 @@ impl From<crate::R<DMA_IN_ERR_EOF_DES_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `IN_ERR_EOF_DES_ADDR` reader - This register stores the address of in link descriptor when there are some errors in this descriptor."]
-pub struct IN_ERR_EOF_DES_ADDR_R(crate::FieldReader<u32>);
-impl IN_ERR_EOF_DES_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        IN_ERR_EOF_DES_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_ERR_EOF_DES_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_ERR_EOF_DES_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the address of in link descriptor when there are some errors in this descriptor."]
     #[inline(always)]

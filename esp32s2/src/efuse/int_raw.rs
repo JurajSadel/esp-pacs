@@ -14,35 +14,9 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `READ_DONE_INT_RAW` reader - The raw bit signal for read_done interrupt."]
-pub struct READ_DONE_INT_RAW_R(crate::FieldReader<bool>);
-impl READ_DONE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        READ_DONE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for READ_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type READ_DONE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `PGM_DONE_INT_RAW` reader - The raw bit signal for pgm_done interrupt."]
-pub struct PGM_DONE_INT_RAW_R(crate::FieldReader<bool>);
-impl PGM_DONE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PGM_DONE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PGM_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PGM_DONE_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The raw bit signal for read_done interrupt."]
     #[inline(always)]

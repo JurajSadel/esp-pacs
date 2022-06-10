@@ -14,35 +14,9 @@ impl From<crate::R<HOST_SLCHOST_PKT_LEN_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_HOSTSLC0_LEN` reader - "]
-pub struct HOST_HOSTSLC0_LEN_R(crate::FieldReader<u32>);
-impl HOST_HOSTSLC0_LEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        HOST_HOSTSLC0_LEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_HOSTSLC0_LEN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_HOSTSLC0_LEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `HOST_HOSTSLC0_LEN_CHECK` reader - "]
-pub struct HOST_HOSTSLC0_LEN_CHECK_R(crate::FieldReader<u16>);
-impl HOST_HOSTSLC0_LEN_CHECK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        HOST_HOSTSLC0_LEN_CHECK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_HOSTSLC0_LEN_CHECK_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_HOSTSLC0_LEN_CHECK_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]

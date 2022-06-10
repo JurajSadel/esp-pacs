@@ -14,35 +14,9 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `DONE_INT_RAW` reader - x"]
-pub struct DONE_INT_RAW_R(crate::FieldReader<bool>);
-impl DONE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DONE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DONE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `ERR_INT_RAW` reader - x"]
-pub struct ERR_INT_RAW_R(crate::FieldReader<bool>);
-impl ERR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ERR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ERR_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - x"]
     #[inline(always)]

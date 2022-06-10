@@ -35,214 +35,33 @@ impl From<crate::W<GEN2_FORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `GEN2_CNTUFORCE_UPMETHOD` reader - Updating method for continuous software force of PWM generator 2. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ,,when bit1 is set to 1: TEP, when bit2 is set to 1: TEA, when bit3 is set to 1: TEB, when bit4 is set to 1: sync, when bit5 is set to 1: disable update. (TEA/B here and below means an event generated when the timer's value equals to that of register A/B.)"]
-pub struct GEN2_CNTUFORCE_UPMETHOD_R(crate::FieldReader<u8>);
-impl GEN2_CNTUFORCE_UPMETHOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GEN2_CNTUFORCE_UPMETHOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GEN2_CNTUFORCE_UPMETHOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GEN2_CNTUFORCE_UPMETHOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GEN2_CNTUFORCE_UPMETHOD` writer - Updating method for continuous software force of PWM generator 2. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ,,when bit1 is set to 1: TEP, when bit2 is set to 1: TEA, when bit3 is set to 1: TEB, when bit4 is set to 1: sync, when bit5 is set to 1: disable update. (TEA/B here and below means an event generated when the timer's value equals to that of register A/B.)"]
-pub struct GEN2_CNTUFORCE_UPMETHOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEN2_CNTUFORCE_UPMETHOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type GEN2_CNTUFORCE_UPMETHOD_W<'a> = crate::FieldWriter<'a, u32, GEN2_FORCE_SPEC, u8, u8, 6, 0>;
 #[doc = "Field `GEN2_A_CNTUFORCE_MODE` reader - Continuous software force mode for PWM2A. 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN2_A_CNTUFORCE_MODE_R(crate::FieldReader<u8>);
-impl GEN2_A_CNTUFORCE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GEN2_A_CNTUFORCE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GEN2_A_CNTUFORCE_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GEN2_A_CNTUFORCE_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GEN2_A_CNTUFORCE_MODE` writer - Continuous software force mode for PWM2A. 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN2_A_CNTUFORCE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEN2_A_CNTUFORCE_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type GEN2_A_CNTUFORCE_MODE_W<'a> = crate::FieldWriter<'a, u32, GEN2_FORCE_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `GEN2_B_CNTUFORCE_MODE` reader - Continuous software force mode for PWM2B. 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN2_B_CNTUFORCE_MODE_R(crate::FieldReader<u8>);
-impl GEN2_B_CNTUFORCE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GEN2_B_CNTUFORCE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GEN2_B_CNTUFORCE_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GEN2_B_CNTUFORCE_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GEN2_B_CNTUFORCE_MODE` writer - Continuous software force mode for PWM2B. 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN2_B_CNTUFORCE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEN2_B_CNTUFORCE_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type GEN2_B_CNTUFORCE_MODE_W<'a> = crate::FieldWriter<'a, u32, GEN2_FORCE_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `GEN2_A_NCIFORCE` reader - Trigger of non-continuous immediate software-force event for PWM2A, a toggle will trigger a force event."]
-pub struct GEN2_A_NCIFORCE_R(crate::FieldReader<bool>);
-impl GEN2_A_NCIFORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GEN2_A_NCIFORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GEN2_A_NCIFORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GEN2_A_NCIFORCE_R = crate::BitReader<bool>;
 #[doc = "Field `GEN2_A_NCIFORCE` writer - Trigger of non-continuous immediate software-force event for PWM2A, a toggle will trigger a force event."]
-pub struct GEN2_A_NCIFORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEN2_A_NCIFORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type GEN2_A_NCIFORCE_W<'a> = crate::BitWriter<'a, u32, GEN2_FORCE_SPEC, bool, 10>;
 #[doc = "Field `GEN2_A_NCIFORCE_MODE` reader - non-continuous immediate software force mode for PWM2A, 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN2_A_NCIFORCE_MODE_R(crate::FieldReader<u8>);
-impl GEN2_A_NCIFORCE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GEN2_A_NCIFORCE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GEN2_A_NCIFORCE_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GEN2_A_NCIFORCE_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GEN2_A_NCIFORCE_MODE` writer - non-continuous immediate software force mode for PWM2A, 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN2_A_NCIFORCE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEN2_A_NCIFORCE_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 11)) | ((value as u32 & 3) << 11);
-        self.w
-    }
-}
+pub type GEN2_A_NCIFORCE_MODE_W<'a> = crate::FieldWriter<'a, u32, GEN2_FORCE_SPEC, u8, u8, 2, 11>;
 #[doc = "Field `GEN2_B_NCIFORCE` reader - Trigger of non-continuous immediate software-force event for PWM2B, a toggle will trigger a force event."]
-pub struct GEN2_B_NCIFORCE_R(crate::FieldReader<bool>);
-impl GEN2_B_NCIFORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GEN2_B_NCIFORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GEN2_B_NCIFORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GEN2_B_NCIFORCE_R = crate::BitReader<bool>;
 #[doc = "Field `GEN2_B_NCIFORCE` writer - Trigger of non-continuous immediate software-force event for PWM2B, a toggle will trigger a force event."]
-pub struct GEN2_B_NCIFORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEN2_B_NCIFORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type GEN2_B_NCIFORCE_W<'a> = crate::BitWriter<'a, u32, GEN2_FORCE_SPEC, bool, 13>;
 #[doc = "Field `GEN2_B_NCIFORCE_MODE` reader - non-continuous immediate software force mode for PWM2B, 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN2_B_NCIFORCE_MODE_R(crate::FieldReader<u8>);
-impl GEN2_B_NCIFORCE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GEN2_B_NCIFORCE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GEN2_B_NCIFORCE_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GEN2_B_NCIFORCE_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GEN2_B_NCIFORCE_MODE` writer - non-continuous immediate software force mode for PWM2B, 0: disabled, 1: low, 2: high, 3: disabled"]
-pub struct GEN2_B_NCIFORCE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEN2_B_NCIFORCE_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type GEN2_B_NCIFORCE_MODE_W<'a> = crate::FieldWriter<'a, u32, GEN2_FORCE_SPEC, u8, u8, 2, 14>;
 impl R {
     #[doc = "Bits 0:5 - Updating method for continuous software force of PWM generator 2. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ,,when bit1 is set to 1: TEP, when bit2 is set to 1: TEA, when bit3 is set to 1: TEB, when bit4 is set to 1: sync, when bit5 is set to 1: disable update. (TEA/B here and below means an event generated when the timer's value equals to that of register A/B.)"]
     #[inline(always)]
@@ -284,37 +103,37 @@ impl W {
     #[doc = "Bits 0:5 - Updating method for continuous software force of PWM generator 2. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ,,when bit1 is set to 1: TEP, when bit2 is set to 1: TEA, when bit3 is set to 1: TEB, when bit4 is set to 1: sync, when bit5 is set to 1: disable update. (TEA/B here and below means an event generated when the timer's value equals to that of register A/B.)"]
     #[inline(always)]
     pub fn gen2_cntuforce_upmethod(&mut self) -> GEN2_CNTUFORCE_UPMETHOD_W {
-        GEN2_CNTUFORCE_UPMETHOD_W { w: self }
+        GEN2_CNTUFORCE_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 6:7 - Continuous software force mode for PWM2A. 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     pub fn gen2_a_cntuforce_mode(&mut self) -> GEN2_A_CNTUFORCE_MODE_W {
-        GEN2_A_CNTUFORCE_MODE_W { w: self }
+        GEN2_A_CNTUFORCE_MODE_W::new(self)
     }
     #[doc = "Bits 8:9 - Continuous software force mode for PWM2B. 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     pub fn gen2_b_cntuforce_mode(&mut self) -> GEN2_B_CNTUFORCE_MODE_W {
-        GEN2_B_CNTUFORCE_MODE_W { w: self }
+        GEN2_B_CNTUFORCE_MODE_W::new(self)
     }
     #[doc = "Bit 10 - Trigger of non-continuous immediate software-force event for PWM2A, a toggle will trigger a force event."]
     #[inline(always)]
     pub fn gen2_a_nciforce(&mut self) -> GEN2_A_NCIFORCE_W {
-        GEN2_A_NCIFORCE_W { w: self }
+        GEN2_A_NCIFORCE_W::new(self)
     }
     #[doc = "Bits 11:12 - non-continuous immediate software force mode for PWM2A, 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     pub fn gen2_a_nciforce_mode(&mut self) -> GEN2_A_NCIFORCE_MODE_W {
-        GEN2_A_NCIFORCE_MODE_W { w: self }
+        GEN2_A_NCIFORCE_MODE_W::new(self)
     }
     #[doc = "Bit 13 - Trigger of non-continuous immediate software-force event for PWM2B, a toggle will trigger a force event."]
     #[inline(always)]
     pub fn gen2_b_nciforce(&mut self) -> GEN2_B_NCIFORCE_W {
-        GEN2_B_NCIFORCE_W { w: self }
+        GEN2_B_NCIFORCE_W::new(self)
     }
     #[doc = "Bits 14:15 - non-continuous immediate software force mode for PWM2B, 0: disabled, 1: low, 2: high, 3: disabled"]
     #[inline(always)]
     pub fn gen2_b_nciforce_mode(&mut self) -> GEN2_B_NCIFORCE_MODE_W {
-        GEN2_B_NCIFORCE_MODE_W { w: self }
+        GEN2_B_NCIFORCE_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

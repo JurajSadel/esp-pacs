@@ -35,106 +35,17 @@ impl From<crate::W<RTC_GPIO_PIN_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_PIN0_PAD_DRIVER` reader - Pad driver selection. 0: normal output. 1: open drain."]
-pub struct GPIO_PIN0_PAD_DRIVER_R(crate::FieldReader<bool>);
-impl GPIO_PIN0_PAD_DRIVER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO_PIN0_PAD_DRIVER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO_PIN0_PAD_DRIVER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO_PIN0_PAD_DRIVER_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO_PIN0_PAD_DRIVER` writer - Pad driver selection. 0: normal output. 1: open drain."]
-pub struct GPIO_PIN0_PAD_DRIVER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO_PIN0_PAD_DRIVER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type GPIO_PIN0_PAD_DRIVER_W<'a> = crate::BitWriter<'a, u32, RTC_GPIO_PIN_SPEC, bool, 2>;
 #[doc = "Field `GPIO_PIN0_INT_TYPE` reader - GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."]
-pub struct GPIO_PIN0_INT_TYPE_R(crate::FieldReader<u8>);
-impl GPIO_PIN0_INT_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GPIO_PIN0_INT_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO_PIN0_INT_TYPE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO_PIN0_INT_TYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GPIO_PIN0_INT_TYPE` writer - GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."]
-pub struct GPIO_PIN0_INT_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO_PIN0_INT_TYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 7)) | ((value as u32 & 7) << 7);
-        self.w
-    }
-}
+pub type GPIO_PIN0_INT_TYPE_W<'a> = crate::FieldWriter<'a, u32, RTC_GPIO_PIN_SPEC, u8, u8, 3, 7>;
 #[doc = "Field `GPIO_PIN0_WAKEUP_ENABLE` reader - GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep."]
-pub struct GPIO_PIN0_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
-impl GPIO_PIN0_WAKEUP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO_PIN0_WAKEUP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO_PIN0_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO_PIN0_WAKEUP_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO_PIN0_WAKEUP_ENABLE` writer - GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep."]
-pub struct GPIO_PIN0_WAKEUP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO_PIN0_WAKEUP_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type GPIO_PIN0_WAKEUP_ENABLE_W<'a> = crate::BitWriter<'a, u32, RTC_GPIO_PIN_SPEC, bool, 10>;
 impl R {
     #[doc = "Bit 2 - Pad driver selection. 0: normal output. 1: open drain."]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bit 2 - Pad driver selection. 0: normal output. 1: open drain."]
     #[inline(always)]
     pub fn gpio_pin0_pad_driver(&mut self) -> GPIO_PIN0_PAD_DRIVER_W {
-        GPIO_PIN0_PAD_DRIVER_W { w: self }
+        GPIO_PIN0_PAD_DRIVER_W::new(self)
     }
     #[doc = "Bits 7:9 - GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."]
     #[inline(always)]
     pub fn gpio_pin0_int_type(&mut self) -> GPIO_PIN0_INT_TYPE_W {
-        GPIO_PIN0_INT_TYPE_W { w: self }
+        GPIO_PIN0_INT_TYPE_W::new(self)
     }
     #[doc = "Bit 10 - GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep."]
     #[inline(always)]
     pub fn gpio_pin0_wakeup_enable(&mut self) -> GPIO_PIN0_WAKEUP_ENABLE_W {
-        GPIO_PIN0_WAKEUP_ENABLE_W { w: self }
+        GPIO_PIN0_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

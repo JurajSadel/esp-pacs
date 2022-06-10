@@ -35,86 +35,17 @@ impl From<crate::W<SLAVE1_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_DATA_BITLEN` reader - The transferred data bit length in SPI slave FD and HD mode."]
-pub struct SLV_DATA_BITLEN_R(crate::FieldReader<u32>);
-impl SLV_DATA_BITLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SLV_DATA_BITLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_DATA_BITLEN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_DATA_BITLEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SLV_DATA_BITLEN` writer - The transferred data bit length in SPI slave FD and HD mode."]
-pub struct SLV_DATA_BITLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_DATA_BITLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0003_ffff) | (value as u32 & 0x0003_ffff);
-        self.w
-    }
-}
+pub type SLV_DATA_BITLEN_W<'a> = crate::FieldWriter<'a, u32, SLAVE1_SPEC, u32, u32, 18, 0>;
 #[doc = "Field `SLV_LAST_COMMAND` reader - In the slave mode it is the value of command."]
-pub struct SLV_LAST_COMMAND_R(crate::FieldReader<u8>);
-impl SLV_LAST_COMMAND_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SLV_LAST_COMMAND_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_LAST_COMMAND_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_LAST_COMMAND_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLV_LAST_COMMAND` writer - In the slave mode it is the value of command."]
-pub struct SLV_LAST_COMMAND_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_LAST_COMMAND_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 18)) | ((value as u32 & 0xff) << 18);
-        self.w
-    }
-}
+pub type SLV_LAST_COMMAND_W<'a> = crate::FieldWriter<'a, u32, SLAVE1_SPEC, u8, u8, 8, 18>;
 #[doc = "Field `SLV_LAST_ADDR` reader - In the slave mode it is the value of address."]
-pub struct SLV_LAST_ADDR_R(crate::FieldReader<u8>);
-impl SLV_LAST_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SLV_LAST_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_LAST_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_LAST_ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLV_LAST_ADDR` writer - In the slave mode it is the value of address."]
-pub struct SLV_LAST_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_LAST_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 26)) | ((value as u32 & 0x3f) << 26);
-        self.w
-    }
-}
+pub type SLV_LAST_ADDR_W<'a> = crate::FieldWriter<'a, u32, SLAVE1_SPEC, u8, u8, 6, 26>;
 impl R {
     #[doc = "Bits 0:17 - The transferred data bit length in SPI slave FD and HD mode."]
     #[inline(always)]
@@ -136,17 +67,17 @@ impl W {
     #[doc = "Bits 0:17 - The transferred data bit length in SPI slave FD and HD mode."]
     #[inline(always)]
     pub fn slv_data_bitlen(&mut self) -> SLV_DATA_BITLEN_W {
-        SLV_DATA_BITLEN_W { w: self }
+        SLV_DATA_BITLEN_W::new(self)
     }
     #[doc = "Bits 18:25 - In the slave mode it is the value of command."]
     #[inline(always)]
     pub fn slv_last_command(&mut self) -> SLV_LAST_COMMAND_W {
-        SLV_LAST_COMMAND_W { w: self }
+        SLV_LAST_COMMAND_W::new(self)
     }
     #[doc = "Bits 26:31 - In the slave mode it is the value of address."]
     #[inline(always)]
     pub fn slv_last_addr(&mut self) -> SLV_LAST_ADDR_W {
-        SLV_LAST_ADDR_W { w: self }
+        SLV_LAST_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

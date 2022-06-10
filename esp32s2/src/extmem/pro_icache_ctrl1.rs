@@ -35,116 +35,17 @@ impl From<crate::W<PRO_ICACHE_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_MASK_BUS0` reader - The bit is used to disable ibus0, 0: enable, 1: disable"]
-pub struct PRO_ICACHE_MASK_BUS0_R(crate::FieldReader<bool>);
-impl PRO_ICACHE_MASK_BUS0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ICACHE_MASK_BUS0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ICACHE_MASK_BUS0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ICACHE_MASK_BUS0_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_ICACHE_MASK_BUS0` writer - The bit is used to disable ibus0, 0: enable, 1: disable"]
-pub struct PRO_ICACHE_MASK_BUS0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ICACHE_MASK_BUS0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_ICACHE_MASK_BUS0_W<'a> = crate::BitWriter<'a, u32, PRO_ICACHE_CTRL1_SPEC, bool, 0>;
 #[doc = "Field `PRO_ICACHE_MASK_BUS1` reader - The bit is used to disable ibus1, 0: enable, 1: disable"]
-pub struct PRO_ICACHE_MASK_BUS1_R(crate::FieldReader<bool>);
-impl PRO_ICACHE_MASK_BUS1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ICACHE_MASK_BUS1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ICACHE_MASK_BUS1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ICACHE_MASK_BUS1_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_ICACHE_MASK_BUS1` writer - The bit is used to disable ibus1, 0: enable, 1: disable"]
-pub struct PRO_ICACHE_MASK_BUS1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ICACHE_MASK_BUS1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PRO_ICACHE_MASK_BUS1_W<'a> = crate::BitWriter<'a, u32, PRO_ICACHE_CTRL1_SPEC, bool, 1>;
 #[doc = "Field `PRO_ICACHE_MASK_BUS2` reader - The bit is used to disable ibus2, 0: enable, 1: disable"]
-pub struct PRO_ICACHE_MASK_BUS2_R(crate::FieldReader<bool>);
-impl PRO_ICACHE_MASK_BUS2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ICACHE_MASK_BUS2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ICACHE_MASK_BUS2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ICACHE_MASK_BUS2_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_ICACHE_MASK_BUS2` writer - The bit is used to disable ibus2, 0: enable, 1: disable"]
-pub struct PRO_ICACHE_MASK_BUS2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ICACHE_MASK_BUS2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PRO_ICACHE_MASK_BUS2_W<'a> = crate::BitWriter<'a, u32, PRO_ICACHE_CTRL1_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable ibus0, 0: enable, 1: disable"]
     #[inline(always)]
@@ -166,17 +67,17 @@ impl W {
     #[doc = "Bit 0 - The bit is used to disable ibus0, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn pro_icache_mask_bus0(&mut self) -> PRO_ICACHE_MASK_BUS0_W {
-        PRO_ICACHE_MASK_BUS0_W { w: self }
+        PRO_ICACHE_MASK_BUS0_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to disable ibus1, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn pro_icache_mask_bus1(&mut self) -> PRO_ICACHE_MASK_BUS1_W {
-        PRO_ICACHE_MASK_BUS1_W { w: self }
+        PRO_ICACHE_MASK_BUS1_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to disable ibus2, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn pro_icache_mask_bus2(&mut self) -> PRO_ICACHE_MASK_BUS2_W {
-        PRO_ICACHE_MASK_BUS2_W { w: self }
+        PRO_ICACHE_MASK_BUS2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

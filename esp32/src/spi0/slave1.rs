@@ -35,308 +35,41 @@ impl From<crate::W<SLAVE1_SPEC>> for W {
     }
 }
 #[doc = "Field `SLV_RDBUF_DUMMY_EN` reader - In the slave mode it is the enable bit of dummy phase for read-buffer operations."]
-pub struct SLV_RDBUF_DUMMY_EN_R(crate::FieldReader<bool>);
-impl SLV_RDBUF_DUMMY_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_RDBUF_DUMMY_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_RDBUF_DUMMY_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_RDBUF_DUMMY_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_RDBUF_DUMMY_EN` writer - In the slave mode it is the enable bit of dummy phase for read-buffer operations."]
-pub struct SLV_RDBUF_DUMMY_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_RDBUF_DUMMY_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SLV_RDBUF_DUMMY_EN_W<'a> = crate::BitWriter<'a, u32, SLAVE1_SPEC, bool, 0>;
 #[doc = "Field `SLV_WRBUF_DUMMY_EN` reader - In the slave mode it is the enable bit of dummy phase for write-buffer operations."]
-pub struct SLV_WRBUF_DUMMY_EN_R(crate::FieldReader<bool>);
-impl SLV_WRBUF_DUMMY_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_WRBUF_DUMMY_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_WRBUF_DUMMY_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_WRBUF_DUMMY_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_WRBUF_DUMMY_EN` writer - In the slave mode it is the enable bit of dummy phase for write-buffer operations."]
-pub struct SLV_WRBUF_DUMMY_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_WRBUF_DUMMY_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SLV_WRBUF_DUMMY_EN_W<'a> = crate::BitWriter<'a, u32, SLAVE1_SPEC, bool, 1>;
 #[doc = "Field `SLV_RDSTA_DUMMY_EN` reader - In the slave mode it is the enable bit of dummy phase for read-status operations."]
-pub struct SLV_RDSTA_DUMMY_EN_R(crate::FieldReader<bool>);
-impl SLV_RDSTA_DUMMY_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_RDSTA_DUMMY_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_RDSTA_DUMMY_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_RDSTA_DUMMY_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_RDSTA_DUMMY_EN` writer - In the slave mode it is the enable bit of dummy phase for read-status operations."]
-pub struct SLV_RDSTA_DUMMY_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_RDSTA_DUMMY_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type SLV_RDSTA_DUMMY_EN_W<'a> = crate::BitWriter<'a, u32, SLAVE1_SPEC, bool, 2>;
 #[doc = "Field `SLV_WRSTA_DUMMY_EN` reader - In the slave mode it is the enable bit of dummy phase for write-status operations."]
-pub struct SLV_WRSTA_DUMMY_EN_R(crate::FieldReader<bool>);
-impl SLV_WRSTA_DUMMY_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_WRSTA_DUMMY_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_WRSTA_DUMMY_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_WRSTA_DUMMY_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_WRSTA_DUMMY_EN` writer - In the slave mode it is the enable bit of dummy phase for write-status operations."]
-pub struct SLV_WRSTA_DUMMY_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_WRSTA_DUMMY_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type SLV_WRSTA_DUMMY_EN_W<'a> = crate::BitWriter<'a, u32, SLAVE1_SPEC, bool, 3>;
 #[doc = "Field `SLV_WR_ADDR_BITLEN` reader - In the slave mode it is the address length in bits for write-buffer operation. The register value shall be (bit_num-1)."]
-pub struct SLV_WR_ADDR_BITLEN_R(crate::FieldReader<u8>);
-impl SLV_WR_ADDR_BITLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SLV_WR_ADDR_BITLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_WR_ADDR_BITLEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_WR_ADDR_BITLEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLV_WR_ADDR_BITLEN` writer - In the slave mode it is the address length in bits for write-buffer operation. The register value shall be (bit_num-1)."]
-pub struct SLV_WR_ADDR_BITLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_WR_ADDR_BITLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 4)) | ((value as u32 & 0x3f) << 4);
-        self.w
-    }
-}
+pub type SLV_WR_ADDR_BITLEN_W<'a> = crate::FieldWriter<'a, u32, SLAVE1_SPEC, u8, u8, 6, 4>;
 #[doc = "Field `SLV_RD_ADDR_BITLEN` reader - In the slave mode it is the address length in bits for read-buffer operation. The register value shall be (bit_num-1)."]
-pub struct SLV_RD_ADDR_BITLEN_R(crate::FieldReader<u8>);
-impl SLV_RD_ADDR_BITLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SLV_RD_ADDR_BITLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_RD_ADDR_BITLEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_RD_ADDR_BITLEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLV_RD_ADDR_BITLEN` writer - In the slave mode it is the address length in bits for read-buffer operation. The register value shall be (bit_num-1)."]
-pub struct SLV_RD_ADDR_BITLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_RD_ADDR_BITLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 10)) | ((value as u32 & 0x3f) << 10);
-        self.w
-    }
-}
+pub type SLV_RD_ADDR_BITLEN_W<'a> = crate::FieldWriter<'a, u32, SLAVE1_SPEC, u8, u8, 6, 10>;
 #[doc = "Field `SLV_STATUS_READBACK` reader - In the slave mode 1:read register of SPI_SLV_WR_STATUS 0: read register of SPI_RD_STATUS."]
-pub struct SLV_STATUS_READBACK_R(crate::FieldReader<bool>);
-impl SLV_STATUS_READBACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_STATUS_READBACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_STATUS_READBACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_STATUS_READBACK_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_STATUS_READBACK` writer - In the slave mode 1:read register of SPI_SLV_WR_STATUS 0: read register of SPI_RD_STATUS."]
-pub struct SLV_STATUS_READBACK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_STATUS_READBACK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type SLV_STATUS_READBACK_W<'a> = crate::BitWriter<'a, u32, SLAVE1_SPEC, bool, 25>;
 #[doc = "Field `SLV_STATUS_FAST_EN` reader - In the slave mode enable fast read status."]
-pub struct SLV_STATUS_FAST_EN_R(crate::FieldReader<bool>);
-impl SLV_STATUS_FAST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLV_STATUS_FAST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_STATUS_FAST_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_STATUS_FAST_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLV_STATUS_FAST_EN` writer - In the slave mode enable fast read status."]
-pub struct SLV_STATUS_FAST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_STATUS_FAST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type SLV_STATUS_FAST_EN_W<'a> = crate::BitWriter<'a, u32, SLAVE1_SPEC, bool, 26>;
 #[doc = "Field `SLV_STATUS_BITLEN` reader - In the slave mode it is the length of status bit."]
-pub struct SLV_STATUS_BITLEN_R(crate::FieldReader<u8>);
-impl SLV_STATUS_BITLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SLV_STATUS_BITLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLV_STATUS_BITLEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLV_STATUS_BITLEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLV_STATUS_BITLEN` writer - In the slave mode it is the length of status bit."]
-pub struct SLV_STATUS_BITLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLV_STATUS_BITLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 27)) | ((value as u32 & 0x1f) << 27);
-        self.w
-    }
-}
+pub type SLV_STATUS_BITLEN_W<'a> = crate::FieldWriter<'a, u32, SLAVE1_SPEC, u8, u8, 5, 27>;
 impl R {
     #[doc = "Bit 0 - In the slave mode it is the enable bit of dummy phase for read-buffer operations."]
     #[inline(always)]
@@ -388,47 +121,47 @@ impl W {
     #[doc = "Bit 0 - In the slave mode it is the enable bit of dummy phase for read-buffer operations."]
     #[inline(always)]
     pub fn slv_rdbuf_dummy_en(&mut self) -> SLV_RDBUF_DUMMY_EN_W {
-        SLV_RDBUF_DUMMY_EN_W { w: self }
+        SLV_RDBUF_DUMMY_EN_W::new(self)
     }
     #[doc = "Bit 1 - In the slave mode it is the enable bit of dummy phase for write-buffer operations."]
     #[inline(always)]
     pub fn slv_wrbuf_dummy_en(&mut self) -> SLV_WRBUF_DUMMY_EN_W {
-        SLV_WRBUF_DUMMY_EN_W { w: self }
+        SLV_WRBUF_DUMMY_EN_W::new(self)
     }
     #[doc = "Bit 2 - In the slave mode it is the enable bit of dummy phase for read-status operations."]
     #[inline(always)]
     pub fn slv_rdsta_dummy_en(&mut self) -> SLV_RDSTA_DUMMY_EN_W {
-        SLV_RDSTA_DUMMY_EN_W { w: self }
+        SLV_RDSTA_DUMMY_EN_W::new(self)
     }
     #[doc = "Bit 3 - In the slave mode it is the enable bit of dummy phase for write-status operations."]
     #[inline(always)]
     pub fn slv_wrsta_dummy_en(&mut self) -> SLV_WRSTA_DUMMY_EN_W {
-        SLV_WRSTA_DUMMY_EN_W { w: self }
+        SLV_WRSTA_DUMMY_EN_W::new(self)
     }
     #[doc = "Bits 4:9 - In the slave mode it is the address length in bits for write-buffer operation. The register value shall be (bit_num-1)."]
     #[inline(always)]
     pub fn slv_wr_addr_bitlen(&mut self) -> SLV_WR_ADDR_BITLEN_W {
-        SLV_WR_ADDR_BITLEN_W { w: self }
+        SLV_WR_ADDR_BITLEN_W::new(self)
     }
     #[doc = "Bits 10:15 - In the slave mode it is the address length in bits for read-buffer operation. The register value shall be (bit_num-1)."]
     #[inline(always)]
     pub fn slv_rd_addr_bitlen(&mut self) -> SLV_RD_ADDR_BITLEN_W {
-        SLV_RD_ADDR_BITLEN_W { w: self }
+        SLV_RD_ADDR_BITLEN_W::new(self)
     }
     #[doc = "Bit 25 - In the slave mode 1:read register of SPI_SLV_WR_STATUS 0: read register of SPI_RD_STATUS."]
     #[inline(always)]
     pub fn slv_status_readback(&mut self) -> SLV_STATUS_READBACK_W {
-        SLV_STATUS_READBACK_W { w: self }
+        SLV_STATUS_READBACK_W::new(self)
     }
     #[doc = "Bit 26 - In the slave mode enable fast read status."]
     #[inline(always)]
     pub fn slv_status_fast_en(&mut self) -> SLV_STATUS_FAST_EN_W {
-        SLV_STATUS_FAST_EN_W { w: self }
+        SLV_STATUS_FAST_EN_W::new(self)
     }
     #[doc = "Bits 27:31 - In the slave mode it is the length of status bit."]
     #[inline(always)]
     pub fn slv_status_bitlen(&mut self) -> SLV_STATUS_BITLEN_W {
-        SLV_STATUS_BITLEN_W { w: self }
+        SLV_STATUS_BITLEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<TIMER5_SPEC>> for W {
     }
 }
 #[doc = "Field `MIN_SLP_VAL` reader - minimal sleep cycles in slow_clk_rtc"]
-pub struct MIN_SLP_VAL_R(crate::FieldReader<u8>);
-impl MIN_SLP_VAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MIN_SLP_VAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MIN_SLP_VAL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MIN_SLP_VAL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MIN_SLP_VAL` writer - minimal sleep cycles in slow_clk_rtc"]
-pub struct MIN_SLP_VAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MIN_SLP_VAL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type MIN_SLP_VAL_W<'a> = crate::FieldWriter<'a, u32, TIMER5_SPEC, u8, u8, 8, 8>;
 impl R {
     #[doc = "Bits 8:15 - minimal sleep cycles in slow_clk_rtc"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 8:15 - minimal sleep cycles in slow_clk_rtc"]
     #[inline(always)]
     pub fn min_slp_val(&mut self) -> MIN_SLP_VAL_W {
-        MIN_SLP_VAL_W { w: self }
+        MIN_SLP_VAL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

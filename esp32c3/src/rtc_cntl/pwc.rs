@@ -35,42 +35,9 @@ impl From<crate::W<PWC_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_PAD_FORCE_HOLD` reader - rtc pad force hold"]
-pub struct RTC_PAD_FORCE_HOLD_R(crate::FieldReader<bool>);
-impl RTC_PAD_FORCE_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_PAD_FORCE_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_PAD_FORCE_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_PAD_FORCE_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_PAD_FORCE_HOLD` writer - rtc pad force hold"]
-pub struct RTC_PAD_FORCE_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_PAD_FORCE_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type RTC_PAD_FORCE_HOLD_W<'a> = crate::BitWriter<'a, u32, PWC_SPEC, bool, 21>;
 impl R {
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
     pub fn rtc_pad_force_hold(&mut self) -> RTC_PAD_FORCE_HOLD_W {
-        RTC_PAD_FORCE_HOLD_W { w: self }
+        RTC_PAD_FORCE_HOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

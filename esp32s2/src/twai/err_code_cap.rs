@@ -14,50 +14,11 @@ impl From<crate::R<ERR_CODE_CAP_SPEC>> for R {
     }
 }
 #[doc = "Field `ECC_SEGMENT` reader - This register contains information about the location of errors, see Table 181 for details."]
-pub struct ECC_SEGMENT_R(crate::FieldReader<u8>);
-impl ECC_SEGMENT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ECC_SEGMENT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ECC_SEGMENT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ECC_SEGMENT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ECC_DIRECTION` reader - This register contains information about transmission direction of the node when error occurs. 1: Error occurs when receiving a message; 0: Error occurs when transmitting a message"]
-pub struct ECC_DIRECTION_R(crate::FieldReader<bool>);
-impl ECC_DIRECTION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ECC_DIRECTION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ECC_DIRECTION_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ECC_DIRECTION_R = crate::BitReader<bool>;
 #[doc = "Field `ECC_TYPE` reader - This register contains information about error types: 00: bit error; 01: form error; 10: stuff error; 11: other type of error"]
-pub struct ECC_TYPE_R(crate::FieldReader<u8>);
-impl ECC_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ECC_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ECC_TYPE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ECC_TYPE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:4 - This register contains information about the location of errors, see Table 181 for details."]
     #[inline(always)]

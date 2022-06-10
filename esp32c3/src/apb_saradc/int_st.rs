@@ -14,95 +14,17 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_SARADC_THRES1_LOW_INT_ST` reader - saradc thres1 low interrupt state"]
-pub struct APB_SARADC_THRES1_LOW_INT_ST_R(crate::FieldReader<bool>);
-impl APB_SARADC_THRES1_LOW_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC_THRES1_LOW_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC_THRES1_LOW_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC_THRES1_LOW_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC_THRES0_LOW_INT_ST` reader - saradc thres0 low interrupt state"]
-pub struct APB_SARADC_THRES0_LOW_INT_ST_R(crate::FieldReader<bool>);
-impl APB_SARADC_THRES0_LOW_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC_THRES0_LOW_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC_THRES0_LOW_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC_THRES0_LOW_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC_THRES1_HIGH_INT_ST` reader - saradc thres1 high interrupt state"]
-pub struct APB_SARADC_THRES1_HIGH_INT_ST_R(crate::FieldReader<bool>);
-impl APB_SARADC_THRES1_HIGH_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC_THRES1_HIGH_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC_THRES1_HIGH_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC_THRES1_HIGH_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC_THRES0_HIGH_INT_ST` reader - saradc thres0 high interrupt state"]
-pub struct APB_SARADC_THRES0_HIGH_INT_ST_R(crate::FieldReader<bool>);
-impl APB_SARADC_THRES0_HIGH_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC_THRES0_HIGH_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC_THRES0_HIGH_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC_THRES0_HIGH_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC2_DONE_INT_ST` reader - saradc2 done interrupt state"]
-pub struct APB_SARADC2_DONE_INT_ST_R(crate::FieldReader<bool>);
-impl APB_SARADC2_DONE_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC2_DONE_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC2_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC2_DONE_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `APB_SARADC1_DONE_INT_ST` reader - saradc1 done interrupt state"]
-pub struct APB_SARADC1_DONE_INT_ST_R(crate::FieldReader<bool>);
-impl APB_SARADC1_DONE_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_SARADC1_DONE_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC1_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC1_DONE_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 26 - saradc thres1 low interrupt state"]
     #[inline(always)]

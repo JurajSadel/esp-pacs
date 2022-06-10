@@ -14,20 +14,7 @@ impl From<crate::R<TIME_HIGH1_SPEC>> for R {
     }
 }
 #[doc = "Field `RTC_TIMER_VALUE1_HIGH` reader - RTC timer high 16 bits"]
-pub struct RTC_TIMER_VALUE1_HIGH_R(crate::FieldReader<u16>);
-impl RTC_TIMER_VALUE1_HIGH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RTC_TIMER_VALUE1_HIGH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_TIMER_VALUE1_HIGH_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_TIMER_VALUE1_HIGH_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - RTC timer high 16 bits"]
     #[inline(always)]

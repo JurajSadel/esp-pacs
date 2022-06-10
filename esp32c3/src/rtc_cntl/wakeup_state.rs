@@ -35,32 +35,9 @@ impl From<crate::W<WAKEUP_STATE_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_WAKEUP_ENA` reader - wakeup enable bitmap"]
-pub struct RTC_WAKEUP_ENA_R(crate::FieldReader<u32>);
-impl RTC_WAKEUP_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RTC_WAKEUP_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_WAKEUP_ENA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_WAKEUP_ENA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RTC_WAKEUP_ENA` writer - wakeup enable bitmap"]
-pub struct RTC_WAKEUP_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_WAKEUP_ENA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0001_ffff << 15)) | ((value as u32 & 0x0001_ffff) << 15);
-        self.w
-    }
-}
+pub type RTC_WAKEUP_ENA_W<'a> = crate::FieldWriter<'a, u32, WAKEUP_STATE_SPEC, u32, u32, 17, 15>;
 impl R {
     #[doc = "Bits 15:31 - wakeup enable bitmap"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 15:31 - wakeup enable bitmap"]
     #[inline(always)]
     pub fn rtc_wakeup_ena(&mut self) -> RTC_WAKEUP_ENA_W {
-        RTC_WAKEUP_ENA_W { w: self }
+        RTC_WAKEUP_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

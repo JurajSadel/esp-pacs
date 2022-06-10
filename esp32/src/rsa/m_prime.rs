@@ -35,32 +35,9 @@ impl From<crate::W<M_PRIME_SPEC>> for W {
     }
 }
 #[doc = "Field `M_PRIME` reader - This register contains M’."]
-pub struct M_PRIME_R(crate::FieldReader<u8>);
-impl M_PRIME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        M_PRIME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for M_PRIME_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type M_PRIME_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `M_PRIME` writer - This register contains M’."]
-pub struct M_PRIME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> M_PRIME_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type M_PRIME_W<'a> = crate::FieldWriter<'a, u32, M_PRIME_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - This register contains M’."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7 - This register contains M’."]
     #[inline(always)]
     pub fn m_prime(&mut self) -> M_PRIME_W {
-        M_PRIME_W { w: self }
+        M_PRIME_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

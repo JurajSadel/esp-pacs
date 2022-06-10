@@ -35,32 +35,9 @@ impl From<crate::W<TIMEOUT_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMEOUT` reader - Maximum number of FAST_CLK cycles that the transmission can take"]
-pub struct TIMEOUT_R(crate::FieldReader<u32>);
-impl TIMEOUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TIMEOUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMEOUT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMEOUT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIMEOUT` writer - Maximum number of FAST_CLK cycles that the transmission can take"]
-pub struct TIMEOUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMEOUT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type TIMEOUT_W<'a> = crate::FieldWriter<'a, u32, TIMEOUT_SPEC, u32, u32, 20, 0>;
 impl R {
     #[doc = "Bits 0:19 - Maximum number of FAST_CLK cycles that the transmission can take"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:19 - Maximum number of FAST_CLK cycles that the transmission can take"]
     #[inline(always)]
     pub fn timeout(&mut self) -> TIMEOUT_W {
-        TIMEOUT_W { w: self }
+        TIMEOUT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

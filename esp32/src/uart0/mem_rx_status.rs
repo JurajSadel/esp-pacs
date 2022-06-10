@@ -14,50 +14,11 @@ impl From<crate::R<MEM_RX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `MEM_RX_STATUS` reader - This register stores the current uart rx mem read address and rx mem write address"]
-pub struct MEM_RX_STATUS_R(crate::FieldReader<u32>);
-impl MEM_RX_STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        MEM_RX_STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_RX_STATUS_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_RX_STATUS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MEM_RX_RD_ADDR` reader - This register stores the rx mem read address"]
-pub struct MEM_RX_RD_ADDR_R(crate::FieldReader<u16>);
-impl MEM_RX_RD_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MEM_RX_RD_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_RX_RD_ADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_RX_RD_ADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MEM_RX_WR_ADDR` reader - This register stores the rx mem write address"]
-pub struct MEM_RX_WR_ADDR_R(crate::FieldReader<u16>);
-impl MEM_RX_WR_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MEM_RX_WR_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_RX_WR_ADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_RX_WR_ADDR_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:23 - This register stores the current uart rx mem read address and rx mem write address"]
     #[inline(always)]

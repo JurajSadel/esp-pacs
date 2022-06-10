@@ -35,32 +35,9 @@ impl From<crate::W<ROM_CTRL_0_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_FO` reader - This field is used to force on clock gate of internal ROM."]
-pub struct ROM_FO_R(crate::FieldReader<u8>);
-impl ROM_FO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ROM_FO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ROM_FO_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ROM_FO_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ROM_FO` writer - This field is used to force on clock gate of internal ROM."]
-pub struct ROM_FO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ROM_FO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type ROM_FO_W<'a> = crate::FieldWriter<'a, u32, ROM_CTRL_0_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1 - This field is used to force on clock gate of internal ROM."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:1 - This field is used to force on clock gate of internal ROM."]
     #[inline(always)]
     pub fn rom_fo(&mut self) -> ROM_FO_W {
-        ROM_FO_W { w: self }
+        ROM_FO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,143 +35,21 @@ impl From<crate::W<SCL_SP_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_RST_SLV_EN` reader - reg_scl_rst_slv_en"]
-pub struct SCL_RST_SLV_EN_R(crate::FieldReader<bool>);
-impl SCL_RST_SLV_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCL_RST_SLV_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_RST_SLV_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_RST_SLV_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SCL_RST_SLV_EN` writer - reg_scl_rst_slv_en"]
-pub struct SCL_RST_SLV_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_RST_SLV_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SCL_RST_SLV_EN_W<'a> = crate::BitWriter<'a, u32, SCL_SP_CONF_SPEC, bool, 0>;
 #[doc = "Field `SCL_RST_SLV_NUM` reader - reg_scl_rst_slv_num"]
-pub struct SCL_RST_SLV_NUM_R(crate::FieldReader<u8>);
-impl SCL_RST_SLV_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCL_RST_SLV_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_RST_SLV_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_RST_SLV_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCL_RST_SLV_NUM` writer - reg_scl_rst_slv_num"]
-pub struct SCL_RST_SLV_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_RST_SLV_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 1)) | ((value as u32 & 0x1f) << 1);
-        self.w
-    }
-}
+pub type SCL_RST_SLV_NUM_W<'a> = crate::FieldWriter<'a, u32, SCL_SP_CONF_SPEC, u8, u8, 5, 1>;
 #[doc = "Field `SCL_PD_EN` reader - reg_scl_pd_en"]
-pub struct SCL_PD_EN_R(crate::FieldReader<bool>);
-impl SCL_PD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCL_PD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_PD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_PD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SCL_PD_EN` writer - reg_scl_pd_en"]
-pub struct SCL_PD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_PD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type SCL_PD_EN_W<'a> = crate::BitWriter<'a, u32, SCL_SP_CONF_SPEC, bool, 6>;
 #[doc = "Field `SDA_PD_EN` reader - reg_sda_pd_en"]
-pub struct SDA_PD_EN_R(crate::FieldReader<bool>);
-impl SDA_PD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDA_PD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDA_PD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDA_PD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SDA_PD_EN` writer - reg_sda_pd_en"]
-pub struct SDA_PD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDA_PD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type SDA_PD_EN_W<'a> = crate::BitWriter<'a, u32, SCL_SP_CONF_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 0 - reg_scl_rst_slv_en"]
     #[inline(always)]
@@ -198,22 +76,22 @@ impl W {
     #[doc = "Bit 0 - reg_scl_rst_slv_en"]
     #[inline(always)]
     pub fn scl_rst_slv_en(&mut self) -> SCL_RST_SLV_EN_W {
-        SCL_RST_SLV_EN_W { w: self }
+        SCL_RST_SLV_EN_W::new(self)
     }
     #[doc = "Bits 1:5 - reg_scl_rst_slv_num"]
     #[inline(always)]
     pub fn scl_rst_slv_num(&mut self) -> SCL_RST_SLV_NUM_W {
-        SCL_RST_SLV_NUM_W { w: self }
+        SCL_RST_SLV_NUM_W::new(self)
     }
     #[doc = "Bit 6 - reg_scl_pd_en"]
     #[inline(always)]
     pub fn scl_pd_en(&mut self) -> SCL_PD_EN_W {
-        SCL_PD_EN_W { w: self }
+        SCL_PD_EN_W::new(self)
     }
     #[doc = "Bit 7 - reg_sda_pd_en"]
     #[inline(always)]
     pub fn sda_pd_en(&mut self) -> SDA_PD_EN_W {
-        SDA_PD_EN_W { w: self }
+        SDA_PD_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

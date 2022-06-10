@@ -35,32 +35,9 @@ impl From<crate::W<SRAM_CTRL_1_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_FORCE_PD` reader - This field is used to power down internal SRAM."]
-pub struct SRAM_FORCE_PD_R(crate::FieldReader<u32>);
-impl SRAM_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SRAM_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRAM_FORCE_PD_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRAM_FORCE_PD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SRAM_FORCE_PD` writer - This field is used to power down internal SRAM."]
-pub struct SRAM_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_FORCE_PD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x003f_ffff) | (value as u32 & 0x003f_ffff);
-        self.w
-    }
-}
+pub type SRAM_FORCE_PD_W<'a> = crate::FieldWriter<'a, u32, SRAM_CTRL_1_SPEC, u32, u32, 22, 0>;
 impl R {
     #[doc = "Bits 0:21 - This field is used to power down internal SRAM."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:21 - This field is used to power down internal SRAM."]
     #[inline(always)]
     pub fn sram_force_pd(&mut self) -> SRAM_FORCE_PD_W {
-        SRAM_FORCE_PD_W { w: self }
+        SRAM_FORCE_PD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

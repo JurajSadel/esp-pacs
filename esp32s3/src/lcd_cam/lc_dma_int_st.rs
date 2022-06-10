@@ -14,65 +14,13 @@ impl From<crate::R<LC_DMA_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `LCD_VSYNC_INT_ST` reader - The status bit for LCD frame end interrupt."]
-pub struct LCD_VSYNC_INT_ST_R(crate::FieldReader<bool>);
-impl LCD_VSYNC_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_VSYNC_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_VSYNC_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_VSYNC_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_TRANS_DONE_INT_ST` reader - The status bit for lcd transfer end interrupt."]
-pub struct LCD_TRANS_DONE_INT_ST_R(crate::FieldReader<bool>);
-impl LCD_TRANS_DONE_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_TRANS_DONE_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_TRANS_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_TRANS_DONE_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `CAM_VSYNC_INT_ST` reader - The status bit for Camera frame end interrupt."]
-pub struct CAM_VSYNC_INT_ST_R(crate::FieldReader<bool>);
-impl CAM_VSYNC_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAM_VSYNC_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAM_VSYNC_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAM_VSYNC_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `CAM_HS_INT_ST` reader - The status bit for Camera transfer end interrupt."]
-pub struct CAM_HS_INT_ST_R(crate::FieldReader<bool>);
-impl CAM_HS_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAM_HS_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAM_HS_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAM_HS_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The status bit for LCD frame end interrupt."]
     #[inline(always)]

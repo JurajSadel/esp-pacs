@@ -14,155 +14,25 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `ACK_REC` reader - The received ACK value. 0: ACK. 1: NACK."]
-pub struct ACK_REC_R(crate::FieldReader<bool>);
-impl ACK_REC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ACK_REC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ACK_REC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ACK_REC_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_RW` reader - 0: master writes to slave. 1: master reads from slave."]
-pub struct SLAVE_RW_R(crate::FieldReader<bool>);
-impl SLAVE_RW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_RW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_RW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_RW_R = crate::BitReader<bool>;
 #[doc = "Field `ARB_LOST` reader - When the RTC I2C loses control of SCL line, the register changes to 1."]
-pub struct ARB_LOST_R(crate::FieldReader<bool>);
-impl ARB_LOST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARB_LOST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARB_LOST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARB_LOST_R = crate::BitReader<bool>;
 #[doc = "Field `BUS_BUSY` reader - 0: RTC I2C bus is in idle state. 1: RTC I2C bus is busy transferring data."]
-pub struct BUS_BUSY_R(crate::FieldReader<bool>);
-impl BUS_BUSY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BUS_BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUS_BUSY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUS_BUSY_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_ADDRESSED` reader - When the address sent by the master matches the address of the slave, then this bit will be set."]
-pub struct SLAVE_ADDRESSED_R(crate::FieldReader<bool>);
-impl SLAVE_ADDRESSED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_ADDRESSED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_ADDRESSED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_ADDRESSED_R = crate::BitReader<bool>;
 #[doc = "Field `BYTE_TRANS` reader - This field changes to 1 when one byte is transferred."]
-pub struct BYTE_TRANS_R(crate::FieldReader<bool>);
-impl BYTE_TRANS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BYTE_TRANS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BYTE_TRANS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BYTE_TRANS_R = crate::BitReader<bool>;
 #[doc = "Field `OP_CNT` reader - Indicate which operation is working."]
-pub struct OP_CNT_R(crate::FieldReader<u8>);
-impl OP_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OP_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OP_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OP_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SHIFT` reader - shifter content"]
-pub struct SHIFT_R(crate::FieldReader<u8>);
-impl SHIFT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SHIFT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SHIFT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SHIFT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCL_MAIN_STATE_LAST` reader - i2c last main status"]
-pub struct SCL_MAIN_STATE_LAST_R(crate::FieldReader<u8>);
-impl SCL_MAIN_STATE_LAST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCL_MAIN_STATE_LAST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_MAIN_STATE_LAST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_MAIN_STATE_LAST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCL_STATE_LAST` reader - scl last status"]
-pub struct SCL_STATE_LAST_R(crate::FieldReader<u8>);
-impl SCL_STATE_LAST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCL_STATE_LAST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_STATE_LAST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_STATE_LAST_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - The received ACK value. 0: ACK. 1: NACK."]
     #[inline(always)]

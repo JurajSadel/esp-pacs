@@ -35,32 +35,10 @@ impl From<crate::W<CORE_1_ENTRY_CHECK_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_ENTRY_CHECK` reader - This filed is used to enable entry address check"]
-pub struct CORE_1_ENTRY_CHECK_R(crate::FieldReader<u16>);
-impl CORE_1_ENTRY_CHECK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CORE_1_ENTRY_CHECK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_ENTRY_CHECK_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_ENTRY_CHECK_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CORE_1_ENTRY_CHECK` writer - This filed is used to enable entry address check"]
-pub struct CORE_1_ENTRY_CHECK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_ENTRY_CHECK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1fff << 1)) | ((value as u32 & 0x1fff) << 1);
-        self.w
-    }
-}
+pub type CORE_1_ENTRY_CHECK_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_1_ENTRY_CHECK_SPEC, u16, u16, 13, 1>;
 impl R {
     #[doc = "Bits 1:13 - This filed is used to enable entry address check"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 1:13 - This filed is used to enable entry address check"]
     #[inline(always)]
     pub fn core_1_entry_check(&mut self) -> CORE_1_ENTRY_CHECK_W {
-        CORE_1_ENTRY_CHECK_W { w: self }
+        CORE_1_ENTRY_CHECK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

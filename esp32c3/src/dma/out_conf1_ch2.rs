@@ -35,42 +35,9 @@ impl From<crate::W<OUT_CONF1_CH2_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_CHECK_OWNER_CH2` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub struct OUT_CHECK_OWNER_CH2_R(crate::FieldReader<bool>);
-impl OUT_CHECK_OWNER_CH2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_CHECK_OWNER_CH2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_CHECK_OWNER_CH2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_CHECK_OWNER_CH2_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_CHECK_OWNER_CH2` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub struct OUT_CHECK_OWNER_CH2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_CHECK_OWNER_CH2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type OUT_CHECK_OWNER_CH2_W<'a> = crate::BitWriter<'a, u32, OUT_CONF1_CH2_SPEC, bool, 12>;
 impl R {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
     pub fn out_check_owner_ch2(&mut self) -> OUT_CHECK_OWNER_CH2_W {
-        OUT_CHECK_OWNER_CH2_W { w: self }
+        OUT_CHECK_OWNER_CH2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

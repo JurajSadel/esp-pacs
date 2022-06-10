@@ -35,32 +35,10 @@ impl From<crate::W<AHBLITE_MPU_TABLE_BT_BUFFER_SPEC>> for W {
     }
 }
 #[doc = "Field `BTBUFFER_ACCESS_GRANT_CONFIG` reader - "]
-pub struct BTBUFFER_ACCESS_GRANT_CONFIG_R(crate::FieldReader<u8>);
-impl BTBUFFER_ACCESS_GRANT_CONFIG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BTBUFFER_ACCESS_GRANT_CONFIG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BTBUFFER_ACCESS_GRANT_CONFIG_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BTBUFFER_ACCESS_GRANT_CONFIG_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BTBUFFER_ACCESS_GRANT_CONFIG` writer - "]
-pub struct BTBUFFER_ACCESS_GRANT_CONFIG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BTBUFFER_ACCESS_GRANT_CONFIG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type BTBUFFER_ACCESS_GRANT_CONFIG_W<'a> =
+    crate::FieldWriter<'a, u32, AHBLITE_MPU_TABLE_BT_BUFFER_SPEC, u8, u8, 6, 0>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     pub fn btbuffer_access_grant_config(&mut self) -> BTBUFFER_ACCESS_GRANT_CONFIG_W {
-        BTBUFFER_ACCESS_GRANT_CONFIG_W { w: self }
+        BTBUFFER_ACCESS_GRANT_CONFIG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

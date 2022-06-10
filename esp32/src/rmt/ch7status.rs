@@ -14,140 +14,23 @@ impl From<crate::R<CH7STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `STATUS` reader - The status for channel7"]
-pub struct STATUS_R(crate::FieldReader<u32>);
-impl STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATUS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MEM_WADDR_EX` reader - The current memory read address of channel7."]
-pub struct MEM_WADDR_EX_R(crate::FieldReader<u16>);
-impl MEM_WADDR_EX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MEM_WADDR_EX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_WADDR_EX_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_WADDR_EX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MEM_RADDR_EX` reader - The current memory write address of channel7."]
-pub struct MEM_RADDR_EX_R(crate::FieldReader<u16>);
-impl MEM_RADDR_EX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MEM_RADDR_EX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_RADDR_EX_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_RADDR_EX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `STATE` reader - The channel7 state machine status register.3'h0 : idle, 3'h1 : send, 3'h2 : read memory, 3'h3 : receive, 3'h4 : wait."]
-pub struct STATE_R(crate::FieldReader<u8>);
-impl STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MEM_OWNER_ERR` reader - When channel7 is configured for receive mode, this bit will turn to high level if rmt_mem_owner register is not set to 1."]
-pub struct MEM_OWNER_ERR_R(crate::FieldReader<bool>);
-impl MEM_OWNER_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_OWNER_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_OWNER_ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_OWNER_ERR_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_FULL` reader - The memory full status bit for channel7 turns to high level when mem_waddr_ex is greater than or equal to the configuration range."]
-pub struct MEM_FULL_R(crate::FieldReader<bool>);
-impl MEM_FULL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_FULL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_FULL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_FULL_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_EMPTY` reader - The memory empty status bit for channel7. in acyclic mode, this bit turns to high level when mem_raddr_ex is greater than or equal to the configured range."]
-pub struct MEM_EMPTY_R(crate::FieldReader<bool>);
-impl MEM_EMPTY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_EMPTY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_EMPTY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_EMPTY_R = crate::BitReader<bool>;
 #[doc = "Field `APB_MEM_WR_ERR` reader - The apb write memory status bit for channel7 turns to high level when the apb write address exceeds the configuration range."]
-pub struct APB_MEM_WR_ERR_R(crate::FieldReader<bool>);
-impl APB_MEM_WR_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_MEM_WR_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_MEM_WR_ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_MEM_WR_ERR_R = crate::BitReader<bool>;
 #[doc = "Field `APB_MEM_RD_ERR` reader - The apb read memory status bit for channel7 turns to high level when the apb read address exceeds the configuration range."]
-pub struct APB_MEM_RD_ERR_R(crate::FieldReader<bool>);
-impl APB_MEM_RD_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_MEM_RD_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_MEM_RD_ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_MEM_RD_ERR_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:31 - The status for channel7"]
     #[inline(always)]

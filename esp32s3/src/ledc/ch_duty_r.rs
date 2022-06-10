@@ -14,20 +14,7 @@ impl From<crate::R<CH_DUTY_R_SPEC>> for R {
     }
 }
 #[doc = "Field `DUTY_R_CH0` reader - This register stores the current duty of output signal on channel %s."]
-pub struct DUTY_R_CH0_R(crate::FieldReader<u32>);
-impl DUTY_R_CH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DUTY_R_CH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_R_CH0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_R_CH0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:18 - This register stores the current duty of output signal on channel %s."]
     #[inline(always)]

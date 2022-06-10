@@ -20,32 +20,12 @@ impl From<crate::W<SET_INVALIDATE_DS_SPEC>> for W {
     }
 }
 #[doc = "Field `SET_INVALIDATE_DS` writer - Clear result from hmac downstream DS."]
-pub struct SET_INVALIDATE_DS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SET_INVALIDATE_DS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SET_INVALIDATE_DS_W<'a> = crate::BitWriter<'a, u32, SET_INVALIDATE_DS_SPEC, bool, 0>;
 impl W {
     #[doc = "Bit 0 - Clear result from hmac downstream DS."]
     #[inline(always)]
     pub fn set_invalidate_ds(&mut self) -> SET_INVALIDATE_DS_W {
-        SET_INVALIDATE_DS_W { w: self }
+        SET_INVALIDATE_DS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

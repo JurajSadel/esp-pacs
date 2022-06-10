@@ -35,170 +35,27 @@ impl From<crate::W<ONETIME_SAMPLE_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_ONETIME_ATTEN` reader - configure onetime atten"]
-pub struct SARADC_ONETIME_ATTEN_R(crate::FieldReader<u8>);
-impl SARADC_ONETIME_ATTEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SARADC_ONETIME_ATTEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARADC_ONETIME_ATTEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARADC_ONETIME_ATTEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SARADC_ONETIME_ATTEN` writer - configure onetime atten"]
-pub struct SARADC_ONETIME_ATTEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARADC_ONETIME_ATTEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 23)) | ((value as u32 & 3) << 23);
-        self.w
-    }
-}
+pub type SARADC_ONETIME_ATTEN_W<'a> =
+    crate::FieldWriter<'a, u32, ONETIME_SAMPLE_SPEC, u8, u8, 2, 23>;
 #[doc = "Field `SARADC_ONETIME_CHANNEL` reader - configure onetime channel"]
-pub struct SARADC_ONETIME_CHANNEL_R(crate::FieldReader<u8>);
-impl SARADC_ONETIME_CHANNEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SARADC_ONETIME_CHANNEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARADC_ONETIME_CHANNEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARADC_ONETIME_CHANNEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SARADC_ONETIME_CHANNEL` writer - configure onetime channel"]
-pub struct SARADC_ONETIME_CHANNEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARADC_ONETIME_CHANNEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 25)) | ((value as u32 & 0x0f) << 25);
-        self.w
-    }
-}
+pub type SARADC_ONETIME_CHANNEL_W<'a> =
+    crate::FieldWriter<'a, u32, ONETIME_SAMPLE_SPEC, u8, u8, 4, 25>;
 #[doc = "Field `SARADC_ONETIME_START` reader - trigger adc onetime sample"]
-pub struct SARADC_ONETIME_START_R(crate::FieldReader<bool>);
-impl SARADC_ONETIME_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SARADC_ONETIME_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARADC_ONETIME_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARADC_ONETIME_START_R = crate::BitReader<bool>;
 #[doc = "Field `SARADC_ONETIME_START` writer - trigger adc onetime sample"]
-pub struct SARADC_ONETIME_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARADC_ONETIME_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type SARADC_ONETIME_START_W<'a> = crate::BitWriter<'a, u32, ONETIME_SAMPLE_SPEC, bool, 29>;
 #[doc = "Field `SARADC2_ONETIME_SAMPLE` reader - enable adc2 onetime sample"]
-pub struct SARADC2_ONETIME_SAMPLE_R(crate::FieldReader<bool>);
-impl SARADC2_ONETIME_SAMPLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SARADC2_ONETIME_SAMPLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARADC2_ONETIME_SAMPLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARADC2_ONETIME_SAMPLE_R = crate::BitReader<bool>;
 #[doc = "Field `SARADC2_ONETIME_SAMPLE` writer - enable adc2 onetime sample"]
-pub struct SARADC2_ONETIME_SAMPLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARADC2_ONETIME_SAMPLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type SARADC2_ONETIME_SAMPLE_W<'a> = crate::BitWriter<'a, u32, ONETIME_SAMPLE_SPEC, bool, 30>;
 #[doc = "Field `SARADC1_ONETIME_SAMPLE` reader - enable adc1 onetime sample"]
-pub struct SARADC1_ONETIME_SAMPLE_R(crate::FieldReader<bool>);
-impl SARADC1_ONETIME_SAMPLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SARADC1_ONETIME_SAMPLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARADC1_ONETIME_SAMPLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARADC1_ONETIME_SAMPLE_R = crate::BitReader<bool>;
 #[doc = "Field `SARADC1_ONETIME_SAMPLE` writer - enable adc1 onetime sample"]
-pub struct SARADC1_ONETIME_SAMPLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARADC1_ONETIME_SAMPLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type SARADC1_ONETIME_SAMPLE_W<'a> = crate::BitWriter<'a, u32, ONETIME_SAMPLE_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 23:24 - configure onetime atten"]
     #[inline(always)]
@@ -230,27 +87,27 @@ impl W {
     #[doc = "Bits 23:24 - configure onetime atten"]
     #[inline(always)]
     pub fn saradc_onetime_atten(&mut self) -> SARADC_ONETIME_ATTEN_W {
-        SARADC_ONETIME_ATTEN_W { w: self }
+        SARADC_ONETIME_ATTEN_W::new(self)
     }
     #[doc = "Bits 25:28 - configure onetime channel"]
     #[inline(always)]
     pub fn saradc_onetime_channel(&mut self) -> SARADC_ONETIME_CHANNEL_W {
-        SARADC_ONETIME_CHANNEL_W { w: self }
+        SARADC_ONETIME_CHANNEL_W::new(self)
     }
     #[doc = "Bit 29 - trigger adc onetime sample"]
     #[inline(always)]
     pub fn saradc_onetime_start(&mut self) -> SARADC_ONETIME_START_W {
-        SARADC_ONETIME_START_W { w: self }
+        SARADC_ONETIME_START_W::new(self)
     }
     #[doc = "Bit 30 - enable adc2 onetime sample"]
     #[inline(always)]
     pub fn saradc2_onetime_sample(&mut self) -> SARADC2_ONETIME_SAMPLE_W {
-        SARADC2_ONETIME_SAMPLE_W { w: self }
+        SARADC2_ONETIME_SAMPLE_W::new(self)
     }
     #[doc = "Bit 31 - enable adc1 onetime sample"]
     #[inline(always)]
     pub fn saradc1_onetime_sample(&mut self) -> SARADC1_ONETIME_SAMPLE_W {
-        SARADC1_ONETIME_SAMPLE_W { w: self }
+        SARADC1_ONETIME_SAMPLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

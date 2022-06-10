@@ -14,20 +14,7 @@ impl From<crate::R<RD_WR_DIS_SPEC>> for R {
     }
 }
 #[doc = "Field `WR_DIS` reader - Disables programming of individual eFuses."]
-pub struct WR_DIS_R(crate::FieldReader<u32>);
-impl WR_DIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        WR_DIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WR_DIS_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WR_DIS_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Disables programming of individual eFuses."]
     #[inline(always)]

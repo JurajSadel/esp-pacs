@@ -14,35 +14,9 @@ impl From<crate::R<LOW_POWER_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `LOW_POWER_DIAG0` reader - "]
-pub struct LOW_POWER_DIAG0_R(crate::FieldReader<u32>);
-impl LOW_POWER_DIAG0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        LOW_POWER_DIAG0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOW_POWER_DIAG0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOW_POWER_DIAG0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RDY_FOR_WAKEUP` reader - 1 if RTC controller is ready to execute WAKE instruction, 0 otherwise"]
-pub struct RDY_FOR_WAKEUP_R(crate::FieldReader<bool>);
-impl RDY_FOR_WAKEUP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RDY_FOR_WAKEUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RDY_FOR_WAKEUP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RDY_FOR_WAKEUP_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

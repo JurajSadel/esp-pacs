@@ -14,35 +14,9 @@ impl From<crate::R<TIMER2_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER2_VALUE` reader - current PWM timer2 counter value"]
-pub struct TIMER2_VALUE_R(crate::FieldReader<u16>);
-impl TIMER2_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TIMER2_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER2_VALUE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER2_VALUE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIMER2_DIRECTION` reader - current PWM timer2 counter direction, 0: increment 1: decrement"]
-pub struct TIMER2_DIRECTION_R(crate::FieldReader<bool>);
-impl TIMER2_DIRECTION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER2_DIRECTION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER2_DIRECTION_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER2_DIRECTION_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:15 - current PWM timer2 counter value"]
     #[inline(always)]

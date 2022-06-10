@@ -35,128 +35,19 @@ impl From<crate::W<ULP_CP_TIMER_SPEC>> for W {
     }
 }
 #[doc = "Field `ULP_CP_PC_INIT` reader - ULP-coprocessor PC initial address"]
-pub struct ULP_CP_PC_INIT_R(crate::FieldReader<u16>);
-impl ULP_CP_PC_INIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        ULP_CP_PC_INIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ULP_CP_PC_INIT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ULP_CP_PC_INIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ULP_CP_PC_INIT` writer - ULP-coprocessor PC initial address"]
-pub struct ULP_CP_PC_INIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ULP_CP_PC_INIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff) | (value as u32 & 0x07ff);
-        self.w
-    }
-}
+pub type ULP_CP_PC_INIT_W<'a> = crate::FieldWriter<'a, u32, ULP_CP_TIMER_SPEC, u16, u16, 11, 0>;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_ENA` reader - ULP-coprocessor wakeup by GPIO enable"]
-pub struct ULP_CP_GPIO_WAKEUP_ENA_R(crate::FieldReader<bool>);
-impl ULP_CP_GPIO_WAKEUP_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ULP_CP_GPIO_WAKEUP_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ULP_CP_GPIO_WAKEUP_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ULP_CP_GPIO_WAKEUP_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_ENA` writer - ULP-coprocessor wakeup by GPIO enable"]
-pub struct ULP_CP_GPIO_WAKEUP_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ULP_CP_GPIO_WAKEUP_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type ULP_CP_GPIO_WAKEUP_ENA_W<'a> = crate::BitWriter<'a, u32, ULP_CP_TIMER_SPEC, bool, 29>;
 #[doc = "Field `ULP_CP_GPIO_WAKEUP_CLR` writer - ULP-coprocessor wakeup by GPIO state clear"]
-pub struct ULP_CP_GPIO_WAKEUP_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ULP_CP_GPIO_WAKEUP_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type ULP_CP_GPIO_WAKEUP_CLR_W<'a> = crate::BitWriter<'a, u32, ULP_CP_TIMER_SPEC, bool, 30>;
 #[doc = "Field `ULP_CP_SLP_TIMER_EN` reader - ULP-coprocessor timer enable bit"]
-pub struct ULP_CP_SLP_TIMER_EN_R(crate::FieldReader<bool>);
-impl ULP_CP_SLP_TIMER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ULP_CP_SLP_TIMER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ULP_CP_SLP_TIMER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ULP_CP_SLP_TIMER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `ULP_CP_SLP_TIMER_EN` writer - ULP-coprocessor timer enable bit"]
-pub struct ULP_CP_SLP_TIMER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ULP_CP_SLP_TIMER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type ULP_CP_SLP_TIMER_EN_W<'a> = crate::BitWriter<'a, u32, ULP_CP_TIMER_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:10 - ULP-coprocessor PC initial address"]
     #[inline(always)]
@@ -178,22 +69,22 @@ impl W {
     #[doc = "Bits 0:10 - ULP-coprocessor PC initial address"]
     #[inline(always)]
     pub fn ulp_cp_pc_init(&mut self) -> ULP_CP_PC_INIT_W {
-        ULP_CP_PC_INIT_W { w: self }
+        ULP_CP_PC_INIT_W::new(self)
     }
     #[doc = "Bit 29 - ULP-coprocessor wakeup by GPIO enable"]
     #[inline(always)]
     pub fn ulp_cp_gpio_wakeup_ena(&mut self) -> ULP_CP_GPIO_WAKEUP_ENA_W {
-        ULP_CP_GPIO_WAKEUP_ENA_W { w: self }
+        ULP_CP_GPIO_WAKEUP_ENA_W::new(self)
     }
     #[doc = "Bit 30 - ULP-coprocessor wakeup by GPIO state clear"]
     #[inline(always)]
     pub fn ulp_cp_gpio_wakeup_clr(&mut self) -> ULP_CP_GPIO_WAKEUP_CLR_W {
-        ULP_CP_GPIO_WAKEUP_CLR_W { w: self }
+        ULP_CP_GPIO_WAKEUP_CLR_W::new(self)
     }
     #[doc = "Bit 31 - ULP-coprocessor timer enable bit"]
     #[inline(always)]
     pub fn ulp_cp_slp_timer_en(&mut self) -> ULP_CP_SLP_TIMER_EN_W {
-        ULP_CP_SLP_TIMER_EN_W { w: self }
+        ULP_CP_SLP_TIMER_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

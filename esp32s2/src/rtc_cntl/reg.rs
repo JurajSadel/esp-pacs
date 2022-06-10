@@ -35,288 +35,41 @@ impl From<crate::W<REG_SPEC>> for W {
     }
 }
 #[doc = "Field `DIG_REG_DBIAS_SLP` reader - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
-pub struct DIG_REG_DBIAS_SLP_R(crate::FieldReader<u8>);
-impl DIG_REG_DBIAS_SLP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DIG_REG_DBIAS_SLP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIG_REG_DBIAS_SLP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIG_REG_DBIAS_SLP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DIG_REG_DBIAS_SLP` writer - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
-pub struct DIG_REG_DBIAS_SLP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIG_REG_DBIAS_SLP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 8)) | ((value as u32 & 7) << 8);
-        self.w
-    }
-}
+pub type DIG_REG_DBIAS_SLP_W<'a> = crate::FieldWriter<'a, u32, REG_SPEC, u8, u8, 3, 8>;
 #[doc = "Field `DIG_REG_DBIAS_WAK` reader - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
-pub struct DIG_REG_DBIAS_WAK_R(crate::FieldReader<u8>);
-impl DIG_REG_DBIAS_WAK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DIG_REG_DBIAS_WAK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIG_REG_DBIAS_WAK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIG_REG_DBIAS_WAK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DIG_REG_DBIAS_WAK` writer - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
-pub struct DIG_REG_DBIAS_WAK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIG_REG_DBIAS_WAK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
-        self.w
-    }
-}
+pub type DIG_REG_DBIAS_WAK_W<'a> = crate::FieldWriter<'a, u32, REG_SPEC, u8, u8, 3, 11>;
 #[doc = "Field `SCK_DCAP` reader - Configures the frequency of the RTC clocks."]
-pub struct SCK_DCAP_R(crate::FieldReader<u8>);
-impl SCK_DCAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCK_DCAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCK_DCAP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCK_DCAP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCK_DCAP` writer - Configures the frequency of the RTC clocks."]
-pub struct SCK_DCAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCK_DCAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 14)) | ((value as u32 & 0xff) << 14);
-        self.w
-    }
-}
+pub type SCK_DCAP_W<'a> = crate::FieldWriter<'a, u32, REG_SPEC, u8, u8, 8, 14>;
 #[doc = "Field `DBIAS_SLP` reader - Configures the regulation factor for the low-power voltage regulator when the CPU is in sleep status."]
-pub struct DBIAS_SLP_R(crate::FieldReader<u8>);
-impl DBIAS_SLP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DBIAS_SLP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBIAS_SLP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBIAS_SLP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DBIAS_SLP` writer - Configures the regulation factor for the low-power voltage regulator when the CPU is in sleep status."]
-pub struct DBIAS_SLP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DBIAS_SLP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 22)) | ((value as u32 & 7) << 22);
-        self.w
-    }
-}
+pub type DBIAS_SLP_W<'a> = crate::FieldWriter<'a, u32, REG_SPEC, u8, u8, 3, 22>;
 #[doc = "Field `DBIAS_WAK` reader - Configures the regulation factor for the low-power voltage regulator when the CPU is in active status."]
-pub struct DBIAS_WAK_R(crate::FieldReader<u8>);
-impl DBIAS_WAK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DBIAS_WAK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBIAS_WAK_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBIAS_WAK_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DBIAS_WAK` writer - Configures the regulation factor for the low-power voltage regulator when the CPU is in active status."]
-pub struct DBIAS_WAK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DBIAS_WAK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 25)) | ((value as u32 & 7) << 25);
-        self.w
-    }
-}
+pub type DBIAS_WAK_W<'a> = crate::FieldWriter<'a, u32, REG_SPEC, u8, u8, 3, 25>;
 #[doc = "Field `DBOOST_FORCE_PD` reader - RTC_DBOOST force power down"]
-pub struct DBOOST_FORCE_PD_R(crate::FieldReader<bool>);
-impl DBOOST_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBOOST_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBOOST_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBOOST_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `DBOOST_FORCE_PD` writer - RTC_DBOOST force power down"]
-pub struct DBOOST_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DBOOST_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type DBOOST_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, REG_SPEC, bool, 28>;
 #[doc = "Field `DBOOST_FORCE_PU` reader - RTC_DBOOST force power up"]
-pub struct DBOOST_FORCE_PU_R(crate::FieldReader<bool>);
-impl DBOOST_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBOOST_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBOOST_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBOOST_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `DBOOST_FORCE_PU` writer - RTC_DBOOST force power up"]
-pub struct DBOOST_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DBOOST_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type DBOOST_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, REG_SPEC, bool, 29>;
 #[doc = "Field `REGULATOR_FORCE_PD` reader - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
-pub struct REGULATOR_FORCE_PD_R(crate::FieldReader<bool>);
-impl REGULATOR_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        REGULATOR_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGULATOR_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGULATOR_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `REGULATOR_FORCE_PD` writer - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
-pub struct REGULATOR_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGULATOR_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type REGULATOR_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, REG_SPEC, bool, 30>;
 #[doc = "Field `REGULATOR_FORCE_PU` reader - Set this bit to FPU the RTC_REG."]
-pub struct REGULATOR_FORCE_PU_R(crate::FieldReader<bool>);
-impl REGULATOR_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        REGULATOR_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGULATOR_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGULATOR_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `REGULATOR_FORCE_PU` writer - Set this bit to FPU the RTC_REG."]
-pub struct REGULATOR_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGULATOR_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type REGULATOR_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, REG_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 8:10 - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
@@ -368,47 +121,47 @@ impl W {
     #[doc = "Bits 8:10 - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
     pub fn dig_reg_dbias_slp(&mut self) -> DIG_REG_DBIAS_SLP_W {
-        DIG_REG_DBIAS_SLP_W { w: self }
+        DIG_REG_DBIAS_SLP_W::new(self)
     }
     #[doc = "Bits 11:13 - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
     #[inline(always)]
     pub fn dig_reg_dbias_wak(&mut self) -> DIG_REG_DBIAS_WAK_W {
-        DIG_REG_DBIAS_WAK_W { w: self }
+        DIG_REG_DBIAS_WAK_W::new(self)
     }
     #[doc = "Bits 14:21 - Configures the frequency of the RTC clocks."]
     #[inline(always)]
     pub fn sck_dcap(&mut self) -> SCK_DCAP_W {
-        SCK_DCAP_W { w: self }
+        SCK_DCAP_W::new(self)
     }
     #[doc = "Bits 22:24 - Configures the regulation factor for the low-power voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
     pub fn dbias_slp(&mut self) -> DBIAS_SLP_W {
-        DBIAS_SLP_W { w: self }
+        DBIAS_SLP_W::new(self)
     }
     #[doc = "Bits 25:27 - Configures the regulation factor for the low-power voltage regulator when the CPU is in active status."]
     #[inline(always)]
     pub fn dbias_wak(&mut self) -> DBIAS_WAK_W {
-        DBIAS_WAK_W { w: self }
+        DBIAS_WAK_W::new(self)
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
     pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W {
-        DBOOST_FORCE_PD_W { w: self }
+        DBOOST_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
     pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W {
-        DBOOST_FORCE_PU_W { w: self }
+        DBOOST_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
     #[inline(always)]
     pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W {
-        REGULATOR_FORCE_PD_W { w: self }
+        REGULATOR_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to FPU the RTC_REG."]
     #[inline(always)]
     pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W {
-        REGULATOR_FORCE_PU_W { w: self }
+        REGULATOR_FORCE_PU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

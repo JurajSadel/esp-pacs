@@ -35,116 +35,17 @@ impl From<crate::W<TX_SIM_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_SIM_CH0` reader - reg_rmt_tx_sim_ch0."]
-pub struct TX_SIM_CH0_R(crate::FieldReader<bool>);
-impl TX_SIM_CH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_SIM_CH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_SIM_CH0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_SIM_CH0_R = crate::BitReader<bool>;
 #[doc = "Field `TX_SIM_CH0` writer - reg_rmt_tx_sim_ch0."]
-pub struct TX_SIM_CH0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_SIM_CH0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TX_SIM_CH0_W<'a> = crate::BitWriter<'a, u32, TX_SIM_SPEC, bool, 0>;
 #[doc = "Field `TX_SIM_CH1` reader - reg_rmt_tx_sim_ch1."]
-pub struct TX_SIM_CH1_R(crate::FieldReader<bool>);
-impl TX_SIM_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_SIM_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_SIM_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_SIM_CH1_R = crate::BitReader<bool>;
 #[doc = "Field `TX_SIM_CH1` writer - reg_rmt_tx_sim_ch1."]
-pub struct TX_SIM_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_SIM_CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type TX_SIM_CH1_W<'a> = crate::BitWriter<'a, u32, TX_SIM_SPEC, bool, 1>;
 #[doc = "Field `TX_SIM_EN` reader - reg_rmt_tx_sim_en."]
-pub struct TX_SIM_EN_R(crate::FieldReader<bool>);
-impl TX_SIM_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_SIM_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_SIM_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_SIM_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TX_SIM_EN` writer - reg_rmt_tx_sim_en."]
-pub struct TX_SIM_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_SIM_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type TX_SIM_EN_W<'a> = crate::BitWriter<'a, u32, TX_SIM_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 0 - reg_rmt_tx_sim_ch0."]
     #[inline(always)]
@@ -166,17 +67,17 @@ impl W {
     #[doc = "Bit 0 - reg_rmt_tx_sim_ch0."]
     #[inline(always)]
     pub fn tx_sim_ch0(&mut self) -> TX_SIM_CH0_W {
-        TX_SIM_CH0_W { w: self }
+        TX_SIM_CH0_W::new(self)
     }
     #[doc = "Bit 1 - reg_rmt_tx_sim_ch1."]
     #[inline(always)]
     pub fn tx_sim_ch1(&mut self) -> TX_SIM_CH1_W {
-        TX_SIM_CH1_W { w: self }
+        TX_SIM_CH1_W::new(self)
     }
     #[doc = "Bit 2 - reg_rmt_tx_sim_en."]
     #[inline(always)]
     pub fn tx_sim_en(&mut self) -> TX_SIM_EN_W {
-        TX_SIM_EN_W { w: self }
+        TX_SIM_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

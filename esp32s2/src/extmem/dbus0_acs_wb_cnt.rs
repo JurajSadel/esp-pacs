@@ -14,20 +14,7 @@ impl From<crate::R<DBUS0_ACS_WB_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `DBUS0_ACS_WB_CNT` reader - The bits are used to count the number of cache evictions by dbus0 access cache."]
-pub struct DBUS0_ACS_WB_CNT_R(crate::FieldReader<u32>);
-impl DBUS0_ACS_WB_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DBUS0_ACS_WB_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS0_ACS_WB_CNT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS0_ACS_WB_CNT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - The bits are used to count the number of cache evictions by dbus0 access cache."]
     #[inline(always)]

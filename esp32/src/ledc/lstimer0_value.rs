@@ -14,20 +14,7 @@ impl From<crate::R<LSTIMER0_VALUE_SPEC>> for R {
     }
 }
 #[doc = "Field `LSTIMER0_CNT` reader - software can read this register to get the current counter value in low speed timer0."]
-pub struct LSTIMER0_CNT_R(crate::FieldReader<u32>);
-impl LSTIMER0_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        LSTIMER0_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LSTIMER0_CNT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LSTIMER0_CNT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - software can read this register to get the current counter value in low speed timer0."]
     #[inline(always)]

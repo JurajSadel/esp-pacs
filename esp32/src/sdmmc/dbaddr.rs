@@ -35,32 +35,9 @@ impl From<crate::W<DBADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `DBADDR` reader - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
-pub struct DBADDR_R(crate::FieldReader<u32>);
-impl DBADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DBADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DBADDR` writer - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
-pub struct DBADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DBADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type DBADDR_W<'a> = crate::FieldWriter<'a, u32, DBADDR_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
     #[inline(always)]
     pub fn dbaddr(&mut self) -> DBADDR_W {
-        DBADDR_W { w: self }
+        DBADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

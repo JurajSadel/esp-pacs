@@ -14,80 +14,15 @@ impl From<crate::R<CORE0_ACS_CACHE_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE0_IBUS_ACS_MSK_ICACHE_ST` reader - The bit is used to indicate interrupt by cpu access icache while the core0_ibus is disabled or icache is disabled which include speculative access."]
-pub struct CORE0_IBUS_ACS_MSK_ICACHE_ST_R(crate::FieldReader<bool>);
-impl CORE0_IBUS_ACS_MSK_ICACHE_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE0_IBUS_ACS_MSK_ICACHE_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE0_IBUS_ACS_MSK_ICACHE_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE0_IBUS_ACS_MSK_ICACHE_ST_R = crate::BitReader<bool>;
 #[doc = "Field `CORE0_IBUS_WR_ICACHE_ST` reader - The bit is used to indicate interrupt by ibus trying to write icache"]
-pub struct CORE0_IBUS_WR_ICACHE_ST_R(crate::FieldReader<bool>);
-impl CORE0_IBUS_WR_ICACHE_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE0_IBUS_WR_ICACHE_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE0_IBUS_WR_ICACHE_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE0_IBUS_WR_ICACHE_ST_R = crate::BitReader<bool>;
 #[doc = "Field `CORE0_IBUS_REJECT_ST` reader - The bit is used to indicate interrupt by authentication fail."]
-pub struct CORE0_IBUS_REJECT_ST_R(crate::FieldReader<bool>);
-impl CORE0_IBUS_REJECT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE0_IBUS_REJECT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE0_IBUS_REJECT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE0_IBUS_REJECT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `CORE0_DBUS_ACS_MSK_DCACHE_ST` reader - The bit is used to indicate interrupt by cpu access dcache while the core0_dbus is disabled or dcache is disabled which include speculative access."]
-pub struct CORE0_DBUS_ACS_MSK_DCACHE_ST_R(crate::FieldReader<bool>);
-impl CORE0_DBUS_ACS_MSK_DCACHE_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE0_DBUS_ACS_MSK_DCACHE_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE0_DBUS_ACS_MSK_DCACHE_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE0_DBUS_ACS_MSK_DCACHE_ST_R = crate::BitReader<bool>;
 #[doc = "Field `CORE0_DBUS_REJECT_ST` reader - The bit is used to indicate interrupt by authentication fail."]
-pub struct CORE0_DBUS_REJECT_ST_R(crate::FieldReader<bool>);
-impl CORE0_DBUS_REJECT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE0_DBUS_REJECT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE0_DBUS_REJECT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE0_DBUS_REJECT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The bit is used to indicate interrupt by cpu access icache while the core0_ibus is disabled or icache is disabled which include speculative access."]
     #[inline(always)]

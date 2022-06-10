@@ -35,32 +35,9 @@ impl From<crate::W<HOST_INF_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_IO_SWAP` reader - ******* Description ***********"]
-pub struct PERI_IO_SWAP_R(crate::FieldReader<u8>);
-impl PERI_IO_SWAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PERI_IO_SWAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERI_IO_SWAP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERI_IO_SWAP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PERI_IO_SWAP` writer - ******* Description ***********"]
-pub struct PERI_IO_SWAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERI_IO_SWAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type PERI_IO_SWAP_W<'a> = crate::FieldWriter<'a, u32, HOST_INF_SEL_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - ******* Description ***********"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7 - ******* Description ***********"]
     #[inline(always)]
     pub fn peri_io_swap(&mut self) -> PERI_IO_SWAP_W {
-        PERI_IO_SWAP_W { w: self }
+        PERI_IO_SWAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

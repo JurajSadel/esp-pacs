@@ -35,244 +35,33 @@ impl From<crate::W<THRES_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN` reader - Clock gate enable."]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - Clock gate enable."]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, 0>;
 #[doc = "Field `ADC2_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
-pub struct ADC2_THRES_MODE_R(crate::FieldReader<bool>);
-impl ADC2_THRES_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC2_THRES_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_THRES_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_THRES_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC2_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
-pub struct ADC2_THRES_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_THRES_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type ADC2_THRES_MODE_W<'a> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, 2>;
 #[doc = "Field `ADC1_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
-pub struct ADC1_THRES_MODE_R(crate::FieldReader<bool>);
-impl ADC1_THRES_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC1_THRES_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_THRES_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_THRES_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
-pub struct ADC1_THRES_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_THRES_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type ADC1_THRES_MODE_W<'a> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, 3>;
 #[doc = "Field `ADC2_THRES` reader - ADC2 threshold."]
-pub struct ADC2_THRES_R(crate::FieldReader<u16>);
-impl ADC2_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        ADC2_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_THRES_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ADC2_THRES` writer - ADC2 threshold."]
-pub struct ADC2_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1fff << 4)) | ((value as u32 & 0x1fff) << 4);
-        self.w
-    }
-}
+pub type ADC2_THRES_W<'a> = crate::FieldWriter<'a, u32, THRES_CTRL_SPEC, u16, u16, 13, 4>;
 #[doc = "Field `ADC1_THRES` reader - ADC1 threshold."]
-pub struct ADC1_THRES_R(crate::FieldReader<u16>);
-impl ADC1_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        ADC1_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_THRES_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ADC1_THRES` writer - ADC1 threshold."]
-pub struct ADC1_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1fff << 17)) | ((value as u32 & 0x1fff) << 17);
-        self.w
-    }
-}
+pub type ADC1_THRES_W<'a> = crate::FieldWriter<'a, u32, THRES_CTRL_SPEC, u16, u16, 13, 17>;
 #[doc = "Field `ADC2_THRES_EN` reader - Enable ADC2 threshold monitor."]
-pub struct ADC2_THRES_EN_R(crate::FieldReader<bool>);
-impl ADC2_THRES_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC2_THRES_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_THRES_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_THRES_EN_R = crate::BitReader<bool>;
 #[doc = "Field `ADC2_THRES_EN` writer - Enable ADC2 threshold monitor."]
-pub struct ADC2_THRES_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_THRES_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type ADC2_THRES_EN_W<'a> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, 30>;
 #[doc = "Field `ADC1_THRES_EN` reader - Enable ADC1 threshold monitor."]
-pub struct ADC1_THRES_EN_R(crate::FieldReader<bool>);
-impl ADC1_THRES_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC1_THRES_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_THRES_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_THRES_EN_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1_THRES_EN` writer - Enable ADC1 threshold monitor."]
-pub struct ADC1_THRES_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_THRES_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type ADC1_THRES_EN_W<'a> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 0 - Clock gate enable."]
     #[inline(always)]
@@ -314,37 +103,37 @@ impl W {
     #[doc = "Bit 0 - Clock gate enable."]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Bit 2 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
     pub fn adc2_thres_mode(&mut self) -> ADC2_THRES_MODE_W {
-        ADC2_THRES_MODE_W { w: self }
+        ADC2_THRES_MODE_W::new(self)
     }
     #[doc = "Bit 3 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
     pub fn adc1_thres_mode(&mut self) -> ADC1_THRES_MODE_W {
-        ADC1_THRES_MODE_W { w: self }
+        ADC1_THRES_MODE_W::new(self)
     }
     #[doc = "Bits 4:16 - ADC2 threshold."]
     #[inline(always)]
     pub fn adc2_thres(&mut self) -> ADC2_THRES_W {
-        ADC2_THRES_W { w: self }
+        ADC2_THRES_W::new(self)
     }
     #[doc = "Bits 17:29 - ADC1 threshold."]
     #[inline(always)]
     pub fn adc1_thres(&mut self) -> ADC1_THRES_W {
-        ADC1_THRES_W { w: self }
+        ADC1_THRES_W::new(self)
     }
     #[doc = "Bit 30 - Enable ADC2 threshold monitor."]
     #[inline(always)]
     pub fn adc2_thres_en(&mut self) -> ADC2_THRES_EN_W {
-        ADC2_THRES_EN_W { w: self }
+        ADC2_THRES_EN_W::new(self)
     }
     #[doc = "Bit 31 - Enable ADC1 threshold monitor."]
     #[inline(always)]
     pub fn adc1_thres_en(&mut self) -> ADC1_THRES_EN_W {
-        ADC1_THRES_EN_W { w: self }
+        ADC1_THRES_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

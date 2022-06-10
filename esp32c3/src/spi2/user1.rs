@@ -35,150 +35,25 @@ impl From<crate::W<USER1_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_DUMMY_CYCLELEN` reader - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
-pub struct USR_DUMMY_CYCLELEN_R(crate::FieldReader<u8>);
-impl USR_DUMMY_CYCLELEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        USR_DUMMY_CYCLELEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_DUMMY_CYCLELEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `USR_DUMMY_CYCLELEN` writer - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
-pub struct USR_DUMMY_CYCLELEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_DUMMY_CYCLELEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type USR_DUMMY_CYCLELEN_W<'a> = crate::FieldWriter<'a, u32, USER1_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `MST_WFULL_ERR_END_EN` reader - 1: SPI transfer is ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode."]
-pub struct MST_WFULL_ERR_END_EN_R(crate::FieldReader<bool>);
-impl MST_WFULL_ERR_END_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MST_WFULL_ERR_END_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MST_WFULL_ERR_END_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MST_WFULL_ERR_END_EN_R = crate::BitReader<bool>;
 #[doc = "Field `MST_WFULL_ERR_END_EN` writer - 1: SPI transfer is ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode."]
-pub struct MST_WFULL_ERR_END_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MST_WFULL_ERR_END_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type MST_WFULL_ERR_END_EN_W<'a> = crate::BitWriter<'a, u32, USER1_SPEC, bool, 16>;
 #[doc = "Field `CS_SETUP_TIME` reader - (cycles+1) of prepare phase by spi clock this bits are combined with spi_cs_setup bit. Can be configured in CONF state."]
-pub struct CS_SETUP_TIME_R(crate::FieldReader<u8>);
-impl CS_SETUP_TIME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CS_SETUP_TIME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_SETUP_TIME_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_SETUP_TIME_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CS_SETUP_TIME` writer - (cycles+1) of prepare phase by spi clock this bits are combined with spi_cs_setup bit. Can be configured in CONF state."]
-pub struct CS_SETUP_TIME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_SETUP_TIME_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 17)) | ((value as u32 & 0x1f) << 17);
-        self.w
-    }
-}
+pub type CS_SETUP_TIME_W<'a> = crate::FieldWriter<'a, u32, USER1_SPEC, u8, u8, 5, 17>;
 #[doc = "Field `CS_HOLD_TIME` reader - delay cycles of cs pin by spi clock this bits are combined with spi_cs_hold bit. Can be configured in CONF state."]
-pub struct CS_HOLD_TIME_R(crate::FieldReader<u8>);
-impl CS_HOLD_TIME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CS_HOLD_TIME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_HOLD_TIME_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_HOLD_TIME_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CS_HOLD_TIME` writer - delay cycles of cs pin by spi clock this bits are combined with spi_cs_hold bit. Can be configured in CONF state."]
-pub struct CS_HOLD_TIME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_HOLD_TIME_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 22)) | ((value as u32 & 0x1f) << 22);
-        self.w
-    }
-}
+pub type CS_HOLD_TIME_W<'a> = crate::FieldWriter<'a, u32, USER1_SPEC, u8, u8, 5, 22>;
 #[doc = "Field `USR_ADDR_BITLEN` reader - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub struct USR_ADDR_BITLEN_R(crate::FieldReader<u8>);
-impl USR_ADDR_BITLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        USR_ADDR_BITLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_ADDR_BITLEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_ADDR_BITLEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `USR_ADDR_BITLEN` writer - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub struct USR_ADDR_BITLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_ADDR_BITLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 27)) | ((value as u32 & 0x1f) << 27);
-        self.w
-    }
-}
+pub type USR_ADDR_BITLEN_W<'a> = crate::FieldWriter<'a, u32, USER1_SPEC, u8, u8, 5, 27>;
 impl R {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
     #[inline(always)]
@@ -210,27 +85,27 @@ impl W {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_dummy_cyclelen(&mut self) -> USR_DUMMY_CYCLELEN_W {
-        USR_DUMMY_CYCLELEN_W { w: self }
+        USR_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Bit 16 - 1: SPI transfer is ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode."]
     #[inline(always)]
     pub fn mst_wfull_err_end_en(&mut self) -> MST_WFULL_ERR_END_EN_W {
-        MST_WFULL_ERR_END_EN_W { w: self }
+        MST_WFULL_ERR_END_EN_W::new(self)
     }
     #[doc = "Bits 17:21 - (cycles+1) of prepare phase by spi clock this bits are combined with spi_cs_setup bit. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W {
-        CS_SETUP_TIME_W { w: self }
+        CS_SETUP_TIME_W::new(self)
     }
     #[doc = "Bits 22:26 - delay cycles of cs pin by spi clock this bits are combined with spi_cs_hold bit. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W {
-        CS_HOLD_TIME_W { w: self }
+        CS_HOLD_TIME_W::new(self)
     }
     #[doc = "Bits 27:31 - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_addr_bitlen(&mut self) -> USR_ADDR_BITLEN_W {
-        USR_ADDR_BITLEN_W { w: self }
+        USR_ADDR_BITLEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

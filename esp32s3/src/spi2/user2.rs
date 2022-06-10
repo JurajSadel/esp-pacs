@@ -35,96 +35,17 @@ impl From<crate::W<USER2_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_COMMAND_VALUE` reader - The value of command. Can be configured in CONF state."]
-pub struct USR_COMMAND_VALUE_R(crate::FieldReader<u16>);
-impl USR_COMMAND_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        USR_COMMAND_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_COMMAND_VALUE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_COMMAND_VALUE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `USR_COMMAND_VALUE` writer - The value of command. Can be configured in CONF state."]
-pub struct USR_COMMAND_VALUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_COMMAND_VALUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type USR_COMMAND_VALUE_W<'a> = crate::FieldWriter<'a, u32, USER2_SPEC, u16, u16, 16, 0>;
 #[doc = "Field `MST_REMPTY_ERR_END_EN` reader - 1: SPI transfer is ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode."]
-pub struct MST_REMPTY_ERR_END_EN_R(crate::FieldReader<bool>);
-impl MST_REMPTY_ERR_END_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MST_REMPTY_ERR_END_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MST_REMPTY_ERR_END_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MST_REMPTY_ERR_END_EN_R = crate::BitReader<bool>;
 #[doc = "Field `MST_REMPTY_ERR_END_EN` writer - 1: SPI transfer is ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode."]
-pub struct MST_REMPTY_ERR_END_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MST_REMPTY_ERR_END_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type MST_REMPTY_ERR_END_EN_W<'a> = crate::BitWriter<'a, u32, USER2_SPEC, bool, 27>;
 #[doc = "Field `USR_COMMAND_BITLEN` reader - The length in bits of command phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub struct USR_COMMAND_BITLEN_R(crate::FieldReader<u8>);
-impl USR_COMMAND_BITLEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        USR_COMMAND_BITLEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_COMMAND_BITLEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_COMMAND_BITLEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `USR_COMMAND_BITLEN` writer - The length in bits of command phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
-pub struct USR_COMMAND_BITLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_COMMAND_BITLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+pub type USR_COMMAND_BITLEN_W<'a> = crate::FieldWriter<'a, u32, USER2_SPEC, u8, u8, 4, 28>;
 impl R {
     #[doc = "Bits 0:15 - The value of command. Can be configured in CONF state."]
     #[inline(always)]
@@ -146,17 +67,17 @@ impl W {
     #[doc = "Bits 0:15 - The value of command. Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_command_value(&mut self) -> USR_COMMAND_VALUE_W {
-        USR_COMMAND_VALUE_W { w: self }
+        USR_COMMAND_VALUE_W::new(self)
     }
     #[doc = "Bit 27 - 1: SPI transfer is ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI TX AFIFO read empty error is valid in GP-SPI master FD/HD-mode."]
     #[inline(always)]
     pub fn mst_rempty_err_end_en(&mut self) -> MST_REMPTY_ERR_END_EN_W {
-        MST_REMPTY_ERR_END_EN_W { w: self }
+        MST_REMPTY_ERR_END_EN_W::new(self)
     }
     #[doc = "Bits 28:31 - The length in bits of command phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
     pub fn usr_command_bitlen(&mut self) -> USR_COMMAND_BITLEN_W {
-        USR_COMMAND_BITLEN_W { w: self }
+        USR_COMMAND_BITLEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

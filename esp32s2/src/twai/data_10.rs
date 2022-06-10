@@ -20,22 +20,12 @@ impl From<crate::W<DATA_10_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_BYTE_10` writer - Stored the 10th byte information of the data to be transmitted under operating mode."]
-pub struct TX_BYTE_10_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_BYTE_10_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type TX_BYTE_10_W<'a> = crate::FieldWriter<'a, u32, DATA_10_SPEC, u8, u8, 8, 0>;
 impl W {
     #[doc = "Bits 0:7 - Stored the 10th byte information of the data to be transmitted under operating mode."]
     #[inline(always)]
     pub fn tx_byte_10(&mut self) -> TX_BYTE_10_W {
-        TX_BYTE_10_W { w: self }
+        TX_BYTE_10_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

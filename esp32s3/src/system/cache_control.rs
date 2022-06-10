@@ -35,153 +35,21 @@ impl From<crate::W<CACHE_CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_CLK_ON` reader - Set 1 to enable icache clock"]
-pub struct ICACHE_CLK_ON_R(crate::FieldReader<bool>);
-impl ICACHE_CLK_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_CLK_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_CLK_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_CLK_ON_R = crate::BitReader<bool>;
 #[doc = "Field `ICACHE_CLK_ON` writer - Set 1 to enable icache clock"]
-pub struct ICACHE_CLK_ON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ICACHE_CLK_ON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type ICACHE_CLK_ON_W<'a> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, 0>;
 #[doc = "Field `ICACHE_RESET` reader - Set 1 to let icache reset"]
-pub struct ICACHE_RESET_R(crate::FieldReader<bool>);
-impl ICACHE_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `ICACHE_RESET` writer - Set 1 to let icache reset"]
-pub struct ICACHE_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ICACHE_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ICACHE_RESET_W<'a> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, 1>;
 #[doc = "Field `DCACHE_CLK_ON` reader - Set 1 to enable dcache clock"]
-pub struct DCACHE_CLK_ON_R(crate::FieldReader<bool>);
-impl DCACHE_CLK_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_CLK_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_CLK_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_CLK_ON_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_CLK_ON` writer - Set 1 to enable dcache clock"]
-pub struct DCACHE_CLK_ON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_CLK_ON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type DCACHE_CLK_ON_W<'a> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, 2>;
 #[doc = "Field `DCACHE_RESET` reader - Set 1 to let dcache reset"]
-pub struct DCACHE_RESET_R(crate::FieldReader<bool>);
-impl DCACHE_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_RESET` writer - Set 1 to let dcache reset"]
-pub struct DCACHE_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type DCACHE_RESET_W<'a> = crate::BitWriter<'a, u32, CACHE_CONTROL_SPEC, bool, 3>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable icache clock"]
     #[inline(always)]
@@ -208,22 +76,22 @@ impl W {
     #[doc = "Bit 0 - Set 1 to enable icache clock"]
     #[inline(always)]
     pub fn icache_clk_on(&mut self) -> ICACHE_CLK_ON_W {
-        ICACHE_CLK_ON_W { w: self }
+        ICACHE_CLK_ON_W::new(self)
     }
     #[doc = "Bit 1 - Set 1 to let icache reset"]
     #[inline(always)]
     pub fn icache_reset(&mut self) -> ICACHE_RESET_W {
-        ICACHE_RESET_W { w: self }
+        ICACHE_RESET_W::new(self)
     }
     #[doc = "Bit 2 - Set 1 to enable dcache clock"]
     #[inline(always)]
     pub fn dcache_clk_on(&mut self) -> DCACHE_CLK_ON_W {
-        DCACHE_CLK_ON_W { w: self }
+        DCACHE_CLK_ON_W::new(self)
     }
     #[doc = "Bit 3 - Set 1 to let dcache reset"]
     #[inline(always)]
     pub fn dcache_reset(&mut self) -> DCACHE_RESET_W {
-        DCACHE_RESET_W { w: self }
+        DCACHE_RESET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

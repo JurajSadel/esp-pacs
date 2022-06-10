@@ -35,198 +35,27 @@ impl From<crate::W<TEST_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE` reader - Enable test of the USB pad"]
-pub struct ENABLE_R(crate::FieldReader<bool>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `ENABLE` writer - Enable test of the USB pad"]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type ENABLE_W<'a> = crate::BitWriter<'a, u32, TEST_SPEC, bool, 0>;
 #[doc = "Field `USB_OE` reader - USB pad oen in test"]
-pub struct USB_OE_R(crate::FieldReader<bool>);
-impl USB_OE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_OE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_OE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_OE_R = crate::BitReader<bool>;
 #[doc = "Field `USB_OE` writer - USB pad oen in test"]
-pub struct USB_OE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USB_OE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type USB_OE_W<'a> = crate::BitWriter<'a, u32, TEST_SPEC, bool, 1>;
 #[doc = "Field `TX_DP` reader - USB D+ tx value in test"]
-pub struct TX_DP_R(crate::FieldReader<bool>);
-impl TX_DP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_DP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_DP_R = crate::BitReader<bool>;
 #[doc = "Field `TX_DP` writer - USB D+ tx value in test"]
-pub struct TX_DP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type TX_DP_W<'a> = crate::BitWriter<'a, u32, TEST_SPEC, bool, 2>;
 #[doc = "Field `TX_DM` reader - USB D- tx value in test"]
-pub struct TX_DM_R(crate::FieldReader<bool>);
-impl TX_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_DM_R = crate::BitReader<bool>;
 #[doc = "Field `TX_DM` writer - USB D- tx value in test"]
-pub struct TX_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type TX_DM_W<'a> = crate::BitWriter<'a, u32, TEST_SPEC, bool, 3>;
 #[doc = "Field `RX_RCV` reader - USB differential rx value in test"]
-pub struct RX_RCV_R(crate::FieldReader<bool>);
-impl RX_RCV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_RCV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_RCV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_RCV_R = crate::BitReader<bool>;
 #[doc = "Field `RX_DP` reader - USB D+ rx value in test"]
-pub struct RX_DP_R(crate::FieldReader<bool>);
-impl RX_DP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_DP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_DP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_DP_R = crate::BitReader<bool>;
 #[doc = "Field `RX_DM` reader - USB D- rx value in test"]
-pub struct RX_DM_R(crate::FieldReader<bool>);
-impl RX_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_DM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_DM_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Enable test of the USB pad"]
     #[inline(always)]
@@ -268,22 +97,22 @@ impl W {
     #[doc = "Bit 0 - Enable test of the USB pad"]
     #[inline(always)]
     pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+        ENABLE_W::new(self)
     }
     #[doc = "Bit 1 - USB pad oen in test"]
     #[inline(always)]
     pub fn usb_oe(&mut self) -> USB_OE_W {
-        USB_OE_W { w: self }
+        USB_OE_W::new(self)
     }
     #[doc = "Bit 2 - USB D+ tx value in test"]
     #[inline(always)]
     pub fn tx_dp(&mut self) -> TX_DP_W {
-        TX_DP_W { w: self }
+        TX_DP_W::new(self)
     }
     #[doc = "Bit 3 - USB D- tx value in test"]
     #[inline(always)]
     pub fn tx_dm(&mut self) -> TX_DM_W {
-        TX_DM_W { w: self }
+        TX_DM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

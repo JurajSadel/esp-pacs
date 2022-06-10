@@ -14,50 +14,11 @@ impl From<crate::R<CORE_0_IRAM0_EXCEPTION_MONITOR_1_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_IRAM0_RECORDING_ADDR_1` reader - The second iram0's addr\\[25:2\\] status when trigger IRAM busy interrupt"]
-pub struct CORE_0_IRAM0_RECORDING_ADDR_1_R(crate::FieldReader<u32>);
-impl CORE_0_IRAM0_RECORDING_ADDR_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_0_IRAM0_RECORDING_ADDR_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_IRAM0_RECORDING_ADDR_1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_IRAM0_RECORDING_ADDR_1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_0_IRAM0_RECORDING_WR_1` reader - The second iram0's wr status when trigger IRAM busy interrupt"]
-pub struct CORE_0_IRAM0_RECORDING_WR_1_R(crate::FieldReader<bool>);
-impl CORE_0_IRAM0_RECORDING_WR_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_IRAM0_RECORDING_WR_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_IRAM0_RECORDING_WR_1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_IRAM0_RECORDING_WR_1_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_IRAM0_RECORDING_LOADSTORE_1` reader - The second iram0's loadstore status when trigger IRAM busy interrupt"]
-pub struct CORE_0_IRAM0_RECORDING_LOADSTORE_1_R(crate::FieldReader<bool>);
-impl CORE_0_IRAM0_RECORDING_LOADSTORE_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_IRAM0_RECORDING_LOADSTORE_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_IRAM0_RECORDING_LOADSTORE_1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_IRAM0_RECORDING_LOADSTORE_1_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:23 - The second iram0's addr\\[25:2\\] status when trigger IRAM busy interrupt"]
     #[inline(always)]

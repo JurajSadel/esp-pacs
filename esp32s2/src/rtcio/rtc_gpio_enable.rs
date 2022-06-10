@@ -35,32 +35,10 @@ impl From<crate::W<RTC_GPIO_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `REG_RTCIO_REG_GPIO_ENABLE` reader - GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."]
-pub struct REG_RTCIO_REG_GPIO_ENABLE_R(crate::FieldReader<u32>);
-impl REG_RTCIO_REG_GPIO_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        REG_RTCIO_REG_GPIO_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REG_RTCIO_REG_GPIO_ENABLE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REG_RTCIO_REG_GPIO_ENABLE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `REG_RTCIO_REG_GPIO_ENABLE` writer - GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."]
-pub struct REG_RTCIO_REG_GPIO_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REG_RTCIO_REG_GPIO_ENABLE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x003f_ffff << 10)) | ((value as u32 & 0x003f_ffff) << 10);
-        self.w
-    }
-}
+pub type REG_RTCIO_REG_GPIO_ENABLE_W<'a> =
+    crate::FieldWriter<'a, u32, RTC_GPIO_ENABLE_SPEC, u32, u32, 22, 10>;
 impl R {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 output enable. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc. If the bit is set to 1, it means this GPIO pad is output."]
     #[inline(always)]
     pub fn reg_rtcio_reg_gpio_enable(&mut self) -> REG_RTCIO_REG_GPIO_ENABLE_W {
-        REG_RTCIO_REG_GPIO_ENABLE_W { w: self }
+        REG_RTCIO_REG_GPIO_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

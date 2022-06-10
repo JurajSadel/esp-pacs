@@ -35,301 +35,37 @@ impl From<crate::W<OUT_INT_ENA_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_DONE_CH_INT_ENA` reader - The interrupt enable bit for the OUT_DONE_CH_INT interrupt."]
-pub struct OUT_DONE_CH_INT_ENA_R(crate::FieldReader<bool>);
-impl OUT_DONE_CH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DONE_CH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DONE_CH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DONE_CH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DONE_CH_INT_ENA` writer - The interrupt enable bit for the OUT_DONE_CH_INT interrupt."]
-pub struct OUT_DONE_CH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_DONE_CH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type OUT_DONE_CH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, OUT_INT_ENA_CH_SPEC, bool, 0>;
 #[doc = "Field `OUT_EOF_CH_INT_ENA` reader - The interrupt enable bit for the OUT_EOF_CH_INT interrupt."]
-pub struct OUT_EOF_CH_INT_ENA_R(crate::FieldReader<bool>);
-impl OUT_EOF_CH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EOF_CH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EOF_CH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EOF_CH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EOF_CH_INT_ENA` writer - The interrupt enable bit for the OUT_EOF_CH_INT interrupt."]
-pub struct OUT_EOF_CH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_EOF_CH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type OUT_EOF_CH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, OUT_INT_ENA_CH_SPEC, bool, 1>;
 #[doc = "Field `OUT_DSCR_ERR_CH_INT_ENA` reader - The interrupt enable bit for the OUT_DSCR_ERR_CH_INT interrupt."]
-pub struct OUT_DSCR_ERR_CH_INT_ENA_R(crate::FieldReader<bool>);
-impl OUT_DSCR_ERR_CH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DSCR_ERR_CH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DSCR_ERR_CH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DSCR_ERR_CH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DSCR_ERR_CH_INT_ENA` writer - The interrupt enable bit for the OUT_DSCR_ERR_CH_INT interrupt."]
-pub struct OUT_DSCR_ERR_CH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_DSCR_ERR_CH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type OUT_DSCR_ERR_CH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, OUT_INT_ENA_CH_SPEC, bool, 2>;
 #[doc = "Field `OUT_TOTAL_EOF_CH_INT_ENA` reader - The interrupt enable bit for the OUT_TOTAL_EOF_CH_INT interrupt."]
-pub struct OUT_TOTAL_EOF_CH_INT_ENA_R(crate::FieldReader<bool>);
-impl OUT_TOTAL_EOF_CH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_TOTAL_EOF_CH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_TOTAL_EOF_CH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_TOTAL_EOF_CH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_TOTAL_EOF_CH_INT_ENA` writer - The interrupt enable bit for the OUT_TOTAL_EOF_CH_INT interrupt."]
-pub struct OUT_TOTAL_EOF_CH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_TOTAL_EOF_CH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type OUT_TOTAL_EOF_CH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, OUT_INT_ENA_CH_SPEC, bool, 3>;
 #[doc = "Field `OUTFIFO_OVF_L1_CH_INT_ENA` reader - The interrupt enable bit for the OUTFIFO_OVF_L1_CH_INT interrupt."]
-pub struct OUTFIFO_OVF_L1_CH_INT_ENA_R(crate::FieldReader<bool>);
-impl OUTFIFO_OVF_L1_CH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTFIFO_OVF_L1_CH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTFIFO_OVF_L1_CH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTFIFO_OVF_L1_CH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `OUTFIFO_OVF_L1_CH_INT_ENA` writer - The interrupt enable bit for the OUTFIFO_OVF_L1_CH_INT interrupt."]
-pub struct OUTFIFO_OVF_L1_CH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTFIFO_OVF_L1_CH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type OUTFIFO_OVF_L1_CH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, OUT_INT_ENA_CH_SPEC, bool, 4>;
 #[doc = "Field `OUTFIFO_UDF_L1_CH_INT_ENA` reader - The interrupt enable bit for the OUTFIFO_UDF_L1_CH_INT interrupt."]
-pub struct OUTFIFO_UDF_L1_CH_INT_ENA_R(crate::FieldReader<bool>);
-impl OUTFIFO_UDF_L1_CH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTFIFO_UDF_L1_CH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTFIFO_UDF_L1_CH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTFIFO_UDF_L1_CH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `OUTFIFO_UDF_L1_CH_INT_ENA` writer - The interrupt enable bit for the OUTFIFO_UDF_L1_CH_INT interrupt."]
-pub struct OUTFIFO_UDF_L1_CH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTFIFO_UDF_L1_CH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type OUTFIFO_UDF_L1_CH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, OUT_INT_ENA_CH_SPEC, bool, 5>;
 #[doc = "Field `OUTFIFO_OVF_L3_CH_INT_ENA` reader - The interrupt enable bit for the OUTFIFO_OVF_L3_CH_INT interrupt."]
-pub struct OUTFIFO_OVF_L3_CH_INT_ENA_R(crate::FieldReader<bool>);
-impl OUTFIFO_OVF_L3_CH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTFIFO_OVF_L3_CH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTFIFO_OVF_L3_CH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTFIFO_OVF_L3_CH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `OUTFIFO_OVF_L3_CH_INT_ENA` writer - The interrupt enable bit for the OUTFIFO_OVF_L3_CH_INT interrupt."]
-pub struct OUTFIFO_OVF_L3_CH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTFIFO_OVF_L3_CH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type OUTFIFO_OVF_L3_CH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, OUT_INT_ENA_CH_SPEC, bool, 6>;
 #[doc = "Field `OUTFIFO_UDF_L3_CH_INT_ENA` reader - The interrupt enable bit for the OUTFIFO_UDF_L3_CH_INT interrupt."]
-pub struct OUTFIFO_UDF_L3_CH_INT_ENA_R(crate::FieldReader<bool>);
-impl OUTFIFO_UDF_L3_CH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTFIFO_UDF_L3_CH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTFIFO_UDF_L3_CH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTFIFO_UDF_L3_CH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `OUTFIFO_UDF_L3_CH_INT_ENA` writer - The interrupt enable bit for the OUTFIFO_UDF_L3_CH_INT interrupt."]
-pub struct OUTFIFO_UDF_L3_CH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTFIFO_UDF_L3_CH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type OUTFIFO_UDF_L3_CH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, OUT_INT_ENA_CH_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the OUT_DONE_CH_INT interrupt."]
     #[inline(always)]
@@ -376,42 +112,42 @@ impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the OUT_DONE_CH_INT interrupt."]
     #[inline(always)]
     pub fn out_done_ch_int_ena(&mut self) -> OUT_DONE_CH_INT_ENA_W {
-        OUT_DONE_CH_INT_ENA_W { w: self }
+        OUT_DONE_CH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the OUT_EOF_CH_INT interrupt."]
     #[inline(always)]
     pub fn out_eof_ch_int_ena(&mut self) -> OUT_EOF_CH_INT_ENA_W {
-        OUT_EOF_CH_INT_ENA_W { w: self }
+        OUT_EOF_CH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the OUT_DSCR_ERR_CH_INT interrupt."]
     #[inline(always)]
     pub fn out_dscr_err_ch_int_ena(&mut self) -> OUT_DSCR_ERR_CH_INT_ENA_W {
-        OUT_DSCR_ERR_CH_INT_ENA_W { w: self }
+        OUT_DSCR_ERR_CH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the OUT_TOTAL_EOF_CH_INT interrupt."]
     #[inline(always)]
     pub fn out_total_eof_ch_int_ena(&mut self) -> OUT_TOTAL_EOF_CH_INT_ENA_W {
-        OUT_TOTAL_EOF_CH_INT_ENA_W { w: self }
+        OUT_TOTAL_EOF_CH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The interrupt enable bit for the OUTFIFO_OVF_L1_CH_INT interrupt."]
     #[inline(always)]
     pub fn outfifo_ovf_l1_ch_int_ena(&mut self) -> OUTFIFO_OVF_L1_CH_INT_ENA_W {
-        OUTFIFO_OVF_L1_CH_INT_ENA_W { w: self }
+        OUTFIFO_OVF_L1_CH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The interrupt enable bit for the OUTFIFO_UDF_L1_CH_INT interrupt."]
     #[inline(always)]
     pub fn outfifo_udf_l1_ch_int_ena(&mut self) -> OUTFIFO_UDF_L1_CH_INT_ENA_W {
-        OUTFIFO_UDF_L1_CH_INT_ENA_W { w: self }
+        OUTFIFO_UDF_L1_CH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The interrupt enable bit for the OUTFIFO_OVF_L3_CH_INT interrupt."]
     #[inline(always)]
     pub fn outfifo_ovf_l3_ch_int_ena(&mut self) -> OUTFIFO_OVF_L3_CH_INT_ENA_W {
-        OUTFIFO_OVF_L3_CH_INT_ENA_W { w: self }
+        OUTFIFO_OVF_L3_CH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The interrupt enable bit for the OUTFIFO_UDF_L3_CH_INT interrupt."]
     #[inline(always)]
     pub fn outfifo_udf_l3_ch_int_ena(&mut self) -> OUTFIFO_UDF_L3_CH_INT_ENA_W {
-        OUTFIFO_UDF_L3_CH_INT_ENA_W { w: self }
+        OUTFIFO_UDF_L3_CH_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

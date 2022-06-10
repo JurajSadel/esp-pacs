@@ -14,35 +14,9 @@ impl From<crate::R<TIMER1_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER1_VALUE` reader - "]
-pub struct TIMER1_VALUE_R(crate::FieldReader<u16>);
-impl TIMER1_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TIMER1_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER1_VALUE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER1_VALUE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIMER1_DIRECTION` reader - "]
-pub struct TIMER1_DIRECTION_R(crate::FieldReader<bool>);
-impl TIMER1_DIRECTION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER1_DIRECTION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER1_DIRECTION_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER1_DIRECTION_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

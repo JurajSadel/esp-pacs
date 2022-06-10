@@ -35,32 +35,9 @@ impl From<crate::W<TLOADHI_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_LOAD_HI` reader - High 32 bits of the value that a reload will load onto timer %s time-base counter."]
-pub struct T0_LOAD_HI_R(crate::FieldReader<u32>);
-impl T0_LOAD_HI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        T0_LOAD_HI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_LOAD_HI_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_LOAD_HI_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `T0_LOAD_HI` writer - High 32 bits of the value that a reload will load onto timer %s time-base counter."]
-pub struct T0_LOAD_HI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_LOAD_HI_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type T0_LOAD_HI_W<'a> = crate::FieldWriter<'a, u32, TLOADHI_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - High 32 bits of the value that a reload will load onto timer %s time-base counter."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - High 32 bits of the value that a reload will load onto timer %s time-base counter."]
     #[inline(always)]
     pub fn t0_load_hi(&mut self) -> T0_LOAD_HI_W {
-        T0_LOAD_HI_W { w: self }
+        T0_LOAD_HI_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

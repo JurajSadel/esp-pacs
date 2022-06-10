@@ -35,268 +35,33 @@ impl From<crate::W<CH2CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_EN` reader - reg_rx_en_ch2."]
-pub struct RX_EN_R(crate::FieldReader<bool>);
-impl RX_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RX_EN` writer - reg_rx_en_ch2."]
-pub struct RX_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type RX_EN_W<'a> = crate::BitWriter<'a, u32, CH2CONF1_SPEC, bool, 0>;
 #[doc = "Field `MEM_WR_RST` writer - reg_mem_wr_rst_ch2."]
-pub struct MEM_WR_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_WR_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MEM_WR_RST_W<'a> = crate::BitWriter<'a, u32, CH2CONF1_SPEC, bool, 1>;
 #[doc = "Field `APB_MEM_RST` writer - reg_apb_mem_rst_ch2."]
-pub struct APB_MEM_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_MEM_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type APB_MEM_RST_W<'a> = crate::BitWriter<'a, u32, CH2CONF1_SPEC, bool, 2>;
 #[doc = "Field `MEM_OWNER` reader - reg_mem_owner_ch2."]
-pub struct MEM_OWNER_R(crate::FieldReader<bool>);
-impl MEM_OWNER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_OWNER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_OWNER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_OWNER_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_OWNER` writer - reg_mem_owner_ch2."]
-pub struct MEM_OWNER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_OWNER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type MEM_OWNER_W<'a> = crate::BitWriter<'a, u32, CH2CONF1_SPEC, bool, 3>;
 #[doc = "Field `RX_FILTER_EN` reader - reg_rx_filter_en_ch2."]
-pub struct RX_FILTER_EN_R(crate::FieldReader<bool>);
-impl RX_FILTER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_FILTER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_FILTER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_FILTER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RX_FILTER_EN` writer - reg_rx_filter_en_ch2."]
-pub struct RX_FILTER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_FILTER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type RX_FILTER_EN_W<'a> = crate::BitWriter<'a, u32, CH2CONF1_SPEC, bool, 4>;
 #[doc = "Field `RX_FILTER_THRES` reader - reg_rx_filter_thres_ch2."]
-pub struct RX_FILTER_THRES_R(crate::FieldReader<u8>);
-impl RX_FILTER_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_FILTER_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_FILTER_THRES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_FILTER_THRES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_FILTER_THRES` writer - reg_rx_filter_thres_ch2."]
-pub struct RX_FILTER_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_FILTER_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 5)) | ((value as u32 & 0xff) << 5);
-        self.w
-    }
-}
+pub type RX_FILTER_THRES_W<'a> = crate::FieldWriter<'a, u32, CH2CONF1_SPEC, u8, u8, 8, 5>;
 #[doc = "Field `MEM_RX_WRAP_EN` reader - reg_mem_rx_wrap_en_ch2."]
-pub struct MEM_RX_WRAP_EN_R(crate::FieldReader<bool>);
-impl MEM_RX_WRAP_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_RX_WRAP_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_RX_WRAP_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_RX_WRAP_EN_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_RX_WRAP_EN` writer - reg_mem_rx_wrap_en_ch2."]
-pub struct MEM_RX_WRAP_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_RX_WRAP_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type MEM_RX_WRAP_EN_W<'a> = crate::BitWriter<'a, u32, CH2CONF1_SPEC, bool, 13>;
 #[doc = "Field `AFIFO_RST` writer - reg_afifo_rst_ch2."]
-pub struct AFIFO_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AFIFO_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type AFIFO_RST_W<'a> = crate::BitWriter<'a, u32, CH2CONF1_SPEC, bool, 14>;
 #[doc = "Field `CONF_UPDATE` writer - reg_conf_update_ch2."]
-pub struct CONF_UPDATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONF_UPDATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type CONF_UPDATE_W<'a> = crate::BitWriter<'a, u32, CH2CONF1_SPEC, bool, 15>;
 impl R {
     #[doc = "Bit 0 - reg_rx_en_ch2."]
     #[inline(always)]
@@ -328,47 +93,47 @@ impl W {
     #[doc = "Bit 0 - reg_rx_en_ch2."]
     #[inline(always)]
     pub fn rx_en(&mut self) -> RX_EN_W {
-        RX_EN_W { w: self }
+        RX_EN_W::new(self)
     }
     #[doc = "Bit 1 - reg_mem_wr_rst_ch2."]
     #[inline(always)]
     pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W {
-        MEM_WR_RST_W { w: self }
+        MEM_WR_RST_W::new(self)
     }
     #[doc = "Bit 2 - reg_apb_mem_rst_ch2."]
     #[inline(always)]
     pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W {
-        APB_MEM_RST_W { w: self }
+        APB_MEM_RST_W::new(self)
     }
     #[doc = "Bit 3 - reg_mem_owner_ch2."]
     #[inline(always)]
     pub fn mem_owner(&mut self) -> MEM_OWNER_W {
-        MEM_OWNER_W { w: self }
+        MEM_OWNER_W::new(self)
     }
     #[doc = "Bit 4 - reg_rx_filter_en_ch2."]
     #[inline(always)]
     pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W {
-        RX_FILTER_EN_W { w: self }
+        RX_FILTER_EN_W::new(self)
     }
     #[doc = "Bits 5:12 - reg_rx_filter_thres_ch2."]
     #[inline(always)]
     pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W {
-        RX_FILTER_THRES_W { w: self }
+        RX_FILTER_THRES_W::new(self)
     }
     #[doc = "Bit 13 - reg_mem_rx_wrap_en_ch2."]
     #[inline(always)]
     pub fn mem_rx_wrap_en(&mut self) -> MEM_RX_WRAP_EN_W {
-        MEM_RX_WRAP_EN_W { w: self }
+        MEM_RX_WRAP_EN_W::new(self)
     }
     #[doc = "Bit 14 - reg_afifo_rst_ch2."]
     #[inline(always)]
     pub fn afifo_rst(&mut self) -> AFIFO_RST_W {
-        AFIFO_RST_W { w: self }
+        AFIFO_RST_W::new(self)
     }
     #[doc = "Bit 15 - reg_conf_update_ch2."]
     #[inline(always)]
     pub fn conf_update(&mut self) -> CONF_UPDATE_W {
-        CONF_UPDATE_W { w: self }
+        CONF_UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

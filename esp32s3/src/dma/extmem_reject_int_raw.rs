@@ -14,20 +14,7 @@ impl From<crate::R<EXTMEM_REJECT_INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `EXTMEM_REJECT_INT_RAW` reader - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
-pub struct EXTMEM_REJECT_INT_RAW_R(crate::FieldReader<bool>);
-impl EXTMEM_REJECT_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXTMEM_REJECT_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTMEM_REJECT_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTMEM_REJECT_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
     #[inline(always)]

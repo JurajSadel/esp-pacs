@@ -35,32 +35,9 @@ impl From<crate::W<TIMER_LOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `VALUE` reader - "]
-pub struct VALUE_R(crate::FieldReader<u8>);
-impl VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VALUE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VALUE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VALUE` writer - "]
-pub struct VALUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VALUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type VALUE_W<'a> = crate::FieldWriter<'a, u32, TIMER_LOAD_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn value(&mut self) -> VALUE_W {
-        VALUE_W { w: self }
+        VALUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

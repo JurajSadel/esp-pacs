@@ -14,20 +14,7 @@ impl From<crate::R<LSCH3_DUTY_R_SPEC>> for R {
     }
 }
 #[doc = "Field `DUTY_LSCH3_R` reader - reg_duty_lsch3_r."]
-pub struct DUTY_LSCH3_R_R(crate::FieldReader<u32>);
-impl DUTY_LSCH3_R_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DUTY_LSCH3_R_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_LSCH3_R_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_LSCH3_R_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:18 - reg_duty_lsch3_r."]
     #[inline(always)]

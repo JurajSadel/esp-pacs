@@ -35,32 +35,10 @@ impl From<crate::W<PRO_DCACHE_AUTOLOAD_SECTION1_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DCACHE_AUTOLOAD_SCT1_SIZE` reader - The bits are used to configure the length of the second section for conditional pre-load operation. It should be combined with pro_dcache_autoload_sct1_ena."]
-pub struct PRO_DCACHE_AUTOLOAD_SCT1_SIZE_R(crate::FieldReader<u32>);
-impl PRO_DCACHE_AUTOLOAD_SCT1_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PRO_DCACHE_AUTOLOAD_SCT1_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_AUTOLOAD_SCT1_SIZE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_AUTOLOAD_SCT1_SIZE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRO_DCACHE_AUTOLOAD_SCT1_SIZE` writer - The bits are used to configure the length of the second section for conditional pre-load operation. It should be combined with pro_dcache_autoload_sct1_ena."]
-pub struct PRO_DCACHE_AUTOLOAD_SCT1_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_AUTOLOAD_SCT1_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
-        self.w
-    }
-}
+pub type PRO_DCACHE_AUTOLOAD_SCT1_SIZE_W<'a> =
+    crate::FieldWriter<'a, u32, PRO_DCACHE_AUTOLOAD_SECTION1_SIZE_SPEC, u32, u32, 24, 0>;
 impl R {
     #[doc = "Bits 0:23 - The bits are used to configure the length of the second section for conditional pre-load operation. It should be combined with pro_dcache_autoload_sct1_ena."]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:23 - The bits are used to configure the length of the second section for conditional pre-load operation. It should be combined with pro_dcache_autoload_sct1_ena."]
     #[inline(always)]
     pub fn pro_dcache_autoload_sct1_size(&mut self) -> PRO_DCACHE_AUTOLOAD_SCT1_SIZE_W {
-        PRO_DCACHE_AUTOLOAD_SCT1_SIZE_W { w: self }
+        PRO_DCACHE_AUTOLOAD_SCT1_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

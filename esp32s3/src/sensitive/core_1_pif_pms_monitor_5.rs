@@ -14,50 +14,11 @@ impl From<crate::R<CORE_1_PIF_PMS_MONITOR_5_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR` reader - Record core1 unsupported access type interrupt state."]
-pub struct CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R(crate::FieldReader<bool>);
-impl CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_INTR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE` reader - Record access type when core1 initiate unsupported access type."]
-pub struct CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R(crate::FieldReader<u8>);
-impl CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HSIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD` reader - Record world information when core1 initiate unsupported access type."]
-pub struct CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R(crate::FieldReader<u8>);
-impl CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_PIF_PMS_MONITOR_NONWORD_VIOLATE_STATUS_HWORLD_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - Record core1 unsupported access type interrupt state."]
     #[inline(always)]

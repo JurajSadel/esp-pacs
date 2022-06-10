@@ -14,95 +14,17 @@ impl From<crate::R<DMA_INSTATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_INDSCR_ADDR` reader - SPI dma in descriptor address."]
-pub struct DMA_INDSCR_ADDR_R(crate::FieldReader<u32>);
-impl DMA_INDSCR_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DMA_INDSCR_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_INDSCR_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_INDSCR_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DMA_INDSCR_STATE` reader - SPI dma in descriptor state."]
-pub struct DMA_INDSCR_STATE_R(crate::FieldReader<u8>);
-impl DMA_INDSCR_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_INDSCR_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_INDSCR_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_INDSCR_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_IN_STATE` reader - SPI dma in data state."]
-pub struct DMA_IN_STATE_R(crate::FieldReader<u8>);
-impl DMA_IN_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_IN_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_IN_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_IN_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_INFIFO_CNT` reader - The remains of SPI dma infifo data."]
-pub struct DMA_INFIFO_CNT_R(crate::FieldReader<u8>);
-impl DMA_INFIFO_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_INFIFO_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_INFIFO_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_INFIFO_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_INFIFO_FULL` reader - SPI dma infifo is full."]
-pub struct DMA_INFIFO_FULL_R(crate::FieldReader<bool>);
-impl DMA_INFIFO_FULL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_INFIFO_FULL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_INFIFO_FULL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_INFIFO_FULL_R = crate::BitReader<bool>;
 #[doc = "Field `DMA_INFIFO_EMPTY` reader - SPI dma infifo is empty."]
-pub struct DMA_INFIFO_EMPTY_R(crate::FieldReader<bool>);
-impl DMA_INFIFO_EMPTY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DMA_INFIFO_EMPTY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_INFIFO_EMPTY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_INFIFO_EMPTY_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:17 - SPI dma in descriptor address."]
     #[inline(always)]

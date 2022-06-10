@@ -35,32 +35,9 @@ impl From<crate::W<OCCUPY_1_SPEC>> for W {
     }
 }
 #[doc = "Field `OCCUPY_CACHE` reader - Configure whether SRAM Block 0-3 is used as cache memory."]
-pub struct OCCUPY_CACHE_R(crate::FieldReader<u8>);
-impl OCCUPY_CACHE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OCCUPY_CACHE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OCCUPY_CACHE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OCCUPY_CACHE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OCCUPY_CACHE` writer - Configure whether SRAM Block 0-3 is used as cache memory."]
-pub struct OCCUPY_CACHE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OCCUPY_CACHE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type OCCUPY_CACHE_W<'a> = crate::FieldWriter<'a, u32, OCCUPY_1_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 0-3 is used as cache memory."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 0-3 is used as cache memory."]
     #[inline(always)]
     pub fn occupy_cache(&mut self) -> OCCUPY_CACHE_W {
-        OCCUPY_CACHE_W { w: self }
+        OCCUPY_CACHE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

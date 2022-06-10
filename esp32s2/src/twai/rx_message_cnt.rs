@@ -14,20 +14,7 @@ impl From<crate::R<RX_MESSAGE_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_MESSAGE_COUNTER` reader - This register reflects the number of messages available within the RX FIFO."]
-pub struct RX_MESSAGE_COUNTER_R(crate::FieldReader<u8>);
-impl RX_MESSAGE_COUNTER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_MESSAGE_COUNTER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_MESSAGE_COUNTER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_MESSAGE_COUNTER_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:6 - This register reflects the number of messages available within the RX FIFO."]
     #[inline(always)]

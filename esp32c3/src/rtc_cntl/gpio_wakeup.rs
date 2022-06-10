@@ -35,478 +35,68 @@ impl From<crate::W<GPIO_WAKEUP_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_GPIO_WAKEUP_STATUS` reader - rtc gpio wakeup flag"]
-pub struct RTC_GPIO_WAKEUP_STATUS_R(crate::FieldReader<u8>);
-impl RTC_GPIO_WAKEUP_STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_WAKEUP_STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_WAKEUP_STATUS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_WAKEUP_STATUS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_WAKEUP_STATUS_CLR` reader - clear rtc gpio wakeup flag"]
-pub struct RTC_GPIO_WAKEUP_STATUS_CLR_R(crate::FieldReader<bool>);
-impl RTC_GPIO_WAKEUP_STATUS_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_WAKEUP_STATUS_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_WAKEUP_STATUS_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_WAKEUP_STATUS_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_WAKEUP_STATUS_CLR` writer - clear rtc gpio wakeup flag"]
-pub struct RTC_GPIO_WAKEUP_STATUS_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_WAKEUP_STATUS_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type RTC_GPIO_WAKEUP_STATUS_CLR_W<'a> = crate::BitWriter<'a, u32, GPIO_WAKEUP_SPEC, bool, 6>;
 #[doc = "Field `RTC_GPIO_PIN_CLK_GATE` reader - enable rtc io clk gate"]
-pub struct RTC_GPIO_PIN_CLK_GATE_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN_CLK_GATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN_CLK_GATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN_CLK_GATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN_CLK_GATE_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN_CLK_GATE` writer - enable rtc io clk gate"]
-pub struct RTC_GPIO_PIN_CLK_GATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN_CLK_GATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN_CLK_GATE_W<'a> = crate::BitWriter<'a, u32, GPIO_WAKEUP_SPEC, bool, 7>;
 #[doc = "Field `RTC_GPIO_PIN5_INT_TYPE` reader - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN5_INT_TYPE_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN5_INT_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN5_INT_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN5_INT_TYPE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN5_INT_TYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN5_INT_TYPE` writer - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN5_INT_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN5_INT_TYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 8)) | ((value as u32 & 7) << 8);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN5_INT_TYPE_W<'a> = crate::FieldWriter<'a, u32, GPIO_WAKEUP_SPEC, u8, u8, 3, 8>;
 #[doc = "Field `RTC_GPIO_PIN4_INT_TYPE` reader - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN4_INT_TYPE_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN4_INT_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN4_INT_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN4_INT_TYPE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN4_INT_TYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN4_INT_TYPE` writer - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN4_INT_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN4_INT_TYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN4_INT_TYPE_W<'a> =
+    crate::FieldWriter<'a, u32, GPIO_WAKEUP_SPEC, u8, u8, 3, 11>;
 #[doc = "Field `RTC_GPIO_PIN3_INT_TYPE` reader - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN3_INT_TYPE_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN3_INT_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN3_INT_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN3_INT_TYPE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN3_INT_TYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN3_INT_TYPE` writer - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN3_INT_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN3_INT_TYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 14)) | ((value as u32 & 7) << 14);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN3_INT_TYPE_W<'a> =
+    crate::FieldWriter<'a, u32, GPIO_WAKEUP_SPEC, u8, u8, 3, 14>;
 #[doc = "Field `RTC_GPIO_PIN2_INT_TYPE` reader - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN2_INT_TYPE_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN2_INT_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN2_INT_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN2_INT_TYPE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN2_INT_TYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN2_INT_TYPE` writer - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN2_INT_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN2_INT_TYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 17)) | ((value as u32 & 7) << 17);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN2_INT_TYPE_W<'a> =
+    crate::FieldWriter<'a, u32, GPIO_WAKEUP_SPEC, u8, u8, 3, 17>;
 #[doc = "Field `RTC_GPIO_PIN1_INT_TYPE` reader - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN1_INT_TYPE_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN1_INT_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN1_INT_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN1_INT_TYPE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN1_INT_TYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN1_INT_TYPE` writer - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN1_INT_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN1_INT_TYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 20)) | ((value as u32 & 7) << 20);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN1_INT_TYPE_W<'a> =
+    crate::FieldWriter<'a, u32, GPIO_WAKEUP_SPEC, u8, u8, 3, 20>;
 #[doc = "Field `RTC_GPIO_PIN0_INT_TYPE` reader - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN0_INT_TYPE_R(crate::FieldReader<u8>);
-impl RTC_GPIO_PIN0_INT_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_GPIO_PIN0_INT_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN0_INT_TYPE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN0_INT_TYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_GPIO_PIN0_INT_TYPE` writer - configure gpio wakeup type"]
-pub struct RTC_GPIO_PIN0_INT_TYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN0_INT_TYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 23)) | ((value as u32 & 7) << 23);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN0_INT_TYPE_W<'a> =
+    crate::FieldWriter<'a, u32, GPIO_WAKEUP_SPEC, u8, u8, 3, 23>;
 #[doc = "Field `RTC_GPIO_PIN5_WAKEUP_ENABLE` reader - enable wakeup from rtc gpio5"]
-pub struct RTC_GPIO_PIN5_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN5_WAKEUP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN5_WAKEUP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN5_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN5_WAKEUP_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN5_WAKEUP_ENABLE` writer - enable wakeup from rtc gpio5"]
-pub struct RTC_GPIO_PIN5_WAKEUP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN5_WAKEUP_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN5_WAKEUP_ENABLE_W<'a> = crate::BitWriter<'a, u32, GPIO_WAKEUP_SPEC, bool, 26>;
 #[doc = "Field `RTC_GPIO_PIN4_WAKEUP_ENABLE` reader - enable wakeup from rtc gpio4"]
-pub struct RTC_GPIO_PIN4_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN4_WAKEUP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN4_WAKEUP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN4_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN4_WAKEUP_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN4_WAKEUP_ENABLE` writer - enable wakeup from rtc gpio4"]
-pub struct RTC_GPIO_PIN4_WAKEUP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN4_WAKEUP_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN4_WAKEUP_ENABLE_W<'a> = crate::BitWriter<'a, u32, GPIO_WAKEUP_SPEC, bool, 27>;
 #[doc = "Field `RTC_GPIO_PIN3_WAKEUP_ENABLE` reader - enable wakeup from rtc gpio3"]
-pub struct RTC_GPIO_PIN3_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN3_WAKEUP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN3_WAKEUP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN3_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN3_WAKEUP_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN3_WAKEUP_ENABLE` writer - enable wakeup from rtc gpio3"]
-pub struct RTC_GPIO_PIN3_WAKEUP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN3_WAKEUP_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN3_WAKEUP_ENABLE_W<'a> = crate::BitWriter<'a, u32, GPIO_WAKEUP_SPEC, bool, 28>;
 #[doc = "Field `RTC_GPIO_PIN2_WAKEUP_ENABLE` reader - enable wakeup from rtc gpio2"]
-pub struct RTC_GPIO_PIN2_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN2_WAKEUP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN2_WAKEUP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN2_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN2_WAKEUP_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN2_WAKEUP_ENABLE` writer - enable wakeup from rtc gpio2"]
-pub struct RTC_GPIO_PIN2_WAKEUP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN2_WAKEUP_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN2_WAKEUP_ENABLE_W<'a> = crate::BitWriter<'a, u32, GPIO_WAKEUP_SPEC, bool, 29>;
 #[doc = "Field `RTC_GPIO_PIN1_WAKEUP_ENABLE` reader - enable wakeup from rtc gpio1"]
-pub struct RTC_GPIO_PIN1_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN1_WAKEUP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN1_WAKEUP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN1_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN1_WAKEUP_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN1_WAKEUP_ENABLE` writer - enable wakeup from rtc gpio1"]
-pub struct RTC_GPIO_PIN1_WAKEUP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN1_WAKEUP_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN1_WAKEUP_ENABLE_W<'a> = crate::BitWriter<'a, u32, GPIO_WAKEUP_SPEC, bool, 30>;
 #[doc = "Field `RTC_GPIO_PIN0_WAKEUP_ENABLE` reader - enable wakeup from rtc gpio0"]
-pub struct RTC_GPIO_PIN0_WAKEUP_ENABLE_R(crate::FieldReader<bool>);
-impl RTC_GPIO_PIN0_WAKEUP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GPIO_PIN0_WAKEUP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_PIN0_WAKEUP_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_PIN0_WAKEUP_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GPIO_PIN0_WAKEUP_ENABLE` writer - enable wakeup from rtc gpio0"]
-pub struct RTC_GPIO_PIN0_WAKEUP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_PIN0_WAKEUP_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type RTC_GPIO_PIN0_WAKEUP_ENABLE_W<'a> = crate::BitWriter<'a, u32, GPIO_WAKEUP_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:5 - rtc gpio wakeup flag"]
     #[inline(always)]
@@ -588,72 +178,72 @@ impl W {
     #[doc = "Bit 6 - clear rtc gpio wakeup flag"]
     #[inline(always)]
     pub fn rtc_gpio_wakeup_status_clr(&mut self) -> RTC_GPIO_WAKEUP_STATUS_CLR_W {
-        RTC_GPIO_WAKEUP_STATUS_CLR_W { w: self }
+        RTC_GPIO_WAKEUP_STATUS_CLR_W::new(self)
     }
     #[doc = "Bit 7 - enable rtc io clk gate"]
     #[inline(always)]
     pub fn rtc_gpio_pin_clk_gate(&mut self) -> RTC_GPIO_PIN_CLK_GATE_W {
-        RTC_GPIO_PIN_CLK_GATE_W { w: self }
+        RTC_GPIO_PIN_CLK_GATE_W::new(self)
     }
     #[doc = "Bits 8:10 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin5_int_type(&mut self) -> RTC_GPIO_PIN5_INT_TYPE_W {
-        RTC_GPIO_PIN5_INT_TYPE_W { w: self }
+        RTC_GPIO_PIN5_INT_TYPE_W::new(self)
     }
     #[doc = "Bits 11:13 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin4_int_type(&mut self) -> RTC_GPIO_PIN4_INT_TYPE_W {
-        RTC_GPIO_PIN4_INT_TYPE_W { w: self }
+        RTC_GPIO_PIN4_INT_TYPE_W::new(self)
     }
     #[doc = "Bits 14:16 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin3_int_type(&mut self) -> RTC_GPIO_PIN3_INT_TYPE_W {
-        RTC_GPIO_PIN3_INT_TYPE_W { w: self }
+        RTC_GPIO_PIN3_INT_TYPE_W::new(self)
     }
     #[doc = "Bits 17:19 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin2_int_type(&mut self) -> RTC_GPIO_PIN2_INT_TYPE_W {
-        RTC_GPIO_PIN2_INT_TYPE_W { w: self }
+        RTC_GPIO_PIN2_INT_TYPE_W::new(self)
     }
     #[doc = "Bits 20:22 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin1_int_type(&mut self) -> RTC_GPIO_PIN1_INT_TYPE_W {
-        RTC_GPIO_PIN1_INT_TYPE_W { w: self }
+        RTC_GPIO_PIN1_INT_TYPE_W::new(self)
     }
     #[doc = "Bits 23:25 - configure gpio wakeup type"]
     #[inline(always)]
     pub fn rtc_gpio_pin0_int_type(&mut self) -> RTC_GPIO_PIN0_INT_TYPE_W {
-        RTC_GPIO_PIN0_INT_TYPE_W { w: self }
+        RTC_GPIO_PIN0_INT_TYPE_W::new(self)
     }
     #[doc = "Bit 26 - enable wakeup from rtc gpio5"]
     #[inline(always)]
     pub fn rtc_gpio_pin5_wakeup_enable(&mut self) -> RTC_GPIO_PIN5_WAKEUP_ENABLE_W {
-        RTC_GPIO_PIN5_WAKEUP_ENABLE_W { w: self }
+        RTC_GPIO_PIN5_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Bit 27 - enable wakeup from rtc gpio4"]
     #[inline(always)]
     pub fn rtc_gpio_pin4_wakeup_enable(&mut self) -> RTC_GPIO_PIN4_WAKEUP_ENABLE_W {
-        RTC_GPIO_PIN4_WAKEUP_ENABLE_W { w: self }
+        RTC_GPIO_PIN4_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Bit 28 - enable wakeup from rtc gpio3"]
     #[inline(always)]
     pub fn rtc_gpio_pin3_wakeup_enable(&mut self) -> RTC_GPIO_PIN3_WAKEUP_ENABLE_W {
-        RTC_GPIO_PIN3_WAKEUP_ENABLE_W { w: self }
+        RTC_GPIO_PIN3_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Bit 29 - enable wakeup from rtc gpio2"]
     #[inline(always)]
     pub fn rtc_gpio_pin2_wakeup_enable(&mut self) -> RTC_GPIO_PIN2_WAKEUP_ENABLE_W {
-        RTC_GPIO_PIN2_WAKEUP_ENABLE_W { w: self }
+        RTC_GPIO_PIN2_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Bit 30 - enable wakeup from rtc gpio1"]
     #[inline(always)]
     pub fn rtc_gpio_pin1_wakeup_enable(&mut self) -> RTC_GPIO_PIN1_WAKEUP_ENABLE_W {
-        RTC_GPIO_PIN1_WAKEUP_ENABLE_W { w: self }
+        RTC_GPIO_PIN1_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Bit 31 - enable wakeup from rtc gpio0"]
     #[inline(always)]
     pub fn rtc_gpio_pin0_wakeup_enable(&mut self) -> RTC_GPIO_PIN0_WAKEUP_ENABLE_W {
-        RTC_GPIO_PIN0_WAKEUP_ENABLE_W { w: self }
+        RTC_GPIO_PIN0_WAKEUP_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

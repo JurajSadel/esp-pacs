@@ -35,234 +35,33 @@ impl From<crate::W<CHCONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `DIV_CNT` reader - This register is used to configure the frequency divider's factor in channel0."]
-pub struct DIV_CNT_R(crate::FieldReader<u8>);
-impl DIV_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DIV_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIV_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIV_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DIV_CNT` writer - This register is used to configure the frequency divider's factor in channel0."]
-pub struct DIV_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIV_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type DIV_CNT_W<'a> = crate::FieldWriter<'a, u32, CHCONF0_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `IDLE_THRES` reader - In receive mode when no edge is detected on the input signal for longer than reg_idle_thres_ch0 then the receive process is done."]
-pub struct IDLE_THRES_R(crate::FieldReader<u16>);
-impl IDLE_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        IDLE_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IDLE_THRES_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IDLE_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `IDLE_THRES` writer - In receive mode when no edge is detected on the input signal for longer than reg_idle_thres_ch0 then the receive process is done."]
-pub struct IDLE_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IDLE_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 8)) | ((value as u32 & 0xffff) << 8);
-        self.w
-    }
-}
+pub type IDLE_THRES_W<'a> = crate::FieldWriter<'a, u32, CHCONF0_SPEC, u16, u16, 16, 8>;
 #[doc = "Field `MEM_SIZE` reader - This register is used to configure the the amount of memory blocks allocated to channel0."]
-pub struct MEM_SIZE_R(crate::FieldReader<u8>);
-impl MEM_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MEM_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_SIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MEM_SIZE` writer - This register is used to configure the the amount of memory blocks allocated to channel0."]
-pub struct MEM_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
-        self.w
-    }
-}
+pub type MEM_SIZE_W<'a> = crate::FieldWriter<'a, u32, CHCONF0_SPEC, u8, u8, 4, 24>;
 #[doc = "Field `CARRIER_EN` reader - This is the carrier modulation enable control bit for channel0."]
-pub struct CARRIER_EN_R(crate::FieldReader<bool>);
-impl CARRIER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARRIER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CARRIER_EN` writer - This is the carrier modulation enable control bit for channel0."]
-pub struct CARRIER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type CARRIER_EN_W<'a> = crate::BitWriter<'a, u32, CHCONF0_SPEC, bool, 28>;
 #[doc = "Field `CARRIER_OUT_LV` reader - This bit is used to configure the way carrier wave is modulated for channel0.1'b1:transmit on low output level 1'b0:transmit on high output level."]
-pub struct CARRIER_OUT_LV_R(crate::FieldReader<bool>);
-impl CARRIER_OUT_LV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARRIER_OUT_LV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER_OUT_LV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER_OUT_LV_R = crate::BitReader<bool>;
 #[doc = "Field `CARRIER_OUT_LV` writer - This bit is used to configure the way carrier wave is modulated for channel0.1'b1:transmit on low output level 1'b0:transmit on high output level."]
-pub struct CARRIER_OUT_LV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER_OUT_LV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type CARRIER_OUT_LV_W<'a> = crate::BitWriter<'a, u32, CHCONF0_SPEC, bool, 29>;
 #[doc = "Field `MEM_PD` reader - This bit is used to reduce power consumed by mem. 1:mem is in low power state."]
-pub struct MEM_PD_R(crate::FieldReader<bool>);
-impl MEM_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_PD_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_PD` writer - This bit is used to reduce power consumed by mem. 1:mem is in low power state."]
-pub struct MEM_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type MEM_PD_W<'a> = crate::BitWriter<'a, u32, CHCONF0_SPEC, bool, 30>;
 #[doc = "Field `CLK_EN` reader - This bit is used to control clock.when software config RMT internal registers it controls the register clock."]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - This bit is used to control clock.when software config RMT internal registers it controls the register clock."]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, CHCONF0_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:7 - This register is used to configure the frequency divider's factor in channel0."]
     #[inline(always)]
@@ -304,37 +103,37 @@ impl W {
     #[doc = "Bits 0:7 - This register is used to configure the frequency divider's factor in channel0."]
     #[inline(always)]
     pub fn div_cnt(&mut self) -> DIV_CNT_W {
-        DIV_CNT_W { w: self }
+        DIV_CNT_W::new(self)
     }
     #[doc = "Bits 8:23 - In receive mode when no edge is detected on the input signal for longer than reg_idle_thres_ch0 then the receive process is done."]
     #[inline(always)]
     pub fn idle_thres(&mut self) -> IDLE_THRES_W {
-        IDLE_THRES_W { w: self }
+        IDLE_THRES_W::new(self)
     }
     #[doc = "Bits 24:27 - This register is used to configure the the amount of memory blocks allocated to channel0."]
     #[inline(always)]
     pub fn mem_size(&mut self) -> MEM_SIZE_W {
-        MEM_SIZE_W { w: self }
+        MEM_SIZE_W::new(self)
     }
     #[doc = "Bit 28 - This is the carrier modulation enable control bit for channel0."]
     #[inline(always)]
     pub fn carrier_en(&mut self) -> CARRIER_EN_W {
-        CARRIER_EN_W { w: self }
+        CARRIER_EN_W::new(self)
     }
     #[doc = "Bit 29 - This bit is used to configure the way carrier wave is modulated for channel0.1'b1:transmit on low output level 1'b0:transmit on high output level."]
     #[inline(always)]
     pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W {
-        CARRIER_OUT_LV_W { w: self }
+        CARRIER_OUT_LV_W::new(self)
     }
     #[doc = "Bit 30 - This bit is used to reduce power consumed by mem. 1:mem is in low power state."]
     #[inline(always)]
     pub fn mem_pd(&mut self) -> MEM_PD_W {
-        MEM_PD_W { w: self }
+        MEM_PD_W::new(self)
     }
     #[doc = "Bit 31 - This bit is used to control clock.when software config RMT internal registers it controls the register clock."]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

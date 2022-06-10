@@ -20,59 +20,19 @@ impl From<crate::W<CACHE_ACS_CNT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_ACS_CNT_CLR` writer - The bit is used to clear dcache counter."]
-pub struct DCACHE_ACS_CNT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_ACS_CNT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DCACHE_ACS_CNT_CLR_W<'a> = crate::BitWriter<'a, u32, CACHE_ACS_CNT_CLR_SPEC, bool, 0>;
 #[doc = "Field `ICACHE_ACS_CNT_CLR` writer - The bit is used to clear icache counter."]
-pub struct ICACHE_ACS_CNT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ICACHE_ACS_CNT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ICACHE_ACS_CNT_CLR_W<'a> = crate::BitWriter<'a, u32, CACHE_ACS_CNT_CLR_SPEC, bool, 1>;
 impl W {
     #[doc = "Bit 0 - The bit is used to clear dcache counter."]
     #[inline(always)]
     pub fn dcache_acs_cnt_clr(&mut self) -> DCACHE_ACS_CNT_CLR_W {
-        DCACHE_ACS_CNT_CLR_W { w: self }
+        DCACHE_ACS_CNT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to clear icache counter."]
     #[inline(always)]
     pub fn icache_acs_cnt_clr(&mut self) -> ICACHE_ACS_CNT_CLR_W {
-        ICACHE_ACS_CNT_CLR_W { w: self }
+        ICACHE_ACS_CNT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

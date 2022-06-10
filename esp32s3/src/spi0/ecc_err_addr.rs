@@ -14,20 +14,7 @@ impl From<crate::R<ECC_ERR_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `ECC_ERR_ADDR` reader - These bits show the first MSPI ECC error address when SPI_FMEM_ECC_ERR_INT_EN/SPI_SMEM_ECC_ERR_INT_EN is set and accessed to flash/Ext_RAM, including ECC byte error and data error. It is cleared by when SPI_MEM_ECC_ERR_INT_CLR bit is set."]
-pub struct ECC_ERR_ADDR_R(crate::FieldReader<u32>);
-impl ECC_ERR_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        ECC_ERR_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ECC_ERR_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ECC_ERR_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - These bits show the first MSPI ECC error address when SPI_FMEM_ECC_ERR_INT_EN/SPI_SMEM_ECC_ERR_INT_EN is set and accessed to flash/Ext_RAM, including ECC byte error and data error. It is cleared by when SPI_MEM_ECC_ERR_INT_CLR bit is set."]
     #[inline(always)]

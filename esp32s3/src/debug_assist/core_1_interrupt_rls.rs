@@ -35,449 +35,65 @@ impl From<crate::W<CORE_1_INTERRUPT_RLS_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_AREA_DRAM0_0_RD_RLS` reader - Core1 dram0 area0 read monitor interrupt enable"]
-pub struct CORE_1_AREA_DRAM0_0_RD_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_DRAM0_0_RD_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_DRAM0_0_RD_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_DRAM0_0_RD_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_DRAM0_0_RD_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_0_RD_RLS` writer - Core1 dram0 area0 read monitor interrupt enable"]
-pub struct CORE_1_AREA_DRAM0_0_RD_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_AREA_DRAM0_0_RD_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CORE_1_AREA_DRAM0_0_RD_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 0>;
 #[doc = "Field `CORE_1_AREA_DRAM0_0_WR_RLS` reader - Core1 dram0 area0 write monitor interrupt enable"]
-pub struct CORE_1_AREA_DRAM0_0_WR_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_DRAM0_0_WR_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_DRAM0_0_WR_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_DRAM0_0_WR_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_DRAM0_0_WR_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_0_WR_RLS` writer - Core1 dram0 area0 write monitor interrupt enable"]
-pub struct CORE_1_AREA_DRAM0_0_WR_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_AREA_DRAM0_0_WR_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CORE_1_AREA_DRAM0_0_WR_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 1>;
 #[doc = "Field `CORE_1_AREA_DRAM0_1_RD_RLS` reader - Core1 dram0 area1 read monitor interrupt enable"]
-pub struct CORE_1_AREA_DRAM0_1_RD_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_DRAM0_1_RD_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_DRAM0_1_RD_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_DRAM0_1_RD_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_DRAM0_1_RD_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_1_RD_RLS` writer - Core1 dram0 area1 read monitor interrupt enable"]
-pub struct CORE_1_AREA_DRAM0_1_RD_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_AREA_DRAM0_1_RD_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CORE_1_AREA_DRAM0_1_RD_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 2>;
 #[doc = "Field `CORE_1_AREA_DRAM0_1_WR_RLS` reader - Core1 dram0 area1 write monitor interrupt enable"]
-pub struct CORE_1_AREA_DRAM0_1_WR_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_DRAM0_1_WR_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_DRAM0_1_WR_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_DRAM0_1_WR_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_DRAM0_1_WR_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_1_WR_RLS` writer - Core1 dram0 area1 write monitor interrupt enable"]
-pub struct CORE_1_AREA_DRAM0_1_WR_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_AREA_DRAM0_1_WR_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CORE_1_AREA_DRAM0_1_WR_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 3>;
 #[doc = "Field `CORE_1_AREA_PIF_0_RD_RLS` reader - Core1 PIF area0 read monitor interrupt enable"]
-pub struct CORE_1_AREA_PIF_0_RD_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_PIF_0_RD_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_PIF_0_RD_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_PIF_0_RD_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_PIF_0_RD_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_0_RD_RLS` writer - Core1 PIF area0 read monitor interrupt enable"]
-pub struct CORE_1_AREA_PIF_0_RD_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_AREA_PIF_0_RD_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type CORE_1_AREA_PIF_0_RD_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 4>;
 #[doc = "Field `CORE_1_AREA_PIF_0_WR_RLS` reader - Core1 PIF area0 write monitor interrupt enable"]
-pub struct CORE_1_AREA_PIF_0_WR_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_PIF_0_WR_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_PIF_0_WR_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_PIF_0_WR_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_PIF_0_WR_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_0_WR_RLS` writer - Core1 PIF area0 write monitor interrupt enable"]
-pub struct CORE_1_AREA_PIF_0_WR_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_AREA_PIF_0_WR_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CORE_1_AREA_PIF_0_WR_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 5>;
 #[doc = "Field `CORE_1_AREA_PIF_1_RD_RLS` reader - Core1 PIF area1 read monitor interrupt enable"]
-pub struct CORE_1_AREA_PIF_1_RD_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_PIF_1_RD_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_PIF_1_RD_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_PIF_1_RD_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_PIF_1_RD_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_1_RD_RLS` writer - Core1 PIF area1 read monitor interrupt enable"]
-pub struct CORE_1_AREA_PIF_1_RD_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_AREA_PIF_1_RD_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CORE_1_AREA_PIF_1_RD_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 6>;
 #[doc = "Field `CORE_1_AREA_PIF_1_WR_RLS` reader - Core1 PIF area1 write monitor interrupt enable"]
-pub struct CORE_1_AREA_PIF_1_WR_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_PIF_1_WR_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_PIF_1_WR_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_PIF_1_WR_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_PIF_1_WR_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_1_WR_RLS` writer - Core1 PIF area1 write monitor interrupt enable"]
-pub struct CORE_1_AREA_PIF_1_WR_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_AREA_PIF_1_WR_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type CORE_1_AREA_PIF_1_WR_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 7>;
 #[doc = "Field `CORE_1_SP_SPILL_MIN_RLS` reader - Core1 stackpoint overflow monitor interrupt enable"]
-pub struct CORE_1_SP_SPILL_MIN_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_SP_SPILL_MIN_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_SP_SPILL_MIN_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_SP_SPILL_MIN_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_SP_SPILL_MIN_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_SP_SPILL_MIN_RLS` writer - Core1 stackpoint overflow monitor interrupt enable"]
-pub struct CORE_1_SP_SPILL_MIN_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_SP_SPILL_MIN_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type CORE_1_SP_SPILL_MIN_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 8>;
 #[doc = "Field `CORE_1_SP_SPILL_MAX_RLS` reader - Core1 stackpoint underflow monitor interrupt enable"]
-pub struct CORE_1_SP_SPILL_MAX_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_SP_SPILL_MAX_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_SP_SPILL_MAX_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_SP_SPILL_MAX_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_SP_SPILL_MAX_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_SP_SPILL_MAX_RLS` writer - Core1 stackpoint underflow monitor interrupt enable"]
-pub struct CORE_1_SP_SPILL_MAX_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_SP_SPILL_MAX_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type CORE_1_SP_SPILL_MAX_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 9>;
 #[doc = "Field `CORE_1_IRAM0_EXCEPTION_MONITOR_RLS` reader - IBUS busy monitor interrupt enable"]
-pub struct CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_IRAM0_EXCEPTION_MONITOR_RLS` writer - IBUS busy monitor interrupt enable"]
-pub struct CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 10>;
 #[doc = "Field `CORE_1_DRAM0_EXCEPTION_MONITOR_RLS` reader - DBUS busy monitor interrupt enbale"]
-pub struct CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_R(crate::FieldReader<bool>);
-impl CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_DRAM0_EXCEPTION_MONITOR_RLS` writer - DBUS busy monitor interrupt enbale"]
-pub struct CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_W<'a> =
+    crate::BitWriter<'a, u32, CORE_1_INTERRUPT_RLS_SPEC, bool, 11>;
 impl R {
     #[doc = "Bit 0 - Core1 dram0 area0 read monitor interrupt enable"]
     #[inline(always)]
@@ -544,62 +160,62 @@ impl W {
     #[doc = "Bit 0 - Core1 dram0 area0 read monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_dram0_0_rd_rls(&mut self) -> CORE_1_AREA_DRAM0_0_RD_RLS_W {
-        CORE_1_AREA_DRAM0_0_RD_RLS_W { w: self }
+        CORE_1_AREA_DRAM0_0_RD_RLS_W::new(self)
     }
     #[doc = "Bit 1 - Core1 dram0 area0 write monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_dram0_0_wr_rls(&mut self) -> CORE_1_AREA_DRAM0_0_WR_RLS_W {
-        CORE_1_AREA_DRAM0_0_WR_RLS_W { w: self }
+        CORE_1_AREA_DRAM0_0_WR_RLS_W::new(self)
     }
     #[doc = "Bit 2 - Core1 dram0 area1 read monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_dram0_1_rd_rls(&mut self) -> CORE_1_AREA_DRAM0_1_RD_RLS_W {
-        CORE_1_AREA_DRAM0_1_RD_RLS_W { w: self }
+        CORE_1_AREA_DRAM0_1_RD_RLS_W::new(self)
     }
     #[doc = "Bit 3 - Core1 dram0 area1 write monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_dram0_1_wr_rls(&mut self) -> CORE_1_AREA_DRAM0_1_WR_RLS_W {
-        CORE_1_AREA_DRAM0_1_WR_RLS_W { w: self }
+        CORE_1_AREA_DRAM0_1_WR_RLS_W::new(self)
     }
     #[doc = "Bit 4 - Core1 PIF area0 read monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_pif_0_rd_rls(&mut self) -> CORE_1_AREA_PIF_0_RD_RLS_W {
-        CORE_1_AREA_PIF_0_RD_RLS_W { w: self }
+        CORE_1_AREA_PIF_0_RD_RLS_W::new(self)
     }
     #[doc = "Bit 5 - Core1 PIF area0 write monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_pif_0_wr_rls(&mut self) -> CORE_1_AREA_PIF_0_WR_RLS_W {
-        CORE_1_AREA_PIF_0_WR_RLS_W { w: self }
+        CORE_1_AREA_PIF_0_WR_RLS_W::new(self)
     }
     #[doc = "Bit 6 - Core1 PIF area1 read monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_pif_1_rd_rls(&mut self) -> CORE_1_AREA_PIF_1_RD_RLS_W {
-        CORE_1_AREA_PIF_1_RD_RLS_W { w: self }
+        CORE_1_AREA_PIF_1_RD_RLS_W::new(self)
     }
     #[doc = "Bit 7 - Core1 PIF area1 write monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_pif_1_wr_rls(&mut self) -> CORE_1_AREA_PIF_1_WR_RLS_W {
-        CORE_1_AREA_PIF_1_WR_RLS_W { w: self }
+        CORE_1_AREA_PIF_1_WR_RLS_W::new(self)
     }
     #[doc = "Bit 8 - Core1 stackpoint overflow monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_sp_spill_min_rls(&mut self) -> CORE_1_SP_SPILL_MIN_RLS_W {
-        CORE_1_SP_SPILL_MIN_RLS_W { w: self }
+        CORE_1_SP_SPILL_MIN_RLS_W::new(self)
     }
     #[doc = "Bit 9 - Core1 stackpoint underflow monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_sp_spill_max_rls(&mut self) -> CORE_1_SP_SPILL_MAX_RLS_W {
-        CORE_1_SP_SPILL_MAX_RLS_W { w: self }
+        CORE_1_SP_SPILL_MAX_RLS_W::new(self)
     }
     #[doc = "Bit 10 - IBUS busy monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_iram0_exception_monitor_rls(&mut self) -> CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_W {
-        CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_W { w: self }
+        CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_W::new(self)
     }
     #[doc = "Bit 11 - DBUS busy monitor interrupt enbale"]
     #[inline(always)]
     pub fn core_1_dram0_exception_monitor_rls(&mut self) -> CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_W {
-        CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_W { w: self }
+        CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

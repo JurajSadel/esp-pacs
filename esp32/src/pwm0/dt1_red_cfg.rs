@@ -35,32 +35,9 @@ impl From<crate::W<DT1_RED_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `DT1_RED` reader - "]
-pub struct DT1_RED_R(crate::FieldReader<u16>);
-impl DT1_RED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DT1_RED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT1_RED_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT1_RED_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DT1_RED` writer - "]
-pub struct DT1_RED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT1_RED_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type DT1_RED_W<'a> = crate::FieldWriter<'a, u32, DT1_RED_CFG_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn dt1_red(&mut self) -> DT1_RED_W {
-        DT1_RED_W { w: self }
+        DT1_RED_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

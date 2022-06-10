@@ -35,42 +35,10 @@ impl From<crate::W<CACHE_WRAP_AROUND_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_FLASH_WRAP_AROUND` reader - The bit is used to enable wrap around mode when read data from flash."]
-pub struct CACHE_FLASH_WRAP_AROUND_R(crate::FieldReader<bool>);
-impl CACHE_FLASH_WRAP_AROUND_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACHE_FLASH_WRAP_AROUND_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_FLASH_WRAP_AROUND_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_FLASH_WRAP_AROUND_R = crate::BitReader<bool>;
 #[doc = "Field `CACHE_FLASH_WRAP_AROUND` writer - The bit is used to enable wrap around mode when read data from flash."]
-pub struct CACHE_FLASH_WRAP_AROUND_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_FLASH_WRAP_AROUND_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CACHE_FLASH_WRAP_AROUND_W<'a> =
+    crate::BitWriter<'a, u32, CACHE_WRAP_AROUND_CTRL_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable wrap around mode when read data from flash."]
     #[inline(always)]
@@ -82,7 +50,7 @@ impl W {
     #[doc = "Bit 0 - The bit is used to enable wrap around mode when read data from flash."]
     #[inline(always)]
     pub fn cache_flash_wrap_around(&mut self) -> CACHE_FLASH_WRAP_AROUND_W {
-        CACHE_FLASH_WRAP_AROUND_W { w: self }
+        CACHE_FLASH_WRAP_AROUND_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

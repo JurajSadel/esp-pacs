@@ -35,32 +35,9 @@ impl From<crate::W<PGM_CHECK_VALUE1_SPEC>> for W {
     }
 }
 #[doc = "Field `PGM_RS_DATA_1` reader - The content of the 1st 32-bit RS code to be programmed."]
-pub struct PGM_RS_DATA_1_R(crate::FieldReader<u32>);
-impl PGM_RS_DATA_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PGM_RS_DATA_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PGM_RS_DATA_1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PGM_RS_DATA_1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PGM_RS_DATA_1` writer - The content of the 1st 32-bit RS code to be programmed."]
-pub struct PGM_RS_DATA_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PGM_RS_DATA_1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type PGM_RS_DATA_1_W<'a> = crate::FieldWriter<'a, u32, PGM_CHECK_VALUE1_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - The content of the 1st 32-bit RS code to be programmed."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - The content of the 1st 32-bit RS code to be programmed."]
     #[inline(always)]
     pub fn pgm_rs_data_1(&mut self) -> PGM_RS_DATA_1_W {
-        PGM_RS_DATA_1_W { w: self }
+        PGM_RS_DATA_1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

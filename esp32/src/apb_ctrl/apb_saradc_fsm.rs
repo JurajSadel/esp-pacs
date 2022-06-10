@@ -35,113 +35,22 @@ impl From<crate::W<APB_SARADC_FSM_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_RSTB_WAIT` reader - "]
-pub struct SARADC_RSTB_WAIT_R(crate::FieldReader<u8>);
-impl SARADC_RSTB_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SARADC_RSTB_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARADC_RSTB_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARADC_RSTB_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SARADC_RSTB_WAIT` writer - "]
-pub struct SARADC_RSTB_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARADC_RSTB_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SARADC_RSTB_WAIT_W<'a> = crate::FieldWriter<'a, u32, APB_SARADC_FSM_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `SARADC_STANDBY_WAIT` reader - "]
-pub struct SARADC_STANDBY_WAIT_R(crate::FieldReader<u8>);
-impl SARADC_STANDBY_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SARADC_STANDBY_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARADC_STANDBY_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARADC_STANDBY_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SARADC_STANDBY_WAIT` writer - "]
-pub struct SARADC_STANDBY_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARADC_STANDBY_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type SARADC_STANDBY_WAIT_W<'a> = crate::FieldWriter<'a, u32, APB_SARADC_FSM_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `SARADC_START_WAIT` reader - "]
-pub struct SARADC_START_WAIT_R(crate::FieldReader<u8>);
-impl SARADC_START_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SARADC_START_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARADC_START_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARADC_START_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SARADC_START_WAIT` writer - "]
-pub struct SARADC_START_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARADC_START_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type SARADC_START_WAIT_W<'a> = crate::FieldWriter<'a, u32, APB_SARADC_FSM_SPEC, u8, u8, 8, 16>;
 #[doc = "Field `SARADC_SAMPLE_CYCLE` reader - sample cycles"]
-pub struct SARADC_SAMPLE_CYCLE_R(crate::FieldReader<u8>);
-impl SARADC_SAMPLE_CYCLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SARADC_SAMPLE_CYCLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARADC_SAMPLE_CYCLE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARADC_SAMPLE_CYCLE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SARADC_SAMPLE_CYCLE` writer - sample cycles"]
-pub struct SARADC_SAMPLE_CYCLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARADC_SAMPLE_CYCLE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
-        self.w
-    }
-}
+pub type SARADC_SAMPLE_CYCLE_W<'a> =
+    crate::FieldWriter<'a, u32, APB_SARADC_FSM_SPEC, u8, u8, 8, 24>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -168,22 +77,22 @@ impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn saradc_rstb_wait(&mut self) -> SARADC_RSTB_WAIT_W {
-        SARADC_RSTB_WAIT_W { w: self }
+        SARADC_RSTB_WAIT_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     pub fn saradc_standby_wait(&mut self) -> SARADC_STANDBY_WAIT_W {
-        SARADC_STANDBY_WAIT_W { w: self }
+        SARADC_STANDBY_WAIT_W::new(self)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
     pub fn saradc_start_wait(&mut self) -> SARADC_START_WAIT_W {
-        SARADC_START_WAIT_W { w: self }
+        SARADC_START_WAIT_W::new(self)
     }
     #[doc = "Bits 24:31 - sample cycles"]
     #[inline(always)]
     pub fn saradc_sample_cycle(&mut self) -> SARADC_SAMPLE_CYCLE_W {
-        SARADC_SAMPLE_CYCLE_W { w: self }
+        SARADC_SAMPLE_CYCLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

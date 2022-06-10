@@ -20,59 +20,21 @@ impl From<crate::W<PRO_CACHE_ACS_CNT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DCACHE_ACS_CNT_CLR` writer - The bit is used to clear dcache counter which include DC_PRELOAD_CNT_REG, DC_PRELOAD_EVICT_CNT_REG, DC_PRELOAD_MISS_CNT_REG, DBUS0-2_ABANDON_CNT_REG, DBUS0-2_ACS_WB_CNT_REG, DBUS0-2_ACS_MISS_CNT_REG and DBUS0-2_ACS_CNT_REG."]
-pub struct PRO_DCACHE_ACS_CNT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_ACS_CNT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_DCACHE_ACS_CNT_CLR_W<'a> =
+    crate::BitWriter<'a, u32, PRO_CACHE_ACS_CNT_CLR_SPEC, bool, 0>;
 #[doc = "Field `PRO_ICACHE_ACS_CNT_CLR` writer - The bit is used to clear icache counter which include IC_PRELOAD_CNT_REG, IC_PRELOAD_MISS_CNT_REG, IBUS0-2_ABANDON_CNT_REG, IBUS0-2_ACS_MISS_CNT_REG and IBUS0-2_ACS_CNT_REG."]
-pub struct PRO_ICACHE_ACS_CNT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ICACHE_ACS_CNT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PRO_ICACHE_ACS_CNT_CLR_W<'a> =
+    crate::BitWriter<'a, u32, PRO_CACHE_ACS_CNT_CLR_SPEC, bool, 1>;
 impl W {
     #[doc = "Bit 0 - The bit is used to clear dcache counter which include DC_PRELOAD_CNT_REG, DC_PRELOAD_EVICT_CNT_REG, DC_PRELOAD_MISS_CNT_REG, DBUS0-2_ABANDON_CNT_REG, DBUS0-2_ACS_WB_CNT_REG, DBUS0-2_ACS_MISS_CNT_REG and DBUS0-2_ACS_CNT_REG."]
     #[inline(always)]
     pub fn pro_dcache_acs_cnt_clr(&mut self) -> PRO_DCACHE_ACS_CNT_CLR_W {
-        PRO_DCACHE_ACS_CNT_CLR_W { w: self }
+        PRO_DCACHE_ACS_CNT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to clear icache counter which include IC_PRELOAD_CNT_REG, IC_PRELOAD_MISS_CNT_REG, IBUS0-2_ABANDON_CNT_REG, IBUS0-2_ACS_MISS_CNT_REG and IBUS0-2_ACS_CNT_REG."]
     #[inline(always)]
     pub fn pro_icache_acs_cnt_clr(&mut self) -> PRO_ICACHE_ACS_CNT_CLR_W {
-        PRO_ICACHE_ACS_CNT_CLR_W { w: self }
+        PRO_ICACHE_ACS_CNT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

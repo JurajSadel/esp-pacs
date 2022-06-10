@@ -14,50 +14,11 @@ impl From<crate::R<EXTMEM_REJECT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `EXTMEM_REJECT_ATRR` reader - The reject accessing. Bit 0: if this bit is 1, the rejected accessing is READ. Bit 1: if this bit is 1, the rejected accessing is WRITE."]
-pub struct EXTMEM_REJECT_ATRR_R(crate::FieldReader<u8>);
-impl EXTMEM_REJECT_ATRR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EXTMEM_REJECT_ATRR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTMEM_REJECT_ATRR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTMEM_REJECT_ATRR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `EXTMEM_REJECT_CHANNEL_NUM` reader - The register indicate the reject accessing from which channel."]
-pub struct EXTMEM_REJECT_CHANNEL_NUM_R(crate::FieldReader<u8>);
-impl EXTMEM_REJECT_CHANNEL_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EXTMEM_REJECT_CHANNEL_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTMEM_REJECT_CHANNEL_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTMEM_REJECT_CHANNEL_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `EXTMEM_REJECT_PERI_NUM` reader - This register indicate reject accessing from which peripheral."]
-pub struct EXTMEM_REJECT_PERI_NUM_R(crate::FieldReader<u8>);
-impl EXTMEM_REJECT_PERI_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EXTMEM_REJECT_PERI_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTMEM_REJECT_PERI_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTMEM_REJECT_PERI_NUM_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:1 - The reject accessing. Bit 0: if this bit is 1, the rejected accessing is READ. Bit 1: if this bit is 1, the rejected accessing is WRITE."]
     #[inline(always)]

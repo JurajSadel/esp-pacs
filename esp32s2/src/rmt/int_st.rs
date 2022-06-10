@@ -14,84 +14,19 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Fields `CH(0-3)_TX_END_INT_ST` reader - The masked interrupt status bit for CH%s_TX_END_INT."]
-pub struct CH_TX_END_INT_ST_R(crate::FieldReader<bool>);
-impl CH_TX_END_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_END_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_END_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_END_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-3)_RX_END_INT_ST` reader - The masked interrupt status bit for CH%s_RX_END_INT."]
-pub struct CH_RX_END_INT_ST_R(crate::FieldReader<bool>);
-impl CH_RX_END_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_RX_END_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_RX_END_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_RX_END_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-3)_ERR_INT_ST` reader - The masked interrupt status bit for CH%s_ERR_INT."]
-pub struct CH_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl CH_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_ERR_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-3)_TX_THR_EVENT_INT_ST` reader - The masked interrupt status bit for CH%s_TX_THR_EVENT_INT."]
-pub struct CH_TX_THR_EVENT_INT_ST_R(crate::FieldReader<bool>);
-impl CH_TX_THR_EVENT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_THR_EVENT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_THR_EVENT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-3)_TX_LOOP_INT_ST` reader - The masked interrupt status bit for CH%s_TX_LOOP_INT."]
-pub struct CH_TX_LOOP_INT_ST_R(crate::FieldReader<bool>);
-impl CH_TX_LOOP_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_LOOP_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_LOOP_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_LOOP_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "The masked interrupt status bit for CH(0-3)_TX_END_INT."]
     #[inline(always)]
-    pub unsafe fn ch_tx_end_int_st(&self, n: usize) -> CH_TX_END_INT_ST_R {
+    pub unsafe fn ch_tx_end_int_st(&self, n: u8) -> CH_TX_END_INT_ST_R {
         CH_TX_END_INT_ST_R::new(((self.bits >> (n * 3)) & 1) != 0)
     }
     #[doc = "Bit 0 - The masked interrupt status bit for CH0_TX_END_INT."]
@@ -116,7 +51,7 @@ impl R {
     }
     #[doc = "The masked interrupt status bit for CH(0-3)_RX_END_INT."]
     #[inline(always)]
-    pub unsafe fn ch_rx_end_int_st(&self, n: usize) -> CH_RX_END_INT_ST_R {
+    pub unsafe fn ch_rx_end_int_st(&self, n: u8) -> CH_RX_END_INT_ST_R {
         CH_RX_END_INT_ST_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - The masked interrupt status bit for CH0_RX_END_INT."]
@@ -141,7 +76,7 @@ impl R {
     }
     #[doc = "The masked interrupt status bit for CH(0-3)_ERR_INT."]
     #[inline(always)]
-    pub unsafe fn ch_err_int_st(&self, n: usize) -> CH_ERR_INT_ST_R {
+    pub unsafe fn ch_err_int_st(&self, n: u8) -> CH_ERR_INT_ST_R {
         CH_ERR_INT_ST_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - The masked interrupt status bit for CH0_ERR_INT."]
@@ -166,7 +101,7 @@ impl R {
     }
     #[doc = "The masked interrupt status bit for CH(0-3)_TX_THR_EVENT_INT."]
     #[inline(always)]
-    pub unsafe fn ch_tx_thr_event_int_st(&self, n: usize) -> CH_TX_THR_EVENT_INT_ST_R {
+    pub unsafe fn ch_tx_thr_event_int_st(&self, n: u8) -> CH_TX_THR_EVENT_INT_ST_R {
         CH_TX_THR_EVENT_INT_ST_R::new(((self.bits >> (n + 12)) & 1) != 0)
     }
     #[doc = "Bit 12 - The masked interrupt status bit for CH0_TX_THR_EVENT_INT."]
@@ -191,7 +126,7 @@ impl R {
     }
     #[doc = "The masked interrupt status bit for CH(0-3)_TX_LOOP_INT."]
     #[inline(always)]
-    pub unsafe fn ch_tx_loop_int_st(&self, n: usize) -> CH_TX_LOOP_INT_ST_R {
+    pub unsafe fn ch_tx_loop_int_st(&self, n: u8) -> CH_TX_LOOP_INT_ST_R {
         CH_TX_LOOP_INT_ST_R::new(((self.bits >> (n + 16)) & 1) != 0)
     }
     #[doc = "Bit 16 - The masked interrupt status bit for CH0_TX_LOOP_INT."]

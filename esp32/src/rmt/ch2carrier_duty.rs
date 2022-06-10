@@ -35,59 +35,13 @@ impl From<crate::W<CH2CARRIER_DUTY_SPEC>> for W {
     }
 }
 #[doc = "Field `CARRIER_LOW` reader - This register is used to configure carrier wave's low level value for channel2."]
-pub struct CARRIER_LOW_R(crate::FieldReader<u16>);
-impl CARRIER_LOW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CARRIER_LOW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER_LOW_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER_LOW_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CARRIER_LOW` writer - This register is used to configure carrier wave's low level value for channel2."]
-pub struct CARRIER_LOW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER_LOW_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type CARRIER_LOW_W<'a> = crate::FieldWriter<'a, u32, CH2CARRIER_DUTY_SPEC, u16, u16, 16, 0>;
 #[doc = "Field `CARRIER_HIGH` reader - This register is used to configure carrier wave's high level value for channel2."]
-pub struct CARRIER_HIGH_R(crate::FieldReader<u16>);
-impl CARRIER_HIGH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CARRIER_HIGH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER_HIGH_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER_HIGH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CARRIER_HIGH` writer - This register is used to configure carrier wave's high level value for channel2."]
-pub struct CARRIER_HIGH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER_HIGH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
+pub type CARRIER_HIGH_W<'a> = crate::FieldWriter<'a, u32, CH2CARRIER_DUTY_SPEC, u16, u16, 16, 16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure carrier wave's low level value for channel2."]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:15 - This register is used to configure carrier wave's low level value for channel2."]
     #[inline(always)]
     pub fn carrier_low(&mut self) -> CARRIER_LOW_W {
-        CARRIER_LOW_W { w: self }
+        CARRIER_LOW_W::new(self)
     }
     #[doc = "Bits 16:31 - This register is used to configure carrier wave's high level value for channel2."]
     #[inline(always)]
     pub fn carrier_high(&mut self) -> CARRIER_HIGH_W {
-        CARRIER_HIGH_W { w: self }
+        CARRIER_HIGH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

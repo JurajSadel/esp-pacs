@@ -35,32 +35,9 @@ impl From<crate::W<KEY__SPEC>> for W {
     }
 }
 #[doc = "Field `KEY` reader - AES key material register."]
-pub struct KEY_R(crate::FieldReader<u8>);
-impl KEY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `KEY` writer - AES key material register."]
-pub struct KEY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KEY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type KEY_W<'a> = crate::FieldWriter<'a, u32, KEY__SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - AES key material register."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7 - AES key material register."]
     #[inline(always)]
     pub fn key(&mut self) -> KEY_W {
-        KEY_W { w: self }
+        KEY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

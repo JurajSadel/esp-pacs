@@ -14,20 +14,7 @@ impl From<crate::R<CDETECT_SPEC>> for R {
     }
 }
 #[doc = "Field `CARD_DETECT_N` reader - Value on sdhost_card_detect_n input ports (1 bit per card), read-only bits. 0 represents presence of card. Only NUM_CARDS number of bits are implemented."]
-pub struct CARD_DETECT_N_R(crate::FieldReader<u8>);
-impl CARD_DETECT_N_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CARD_DETECT_N_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARD_DETECT_N_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARD_DETECT_N_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:1 - Value on sdhost_card_detect_n input ports (1 bit per card), read-only bits. 0 represents presence of card. Only NUM_CARDS number of bits are implemented."]
     #[inline(always)]

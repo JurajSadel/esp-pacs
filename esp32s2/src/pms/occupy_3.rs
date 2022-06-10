@@ -35,32 +35,9 @@ impl From<crate::W<OCCUPY_3_SPEC>> for W {
     }
 }
 #[doc = "Field `OCCUPY_PRO_TRACE` reader - Configure one block of SRAM Block 4-21 is used as trace memory."]
-pub struct OCCUPY_PRO_TRACE_R(crate::FieldReader<u32>);
-impl OCCUPY_PRO_TRACE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        OCCUPY_PRO_TRACE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OCCUPY_PRO_TRACE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OCCUPY_PRO_TRACE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `OCCUPY_PRO_TRACE` writer - Configure one block of SRAM Block 4-21 is used as trace memory."]
-pub struct OCCUPY_PRO_TRACE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OCCUPY_PRO_TRACE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0003_ffff) | (value as u32 & 0x0003_ffff);
-        self.w
-    }
-}
+pub type OCCUPY_PRO_TRACE_W<'a> = crate::FieldWriter<'a, u32, OCCUPY_3_SPEC, u32, u32, 18, 0>;
 impl R {
     #[doc = "Bits 0:17 - Configure one block of SRAM Block 4-21 is used as trace memory."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:17 - Configure one block of SRAM Block 4-21 is used as trace memory."]
     #[inline(always)]
     pub fn occupy_pro_trace(&mut self) -> OCCUPY_PRO_TRACE_W {
-        OCCUPY_PRO_TRACE_W { w: self }
+        OCCUPY_PRO_TRACE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

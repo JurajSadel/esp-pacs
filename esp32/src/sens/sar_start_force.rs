@@ -35,372 +35,49 @@ impl From<crate::W<SAR_START_FORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR1_BIT_WIDTH` reader - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub struct SAR1_BIT_WIDTH_R(crate::FieldReader<u8>);
-impl SAR1_BIT_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR1_BIT_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR1_BIT_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR1_BIT_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR1_BIT_WIDTH` writer - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub struct SAR1_BIT_WIDTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR1_BIT_WIDTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type SAR1_BIT_WIDTH_W<'a> = crate::FieldWriter<'a, u32, SAR_START_FORCE_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `SAR2_BIT_WIDTH` reader - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub struct SAR2_BIT_WIDTH_R(crate::FieldReader<u8>);
-impl SAR2_BIT_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR2_BIT_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_BIT_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_BIT_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR2_BIT_WIDTH` writer - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
-pub struct SAR2_BIT_WIDTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_BIT_WIDTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type SAR2_BIT_WIDTH_W<'a> = crate::FieldWriter<'a, u32, SAR_START_FORCE_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `SAR2_EN_TEST` reader - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
-pub struct SAR2_EN_TEST_R(crate::FieldReader<bool>);
-impl SAR2_EN_TEST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR2_EN_TEST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_EN_TEST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_EN_TEST_R = crate::BitReader<bool>;
 #[doc = "Field `SAR2_EN_TEST` writer - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
-pub struct SAR2_EN_TEST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_EN_TEST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SAR2_EN_TEST_W<'a> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, 4>;
 #[doc = "Field `SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT PA power detector capacitance tuning."]
-pub struct SAR2_PWDET_CCT_R(crate::FieldReader<u8>);
-impl SAR2_PWDET_CCT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR2_PWDET_CCT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_PWDET_CCT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_PWDET_CCT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR2_PWDET_CCT` writer - SAR2_PWDET_CCT PA power detector capacitance tuning."]
-pub struct SAR2_PWDET_CCT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_PWDET_CCT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 5)) | ((value as u32 & 7) << 5);
-        self.w
-    }
-}
+pub type SAR2_PWDET_CCT_W<'a> = crate::FieldWriter<'a, u32, SAR_START_FORCE_SPEC, u8, u8, 3, 5>;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` reader - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
-pub struct ULP_CP_FORCE_START_TOP_R(crate::FieldReader<bool>);
-impl ULP_CP_FORCE_START_TOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ULP_CP_FORCE_START_TOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ULP_CP_FORCE_START_TOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ULP_CP_FORCE_START_TOP_R = crate::BitReader<bool>;
 #[doc = "Field `ULP_CP_FORCE_START_TOP` writer - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
-pub struct ULP_CP_FORCE_START_TOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ULP_CP_FORCE_START_TOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type ULP_CP_FORCE_START_TOP_W<'a> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, 8>;
 #[doc = "Field `ULP_CP_START_TOP` reader - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
-pub struct ULP_CP_START_TOP_R(crate::FieldReader<bool>);
-impl ULP_CP_START_TOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ULP_CP_START_TOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ULP_CP_START_TOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ULP_CP_START_TOP_R = crate::BitReader<bool>;
 #[doc = "Field `ULP_CP_START_TOP` writer - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
-pub struct ULP_CP_START_TOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ULP_CP_START_TOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type ULP_CP_START_TOP_W<'a> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, 9>;
 #[doc = "Field `SARCLK_EN` reader - "]
-pub struct SARCLK_EN_R(crate::FieldReader<bool>);
-impl SARCLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SARCLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARCLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARCLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SARCLK_EN` writer - "]
-pub struct SARCLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARCLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type SARCLK_EN_W<'a> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, 10>;
 #[doc = "Field `PC_INIT` reader - initialized PC for ULP-coprocessor"]
-pub struct PC_INIT_R(crate::FieldReader<u16>);
-impl PC_INIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PC_INIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PC_INIT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PC_INIT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PC_INIT` writer - initialized PC for ULP-coprocessor"]
-pub struct PC_INIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PC_INIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff << 11)) | ((value as u32 & 0x07ff) << 11);
-        self.w
-    }
-}
+pub type PC_INIT_W<'a> = crate::FieldWriter<'a, u32, SAR_START_FORCE_SPEC, u16, u16, 11, 11>;
 #[doc = "Field `SAR2_STOP` reader - stop SAR ADC2 conversion"]
-pub struct SAR2_STOP_R(crate::FieldReader<bool>);
-impl SAR2_STOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR2_STOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_STOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_STOP_R = crate::BitReader<bool>;
 #[doc = "Field `SAR2_STOP` writer - stop SAR ADC2 conversion"]
-pub struct SAR2_STOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_STOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type SAR2_STOP_W<'a> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, 22>;
 #[doc = "Field `SAR1_STOP` reader - stop SAR ADC1 conversion"]
-pub struct SAR1_STOP_R(crate::FieldReader<bool>);
-impl SAR1_STOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR1_STOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR1_STOP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR1_STOP_R = crate::BitReader<bool>;
 #[doc = "Field `SAR1_STOP` writer - stop SAR ADC1 conversion"]
-pub struct SAR1_STOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR1_STOP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type SAR1_STOP_W<'a> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, 23>;
 #[doc = "Field `SAR2_PWDET_EN` reader - N/A"]
-pub struct SAR2_PWDET_EN_R(crate::FieldReader<bool>);
-impl SAR2_PWDET_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR2_PWDET_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_PWDET_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_PWDET_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SAR2_PWDET_EN` writer - N/A"]
-pub struct SAR2_PWDET_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_PWDET_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type SAR2_PWDET_EN_W<'a> = crate::BitWriter<'a, u32, SAR_START_FORCE_SPEC, bool, 24>;
 impl R {
     #[doc = "Bits 0:1 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
@@ -462,57 +139,57 @@ impl W {
     #[doc = "Bits 0:1 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
     pub fn sar1_bit_width(&mut self) -> SAR1_BIT_WIDTH_W {
-        SAR1_BIT_WIDTH_W { w: self }
+        SAR1_BIT_WIDTH_W::new(self)
     }
     #[doc = "Bits 2:3 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
     pub fn sar2_bit_width(&mut self) -> SAR2_BIT_WIDTH_W {
-        SAR2_BIT_WIDTH_W { w: self }
+        SAR2_BIT_WIDTH_W::new(self)
     }
     #[doc = "Bit 4 - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
     #[inline(always)]
     pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W {
-        SAR2_EN_TEST_W { w: self }
+        SAR2_EN_TEST_W::new(self)
     }
     #[doc = "Bits 5:7 - SAR2_PWDET_CCT PA power detector capacitance tuning."]
     #[inline(always)]
     pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W {
-        SAR2_PWDET_CCT_W { w: self }
+        SAR2_PWDET_CCT_W::new(self)
     }
     #[doc = "Bit 8 - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
     #[inline(always)]
     pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W {
-        ULP_CP_FORCE_START_TOP_W { w: self }
+        ULP_CP_FORCE_START_TOP_W::new(self)
     }
     #[doc = "Bit 9 - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
     #[inline(always)]
     pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W {
-        ULP_CP_START_TOP_W { w: self }
+        ULP_CP_START_TOP_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn sarclk_en(&mut self) -> SARCLK_EN_W {
-        SARCLK_EN_W { w: self }
+        SARCLK_EN_W::new(self)
     }
     #[doc = "Bits 11:21 - initialized PC for ULP-coprocessor"]
     #[inline(always)]
     pub fn pc_init(&mut self) -> PC_INIT_W {
-        PC_INIT_W { w: self }
+        PC_INIT_W::new(self)
     }
     #[doc = "Bit 22 - stop SAR ADC2 conversion"]
     #[inline(always)]
     pub fn sar2_stop(&mut self) -> SAR2_STOP_W {
-        SAR2_STOP_W { w: self }
+        SAR2_STOP_W::new(self)
     }
     #[doc = "Bit 23 - stop SAR ADC1 conversion"]
     #[inline(always)]
     pub fn sar1_stop(&mut self) -> SAR1_STOP_W {
-        SAR1_STOP_W { w: self }
+        SAR1_STOP_W::new(self)
     }
     #[doc = "Bit 24 - N/A"]
     #[inline(always)]
     pub fn sar2_pwdet_en(&mut self) -> SAR2_PWDET_EN_W {
-        SAR2_PWDET_EN_W { w: self }
+        SAR2_PWDET_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

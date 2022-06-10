@@ -14,20 +14,7 @@ impl From<crate::R<QUERY_KEY_WRONG_SPEC>> for R {
     }
 }
 #[doc = "Field `QUERY_KEY_WRONG` reader - 1-15: HMAC was activated, but the DS peripheral did not successfully receive the DS_KEY from the HMAC peripheral. (The biggest value is 15). 0: HMAC is not activated."]
-pub struct QUERY_KEY_WRONG_R(crate::FieldReader<u8>);
-impl QUERY_KEY_WRONG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        QUERY_KEY_WRONG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for QUERY_KEY_WRONG_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type QUERY_KEY_WRONG_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:3 - 1-15: HMAC was activated, but the DS peripheral did not successfully receive the DS_KEY from the HMAC peripheral. (The biggest value is 15). 0: HMAC is not activated."]
     #[inline(always)]

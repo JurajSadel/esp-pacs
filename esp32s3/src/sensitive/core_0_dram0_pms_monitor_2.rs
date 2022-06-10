@@ -14,65 +14,13 @@ impl From<crate::R<CORE_0_DRAM0_PMS_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR` reader - recorded core0 dram0 permission monitor interrupt status."]
-pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader<bool>);
-impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_INTR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK` reader - recorded core0 dram0 lock status, 1 means s32c1i access."]
-pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R(crate::FieldReader<bool>);
-impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD` reader - recorded core0 dram0 world status, 0x1 means world0, 0x2 means world1."]
-pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R(crate::FieldReader<u8>);
-impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WORLD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR` reader - recorded core0 dram0 address\\[25:4\\] status when core0 dram0 violated permission,the real address is 0x3c000000+addr*16"]
-pub struct CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R(crate::FieldReader<u32>);
-impl CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_DRAM0_PMS_MONITOR_VIOLATE_STATUS_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bit 0 - recorded core0 dram0 permission monitor interrupt status."]
     #[inline(always)]

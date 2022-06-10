@@ -35,291 +35,37 @@ impl From<crate::W<TCONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_USE_XTAL` reader - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
-pub struct T0_USE_XTAL_R(crate::FieldReader<bool>);
-impl T0_USE_XTAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T0_USE_XTAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_USE_XTAL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_USE_XTAL_R = crate::BitReader<bool>;
 #[doc = "Field `T0_USE_XTAL` writer - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
-pub struct T0_USE_XTAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_USE_XTAL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type T0_USE_XTAL_W<'a> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, 9>;
 #[doc = "Field `T0_ALARM_EN` reader - When set, the alarm is enabled. This bit is automatically cleared once an alarm occurs."]
-pub struct T0_ALARM_EN_R(crate::FieldReader<bool>);
-impl T0_ALARM_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T0_ALARM_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_ALARM_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_ALARM_EN_R = crate::BitReader<bool>;
 #[doc = "Field `T0_ALARM_EN` writer - When set, the alarm is enabled. This bit is automatically cleared once an alarm occurs."]
-pub struct T0_ALARM_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_ALARM_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type T0_ALARM_EN_W<'a> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, 10>;
 #[doc = "Field `T0_LEVEL_INT_EN` reader - When set, an alarm will generate a level type interrupt."]
-pub struct T0_LEVEL_INT_EN_R(crate::FieldReader<bool>);
-impl T0_LEVEL_INT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T0_LEVEL_INT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_LEVEL_INT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_LEVEL_INT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `T0_LEVEL_INT_EN` writer - When set, an alarm will generate a level type interrupt."]
-pub struct T0_LEVEL_INT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_LEVEL_INT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type T0_LEVEL_INT_EN_W<'a> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, 11>;
 #[doc = "Field `T0_EDGE_INT_EN` reader - When set, an alarm will generate an edge type interrupt."]
-pub struct T0_EDGE_INT_EN_R(crate::FieldReader<bool>);
-impl T0_EDGE_INT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T0_EDGE_INT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_EDGE_INT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_EDGE_INT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `T0_EDGE_INT_EN` writer - When set, an alarm will generate an edge type interrupt."]
-pub struct T0_EDGE_INT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_EDGE_INT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type T0_EDGE_INT_EN_W<'a> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, 12>;
 #[doc = "Field `T0_DIVIDER` reader - Timer %s clock (T%s_clk) prescaler value."]
-pub struct T0_DIVIDER_R(crate::FieldReader<u16>);
-impl T0_DIVIDER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        T0_DIVIDER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_DIVIDER_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_DIVIDER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `T0_DIVIDER` writer - Timer %s clock (T%s_clk) prescaler value."]
-pub struct T0_DIVIDER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_DIVIDER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 13)) | ((value as u32 & 0xffff) << 13);
-        self.w
-    }
-}
+pub type T0_DIVIDER_W<'a> = crate::FieldWriter<'a, u32, TCONFIG_SPEC, u16, u16, 16, 13>;
 #[doc = "Field `T0_AUTORELOAD` reader - When set, timer %s auto-reload at alarm is enabled."]
-pub struct T0_AUTORELOAD_R(crate::FieldReader<bool>);
-impl T0_AUTORELOAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T0_AUTORELOAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_AUTORELOAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_AUTORELOAD_R = crate::BitReader<bool>;
 #[doc = "Field `T0_AUTORELOAD` writer - When set, timer %s auto-reload at alarm is enabled."]
-pub struct T0_AUTORELOAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_AUTORELOAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type T0_AUTORELOAD_W<'a> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, 29>;
 #[doc = "Field `T0_INCREASE` reader - When set, the timer %s time-base counter will increment every clock tick. When cleared, the timer %s time-base counter will decrement."]
-pub struct T0_INCREASE_R(crate::FieldReader<bool>);
-impl T0_INCREASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T0_INCREASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_INCREASE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_INCREASE_R = crate::BitReader<bool>;
 #[doc = "Field `T0_INCREASE` writer - When set, the timer %s time-base counter will increment every clock tick. When cleared, the timer %s time-base counter will decrement."]
-pub struct T0_INCREASE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_INCREASE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type T0_INCREASE_W<'a> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, 30>;
 #[doc = "Field `T0_EN` reader - When set, the timer %s time-base counter is enabled."]
-pub struct T0_EN_R(crate::FieldReader<bool>);
-impl T0_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T0_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_EN_R = crate::BitReader<bool>;
 #[doc = "Field `T0_EN` writer - When set, the timer %s time-base counter is enabled."]
-pub struct T0_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type T0_EN_W<'a> = crate::BitWriter<'a, u32, TCONFIG_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 9 - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
     #[inline(always)]
@@ -366,42 +112,42 @@ impl W {
     #[doc = "Bit 9 - 1: Use XTAL_CLK as the source clock of timer group. 0: Use APB_CLK as the source clock of timer group."]
     #[inline(always)]
     pub fn t0_use_xtal(&mut self) -> T0_USE_XTAL_W {
-        T0_USE_XTAL_W { w: self }
+        T0_USE_XTAL_W::new(self)
     }
     #[doc = "Bit 10 - When set, the alarm is enabled. This bit is automatically cleared once an alarm occurs."]
     #[inline(always)]
     pub fn t0_alarm_en(&mut self) -> T0_ALARM_EN_W {
-        T0_ALARM_EN_W { w: self }
+        T0_ALARM_EN_W::new(self)
     }
     #[doc = "Bit 11 - When set, an alarm will generate a level type interrupt."]
     #[inline(always)]
     pub fn t0_level_int_en(&mut self) -> T0_LEVEL_INT_EN_W {
-        T0_LEVEL_INT_EN_W { w: self }
+        T0_LEVEL_INT_EN_W::new(self)
     }
     #[doc = "Bit 12 - When set, an alarm will generate an edge type interrupt."]
     #[inline(always)]
     pub fn t0_edge_int_en(&mut self) -> T0_EDGE_INT_EN_W {
-        T0_EDGE_INT_EN_W { w: self }
+        T0_EDGE_INT_EN_W::new(self)
     }
     #[doc = "Bits 13:28 - Timer %s clock (T%s_clk) prescaler value."]
     #[inline(always)]
     pub fn t0_divider(&mut self) -> T0_DIVIDER_W {
-        T0_DIVIDER_W { w: self }
+        T0_DIVIDER_W::new(self)
     }
     #[doc = "Bit 29 - When set, timer %s auto-reload at alarm is enabled."]
     #[inline(always)]
     pub fn t0_autoreload(&mut self) -> T0_AUTORELOAD_W {
-        T0_AUTORELOAD_W { w: self }
+        T0_AUTORELOAD_W::new(self)
     }
     #[doc = "Bit 30 - When set, the timer %s time-base counter will increment every clock tick. When cleared, the timer %s time-base counter will decrement."]
     #[inline(always)]
     pub fn t0_increase(&mut self) -> T0_INCREASE_W {
-        T0_INCREASE_W { w: self }
+        T0_INCREASE_W::new(self)
     }
     #[doc = "Bit 31 - When set, the timer %s time-base counter is enabled."]
     #[inline(always)]
     pub fn t0_en(&mut self) -> T0_EN_W {
-        T0_EN_W { w: self }
+        T0_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,169 +35,36 @@ impl From<crate::W<CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` reader - core_x_iram0_pms_constrain_sram_world_0_pms_0"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R(crate::FieldReader<u8>);
-impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` writer - core_x_iram0_pms_constrain_sram_world_0_pms_0"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` reader - core_x_iram0_pms_constrain_sram_world_0_pms_1"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R(crate::FieldReader<u8>);
-impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` writer - core_x_iram0_pms_constrain_sram_world_0_pms_1"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
-        self.w
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, 3>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` reader - core_x_iram0_pms_constrain_sram_world_0_pms_2"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R(crate::FieldReader<u8>);
-impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` writer - core_x_iram0_pms_constrain_sram_world_0_pms_2"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
-        self.w
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, 6>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` reader - core_x_iram0_pms_constrain_sram_world_0_pms_3"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R(crate::FieldReader<u8>);
-impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` writer - core_x_iram0_pms_constrain_sram_world_0_pms_3"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
-        self.w
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, 9>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0` reader - core_x_iram0_pms_constrain_sram_world_0_cachedataarray_pms_0"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R(crate::FieldReader<u8>);
-impl CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R(crate::FieldReader::new(
-            bits,
-        ))
-    }
-}
-impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_R =
+    crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0` writer - core_x_iram0_pms_constrain_sram_world_0_cachedataarray_pms_0"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
-        self.w
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, 12>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS` reader - core_x_iram0_pms_constrain_rom_world_0_pms"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R(crate::FieldReader<u8>);
-impl CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS` writer - core_x_iram0_pms_constrain_rom_world_0_pms"]
-pub struct CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 18)) | ((value as u32 & 7) << 18);
-        self.w
-    }
-}
+pub type CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_X_IRAM0_PMS_CONSTRAIN_2_SPEC, u8, u8, 3, 18>;
 impl R {
     #[doc = "Bits 0:2 - core_x_iram0_pms_constrain_sram_world_0_pms_0"]
     #[inline(always)]
@@ -250,42 +117,42 @@ impl W {
     pub fn core_x_iram0_pms_constrain_sram_world_0_pms_0(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W { w: self }
+        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W::new(self)
     }
     #[doc = "Bits 3:5 - core_x_iram0_pms_constrain_sram_world_0_pms_1"]
     #[inline(always)]
     pub fn core_x_iram0_pms_constrain_sram_world_0_pms_1(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W { w: self }
+        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W::new(self)
     }
     #[doc = "Bits 6:8 - core_x_iram0_pms_constrain_sram_world_0_pms_2"]
     #[inline(always)]
     pub fn core_x_iram0_pms_constrain_sram_world_0_pms_2(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W { w: self }
+        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W::new(self)
     }
     #[doc = "Bits 9:11 - core_x_iram0_pms_constrain_sram_world_0_pms_3"]
     #[inline(always)]
     pub fn core_x_iram0_pms_constrain_sram_world_0_pms_3(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W { w: self }
+        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W::new(self)
     }
     #[doc = "Bits 12:14 - core_x_iram0_pms_constrain_sram_world_0_cachedataarray_pms_0"]
     #[inline(always)]
     pub fn core_x_iram0_pms_constrain_sram_world_0_cachedataarray_pms_0(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W {
-        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W { w: self }
+        CORE_X_IRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W::new(self)
     }
     #[doc = "Bits 18:20 - core_x_iram0_pms_constrain_rom_world_0_pms"]
     #[inline(always)]
     pub fn core_x_iram0_pms_constrain_rom_world_0_pms(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W {
-        CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W { w: self }
+        CORE_X_IRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,57 +35,11 @@ impl From<crate::W<EP1_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `WR_DONE` writer - Set this bit to indicate writing byte data to UART Tx FIFO is done."]
-pub struct WR_DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WR_DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type WR_DONE_W<'a> = crate::BitWriter<'a, u32, EP1_CONF_SPEC, bool, 0>;
 #[doc = "Field `SERIAL_IN_EP_DATA_FREE` reader - 1'b1: Indicate UART Tx FIFO is not full and can write data into in. After writing USB_DEVICE_WR_DONE, this bit would be 0 until data in UART Tx FIFO is read by USB Host."]
-pub struct SERIAL_IN_EP_DATA_FREE_R(crate::FieldReader<bool>);
-impl SERIAL_IN_EP_DATA_FREE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SERIAL_IN_EP_DATA_FREE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SERIAL_IN_EP_DATA_FREE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SERIAL_IN_EP_DATA_FREE_R = crate::BitReader<bool>;
 #[doc = "Field `SERIAL_OUT_EP_DATA_AVAIL` reader - 1'b1: Indicate there is data in UART Rx FIFO."]
-pub struct SERIAL_OUT_EP_DATA_AVAIL_R(crate::FieldReader<bool>);
-impl SERIAL_OUT_EP_DATA_AVAIL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SERIAL_OUT_EP_DATA_AVAIL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SERIAL_OUT_EP_DATA_AVAIL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SERIAL_OUT_EP_DATA_AVAIL_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 1 - 1'b1: Indicate UART Tx FIFO is not full and can write data into in. After writing USB_DEVICE_WR_DONE, this bit would be 0 until data in UART Tx FIFO is read by USB Host."]
     #[inline(always)]
@@ -102,7 +56,7 @@ impl W {
     #[doc = "Bit 0 - Set this bit to indicate writing byte data to UART Tx FIFO is done."]
     #[inline(always)]
     pub fn wr_done(&mut self) -> WR_DONE_W {
-        WR_DONE_W { w: self }
+        WR_DONE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

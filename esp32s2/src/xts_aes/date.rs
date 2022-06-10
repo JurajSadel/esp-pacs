@@ -14,20 +14,7 @@ impl From<crate::R<DATE_SPEC>> for R {
     }
 }
 #[doc = "Field `DATE` reader - Version control register."]
-pub struct DATE_R(crate::FieldReader<u32>);
-impl DATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATE_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:29 - Version control register."]
     #[inline(always)]

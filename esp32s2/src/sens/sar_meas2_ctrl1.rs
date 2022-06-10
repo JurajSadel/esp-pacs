@@ -35,239 +35,35 @@ impl From<crate::W<SAR_MEAS2_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_CNTL_STATE` reader - saradc2_cntl_fsm"]
-pub struct SAR2_CNTL_STATE_R(crate::FieldReader<u8>);
-impl SAR2_CNTL_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR2_CNTL_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_CNTL_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_CNTL_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR2_PWDET_CAL_EN` reader - rtc control pwdet enable"]
-pub struct SAR2_PWDET_CAL_EN_R(crate::FieldReader<bool>);
-impl SAR2_PWDET_CAL_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR2_PWDET_CAL_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_PWDET_CAL_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_PWDET_CAL_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SAR2_PWDET_CAL_EN` writer - rtc control pwdet enable"]
-pub struct SAR2_PWDET_CAL_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_PWDET_CAL_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type SAR2_PWDET_CAL_EN_W<'a> = crate::BitWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, bool, 3>;
 #[doc = "Field `SAR2_PKDET_CAL_EN` reader - rtc control pkdet enable"]
-pub struct SAR2_PKDET_CAL_EN_R(crate::FieldReader<bool>);
-impl SAR2_PKDET_CAL_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR2_PKDET_CAL_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_PKDET_CAL_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_PKDET_CAL_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SAR2_PKDET_CAL_EN` writer - rtc control pkdet enable"]
-pub struct SAR2_PKDET_CAL_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_PKDET_CAL_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SAR2_PKDET_CAL_EN_W<'a> = crate::BitWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, bool, 4>;
 #[doc = "Field `SAR2_EN_TEST` reader - SAR2_EN_TEST"]
-pub struct SAR2_EN_TEST_R(crate::FieldReader<bool>);
-impl SAR2_EN_TEST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR2_EN_TEST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_EN_TEST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_EN_TEST_R = crate::BitReader<bool>;
 #[doc = "Field `SAR2_EN_TEST` writer - SAR2_EN_TEST"]
-pub struct SAR2_EN_TEST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_EN_TEST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type SAR2_EN_TEST_W<'a> = crate::BitWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, bool, 5>;
 #[doc = "Field `SAR2_RSTB_FORCE` reader - "]
-pub struct SAR2_RSTB_FORCE_R(crate::FieldReader<u8>);
-impl SAR2_RSTB_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR2_RSTB_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_RSTB_FORCE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_RSTB_FORCE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR2_RSTB_FORCE` writer - "]
-pub struct SAR2_RSTB_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_RSTB_FORCE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type SAR2_RSTB_FORCE_W<'a> = crate::FieldWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `SAR2_STANDBY_WAIT` reader - "]
-pub struct SAR2_STANDBY_WAIT_R(crate::FieldReader<u8>);
-impl SAR2_STANDBY_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR2_STANDBY_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_STANDBY_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_STANDBY_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR2_STANDBY_WAIT` writer - "]
-pub struct SAR2_STANDBY_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_STANDBY_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type SAR2_STANDBY_WAIT_W<'a> = crate::FieldWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `SAR2_RSTB_WAIT` reader - "]
-pub struct SAR2_RSTB_WAIT_R(crate::FieldReader<u8>);
-impl SAR2_RSTB_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR2_RSTB_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_RSTB_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_RSTB_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR2_RSTB_WAIT` writer - "]
-pub struct SAR2_RSTB_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_RSTB_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type SAR2_RSTB_WAIT_W<'a> = crate::FieldWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, u8, u8, 8, 16>;
 #[doc = "Field `SAR2_XPD_WAIT` reader - "]
-pub struct SAR2_XPD_WAIT_R(crate::FieldReader<u8>);
-impl SAR2_XPD_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR2_XPD_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_XPD_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_XPD_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR2_XPD_WAIT` writer - "]
-pub struct SAR2_XPD_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_XPD_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
-        self.w
-    }
-}
+pub type SAR2_XPD_WAIT_W<'a> = crate::FieldWriter<'a, u32, SAR_MEAS2_CTRL1_SPEC, u8, u8, 8, 24>;
 impl R {
     #[doc = "Bits 0:2 - saradc2_cntl_fsm"]
     #[inline(always)]
@@ -314,37 +110,37 @@ impl W {
     #[doc = "Bit 3 - rtc control pwdet enable"]
     #[inline(always)]
     pub fn sar2_pwdet_cal_en(&mut self) -> SAR2_PWDET_CAL_EN_W {
-        SAR2_PWDET_CAL_EN_W { w: self }
+        SAR2_PWDET_CAL_EN_W::new(self)
     }
     #[doc = "Bit 4 - rtc control pkdet enable"]
     #[inline(always)]
     pub fn sar2_pkdet_cal_en(&mut self) -> SAR2_PKDET_CAL_EN_W {
-        SAR2_PKDET_CAL_EN_W { w: self }
+        SAR2_PKDET_CAL_EN_W::new(self)
     }
     #[doc = "Bit 5 - SAR2_EN_TEST"]
     #[inline(always)]
     pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W {
-        SAR2_EN_TEST_W { w: self }
+        SAR2_EN_TEST_W::new(self)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
     pub fn sar2_rstb_force(&mut self) -> SAR2_RSTB_FORCE_W {
-        SAR2_RSTB_FORCE_W { w: self }
+        SAR2_RSTB_FORCE_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     pub fn sar2_standby_wait(&mut self) -> SAR2_STANDBY_WAIT_W {
-        SAR2_STANDBY_WAIT_W { w: self }
+        SAR2_STANDBY_WAIT_W::new(self)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
     pub fn sar2_rstb_wait(&mut self) -> SAR2_RSTB_WAIT_W {
-        SAR2_RSTB_WAIT_W { w: self }
+        SAR2_RSTB_WAIT_W::new(self)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
     pub fn sar2_xpd_wait(&mut self) -> SAR2_XPD_WAIT_W {
-        SAR2_XPD_WAIT_W { w: self }
+        SAR2_XPD_WAIT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

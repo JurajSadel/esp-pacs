@@ -14,35 +14,9 @@ impl From<crate::R<MEM_RX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_RX_RADDR` reader - This register stores the offset address in RX-FIFO when software reads data from Rx-FIFO via APB. UART0 is 10'h100. UART1 is 10'h180."]
-pub struct APB_RX_RADDR_R(crate::FieldReader<u16>);
-impl APB_RX_RADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        APB_RX_RADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_RX_RADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_RX_RADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_WADDR` reader - This register stores the offset address in Rx-FIFO when Rx-FIFO_Ctrl writes Rx-FIFO. UART0 is 10'h100. UART1 is 10'h180."]
-pub struct RX_WADDR_R(crate::FieldReader<u16>);
-impl RX_WADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RX_WADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_WADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_WADDR_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:9 - This register stores the offset address in RX-FIFO when software reads data from Rx-FIFO via APB. UART0 is 10'h100. UART1 is 10'h180."]
     #[inline(always)]

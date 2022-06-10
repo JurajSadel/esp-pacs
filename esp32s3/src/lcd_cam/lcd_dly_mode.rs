@@ -35,113 +35,21 @@ impl From<crate::W<LCD_DLY_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_CD_MODE` reader - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct LCD_CD_MODE_R(crate::FieldReader<u8>);
-impl LCD_CD_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LCD_CD_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_CD_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_CD_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LCD_CD_MODE` writer - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct LCD_CD_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_CD_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type LCD_CD_MODE_W<'a> = crate::FieldWriter<'a, u32, LCD_DLY_MODE_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `LCD_DE_MODE` reader - The output LCD_DE is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct LCD_DE_MODE_R(crate::FieldReader<u8>);
-impl LCD_DE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LCD_DE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_DE_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_DE_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LCD_DE_MODE` writer - The output LCD_DE is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct LCD_DE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_DE_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type LCD_DE_MODE_W<'a> = crate::FieldWriter<'a, u32, LCD_DLY_MODE_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `LCD_HSYNC_MODE` reader - The output LCD_HSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct LCD_HSYNC_MODE_R(crate::FieldReader<u8>);
-impl LCD_HSYNC_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LCD_HSYNC_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_HSYNC_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_HSYNC_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LCD_HSYNC_MODE` writer - The output LCD_HSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct LCD_HSYNC_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_HSYNC_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type LCD_HSYNC_MODE_W<'a> = crate::FieldWriter<'a, u32, LCD_DLY_MODE_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `LCD_VSYNC_MODE` reader - The output LCD_VSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct LCD_VSYNC_MODE_R(crate::FieldReader<u8>);
-impl LCD_VSYNC_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LCD_VSYNC_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_VSYNC_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_VSYNC_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LCD_VSYNC_MODE` writer - The output LCD_VSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
-pub struct LCD_VSYNC_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_VSYNC_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type LCD_VSYNC_MODE_W<'a> = crate::FieldWriter<'a, u32, LCD_DLY_MODE_SPEC, u8, u8, 2, 6>;
 impl R {
     #[doc = "Bits 0:1 - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
@@ -168,22 +76,22 @@ impl W {
     #[doc = "Bits 0:1 - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn lcd_cd_mode(&mut self) -> LCD_CD_MODE_W {
-        LCD_CD_MODE_W { w: self }
+        LCD_CD_MODE_W::new(self)
     }
     #[doc = "Bits 2:3 - The output LCD_DE is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn lcd_de_mode(&mut self) -> LCD_DE_MODE_W {
-        LCD_DE_MODE_W { w: self }
+        LCD_DE_MODE_W::new(self)
     }
     #[doc = "Bits 4:5 - The output LCD_HSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn lcd_hsync_mode(&mut self) -> LCD_HSYNC_MODE_W {
-        LCD_HSYNC_MODE_W { w: self }
+        LCD_HSYNC_MODE_W::new(self)
     }
     #[doc = "Bits 6:7 - The output LCD_VSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
     pub fn lcd_vsync_mode(&mut self) -> LCD_VSYNC_MODE_W {
-        LCD_VSYNC_MODE_W { w: self }
+        LCD_VSYNC_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

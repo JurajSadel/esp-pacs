@@ -14,155 +14,25 @@ impl From<crate::R<SR_SPEC>> for R {
     }
 }
 #[doc = "Field `RESP_REC` reader - reg_resp_rec"]
-pub struct RESP_REC_R(crate::FieldReader<bool>);
-impl RESP_REC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESP_REC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESP_REC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESP_REC_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_RW` reader - reg_slave_rw"]
-pub struct SLAVE_RW_R(crate::FieldReader<bool>);
-impl SLAVE_RW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_RW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_RW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_RW_R = crate::BitReader<bool>;
 #[doc = "Field `ARB_LOST` reader - reg_arb_lost"]
-pub struct ARB_LOST_R(crate::FieldReader<bool>);
-impl ARB_LOST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARB_LOST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARB_LOST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARB_LOST_R = crate::BitReader<bool>;
 #[doc = "Field `BUS_BUSY` reader - reg_bus_busy"]
-pub struct BUS_BUSY_R(crate::FieldReader<bool>);
-impl BUS_BUSY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BUS_BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUS_BUSY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUS_BUSY_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_ADDRESSED` reader - reg_slave_addressed"]
-pub struct SLAVE_ADDRESSED_R(crate::FieldReader<bool>);
-impl SLAVE_ADDRESSED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_ADDRESSED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_ADDRESSED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_ADDRESSED_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFO_CNT` reader - reg_rxfifo_cnt"]
-pub struct RXFIFO_CNT_R(crate::FieldReader<u8>);
-impl RXFIFO_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RXFIFO_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `STRETCH_CAUSE` reader - reg_stretch_cause"]
-pub struct STRETCH_CAUSE_R(crate::FieldReader<u8>);
-impl STRETCH_CAUSE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STRETCH_CAUSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STRETCH_CAUSE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STRETCH_CAUSE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TXFIFO_CNT` reader - reg_txfifo_cnt"]
-pub struct TXFIFO_CNT_R(crate::FieldReader<u8>);
-impl TXFIFO_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TXFIFO_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFIFO_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFIFO_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCL_MAIN_STATE_LAST` reader - reg_scl_main_state_last"]
-pub struct SCL_MAIN_STATE_LAST_R(crate::FieldReader<u8>);
-impl SCL_MAIN_STATE_LAST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCL_MAIN_STATE_LAST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_MAIN_STATE_LAST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_MAIN_STATE_LAST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCL_STATE_LAST` reader - reg_scl_state_last"]
-pub struct SCL_STATE_LAST_R(crate::FieldReader<u8>);
-impl SCL_STATE_LAST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCL_STATE_LAST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_STATE_LAST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_STATE_LAST_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - reg_resp_rec"]
     #[inline(always)]

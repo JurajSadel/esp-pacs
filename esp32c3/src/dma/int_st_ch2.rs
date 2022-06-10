@@ -14,200 +14,31 @@ impl From<crate::R<INT_ST_CH2_SPEC>> for R {
     }
 }
 #[doc = "Field `IN_DONE_CH2_INT_ST` reader - The raw interrupt status bit for the IN_DONE_CH_INT interrupt."]
-pub struct IN_DONE_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl IN_DONE_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_DONE_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_DONE_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_DONE_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_SUC_EOF_CH2_INT_ST` reader - The raw interrupt status bit for the IN_SUC_EOF_CH_INT interrupt."]
-pub struct IN_SUC_EOF_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl IN_SUC_EOF_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_SUC_EOF_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_SUC_EOF_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_SUC_EOF_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_ERR_EOF_CH2_INT_ST` reader - The raw interrupt status bit for the IN_ERR_EOF_CH_INT interrupt."]
-pub struct IN_ERR_EOF_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl IN_ERR_EOF_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_ERR_EOF_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_ERR_EOF_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_ERR_EOF_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DONE_CH2_INT_ST` reader - The raw interrupt status bit for the OUT_DONE_CH_INT interrupt."]
-pub struct OUT_DONE_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl OUT_DONE_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DONE_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DONE_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DONE_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EOF_CH2_INT_ST` reader - The raw interrupt status bit for the OUT_EOF_CH_INT interrupt."]
-pub struct OUT_EOF_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl OUT_EOF_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EOF_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EOF_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EOF_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_DSCR_ERR_CH2_INT_ST` reader - The raw interrupt status bit for the IN_DSCR_ERR_CH_INT interrupt."]
-pub struct IN_DSCR_ERR_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl IN_DSCR_ERR_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_DSCR_ERR_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_DSCR_ERR_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_DSCR_ERR_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DSCR_ERR_CH2_INT_ST` reader - The raw interrupt status bit for the OUT_DSCR_ERR_CH_INT interrupt."]
-pub struct OUT_DSCR_ERR_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl OUT_DSCR_ERR_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DSCR_ERR_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DSCR_ERR_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DSCR_ERR_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_DSCR_EMPTY_CH2_INT_ST` reader - The raw interrupt status bit for the IN_DSCR_EMPTY_CH_INT interrupt."]
-pub struct IN_DSCR_EMPTY_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl IN_DSCR_EMPTY_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_DSCR_EMPTY_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_DSCR_EMPTY_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_DSCR_EMPTY_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_TOTAL_EOF_CH2_INT_ST` reader - The raw interrupt status bit for the OUT_TOTAL_EOF_CH_INT interrupt."]
-pub struct OUT_TOTAL_EOF_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl OUT_TOTAL_EOF_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_TOTAL_EOF_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_TOTAL_EOF_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_TOTAL_EOF_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `INFIFO_OVF_CH2_INT_ST` reader - The raw interrupt status bit for the INFIFO_OVF_L1_CH_INT interrupt."]
-pub struct INFIFO_OVF_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl INFIFO_OVF_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INFIFO_OVF_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INFIFO_OVF_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INFIFO_OVF_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `INFIFO_UDF_CH2_INT_ST` reader - The raw interrupt status bit for the INFIFO_UDF_L1_CH_INT interrupt."]
-pub struct INFIFO_UDF_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl INFIFO_UDF_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INFIFO_UDF_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INFIFO_UDF_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INFIFO_UDF_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUTFIFO_OVF_CH2_INT_ST` reader - The raw interrupt status bit for the OUTFIFO_OVF_L1_CH_INT interrupt."]
-pub struct OUTFIFO_OVF_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl OUTFIFO_OVF_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTFIFO_OVF_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTFIFO_OVF_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTFIFO_OVF_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OUTFIFO_UDF_CH2_INT_ST` reader - The raw interrupt status bit for the OUTFIFO_UDF_L1_CH_INT interrupt."]
-pub struct OUTFIFO_UDF_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl OUTFIFO_UDF_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTFIFO_UDF_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTFIFO_UDF_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTFIFO_UDF_CH2_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the IN_DONE_CH_INT interrupt."]
     #[inline(always)]

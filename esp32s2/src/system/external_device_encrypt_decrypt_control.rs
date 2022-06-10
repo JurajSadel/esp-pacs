@@ -35,153 +35,25 @@ impl From<crate::W<EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE_SPI_MANUAL_ENCRYPT` reader - Set this bit to enable Manual Encryption under SPI Boot mode."]
-pub struct ENABLE_SPI_MANUAL_ENCRYPT_R(crate::FieldReader<bool>);
-impl ENABLE_SPI_MANUAL_ENCRYPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_SPI_MANUAL_ENCRYPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_SPI_MANUAL_ENCRYPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_SPI_MANUAL_ENCRYPT_R = crate::BitReader<bool>;
 #[doc = "Field `ENABLE_SPI_MANUAL_ENCRYPT` writer - Set this bit to enable Manual Encryption under SPI Boot mode."]
-pub struct ENABLE_SPI_MANUAL_ENCRYPT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_SPI_MANUAL_ENCRYPT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type ENABLE_SPI_MANUAL_ENCRYPT_W<'a> =
+    crate::BitWriter<'a, u32, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, bool, 0>;
 #[doc = "Field `ENABLE_DOWNLOAD_DB_ENCRYPT` reader - Set this bit to enable Auto Encryption under Download Boot mode."]
-pub struct ENABLE_DOWNLOAD_DB_ENCRYPT_R(crate::FieldReader<bool>);
-impl ENABLE_DOWNLOAD_DB_ENCRYPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_DOWNLOAD_DB_ENCRYPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_DOWNLOAD_DB_ENCRYPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_DOWNLOAD_DB_ENCRYPT_R = crate::BitReader<bool>;
 #[doc = "Field `ENABLE_DOWNLOAD_DB_ENCRYPT` writer - Set this bit to enable Auto Encryption under Download Boot mode."]
-pub struct ENABLE_DOWNLOAD_DB_ENCRYPT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_DOWNLOAD_DB_ENCRYPT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ENABLE_DOWNLOAD_DB_ENCRYPT_W<'a> =
+    crate::BitWriter<'a, u32, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, bool, 1>;
 #[doc = "Field `ENABLE_DOWNLOAD_G0CB_DECRYPT` reader - Set this bit to enable Auto Decryption under Download Boot mode."]
-pub struct ENABLE_DOWNLOAD_G0CB_DECRYPT_R(crate::FieldReader<bool>);
-impl ENABLE_DOWNLOAD_G0CB_DECRYPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_DOWNLOAD_G0CB_DECRYPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_DOWNLOAD_G0CB_DECRYPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_DOWNLOAD_G0CB_DECRYPT_R = crate::BitReader<bool>;
 #[doc = "Field `ENABLE_DOWNLOAD_G0CB_DECRYPT` writer - Set this bit to enable Auto Decryption under Download Boot mode."]
-pub struct ENABLE_DOWNLOAD_G0CB_DECRYPT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_DOWNLOAD_G0CB_DECRYPT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type ENABLE_DOWNLOAD_G0CB_DECRYPT_W<'a> =
+    crate::BitWriter<'a, u32, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, bool, 2>;
 #[doc = "Field `ENABLE_DOWNLOAD_MANUAL_ENCRYPT` reader - Set this bit to enable Manual Encryption under Download Boot mode."]
-pub struct ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R(crate::FieldReader<bool>);
-impl ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_DOWNLOAD_MANUAL_ENCRYPT_R = crate::BitReader<bool>;
 #[doc = "Field `ENABLE_DOWNLOAD_MANUAL_ENCRYPT` writer - Set this bit to enable Manual Encryption under Download Boot mode."]
-pub struct ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W<'a> =
+    crate::BitWriter<'a, u32, EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC, bool, 3>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable Manual Encryption under SPI Boot mode."]
     #[inline(always)]
@@ -208,22 +80,22 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable Manual Encryption under SPI Boot mode."]
     #[inline(always)]
     pub fn enable_spi_manual_encrypt(&mut self) -> ENABLE_SPI_MANUAL_ENCRYPT_W {
-        ENABLE_SPI_MANUAL_ENCRYPT_W { w: self }
+        ENABLE_SPI_MANUAL_ENCRYPT_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable Auto Encryption under Download Boot mode."]
     #[inline(always)]
     pub fn enable_download_db_encrypt(&mut self) -> ENABLE_DOWNLOAD_DB_ENCRYPT_W {
-        ENABLE_DOWNLOAD_DB_ENCRYPT_W { w: self }
+        ENABLE_DOWNLOAD_DB_ENCRYPT_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable Auto Decryption under Download Boot mode."]
     #[inline(always)]
     pub fn enable_download_g0cb_decrypt(&mut self) -> ENABLE_DOWNLOAD_G0CB_DECRYPT_W {
-        ENABLE_DOWNLOAD_G0CB_DECRYPT_W { w: self }
+        ENABLE_DOWNLOAD_G0CB_DECRYPT_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to enable Manual Encryption under Download Boot mode."]
     #[inline(always)]
     pub fn enable_download_manual_encrypt(&mut self) -> ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W {
-        ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W { w: self }
+        ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

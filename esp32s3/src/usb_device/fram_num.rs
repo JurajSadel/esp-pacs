@@ -14,20 +14,7 @@ impl From<crate::R<FRAM_NUM_SPEC>> for R {
     }
 }
 #[doc = "Field `SOF_FRAME_INDEX` reader - Frame index of received SOF frame."]
-pub struct SOF_FRAME_INDEX_R(crate::FieldReader<u16>);
-impl SOF_FRAME_INDEX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SOF_FRAME_INDEX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SOF_FRAME_INDEX_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SOF_FRAME_INDEX_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:10 - Frame index of received SOF frame."]
     #[inline(always)]

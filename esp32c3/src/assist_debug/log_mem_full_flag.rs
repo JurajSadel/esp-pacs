@@ -35,57 +35,11 @@ impl From<crate::W<LOG_MEM_FULL_FLAG_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_MEM_FULL_FLAG` reader - reg_log_mem_full_flag"]
-pub struct LOG_MEM_FULL_FLAG_R(crate::FieldReader<bool>);
-impl LOG_MEM_FULL_FLAG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LOG_MEM_FULL_FLAG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOG_MEM_FULL_FLAG_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOG_MEM_FULL_FLAG_R = crate::BitReader<bool>;
 #[doc = "Field `CLR_LOG_MEM_FULL_FLAG` reader - reg_clr_log_mem_full_flag"]
-pub struct CLR_LOG_MEM_FULL_FLAG_R(crate::FieldReader<bool>);
-impl CLR_LOG_MEM_FULL_FLAG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLR_LOG_MEM_FULL_FLAG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLR_LOG_MEM_FULL_FLAG_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLR_LOG_MEM_FULL_FLAG_R = crate::BitReader<bool>;
 #[doc = "Field `CLR_LOG_MEM_FULL_FLAG` writer - reg_clr_log_mem_full_flag"]
-pub struct CLR_LOG_MEM_FULL_FLAG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLR_LOG_MEM_FULL_FLAG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CLR_LOG_MEM_FULL_FLAG_W<'a> = crate::BitWriter<'a, u32, LOG_MEM_FULL_FLAG_SPEC, bool, 1>;
 impl R {
     #[doc = "Bit 0 - reg_log_mem_full_flag"]
     #[inline(always)]
@@ -102,7 +56,7 @@ impl W {
     #[doc = "Bit 1 - reg_clr_log_mem_full_flag"]
     #[inline(always)]
     pub fn clr_log_mem_full_flag(&mut self) -> CLR_LOG_MEM_FULL_FLAG_W {
-        CLR_LOG_MEM_FULL_FLAG_W { w: self }
+        CLR_LOG_MEM_FULL_FLAG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,20 +14,7 @@ impl From<crate::R<T1LO_SPEC>> for R {
     }
 }
 #[doc = "Field `T1_LO` reader - Register to store timer 1 time-base counter current value lower 32 bits."]
-pub struct T1_LO_R(crate::FieldReader<u32>);
-impl T1_LO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        T1_LO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T1_LO_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T1_LO_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Register to store timer 1 time-base counter current value lower 32 bits."]
     #[inline(always)]

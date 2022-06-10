@@ -35,32 +35,9 @@ impl From<crate::W<RXEOF_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_EOF_NUM` reader - The length of data to be received. It will trigger I2S_IN_SUC_EOF_INT."]
-pub struct RX_EOF_NUM_R(crate::FieldReader<u32>);
-impl RX_EOF_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RX_EOF_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_EOF_NUM_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_EOF_NUM_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RX_EOF_NUM` writer - The length of data to be received. It will trigger I2S_IN_SUC_EOF_INT."]
-pub struct RX_EOF_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_EOF_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type RX_EOF_NUM_W<'a> = crate::FieldWriter<'a, u32, RXEOF_NUM_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - The length of data to be received. It will trigger I2S_IN_SUC_EOF_INT."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - The length of data to be received. It will trigger I2S_IN_SUC_EOF_INT."]
     #[inline(always)]
     pub fn rx_eof_num(&mut self) -> RX_EOF_NUM_W {
-        RX_EOF_NUM_W { w: self }
+        RX_EOF_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

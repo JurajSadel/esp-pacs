@@ -35,59 +35,13 @@ impl From<crate::W<U_CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `CNT_THRES0_U` reader - This register is used to configure the thres0 value for unit %s."]
-pub struct CNT_THRES0_U_R(crate::FieldReader<u16>);
-impl CNT_THRES0_U_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CNT_THRES0_U_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_THRES0_U_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_THRES0_U_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CNT_THRES0_U` writer - This register is used to configure the thres0 value for unit %s."]
-pub struct CNT_THRES0_U_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_THRES0_U_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type CNT_THRES0_U_W<'a> = crate::FieldWriter<'a, u32, U_CONF1_SPEC, u16, u16, 16, 0>;
 #[doc = "Field `CNT_THRES1_U` reader - This register is used to configure the thres1 value for unit %s."]
-pub struct CNT_THRES1_U_R(crate::FieldReader<u16>);
-impl CNT_THRES1_U_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CNT_THRES1_U_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_THRES1_U_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_THRES1_U_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CNT_THRES1_U` writer - This register is used to configure the thres1 value for unit %s."]
-pub struct CNT_THRES1_U_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_THRES1_U_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
+pub type CNT_THRES1_U_W<'a> = crate::FieldWriter<'a, u32, U_CONF1_SPEC, u16, u16, 16, 16>;
 impl R {
     #[doc = "Bits 0:15 - This register is used to configure the thres0 value for unit %s."]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:15 - This register is used to configure the thres0 value for unit %s."]
     #[inline(always)]
     pub fn cnt_thres0_u(&mut self) -> CNT_THRES0_U_W {
-        CNT_THRES0_U_W { w: self }
+        CNT_THRES0_U_W::new(self)
     }
     #[doc = "Bits 16:31 - This register is used to configure the thres1 value for unit %s."]
     #[inline(always)]
     pub fn cnt_thres1_u(&mut self) -> CNT_THRES1_U_W {
-        CNT_THRES1_U_W { w: self }
+        CNT_THRES1_U_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

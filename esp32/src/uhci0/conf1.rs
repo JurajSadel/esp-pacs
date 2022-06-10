@@ -35,365 +35,45 @@ impl From<crate::W<CONF1_SPEC>> for W {
     }
 }
 #[doc = "Field `CHECK_SUM_EN` reader - Set this bit to enable decoder to check check_sum in packet header."]
-pub struct CHECK_SUM_EN_R(crate::FieldReader<bool>);
-impl CHECK_SUM_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CHECK_SUM_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CHECK_SUM_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CHECK_SUM_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CHECK_SUM_EN` writer - Set this bit to enable decoder to check check_sum in packet header."]
-pub struct CHECK_SUM_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CHECK_SUM_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CHECK_SUM_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 0>;
 #[doc = "Field `CHECK_SEQ_EN` reader - Set this bit to enable decoder to check seq num in packet header."]
-pub struct CHECK_SEQ_EN_R(crate::FieldReader<bool>);
-impl CHECK_SEQ_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CHECK_SEQ_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CHECK_SEQ_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CHECK_SEQ_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CHECK_SEQ_EN` writer - Set this bit to enable decoder to check seq num in packet header."]
-pub struct CHECK_SEQ_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CHECK_SEQ_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CHECK_SEQ_EN_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 1>;
 #[doc = "Field `CRC_DISABLE` reader - Set this bit to disable crc calculation."]
-pub struct CRC_DISABLE_R(crate::FieldReader<bool>);
-impl CRC_DISABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRC_DISABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRC_DISABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRC_DISABLE_R = crate::BitReader<bool>;
 #[doc = "Field `CRC_DISABLE` writer - Set this bit to disable crc calculation."]
-pub struct CRC_DISABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRC_DISABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CRC_DISABLE_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 2>;
 #[doc = "Field `SAVE_HEAD` reader - Set this bit to save packet header ."]
-pub struct SAVE_HEAD_R(crate::FieldReader<bool>);
-impl SAVE_HEAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAVE_HEAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAVE_HEAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAVE_HEAD_R = crate::BitReader<bool>;
 #[doc = "Field `SAVE_HEAD` writer - Set this bit to save packet header ."]
-pub struct SAVE_HEAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAVE_HEAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type SAVE_HEAD_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 3>;
 #[doc = "Field `TX_CHECK_SUM_RE` reader - Set this bit to enable hardware replace check_sum in packet header automatically."]
-pub struct TX_CHECK_SUM_RE_R(crate::FieldReader<bool>);
-impl TX_CHECK_SUM_RE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_CHECK_SUM_RE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_CHECK_SUM_RE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_CHECK_SUM_RE_R = crate::BitReader<bool>;
 #[doc = "Field `TX_CHECK_SUM_RE` writer - Set this bit to enable hardware replace check_sum in packet header automatically."]
-pub struct TX_CHECK_SUM_RE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_CHECK_SUM_RE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type TX_CHECK_SUM_RE_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 4>;
 #[doc = "Field `TX_ACK_NUM_RE` reader - Set this bit to enable hardware replace ack num in packet header automatically."]
-pub struct TX_ACK_NUM_RE_R(crate::FieldReader<bool>);
-impl TX_ACK_NUM_RE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_ACK_NUM_RE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_ACK_NUM_RE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_ACK_NUM_RE_R = crate::BitReader<bool>;
 #[doc = "Field `TX_ACK_NUM_RE` writer - Set this bit to enable hardware replace ack num in packet header automatically."]
-pub struct TX_ACK_NUM_RE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_ACK_NUM_RE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type TX_ACK_NUM_RE_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 5>;
 #[doc = "Field `CHECK_OWNER` reader - Set this bit to check the owner bit in link descriptor."]
-pub struct CHECK_OWNER_R(crate::FieldReader<bool>);
-impl CHECK_OWNER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CHECK_OWNER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CHECK_OWNER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CHECK_OWNER_R = crate::BitReader<bool>;
 #[doc = "Field `CHECK_OWNER` writer - Set this bit to check the owner bit in link descriptor."]
-pub struct CHECK_OWNER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CHECK_OWNER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CHECK_OWNER_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 6>;
 #[doc = "Field `WAIT_SW_START` reader - Set this bit to enable software way to add packet header."]
-pub struct WAIT_SW_START_R(crate::FieldReader<bool>);
-impl WAIT_SW_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WAIT_SW_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WAIT_SW_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WAIT_SW_START_R = crate::BitReader<bool>;
 #[doc = "Field `WAIT_SW_START` writer - Set this bit to enable software way to add packet header."]
-pub struct WAIT_SW_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WAIT_SW_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type WAIT_SW_START_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 7>;
 #[doc = "Field `SW_START` reader - Set this bit to start inserting the packet header."]
-pub struct SW_START_R(crate::FieldReader<bool>);
-impl SW_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SW_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_START_R = crate::BitReader<bool>;
 #[doc = "Field `SW_START` writer - Set this bit to start inserting the packet header."]
-pub struct SW_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type SW_START_W<'a> = crate::BitWriter<'a, u32, CONF1_SPEC, bool, 8>;
 #[doc = "Field `DMA_INFIFO_FULL_THRS` reader - when data amount in link descriptor's fifo is more than this register value it will produce uhci_dma_infifo_full_wm_int interrupt."]
-pub struct DMA_INFIFO_FULL_THRS_R(crate::FieldReader<u16>);
-impl DMA_INFIFO_FULL_THRS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DMA_INFIFO_FULL_THRS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_INFIFO_FULL_THRS_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_INFIFO_FULL_THRS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DMA_INFIFO_FULL_THRS` writer - when data amount in link descriptor's fifo is more than this register value it will produce uhci_dma_infifo_full_wm_int interrupt."]
-pub struct DMA_INFIFO_FULL_THRS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_INFIFO_FULL_THRS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 9)) | ((value as u32 & 0x0fff) << 9);
-        self.w
-    }
-}
+pub type DMA_INFIFO_FULL_THRS_W<'a> = crate::FieldWriter<'a, u32, CONF1_SPEC, u16, u16, 12, 9>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable decoder to check check_sum in packet header."]
     #[inline(always)]
@@ -450,52 +130,52 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable decoder to check check_sum in packet header."]
     #[inline(always)]
     pub fn check_sum_en(&mut self) -> CHECK_SUM_EN_W {
-        CHECK_SUM_EN_W { w: self }
+        CHECK_SUM_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable decoder to check seq num in packet header."]
     #[inline(always)]
     pub fn check_seq_en(&mut self) -> CHECK_SEQ_EN_W {
-        CHECK_SEQ_EN_W { w: self }
+        CHECK_SEQ_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to disable crc calculation."]
     #[inline(always)]
     pub fn crc_disable(&mut self) -> CRC_DISABLE_W {
-        CRC_DISABLE_W { w: self }
+        CRC_DISABLE_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to save packet header ."]
     #[inline(always)]
     pub fn save_head(&mut self) -> SAVE_HEAD_W {
-        SAVE_HEAD_W { w: self }
+        SAVE_HEAD_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable hardware replace check_sum in packet header automatically."]
     #[inline(always)]
     pub fn tx_check_sum_re(&mut self) -> TX_CHECK_SUM_RE_W {
-        TX_CHECK_SUM_RE_W { w: self }
+        TX_CHECK_SUM_RE_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable hardware replace ack num in packet header automatically."]
     #[inline(always)]
     pub fn tx_ack_num_re(&mut self) -> TX_ACK_NUM_RE_W {
-        TX_ACK_NUM_RE_W { w: self }
+        TX_ACK_NUM_RE_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to check the owner bit in link descriptor."]
     #[inline(always)]
     pub fn check_owner(&mut self) -> CHECK_OWNER_W {
-        CHECK_OWNER_W { w: self }
+        CHECK_OWNER_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to enable software way to add packet header."]
     #[inline(always)]
     pub fn wait_sw_start(&mut self) -> WAIT_SW_START_W {
-        WAIT_SW_START_W { w: self }
+        WAIT_SW_START_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to start inserting the packet header."]
     #[inline(always)]
     pub fn sw_start(&mut self) -> SW_START_W {
-        SW_START_W { w: self }
+        SW_START_W::new(self)
     }
     #[doc = "Bits 9:20 - when data amount in link descriptor's fifo is more than this register value it will produce uhci_dma_infifo_full_wm_int interrupt."]
     #[inline(always)]
     pub fn dma_infifo_full_thrs(&mut self) -> DMA_INFIFO_FULL_THRS_W {
-        DMA_INFIFO_FULL_THRS_W { w: self }
+        DMA_INFIFO_FULL_THRS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

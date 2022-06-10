@@ -14,20 +14,7 @@ impl From<crate::R<RTC_FASTMEM_CRC_SPEC>> for R {
     }
 }
 #[doc = "Field `RTC_MEM_CRC_RES` reader - reg_rtc_mem_crc_res"]
-pub struct RTC_MEM_CRC_RES_R(crate::FieldReader<u32>);
-impl RTC_MEM_CRC_RES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RTC_MEM_CRC_RES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_MEM_CRC_RES_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_MEM_CRC_RES_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_rtc_mem_crc_res"]
     #[inline(always)]

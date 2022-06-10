@@ -35,79 +35,13 @@ impl From<crate::W<CACHE_MMU_ACCESS_1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_MMU_RD_ACS` reader - Set 1 to enable read access MMU memory."]
-pub struct PRO_MMU_RD_ACS_R(crate::FieldReader<bool>);
-impl PRO_MMU_RD_ACS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_MMU_RD_ACS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_MMU_RD_ACS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_MMU_RD_ACS_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_MMU_RD_ACS` writer - Set 1 to enable read access MMU memory."]
-pub struct PRO_MMU_RD_ACS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_MMU_RD_ACS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_MMU_RD_ACS_W<'a> = crate::BitWriter<'a, u32, CACHE_MMU_ACCESS_1_SPEC, bool, 0>;
 #[doc = "Field `PRO_MMU_WR_ACS` reader - Set 1 to enable write access MMU memory."]
-pub struct PRO_MMU_WR_ACS_R(crate::FieldReader<bool>);
-impl PRO_MMU_WR_ACS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_MMU_WR_ACS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_MMU_WR_ACS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_MMU_WR_ACS_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_MMU_WR_ACS` writer - Set 1 to enable write access MMU memory."]
-pub struct PRO_MMU_WR_ACS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_MMU_WR_ACS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PRO_MMU_WR_ACS_W<'a> = crate::BitWriter<'a, u32, CACHE_MMU_ACCESS_1_SPEC, bool, 1>;
 impl R {
     #[doc = "Bit 0 - Set 1 to enable read access MMU memory."]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 0 - Set 1 to enable read access MMU memory."]
     #[inline(always)]
     pub fn pro_mmu_rd_acs(&mut self) -> PRO_MMU_RD_ACS_W {
-        PRO_MMU_RD_ACS_W { w: self }
+        PRO_MMU_RD_ACS_W::new(self)
     }
     #[doc = "Bit 1 - Set 1 to enable write access MMU memory."]
     #[inline(always)]
     pub fn pro_mmu_wr_acs(&mut self) -> PRO_MMU_WR_ACS_W {
-        PRO_MMU_WR_ACS_W { w: self }
+        PRO_MMU_WR_ACS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

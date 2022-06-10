@@ -35,32 +35,9 @@ impl From<crate::W<ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `USR_ADDR_VALUE` reader - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
-pub struct USR_ADDR_VALUE_R(crate::FieldReader<u32>);
-impl USR_ADDR_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        USR_ADDR_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USR_ADDR_VALUE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USR_ADDR_VALUE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `USR_ADDR_VALUE` writer - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
-pub struct USR_ADDR_VALUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR_ADDR_VALUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type USR_ADDR_VALUE_W<'a> = crate::FieldWriter<'a, u32, ADDR_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - In user mode, it is the memory address. other then the bit0-bit23 is the memory address, the bit24-bit31 are the byte length of a transfer."]
     #[inline(always)]
     pub fn usr_addr_value(&mut self) -> USR_ADDR_VALUE_W {
-        USR_ADDR_VALUE_W { w: self }
+        USR_ADDR_VALUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

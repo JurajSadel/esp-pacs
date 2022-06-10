@@ -35,231 +35,29 @@ impl From<crate::W<_0_LEN_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_LEN_WDATA` writer - "]
-pub struct SLC0_LEN_WDATA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_LEN_WDATA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type SLC0_LEN_WDATA_W<'a> = crate::FieldWriter<'a, u32, _0_LEN_CONF_SPEC, u32, u32, 20, 0>;
 #[doc = "Field `SLC0_LEN_WR` writer - "]
-pub struct SLC0_LEN_WR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_LEN_WR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type SLC0_LEN_WR_W<'a> = crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, 20>;
 #[doc = "Field `SLC0_LEN_INC` writer - "]
-pub struct SLC0_LEN_INC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_LEN_INC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type SLC0_LEN_INC_W<'a> = crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, 21>;
 #[doc = "Field `SLC0_LEN_INC_MORE` writer - "]
-pub struct SLC0_LEN_INC_MORE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_LEN_INC_MORE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type SLC0_LEN_INC_MORE_W<'a> = crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, 22>;
 #[doc = "Field `SLC0_RX_PACKET_LOAD_EN` reader - "]
-pub struct SLC0_RX_PACKET_LOAD_EN_R(crate::FieldReader<bool>);
-impl SLC0_RX_PACKET_LOAD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_RX_PACKET_LOAD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_PACKET_LOAD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_PACKET_LOAD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_RX_PACKET_LOAD_EN` writer - "]
-pub struct SLC0_RX_PACKET_LOAD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_RX_PACKET_LOAD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type SLC0_RX_PACKET_LOAD_EN_W<'a> = crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, 23>;
 #[doc = "Field `SLC0_TX_PACKET_LOAD_EN` reader - "]
-pub struct SLC0_TX_PACKET_LOAD_EN_R(crate::FieldReader<bool>);
-impl SLC0_TX_PACKET_LOAD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_TX_PACKET_LOAD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_TX_PACKET_LOAD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_TX_PACKET_LOAD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_TX_PACKET_LOAD_EN` writer - "]
-pub struct SLC0_TX_PACKET_LOAD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_TX_PACKET_LOAD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type SLC0_TX_PACKET_LOAD_EN_W<'a> = crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, 24>;
 #[doc = "Field `SLC0_RX_GET_USED_DSCR` writer - "]
-pub struct SLC0_RX_GET_USED_DSCR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_RX_GET_USED_DSCR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type SLC0_RX_GET_USED_DSCR_W<'a> = crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, 25>;
 #[doc = "Field `SLC0_TX_GET_USED_DSCR` writer - "]
-pub struct SLC0_TX_GET_USED_DSCR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_TX_GET_USED_DSCR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type SLC0_TX_GET_USED_DSCR_W<'a> = crate::BitWriter<'a, u32, _0_LEN_CONF_SPEC, bool, 26>;
 #[doc = "Field `SLC0_RX_NEW_PKT_IND` reader - "]
-pub struct SLC0_RX_NEW_PKT_IND_R(crate::FieldReader<bool>);
-impl SLC0_RX_NEW_PKT_IND_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_RX_NEW_PKT_IND_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_NEW_PKT_IND_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_NEW_PKT_IND_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_TX_NEW_PKT_IND` reader - "]
-pub struct SLC0_TX_NEW_PKT_IND_R(crate::FieldReader<bool>);
-impl SLC0_TX_NEW_PKT_IND_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_TX_NEW_PKT_IND_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_TX_NEW_PKT_IND_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_TX_NEW_PKT_IND_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 23"]
     #[inline(always)]
@@ -286,42 +84,42 @@ impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
     pub fn slc0_len_wdata(&mut self) -> SLC0_LEN_WDATA_W {
-        SLC0_LEN_WDATA_W { w: self }
+        SLC0_LEN_WDATA_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn slc0_len_wr(&mut self) -> SLC0_LEN_WR_W {
-        SLC0_LEN_WR_W { w: self }
+        SLC0_LEN_WR_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     pub fn slc0_len_inc(&mut self) -> SLC0_LEN_INC_W {
-        SLC0_LEN_INC_W { w: self }
+        SLC0_LEN_INC_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     pub fn slc0_len_inc_more(&mut self) -> SLC0_LEN_INC_MORE_W {
-        SLC0_LEN_INC_MORE_W { w: self }
+        SLC0_LEN_INC_MORE_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     pub fn slc0_rx_packet_load_en(&mut self) -> SLC0_RX_PACKET_LOAD_EN_W {
-        SLC0_RX_PACKET_LOAD_EN_W { w: self }
+        SLC0_RX_PACKET_LOAD_EN_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     pub fn slc0_tx_packet_load_en(&mut self) -> SLC0_TX_PACKET_LOAD_EN_W {
-        SLC0_TX_PACKET_LOAD_EN_W { w: self }
+        SLC0_TX_PACKET_LOAD_EN_W::new(self)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     pub fn slc0_rx_get_used_dscr(&mut self) -> SLC0_RX_GET_USED_DSCR_W {
-        SLC0_RX_GET_USED_DSCR_W { w: self }
+        SLC0_RX_GET_USED_DSCR_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     pub fn slc0_tx_get_used_dscr(&mut self) -> SLC0_TX_GET_USED_DSCR_W {
-        SLC0_TX_GET_USED_DSCR_W { w: self }
+        SLC0_TX_GET_USED_DSCR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

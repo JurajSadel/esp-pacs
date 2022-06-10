@@ -14,20 +14,7 @@ impl From<crate::R<WRTPRT_SPEC>> for R {
     }
 }
 #[doc = "Field `WRITE_PROTECT` reader - Value on sdhost_card_write_prt input ports (1 bit per card). 1 represents write protection. Only NUM_CARDS number of bits are implemented."]
-pub struct WRITE_PROTECT_R(crate::FieldReader<u8>);
-impl WRITE_PROTECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WRITE_PROTECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WRITE_PROTECT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WRITE_PROTECT_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:1 - Value on sdhost_card_write_prt input ports (1 bit per card). 1 represents write protection. Only NUM_CARDS number of bits are implemented."]
     #[inline(always)]

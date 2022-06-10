@@ -35,32 +35,9 @@ impl From<crate::W<IN_PERI_SEL_CH2_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_IN_SEL_CH2` reader - This register is used to select peripheral for Rx channel 2. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
-pub struct PERI_IN_SEL_CH2_R(crate::FieldReader<u8>);
-impl PERI_IN_SEL_CH2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PERI_IN_SEL_CH2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERI_IN_SEL_CH2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERI_IN_SEL_CH2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PERI_IN_SEL_CH2` writer - This register is used to select peripheral for Rx channel 2. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
-pub struct PERI_IN_SEL_CH2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERI_IN_SEL_CH2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type PERI_IN_SEL_CH2_W<'a> = crate::FieldWriter<'a, u32, IN_PERI_SEL_CH2_SPEC, u8, u8, 6, 0>;
 impl R {
     #[doc = "Bits 0:5 - This register is used to select peripheral for Rx channel 2. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:5 - This register is used to select peripheral for Rx channel 2. 0:SPI2. 1: reserved. 2: UHCI0. 3: I2S0. 4: reserved. 5: reserved. 6: AES. 7: SHA. 8: ADC_DAC."]
     #[inline(always)]
     pub fn peri_in_sel_ch2(&mut self) -> PERI_IN_SEL_CH2_W {
-        PERI_IN_SEL_CH2_W { w: self }
+        PERI_IN_SEL_CH2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

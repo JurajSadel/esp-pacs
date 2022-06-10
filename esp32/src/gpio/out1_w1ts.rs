@@ -35,32 +35,9 @@ impl From<crate::W<OUT1_W1TS_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT1_DATA_W1TS` reader - GPIO32~39 output value write 1 to set"]
-pub struct OUT1_DATA_W1TS_R(crate::FieldReader<u8>);
-impl OUT1_DATA_W1TS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT1_DATA_W1TS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT1_DATA_W1TS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT1_DATA_W1TS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUT1_DATA_W1TS` writer - GPIO32~39 output value write 1 to set"]
-pub struct OUT1_DATA_W1TS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT1_DATA_W1TS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type OUT1_DATA_W1TS_W<'a> = crate::FieldWriter<'a, u32, OUT1_W1TS_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - GPIO32~39 output value write 1 to set"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7 - GPIO32~39 output value write 1 to set"]
     #[inline(always)]
     pub fn out1_data_w1ts(&mut self) -> OUT1_DATA_W1TS_W {
-        OUT1_DATA_W1TS_W { w: self }
+        OUT1_DATA_W1TS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

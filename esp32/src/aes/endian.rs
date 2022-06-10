@@ -35,32 +35,9 @@ impl From<crate::W<ENDIAN_SPEC>> for W {
     }
 }
 #[doc = "Field `ENDIAN` reader - Endianness selection register. See Table 22-2 for details."]
-pub struct ENDIAN_R(crate::FieldReader<u8>);
-impl ENDIAN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ENDIAN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENDIAN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENDIAN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ENDIAN` writer - Endianness selection register. See Table 22-2 for details."]
-pub struct ENDIAN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENDIAN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type ENDIAN_W<'a> = crate::FieldWriter<'a, u32, ENDIAN_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1 - Endianness selection register. See Table 22-2 for details."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:1 - Endianness selection register. See Table 22-2 for details."]
     #[inline(always)]
     pub fn endian(&mut self) -> ENDIAN_W {
-        ENDIAN_W { w: self }
+        ENDIAN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

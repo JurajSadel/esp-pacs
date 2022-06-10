@@ -35,330 +35,43 @@ impl From<crate::W<LCD_MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_AFIFO_THRESHOLD_NUM` reader - The awfull threshold number of lcd_afifo."]
-pub struct LCD_AFIFO_THRESHOLD_NUM_R(crate::FieldReader<u8>);
-impl LCD_AFIFO_THRESHOLD_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LCD_AFIFO_THRESHOLD_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_AFIFO_THRESHOLD_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_AFIFO_THRESHOLD_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LCD_AFIFO_THRESHOLD_NUM` writer - The awfull threshold number of lcd_afifo."]
-pub struct LCD_AFIFO_THRESHOLD_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_AFIFO_THRESHOLD_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 1)) | ((value as u32 & 0x1f) << 1);
-        self.w
-    }
-}
+pub type LCD_AFIFO_THRESHOLD_NUM_W<'a> = crate::FieldWriter<'a, u32, LCD_MISC_SPEC, u8, u8, 5, 1>;
 #[doc = "Field `LCD_VFK_CYCLELEN` reader - The setup cycle length minus 1 in LCD non-RGB mode."]
-pub struct LCD_VFK_CYCLELEN_R(crate::FieldReader<u8>);
-impl LCD_VFK_CYCLELEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LCD_VFK_CYCLELEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_VFK_CYCLELEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_VFK_CYCLELEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LCD_VFK_CYCLELEN` writer - The setup cycle length minus 1 in LCD non-RGB mode."]
-pub struct LCD_VFK_CYCLELEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_VFK_CYCLELEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 6)) | ((value as u32 & 0x3f) << 6);
-        self.w
-    }
-}
+pub type LCD_VFK_CYCLELEN_W<'a> = crate::FieldWriter<'a, u32, LCD_MISC_SPEC, u8, u8, 6, 6>;
 #[doc = "Field `LCD_VBK_CYCLELEN` reader - The vertical back blank region cycle length minus 1 in LCD RGB mode, or the hold time cycle length in LCD non-RGB mode."]
-pub struct LCD_VBK_CYCLELEN_R(crate::FieldReader<u16>);
-impl LCD_VBK_CYCLELEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        LCD_VBK_CYCLELEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_VBK_CYCLELEN_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_VBK_CYCLELEN_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LCD_VBK_CYCLELEN` writer - The vertical back blank region cycle length minus 1 in LCD RGB mode, or the hold time cycle length in LCD non-RGB mode."]
-pub struct LCD_VBK_CYCLELEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_VBK_CYCLELEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1fff << 12)) | ((value as u32 & 0x1fff) << 12);
-        self.w
-    }
-}
+pub type LCD_VBK_CYCLELEN_W<'a> = crate::FieldWriter<'a, u32, LCD_MISC_SPEC, u16, u16, 13, 12>;
 #[doc = "Field `LCD_NEXT_FRAME_EN` reader - 1: Send the next frame data when the current frame is sent out. 0: LCD stops when the current frame is sent out."]
-pub struct LCD_NEXT_FRAME_EN_R(crate::FieldReader<bool>);
-impl LCD_NEXT_FRAME_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_NEXT_FRAME_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_NEXT_FRAME_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_NEXT_FRAME_EN_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_NEXT_FRAME_EN` writer - 1: Send the next frame data when the current frame is sent out. 0: LCD stops when the current frame is sent out."]
-pub struct LCD_NEXT_FRAME_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_NEXT_FRAME_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type LCD_NEXT_FRAME_EN_W<'a> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, 25>;
 #[doc = "Field `LCD_BK_EN` reader - 1: Enable blank region when LCD sends data out. 0: No blank region."]
-pub struct LCD_BK_EN_R(crate::FieldReader<bool>);
-impl LCD_BK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_BK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_BK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_BK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_BK_EN` writer - 1: Enable blank region when LCD sends data out. 0: No blank region."]
-pub struct LCD_BK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_BK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type LCD_BK_EN_W<'a> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, 26>;
 #[doc = "Field `LCD_AFIFO_RESET` writer - LCD AFIFO reset signal."]
-pub struct LCD_AFIFO_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_AFIFO_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type LCD_AFIFO_RESET_W<'a> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, 27>;
 #[doc = "Field `LCD_CD_DATA_SET` reader - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DOUT state. 0: LCD_CD = reg_cd_idle_edge."]
-pub struct LCD_CD_DATA_SET_R(crate::FieldReader<bool>);
-impl LCD_CD_DATA_SET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_CD_DATA_SET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_CD_DATA_SET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_CD_DATA_SET_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_CD_DATA_SET` writer - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DOUT state. 0: LCD_CD = reg_cd_idle_edge."]
-pub struct LCD_CD_DATA_SET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_CD_DATA_SET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type LCD_CD_DATA_SET_W<'a> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, 28>;
 #[doc = "Field `LCD_CD_DUMMY_SET` reader - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DUMMY state. 0: LCD_CD = reg_cd_idle_edge."]
-pub struct LCD_CD_DUMMY_SET_R(crate::FieldReader<bool>);
-impl LCD_CD_DUMMY_SET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_CD_DUMMY_SET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_CD_DUMMY_SET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_CD_DUMMY_SET_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_CD_DUMMY_SET` writer - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DUMMY state. 0: LCD_CD = reg_cd_idle_edge."]
-pub struct LCD_CD_DUMMY_SET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_CD_DUMMY_SET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type LCD_CD_DUMMY_SET_W<'a> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, 29>;
 #[doc = "Field `LCD_CD_CMD_SET` reader - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_CMD state. 0: LCD_CD = reg_cd_idle_edge."]
-pub struct LCD_CD_CMD_SET_R(crate::FieldReader<bool>);
-impl LCD_CD_CMD_SET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_CD_CMD_SET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_CD_CMD_SET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_CD_CMD_SET_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_CD_CMD_SET` writer - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_CMD state. 0: LCD_CD = reg_cd_idle_edge."]
-pub struct LCD_CD_CMD_SET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_CD_CMD_SET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type LCD_CD_CMD_SET_W<'a> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, 30>;
 #[doc = "Field `LCD_CD_IDLE_EDGE` reader - The default value of LCD_CD."]
-pub struct LCD_CD_IDLE_EDGE_R(crate::FieldReader<bool>);
-impl LCD_CD_IDLE_EDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_CD_IDLE_EDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_CD_IDLE_EDGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_CD_IDLE_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_CD_IDLE_EDGE` writer - The default value of LCD_CD."]
-pub struct LCD_CD_IDLE_EDGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_CD_IDLE_EDGE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type LCD_CD_IDLE_EDGE_W<'a> = crate::BitWriter<'a, u32, LCD_MISC_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 1:5 - The awfull threshold number of lcd_afifo."]
     #[inline(always)]
@@ -410,52 +123,52 @@ impl W {
     #[doc = "Bits 1:5 - The awfull threshold number of lcd_afifo."]
     #[inline(always)]
     pub fn lcd_afifo_threshold_num(&mut self) -> LCD_AFIFO_THRESHOLD_NUM_W {
-        LCD_AFIFO_THRESHOLD_NUM_W { w: self }
+        LCD_AFIFO_THRESHOLD_NUM_W::new(self)
     }
     #[doc = "Bits 6:11 - The setup cycle length minus 1 in LCD non-RGB mode."]
     #[inline(always)]
     pub fn lcd_vfk_cyclelen(&mut self) -> LCD_VFK_CYCLELEN_W {
-        LCD_VFK_CYCLELEN_W { w: self }
+        LCD_VFK_CYCLELEN_W::new(self)
     }
     #[doc = "Bits 12:24 - The vertical back blank region cycle length minus 1 in LCD RGB mode, or the hold time cycle length in LCD non-RGB mode."]
     #[inline(always)]
     pub fn lcd_vbk_cyclelen(&mut self) -> LCD_VBK_CYCLELEN_W {
-        LCD_VBK_CYCLELEN_W { w: self }
+        LCD_VBK_CYCLELEN_W::new(self)
     }
     #[doc = "Bit 25 - 1: Send the next frame data when the current frame is sent out. 0: LCD stops when the current frame is sent out."]
     #[inline(always)]
     pub fn lcd_next_frame_en(&mut self) -> LCD_NEXT_FRAME_EN_W {
-        LCD_NEXT_FRAME_EN_W { w: self }
+        LCD_NEXT_FRAME_EN_W::new(self)
     }
     #[doc = "Bit 26 - 1: Enable blank region when LCD sends data out. 0: No blank region."]
     #[inline(always)]
     pub fn lcd_bk_en(&mut self) -> LCD_BK_EN_W {
-        LCD_BK_EN_W { w: self }
+        LCD_BK_EN_W::new(self)
     }
     #[doc = "Bit 27 - LCD AFIFO reset signal."]
     #[inline(always)]
     pub fn lcd_afifo_reset(&mut self) -> LCD_AFIFO_RESET_W {
-        LCD_AFIFO_RESET_W { w: self }
+        LCD_AFIFO_RESET_W::new(self)
     }
     #[doc = "Bit 28 - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DOUT state. 0: LCD_CD = reg_cd_idle_edge."]
     #[inline(always)]
     pub fn lcd_cd_data_set(&mut self) -> LCD_CD_DATA_SET_W {
-        LCD_CD_DATA_SET_W { w: self }
+        LCD_CD_DATA_SET_W::new(self)
     }
     #[doc = "Bit 29 - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_DUMMY state. 0: LCD_CD = reg_cd_idle_edge."]
     #[inline(always)]
     pub fn lcd_cd_dummy_set(&mut self) -> LCD_CD_DUMMY_SET_W {
-        LCD_CD_DUMMY_SET_W { w: self }
+        LCD_CD_DUMMY_SET_W::new(self)
     }
     #[doc = "Bit 30 - 1: LCD_CD = !reg_cd_idle_edge when lcd_st\\[2:0\\] is in LCD_CMD state. 0: LCD_CD = reg_cd_idle_edge."]
     #[inline(always)]
     pub fn lcd_cd_cmd_set(&mut self) -> LCD_CD_CMD_SET_W {
-        LCD_CD_CMD_SET_W { w: self }
+        LCD_CD_CMD_SET_W::new(self)
     }
     #[doc = "Bit 31 - The default value of LCD_CD."]
     #[inline(always)]
     pub fn lcd_cd_idle_edge(&mut self) -> LCD_CD_IDLE_EDGE_W {
-        LCD_CD_IDLE_EDGE_W { w: self }
+        LCD_CD_IDLE_EDGE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

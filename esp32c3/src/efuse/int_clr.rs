@@ -20,59 +20,19 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `READ_DONE_INT_CLR` writer - The clear signal for read_done interrupt."]
-pub struct READ_DONE_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> READ_DONE_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type READ_DONE_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 0>;
 #[doc = "Field `PGM_DONE_INT_CLR` writer - The clear signal for pgm_done interrupt."]
-pub struct PGM_DONE_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PGM_DONE_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PGM_DONE_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 1>;
 impl W {
     #[doc = "Bit 0 - The clear signal for read_done interrupt."]
     #[inline(always)]
     pub fn read_done_int_clr(&mut self) -> READ_DONE_INT_CLR_W {
-        READ_DONE_INT_CLR_W { w: self }
+        READ_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The clear signal for pgm_done interrupt."]
     #[inline(always)]
     pub fn pgm_done_int_clr(&mut self) -> PGM_DONE_INT_CLR_W {
-        PGM_DONE_INT_CLR_W { w: self }
+        PGM_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

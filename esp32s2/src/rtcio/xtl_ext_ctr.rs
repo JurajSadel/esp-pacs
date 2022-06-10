@@ -35,32 +35,9 @@ impl From<crate::W<XTL_EXT_CTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL` reader - Select the external crystal power down enable source to get into sleep mode. 0: select GPIO0. 1: select GPIO1, etc. The input value on this pin XOR RTC_CNTL_EXT_XTL_CONF_REG\\[30\\] is the crystal power down enable signal."]
-pub struct SEL_R(crate::FieldReader<u8>);
-impl SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SEL` writer - Select the external crystal power down enable source to get into sleep mode. 0: select GPIO0. 1: select GPIO1, etc. The input value on this pin XOR RTC_CNTL_EXT_XTL_CONF_REG\\[30\\] is the crystal power down enable signal."]
-pub struct SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 27)) | ((value as u32 & 0x1f) << 27);
-        self.w
-    }
-}
+pub type SEL_W<'a> = crate::FieldWriter<'a, u32, XTL_EXT_CTR_SPEC, u8, u8, 5, 27>;
 impl R {
     #[doc = "Bits 27:31 - Select the external crystal power down enable source to get into sleep mode. 0: select GPIO0. 1: select GPIO1, etc. The input value on this pin XOR RTC_CNTL_EXT_XTL_CONF_REG\\[30\\] is the crystal power down enable signal."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 27:31 - Select the external crystal power down enable source to get into sleep mode. 0: select GPIO0. 1: select GPIO1, etc. The input value on this pin XOR RTC_CNTL_EXT_XTL_CONF_REG\\[30\\] is the crystal power down enable signal."]
     #[inline(always)]
     pub fn sel(&mut self) -> SEL_W {
-        SEL_W { w: self }
+        SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,89 +35,17 @@ impl From<crate::W<SYSCLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `PRE_DIV_CNT` reader - reg_pre_div_cnt"]
-pub struct PRE_DIV_CNT_R(crate::FieldReader<u16>);
-impl PRE_DIV_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PRE_DIV_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRE_DIV_CNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRE_DIV_CNT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRE_DIV_CNT` writer - reg_pre_div_cnt"]
-pub struct PRE_DIV_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRE_DIV_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type PRE_DIV_CNT_W<'a> = crate::FieldWriter<'a, u32, SYSCLK_CONF_SPEC, u16, u16, 10, 0>;
 #[doc = "Field `SOC_CLK_SEL` reader - reg_soc_clk_sel"]
-pub struct SOC_CLK_SEL_R(crate::FieldReader<u8>);
-impl SOC_CLK_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SOC_CLK_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SOC_CLK_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SOC_CLK_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SOC_CLK_SEL` writer - reg_soc_clk_sel"]
-pub struct SOC_CLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SOC_CLK_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type SOC_CLK_SEL_W<'a> = crate::FieldWriter<'a, u32, SYSCLK_CONF_SPEC, u8, u8, 2, 10>;
 #[doc = "Field `CLK_XTAL_FREQ` reader - reg_clk_xtal_freq"]
-pub struct CLK_XTAL_FREQ_R(crate::FieldReader<u8>);
-impl CLK_XTAL_FREQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CLK_XTAL_FREQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_XTAL_FREQ_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_XTAL_FREQ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CLK_DIV_EN` reader - reg_clk_div_en"]
-pub struct CLK_DIV_EN_R(crate::FieldReader<bool>);
-impl CLK_DIV_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_DIV_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_DIV_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_DIV_EN_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:9 - reg_pre_div_cnt"]
     #[inline(always)]
@@ -144,12 +72,12 @@ impl W {
     #[doc = "Bits 0:9 - reg_pre_div_cnt"]
     #[inline(always)]
     pub fn pre_div_cnt(&mut self) -> PRE_DIV_CNT_W {
-        PRE_DIV_CNT_W { w: self }
+        PRE_DIV_CNT_W::new(self)
     }
     #[doc = "Bits 10:11 - reg_soc_clk_sel"]
     #[inline(always)]
     pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W {
-        SOC_CLK_SEL_W { w: self }
+        SOC_CLK_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

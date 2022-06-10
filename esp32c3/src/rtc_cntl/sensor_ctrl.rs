@@ -35,59 +35,13 @@ impl From<crate::W<SENSOR_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_PWDET_CCT` reader - reg_sar2_pwdet_cct"]
-pub struct SAR2_PWDET_CCT_R(crate::FieldReader<u8>);
-impl SAR2_PWDET_CCT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR2_PWDET_CCT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_PWDET_CCT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_PWDET_CCT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR2_PWDET_CCT` writer - reg_sar2_pwdet_cct"]
-pub struct SAR2_PWDET_CCT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_PWDET_CCT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 27)) | ((value as u32 & 7) << 27);
-        self.w
-    }
-}
+pub type SAR2_PWDET_CCT_W<'a> = crate::FieldWriter<'a, u32, SENSOR_CTRL_SPEC, u8, u8, 3, 27>;
 #[doc = "Field `FORCE_XPD_SAR` reader - force power up SAR"]
-pub struct FORCE_XPD_SAR_R(crate::FieldReader<u8>);
-impl FORCE_XPD_SAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FORCE_XPD_SAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_XPD_SAR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_XPD_SAR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FORCE_XPD_SAR` writer - force power up SAR"]
-pub struct FORCE_XPD_SAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_XPD_SAR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
-        self.w
-    }
-}
+pub type FORCE_XPD_SAR_W<'a> = crate::FieldWriter<'a, u32, SENSOR_CTRL_SPEC, u8, u8, 2, 30>;
 impl R {
     #[doc = "Bits 27:29 - reg_sar2_pwdet_cct"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 27:29 - reg_sar2_pwdet_cct"]
     #[inline(always)]
     pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W {
-        SAR2_PWDET_CCT_W { w: self }
+        SAR2_PWDET_CCT_W::new(self)
     }
     #[doc = "Bits 30:31 - force power up SAR"]
     #[inline(always)]
     pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W {
-        FORCE_XPD_SAR_W { w: self }
+        FORCE_XPD_SAR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,224 +35,34 @@ impl From<crate::W<TOUCH_SCAN_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_DENOISE_RES` reader - De-noise resolution: 12/10/8/4 bit"]
-pub struct TOUCH_DENOISE_RES_R(crate::FieldReader<u8>);
-impl TOUCH_DENOISE_RES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_DENOISE_RES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_DENOISE_RES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_DENOISE_RES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TOUCH_DENOISE_RES` writer - De-noise resolution: 12/10/8/4 bit"]
-pub struct TOUCH_DENOISE_RES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_DENOISE_RES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type TOUCH_DENOISE_RES_W<'a> = crate::FieldWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `TOUCH_DENOISE_EN` reader - touch pad0 will be used to de-noise"]
-pub struct TOUCH_DENOISE_EN_R(crate::FieldReader<bool>);
-impl TOUCH_DENOISE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_DENOISE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_DENOISE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_DENOISE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_DENOISE_EN` writer - touch pad0 will be used to de-noise"]
-pub struct TOUCH_DENOISE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_DENOISE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type TOUCH_DENOISE_EN_W<'a> = crate::BitWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, bool, 2>;
 #[doc = "Field `TOUCH_INACTIVE_CONNECTION` reader - inactive touch pads connect to 1: gnd 0: HighZ"]
-pub struct TOUCH_INACTIVE_CONNECTION_R(crate::FieldReader<bool>);
-impl TOUCH_INACTIVE_CONNECTION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_INACTIVE_CONNECTION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_INACTIVE_CONNECTION_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_INACTIVE_CONNECTION_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_INACTIVE_CONNECTION` writer - inactive touch pads connect to 1: gnd 0: HighZ"]
-pub struct TOUCH_INACTIVE_CONNECTION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_INACTIVE_CONNECTION_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type TOUCH_INACTIVE_CONNECTION_W<'a> = crate::BitWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, bool, 8>;
 #[doc = "Field `TOUCH_SHIELD_PAD_EN` reader - touch pad14 will be used as shield"]
-pub struct TOUCH_SHIELD_PAD_EN_R(crate::FieldReader<bool>);
-impl TOUCH_SHIELD_PAD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_SHIELD_PAD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_SHIELD_PAD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_SHIELD_PAD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_SHIELD_PAD_EN` writer - touch pad14 will be used as shield"]
-pub struct TOUCH_SHIELD_PAD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_SHIELD_PAD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type TOUCH_SHIELD_PAD_EN_W<'a> = crate::BitWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, bool, 9>;
 #[doc = "Field `TOUCH_SCAN_PAD_MAP` reader - touch scan mode pad enable map"]
-pub struct TOUCH_SCAN_PAD_MAP_R(crate::FieldReader<u16>);
-impl TOUCH_SCAN_PAD_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TOUCH_SCAN_PAD_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_SCAN_PAD_MAP_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_SCAN_PAD_MAP_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_SCAN_PAD_MAP` writer - touch scan mode pad enable map"]
-pub struct TOUCH_SCAN_PAD_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_SCAN_PAD_MAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7fff << 10)) | ((value as u32 & 0x7fff) << 10);
-        self.w
-    }
-}
+pub type TOUCH_SCAN_PAD_MAP_W<'a> =
+    crate::FieldWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, u16, u16, 15, 10>;
 #[doc = "Field `TOUCH_BUFDRV` reader - touch7 buffer driver strength"]
-pub struct TOUCH_BUFDRV_R(crate::FieldReader<u8>);
-impl TOUCH_BUFDRV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_BUFDRV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_BUFDRV_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_BUFDRV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TOUCH_BUFDRV` writer - touch7 buffer driver strength"]
-pub struct TOUCH_BUFDRV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_BUFDRV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 25)) | ((value as u32 & 7) << 25);
-        self.w
-    }
-}
+pub type TOUCH_BUFDRV_W<'a> = crate::FieldWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, u8, u8, 3, 25>;
 #[doc = "Field `TOUCH_OUT_RING` reader - select out ring pad"]
-pub struct TOUCH_OUT_RING_R(crate::FieldReader<u8>);
-impl TOUCH_OUT_RING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_OUT_RING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_OUT_RING_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_OUT_RING_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TOUCH_OUT_RING` writer - select out ring pad"]
-pub struct TOUCH_OUT_RING_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_OUT_RING_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+pub type TOUCH_OUT_RING_W<'a> = crate::FieldWriter<'a, u32, TOUCH_SCAN_CTRL_SPEC, u8, u8, 4, 28>;
 impl R {
     #[doc = "Bits 0:1 - De-noise resolution: 12/10/8/4 bit"]
     #[inline(always)]
@@ -294,37 +104,37 @@ impl W {
     #[doc = "Bits 0:1 - De-noise resolution: 12/10/8/4 bit"]
     #[inline(always)]
     pub fn touch_denoise_res(&mut self) -> TOUCH_DENOISE_RES_W {
-        TOUCH_DENOISE_RES_W { w: self }
+        TOUCH_DENOISE_RES_W::new(self)
     }
     #[doc = "Bit 2 - touch pad0 will be used to de-noise"]
     #[inline(always)]
     pub fn touch_denoise_en(&mut self) -> TOUCH_DENOISE_EN_W {
-        TOUCH_DENOISE_EN_W { w: self }
+        TOUCH_DENOISE_EN_W::new(self)
     }
     #[doc = "Bit 8 - inactive touch pads connect to 1: gnd 0: HighZ"]
     #[inline(always)]
     pub fn touch_inactive_connection(&mut self) -> TOUCH_INACTIVE_CONNECTION_W {
-        TOUCH_INACTIVE_CONNECTION_W { w: self }
+        TOUCH_INACTIVE_CONNECTION_W::new(self)
     }
     #[doc = "Bit 9 - touch pad14 will be used as shield"]
     #[inline(always)]
     pub fn touch_shield_pad_en(&mut self) -> TOUCH_SHIELD_PAD_EN_W {
-        TOUCH_SHIELD_PAD_EN_W { w: self }
+        TOUCH_SHIELD_PAD_EN_W::new(self)
     }
     #[doc = "Bits 10:24 - touch scan mode pad enable map"]
     #[inline(always)]
     pub fn touch_scan_pad_map(&mut self) -> TOUCH_SCAN_PAD_MAP_W {
-        TOUCH_SCAN_PAD_MAP_W { w: self }
+        TOUCH_SCAN_PAD_MAP_W::new(self)
     }
     #[doc = "Bits 25:27 - touch7 buffer driver strength"]
     #[inline(always)]
     pub fn touch_bufdrv(&mut self) -> TOUCH_BUFDRV_W {
-        TOUCH_BUFDRV_W { w: self }
+        TOUCH_BUFDRV_W::new(self)
     }
     #[doc = "Bits 28:31 - select out ring pad"]
     #[inline(always)]
     pub fn touch_out_ring(&mut self) -> TOUCH_OUT_RING_W {
-        TOUCH_OUT_RING_W { w: self }
+        TOUCH_OUT_RING_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,20 +14,7 @@ impl From<crate::R<RESP3_SPEC>> for R {
     }
 }
 #[doc = "Field `RESPONSE3` reader - Bit\\[127:96\\] of long response."]
-pub struct RESPONSE3_R(crate::FieldReader<u32>);
-impl RESPONSE3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RESPONSE3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESPONSE3_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESPONSE3_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Bit\\[127:96\\] of long response."]
     #[inline(always)]

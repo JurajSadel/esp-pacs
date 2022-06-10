@@ -14,65 +14,13 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_DONE_INT_ST` reader - The masked interrupt status bit for the i2s_rx_done_int interrupt"]
-pub struct RX_DONE_INT_ST_R(crate::FieldReader<bool>);
-impl RX_DONE_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_DONE_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_DONE_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TX_DONE_INT_ST` reader - The masked interrupt status bit for the i2s_tx_done_int interrupt"]
-pub struct TX_DONE_INT_ST_R(crate::FieldReader<bool>);
-impl TX_DONE_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_DONE_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DONE_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_DONE_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RX_HUNG_INT_ST` reader - The masked interrupt status bit for the i2s_rx_hung_int interrupt"]
-pub struct RX_HUNG_INT_ST_R(crate::FieldReader<bool>);
-impl RX_HUNG_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_HUNG_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_HUNG_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_HUNG_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TX_HUNG_INT_ST` reader - The masked interrupt status bit for the i2s_tx_hung_int interrupt"]
-pub struct TX_HUNG_INT_ST_R(crate::FieldReader<bool>);
-impl TX_HUNG_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_HUNG_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_HUNG_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_HUNG_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The masked interrupt status bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]

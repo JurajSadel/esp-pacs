@@ -35,32 +35,9 @@ impl From<crate::W<STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `INT` reader - GPIO0~17 interrupt status"]
-pub struct INT_R(crate::FieldReader<u32>);
-impl INT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `INT` writer - GPIO0~17 interrupt status"]
-pub struct INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0003_ffff << 14)) | ((value as u32 & 0x0003_ffff) << 14);
-        self.w
-    }
-}
+pub type INT_W<'a> = crate::FieldWriter<'a, u32, STATUS_SPEC, u32, u32, 18, 14>;
 impl R {
     #[doc = "Bits 14:31 - GPIO0~17 interrupt status"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 14:31 - GPIO0~17 interrupt status"]
     #[inline(always)]
     pub fn int(&mut self) -> INT_W {
-        INT_W { w: self }
+        INT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

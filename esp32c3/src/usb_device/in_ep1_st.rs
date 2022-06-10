@@ -14,50 +14,11 @@ impl From<crate::R<IN_EP1_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `IN_EP1_STATE` reader - State of IN Endpoint 1."]
-pub struct IN_EP1_STATE_R(crate::FieldReader<u8>);
-impl IN_EP1_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IN_EP1_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_EP1_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_EP1_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `IN_EP1_WR_ADDR` reader - Write data address of IN endpoint 1."]
-pub struct IN_EP1_WR_ADDR_R(crate::FieldReader<u8>);
-impl IN_EP1_WR_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IN_EP1_WR_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_EP1_WR_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_EP1_WR_ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `IN_EP1_RD_ADDR` reader - Read data address of IN endpoint 1."]
-pub struct IN_EP1_RD_ADDR_R(crate::FieldReader<u8>);
-impl IN_EP1_RD_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IN_EP1_RD_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_EP1_RD_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_EP1_RD_ADDR_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:1 - State of IN Endpoint 1."]
     #[inline(always)]

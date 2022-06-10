@@ -35,116 +35,17 @@ impl From<crate::W<SRAM_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_DIO` reader - For SPI0 SRAM DIO mode enable . SRAM DIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
-pub struct SRAM_DIO_R(crate::FieldReader<bool>);
-impl SRAM_DIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SRAM_DIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRAM_DIO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRAM_DIO_R = crate::BitReader<bool>;
 #[doc = "Field `SRAM_DIO` writer - For SPI0 SRAM DIO mode enable . SRAM DIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
-pub struct SRAM_DIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_DIO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SRAM_DIO_W<'a> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, 0>;
 #[doc = "Field `SRAM_QIO` reader - For SPI0 SRAM QIO mode enable . SRAM QIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
-pub struct SRAM_QIO_R(crate::FieldReader<bool>);
-impl SRAM_QIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SRAM_QIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRAM_QIO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRAM_QIO_R = crate::BitReader<bool>;
 #[doc = "Field `SRAM_QIO` writer - For SPI0 SRAM QIO mode enable . SRAM QIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
-pub struct SRAM_QIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_QIO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SRAM_QIO_W<'a> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, 1>;
 #[doc = "Field `SRAM_RSTIO` reader - For SPI0 SRAM IO mode reset enable. SRAM IO mode reset operation will be triggered when the bit is set. The bit will be cleared once the operation done"]
-pub struct SRAM_RSTIO_R(crate::FieldReader<bool>);
-impl SRAM_RSTIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SRAM_RSTIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRAM_RSTIO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRAM_RSTIO_R = crate::BitReader<bool>;
 #[doc = "Field `SRAM_RSTIO` writer - For SPI0 SRAM IO mode reset enable. SRAM IO mode reset operation will be triggered when the bit is set. The bit will be cleared once the operation done"]
-pub struct SRAM_RSTIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_RSTIO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SRAM_RSTIO_W<'a> = crate::BitWriter<'a, u32, SRAM_CMD_SPEC, bool, 4>;
 impl R {
     #[doc = "Bit 0 - For SPI0 SRAM DIO mode enable . SRAM DIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
     #[inline(always)]
@@ -166,17 +67,17 @@ impl W {
     #[doc = "Bit 0 - For SPI0 SRAM DIO mode enable . SRAM DIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
     #[inline(always)]
     pub fn sram_dio(&mut self) -> SRAM_DIO_W {
-        SRAM_DIO_W { w: self }
+        SRAM_DIO_W::new(self)
     }
     #[doc = "Bit 1 - For SPI0 SRAM QIO mode enable . SRAM QIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
     #[inline(always)]
     pub fn sram_qio(&mut self) -> SRAM_QIO_W {
-        SRAM_QIO_W { w: self }
+        SRAM_QIO_W::new(self)
     }
     #[doc = "Bit 4 - For SPI0 SRAM IO mode reset enable. SRAM IO mode reset operation will be triggered when the bit is set. The bit will be cleared once the operation done"]
     #[inline(always)]
     pub fn sram_rstio(&mut self) -> SRAM_RSTIO_W {
-        SRAM_RSTIO_W { w: self }
+        SRAM_RSTIO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

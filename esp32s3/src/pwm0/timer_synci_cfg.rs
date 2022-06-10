@@ -35,197 +35,29 @@ impl From<crate::W<TIMER_SYNCI_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER0_SYNCISEL` reader - select sync input for PWM timer0, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
-pub struct TIMER0_SYNCISEL_R(crate::FieldReader<u8>);
-impl TIMER0_SYNCISEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER0_SYNCISEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER0_SYNCISEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER0_SYNCISEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER0_SYNCISEL` writer - select sync input for PWM timer0, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
-pub struct TIMER0_SYNCISEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER0_SYNCISEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type TIMER0_SYNCISEL_W<'a> = crate::FieldWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `TIMER1_SYNCISEL` reader - select sync input for PWM timer1, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
-pub struct TIMER1_SYNCISEL_R(crate::FieldReader<u8>);
-impl TIMER1_SYNCISEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER1_SYNCISEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER1_SYNCISEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER1_SYNCISEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER1_SYNCISEL` writer - select sync input for PWM timer1, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
-pub struct TIMER1_SYNCISEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER1_SYNCISEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
-        self.w
-    }
-}
+pub type TIMER1_SYNCISEL_W<'a> = crate::FieldWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, u8, u8, 3, 3>;
 #[doc = "Field `TIMER2_SYNCISEL` reader - select sync input for PWM timer2, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
-pub struct TIMER2_SYNCISEL_R(crate::FieldReader<u8>);
-impl TIMER2_SYNCISEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER2_SYNCISEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER2_SYNCISEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER2_SYNCISEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER2_SYNCISEL` writer - select sync input for PWM timer2, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
-pub struct TIMER2_SYNCISEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER2_SYNCISEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
-        self.w
-    }
-}
+pub type TIMER2_SYNCISEL_W<'a> = crate::FieldWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, u8, u8, 3, 6>;
 #[doc = "Field `EXTERNAL_SYNCI0_INVERT` reader - invert SYNC0 from GPIO matrix"]
-pub struct EXTERNAL_SYNCI0_INVERT_R(crate::FieldReader<bool>);
-impl EXTERNAL_SYNCI0_INVERT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXTERNAL_SYNCI0_INVERT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTERNAL_SYNCI0_INVERT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTERNAL_SYNCI0_INVERT_R = crate::BitReader<bool>;
 #[doc = "Field `EXTERNAL_SYNCI0_INVERT` writer - invert SYNC0 from GPIO matrix"]
-pub struct EXTERNAL_SYNCI0_INVERT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTERNAL_SYNCI0_INVERT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type EXTERNAL_SYNCI0_INVERT_W<'a> = crate::BitWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, bool, 9>;
 #[doc = "Field `EXTERNAL_SYNCI1_INVERT` reader - invert SYNC1 from GPIO matrix"]
-pub struct EXTERNAL_SYNCI1_INVERT_R(crate::FieldReader<bool>);
-impl EXTERNAL_SYNCI1_INVERT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXTERNAL_SYNCI1_INVERT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTERNAL_SYNCI1_INVERT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTERNAL_SYNCI1_INVERT_R = crate::BitReader<bool>;
 #[doc = "Field `EXTERNAL_SYNCI1_INVERT` writer - invert SYNC1 from GPIO matrix"]
-pub struct EXTERNAL_SYNCI1_INVERT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTERNAL_SYNCI1_INVERT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type EXTERNAL_SYNCI1_INVERT_W<'a> = crate::BitWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, bool, 10>;
 #[doc = "Field `EXTERNAL_SYNCI2_INVERT` reader - invert SYNC2 from GPIO matrix"]
-pub struct EXTERNAL_SYNCI2_INVERT_R(crate::FieldReader<bool>);
-impl EXTERNAL_SYNCI2_INVERT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXTERNAL_SYNCI2_INVERT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTERNAL_SYNCI2_INVERT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTERNAL_SYNCI2_INVERT_R = crate::BitReader<bool>;
 #[doc = "Field `EXTERNAL_SYNCI2_INVERT` writer - invert SYNC2 from GPIO matrix"]
-pub struct EXTERNAL_SYNCI2_INVERT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTERNAL_SYNCI2_INVERT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type EXTERNAL_SYNCI2_INVERT_W<'a> = crate::BitWriter<'a, u32, TIMER_SYNCI_CFG_SPEC, bool, 11>;
 impl R {
     #[doc = "Bits 0:2 - select sync input for PWM timer0, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
@@ -262,32 +94,32 @@ impl W {
     #[doc = "Bits 0:2 - select sync input for PWM timer0, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
     pub fn timer0_syncisel(&mut self) -> TIMER0_SYNCISEL_W {
-        TIMER0_SYNCISEL_W { w: self }
+        TIMER0_SYNCISEL_W::new(self)
     }
     #[doc = "Bits 3:5 - select sync input for PWM timer1, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
     pub fn timer1_syncisel(&mut self) -> TIMER1_SYNCISEL_W {
-        TIMER1_SYNCISEL_W { w: self }
+        TIMER1_SYNCISEL_W::new(self)
     }
     #[doc = "Bits 6:8 - select sync input for PWM timer2, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
     pub fn timer2_syncisel(&mut self) -> TIMER2_SYNCISEL_W {
-        TIMER2_SYNCISEL_W { w: self }
+        TIMER2_SYNCISEL_W::new(self)
     }
     #[doc = "Bit 9 - invert SYNC0 from GPIO matrix"]
     #[inline(always)]
     pub fn external_synci0_invert(&mut self) -> EXTERNAL_SYNCI0_INVERT_W {
-        EXTERNAL_SYNCI0_INVERT_W { w: self }
+        EXTERNAL_SYNCI0_INVERT_W::new(self)
     }
     #[doc = "Bit 10 - invert SYNC1 from GPIO matrix"]
     #[inline(always)]
     pub fn external_synci1_invert(&mut self) -> EXTERNAL_SYNCI1_INVERT_W {
-        EXTERNAL_SYNCI1_INVERT_W { w: self }
+        EXTERNAL_SYNCI1_INVERT_W::new(self)
     }
     #[doc = "Bit 11 - invert SYNC2 from GPIO matrix"]
     #[inline(always)]
     pub fn external_synci2_invert(&mut self) -> EXTERNAL_SYNCI2_INVERT_W {
-        EXTERNAL_SYNCI2_INVERT_W { w: self }
+        EXTERNAL_SYNCI2_INVERT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

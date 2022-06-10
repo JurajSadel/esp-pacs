@@ -35,856 +35,97 @@ impl From<crate::W<PERIP_RST_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI01_RST` reader - SPI0 and SPI1 module."]
-pub struct SPI01_RST_R(crate::FieldReader<bool>);
-impl SPI01_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI01_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI01_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI01_RST_R = crate::BitReader<bool>;
 #[doc = "Field `SPI01_RST` writer - SPI0 and SPI1 module."]
-pub struct SPI01_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI01_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SPI01_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 1>;
 #[doc = "Field `UART_RST` reader - UART0 module."]
-pub struct UART_RST_R(crate::FieldReader<bool>);
-impl UART_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART_RST_R = crate::BitReader<bool>;
 #[doc = "Field `UART_RST` writer - UART0 module."]
-pub struct UART_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type UART_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 2>;
 #[doc = "Field `I2S0_RST` reader - I2S0 module."]
-pub struct I2S0_RST_R(crate::FieldReader<bool>);
-impl I2S0_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S0_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S0_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S0_RST_R = crate::BitReader<bool>;
 #[doc = "Field `I2S0_RST` writer - I2S0 module."]
-pub struct I2S0_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S0_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type I2S0_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 4>;
 #[doc = "Field `UART1_RST` reader - UART1 module."]
-pub struct UART1_RST_R(crate::FieldReader<bool>);
-impl UART1_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART1_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART1_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `UART1_RST` writer - UART1 module."]
-pub struct UART1_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART1_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type UART1_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 5>;
 #[doc = "Field `SPI2_RST` reader - SPI2 module."]
-pub struct SPI2_RST_R(crate::FieldReader<bool>);
-impl SPI2_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI2_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI2_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI2_RST_R = crate::BitReader<bool>;
 #[doc = "Field `SPI2_RST` writer - SPI2 module."]
-pub struct SPI2_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI2_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type SPI2_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 6>;
 #[doc = "Field `I2C0_EXT0_RST` reader - I2C0 module."]
-pub struct I2C0_EXT0_RST_R(crate::FieldReader<bool>);
-impl I2C0_EXT0_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2C0_EXT0_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2C0_EXT0_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2C0_EXT0_RST_R = crate::BitReader<bool>;
 #[doc = "Field `I2C0_EXT0_RST` writer - I2C0 module."]
-pub struct I2C0_EXT0_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C0_EXT0_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type I2C0_EXT0_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 7>;
 #[doc = "Field `UHCI0_RST` reader - UDMA0 module."]
-pub struct UHCI0_RST_R(crate::FieldReader<bool>);
-impl UHCI0_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UHCI0_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UHCI0_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UHCI0_RST_R = crate::BitReader<bool>;
 #[doc = "Field `UHCI0_RST` writer - UDMA0 module."]
-pub struct UHCI0_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UHCI0_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type UHCI0_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 8>;
 #[doc = "Field `RMT_RST` reader - RMT module."]
-pub struct RMT_RST_R(crate::FieldReader<bool>);
-impl RMT_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RMT_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RMT_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RMT_RST_R = crate::BitReader<bool>;
 #[doc = "Field `RMT_RST` writer - RMT module."]
-pub struct RMT_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RMT_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type RMT_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 9>;
 #[doc = "Field `PCNT_RST` reader - PCNT module."]
-pub struct PCNT_RST_R(crate::FieldReader<bool>);
-impl PCNT_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PCNT_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PCNT_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PCNT_RST_R = crate::BitReader<bool>;
 #[doc = "Field `PCNT_RST` writer - PCNT module."]
-pub struct PCNT_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PCNT_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type PCNT_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 10>;
 #[doc = "Field `LEDC_RST` reader - LEDC module."]
-pub struct LEDC_RST_R(crate::FieldReader<bool>);
-impl LEDC_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LEDC_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LEDC_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LEDC_RST_R = crate::BitReader<bool>;
 #[doc = "Field `LEDC_RST` writer - LEDC module."]
-pub struct LEDC_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LEDC_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type LEDC_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 11>;
 #[doc = "Field `UHCI1_RST` reader - UDMA1 module."]
-pub struct UHCI1_RST_R(crate::FieldReader<bool>);
-impl UHCI1_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UHCI1_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UHCI1_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UHCI1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `UHCI1_RST` writer - UDMA1 module."]
-pub struct UHCI1_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UHCI1_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type UHCI1_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 12>;
 #[doc = "Field `TIMERGROUP_RST` reader - TIMG0 module."]
-pub struct TIMERGROUP_RST_R(crate::FieldReader<bool>);
-impl TIMERGROUP_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMERGROUP_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMERGROUP_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMERGROUP_RST_R = crate::BitReader<bool>;
 #[doc = "Field `TIMERGROUP_RST` writer - TIMG0 module."]
-pub struct TIMERGROUP_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMERGROUP_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type TIMERGROUP_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 13>;
 #[doc = "Field `EFUSE_RST` reader - eFuse module."]
-pub struct EFUSE_RST_R(crate::FieldReader<bool>);
-impl EFUSE_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EFUSE_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EFUSE_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EFUSE_RST_R = crate::BitReader<bool>;
 #[doc = "Field `EFUSE_RST` writer - eFuse module."]
-pub struct EFUSE_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EFUSE_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type EFUSE_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 14>;
 #[doc = "Field `TIMERGROUP1_RST` reader - TIMG1 module."]
-pub struct TIMERGROUP1_RST_R(crate::FieldReader<bool>);
-impl TIMERGROUP1_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMERGROUP1_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMERGROUP1_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMERGROUP1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `TIMERGROUP1_RST` writer - TIMG1 module."]
-pub struct TIMERGROUP1_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMERGROUP1_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type TIMERGROUP1_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 15>;
 #[doc = "Field `SPI3_RST` reader - SPI3 module."]
-pub struct SPI3_RST_R(crate::FieldReader<bool>);
-impl SPI3_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI3_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI3_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI3_RST_R = crate::BitReader<bool>;
 #[doc = "Field `SPI3_RST` writer - SPI3 module."]
-pub struct SPI3_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI3_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SPI3_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 16>;
 #[doc = "Field `PWM0_RST` reader - PWM0 module."]
-pub struct PWM0_RST_R(crate::FieldReader<bool>);
-impl PWM0_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWM0_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWM0_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWM0_RST_R = crate::BitReader<bool>;
 #[doc = "Field `PWM0_RST` writer - PWM0 module."]
-pub struct PWM0_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWM0_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type PWM0_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 17>;
 #[doc = "Field `I2C_EXT1_RST` reader - I2C1 module."]
-pub struct I2C_EXT1_RST_R(crate::FieldReader<bool>);
-impl I2C_EXT1_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2C_EXT1_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2C_EXT1_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2C_EXT1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `I2C_EXT1_RST` writer - I2C1 module."]
-pub struct I2C_EXT1_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_EXT1_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type I2C_EXT1_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 18>;
 #[doc = "Field `TWAI_RST` reader - TWAI module."]
-pub struct TWAI_RST_R(crate::FieldReader<bool>);
-impl TWAI_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TWAI_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TWAI_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TWAI_RST_R = crate::BitReader<bool>;
 #[doc = "Field `TWAI_RST` writer - TWAI module."]
-pub struct TWAI_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TWAI_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type TWAI_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 19>;
 #[doc = "Field `PWM1_RST` reader - PWM1 module."]
-pub struct PWM1_RST_R(crate::FieldReader<bool>);
-impl PWM1_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PWM1_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PWM1_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PWM1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `PWM1_RST` writer - PWM1 module."]
-pub struct PWM1_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PWM1_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type PWM1_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 20>;
 #[doc = "Field `I2S1_RST` reader - I2S1 module."]
-pub struct I2S1_RST_R(crate::FieldReader<bool>);
-impl I2S1_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S1_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S1_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S1_RST_R = crate::BitReader<bool>;
 #[doc = "Field `I2S1_RST` writer - I2S1 module."]
-pub struct I2S1_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S1_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type I2S1_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 21>;
 #[doc = "Field `SPI_DMA_RST` reader - SPI_DMA module."]
-pub struct SPI_DMA_RST_R(crate::FieldReader<bool>);
-impl SPI_DMA_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_DMA_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_DMA_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_DMA_RST_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_DMA_RST` writer - SPI_DMA module."]
-pub struct SPI_DMA_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_DMA_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type SPI_DMA_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 22>;
 #[doc = "Field `UART2_RST` reader - UART2 module."]
-pub struct UART2_RST_R(crate::FieldReader<bool>);
-impl UART2_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART2_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART2_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART2_RST_R = crate::BitReader<bool>;
 #[doc = "Field `UART2_RST` writer - UART2 module."]
-pub struct UART2_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART2_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type UART2_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 23>;
 #[doc = "Field `UART_MEM_RST` reader - Shared memory of UART0 ~ 2."]
-pub struct UART_MEM_RST_R(crate::FieldReader<bool>);
-impl UART_MEM_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART_MEM_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART_MEM_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART_MEM_RST_R = crate::BitReader<bool>;
 #[doc = "Field `UART_MEM_RST` writer - Shared memory of UART0 ~ 2."]
-pub struct UART_MEM_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART_MEM_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type UART_MEM_RST_W<'a> = crate::BitWriter<'a, u32, PERIP_RST_EN_SPEC, bool, 24>;
 impl R {
     #[doc = "Bit 1 - SPI0 and SPI1 module."]
     #[inline(always)]
@@ -1006,117 +247,117 @@ impl W {
     #[doc = "Bit 1 - SPI0 and SPI1 module."]
     #[inline(always)]
     pub fn spi01_rst(&mut self) -> SPI01_RST_W {
-        SPI01_RST_W { w: self }
+        SPI01_RST_W::new(self)
     }
     #[doc = "Bit 2 - UART0 module."]
     #[inline(always)]
     pub fn uart_rst(&mut self) -> UART_RST_W {
-        UART_RST_W { w: self }
+        UART_RST_W::new(self)
     }
     #[doc = "Bit 4 - I2S0 module."]
     #[inline(always)]
     pub fn i2s0_rst(&mut self) -> I2S0_RST_W {
-        I2S0_RST_W { w: self }
+        I2S0_RST_W::new(self)
     }
     #[doc = "Bit 5 - UART1 module."]
     #[inline(always)]
     pub fn uart1_rst(&mut self) -> UART1_RST_W {
-        UART1_RST_W { w: self }
+        UART1_RST_W::new(self)
     }
     #[doc = "Bit 6 - SPI2 module."]
     #[inline(always)]
     pub fn spi2_rst(&mut self) -> SPI2_RST_W {
-        SPI2_RST_W { w: self }
+        SPI2_RST_W::new(self)
     }
     #[doc = "Bit 7 - I2C0 module."]
     #[inline(always)]
     pub fn i2c0_ext0_rst(&mut self) -> I2C0_EXT0_RST_W {
-        I2C0_EXT0_RST_W { w: self }
+        I2C0_EXT0_RST_W::new(self)
     }
     #[doc = "Bit 8 - UDMA0 module."]
     #[inline(always)]
     pub fn uhci0_rst(&mut self) -> UHCI0_RST_W {
-        UHCI0_RST_W { w: self }
+        UHCI0_RST_W::new(self)
     }
     #[doc = "Bit 9 - RMT module."]
     #[inline(always)]
     pub fn rmt_rst(&mut self) -> RMT_RST_W {
-        RMT_RST_W { w: self }
+        RMT_RST_W::new(self)
     }
     #[doc = "Bit 10 - PCNT module."]
     #[inline(always)]
     pub fn pcnt_rst(&mut self) -> PCNT_RST_W {
-        PCNT_RST_W { w: self }
+        PCNT_RST_W::new(self)
     }
     #[doc = "Bit 11 - LEDC module."]
     #[inline(always)]
     pub fn ledc_rst(&mut self) -> LEDC_RST_W {
-        LEDC_RST_W { w: self }
+        LEDC_RST_W::new(self)
     }
     #[doc = "Bit 12 - UDMA1 module."]
     #[inline(always)]
     pub fn uhci1_rst(&mut self) -> UHCI1_RST_W {
-        UHCI1_RST_W { w: self }
+        UHCI1_RST_W::new(self)
     }
     #[doc = "Bit 13 - TIMG0 module."]
     #[inline(always)]
     pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W {
-        TIMERGROUP_RST_W { w: self }
+        TIMERGROUP_RST_W::new(self)
     }
     #[doc = "Bit 14 - eFuse module."]
     #[inline(always)]
     pub fn efuse_rst(&mut self) -> EFUSE_RST_W {
-        EFUSE_RST_W { w: self }
+        EFUSE_RST_W::new(self)
     }
     #[doc = "Bit 15 - TIMG1 module."]
     #[inline(always)]
     pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W {
-        TIMERGROUP1_RST_W { w: self }
+        TIMERGROUP1_RST_W::new(self)
     }
     #[doc = "Bit 16 - SPI3 module."]
     #[inline(always)]
     pub fn spi3_rst(&mut self) -> SPI3_RST_W {
-        SPI3_RST_W { w: self }
+        SPI3_RST_W::new(self)
     }
     #[doc = "Bit 17 - PWM0 module."]
     #[inline(always)]
     pub fn pwm0_rst(&mut self) -> PWM0_RST_W {
-        PWM0_RST_W { w: self }
+        PWM0_RST_W::new(self)
     }
     #[doc = "Bit 18 - I2C1 module."]
     #[inline(always)]
     pub fn i2c_ext1_rst(&mut self) -> I2C_EXT1_RST_W {
-        I2C_EXT1_RST_W { w: self }
+        I2C_EXT1_RST_W::new(self)
     }
     #[doc = "Bit 19 - TWAI module."]
     #[inline(always)]
     pub fn twai_rst(&mut self) -> TWAI_RST_W {
-        TWAI_RST_W { w: self }
+        TWAI_RST_W::new(self)
     }
     #[doc = "Bit 20 - PWM1 module."]
     #[inline(always)]
     pub fn pwm1_rst(&mut self) -> PWM1_RST_W {
-        PWM1_RST_W { w: self }
+        PWM1_RST_W::new(self)
     }
     #[doc = "Bit 21 - I2S1 module."]
     #[inline(always)]
     pub fn i2s1_rst(&mut self) -> I2S1_RST_W {
-        I2S1_RST_W { w: self }
+        I2S1_RST_W::new(self)
     }
     #[doc = "Bit 22 - SPI_DMA module."]
     #[inline(always)]
     pub fn spi_dma_rst(&mut self) -> SPI_DMA_RST_W {
-        SPI_DMA_RST_W { w: self }
+        SPI_DMA_RST_W::new(self)
     }
     #[doc = "Bit 23 - UART2 module."]
     #[inline(always)]
     pub fn uart2_rst(&mut self) -> UART2_RST_W {
-        UART2_RST_W { w: self }
+        UART2_RST_W::new(self)
     }
     #[doc = "Bit 24 - Shared memory of UART0 ~ 2."]
     #[inline(always)]
     pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W {
-        UART_MEM_RST_W { w: self }
+        UART_MEM_RST_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

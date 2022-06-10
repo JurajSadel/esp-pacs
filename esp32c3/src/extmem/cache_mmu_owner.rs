@@ -35,32 +35,9 @@ impl From<crate::W<CACHE_MMU_OWNER_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_MMU_OWNER` reader - The bits are used to specify the owner of MMU.bit0/bit2: ibus, bit1/bit3: dbus"]
-pub struct CACHE_MMU_OWNER_R(crate::FieldReader<u8>);
-impl CACHE_MMU_OWNER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CACHE_MMU_OWNER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_MMU_OWNER_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_MMU_OWNER_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CACHE_MMU_OWNER` writer - The bits are used to specify the owner of MMU.bit0/bit2: ibus, bit1/bit3: dbus"]
-pub struct CACHE_MMU_OWNER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_MMU_OWNER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type CACHE_MMU_OWNER_W<'a> = crate::FieldWriter<'a, u32, CACHE_MMU_OWNER_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - The bits are used to specify the owner of MMU.bit0/bit2: ibus, bit1/bit3: dbus"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:3 - The bits are used to specify the owner of MMU.bit0/bit2: ibus, bit1/bit3: dbus"]
     #[inline(always)]
     pub fn cache_mmu_owner(&mut self) -> CACHE_MMU_OWNER_W {
-        CACHE_MMU_OWNER_W { w: self }
+        CACHE_MMU_OWNER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

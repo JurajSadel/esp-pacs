@@ -35,32 +35,9 @@ impl From<crate::W<FLASH_ACE0_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `S` reader - reg_flash_ace0_addr_s"]
-pub struct S_R(crate::FieldReader<u32>);
-impl S_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        S_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for S_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type S_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `S` writer - reg_flash_ace0_addr_s"]
-pub struct S_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> S_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type S_W<'a> = crate::FieldWriter<'a, u32, FLASH_ACE0_ADDR_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - reg_flash_ace0_addr_s"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - reg_flash_ace0_addr_s"]
     #[inline(always)]
     pub fn s(&mut self) -> S_W {
-        S_W { w: self }
+        S_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

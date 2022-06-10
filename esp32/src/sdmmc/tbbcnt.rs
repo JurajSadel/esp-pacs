@@ -14,20 +14,7 @@ impl From<crate::R<TBBCNT_SPEC>> for R {
     }
 }
 #[doc = "Field `TBBCNT` reader - Number of bytes transferred between Host/DMA memory and BIU FIFO."]
-pub struct TBBCNT_R(crate::FieldReader<u32>);
-impl TBBCNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TBBCNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBBCNT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBBCNT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Number of bytes transferred between Host/DMA memory and BIU FIFO."]
     #[inline(always)]

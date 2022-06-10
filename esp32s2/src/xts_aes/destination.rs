@@ -35,42 +35,9 @@ impl From<crate::W<DESTINATION_SPEC>> for W {
     }
 }
 #[doc = "Field `DESTINATION` reader - Configures the type of the external memory. Currently, it must be set to 0, as the Manual Encryption block only supports flash encryption. Errors may occur if users write 1. 0: flash. 1: external RAM."]
-pub struct DESTINATION_R(crate::FieldReader<bool>);
-impl DESTINATION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DESTINATION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DESTINATION_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DESTINATION_R = crate::BitReader<bool>;
 #[doc = "Field `DESTINATION` writer - Configures the type of the external memory. Currently, it must be set to 0, as the Manual Encryption block only supports flash encryption. Errors may occur if users write 1. 0: flash. 1: external RAM."]
-pub struct DESTINATION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DESTINATION_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DESTINATION_W<'a> = crate::BitWriter<'a, u32, DESTINATION_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - Configures the type of the external memory. Currently, it must be set to 0, as the Manual Encryption block only supports flash encryption. Errors may occur if users write 1. 0: flash. 1: external RAM."]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0 - Configures the type of the external memory. Currently, it must be set to 0, as the Manual Encryption block only supports flash encryption. Errors may occur if users write 1. 0: flash. 1: external RAM."]
     #[inline(always)]
     pub fn destination(&mut self) -> DESTINATION_W {
-        DESTINATION_W { w: self }
+        DESTINATION_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

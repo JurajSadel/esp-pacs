@@ -35,79 +35,13 @@ impl From<crate::W<EXT_WAKEUP_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `EXT_WAKEUP0_LV` reader - 0: external wakeup at low level 1: external wakeup at high level"]
-pub struct EXT_WAKEUP0_LV_R(crate::FieldReader<bool>);
-impl EXT_WAKEUP0_LV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXT_WAKEUP0_LV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXT_WAKEUP0_LV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXT_WAKEUP0_LV_R = crate::BitReader<bool>;
 #[doc = "Field `EXT_WAKEUP0_LV` writer - 0: external wakeup at low level 1: external wakeup at high level"]
-pub struct EXT_WAKEUP0_LV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXT_WAKEUP0_LV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type EXT_WAKEUP0_LV_W<'a> = crate::BitWriter<'a, u32, EXT_WAKEUP_CONF_SPEC, bool, 30>;
 #[doc = "Field `EXT_WAKEUP1_LV` reader - 0: external wakeup at low level 1: external wakeup at high level"]
-pub struct EXT_WAKEUP1_LV_R(crate::FieldReader<bool>);
-impl EXT_WAKEUP1_LV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXT_WAKEUP1_LV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXT_WAKEUP1_LV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXT_WAKEUP1_LV_R = crate::BitReader<bool>;
 #[doc = "Field `EXT_WAKEUP1_LV` writer - 0: external wakeup at low level 1: external wakeup at high level"]
-pub struct EXT_WAKEUP1_LV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXT_WAKEUP1_LV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type EXT_WAKEUP1_LV_W<'a> = crate::BitWriter<'a, u32, EXT_WAKEUP_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 30 - 0: external wakeup at low level 1: external wakeup at high level"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 30 - 0: external wakeup at low level 1: external wakeup at high level"]
     #[inline(always)]
     pub fn ext_wakeup0_lv(&mut self) -> EXT_WAKEUP0_LV_W {
-        EXT_WAKEUP0_LV_W { w: self }
+        EXT_WAKEUP0_LV_W::new(self)
     }
     #[doc = "Bit 31 - 0: external wakeup at low level 1: external wakeup at high level"]
     #[inline(always)]
     pub fn ext_wakeup1_lv(&mut self) -> EXT_WAKEUP1_LV_W {
-        EXT_WAKEUP1_LV_W { w: self }
+        EXT_WAKEUP1_LV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

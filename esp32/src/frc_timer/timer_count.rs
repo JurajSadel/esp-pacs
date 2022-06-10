@@ -35,32 +35,9 @@ impl From<crate::W<TIMER_COUNT_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_COUNT` reader - "]
-pub struct TIMER_COUNT_R(crate::FieldReader<u8>);
-impl TIMER_COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER_COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER_COUNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER_COUNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER_COUNT` writer - "]
-pub struct TIMER_COUNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER_COUNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type TIMER_COUNT_W<'a> = crate::FieldWriter<'a, u32, TIMER_COUNT_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn timer_count(&mut self) -> TIMER_COUNT_W {
-        TIMER_COUNT_W { w: self }
+        TIMER_COUNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

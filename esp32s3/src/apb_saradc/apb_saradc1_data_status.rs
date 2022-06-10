@@ -14,20 +14,7 @@ impl From<crate::R<APB_SARADC1_DATA_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_SARADC1_DATA` reader - apbsaradc sample data"]
-pub struct APB_SARADC1_DATA_R(crate::FieldReader<u32>);
-impl APB_SARADC1_DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        APB_SARADC1_DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC1_DATA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC1_DATA_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:16 - apbsaradc sample data"]
     #[inline(always)]

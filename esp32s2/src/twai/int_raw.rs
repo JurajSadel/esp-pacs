@@ -14,110 +14,19 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `RX_INT_ST` reader - Receive interrupt. If this bit is set to 1, it indicates there are messages to be handled in the RX FIFO."]
-pub struct RX_INT_ST_R(crate::FieldReader<bool>);
-impl RX_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TX_INT_ST` reader - Transmit interrupt. If this bit is set to 1, it indicates the message transmitting mis- sion is finished and a new transmission is able to execute."]
-pub struct TX_INT_ST_R(crate::FieldReader<bool>);
-impl TX_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `ERR_WARN_INT_ST` reader - Error warning interrupt. If this bit is set to 1, it indicates the error status signal and the bus-off status signal of Status register have changed (e.g., switched from 0 to 1 or from 1 to 0)."]
-pub struct ERR_WARN_INT_ST_R(crate::FieldReader<bool>);
-impl ERR_WARN_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ERR_WARN_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERR_WARN_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ERR_WARN_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVERRUN_INT_ST` reader - Data overrun interrupt. If this bit is set to 1, it indicates a data overrun interrupt is generated in the RX FIFO."]
-pub struct OVERRUN_INT_ST_R(crate::FieldReader<bool>);
-impl OVERRUN_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVERRUN_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVERRUN_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVERRUN_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `ERR_PASSIVE_INT_ST` reader - Error passive interrupt. If this bit is set to 1, it indicates the TWAI Controller is switched between error active status and error passive status due to the change of error counters."]
-pub struct ERR_PASSIVE_INT_ST_R(crate::FieldReader<bool>);
-impl ERR_PASSIVE_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ERR_PASSIVE_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERR_PASSIVE_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ERR_PASSIVE_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `ARB_LOST_INT_ST` reader - Arbitration lost interrupt. If this bit is set to 1, it indicates an arbitration lost interrupt is generated."]
-pub struct ARB_LOST_INT_ST_R(crate::FieldReader<bool>);
-impl ARB_LOST_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARB_LOST_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARB_LOST_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARB_LOST_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `BUS_ERR_INT_ST` reader - Error interrupt. If this bit is set to 1, it indicates an error is detected on the bus."]
-pub struct BUS_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl BUS_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BUS_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUS_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUS_ERR_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Receive interrupt. If this bit is set to 1, it indicates there are messages to be handled in the RX FIFO."]
     #[inline(always)]

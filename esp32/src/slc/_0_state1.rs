@@ -14,20 +14,7 @@ impl From<crate::R<_0_STATE1_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_STATE1` reader - "]
-pub struct SLC0_STATE1_R(crate::FieldReader<u32>);
-impl SLC0_STATE1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SLC0_STATE1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_STATE1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_STATE1_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

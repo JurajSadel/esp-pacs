@@ -35,173 +35,25 @@ impl From<crate::W<SAR_MEAS2_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `MEAS2_DATA_SAR` reader - SAR ADC2 data."]
-pub struct MEAS2_DATA_SAR_R(crate::FieldReader<u16>);
-impl MEAS2_DATA_SAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MEAS2_DATA_SAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEAS2_DATA_SAR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEAS2_DATA_SAR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MEAS2_DONE_SAR` reader - Indicate SAR ADC2 conversion is done."]
-pub struct MEAS2_DONE_SAR_R(crate::FieldReader<bool>);
-impl MEAS2_DONE_SAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEAS2_DONE_SAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEAS2_DONE_SAR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEAS2_DONE_SAR_R = crate::BitReader<bool>;
 #[doc = "Field `MEAS2_START_SAR` reader - SAR ADC2 controller (in RTC) starts conversion, active only when SENS_MEAS2_START_FORCE = 1."]
-pub struct MEAS2_START_SAR_R(crate::FieldReader<bool>);
-impl MEAS2_START_SAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEAS2_START_SAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEAS2_START_SAR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEAS2_START_SAR_R = crate::BitReader<bool>;
 #[doc = "Field `MEAS2_START_SAR` writer - SAR ADC2 controller (in RTC) starts conversion, active only when SENS_MEAS2_START_FORCE = 1."]
-pub struct MEAS2_START_SAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEAS2_START_SAR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type MEAS2_START_SAR_W<'a> = crate::BitWriter<'a, u32, SAR_MEAS2_CTRL2_SPEC, bool, 17>;
 #[doc = "Field `MEAS2_START_FORCE` reader - 1: SAR ADC2 controller (in RTC) is started by software. 0: SAR ADC2 controller is started by ULP coprocessor."]
-pub struct MEAS2_START_FORCE_R(crate::FieldReader<bool>);
-impl MEAS2_START_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEAS2_START_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEAS2_START_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEAS2_START_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `MEAS2_START_FORCE` writer - 1: SAR ADC2 controller (in RTC) is started by software. 0: SAR ADC2 controller is started by ULP coprocessor."]
-pub struct MEAS2_START_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEAS2_START_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type MEAS2_START_FORCE_W<'a> = crate::BitWriter<'a, u32, SAR_MEAS2_CTRL2_SPEC, bool, 18>;
 #[doc = "Field `SAR2_EN_PAD` reader - SAR ADC2 pad enable bitmap, active only whenSENS_SAR2_EN_PAD_FORCE = 1."]
-pub struct SAR2_EN_PAD_R(crate::FieldReader<u16>);
-impl SAR2_EN_PAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SAR2_EN_PAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_EN_PAD_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_EN_PAD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR2_EN_PAD` writer - SAR ADC2 pad enable bitmap, active only whenSENS_SAR2_EN_PAD_FORCE = 1."]
-pub struct SAR2_EN_PAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_EN_PAD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 19)) | ((value as u32 & 0x0fff) << 19);
-        self.w
-    }
-}
+pub type SAR2_EN_PAD_W<'a> = crate::FieldWriter<'a, u32, SAR_MEAS2_CTRL2_SPEC, u16, u16, 12, 19>;
 #[doc = "Field `SAR2_EN_PAD_FORCE` reader - 1: SAR ADC2 pad enable bitmap is controlled by software. 0: SAR ADC2 pad enable bitmap is controlled by ULP coprocessor."]
-pub struct SAR2_EN_PAD_FORCE_R(crate::FieldReader<bool>);
-impl SAR2_EN_PAD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR2_EN_PAD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_EN_PAD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_EN_PAD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `SAR2_EN_PAD_FORCE` writer - 1: SAR ADC2 pad enable bitmap is controlled by software. 0: SAR ADC2 pad enable bitmap is controlled by ULP coprocessor."]
-pub struct SAR2_EN_PAD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_EN_PAD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type SAR2_EN_PAD_FORCE_W<'a> = crate::BitWriter<'a, u32, SAR_MEAS2_CTRL2_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:15 - SAR ADC2 data."]
     #[inline(always)]
@@ -238,22 +90,22 @@ impl W {
     #[doc = "Bit 17 - SAR ADC2 controller (in RTC) starts conversion, active only when SENS_MEAS2_START_FORCE = 1."]
     #[inline(always)]
     pub fn meas2_start_sar(&mut self) -> MEAS2_START_SAR_W {
-        MEAS2_START_SAR_W { w: self }
+        MEAS2_START_SAR_W::new(self)
     }
     #[doc = "Bit 18 - 1: SAR ADC2 controller (in RTC) is started by software. 0: SAR ADC2 controller is started by ULP coprocessor."]
     #[inline(always)]
     pub fn meas2_start_force(&mut self) -> MEAS2_START_FORCE_W {
-        MEAS2_START_FORCE_W { w: self }
+        MEAS2_START_FORCE_W::new(self)
     }
     #[doc = "Bits 19:30 - SAR ADC2 pad enable bitmap, active only whenSENS_SAR2_EN_PAD_FORCE = 1."]
     #[inline(always)]
     pub fn sar2_en_pad(&mut self) -> SAR2_EN_PAD_W {
-        SAR2_EN_PAD_W { w: self }
+        SAR2_EN_PAD_W::new(self)
     }
     #[doc = "Bit 31 - 1: SAR ADC2 pad enable bitmap is controlled by software. 0: SAR ADC2 pad enable bitmap is controlled by ULP coprocessor."]
     #[inline(always)]
     pub fn sar2_en_pad_force(&mut self) -> SAR2_EN_PAD_FORCE_W {
-        SAR2_EN_PAD_FORCE_W { w: self }
+        SAR2_EN_PAD_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

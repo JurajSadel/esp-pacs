@@ -35,32 +35,9 @@ impl From<crate::W<BT_LPCK_DIV_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `BT_LPCK_DIV_NUM` reader - This field is lower power clock frequent division factor"]
-pub struct BT_LPCK_DIV_NUM_R(crate::FieldReader<u16>);
-impl BT_LPCK_DIV_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        BT_LPCK_DIV_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BT_LPCK_DIV_NUM_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BT_LPCK_DIV_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BT_LPCK_DIV_NUM` writer - This field is lower power clock frequent division factor"]
-pub struct BT_LPCK_DIV_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BT_LPCK_DIV_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type BT_LPCK_DIV_NUM_W<'a> = crate::FieldWriter<'a, u32, BT_LPCK_DIV_INT_SPEC, u16, u16, 12, 0>;
 impl R {
     #[doc = "Bits 0:11 - This field is lower power clock frequent division factor"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:11 - This field is lower power clock frequent division factor"]
     #[inline(always)]
     pub fn bt_lpck_div_num(&mut self) -> BT_LPCK_DIV_NUM_W {
-        BT_LPCK_DIV_NUM_W { w: self }
+        BT_LPCK_DIV_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

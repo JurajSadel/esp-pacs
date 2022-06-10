@@ -35,79 +35,13 @@ impl From<crate::W<SIGMADELTA_MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `FUNCTION_CLK_EN` reader - Clock enable bit of sigma delta modulation."]
-pub struct FUNCTION_CLK_EN_R(crate::FieldReader<bool>);
-impl FUNCTION_CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FUNCTION_CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FUNCTION_CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FUNCTION_CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `FUNCTION_CLK_EN` writer - Clock enable bit of sigma delta modulation."]
-pub struct FUNCTION_CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FUNCTION_CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type FUNCTION_CLK_EN_W<'a> = crate::BitWriter<'a, u32, SIGMADELTA_MISC_SPEC, bool, 30>;
 #[doc = "Field `SPI_SWAP` reader - Reserved."]
-pub struct SPI_SWAP_R(crate::FieldReader<bool>);
-impl SPI_SWAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_SWAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SWAP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SWAP_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_SWAP` writer - Reserved."]
-pub struct SPI_SWAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SWAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type SPI_SWAP_W<'a> = crate::BitWriter<'a, u32, SIGMADELTA_MISC_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 30 - Clock enable bit of sigma delta modulation."]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 30 - Clock enable bit of sigma delta modulation."]
     #[inline(always)]
     pub fn function_clk_en(&mut self) -> FUNCTION_CLK_EN_W {
-        FUNCTION_CLK_EN_W { w: self }
+        FUNCTION_CLK_EN_W::new(self)
     }
     #[doc = "Bit 31 - Reserved."]
     #[inline(always)]
     pub fn spi_swap(&mut self) -> SPI_SWAP_W {
-        SPI_SWAP_W { w: self }
+        SPI_SWAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

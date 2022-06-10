@@ -35,153 +35,21 @@ impl From<crate::W<SAR_HALL_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `XPD_HALL` reader - Power on hall sensor and connect to VP and VN"]
-pub struct XPD_HALL_R(crate::FieldReader<bool>);
-impl XPD_HALL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_HALL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_HALL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_HALL_R = crate::BitReader<bool>;
 #[doc = "Field `XPD_HALL` writer - Power on hall sensor and connect to VP and VN"]
-pub struct XPD_HALL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XPD_HALL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type XPD_HALL_W<'a> = crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, 28>;
 #[doc = "Field `XPD_HALL_FORCE` reader - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
-pub struct XPD_HALL_FORCE_R(crate::FieldReader<bool>);
-impl XPD_HALL_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_HALL_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_HALL_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_HALL_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `XPD_HALL_FORCE` writer - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
-pub struct XPD_HALL_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XPD_HALL_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type XPD_HALL_FORCE_W<'a> = crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, 29>;
 #[doc = "Field `HALL_PHASE` reader - Reverse phase of hall sensor"]
-pub struct HALL_PHASE_R(crate::FieldReader<bool>);
-impl HALL_PHASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HALL_PHASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HALL_PHASE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HALL_PHASE_R = crate::BitReader<bool>;
 #[doc = "Field `HALL_PHASE` writer - Reverse phase of hall sensor"]
-pub struct HALL_PHASE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HALL_PHASE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type HALL_PHASE_W<'a> = crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, 30>;
 #[doc = "Field `HALL_PHASE_FORCE` reader - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
-pub struct HALL_PHASE_FORCE_R(crate::FieldReader<bool>);
-impl HALL_PHASE_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HALL_PHASE_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HALL_PHASE_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HALL_PHASE_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `HALL_PHASE_FORCE` writer - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
-pub struct HALL_PHASE_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HALL_PHASE_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type HALL_PHASE_FORCE_W<'a> = crate::BitWriter<'a, u32, SAR_HALL_CTRL_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 28 - Power on hall sensor and connect to VP and VN"]
     #[inline(always)]
@@ -208,22 +76,22 @@ impl W {
     #[doc = "Bit 28 - Power on hall sensor and connect to VP and VN"]
     #[inline(always)]
     pub fn xpd_hall(&mut self) -> XPD_HALL_W {
-        XPD_HALL_W { w: self }
+        XPD_HALL_W::new(self)
     }
     #[doc = "Bit 29 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W {
-        XPD_HALL_FORCE_W { w: self }
+        XPD_HALL_FORCE_W::new(self)
     }
     #[doc = "Bit 30 - Reverse phase of hall sensor"]
     #[inline(always)]
     pub fn hall_phase(&mut self) -> HALL_PHASE_W {
-        HALL_PHASE_W { w: self }
+        HALL_PHASE_W::new(self)
     }
     #[doc = "Bit 31 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W {
-        HALL_PHASE_FORCE_W { w: self }
+        HALL_PHASE_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

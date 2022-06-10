@@ -14,20 +14,7 @@ impl From<crate::R<BLK1_RDATA2_SPEC>> for R {
     }
 }
 #[doc = "Field `BLK1_DOUT2` reader - read for BLOCK1"]
-pub struct BLK1_DOUT2_R(crate::FieldReader<u32>);
-impl BLK1_DOUT2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BLK1_DOUT2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BLK1_DOUT2_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BLK1_DOUT2_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - read for BLOCK1"]
     #[inline(always)]

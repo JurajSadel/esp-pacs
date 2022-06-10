@@ -35,131 +35,19 @@ impl From<crate::W<DCACHE_SYNC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `DCACHE_INVALIDATE_ENA` reader - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub struct DCACHE_INVALIDATE_ENA_R(crate::FieldReader<bool>);
-impl DCACHE_INVALIDATE_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_INVALIDATE_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_INVALIDATE_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_INVALIDATE_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_INVALIDATE_ENA` writer - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
-pub struct DCACHE_INVALIDATE_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_INVALIDATE_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DCACHE_INVALIDATE_ENA_W<'a> = crate::BitWriter<'a, u32, DCACHE_SYNC_CTRL_SPEC, bool, 0>;
 #[doc = "Field `DCACHE_WRITEBACK_ENA` reader - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done."]
-pub struct DCACHE_WRITEBACK_ENA_R(crate::FieldReader<bool>);
-impl DCACHE_WRITEBACK_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_WRITEBACK_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_WRITEBACK_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_WRITEBACK_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_WRITEBACK_ENA` writer - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done."]
-pub struct DCACHE_WRITEBACK_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_WRITEBACK_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type DCACHE_WRITEBACK_ENA_W<'a> = crate::BitWriter<'a, u32, DCACHE_SYNC_CTRL_SPEC, bool, 1>;
 #[doc = "Field `DCACHE_CLEAN_ENA` reader - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
-pub struct DCACHE_CLEAN_ENA_R(crate::FieldReader<bool>);
-impl DCACHE_CLEAN_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_CLEAN_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_CLEAN_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_CLEAN_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_CLEAN_ENA` writer - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
-pub struct DCACHE_CLEAN_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCACHE_CLEAN_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type DCACHE_CLEAN_ENA_W<'a> = crate::BitWriter<'a, u32, DCACHE_SYNC_CTRL_SPEC, bool, 2>;
 #[doc = "Field `DCACHE_SYNC_DONE` reader - The bit is used to indicate clean/writeback/invalidate operation is finished."]
-pub struct DCACHE_SYNC_DONE_R(crate::FieldReader<bool>);
-impl DCACHE_SYNC_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_SYNC_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_SYNC_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_SYNC_DONE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
@@ -186,17 +74,17 @@ impl W {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
     pub fn dcache_invalidate_ena(&mut self) -> DCACHE_INVALIDATE_ENA_W {
-        DCACHE_INVALIDATE_ENA_W { w: self }
+        DCACHE_INVALIDATE_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done."]
     #[inline(always)]
     pub fn dcache_writeback_ena(&mut self) -> DCACHE_WRITEBACK_ENA_W {
-        DCACHE_WRITEBACK_ENA_W { w: self }
+        DCACHE_WRITEBACK_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
     #[inline(always)]
     pub fn dcache_clean_ena(&mut self) -> DCACHE_CLEAN_ENA_W {
-        DCACHE_CLEAN_ENA_W { w: self }
+        DCACHE_CLEAN_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

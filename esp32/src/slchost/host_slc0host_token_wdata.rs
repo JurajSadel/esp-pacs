@@ -35,59 +35,15 @@ impl From<crate::W<HOST_SLC0HOST_TOKEN_WDATA_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_SLC0HOST_TOKEN0_WD` reader - "]
-pub struct HOST_SLC0HOST_TOKEN0_WD_R(crate::FieldReader<u16>);
-impl HOST_SLC0HOST_TOKEN0_WD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        HOST_SLC0HOST_TOKEN0_WD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC0HOST_TOKEN0_WD_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC0HOST_TOKEN0_WD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `HOST_SLC0HOST_TOKEN0_WD` writer - "]
-pub struct HOST_SLC0HOST_TOKEN0_WD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_SLC0HOST_TOKEN0_WD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type HOST_SLC0HOST_TOKEN0_WD_W<'a> =
+    crate::FieldWriter<'a, u32, HOST_SLC0HOST_TOKEN_WDATA_SPEC, u16, u16, 12, 0>;
 #[doc = "Field `HOST_SLC0HOST_TOKEN1_WD` reader - "]
-pub struct HOST_SLC0HOST_TOKEN1_WD_R(crate::FieldReader<u16>);
-impl HOST_SLC0HOST_TOKEN1_WD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        HOST_SLC0HOST_TOKEN1_WD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC0HOST_TOKEN1_WD_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC0HOST_TOKEN1_WD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `HOST_SLC0HOST_TOKEN1_WD` writer - "]
-pub struct HOST_SLC0HOST_TOKEN1_WD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_SLC0HOST_TOKEN1_WD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 16)) | ((value as u32 & 0x0fff) << 16);
-        self.w
-    }
-}
+pub type HOST_SLC0HOST_TOKEN1_WD_W<'a> =
+    crate::FieldWriter<'a, u32, HOST_SLC0HOST_TOKEN_WDATA_SPEC, u16, u16, 12, 16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -104,12 +60,12 @@ impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
     pub fn host_slc0host_token0_wd(&mut self) -> HOST_SLC0HOST_TOKEN0_WD_W {
-        HOST_SLC0HOST_TOKEN0_WD_W { w: self }
+        HOST_SLC0HOST_TOKEN0_WD_W::new(self)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
     pub fn host_slc0host_token1_wd(&mut self) -> HOST_SLC0HOST_TOKEN1_WD_W {
-        HOST_SLC0HOST_TOKEN1_WD_W { w: self }
+        HOST_SLC0HOST_TOKEN1_WD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

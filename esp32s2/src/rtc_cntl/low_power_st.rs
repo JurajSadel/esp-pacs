@@ -14,425 +14,61 @@ impl From<crate::R<LOW_POWER_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `XPD_ROM0` reader - rom0 power down"]
-pub struct XPD_ROM0_R(crate::FieldReader<bool>);
-impl XPD_ROM0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_ROM0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_ROM0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_ROM0_R = crate::BitReader<bool>;
 #[doc = "Field `XPD_DIG_DCDC` reader - External DCDC power down"]
-pub struct XPD_DIG_DCDC_R(crate::FieldReader<bool>);
-impl XPD_DIG_DCDC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_DIG_DCDC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_DIG_DCDC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_DIG_DCDC_R = crate::BitReader<bool>;
 #[doc = "Field `PERI_ISO` reader - rtc peripheral iso"]
-pub struct PERI_ISO_R(crate::FieldReader<bool>);
-impl PERI_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PERI_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERI_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERI_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `XPD_RTC_PERI` reader - rtc peripheral power down"]
-pub struct XPD_RTC_PERI_R(crate::FieldReader<bool>);
-impl XPD_RTC_PERI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_RTC_PERI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_RTC_PERI_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_RTC_PERI_R = crate::BitReader<bool>;
 #[doc = "Field `WIFI_ISO` reader - wifi iso"]
-pub struct WIFI_ISO_R(crate::FieldReader<bool>);
-impl WIFI_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WIFI_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WIFI_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WIFI_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `XPD_WIFI` reader - wifi wrap power down"]
-pub struct XPD_WIFI_R(crate::FieldReader<bool>);
-impl XPD_WIFI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_WIFI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_WIFI_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_WIFI_R = crate::BitReader<bool>;
 #[doc = "Field `DIG_ISO` reader - digital wrap iso"]
-pub struct DIG_ISO_R(crate::FieldReader<bool>);
-impl DIG_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIG_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIG_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIG_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `XPD_DIG` reader - digital wrap power down"]
-pub struct XPD_DIG_R(crate::FieldReader<bool>);
-impl XPD_DIG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_DIG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_DIG_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_DIG_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_STATE_START` reader - touch should start to work"]
-pub struct TOUCH_STATE_START_R(crate::FieldReader<bool>);
-impl TOUCH_STATE_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_STATE_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_STATE_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_STATE_START_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_STATE_SWITCH` reader - touch is about to working. Switch rtc main state"]
-pub struct TOUCH_STATE_SWITCH_R(crate::FieldReader<bool>);
-impl TOUCH_STATE_SWITCH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_STATE_SWITCH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_STATE_SWITCH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_STATE_SWITCH_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_STATE_SLP` reader - touch is in sleep state"]
-pub struct TOUCH_STATE_SLP_R(crate::FieldReader<bool>);
-impl TOUCH_STATE_SLP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_STATE_SLP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_STATE_SLP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_STATE_SLP_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_STATE_DONE` reader - touch is done"]
-pub struct TOUCH_STATE_DONE_R(crate::FieldReader<bool>);
-impl TOUCH_STATE_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_STATE_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_STATE_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_STATE_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_STATE_START` reader - ulp/cocpu should start to work"]
-pub struct COCPU_STATE_START_R(crate::FieldReader<bool>);
-impl COCPU_STATE_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_STATE_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_STATE_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_STATE_START_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_STATE_SWITCH` reader - ulp/cocpu is about to working. Switch rtc main state"]
-pub struct COCPU_STATE_SWITCH_R(crate::FieldReader<bool>);
-impl COCPU_STATE_SWITCH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_STATE_SWITCH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_STATE_SWITCH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_STATE_SWITCH_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_STATE_SLP` reader - ulp/cocpu is in sleep state"]
-pub struct COCPU_STATE_SLP_R(crate::FieldReader<bool>);
-impl COCPU_STATE_SLP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_STATE_SLP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_STATE_SLP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_STATE_SLP_R = crate::BitReader<bool>;
 #[doc = "Field `COCPU_STATE_DONE` reader - ulp/cocpu is done"]
-pub struct COCPU_STATE_DONE_R(crate::FieldReader<bool>);
-impl COCPU_STATE_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COCPU_STATE_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COCPU_STATE_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COCPU_STATE_DONE_R = crate::BitReader<bool>;
 #[doc = "Field `MAIN_STATE_XTAL_ISO` reader - no use any more"]
-pub struct MAIN_STATE_XTAL_ISO_R(crate::FieldReader<bool>);
-impl MAIN_STATE_XTAL_ISO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAIN_STATE_XTAL_ISO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAIN_STATE_XTAL_ISO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAIN_STATE_XTAL_ISO_R = crate::BitReader<bool>;
 #[doc = "Field `MAIN_STATE_PLL_ON` reader - rtc main state machine is in states that pll should be running"]
-pub struct MAIN_STATE_PLL_ON_R(crate::FieldReader<bool>);
-impl MAIN_STATE_PLL_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAIN_STATE_PLL_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAIN_STATE_PLL_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAIN_STATE_PLL_ON_R = crate::BitReader<bool>;
 #[doc = "Field `RDY_FOR_WAKEUP` reader - Indicates the RTC is ready to be triggered by any wakeup source."]
-pub struct RDY_FOR_WAKEUP_R(crate::FieldReader<bool>);
-impl RDY_FOR_WAKEUP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RDY_FOR_WAKEUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RDY_FOR_WAKEUP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RDY_FOR_WAKEUP_R = crate::BitReader<bool>;
 #[doc = "Field `MAIN_STATE_WAIT_END` reader - rtc main state machine has been waited for some cycles"]
-pub struct MAIN_STATE_WAIT_END_R(crate::FieldReader<bool>);
-impl MAIN_STATE_WAIT_END_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAIN_STATE_WAIT_END_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAIN_STATE_WAIT_END_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAIN_STATE_WAIT_END_R = crate::BitReader<bool>;
 #[doc = "Field `IN_WAKEUP_STATE` reader - rtc main state machine is in the states of wakeup process"]
-pub struct IN_WAKEUP_STATE_R(crate::FieldReader<bool>);
-impl IN_WAKEUP_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_WAKEUP_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_WAKEUP_STATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_WAKEUP_STATE_R = crate::BitReader<bool>;
 #[doc = "Field `IN_LOW_POWER_STATE` reader - rtc main state machine is in the states of low power"]
-pub struct IN_LOW_POWER_STATE_R(crate::FieldReader<bool>);
-impl IN_LOW_POWER_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_LOW_POWER_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_LOW_POWER_STATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_LOW_POWER_STATE_R = crate::BitReader<bool>;
 #[doc = "Field `MAIN_STATE_IN_WAIT_8M` reader - rtc main state machine is in wait 8m state"]
-pub struct MAIN_STATE_IN_WAIT_8M_R(crate::FieldReader<bool>);
-impl MAIN_STATE_IN_WAIT_8M_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAIN_STATE_IN_WAIT_8M_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAIN_STATE_IN_WAIT_8M_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAIN_STATE_IN_WAIT_8M_R = crate::BitReader<bool>;
 #[doc = "Field `MAIN_STATE_IN_WAIT_PLL` reader - rtc main state machine is in wait pll state"]
-pub struct MAIN_STATE_IN_WAIT_PLL_R(crate::FieldReader<bool>);
-impl MAIN_STATE_IN_WAIT_PLL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAIN_STATE_IN_WAIT_PLL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAIN_STATE_IN_WAIT_PLL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAIN_STATE_IN_WAIT_PLL_R = crate::BitReader<bool>;
 #[doc = "Field `MAIN_STATE_IN_WAIT_XTL` reader - rtc main state machine is in wait xtal state"]
-pub struct MAIN_STATE_IN_WAIT_XTL_R(crate::FieldReader<bool>);
-impl MAIN_STATE_IN_WAIT_XTL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAIN_STATE_IN_WAIT_XTL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAIN_STATE_IN_WAIT_XTL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAIN_STATE_IN_WAIT_XTL_R = crate::BitReader<bool>;
 #[doc = "Field `MAIN_STATE_IN_SLP` reader - rtc main state machine is in sleep state"]
-pub struct MAIN_STATE_IN_SLP_R(crate::FieldReader<bool>);
-impl MAIN_STATE_IN_SLP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAIN_STATE_IN_SLP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAIN_STATE_IN_SLP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAIN_STATE_IN_SLP_R = crate::BitReader<bool>;
 #[doc = "Field `MAIN_STATE_IN_IDLE` reader - rtc main state machine is in idle state"]
-pub struct MAIN_STATE_IN_IDLE_R(crate::FieldReader<bool>);
-impl MAIN_STATE_IN_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MAIN_STATE_IN_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAIN_STATE_IN_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAIN_STATE_IN_IDLE_R = crate::BitReader<bool>;
 #[doc = "Field `MAIN_STATE` reader - rtc main state machine status"]
-pub struct MAIN_STATE_R(crate::FieldReader<u8>);
-impl MAIN_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MAIN_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAIN_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAIN_STATE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - rom0 power down"]
     #[inline(always)]

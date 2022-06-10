@@ -35,32 +35,9 @@ impl From<crate::W<CPU_INT_PRI_29_SPEC>> for W {
     }
 }
 #[doc = "Field `CPU_PRI_29_MAP` reader - reg_core0_cpu_pri_29_map"]
-pub struct CPU_PRI_29_MAP_R(crate::FieldReader<u8>);
-impl CPU_PRI_29_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CPU_PRI_29_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CPU_PRI_29_MAP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CPU_PRI_29_MAP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CPU_PRI_29_MAP` writer - reg_core0_cpu_pri_29_map"]
-pub struct CPU_PRI_29_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CPU_PRI_29_MAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type CPU_PRI_29_MAP_W<'a> = crate::FieldWriter<'a, u32, CPU_INT_PRI_29_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - reg_core0_cpu_pri_29_map"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:3 - reg_core0_cpu_pri_29_map"]
     #[inline(always)]
     pub fn cpu_pri_29_map(&mut self) -> CPU_PRI_29_MAP_W {
-        CPU_PRI_29_MAP_W { w: self }
+        CPU_PRI_29_MAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

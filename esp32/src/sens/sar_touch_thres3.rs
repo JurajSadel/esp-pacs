@@ -35,59 +35,13 @@ impl From<crate::W<SAR_TOUCH_THRES3_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_OUT_TH5` reader - the threshold for touch pad 5"]
-pub struct TOUCH_OUT_TH5_R(crate::FieldReader<u16>);
-impl TOUCH_OUT_TH5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TOUCH_OUT_TH5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_OUT_TH5_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_OUT_TH5_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_OUT_TH5` writer - the threshold for touch pad 5"]
-pub struct TOUCH_OUT_TH5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_OUT_TH5_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type TOUCH_OUT_TH5_W<'a> = crate::FieldWriter<'a, u32, SAR_TOUCH_THRES3_SPEC, u16, u16, 16, 0>;
 #[doc = "Field `TOUCH_OUT_TH4` reader - the threshold for touch pad 4"]
-pub struct TOUCH_OUT_TH4_R(crate::FieldReader<u16>);
-impl TOUCH_OUT_TH4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TOUCH_OUT_TH4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_OUT_TH4_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_OUT_TH4_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_OUT_TH4` writer - the threshold for touch pad 4"]
-pub struct TOUCH_OUT_TH4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_OUT_TH4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
+pub type TOUCH_OUT_TH4_W<'a> = crate::FieldWriter<'a, u32, SAR_TOUCH_THRES3_SPEC, u16, u16, 16, 16>;
 impl R {
     #[doc = "Bits 0:15 - the threshold for touch pad 5"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:15 - the threshold for touch pad 5"]
     #[inline(always)]
     pub fn touch_out_th5(&mut self) -> TOUCH_OUT_TH5_W {
-        TOUCH_OUT_TH5_W { w: self }
+        TOUCH_OUT_TH5_W::new(self)
     }
     #[doc = "Bits 16:31 - the threshold for touch pad 4"]
     #[inline(always)]
     pub fn touch_out_th4(&mut self) -> TOUCH_OUT_TH4_W {
-        TOUCH_OUT_TH4_W { w: self }
+        TOUCH_OUT_TH4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

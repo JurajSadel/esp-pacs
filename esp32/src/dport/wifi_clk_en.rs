@@ -35,113 +35,22 @@ impl From<crate::W<WIFI_CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `WIFI_CLK_EN` reader - "]
-pub struct WIFI_CLK_EN_R(crate::FieldReader<u32>);
-impl WIFI_CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        WIFI_CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WIFI_CLK_EN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WIFI_CLK_EN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `WIFI_CLK_EN` writer - "]
-pub struct WIFI_CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WIFI_CLK_EN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type WIFI_CLK_EN_W<'a> = crate::FieldWriter<'a, u32, WIFI_CLK_EN_SPEC, u32, u32, 32, 0>;
 #[doc = "Field `WIFI_CLK_WIFI_EN` reader - "]
-pub struct WIFI_CLK_WIFI_EN_R(crate::FieldReader<u8>);
-impl WIFI_CLK_WIFI_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WIFI_CLK_WIFI_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WIFI_CLK_WIFI_EN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WIFI_CLK_WIFI_EN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WIFI_CLK_WIFI_EN` writer - "]
-pub struct WIFI_CLK_WIFI_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WIFI_CLK_WIFI_EN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type WIFI_CLK_WIFI_EN_W<'a> = crate::FieldWriter<'a, u32, WIFI_CLK_EN_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `WIFI_CLK_WIFI_BT_COMMON` reader - "]
-pub struct WIFI_CLK_WIFI_BT_COMMON_R(crate::FieldReader<u8>);
-impl WIFI_CLK_WIFI_BT_COMMON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WIFI_CLK_WIFI_BT_COMMON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WIFI_CLK_WIFI_BT_COMMON_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WIFI_CLK_WIFI_BT_COMMON_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WIFI_CLK_WIFI_BT_COMMON` writer - "]
-pub struct WIFI_CLK_WIFI_BT_COMMON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WIFI_CLK_WIFI_BT_COMMON_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type WIFI_CLK_WIFI_BT_COMMON_W<'a> =
+    crate::FieldWriter<'a, u32, WIFI_CLK_EN_SPEC, u8, u8, 6, 0>;
 #[doc = "Field `WIFI_CLK_BT_EN` reader - "]
-pub struct WIFI_CLK_BT_EN_R(crate::FieldReader<u8>);
-impl WIFI_CLK_BT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WIFI_CLK_BT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WIFI_CLK_BT_EN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WIFI_CLK_BT_EN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WIFI_CLK_BT_EN` writer - "]
-pub struct WIFI_CLK_BT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WIFI_CLK_BT_EN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
-        self.w
-    }
-}
+pub type WIFI_CLK_BT_EN_W<'a> = crate::FieldWriter<'a, u32, WIFI_CLK_EN_SPEC, u8, u8, 3, 11>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -168,22 +77,22 @@ impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn wifi_clk_en(&mut self) -> WIFI_CLK_EN_W {
-        WIFI_CLK_EN_W { w: self }
+        WIFI_CLK_EN_W::new(self)
     }
     #[doc = "Bits 0:2"]
     #[inline(always)]
     pub fn wifi_clk_wifi_en(&mut self) -> WIFI_CLK_WIFI_EN_W {
-        WIFI_CLK_WIFI_EN_W { w: self }
+        WIFI_CLK_WIFI_EN_W::new(self)
     }
     #[doc = "Bits 0:5"]
     #[inline(always)]
     pub fn wifi_clk_wifi_bt_common(&mut self) -> WIFI_CLK_WIFI_BT_COMMON_W {
-        WIFI_CLK_WIFI_BT_COMMON_W { w: self }
+        WIFI_CLK_WIFI_BT_COMMON_W::new(self)
     }
     #[doc = "Bits 11:13"]
     #[inline(always)]
     pub fn wifi_clk_bt_en(&mut self) -> WIFI_CLK_BT_EN_W {
-        WIFI_CLK_BT_EN_W { w: self }
+        WIFI_CLK_BT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

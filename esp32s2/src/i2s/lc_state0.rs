@@ -14,95 +14,17 @@ impl From<crate::R<LC_STATE0_SPEC>> for R {
     }
 }
 #[doc = "Field `OUTLINK_DSCR_ADDR` reader - I2S DMA out descriptor address."]
-pub struct OUTLINK_DSCR_ADDR_R(crate::FieldReader<u32>);
-impl OUTLINK_DSCR_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        OUTLINK_DSCR_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_DSCR_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_DSCR_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `OUT_DSCR_STATE` reader - I2S DMA out descriptor state."]
-pub struct OUT_DSCR_STATE_R(crate::FieldReader<u8>);
-impl OUT_DSCR_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_DSCR_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DSCR_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DSCR_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUT_STATE` reader - I2S DMA out data state."]
-pub struct OUT_STATE_R(crate::FieldReader<u8>);
-impl OUT_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUTFIFO_CNT` reader - The remains of I2S DMA outfifo data."]
-pub struct OUTFIFO_CNT_R(crate::FieldReader<u8>);
-impl OUTFIFO_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUTFIFO_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTFIFO_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTFIFO_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUT_FULL` reader - I2S DMA outfifo is full."]
-pub struct OUT_FULL_R(crate::FieldReader<bool>);
-impl OUT_FULL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_FULL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_FULL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_FULL_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EMPTY` reader - I2S DMA outfifo is empty."]
-pub struct OUT_EMPTY_R(crate::FieldReader<bool>);
-impl OUT_EMPTY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EMPTY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EMPTY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EMPTY_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:17 - I2S DMA out descriptor address."]
     #[inline(always)]

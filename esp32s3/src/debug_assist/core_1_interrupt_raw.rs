@@ -14,185 +14,29 @@ impl From<crate::R<CORE_1_INTERRUPT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_AREA_DRAM0_0_RD_RAW` reader - Core1 dram0 area0 read monitor interrupt status"]
-pub struct CORE_1_AREA_DRAM0_0_RD_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_DRAM0_0_RD_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_DRAM0_0_RD_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_DRAM0_0_RD_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_DRAM0_0_RD_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_0_WR_RAW` reader - Core1 dram0 area0 write monitor interrupt status"]
-pub struct CORE_1_AREA_DRAM0_0_WR_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_DRAM0_0_WR_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_DRAM0_0_WR_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_DRAM0_0_WR_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_DRAM0_0_WR_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_1_RD_RAW` reader - Core1 dram0 area1 read monitor interrupt status"]
-pub struct CORE_1_AREA_DRAM0_1_RD_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_DRAM0_1_RD_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_DRAM0_1_RD_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_DRAM0_1_RD_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_DRAM0_1_RD_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_DRAM0_1_WR_RAW` reader - Core1 dram0 area1 write monitor interrupt status"]
-pub struct CORE_1_AREA_DRAM0_1_WR_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_DRAM0_1_WR_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_DRAM0_1_WR_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_DRAM0_1_WR_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_DRAM0_1_WR_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_0_RD_RAW` reader - Core1 PIF area0 read monitor interrupt status"]
-pub struct CORE_1_AREA_PIF_0_RD_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_PIF_0_RD_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_PIF_0_RD_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_PIF_0_RD_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_PIF_0_RD_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_0_WR_RAW` reader - Core1 PIF area0 write monitor interrupt status"]
-pub struct CORE_1_AREA_PIF_0_WR_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_PIF_0_WR_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_PIF_0_WR_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_PIF_0_WR_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_PIF_0_WR_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_1_RD_RAW` reader - Core1 PIF area1 read monitor interrupt status"]
-pub struct CORE_1_AREA_PIF_1_RD_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_PIF_1_RD_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_PIF_1_RD_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_PIF_1_RD_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_PIF_1_RD_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_AREA_PIF_1_WR_RAW` reader - Core1 PIF area1 write monitor interrupt status"]
-pub struct CORE_1_AREA_PIF_1_WR_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_AREA_PIF_1_WR_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_AREA_PIF_1_WR_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_AREA_PIF_1_WR_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_AREA_PIF_1_WR_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_SP_SPILL_MIN_RAW` reader - Core1 stackpoint overflow monitor interrupt status"]
-pub struct CORE_1_SP_SPILL_MIN_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_SP_SPILL_MIN_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_SP_SPILL_MIN_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_SP_SPILL_MIN_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_SP_SPILL_MIN_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_SP_SPILL_MAX_RAW` reader - Core1 stackpoint underflow monitor interrupt status"]
-pub struct CORE_1_SP_SPILL_MAX_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_SP_SPILL_MAX_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_SP_SPILL_MAX_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_SP_SPILL_MAX_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_SP_SPILL_MAX_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_IRAM0_EXCEPTION_MONITOR_RAW` reader - IBUS busy monitor interrupt status"]
-pub struct CORE_1_IRAM0_EXCEPTION_MONITOR_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_IRAM0_EXCEPTION_MONITOR_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_IRAM0_EXCEPTION_MONITOR_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_IRAM0_EXCEPTION_MONITOR_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_IRAM0_EXCEPTION_MONITOR_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_DRAM0_EXCEPTION_MONITOR_RAW` reader - DBUS busy monitor initerrupt status"]
-pub struct CORE_1_DRAM0_EXCEPTION_MONITOR_RAW_R(crate::FieldReader<bool>);
-impl CORE_1_DRAM0_EXCEPTION_MONITOR_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_DRAM0_EXCEPTION_MONITOR_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_DRAM0_EXCEPTION_MONITOR_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_DRAM0_EXCEPTION_MONITOR_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Core1 dram0 area0 read monitor interrupt status"]
     #[inline(always)]

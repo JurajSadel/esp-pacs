@@ -35,153 +35,21 @@ impl From<crate::W<SLAVE_SPI_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `SLAVE_SPI_MASK_PRO` reader - "]
-pub struct SLAVE_SPI_MASK_PRO_R(crate::FieldReader<bool>);
-impl SLAVE_SPI_MASK_PRO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_SPI_MASK_PRO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_SPI_MASK_PRO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_SPI_MASK_PRO_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_SPI_MASK_PRO` writer - "]
-pub struct SLAVE_SPI_MASK_PRO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_SPI_MASK_PRO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SLAVE_SPI_MASK_PRO_W<'a> = crate::BitWriter<'a, u32, SLAVE_SPI_CONFIG_SPEC, bool, 0>;
 #[doc = "Field `SLAVE_SPI_MASK_APP` reader - "]
-pub struct SLAVE_SPI_MASK_APP_R(crate::FieldReader<bool>);
-impl SLAVE_SPI_MASK_APP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_SPI_MASK_APP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_SPI_MASK_APP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_SPI_MASK_APP_R = crate::BitReader<bool>;
 #[doc = "Field `SLAVE_SPI_MASK_APP` writer - "]
-pub struct SLAVE_SPI_MASK_APP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLAVE_SPI_MASK_APP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SLAVE_SPI_MASK_APP_W<'a> = crate::BitWriter<'a, u32, SLAVE_SPI_CONFIG_SPEC, bool, 4>;
 #[doc = "Field `SPI_ENCRYPT_ENABLE` reader - "]
-pub struct SPI_ENCRYPT_ENABLE_R(crate::FieldReader<bool>);
-impl SPI_ENCRYPT_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_ENCRYPT_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_ENCRYPT_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_ENCRYPT_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_ENCRYPT_ENABLE` writer - "]
-pub struct SPI_ENCRYPT_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_ENCRYPT_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type SPI_ENCRYPT_ENABLE_W<'a> = crate::BitWriter<'a, u32, SLAVE_SPI_CONFIG_SPEC, bool, 8>;
 #[doc = "Field `SPI_DECRYPT_ENABLE` reader - "]
-pub struct SPI_DECRYPT_ENABLE_R(crate::FieldReader<bool>);
-impl SPI_DECRYPT_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_DECRYPT_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_DECRYPT_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_DECRYPT_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_DECRYPT_ENABLE` writer - "]
-pub struct SPI_DECRYPT_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_DECRYPT_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type SPI_DECRYPT_ENABLE_W<'a> = crate::BitWriter<'a, u32, SLAVE_SPI_CONFIG_SPEC, bool, 12>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -208,22 +76,22 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn slave_spi_mask_pro(&mut self) -> SLAVE_SPI_MASK_PRO_W {
-        SLAVE_SPI_MASK_PRO_W { w: self }
+        SLAVE_SPI_MASK_PRO_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn slave_spi_mask_app(&mut self) -> SLAVE_SPI_MASK_APP_W {
-        SLAVE_SPI_MASK_APP_W { w: self }
+        SLAVE_SPI_MASK_APP_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn spi_encrypt_enable(&mut self) -> SPI_ENCRYPT_ENABLE_W {
-        SPI_ENCRYPT_ENABLE_W { w: self }
+        SPI_ENCRYPT_ENABLE_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn spi_decrypt_enable(&mut self) -> SPI_DECRYPT_ENABLE_W {
-        SPI_DECRYPT_ENABLE_W { w: self }
+        SPI_DECRYPT_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

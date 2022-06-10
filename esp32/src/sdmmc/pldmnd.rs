@@ -20,22 +20,12 @@ impl From<crate::W<PLDMND_SPEC>> for W {
     }
 }
 #[doc = "Field `PD` writer - Poll Demand. If the OWNER bit of a descriptor is not set, the FSM goes to the Suspend state. The host needs to write any value into this register for the IDMAC FSM to resume normal descriptor fetch operation. This is a write only ."]
-pub struct PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type PD_W<'a> = crate::FieldWriter<'a, u32, PLDMND_SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31 - Poll Demand. If the OWNER bit of a descriptor is not set, the FSM goes to the Suspend state. The host needs to write any value into this register for the IDMAC FSM to resume normal descriptor fetch operation. This is a write only ."]
     #[inline(always)]
     pub fn pd(&mut self) -> PD_W {
-        PD_W { w: self }
+        PD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

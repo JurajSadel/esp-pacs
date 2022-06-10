@@ -35,94 +35,15 @@ impl From<crate::W<ICACHE_LOCK_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_LOCK_ENA` reader - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
-pub struct ICACHE_LOCK_ENA_R(crate::FieldReader<bool>);
-impl ICACHE_LOCK_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_LOCK_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_LOCK_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_LOCK_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `ICACHE_LOCK_ENA` writer - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
-pub struct ICACHE_LOCK_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ICACHE_LOCK_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type ICACHE_LOCK_ENA_W<'a> = crate::BitWriter<'a, u32, ICACHE_LOCK_CTRL_SPEC, bool, 0>;
 #[doc = "Field `ICACHE_UNLOCK_ENA` reader - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
-pub struct ICACHE_UNLOCK_ENA_R(crate::FieldReader<bool>);
-impl ICACHE_UNLOCK_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_UNLOCK_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_UNLOCK_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_UNLOCK_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `ICACHE_UNLOCK_ENA` writer - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
-pub struct ICACHE_UNLOCK_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ICACHE_UNLOCK_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ICACHE_UNLOCK_ENA_W<'a> = crate::BitWriter<'a, u32, ICACHE_LOCK_CTRL_SPEC, bool, 1>;
 #[doc = "Field `ICACHE_LOCK_DONE` reader - The bit is used to indicate unlock/lock operation is finished."]
-pub struct ICACHE_LOCK_DONE_R(crate::FieldReader<bool>);
-impl ICACHE_LOCK_DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_LOCK_DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_LOCK_DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_LOCK_DONE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
     #[inline(always)]
@@ -144,12 +65,12 @@ impl W {
     #[doc = "Bit 0 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
     #[inline(always)]
     pub fn icache_lock_ena(&mut self) -> ICACHE_LOCK_ENA_W {
-        ICACHE_LOCK_ENA_W { w: self }
+        ICACHE_LOCK_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
     #[inline(always)]
     pub fn icache_unlock_ena(&mut self) -> ICACHE_UNLOCK_ENA_W {
-        ICACHE_UNLOCK_ENA_W { w: self }
+        ICACHE_UNLOCK_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

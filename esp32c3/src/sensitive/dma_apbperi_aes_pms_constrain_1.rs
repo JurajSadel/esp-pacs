@@ -35,221 +35,45 @@ impl From<crate::W<DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC>> for W {
     }
 }
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` reader - dma_apbperi_aes_pms_constrain_sram_world_0_pms_0"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` writer - dma_apbperi_aes_pms_constrain_sram_world_0_pms_0"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` reader - dma_apbperi_aes_pms_constrain_sram_world_0_pms_1"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1` writer - dma_apbperi_aes_pms_constrain_sram_world_0_pms_1"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` reader - dma_apbperi_aes_pms_constrain_sram_world_0_pms_2"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2` writer - dma_apbperi_aes_pms_constrain_sram_world_0_pms_2"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` reader - dma_apbperi_aes_pms_constrain_sram_world_0_pms_3"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3` writer - dma_apbperi_aes_pms_constrain_sram_world_0_pms_3"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` reader - dma_apbperi_aes_pms_constrain_sram_world_1_pms_0"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0` writer - dma_apbperi_aes_pms_constrain_sram_world_1_pms_0"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 12>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` reader - dma_apbperi_aes_pms_constrain_sram_world_1_pms_1"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1` writer - dma_apbperi_aes_pms_constrain_sram_world_1_pms_1"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 14>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` reader - dma_apbperi_aes_pms_constrain_sram_world_1_pms_2"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2` writer - dma_apbperi_aes_pms_constrain_sram_world_1_pms_2"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 16>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` reader - dma_apbperi_aes_pms_constrain_sram_world_1_pms_3"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R(crate::FieldReader<u8>);
-impl DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3` writer - dma_apbperi_aes_pms_constrain_sram_world_1_pms_3"]
-pub struct DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
-        self.w
-    }
-}
+pub type DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'a> =
+    crate::FieldWriter<'a, u32, DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC, u8, u8, 2, 18>;
 impl R {
     #[doc = "Bits 0:1 - dma_apbperi_aes_pms_constrain_sram_world_0_pms_0"]
     #[inline(always)]
@@ -314,56 +138,56 @@ impl W {
     pub fn dma_apbperi_aes_pms_constrain_sram_world_0_pms_0(
         &mut self,
     ) -> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W { w: self }
+        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W::new(self)
     }
     #[doc = "Bits 2:3 - dma_apbperi_aes_pms_constrain_sram_world_0_pms_1"]
     #[inline(always)]
     pub fn dma_apbperi_aes_pms_constrain_sram_world_0_pms_1(
         &mut self,
     ) -> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W { w: self }
+        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W::new(self)
     }
     #[doc = "Bits 4:5 - dma_apbperi_aes_pms_constrain_sram_world_0_pms_2"]
     #[inline(always)]
     pub fn dma_apbperi_aes_pms_constrain_sram_world_0_pms_2(
         &mut self,
     ) -> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W { w: self }
+        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W::new(self)
     }
     #[doc = "Bits 6:7 - dma_apbperi_aes_pms_constrain_sram_world_0_pms_3"]
     #[inline(always)]
     pub fn dma_apbperi_aes_pms_constrain_sram_world_0_pms_3(
         &mut self,
     ) -> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W { w: self }
+        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W::new(self)
     }
     #[doc = "Bits 12:13 - dma_apbperi_aes_pms_constrain_sram_world_1_pms_0"]
     #[inline(always)]
     pub fn dma_apbperi_aes_pms_constrain_sram_world_1_pms_0(
         &mut self,
     ) -> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W { w: self }
+        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W::new(self)
     }
     #[doc = "Bits 14:15 - dma_apbperi_aes_pms_constrain_sram_world_1_pms_1"]
     #[inline(always)]
     pub fn dma_apbperi_aes_pms_constrain_sram_world_1_pms_1(
         &mut self,
     ) -> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W { w: self }
+        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W::new(self)
     }
     #[doc = "Bits 16:17 - dma_apbperi_aes_pms_constrain_sram_world_1_pms_2"]
     #[inline(always)]
     pub fn dma_apbperi_aes_pms_constrain_sram_world_1_pms_2(
         &mut self,
     ) -> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W { w: self }
+        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W::new(self)
     }
     #[doc = "Bits 18:19 - dma_apbperi_aes_pms_constrain_sram_world_1_pms_3"]
     #[inline(always)]
     pub fn dma_apbperi_aes_pms_constrain_sram_world_1_pms_3(
         &mut self,
     ) -> DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W {
-        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W { w: self }
+        DMA_APBPERI_AES_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

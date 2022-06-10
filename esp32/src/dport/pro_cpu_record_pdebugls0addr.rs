@@ -14,20 +14,7 @@ impl From<crate::R<PRO_CPU_RECORD_PDEBUGLS0ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `RECORD_PRO_PDEBUGLS0ADDR` reader - "]
-pub struct RECORD_PRO_PDEBUGLS0ADDR_R(crate::FieldReader<u32>);
-impl RECORD_PRO_PDEBUGLS0ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RECORD_PRO_PDEBUGLS0ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RECORD_PRO_PDEBUGLS0ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RECORD_PRO_PDEBUGLS0ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

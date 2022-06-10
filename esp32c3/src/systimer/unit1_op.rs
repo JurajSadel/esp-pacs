@@ -35,42 +35,9 @@ impl From<crate::W<UNIT1_OP_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER_UNIT1_VALUE_VALID` reader - timer value is sync and valid"]
-pub struct TIMER_UNIT1_VALUE_VALID_R(crate::FieldReader<bool>);
-impl TIMER_UNIT1_VALUE_VALID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER_UNIT1_VALUE_VALID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER_UNIT1_VALUE_VALID_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER_UNIT1_VALUE_VALID_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER_UNIT1_UPDATE` writer - update timer unit1"]
-pub struct TIMER_UNIT1_UPDATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER_UNIT1_UPDATE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type TIMER_UNIT1_UPDATE_W<'a> = crate::BitWriter<'a, u32, UNIT1_OP_SPEC, bool, 30>;
 impl R {
     #[doc = "Bit 29 - timer value is sync and valid"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 30 - update timer unit1"]
     #[inline(always)]
     pub fn timer_unit1_update(&mut self) -> TIMER_UNIT1_UPDATE_W {
-        TIMER_UNIT1_UPDATE_W { w: self }
+        TIMER_UNIT1_UPDATE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,20 +14,7 @@ impl From<crate::R<I2S_STATE_SPEC>> for R {
     }
 }
 #[doc = "Field `I2S_TX_IDLE` reader - 1: i2s_tx is idle state. 0: i2s_tx is working."]
-pub struct I2S_TX_IDLE_R(crate::FieldReader<bool>);
-impl I2S_TX_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_TX_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_TX_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_TX_IDLE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - 1: i2s_tx is idle state. 0: i2s_tx is working."]
     #[inline(always)]

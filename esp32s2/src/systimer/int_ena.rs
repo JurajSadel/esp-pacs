@@ -35,116 +35,17 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `INT0_ENA` reader - Interrupt enable bit of system timer target 0."]
-pub struct INT0_ENA_R(crate::FieldReader<bool>);
-impl INT0_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INT0_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT0_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT0_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `INT0_ENA` writer - Interrupt enable bit of system timer target 0."]
-pub struct INT0_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT0_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type INT0_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 0>;
 #[doc = "Field `INT1_ENA` reader - Interrupt enable bit of system timer target 1."]
-pub struct INT1_ENA_R(crate::FieldReader<bool>);
-impl INT1_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INT1_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT1_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT1_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `INT1_ENA` writer - Interrupt enable bit of system timer target 1."]
-pub struct INT1_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT1_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type INT1_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 1>;
 #[doc = "Field `INT2_ENA` reader - Interrupt enable bit of system timer target 2."]
-pub struct INT2_ENA_R(crate::FieldReader<bool>);
-impl INT2_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INT2_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT2_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT2_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `INT2_ENA` writer - Interrupt enable bit of system timer target 2."]
-pub struct INT2_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT2_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type INT2_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 2>;
 impl R {
     #[doc = "Bit 0 - Interrupt enable bit of system timer target 0."]
     #[inline(always)]
@@ -166,17 +67,17 @@ impl W {
     #[doc = "Bit 0 - Interrupt enable bit of system timer target 0."]
     #[inline(always)]
     pub fn int0_ena(&mut self) -> INT0_ENA_W {
-        INT0_ENA_W { w: self }
+        INT0_ENA_W::new(self)
     }
     #[doc = "Bit 1 - Interrupt enable bit of system timer target 1."]
     #[inline(always)]
     pub fn int1_ena(&mut self) -> INT1_ENA_W {
-        INT1_ENA_W { w: self }
+        INT1_ENA_W::new(self)
     }
     #[doc = "Bit 2 - Interrupt enable bit of system timer target 2."]
     #[inline(always)]
     pub fn int2_ena(&mut self) -> INT2_ENA_W {
-        INT2_ENA_W { w: self }
+        INT2_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

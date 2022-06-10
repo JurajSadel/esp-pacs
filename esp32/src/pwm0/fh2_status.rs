@@ -14,35 +14,9 @@ impl From<crate::R<FH2_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `FH2_CBC_ON` reader - "]
-pub struct FH2_CBC_ON_R(crate::FieldReader<bool>);
-impl FH2_CBC_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FH2_CBC_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_CBC_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_CBC_ON_R = crate::BitReader<bool>;
 #[doc = "Field `FH2_OST_ON` reader - "]
-pub struct FH2_OST_ON_R(crate::FieldReader<bool>);
-impl FH2_OST_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FH2_OST_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_OST_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_OST_ON_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

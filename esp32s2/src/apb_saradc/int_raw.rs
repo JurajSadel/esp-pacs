@@ -14,65 +14,13 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `ADC2_THRES_INT_RAW` reader - Raw bit of APB_SARADC_ADC2_THRES_INT interrupt."]
-pub struct ADC2_THRES_INT_RAW_R(crate::FieldReader<bool>);
-impl ADC2_THRES_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC2_THRES_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_THRES_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_THRES_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1_THRES_INT_RAW` reader - Raw bit of APB_SARADC_ADC1_THRES_INT interrupt."]
-pub struct ADC1_THRES_INT_RAW_R(crate::FieldReader<bool>);
-impl ADC1_THRES_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC1_THRES_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_THRES_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_THRES_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `ADC2_DONE_INT_RAW` reader - Raw bit of APB_SARADC_ADC2_DONE_INT interrupt."]
-pub struct ADC2_DONE_INT_RAW_R(crate::FieldReader<bool>);
-impl ADC2_DONE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC2_DONE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_DONE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1_DONE_INT_RAW` reader - Raw bit of APB_SARADC_ADC1_DONE_INT interrupt."]
-pub struct ADC1_DONE_INT_RAW_R(crate::FieldReader<bool>);
-impl ADC1_DONE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC1_DONE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_DONE_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 28 - Raw bit of APB_SARADC_ADC2_THRES_INT interrupt."]
     #[inline(always)]

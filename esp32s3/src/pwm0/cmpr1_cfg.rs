@@ -35,89 +35,17 @@ impl From<crate::W<CMPR1_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CMPR1_A_UPMETHOD` reader - Update method for PWM generator 1 time stamp A's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
-pub struct CMPR1_A_UPMETHOD_R(crate::FieldReader<u8>);
-impl CMPR1_A_UPMETHOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CMPR1_A_UPMETHOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMPR1_A_UPMETHOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMPR1_A_UPMETHOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CMPR1_A_UPMETHOD` writer - Update method for PWM generator 1 time stamp A's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
-pub struct CMPR1_A_UPMETHOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CMPR1_A_UPMETHOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type CMPR1_A_UPMETHOD_W<'a> = crate::FieldWriter<'a, u32, CMPR1_CFG_SPEC, u8, u8, 4, 0>;
 #[doc = "Field `CMPR1_B_UPMETHOD` reader - Update method for PWM generator 1 time stamp B's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
-pub struct CMPR1_B_UPMETHOD_R(crate::FieldReader<u8>);
-impl CMPR1_B_UPMETHOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CMPR1_B_UPMETHOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMPR1_B_UPMETHOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMPR1_B_UPMETHOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CMPR1_B_UPMETHOD` writer - Update method for PWM generator 1 time stamp B's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
-pub struct CMPR1_B_UPMETHOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CMPR1_B_UPMETHOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
+pub type CMPR1_B_UPMETHOD_W<'a> = crate::FieldWriter<'a, u32, CMPR1_CFG_SPEC, u8, u8, 4, 4>;
 #[doc = "Field `CMPR1_A_SHDW_FULL` reader - Set and reset by hardware. If set, PWM generator 1 time stamp A's shadow reg is filled and waiting to be transferred to A's active reg. If cleared, A's active reg has been updated with shadow register latest value"]
-pub struct CMPR1_A_SHDW_FULL_R(crate::FieldReader<bool>);
-impl CMPR1_A_SHDW_FULL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CMPR1_A_SHDW_FULL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMPR1_A_SHDW_FULL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMPR1_A_SHDW_FULL_R = crate::BitReader<bool>;
 #[doc = "Field `CMPR1_B_SHDW_FULL` reader - Set and reset by hardware. If set, PWM generator 1 time stamp B's shadow reg is filled and waiting to be transferred to B's active reg. If cleared, B's active reg has been updated with shadow register latest value"]
-pub struct CMPR1_B_SHDW_FULL_R(crate::FieldReader<bool>);
-impl CMPR1_B_SHDW_FULL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CMPR1_B_SHDW_FULL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMPR1_B_SHDW_FULL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMPR1_B_SHDW_FULL_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:3 - Update method for PWM generator 1 time stamp A's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
     #[inline(always)]
@@ -144,12 +72,12 @@ impl W {
     #[doc = "Bits 0:3 - Update method for PWM generator 1 time stamp A's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
     #[inline(always)]
     pub fn cmpr1_a_upmethod(&mut self) -> CMPR1_A_UPMETHOD_W {
-        CMPR1_A_UPMETHOD_W { w: self }
+        CMPR1_A_UPMETHOD_W::new(self)
     }
     #[doc = "Bits 4:7 - Update method for PWM generator 1 time stamp B's active register. When all bits are set to 0: immediately, when bit0 is set to 1: TEZ, when bit1 is set to 1: TEP,when bit2 is set to 1: sync, when bit3 is set to 1: disable the update."]
     #[inline(always)]
     pub fn cmpr1_b_upmethod(&mut self) -> CMPR1_B_UPMETHOD_W {
-        CMPR1_B_UPMETHOD_W { w: self }
+        CMPR1_B_UPMETHOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

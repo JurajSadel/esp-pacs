@@ -14,20 +14,7 @@ impl From<crate::R<LOG_MEM_WRITING_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `LOG_MEM_WRITING_ADDR` reader - mem current addr, it means next writing addr"]
-pub struct LOG_MEM_WRITING_ADDR_R(crate::FieldReader<u32>);
-impl LOG_MEM_WRITING_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        LOG_MEM_WRITING_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOG_MEM_WRITING_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOG_MEM_WRITING_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - mem current addr, it means next writing addr"]
     #[inline(always)]

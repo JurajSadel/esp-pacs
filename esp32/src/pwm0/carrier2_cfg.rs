@@ -35,197 +35,29 @@ impl From<crate::W<CARRIER2_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `CARRIER2_EN` reader - "]
-pub struct CARRIER2_EN_R(crate::FieldReader<bool>);
-impl CARRIER2_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARRIER2_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER2_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER2_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CARRIER2_EN` writer - "]
-pub struct CARRIER2_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER2_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CARRIER2_EN_W<'a> = crate::BitWriter<'a, u32, CARRIER2_CFG_SPEC, bool, 0>;
 #[doc = "Field `CARRIER2_PRESCALE` reader - "]
-pub struct CARRIER2_PRESCALE_R(crate::FieldReader<u8>);
-impl CARRIER2_PRESCALE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CARRIER2_PRESCALE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER2_PRESCALE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER2_PRESCALE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CARRIER2_PRESCALE` writer - "]
-pub struct CARRIER2_PRESCALE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER2_PRESCALE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 1)) | ((value as u32 & 0x0f) << 1);
-        self.w
-    }
-}
+pub type CARRIER2_PRESCALE_W<'a> = crate::FieldWriter<'a, u32, CARRIER2_CFG_SPEC, u8, u8, 4, 1>;
 #[doc = "Field `CARRIER2_DUTY` reader - "]
-pub struct CARRIER2_DUTY_R(crate::FieldReader<u8>);
-impl CARRIER2_DUTY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CARRIER2_DUTY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER2_DUTY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER2_DUTY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CARRIER2_DUTY` writer - "]
-pub struct CARRIER2_DUTY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER2_DUTY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 5)) | ((value as u32 & 7) << 5);
-        self.w
-    }
-}
+pub type CARRIER2_DUTY_W<'a> = crate::FieldWriter<'a, u32, CARRIER2_CFG_SPEC, u8, u8, 3, 5>;
 #[doc = "Field `CARRIER2_OSHTWTH` reader - "]
-pub struct CARRIER2_OSHTWTH_R(crate::FieldReader<u8>);
-impl CARRIER2_OSHTWTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CARRIER2_OSHTWTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER2_OSHTWTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER2_OSHTWTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CARRIER2_OSHTWTH` writer - "]
-pub struct CARRIER2_OSHTWTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER2_OSHTWTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u32 & 0x0f) << 8);
-        self.w
-    }
-}
+pub type CARRIER2_OSHTWTH_W<'a> = crate::FieldWriter<'a, u32, CARRIER2_CFG_SPEC, u8, u8, 4, 8>;
 #[doc = "Field `CARRIER2_OUT_INVERT` reader - "]
-pub struct CARRIER2_OUT_INVERT_R(crate::FieldReader<bool>);
-impl CARRIER2_OUT_INVERT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARRIER2_OUT_INVERT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER2_OUT_INVERT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER2_OUT_INVERT_R = crate::BitReader<bool>;
 #[doc = "Field `CARRIER2_OUT_INVERT` writer - "]
-pub struct CARRIER2_OUT_INVERT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER2_OUT_INVERT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type CARRIER2_OUT_INVERT_W<'a> = crate::BitWriter<'a, u32, CARRIER2_CFG_SPEC, bool, 12>;
 #[doc = "Field `CARRIER2_IN_INVERT` reader - "]
-pub struct CARRIER2_IN_INVERT_R(crate::FieldReader<bool>);
-impl CARRIER2_IN_INVERT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARRIER2_IN_INVERT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER2_IN_INVERT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER2_IN_INVERT_R = crate::BitReader<bool>;
 #[doc = "Field `CARRIER2_IN_INVERT` writer - "]
-pub struct CARRIER2_IN_INVERT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER2_IN_INVERT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type CARRIER2_IN_INVERT_W<'a> = crate::BitWriter<'a, u32, CARRIER2_CFG_SPEC, bool, 13>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -262,32 +94,32 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn carrier2_en(&mut self) -> CARRIER2_EN_W {
-        CARRIER2_EN_W { w: self }
+        CARRIER2_EN_W::new(self)
     }
     #[doc = "Bits 1:4"]
     #[inline(always)]
     pub fn carrier2_prescale(&mut self) -> CARRIER2_PRESCALE_W {
-        CARRIER2_PRESCALE_W { w: self }
+        CARRIER2_PRESCALE_W::new(self)
     }
     #[doc = "Bits 5:7"]
     #[inline(always)]
     pub fn carrier2_duty(&mut self) -> CARRIER2_DUTY_W {
-        CARRIER2_DUTY_W { w: self }
+        CARRIER2_DUTY_W::new(self)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
     pub fn carrier2_oshtwth(&mut self) -> CARRIER2_OSHTWTH_W {
-        CARRIER2_OSHTWTH_W { w: self }
+        CARRIER2_OSHTWTH_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn carrier2_out_invert(&mut self) -> CARRIER2_OUT_INVERT_W {
-        CARRIER2_OUT_INVERT_W { w: self }
+        CARRIER2_OUT_INVERT_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn carrier2_in_invert(&mut self) -> CARRIER2_IN_INVERT_W {
-        CARRIER2_IN_INVERT_W { w: self }
+        CARRIER2_IN_INVERT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

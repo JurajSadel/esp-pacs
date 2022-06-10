@@ -35,335 +35,45 @@ impl From<crate::W<SYS_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_FIFO_MASK` reader - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
-pub struct APB_FIFO_MASK_R(crate::FieldReader<bool>);
-impl APB_FIFO_MASK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_FIFO_MASK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_FIFO_MASK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_FIFO_MASK_R = crate::BitReader<bool>;
 #[doc = "Field `APB_FIFO_MASK` writer - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
-pub struct APB_FIFO_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_FIFO_MASK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type APB_FIFO_MASK_W<'a> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, 0>;
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - Set this bit to enable the clock for RMT memory."]
-pub struct MEM_CLK_FORCE_ON_R(crate::FieldReader<bool>);
-impl MEM_CLK_FORCE_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_CLK_FORCE_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_CLK_FORCE_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_CLK_FORCE_ON_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - Set this bit to enable the clock for RMT memory."]
-pub struct MEM_CLK_FORCE_ON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_CLK_FORCE_ON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MEM_CLK_FORCE_ON_W<'a> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, 1>;
 #[doc = "Field `MEM_FORCE_PD` reader - Set this bit to power down RMT memory."]
-pub struct MEM_FORCE_PD_R(crate::FieldReader<bool>);
-impl MEM_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_FORCE_PD` writer - Set this bit to power down RMT memory."]
-pub struct MEM_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type MEM_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, 2>;
 #[doc = "Field `MEM_FORCE_PU` reader - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
-pub struct MEM_FORCE_PU_R(crate::FieldReader<bool>);
-impl MEM_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_FORCE_PU` writer - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
-pub struct MEM_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type MEM_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, 3>;
 #[doc = "Field `SCLK_DIV_NUM` reader - the integral part of the fractional divisor"]
-pub struct SCLK_DIV_NUM_R(crate::FieldReader<u8>);
-impl SCLK_DIV_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCLK_DIV_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCLK_DIV_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCLK_DIV_NUM` writer - the integral part of the fractional divisor"]
-pub struct SCLK_DIV_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCLK_DIV_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 4)) | ((value as u32 & 0xff) << 4);
-        self.w
-    }
-}
+pub type SCLK_DIV_NUM_W<'a> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 8, 4>;
 #[doc = "Field `SCLK_DIV_A` reader - the numerator of the fractional part of the fractional divisor"]
-pub struct SCLK_DIV_A_R(crate::FieldReader<u8>);
-impl SCLK_DIV_A_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCLK_DIV_A_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCLK_DIV_A_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCLK_DIV_A_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCLK_DIV_A` writer - the numerator of the fractional part of the fractional divisor"]
-pub struct SCLK_DIV_A_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCLK_DIV_A_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 12)) | ((value as u32 & 0x3f) << 12);
-        self.w
-    }
-}
+pub type SCLK_DIV_A_W<'a> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 6, 12>;
 #[doc = "Field `SCLK_DIV_B` reader - the denominator of the fractional part of the fractional divisor"]
-pub struct SCLK_DIV_B_R(crate::FieldReader<u8>);
-impl SCLK_DIV_B_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCLK_DIV_B_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCLK_DIV_B_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCLK_DIV_B_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCLK_DIV_B` writer - the denominator of the fractional part of the fractional divisor"]
-pub struct SCLK_DIV_B_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCLK_DIV_B_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 18)) | ((value as u32 & 0x3f) << 18);
-        self.w
-    }
-}
+pub type SCLK_DIV_B_W<'a> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 6, 18>;
 #[doc = "Field `SCLK_SEL` reader - choose the clock source of rmt_sclk. 1:CLK_80Mhz;2:CLK_8MHz; 2:XTAL"]
-pub struct SCLK_SEL_R(crate::FieldReader<u8>);
-impl SCLK_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCLK_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCLK_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCLK_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCLK_SEL` writer - choose the clock source of rmt_sclk. 1:CLK_80Mhz;2:CLK_8MHz; 2:XTAL"]
-pub struct SCLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCLK_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
-        self.w
-    }
-}
+pub type SCLK_SEL_W<'a> = crate::FieldWriter<'a, u32, SYS_CONF_SPEC, u8, u8, 2, 24>;
 #[doc = "Field `SCLK_ACTIVE` reader - rmt_sclk switch"]
-pub struct SCLK_ACTIVE_R(crate::FieldReader<bool>);
-impl SCLK_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCLK_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCLK_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCLK_ACTIVE_R = crate::BitReader<bool>;
 #[doc = "Field `SCLK_ACTIVE` writer - rmt_sclk switch"]
-pub struct SCLK_ACTIVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCLK_ACTIVE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type SCLK_ACTIVE_W<'a> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, 26>;
 #[doc = "Field `CLK_EN` reader - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, SYS_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
@@ -420,52 +130,52 @@ impl W {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
     pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W {
-        APB_FIFO_MASK_W { w: self }
+        APB_FIFO_MASK_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable the clock for RMT memory."]
     #[inline(always)]
     pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W {
-        MEM_CLK_FORCE_ON_W { w: self }
+        MEM_CLK_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to power down RMT memory."]
     #[inline(always)]
     pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W {
-        MEM_FORCE_PD_W { w: self }
+        MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 3 - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
     #[inline(always)]
     pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W {
-        MEM_FORCE_PU_W { w: self }
+        MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bits 4:11 - the integral part of the fractional divisor"]
     #[inline(always)]
     pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W {
-        SCLK_DIV_NUM_W { w: self }
+        SCLK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 12:17 - the numerator of the fractional part of the fractional divisor"]
     #[inline(always)]
     pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W {
-        SCLK_DIV_A_W { w: self }
+        SCLK_DIV_A_W::new(self)
     }
     #[doc = "Bits 18:23 - the denominator of the fractional part of the fractional divisor"]
     #[inline(always)]
     pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W {
-        SCLK_DIV_B_W { w: self }
+        SCLK_DIV_B_W::new(self)
     }
     #[doc = "Bits 24:25 - choose the clock source of rmt_sclk. 1:CLK_80Mhz;2:CLK_8MHz; 2:XTAL"]
     #[inline(always)]
     pub fn sclk_sel(&mut self) -> SCLK_SEL_W {
-        SCLK_SEL_W { w: self }
+        SCLK_SEL_W::new(self)
     }
     #[doc = "Bit 26 - rmt_sclk switch"]
     #[inline(always)]
     pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W {
-        SCLK_ACTIVE_W { w: self }
+        SCLK_ACTIVE_W::new(self)
     }
     #[doc = "Bit 31 - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

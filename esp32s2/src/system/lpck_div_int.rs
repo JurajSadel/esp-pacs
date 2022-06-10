@@ -35,32 +35,9 @@ impl From<crate::W<LPCK_DIV_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `LPCK_DIV_NUM` reader - This field is used to set the integer number of the divider value."]
-pub struct LPCK_DIV_NUM_R(crate::FieldReader<u16>);
-impl LPCK_DIV_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        LPCK_DIV_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LPCK_DIV_NUM_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LPCK_DIV_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LPCK_DIV_NUM` writer - This field is used to set the integer number of the divider value."]
-pub struct LPCK_DIV_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LPCK_DIV_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type LPCK_DIV_NUM_W<'a> = crate::FieldWriter<'a, u32, LPCK_DIV_INT_SPEC, u16, u16, 12, 0>;
 impl R {
     #[doc = "Bits 0:11 - This field is used to set the integer number of the divider value."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:11 - This field is used to set the integer number of the divider value."]
     #[inline(always)]
     pub fn lpck_div_num(&mut self) -> LPCK_DIV_NUM_W {
-        LPCK_DIV_NUM_W { w: self }
+        LPCK_DIV_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

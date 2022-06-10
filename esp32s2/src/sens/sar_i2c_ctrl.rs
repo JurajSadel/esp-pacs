@@ -35,106 +35,17 @@ impl From<crate::W<SAR_I2C_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_I2C_CTRL` reader - RTC I2C control data. Active only when SENS_SAR_I2C_START_FORCE = 1."]
-pub struct SAR_I2C_CTRL_R(crate::FieldReader<u32>);
-impl SAR_I2C_CTRL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SAR_I2C_CTRL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_I2C_CTRL_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_I2C_CTRL_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SAR_I2C_CTRL` writer - RTC I2C control data. Active only when SENS_SAR_I2C_START_FORCE = 1."]
-pub struct SAR_I2C_CTRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_I2C_CTRL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff_ffff) | (value as u32 & 0x0fff_ffff);
-        self.w
-    }
-}
+pub type SAR_I2C_CTRL_W<'a> = crate::FieldWriter<'a, u32, SAR_I2C_CTRL_SPEC, u32, u32, 28, 0>;
 #[doc = "Field `SAR_I2C_START` reader - Start RTC I2C. Active only when SENS_SAR_I2C_START_FORCE = 1"]
-pub struct SAR_I2C_START_R(crate::FieldReader<bool>);
-impl SAR_I2C_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR_I2C_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_I2C_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_I2C_START_R = crate::BitReader<bool>;
 #[doc = "Field `SAR_I2C_START` writer - Start RTC I2C. Active only when SENS_SAR_I2C_START_FORCE = 1"]
-pub struct SAR_I2C_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_I2C_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type SAR_I2C_START_W<'a> = crate::BitWriter<'a, u32, SAR_I2C_CTRL_SPEC, bool, 28>;
 #[doc = "Field `SAR_I2C_START_FORCE` reader - 0: RTC I2C started by FSM. 1: RTC I2C started by software."]
-pub struct SAR_I2C_START_FORCE_R(crate::FieldReader<bool>);
-impl SAR_I2C_START_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR_I2C_START_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_I2C_START_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_I2C_START_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `SAR_I2C_START_FORCE` writer - 0: RTC I2C started by FSM. 1: RTC I2C started by software."]
-pub struct SAR_I2C_START_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_I2C_START_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type SAR_I2C_START_FORCE_W<'a> = crate::BitWriter<'a, u32, SAR_I2C_CTRL_SPEC, bool, 29>;
 impl R {
     #[doc = "Bits 0:27 - RTC I2C control data. Active only when SENS_SAR_I2C_START_FORCE = 1."]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bits 0:27 - RTC I2C control data. Active only when SENS_SAR_I2C_START_FORCE = 1."]
     #[inline(always)]
     pub fn sar_i2c_ctrl(&mut self) -> SAR_I2C_CTRL_W {
-        SAR_I2C_CTRL_W { w: self }
+        SAR_I2C_CTRL_W::new(self)
     }
     #[doc = "Bit 28 - Start RTC I2C. Active only when SENS_SAR_I2C_START_FORCE = 1"]
     #[inline(always)]
     pub fn sar_i2c_start(&mut self) -> SAR_I2C_START_W {
-        SAR_I2C_START_W { w: self }
+        SAR_I2C_START_W::new(self)
     }
     #[doc = "Bit 29 - 0: RTC I2C started by FSM. 1: RTC I2C started by software."]
     #[inline(always)]
     pub fn sar_i2c_start_force(&mut self) -> SAR_I2C_START_FORCE_W {
-        SAR_I2C_START_FORCE_W { w: self }
+        SAR_I2C_START_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

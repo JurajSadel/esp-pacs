@@ -35,160 +35,25 @@ impl From<crate::W<CLK_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SCLK_DIV_NUM` reader - reg_sclk_div_num"]
-pub struct SCLK_DIV_NUM_R(crate::FieldReader<u8>);
-impl SCLK_DIV_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCLK_DIV_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCLK_DIV_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCLK_DIV_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCLK_DIV_NUM` writer - reg_sclk_div_num"]
-pub struct SCLK_DIV_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCLK_DIV_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SCLK_DIV_NUM_W<'a> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `SCLK_DIV_A` reader - reg_sclk_div_a"]
-pub struct SCLK_DIV_A_R(crate::FieldReader<u8>);
-impl SCLK_DIV_A_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCLK_DIV_A_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCLK_DIV_A_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCLK_DIV_A_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCLK_DIV_A` writer - reg_sclk_div_a"]
-pub struct SCLK_DIV_A_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCLK_DIV_A_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 8)) | ((value as u32 & 0x3f) << 8);
-        self.w
-    }
-}
+pub type SCLK_DIV_A_W<'a> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 6, 8>;
 #[doc = "Field `SCLK_DIV_B` reader - reg_sclk_div_b"]
-pub struct SCLK_DIV_B_R(crate::FieldReader<u8>);
-impl SCLK_DIV_B_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCLK_DIV_B_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCLK_DIV_B_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCLK_DIV_B_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SCLK_DIV_B` writer - reg_sclk_div_b"]
-pub struct SCLK_DIV_B_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCLK_DIV_B_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 14)) | ((value as u32 & 0x3f) << 14);
-        self.w
-    }
-}
+pub type SCLK_DIV_B_W<'a> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 6, 14>;
 #[doc = "Field `SCLK_SEL` reader - reg_sclk_sel"]
-pub struct SCLK_SEL_R(crate::FieldReader<bool>);
-impl SCLK_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCLK_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCLK_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCLK_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SCLK_SEL` writer - reg_sclk_sel"]
-pub struct SCLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCLK_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type SCLK_SEL_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 20>;
 #[doc = "Field `SCLK_ACTIVE` reader - reg_sclk_active"]
-pub struct SCLK_ACTIVE_R(crate::FieldReader<bool>);
-impl SCLK_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCLK_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCLK_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCLK_ACTIVE_R = crate::BitReader<bool>;
 #[doc = "Field `SCLK_ACTIVE` writer - reg_sclk_active"]
-pub struct SCLK_ACTIVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCLK_ACTIVE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type SCLK_ACTIVE_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 21>;
 impl R {
     #[doc = "Bits 0:7 - reg_sclk_div_num"]
     #[inline(always)]
@@ -220,27 +85,27 @@ impl W {
     #[doc = "Bits 0:7 - reg_sclk_div_num"]
     #[inline(always)]
     pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W {
-        SCLK_DIV_NUM_W { w: self }
+        SCLK_DIV_NUM_W::new(self)
     }
     #[doc = "Bits 8:13 - reg_sclk_div_a"]
     #[inline(always)]
     pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W {
-        SCLK_DIV_A_W { w: self }
+        SCLK_DIV_A_W::new(self)
     }
     #[doc = "Bits 14:19 - reg_sclk_div_b"]
     #[inline(always)]
     pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W {
-        SCLK_DIV_B_W { w: self }
+        SCLK_DIV_B_W::new(self)
     }
     #[doc = "Bit 20 - reg_sclk_sel"]
     #[inline(always)]
     pub fn sclk_sel(&mut self) -> SCLK_SEL_W {
-        SCLK_SEL_W { w: self }
+        SCLK_SEL_W::new(self)
     }
     #[doc = "Bit 21 - reg_sclk_active"]
     #[inline(always)]
     pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W {
-        SCLK_ACTIVE_W { w: self }
+        SCLK_ACTIVE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,227 +35,29 @@ impl From<crate::W<OUT_CONF0_CH1_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_RST_CH1` reader - This bit is used to reset DMA channel 1 Tx FSM and Tx FIFO pointer."]
-pub struct OUT_RST_CH1_R(crate::FieldReader<bool>);
-impl OUT_RST_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_RST_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_RST_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_RST_CH1_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_RST_CH1` writer - This bit is used to reset DMA channel 1 Tx FSM and Tx FIFO pointer."]
-pub struct OUT_RST_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_RST_CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type OUT_RST_CH1_W<'a> = crate::BitWriter<'a, u32, OUT_CONF0_CH1_SPEC, bool, 0>;
 #[doc = "Field `OUT_LOOP_TEST_CH1` reader - reserved"]
-pub struct OUT_LOOP_TEST_CH1_R(crate::FieldReader<bool>);
-impl OUT_LOOP_TEST_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_LOOP_TEST_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_LOOP_TEST_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_LOOP_TEST_CH1_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_LOOP_TEST_CH1` writer - reserved"]
-pub struct OUT_LOOP_TEST_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_LOOP_TEST_CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type OUT_LOOP_TEST_CH1_W<'a> = crate::BitWriter<'a, u32, OUT_CONF0_CH1_SPEC, bool, 1>;
 #[doc = "Field `OUT_AUTO_WRBACK_CH1` reader - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
-pub struct OUT_AUTO_WRBACK_CH1_R(crate::FieldReader<bool>);
-impl OUT_AUTO_WRBACK_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_AUTO_WRBACK_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_AUTO_WRBACK_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_AUTO_WRBACK_CH1_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_AUTO_WRBACK_CH1` writer - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
-pub struct OUT_AUTO_WRBACK_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_AUTO_WRBACK_CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type OUT_AUTO_WRBACK_CH1_W<'a> = crate::BitWriter<'a, u32, OUT_CONF0_CH1_SPEC, bool, 2>;
 #[doc = "Field `OUT_EOF_MODE_CH1` reader - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 1 is generated when data need to transmit has been popped from FIFO in DMA"]
-pub struct OUT_EOF_MODE_CH1_R(crate::FieldReader<bool>);
-impl OUT_EOF_MODE_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EOF_MODE_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EOF_MODE_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EOF_MODE_CH1_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EOF_MODE_CH1` writer - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 1 is generated when data need to transmit has been popped from FIFO in DMA"]
-pub struct OUT_EOF_MODE_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_EOF_MODE_CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type OUT_EOF_MODE_CH1_W<'a> = crate::BitWriter<'a, u32, OUT_CONF0_CH1_SPEC, bool, 3>;
 #[doc = "Field `OUTDSCR_BURST_EN_CH1` reader - Set this bit to 1 to enable INCR burst transfer for Tx channel 1 reading link descriptor when accessing internal SRAM."]
-pub struct OUTDSCR_BURST_EN_CH1_R(crate::FieldReader<bool>);
-impl OUTDSCR_BURST_EN_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTDSCR_BURST_EN_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTDSCR_BURST_EN_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTDSCR_BURST_EN_CH1_R = crate::BitReader<bool>;
 #[doc = "Field `OUTDSCR_BURST_EN_CH1` writer - Set this bit to 1 to enable INCR burst transfer for Tx channel 1 reading link descriptor when accessing internal SRAM."]
-pub struct OUTDSCR_BURST_EN_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTDSCR_BURST_EN_CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type OUTDSCR_BURST_EN_CH1_W<'a> = crate::BitWriter<'a, u32, OUT_CONF0_CH1_SPEC, bool, 4>;
 #[doc = "Field `OUT_DATA_BURST_EN_CH1` reader - Set this bit to 1 to enable INCR burst transfer for Tx channel 1 transmitting data when accessing internal SRAM."]
-pub struct OUT_DATA_BURST_EN_CH1_R(crate::FieldReader<bool>);
-impl OUT_DATA_BURST_EN_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DATA_BURST_EN_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DATA_BURST_EN_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DATA_BURST_EN_CH1_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DATA_BURST_EN_CH1` writer - Set this bit to 1 to enable INCR burst transfer for Tx channel 1 transmitting data when accessing internal SRAM."]
-pub struct OUT_DATA_BURST_EN_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_DATA_BURST_EN_CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type OUT_DATA_BURST_EN_CH1_W<'a> = crate::BitWriter<'a, u32, OUT_CONF0_CH1_SPEC, bool, 5>;
 impl R {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 1 Tx FSM and Tx FIFO pointer."]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 1 Tx FSM and Tx FIFO pointer."]
     #[inline(always)]
     pub fn out_rst_ch1(&mut self) -> OUT_RST_CH1_W {
-        OUT_RST_CH1_W { w: self }
+        OUT_RST_CH1_W::new(self)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
     pub fn out_loop_test_ch1(&mut self) -> OUT_LOOP_TEST_CH1_W {
-        OUT_LOOP_TEST_CH1_W { w: self }
+        OUT_LOOP_TEST_CH1_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
     #[inline(always)]
     pub fn out_auto_wrback_ch1(&mut self) -> OUT_AUTO_WRBACK_CH1_W {
-        OUT_AUTO_WRBACK_CH1_W { w: self }
+        OUT_AUTO_WRBACK_CH1_W::new(self)
     }
     #[doc = "Bit 3 - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 1 is generated when data need to transmit has been popped from FIFO in DMA"]
     #[inline(always)]
     pub fn out_eof_mode_ch1(&mut self) -> OUT_EOF_MODE_CH1_W {
-        OUT_EOF_MODE_CH1_W { w: self }
+        OUT_EOF_MODE_CH1_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to 1 to enable INCR burst transfer for Tx channel 1 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
     pub fn outdscr_burst_en_ch1(&mut self) -> OUTDSCR_BURST_EN_CH1_W {
-        OUTDSCR_BURST_EN_CH1_W { w: self }
+        OUTDSCR_BURST_EN_CH1_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable INCR burst transfer for Tx channel 1 transmitting data when accessing internal SRAM."]
     #[inline(always)]
     pub fn out_data_burst_en_ch1(&mut self) -> OUT_DATA_BURST_EN_CH1_W {
-        OUT_DATA_BURST_EN_CH1_W { w: self }
+        OUT_DATA_BURST_EN_CH1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

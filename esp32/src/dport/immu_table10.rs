@@ -35,32 +35,9 @@ impl From<crate::W<IMMU_TABLE10_SPEC>> for W {
     }
 }
 #[doc = "Field `IMMU_TABLE10` reader - "]
-pub struct IMMU_TABLE10_R(crate::FieldReader<u8>);
-impl IMMU_TABLE10_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IMMU_TABLE10_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IMMU_TABLE10_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IMMU_TABLE10_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `IMMU_TABLE10` writer - "]
-pub struct IMMU_TABLE10_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IMMU_TABLE10_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type IMMU_TABLE10_W<'a> = crate::FieldWriter<'a, u32, IMMU_TABLE10_SPEC, u8, u8, 7, 0>;
 impl R {
     #[doc = "Bits 0:6"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
     pub fn immu_table10(&mut self) -> IMMU_TABLE10_W {
-        IMMU_TABLE10_W { w: self }
+        IMMU_TABLE10_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

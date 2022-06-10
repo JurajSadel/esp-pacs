@@ -35,42 +35,9 @@ impl From<crate::W<PRO_TRACE_1_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_TRACE_DISABLE` reader - Setting to 1 disables the trace memory function."]
-pub struct PRO_TRACE_DISABLE_R(crate::FieldReader<bool>);
-impl PRO_TRACE_DISABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_TRACE_DISABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_TRACE_DISABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_TRACE_DISABLE_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_TRACE_DISABLE` writer - Setting to 1 disables the trace memory function."]
-pub struct PRO_TRACE_DISABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_TRACE_DISABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_TRACE_DISABLE_W<'a> = crate::BitWriter<'a, u32, PRO_TRACE_1_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - Setting to 1 disables the trace memory function."]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0 - Setting to 1 disables the trace memory function."]
     #[inline(always)]
     pub fn pro_trace_disable(&mut self) -> PRO_TRACE_DISABLE_W {
-        PRO_TRACE_DISABLE_W { w: self }
+        PRO_TRACE_DISABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

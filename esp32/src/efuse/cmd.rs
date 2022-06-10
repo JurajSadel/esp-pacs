@@ -35,79 +35,13 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `READ_CMD` reader - command for read"]
-pub struct READ_CMD_R(crate::FieldReader<bool>);
-impl READ_CMD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        READ_CMD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for READ_CMD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type READ_CMD_R = crate::BitReader<bool>;
 #[doc = "Field `READ_CMD` writer - command for read"]
-pub struct READ_CMD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> READ_CMD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type READ_CMD_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 0>;
 #[doc = "Field `PGM_CMD` reader - command for program"]
-pub struct PGM_CMD_R(crate::FieldReader<bool>);
-impl PGM_CMD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PGM_CMD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PGM_CMD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PGM_CMD_R = crate::BitReader<bool>;
 #[doc = "Field `PGM_CMD` writer - command for program"]
-pub struct PGM_CMD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PGM_CMD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PGM_CMD_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 1>;
 impl R {
     #[doc = "Bit 0 - command for read"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 0 - command for read"]
     #[inline(always)]
     pub fn read_cmd(&mut self) -> READ_CMD_W {
-        READ_CMD_W { w: self }
+        READ_CMD_W::new(self)
     }
     #[doc = "Bit 1 - command for program"]
     #[inline(always)]
     pub fn pgm_cmd(&mut self) -> PGM_CMD_W {
-        PGM_CMD_W { w: self }
+        PGM_CMD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -20,22 +20,13 @@ impl From<crate::W<CORE_1_WORLD_CANCEL_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_WORLD_CANCEL` writer - This field is used to cancel switch world configuration,if the trigger address and update configuration complete,can use this register to cancel world switch. can write any value, the hardware only checks the write operation of this register and does not case about its value"]
-pub struct CORE_1_WORLD_CANCEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_WORLD_CANCEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CORE_1_WORLD_CANCEL_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_1_WORLD_CANCEL_SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31 - This field is used to cancel switch world configuration,if the trigger address and update configuration complete,can use this register to cancel world switch. can write any value, the hardware only checks the write operation of this register and does not case about its value"]
     #[inline(always)]
     pub fn core_1_world_cancel(&mut self) -> CORE_1_WORLD_CANCEL_W {
-        CORE_1_WORLD_CANCEL_W { w: self }
+        CORE_1_WORLD_CANCEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

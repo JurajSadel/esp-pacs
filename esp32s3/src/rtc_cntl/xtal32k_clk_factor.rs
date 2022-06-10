@@ -35,32 +35,10 @@ impl From<crate::W<XTAL32K_CLK_FACTOR_SPEC>> for W {
     }
 }
 #[doc = "Field `XTAL32K_CLK_FACTOR` reader - xtal 32k watch dog backup clock factor"]
-pub struct XTAL32K_CLK_FACTOR_R(crate::FieldReader<u32>);
-impl XTAL32K_CLK_FACTOR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        XTAL32K_CLK_FACTOR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XTAL32K_CLK_FACTOR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XTAL32K_CLK_FACTOR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `XTAL32K_CLK_FACTOR` writer - xtal 32k watch dog backup clock factor"]
-pub struct XTAL32K_CLK_FACTOR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XTAL32K_CLK_FACTOR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type XTAL32K_CLK_FACTOR_W<'a> =
+    crate::FieldWriter<'a, u32, XTAL32K_CLK_FACTOR_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - xtal 32k watch dog backup clock factor"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:31 - xtal 32k watch dog backup clock factor"]
     #[inline(always)]
     pub fn xtal32k_clk_factor(&mut self) -> XTAL32K_CLK_FACTOR_W {
-        XTAL32K_CLK_FACTOR_W { w: self }
+        XTAL32K_CLK_FACTOR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

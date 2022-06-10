@@ -14,20 +14,7 @@ impl From<crate::R<DC_PRELOAD_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `DC_PRELOAD_CNT` reader - The bits are used to count the number of issued pre-load which include manual pre-load and conditional pre-load."]
-pub struct DC_PRELOAD_CNT_R(crate::FieldReader<u16>);
-impl DC_PRELOAD_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DC_PRELOAD_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC_PRELOAD_CNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DC_PRELOAD_CNT_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - The bits are used to count the number of issued pre-load which include manual pre-load and conditional pre-load."]
     #[inline(always)]

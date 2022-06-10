@@ -35,79 +35,13 @@ impl From<crate::W<SAR_IO_MUX_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `IOMUX_RESET` reader - Reset IO MUX by software"]
-pub struct IOMUX_RESET_R(crate::FieldReader<bool>);
-impl IOMUX_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IOMUX_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IOMUX_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IOMUX_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `IOMUX_RESET` writer - Reset IO MUX by software"]
-pub struct IOMUX_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IOMUX_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type IOMUX_RESET_W<'a> = crate::BitWriter<'a, u32, SAR_IO_MUX_CONF_SPEC, bool, 30>;
 #[doc = "Field `IOMUX_CLK_GATE_EN` reader - IO MUX clock gate enable bit"]
-pub struct IOMUX_CLK_GATE_EN_R(crate::FieldReader<bool>);
-impl IOMUX_CLK_GATE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IOMUX_CLK_GATE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IOMUX_CLK_GATE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IOMUX_CLK_GATE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `IOMUX_CLK_GATE_EN` writer - IO MUX clock gate enable bit"]
-pub struct IOMUX_CLK_GATE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IOMUX_CLK_GATE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type IOMUX_CLK_GATE_EN_W<'a> = crate::BitWriter<'a, u32, SAR_IO_MUX_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 30 - Reset IO MUX by software"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 30 - Reset IO MUX by software"]
     #[inline(always)]
     pub fn iomux_reset(&mut self) -> IOMUX_RESET_W {
-        IOMUX_RESET_W { w: self }
+        IOMUX_RESET_W::new(self)
     }
     #[doc = "Bit 31 - IO MUX clock gate enable bit"]
     #[inline(always)]
     pub fn iomux_clk_gate_en(&mut self) -> IOMUX_CLK_GATE_EN_W {
-        IOMUX_CLK_GATE_EN_W { w: self }
+        IOMUX_CLK_GATE_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

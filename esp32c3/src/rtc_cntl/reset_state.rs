@@ -35,405 +35,49 @@ impl From<crate::W<RESET_STATE_SPEC>> for W {
     }
 }
 #[doc = "Field `RESET_CAUSE_PROCPU` reader - reset cause of PRO CPU"]
-pub struct RESET_CAUSE_PROCPU_R(crate::FieldReader<u8>);
-impl RESET_CAUSE_PROCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RESET_CAUSE_PROCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESET_CAUSE_PROCPU_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESET_CAUSE_PROCPU_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RESET_CAUSE_APPCPU` reader - reset cause of APP CPU"]
-pub struct RESET_CAUSE_APPCPU_R(crate::FieldReader<u8>);
-impl RESET_CAUSE_APPCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RESET_CAUSE_APPCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESET_CAUSE_APPCPU_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESET_CAUSE_APPCPU_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `STAT_VECTOR_SEL_APPCPU` reader - APP CPU state vector sel"]
-pub struct STAT_VECTOR_SEL_APPCPU_R(crate::FieldReader<bool>);
-impl STAT_VECTOR_SEL_APPCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STAT_VECTOR_SEL_APPCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STAT_VECTOR_SEL_APPCPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STAT_VECTOR_SEL_APPCPU_R = crate::BitReader<bool>;
 #[doc = "Field `STAT_VECTOR_SEL_APPCPU` writer - APP CPU state vector sel"]
-pub struct STAT_VECTOR_SEL_APPCPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STAT_VECTOR_SEL_APPCPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type STAT_VECTOR_SEL_APPCPU_W<'a> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, 12>;
 #[doc = "Field `STAT_VECTOR_SEL_PROCPU` reader - PRO CPU state vector sel"]
-pub struct STAT_VECTOR_SEL_PROCPU_R(crate::FieldReader<bool>);
-impl STAT_VECTOR_SEL_PROCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STAT_VECTOR_SEL_PROCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STAT_VECTOR_SEL_PROCPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STAT_VECTOR_SEL_PROCPU_R = crate::BitReader<bool>;
 #[doc = "Field `STAT_VECTOR_SEL_PROCPU` writer - PRO CPU state vector sel"]
-pub struct STAT_VECTOR_SEL_PROCPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STAT_VECTOR_SEL_PROCPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type STAT_VECTOR_SEL_PROCPU_W<'a> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, 13>;
 #[doc = "Field `ALL_RESET_FLAG_PROCPU` reader - PRO CPU reset_flag"]
-pub struct ALL_RESET_FLAG_PROCPU_R(crate::FieldReader<bool>);
-impl ALL_RESET_FLAG_PROCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ALL_RESET_FLAG_PROCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALL_RESET_FLAG_PROCPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALL_RESET_FLAG_PROCPU_R = crate::BitReader<bool>;
 #[doc = "Field `ALL_RESET_FLAG_APPCPU` reader - APP CPU reset flag"]
-pub struct ALL_RESET_FLAG_APPCPU_R(crate::FieldReader<bool>);
-impl ALL_RESET_FLAG_APPCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ALL_RESET_FLAG_APPCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ALL_RESET_FLAG_APPCPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ALL_RESET_FLAG_APPCPU_R = crate::BitReader<bool>;
 #[doc = "Field `ALL_RESET_FLAG_CLR_PROCPU` writer - clear PRO CPU reset_flag"]
-pub struct ALL_RESET_FLAG_CLR_PROCPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALL_RESET_FLAG_CLR_PROCPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type ALL_RESET_FLAG_CLR_PROCPU_W<'a> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, 16>;
 #[doc = "Field `ALL_RESET_FLAG_CLR_APPCPU` writer - clear APP CPU reset flag"]
-pub struct ALL_RESET_FLAG_CLR_APPCPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALL_RESET_FLAG_CLR_APPCPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type ALL_RESET_FLAG_CLR_APPCPU_W<'a> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, 17>;
 #[doc = "Field `OCD_HALT_ON_RESET_APPCPU` reader - APPCPU OcdHaltOnReset"]
-pub struct OCD_HALT_ON_RESET_APPCPU_R(crate::FieldReader<bool>);
-impl OCD_HALT_ON_RESET_APPCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OCD_HALT_ON_RESET_APPCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OCD_HALT_ON_RESET_APPCPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OCD_HALT_ON_RESET_APPCPU_R = crate::BitReader<bool>;
 #[doc = "Field `OCD_HALT_ON_RESET_APPCPU` writer - APPCPU OcdHaltOnReset"]
-pub struct OCD_HALT_ON_RESET_APPCPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OCD_HALT_ON_RESET_APPCPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type OCD_HALT_ON_RESET_APPCPU_W<'a> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, 18>;
 #[doc = "Field `OCD_HALT_ON_RESET_PROCPU` reader - PROCPU OcdHaltOnReset"]
-pub struct OCD_HALT_ON_RESET_PROCPU_R(crate::FieldReader<bool>);
-impl OCD_HALT_ON_RESET_PROCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OCD_HALT_ON_RESET_PROCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OCD_HALT_ON_RESET_PROCPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OCD_HALT_ON_RESET_PROCPU_R = crate::BitReader<bool>;
 #[doc = "Field `OCD_HALT_ON_RESET_PROCPU` writer - PROCPU OcdHaltOnReset"]
-pub struct OCD_HALT_ON_RESET_PROCPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OCD_HALT_ON_RESET_PROCPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type OCD_HALT_ON_RESET_PROCPU_W<'a> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, 19>;
 #[doc = "Field `JTAG_RESET_FLAG_PROCPU` reader - configure jtag reset configure"]
-pub struct JTAG_RESET_FLAG_PROCPU_R(crate::FieldReader<bool>);
-impl JTAG_RESET_FLAG_PROCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        JTAG_RESET_FLAG_PROCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for JTAG_RESET_FLAG_PROCPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type JTAG_RESET_FLAG_PROCPU_R = crate::BitReader<bool>;
 #[doc = "Field `JTAG_RESET_FLAG_APPCPU` reader - configure jtag reset configure"]
-pub struct JTAG_RESET_FLAG_APPCPU_R(crate::FieldReader<bool>);
-impl JTAG_RESET_FLAG_APPCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        JTAG_RESET_FLAG_APPCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for JTAG_RESET_FLAG_APPCPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type JTAG_RESET_FLAG_APPCPU_R = crate::BitReader<bool>;
 #[doc = "Field `JTAG_RESET_FLAG_CLR_PROCPU` writer - configure jtag reset configure"]
-pub struct JTAG_RESET_FLAG_CLR_PROCPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> JTAG_RESET_FLAG_CLR_PROCPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type JTAG_RESET_FLAG_CLR_PROCPU_W<'a> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, 22>;
 #[doc = "Field `JTAG_RESET_FLAG_CLR_APPCPU` writer - configure jtag reset configure"]
-pub struct JTAG_RESET_FLAG_CLR_APPCPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> JTAG_RESET_FLAG_CLR_APPCPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type JTAG_RESET_FLAG_CLR_APPCPU_W<'a> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, 23>;
 #[doc = "Field `RTC_DRESET_MASK_APPCPU` reader - configure dreset configure"]
-pub struct RTC_DRESET_MASK_APPCPU_R(crate::FieldReader<bool>);
-impl RTC_DRESET_MASK_APPCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_DRESET_MASK_APPCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_DRESET_MASK_APPCPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_DRESET_MASK_APPCPU_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_DRESET_MASK_APPCPU` writer - configure dreset configure"]
-pub struct RTC_DRESET_MASK_APPCPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_DRESET_MASK_APPCPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type RTC_DRESET_MASK_APPCPU_W<'a> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, 24>;
 #[doc = "Field `RTC_DRESET_MASK_PROCPU` reader - configure dreset configure"]
-pub struct RTC_DRESET_MASK_PROCPU_R(crate::FieldReader<bool>);
-impl RTC_DRESET_MASK_PROCPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_DRESET_MASK_PROCPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_DRESET_MASK_PROCPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_DRESET_MASK_PROCPU_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_DRESET_MASK_PROCPU` writer - configure dreset configure"]
-pub struct RTC_DRESET_MASK_PROCPU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_DRESET_MASK_PROCPU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type RTC_DRESET_MASK_PROCPU_W<'a> = crate::BitWriter<'a, u32, RESET_STATE_SPEC, bool, 25>;
 impl R {
     #[doc = "Bits 0:5 - reset cause of PRO CPU"]
     #[inline(always)]
@@ -500,52 +144,52 @@ impl W {
     #[doc = "Bit 12 - APP CPU state vector sel"]
     #[inline(always)]
     pub fn stat_vector_sel_appcpu(&mut self) -> STAT_VECTOR_SEL_APPCPU_W {
-        STAT_VECTOR_SEL_APPCPU_W { w: self }
+        STAT_VECTOR_SEL_APPCPU_W::new(self)
     }
     #[doc = "Bit 13 - PRO CPU state vector sel"]
     #[inline(always)]
     pub fn stat_vector_sel_procpu(&mut self) -> STAT_VECTOR_SEL_PROCPU_W {
-        STAT_VECTOR_SEL_PROCPU_W { w: self }
+        STAT_VECTOR_SEL_PROCPU_W::new(self)
     }
     #[doc = "Bit 16 - clear PRO CPU reset_flag"]
     #[inline(always)]
     pub fn all_reset_flag_clr_procpu(&mut self) -> ALL_RESET_FLAG_CLR_PROCPU_W {
-        ALL_RESET_FLAG_CLR_PROCPU_W { w: self }
+        ALL_RESET_FLAG_CLR_PROCPU_W::new(self)
     }
     #[doc = "Bit 17 - clear APP CPU reset flag"]
     #[inline(always)]
     pub fn all_reset_flag_clr_appcpu(&mut self) -> ALL_RESET_FLAG_CLR_APPCPU_W {
-        ALL_RESET_FLAG_CLR_APPCPU_W { w: self }
+        ALL_RESET_FLAG_CLR_APPCPU_W::new(self)
     }
     #[doc = "Bit 18 - APPCPU OcdHaltOnReset"]
     #[inline(always)]
     pub fn ocd_halt_on_reset_appcpu(&mut self) -> OCD_HALT_ON_RESET_APPCPU_W {
-        OCD_HALT_ON_RESET_APPCPU_W { w: self }
+        OCD_HALT_ON_RESET_APPCPU_W::new(self)
     }
     #[doc = "Bit 19 - PROCPU OcdHaltOnReset"]
     #[inline(always)]
     pub fn ocd_halt_on_reset_procpu(&mut self) -> OCD_HALT_ON_RESET_PROCPU_W {
-        OCD_HALT_ON_RESET_PROCPU_W { w: self }
+        OCD_HALT_ON_RESET_PROCPU_W::new(self)
     }
     #[doc = "Bit 22 - configure jtag reset configure"]
     #[inline(always)]
     pub fn jtag_reset_flag_clr_procpu(&mut self) -> JTAG_RESET_FLAG_CLR_PROCPU_W {
-        JTAG_RESET_FLAG_CLR_PROCPU_W { w: self }
+        JTAG_RESET_FLAG_CLR_PROCPU_W::new(self)
     }
     #[doc = "Bit 23 - configure jtag reset configure"]
     #[inline(always)]
     pub fn jtag_reset_flag_clr_appcpu(&mut self) -> JTAG_RESET_FLAG_CLR_APPCPU_W {
-        JTAG_RESET_FLAG_CLR_APPCPU_W { w: self }
+        JTAG_RESET_FLAG_CLR_APPCPU_W::new(self)
     }
     #[doc = "Bit 24 - configure dreset configure"]
     #[inline(always)]
     pub fn rtc_dreset_mask_appcpu(&mut self) -> RTC_DRESET_MASK_APPCPU_W {
-        RTC_DRESET_MASK_APPCPU_W { w: self }
+        RTC_DRESET_MASK_APPCPU_W::new(self)
     }
     #[doc = "Bit 25 - configure dreset configure"]
     #[inline(always)]
     pub fn rtc_dreset_mask_procpu(&mut self) -> RTC_DRESET_MASK_PROCPU_W {
-        RTC_DRESET_MASK_PROCPU_W { w: self }
+        RTC_DRESET_MASK_PROCPU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

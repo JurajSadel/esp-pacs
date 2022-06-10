@@ -35,32 +35,9 @@ impl From<crate::W<ROM_MPU_TABLE1_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_MPU_TABLE1` reader - "]
-pub struct ROM_MPU_TABLE1_R(crate::FieldReader<u8>);
-impl ROM_MPU_TABLE1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ROM_MPU_TABLE1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ROM_MPU_TABLE1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ROM_MPU_TABLE1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ROM_MPU_TABLE1` writer - "]
-pub struct ROM_MPU_TABLE1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ROM_MPU_TABLE1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type ROM_MPU_TABLE1_W<'a> = crate::FieldWriter<'a, u32, ROM_MPU_TABLE1_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn rom_mpu_table1(&mut self) -> ROM_MPU_TABLE1_W {
-        ROM_MPU_TABLE1_W { w: self }
+        ROM_MPU_TABLE1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,80 +14,15 @@ impl From<crate::R<STATE0_SPEC>> for R {
     }
 }
 #[doc = "Field `INLINK_DSCR_ADDR` reader - This register stores the current receive descriptor's address."]
-pub struct INLINK_DSCR_ADDR_R(crate::FieldReader<u32>);
-impl INLINK_DSCR_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INLINK_DSCR_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_DSCR_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_DSCR_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `IN_DSCR_STATE` reader - Reserved."]
-pub struct IN_DSCR_STATE_R(crate::FieldReader<u8>);
-impl IN_DSCR_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IN_DSCR_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_DSCR_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_DSCR_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `IN_STATE` reader - Reserved."]
-pub struct IN_STATE_R(crate::FieldReader<u8>);
-impl IN_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IN_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `INFIFO_CNT_DEBUG` reader - This register stores the number of data bytes in RX FIFO."]
-pub struct INFIFO_CNT_DEBUG_R(crate::FieldReader<u8>);
-impl INFIFO_CNT_DEBUG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INFIFO_CNT_DEBUG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INFIFO_CNT_DEBUG_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INFIFO_CNT_DEBUG_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DECODE_STATE` reader - UHCI decoder status."]
-pub struct DECODE_STATE_R(crate::FieldReader<u8>);
-impl DECODE_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DECODE_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DECODE_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DECODE_STATE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:17 - This register stores the current receive descriptor's address."]
     #[inline(always)]

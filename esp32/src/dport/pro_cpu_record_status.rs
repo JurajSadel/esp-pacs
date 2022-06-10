@@ -14,20 +14,7 @@ impl From<crate::R<PRO_CPU_RECORD_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_CPU_RECORDING` reader - "]
-pub struct PRO_CPU_RECORDING_R(crate::FieldReader<bool>);
-impl PRO_CPU_RECORDING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CPU_RECORDING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CPU_RECORDING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CPU_RECORDING_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

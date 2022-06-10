@@ -35,69 +35,13 @@ impl From<crate::W<IMMU_PAGE_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERNAL_SRAM_IMMU_ENA` reader - "]
-pub struct INTERNAL_SRAM_IMMU_ENA_R(crate::FieldReader<bool>);
-impl INTERNAL_SRAM_IMMU_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTERNAL_SRAM_IMMU_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERNAL_SRAM_IMMU_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERNAL_SRAM_IMMU_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `INTERNAL_SRAM_IMMU_ENA` writer - "]
-pub struct INTERNAL_SRAM_IMMU_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERNAL_SRAM_IMMU_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type INTERNAL_SRAM_IMMU_ENA_W<'a> = crate::BitWriter<'a, u32, IMMU_PAGE_MODE_SPEC, bool, 0>;
 #[doc = "Field `IMMU_PAGE_MODE` reader - "]
-pub struct IMMU_PAGE_MODE_R(crate::FieldReader<u8>);
-impl IMMU_PAGE_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IMMU_PAGE_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IMMU_PAGE_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IMMU_PAGE_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `IMMU_PAGE_MODE` writer - "]
-pub struct IMMU_PAGE_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IMMU_PAGE_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 1)) | ((value as u32 & 3) << 1);
-        self.w
-    }
-}
+pub type IMMU_PAGE_MODE_W<'a> = crate::FieldWriter<'a, u32, IMMU_PAGE_MODE_SPEC, u8, u8, 2, 1>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn internal_sram_immu_ena(&mut self) -> INTERNAL_SRAM_IMMU_ENA_W {
-        INTERNAL_SRAM_IMMU_ENA_W { w: self }
+        INTERNAL_SRAM_IMMU_ENA_W::new(self)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
     pub fn immu_page_mode(&mut self) -> IMMU_PAGE_MODE_W {
-        IMMU_PAGE_MODE_W { w: self }
+        IMMU_PAGE_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

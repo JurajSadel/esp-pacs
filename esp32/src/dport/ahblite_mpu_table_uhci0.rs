@@ -35,32 +35,10 @@ impl From<crate::W<AHBLITE_MPU_TABLE_UHCI0_SPEC>> for W {
     }
 }
 #[doc = "Field `UHCI0_ACCESS_GRANT_CONFIG` reader - "]
-pub struct UHCI0_ACCESS_GRANT_CONFIG_R(crate::FieldReader<u8>);
-impl UHCI0_ACCESS_GRANT_CONFIG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UHCI0_ACCESS_GRANT_CONFIG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UHCI0_ACCESS_GRANT_CONFIG_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UHCI0_ACCESS_GRANT_CONFIG_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `UHCI0_ACCESS_GRANT_CONFIG` writer - "]
-pub struct UHCI0_ACCESS_GRANT_CONFIG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UHCI0_ACCESS_GRANT_CONFIG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type UHCI0_ACCESS_GRANT_CONFIG_W<'a> =
+    crate::FieldWriter<'a, u32, AHBLITE_MPU_TABLE_UHCI0_SPEC, u8, u8, 6, 0>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     pub fn uhci0_access_grant_config(&mut self) -> UHCI0_ACCESS_GRANT_CONFIG_W {
-        UHCI0_ACCESS_GRANT_CONFIG_W { w: self }
+        UHCI0_ACCESS_GRANT_CONFIG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

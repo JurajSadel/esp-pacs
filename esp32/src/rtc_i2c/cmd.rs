@@ -35,69 +35,13 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `VAL` reader - Command content"]
-pub struct VAL_R(crate::FieldReader<u16>);
-impl VAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        VAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VAL_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VAL_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `VAL` writer - Command content"]
-pub struct VAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VAL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff) | (value as u32 & 0x3fff);
-        self.w
-    }
-}
+pub type VAL_W<'a> = crate::FieldWriter<'a, u32, CMD_SPEC, u16, u16, 14, 0>;
 #[doc = "Field `DONE` reader - Bit is set by HW when command is done"]
-pub struct DONE_R(crate::FieldReader<bool>);
-impl DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DONE_R = crate::BitReader<bool>;
 #[doc = "Field `DONE` writer - Bit is set by HW when command is done"]
-pub struct DONE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DONE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type DONE_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:13 - Command content"]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:13 - Command content"]
     #[inline(always)]
     pub fn val(&mut self) -> VAL_W {
-        VAL_W { w: self }
+        VAL_W::new(self)
     }
     #[doc = "Bit 31 - Bit is set by HW when command is done"]
     #[inline(always)]
     pub fn done(&mut self) -> DONE_W {
-        DONE_W { w: self }
+        DONE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

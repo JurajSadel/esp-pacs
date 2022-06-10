@@ -20,59 +20,19 @@ impl From<crate::W<INT_CLR_TIMERS_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_INT_CLR` writer - t0_int_clr"]
-pub struct T0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type T0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_TIMERS_SPEC, bool, 0>;
 #[doc = "Field `WDT_INT_CLR` writer - wdt_int_clr"]
-pub struct WDT_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDT_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type WDT_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_TIMERS_SPEC, bool, 1>;
 impl W {
     #[doc = "Bit 0 - t0_int_clr"]
     #[inline(always)]
     pub fn t0_int_clr(&mut self) -> T0_INT_CLR_W {
-        T0_INT_CLR_W { w: self }
+        T0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - wdt_int_clr"]
     #[inline(always)]
     pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W {
-        WDT_INT_CLR_W { w: self }
+        WDT_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

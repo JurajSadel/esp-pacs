@@ -14,20 +14,7 @@ impl From<crate::R<PRO_INTR_STATUS_0_SPEC>> for R {
     }
 }
 #[doc = "Field `INTR_STATUS_0` reader - this register store the status of the first 32 interrupt source"]
-pub struct INTR_STATUS_0_R(crate::FieldReader<u32>);
-impl INTR_STATUS_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INTR_STATUS_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTR_STATUS_0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTR_STATUS_0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - this register store the status of the first 32 interrupt source"]
     #[inline(always)]

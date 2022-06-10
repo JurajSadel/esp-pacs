@@ -35,153 +35,21 @@ impl From<crate::W<CLK_SPEC>> for W {
     }
 }
 #[doc = "Field `EFUSE_MEM_FORCE_PD` reader - Set this bit to force eFuse SRAM into power-saving mode."]
-pub struct EFUSE_MEM_FORCE_PD_R(crate::FieldReader<bool>);
-impl EFUSE_MEM_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EFUSE_MEM_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EFUSE_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EFUSE_MEM_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `EFUSE_MEM_FORCE_PD` writer - Set this bit to force eFuse SRAM into power-saving mode."]
-pub struct EFUSE_MEM_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EFUSE_MEM_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type EFUSE_MEM_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, CLK_SPEC, bool, 0>;
 #[doc = "Field `MEM_CLK_FORCE_ON` reader - Set this bit and force to activate clock signal of eFuse SRAM."]
-pub struct MEM_CLK_FORCE_ON_R(crate::FieldReader<bool>);
-impl MEM_CLK_FORCE_ON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_CLK_FORCE_ON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_CLK_FORCE_ON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_CLK_FORCE_ON_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_CLK_FORCE_ON` writer - Set this bit and force to activate clock signal of eFuse SRAM."]
-pub struct MEM_CLK_FORCE_ON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_CLK_FORCE_ON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MEM_CLK_FORCE_ON_W<'a> = crate::BitWriter<'a, u32, CLK_SPEC, bool, 1>;
 #[doc = "Field `EFUSE_MEM_FORCE_PU` reader - Set this bit to force eFuse SRAM into working mode."]
-pub struct EFUSE_MEM_FORCE_PU_R(crate::FieldReader<bool>);
-impl EFUSE_MEM_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EFUSE_MEM_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EFUSE_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EFUSE_MEM_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `EFUSE_MEM_FORCE_PU` writer - Set this bit to force eFuse SRAM into working mode."]
-pub struct EFUSE_MEM_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EFUSE_MEM_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type EFUSE_MEM_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, CLK_SPEC, bool, 2>;
 #[doc = "Field `EN` reader - Set this bit and force to enable clock signal of eFuse memory."]
-pub struct EN_R(crate::FieldReader<bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - Set this bit and force to enable clock signal of eFuse memory."]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type EN_W<'a> = crate::BitWriter<'a, u32, CLK_SPEC, bool, 16>;
 impl R {
     #[doc = "Bit 0 - Set this bit to force eFuse SRAM into power-saving mode."]
     #[inline(always)]
@@ -208,22 +76,22 @@ impl W {
     #[doc = "Bit 0 - Set this bit to force eFuse SRAM into power-saving mode."]
     #[inline(always)]
     pub fn efuse_mem_force_pd(&mut self) -> EFUSE_MEM_FORCE_PD_W {
-        EFUSE_MEM_FORCE_PD_W { w: self }
+        EFUSE_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit and force to activate clock signal of eFuse SRAM."]
     #[inline(always)]
     pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W {
-        MEM_CLK_FORCE_ON_W { w: self }
+        MEM_CLK_FORCE_ON_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to force eFuse SRAM into working mode."]
     #[inline(always)]
     pub fn efuse_mem_force_pu(&mut self) -> EFUSE_MEM_FORCE_PU_W {
-        EFUSE_MEM_FORCE_PU_W { w: self }
+        EFUSE_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit and force to enable clock signal of eFuse memory."]
     #[inline(always)]
     pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+        EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

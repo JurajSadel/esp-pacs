@@ -35,32 +35,9 @@ impl From<crate::W<SAR_ATTEN2_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_ATTEN` reader - 2-bit attenuation for each pad. \\[1:0\\] is used for channel 0, \\[3:2\\] is used for channel 1, etc."]
-pub struct SAR2_ATTEN_R(crate::FieldReader<u32>);
-impl SAR2_ATTEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SAR2_ATTEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_ATTEN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_ATTEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SAR2_ATTEN` writer - 2-bit attenuation for each pad. \\[1:0\\] is used for channel 0, \\[3:2\\] is used for channel 1, etc."]
-pub struct SAR2_ATTEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_ATTEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type SAR2_ATTEN_W<'a> = crate::FieldWriter<'a, u32, SAR_ATTEN2_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - 2-bit attenuation for each pad. \\[1:0\\] is used for channel 0, \\[3:2\\] is used for channel 1, etc."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - 2-bit attenuation for each pad. \\[1:0\\] is used for channel 0, \\[3:2\\] is used for channel 1, etc."]
     #[inline(always)]
     pub fn sar2_atten(&mut self) -> SAR2_ATTEN_W {
-        SAR2_ATTEN_W { w: self }
+        SAR2_ATTEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,10 @@ impl From<crate::W<PRO_DPORT_APB_MASK0_SPEC>> for W {
     }
 }
 #[doc = "Field `PRODPORT_APB_MASK0` reader - "]
-pub struct PRODPORT_APB_MASK0_R(crate::FieldReader<u32>);
-impl PRODPORT_APB_MASK0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PRODPORT_APB_MASK0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRODPORT_APB_MASK0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRODPORT_APB_MASK0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRODPORT_APB_MASK0` writer - "]
-pub struct PRODPORT_APB_MASK0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRODPORT_APB_MASK0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type PRODPORT_APB_MASK0_W<'a> =
+    crate::FieldWriter<'a, u32, PRO_DPORT_APB_MASK0_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn prodport_apb_mask0(&mut self) -> PRODPORT_APB_MASK0_W {
-        PRODPORT_APB_MASK0_W { w: self }
+        PRODPORT_APB_MASK0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,517 +35,69 @@ impl From<crate::W<FH2_CFG0_SPEC>> for W {
     }
 }
 #[doc = "Field `FH2_SW_CBC` reader - "]
-pub struct FH2_SW_CBC_R(crate::FieldReader<bool>);
-impl FH2_SW_CBC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FH2_SW_CBC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_SW_CBC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_SW_CBC_R = crate::BitReader<bool>;
 #[doc = "Field `FH2_SW_CBC` writer - "]
-pub struct FH2_SW_CBC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_SW_CBC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type FH2_SW_CBC_W<'a> = crate::BitWriter<'a, u32, FH2_CFG0_SPEC, bool, 0>;
 #[doc = "Field `FH2_F2_CBC` reader - "]
-pub struct FH2_F2_CBC_R(crate::FieldReader<bool>);
-impl FH2_F2_CBC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FH2_F2_CBC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_F2_CBC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_F2_CBC_R = crate::BitReader<bool>;
 #[doc = "Field `FH2_F2_CBC` writer - "]
-pub struct FH2_F2_CBC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_F2_CBC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type FH2_F2_CBC_W<'a> = crate::BitWriter<'a, u32, FH2_CFG0_SPEC, bool, 1>;
 #[doc = "Field `FH2_F1_CBC` reader - "]
-pub struct FH2_F1_CBC_R(crate::FieldReader<bool>);
-impl FH2_F1_CBC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FH2_F1_CBC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_F1_CBC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_F1_CBC_R = crate::BitReader<bool>;
 #[doc = "Field `FH2_F1_CBC` writer - "]
-pub struct FH2_F1_CBC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_F1_CBC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type FH2_F1_CBC_W<'a> = crate::BitWriter<'a, u32, FH2_CFG0_SPEC, bool, 2>;
 #[doc = "Field `FH2_F0_CBC` reader - "]
-pub struct FH2_F0_CBC_R(crate::FieldReader<bool>);
-impl FH2_F0_CBC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FH2_F0_CBC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_F0_CBC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_F0_CBC_R = crate::BitReader<bool>;
 #[doc = "Field `FH2_F0_CBC` writer - "]
-pub struct FH2_F0_CBC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_F0_CBC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type FH2_F0_CBC_W<'a> = crate::BitWriter<'a, u32, FH2_CFG0_SPEC, bool, 3>;
 #[doc = "Field `FH2_SW_OST` reader - "]
-pub struct FH2_SW_OST_R(crate::FieldReader<bool>);
-impl FH2_SW_OST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FH2_SW_OST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_SW_OST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_SW_OST_R = crate::BitReader<bool>;
 #[doc = "Field `FH2_SW_OST` writer - "]
-pub struct FH2_SW_OST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_SW_OST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type FH2_SW_OST_W<'a> = crate::BitWriter<'a, u32, FH2_CFG0_SPEC, bool, 4>;
 #[doc = "Field `FH2_F2_OST` reader - "]
-pub struct FH2_F2_OST_R(crate::FieldReader<bool>);
-impl FH2_F2_OST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FH2_F2_OST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_F2_OST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_F2_OST_R = crate::BitReader<bool>;
 #[doc = "Field `FH2_F2_OST` writer - "]
-pub struct FH2_F2_OST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_F2_OST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type FH2_F2_OST_W<'a> = crate::BitWriter<'a, u32, FH2_CFG0_SPEC, bool, 5>;
 #[doc = "Field `FH2_F1_OST` reader - "]
-pub struct FH2_F1_OST_R(crate::FieldReader<bool>);
-impl FH2_F1_OST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FH2_F1_OST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_F1_OST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_F1_OST_R = crate::BitReader<bool>;
 #[doc = "Field `FH2_F1_OST` writer - "]
-pub struct FH2_F1_OST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_F1_OST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type FH2_F1_OST_W<'a> = crate::BitWriter<'a, u32, FH2_CFG0_SPEC, bool, 6>;
 #[doc = "Field `FH2_F0_OST` reader - "]
-pub struct FH2_F0_OST_R(crate::FieldReader<bool>);
-impl FH2_F0_OST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FH2_F0_OST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_F0_OST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_F0_OST_R = crate::BitReader<bool>;
 #[doc = "Field `FH2_F0_OST` writer - "]
-pub struct FH2_F0_OST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_F0_OST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type FH2_F0_OST_W<'a> = crate::BitWriter<'a, u32, FH2_CFG0_SPEC, bool, 7>;
 #[doc = "Field `FH2_A_CBC_D` reader - "]
-pub struct FH2_A_CBC_D_R(crate::FieldReader<u8>);
-impl FH2_A_CBC_D_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FH2_A_CBC_D_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_A_CBC_D_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_A_CBC_D_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FH2_A_CBC_D` writer - "]
-pub struct FH2_A_CBC_D_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_A_CBC_D_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type FH2_A_CBC_D_W<'a> = crate::FieldWriter<'a, u32, FH2_CFG0_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `FH2_A_CBC_U` reader - "]
-pub struct FH2_A_CBC_U_R(crate::FieldReader<u8>);
-impl FH2_A_CBC_U_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FH2_A_CBC_U_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_A_CBC_U_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_A_CBC_U_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FH2_A_CBC_U` writer - "]
-pub struct FH2_A_CBC_U_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_A_CBC_U_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type FH2_A_CBC_U_W<'a> = crate::FieldWriter<'a, u32, FH2_CFG0_SPEC, u8, u8, 2, 10>;
 #[doc = "Field `FH2_A_OST_D` reader - "]
-pub struct FH2_A_OST_D_R(crate::FieldReader<u8>);
-impl FH2_A_OST_D_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FH2_A_OST_D_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_A_OST_D_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_A_OST_D_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FH2_A_OST_D` writer - "]
-pub struct FH2_A_OST_D_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_A_OST_D_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type FH2_A_OST_D_W<'a> = crate::FieldWriter<'a, u32, FH2_CFG0_SPEC, u8, u8, 2, 12>;
 #[doc = "Field `FH2_A_OST_U` reader - "]
-pub struct FH2_A_OST_U_R(crate::FieldReader<u8>);
-impl FH2_A_OST_U_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FH2_A_OST_U_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_A_OST_U_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_A_OST_U_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FH2_A_OST_U` writer - "]
-pub struct FH2_A_OST_U_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_A_OST_U_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type FH2_A_OST_U_W<'a> = crate::FieldWriter<'a, u32, FH2_CFG0_SPEC, u8, u8, 2, 14>;
 #[doc = "Field `FH2_B_CBC_D` reader - "]
-pub struct FH2_B_CBC_D_R(crate::FieldReader<u8>);
-impl FH2_B_CBC_D_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FH2_B_CBC_D_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_B_CBC_D_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_B_CBC_D_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FH2_B_CBC_D` writer - "]
-pub struct FH2_B_CBC_D_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_B_CBC_D_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type FH2_B_CBC_D_W<'a> = crate::FieldWriter<'a, u32, FH2_CFG0_SPEC, u8, u8, 2, 16>;
 #[doc = "Field `FH2_B_CBC_U` reader - "]
-pub struct FH2_B_CBC_U_R(crate::FieldReader<u8>);
-impl FH2_B_CBC_U_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FH2_B_CBC_U_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_B_CBC_U_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_B_CBC_U_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FH2_B_CBC_U` writer - "]
-pub struct FH2_B_CBC_U_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_B_CBC_U_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
-        self.w
-    }
-}
+pub type FH2_B_CBC_U_W<'a> = crate::FieldWriter<'a, u32, FH2_CFG0_SPEC, u8, u8, 2, 18>;
 #[doc = "Field `FH2_B_OST_D` reader - "]
-pub struct FH2_B_OST_D_R(crate::FieldReader<u8>);
-impl FH2_B_OST_D_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FH2_B_OST_D_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_B_OST_D_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_B_OST_D_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FH2_B_OST_D` writer - "]
-pub struct FH2_B_OST_D_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_B_OST_D_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
-        self.w
-    }
-}
+pub type FH2_B_OST_D_W<'a> = crate::FieldWriter<'a, u32, FH2_CFG0_SPEC, u8, u8, 2, 20>;
 #[doc = "Field `FH2_B_OST_U` reader - "]
-pub struct FH2_B_OST_U_R(crate::FieldReader<u8>);
-impl FH2_B_OST_U_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FH2_B_OST_U_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FH2_B_OST_U_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FH2_B_OST_U_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FH2_B_OST_U` writer - "]
-pub struct FH2_B_OST_U_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FH2_B_OST_U_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
-        self.w
-    }
-}
+pub type FH2_B_OST_U_W<'a> = crate::FieldWriter<'a, u32, FH2_CFG0_SPEC, u8, u8, 2, 22>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -632,82 +184,82 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn fh2_sw_cbc(&mut self) -> FH2_SW_CBC_W {
-        FH2_SW_CBC_W { w: self }
+        FH2_SW_CBC_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn fh2_f2_cbc(&mut self) -> FH2_F2_CBC_W {
-        FH2_F2_CBC_W { w: self }
+        FH2_F2_CBC_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn fh2_f1_cbc(&mut self) -> FH2_F1_CBC_W {
-        FH2_F1_CBC_W { w: self }
+        FH2_F1_CBC_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn fh2_f0_cbc(&mut self) -> FH2_F0_CBC_W {
-        FH2_F0_CBC_W { w: self }
+        FH2_F0_CBC_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn fh2_sw_ost(&mut self) -> FH2_SW_OST_W {
-        FH2_SW_OST_W { w: self }
+        FH2_SW_OST_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn fh2_f2_ost(&mut self) -> FH2_F2_OST_W {
-        FH2_F2_OST_W { w: self }
+        FH2_F2_OST_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn fh2_f1_ost(&mut self) -> FH2_F1_OST_W {
-        FH2_F1_OST_W { w: self }
+        FH2_F1_OST_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn fh2_f0_ost(&mut self) -> FH2_F0_OST_W {
-        FH2_F0_OST_W { w: self }
+        FH2_F0_OST_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     pub fn fh2_a_cbc_d(&mut self) -> FH2_A_CBC_D_W {
-        FH2_A_CBC_D_W { w: self }
+        FH2_A_CBC_D_W::new(self)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
     pub fn fh2_a_cbc_u(&mut self) -> FH2_A_CBC_U_W {
-        FH2_A_CBC_U_W { w: self }
+        FH2_A_CBC_U_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     pub fn fh2_a_ost_d(&mut self) -> FH2_A_OST_D_W {
-        FH2_A_OST_D_W { w: self }
+        FH2_A_OST_D_W::new(self)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     pub fn fh2_a_ost_u(&mut self) -> FH2_A_OST_U_W {
-        FH2_A_OST_U_W { w: self }
+        FH2_A_OST_U_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     pub fn fh2_b_cbc_d(&mut self) -> FH2_B_CBC_D_W {
-        FH2_B_CBC_D_W { w: self }
+        FH2_B_CBC_D_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     pub fn fh2_b_cbc_u(&mut self) -> FH2_B_CBC_U_W {
-        FH2_B_CBC_U_W { w: self }
+        FH2_B_CBC_U_W::new(self)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
     pub fn fh2_b_ost_d(&mut self) -> FH2_B_OST_D_W {
-        FH2_B_OST_D_W { w: self }
+        FH2_B_OST_D_W::new(self)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
     pub fn fh2_b_ost_u(&mut self) -> FH2_B_OST_U_W {
-        FH2_B_OST_U_W { w: self }
+        FH2_B_OST_U_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

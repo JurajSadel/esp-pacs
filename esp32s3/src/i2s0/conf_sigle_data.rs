@@ -35,32 +35,9 @@ impl From<crate::W<CONF_SIGLE_DATA_SPEC>> for W {
     }
 }
 #[doc = "Field `SINGLE_DATA` reader - The configured constant channel data to be sent out."]
-pub struct SINGLE_DATA_R(crate::FieldReader<u32>);
-impl SINGLE_DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SINGLE_DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SINGLE_DATA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SINGLE_DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SINGLE_DATA` writer - The configured constant channel data to be sent out."]
-pub struct SINGLE_DATA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SINGLE_DATA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type SINGLE_DATA_W<'a> = crate::FieldWriter<'a, u32, CONF_SIGLE_DATA_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - The configured constant channel data to be sent out."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - The configured constant channel data to be sent out."]
     #[inline(always)]
     pub fn single_data(&mut self) -> SINGLE_DATA_W {
-        SINGLE_DATA_W { w: self }
+        SINGLE_DATA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

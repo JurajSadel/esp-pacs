@@ -14,20 +14,7 @@ impl From<crate::R<RD_KEY5_DATA3_SPEC>> for R {
     }
 }
 #[doc = "Field `KEY5_DATA3` reader - Stores the third 32 bits of KEY5."]
-pub struct KEY5_DATA3_R(crate::FieldReader<u32>);
-impl KEY5_DATA3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        KEY5_DATA3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY5_DATA3_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY5_DATA3_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the third 32 bits of KEY5."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<DEBNCE_SPEC>> for W {
     }
 }
 #[doc = "Field `DEBOUNCE_COUNT` reader - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
-pub struct DEBOUNCE_COUNT_R(crate::FieldReader<u32>);
-impl DEBOUNCE_COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DEBOUNCE_COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DEBOUNCE_COUNT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DEBOUNCE_COUNT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DEBOUNCE_COUNT` writer - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
-pub struct DEBOUNCE_COUNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DEBOUNCE_COUNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
-        self.w
-    }
-}
+pub type DEBOUNCE_COUNT_W<'a> = crate::FieldWriter<'a, u32, DEBNCE_SPEC, u32, u32, 24, 0>;
 impl R {
     #[doc = "Bits 0:23 - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:23 - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
     #[inline(always)]
     pub fn debounce_count(&mut self) -> DEBOUNCE_COUNT_W {
-        DEBOUNCE_COUNT_W { w: self }
+        DEBOUNCE_COUNT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,20 +14,7 @@ impl From<crate::R<DMA_IN_DSCR_BF1_SPEC>> for R {
     }
 }
 #[doc = "Field `INLINK_DSCR_BF1` reader - The content of current in link descriptor's second dword"]
-pub struct INLINK_DSCR_BF1_R(crate::FieldReader<u32>);
-impl INLINK_DSCR_BF1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INLINK_DSCR_BF1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_DSCR_BF1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_DSCR_BF1_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The content of current in link descriptor's second dword"]
     #[inline(always)]

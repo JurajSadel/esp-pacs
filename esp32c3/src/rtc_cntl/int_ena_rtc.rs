@@ -35,338 +35,41 @@ impl From<crate::W<INT_ENA_RTC_SPEC>> for W {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_ENA` reader - enable sleep wakeup interrupt"]
-pub struct SLP_WAKEUP_INT_ENA_R(crate::FieldReader<bool>);
-impl SLP_WAKEUP_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLP_WAKEUP_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLP_WAKEUP_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLP_WAKEUP_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `SLP_WAKEUP_INT_ENA` writer - enable sleep wakeup interrupt"]
-pub struct SLP_WAKEUP_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLP_WAKEUP_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SLP_WAKEUP_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, 0>;
 #[doc = "Field `SLP_REJECT_INT_ENA` reader - enable sleep reject interrupt"]
-pub struct SLP_REJECT_INT_ENA_R(crate::FieldReader<bool>);
-impl SLP_REJECT_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLP_REJECT_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLP_REJECT_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLP_REJECT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `SLP_REJECT_INT_ENA` writer - enable sleep reject interrupt"]
-pub struct SLP_REJECT_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLP_REJECT_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SLP_REJECT_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, 1>;
 #[doc = "Field `RTC_WDT_INT_ENA` reader - enable RTC WDT interrupt"]
-pub struct RTC_WDT_INT_ENA_R(crate::FieldReader<bool>);
-impl RTC_WDT_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_WDT_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_WDT_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_WDT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_WDT_INT_ENA` writer - enable RTC WDT interrupt"]
-pub struct RTC_WDT_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_WDT_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type RTC_WDT_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, 3>;
 #[doc = "Field `RTC_BROWN_OUT_INT_ENA` reader - enable brown out interrupt"]
-pub struct RTC_BROWN_OUT_INT_ENA_R(crate::FieldReader<bool>);
-impl RTC_BROWN_OUT_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_BROWN_OUT_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_BROWN_OUT_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_BROWN_OUT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_BROWN_OUT_INT_ENA` writer - enable brown out interrupt"]
-pub struct RTC_BROWN_OUT_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_BROWN_OUT_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type RTC_BROWN_OUT_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, 9>;
 #[doc = "Field `RTC_MAIN_TIMER_INT_ENA` reader - enable RTC main timer interrupt"]
-pub struct RTC_MAIN_TIMER_INT_ENA_R(crate::FieldReader<bool>);
-impl RTC_MAIN_TIMER_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_MAIN_TIMER_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_MAIN_TIMER_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_MAIN_TIMER_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_MAIN_TIMER_INT_ENA` writer - enable RTC main timer interrupt"]
-pub struct RTC_MAIN_TIMER_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_MAIN_TIMER_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type RTC_MAIN_TIMER_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, 10>;
 #[doc = "Field `RTC_SWD_INT_ENA` reader - enable super watch dog interrupt"]
-pub struct RTC_SWD_INT_ENA_R(crate::FieldReader<bool>);
-impl RTC_SWD_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_SWD_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_SWD_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_SWD_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_SWD_INT_ENA` writer - enable super watch dog interrupt"]
-pub struct RTC_SWD_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_SWD_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type RTC_SWD_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, 15>;
 #[doc = "Field `RTC_XTAL32K_DEAD_INT_ENA` reader - enable xtal32k_dead interrupt"]
-pub struct RTC_XTAL32K_DEAD_INT_ENA_R(crate::FieldReader<bool>);
-impl RTC_XTAL32K_DEAD_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_XTAL32K_DEAD_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_XTAL32K_DEAD_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_XTAL32K_DEAD_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_XTAL32K_DEAD_INT_ENA` writer - enable xtal32k_dead interrupt"]
-pub struct RTC_XTAL32K_DEAD_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_XTAL32K_DEAD_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type RTC_XTAL32K_DEAD_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, 16>;
 #[doc = "Field `RTC_GLITCH_DET_INT_ENA` reader - enbale gitch det interrupt"]
-pub struct RTC_GLITCH_DET_INT_ENA_R(crate::FieldReader<bool>);
-impl RTC_GLITCH_DET_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GLITCH_DET_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GLITCH_DET_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GLITCH_DET_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GLITCH_DET_INT_ENA` writer - enbale gitch det interrupt"]
-pub struct RTC_GLITCH_DET_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GLITCH_DET_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type RTC_GLITCH_DET_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, 19>;
 #[doc = "Field `RTC_BBPLL_CAL_INT_ENA` reader - enbale bbpll cal end interrupt"]
-pub struct RTC_BBPLL_CAL_INT_ENA_R(crate::FieldReader<bool>);
-impl RTC_BBPLL_CAL_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_BBPLL_CAL_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_BBPLL_CAL_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_BBPLL_CAL_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_BBPLL_CAL_INT_ENA` writer - enbale bbpll cal end interrupt"]
-pub struct RTC_BBPLL_CAL_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_BBPLL_CAL_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type RTC_BBPLL_CAL_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_RTC_SPEC, bool, 20>;
 impl R {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]
@@ -418,47 +121,47 @@ impl W {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]
     pub fn slp_wakeup_int_ena(&mut self) -> SLP_WAKEUP_INT_ENA_W {
-        SLP_WAKEUP_INT_ENA_W { w: self }
+        SLP_WAKEUP_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - enable sleep reject interrupt"]
     #[inline(always)]
     pub fn slp_reject_int_ena(&mut self) -> SLP_REJECT_INT_ENA_W {
-        SLP_REJECT_INT_ENA_W { w: self }
+        SLP_REJECT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
     pub fn rtc_wdt_int_ena(&mut self) -> RTC_WDT_INT_ENA_W {
-        RTC_WDT_INT_ENA_W { w: self }
+        RTC_WDT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - enable brown out interrupt"]
     #[inline(always)]
     pub fn rtc_brown_out_int_ena(&mut self) -> RTC_BROWN_OUT_INT_ENA_W {
-        RTC_BROWN_OUT_INT_ENA_W { w: self }
+        RTC_BROWN_OUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - enable RTC main timer interrupt"]
     #[inline(always)]
     pub fn rtc_main_timer_int_ena(&mut self) -> RTC_MAIN_TIMER_INT_ENA_W {
-        RTC_MAIN_TIMER_INT_ENA_W { w: self }
+        RTC_MAIN_TIMER_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15 - enable super watch dog interrupt"]
     #[inline(always)]
     pub fn rtc_swd_int_ena(&mut self) -> RTC_SWD_INT_ENA_W {
-        RTC_SWD_INT_ENA_W { w: self }
+        RTC_SWD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 16 - enable xtal32k_dead interrupt"]
     #[inline(always)]
     pub fn rtc_xtal32k_dead_int_ena(&mut self) -> RTC_XTAL32K_DEAD_INT_ENA_W {
-        RTC_XTAL32K_DEAD_INT_ENA_W { w: self }
+        RTC_XTAL32K_DEAD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 19 - enbale gitch det interrupt"]
     #[inline(always)]
     pub fn rtc_glitch_det_int_ena(&mut self) -> RTC_GLITCH_DET_INT_ENA_W {
-        RTC_GLITCH_DET_INT_ENA_W { w: self }
+        RTC_GLITCH_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 20 - enbale bbpll cal end interrupt"]
     #[inline(always)]
     pub fn rtc_bbpll_cal_int_ena(&mut self) -> RTC_BBPLL_CAL_INT_ENA_W {
-        RTC_BBPLL_CAL_INT_ENA_W { w: self }
+        RTC_BBPLL_CAL_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

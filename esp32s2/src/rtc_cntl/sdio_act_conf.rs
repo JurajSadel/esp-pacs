@@ -35,32 +35,9 @@ impl From<crate::W<SDIO_ACT_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_ACT_DNUM` reader - configure sdio act dnum"]
-pub struct SDIO_ACT_DNUM_R(crate::FieldReader<u16>);
-impl SDIO_ACT_DNUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SDIO_ACT_DNUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_ACT_DNUM_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_ACT_DNUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SDIO_ACT_DNUM` writer - configure sdio act dnum"]
-pub struct SDIO_ACT_DNUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_ACT_DNUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 22)) | ((value as u32 & 0x03ff) << 22);
-        self.w
-    }
-}
+pub type SDIO_ACT_DNUM_W<'a> = crate::FieldWriter<'a, u32, SDIO_ACT_CONF_SPEC, u16, u16, 10, 22>;
 impl R {
     #[doc = "Bits 22:31 - configure sdio act dnum"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 22:31 - configure sdio act dnum"]
     #[inline(always)]
     pub fn sdio_act_dnum(&mut self) -> SDIO_ACT_DNUM_W {
-        SDIO_ACT_DNUM_W { w: self }
+        SDIO_ACT_DNUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

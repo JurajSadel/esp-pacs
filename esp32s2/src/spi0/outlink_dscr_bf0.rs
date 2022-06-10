@@ -14,20 +14,7 @@ impl From<crate::R<OUTLINK_DSCR_BF0_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_OUTLINK_DSCR_BF0` reader - The content of next out descriptor pointer."]
-pub struct DMA_OUTLINK_DSCR_BF0_R(crate::FieldReader<u32>);
-impl DMA_OUTLINK_DSCR_BF0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DMA_OUTLINK_DSCR_BF0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_OUTLINK_DSCR_BF0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_OUTLINK_DSCR_BF0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The content of next out descriptor pointer."]
     #[inline(always)]

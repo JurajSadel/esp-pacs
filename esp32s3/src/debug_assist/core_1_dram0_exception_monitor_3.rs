@@ -14,35 +14,9 @@ impl From<crate::R<CORE_1_DRAM0_EXCEPTION_MONITOR_3_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_DRAM0_RECORDING_ADDR_1` reader - The second dram0's addr\\[25:4\\] status when trigger DRAM busy interrupt"]
-pub struct CORE_1_DRAM0_RECORDING_ADDR_1_R(crate::FieldReader<u32>);
-impl CORE_1_DRAM0_RECORDING_ADDR_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_1_DRAM0_RECORDING_ADDR_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_DRAM0_RECORDING_ADDR_1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_DRAM0_RECORDING_ADDR_1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_1_DRAM0_RECORDING_WR_1` reader - The second dram0's wr status when trigger DRAM busy interrupt"]
-pub struct CORE_1_DRAM0_RECORDING_WR_1_R(crate::FieldReader<bool>);
-impl CORE_1_DRAM0_RECORDING_WR_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_DRAM0_RECORDING_WR_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_DRAM0_RECORDING_WR_1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_DRAM0_RECORDING_WR_1_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:21 - The second dram0's addr\\[25:4\\] status when trigger DRAM busy interrupt"]
     #[inline(always)]

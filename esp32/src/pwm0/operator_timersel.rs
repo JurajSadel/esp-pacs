@@ -35,86 +35,20 @@ impl From<crate::W<OPERATOR_TIMERSEL_SPEC>> for W {
     }
 }
 #[doc = "Field `OPERATOR0_TIMERSEL` reader - "]
-pub struct OPERATOR0_TIMERSEL_R(crate::FieldReader<u8>);
-impl OPERATOR0_TIMERSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OPERATOR0_TIMERSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OPERATOR0_TIMERSEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OPERATOR0_TIMERSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OPERATOR0_TIMERSEL` writer - "]
-pub struct OPERATOR0_TIMERSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OPERATOR0_TIMERSEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type OPERATOR0_TIMERSEL_W<'a> =
+    crate::FieldWriter<'a, u32, OPERATOR_TIMERSEL_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `OPERATOR1_TIMERSEL` reader - "]
-pub struct OPERATOR1_TIMERSEL_R(crate::FieldReader<u8>);
-impl OPERATOR1_TIMERSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OPERATOR1_TIMERSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OPERATOR1_TIMERSEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OPERATOR1_TIMERSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OPERATOR1_TIMERSEL` writer - "]
-pub struct OPERATOR1_TIMERSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OPERATOR1_TIMERSEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type OPERATOR1_TIMERSEL_W<'a> =
+    crate::FieldWriter<'a, u32, OPERATOR_TIMERSEL_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `OPERATOR2_TIMERSEL` reader - "]
-pub struct OPERATOR2_TIMERSEL_R(crate::FieldReader<u8>);
-impl OPERATOR2_TIMERSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OPERATOR2_TIMERSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OPERATOR2_TIMERSEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OPERATOR2_TIMERSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OPERATOR2_TIMERSEL` writer - "]
-pub struct OPERATOR2_TIMERSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OPERATOR2_TIMERSEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type OPERATOR2_TIMERSEL_W<'a> =
+    crate::FieldWriter<'a, u32, OPERATOR_TIMERSEL_SPEC, u8, u8, 2, 4>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -136,17 +70,17 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn operator0_timersel(&mut self) -> OPERATOR0_TIMERSEL_W {
-        OPERATOR0_TIMERSEL_W { w: self }
+        OPERATOR0_TIMERSEL_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
     pub fn operator1_timersel(&mut self) -> OPERATOR1_TIMERSEL_W {
-        OPERATOR1_TIMERSEL_W { w: self }
+        OPERATOR1_TIMERSEL_W::new(self)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
     pub fn operator2_timersel(&mut self) -> OPERATOR2_TIMERSEL_W {
-        OPERATOR2_TIMERSEL_W { w: self }
+        OPERATOR2_TIMERSEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

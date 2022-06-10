@@ -35,106 +35,18 @@ impl From<crate::W<CORE_0_STATUSTABLE13_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_FROM_WORLD_13` reader - This bit is used to confirm world before enter entry 13"]
-pub struct CORE_0_FROM_WORLD_13_R(crate::FieldReader<bool>);
-impl CORE_0_FROM_WORLD_13_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_FROM_WORLD_13_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_FROM_WORLD_13_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_FROM_WORLD_13_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_FROM_WORLD_13` writer - This bit is used to confirm world before enter entry 13"]
-pub struct CORE_0_FROM_WORLD_13_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_FROM_WORLD_13_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CORE_0_FROM_WORLD_13_W<'a> = crate::BitWriter<'a, u32, CORE_0_STATUSTABLE13_SPEC, bool, 0>;
 #[doc = "Field `CORE_0_FROM_ENTRY_13` reader - This filed is used to confirm in which entry before enter entry 13"]
-pub struct CORE_0_FROM_ENTRY_13_R(crate::FieldReader<u8>);
-impl CORE_0_FROM_ENTRY_13_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_0_FROM_ENTRY_13_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_FROM_ENTRY_13_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_FROM_ENTRY_13_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_0_FROM_ENTRY_13` writer - This filed is used to confirm in which entry before enter entry 13"]
-pub struct CORE_0_FROM_ENTRY_13_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_FROM_ENTRY_13_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 1)) | ((value as u32 & 0x0f) << 1);
-        self.w
-    }
-}
+pub type CORE_0_FROM_ENTRY_13_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_0_STATUSTABLE13_SPEC, u8, u8, 4, 1>;
 #[doc = "Field `CORE_0_CURRENT_13` reader - This bit is used to confirm whether the current state is in entry 13"]
-pub struct CORE_0_CURRENT_13_R(crate::FieldReader<bool>);
-impl CORE_0_CURRENT_13_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_CURRENT_13_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_CURRENT_13_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_CURRENT_13_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_CURRENT_13` writer - This bit is used to confirm whether the current state is in entry 13"]
-pub struct CORE_0_CURRENT_13_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_CURRENT_13_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CORE_0_CURRENT_13_W<'a> = crate::BitWriter<'a, u32, CORE_0_STATUSTABLE13_SPEC, bool, 5>;
 impl R {
     #[doc = "Bit 0 - This bit is used to confirm world before enter entry 13"]
     #[inline(always)]
@@ -156,17 +68,17 @@ impl W {
     #[doc = "Bit 0 - This bit is used to confirm world before enter entry 13"]
     #[inline(always)]
     pub fn core_0_from_world_13(&mut self) -> CORE_0_FROM_WORLD_13_W {
-        CORE_0_FROM_WORLD_13_W { w: self }
+        CORE_0_FROM_WORLD_13_W::new(self)
     }
     #[doc = "Bits 1:4 - This filed is used to confirm in which entry before enter entry 13"]
     #[inline(always)]
     pub fn core_0_from_entry_13(&mut self) -> CORE_0_FROM_ENTRY_13_W {
-        CORE_0_FROM_ENTRY_13_W { w: self }
+        CORE_0_FROM_ENTRY_13_W::new(self)
     }
     #[doc = "Bit 5 - This bit is used to confirm whether the current state is in entry 13"]
     #[inline(always)]
     pub fn core_0_current_13(&mut self) -> CORE_0_CURRENT_13_W {
-        CORE_0_CURRENT_13_W { w: self }
+        CORE_0_CURRENT_13_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

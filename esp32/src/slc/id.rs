@@ -35,32 +35,9 @@ impl From<crate::W<ID_SPEC>> for W {
     }
 }
 #[doc = "Field `ID` reader - "]
-pub struct ID_R(crate::FieldReader<u32>);
-impl ID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        ID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ID_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ID_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `ID` writer - "]
-pub struct ID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ID_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type ID_W<'a> = crate::FieldWriter<'a, u32, ID_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn id(&mut self) -> ID_W {
-        ID_W { w: self }
+        ID_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

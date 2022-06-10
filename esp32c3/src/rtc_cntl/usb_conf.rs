@@ -35,42 +35,9 @@ impl From<crate::W<USB_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `IO_MUX_RESET_DISABLE` reader - disable io_mux reset"]
-pub struct IO_MUX_RESET_DISABLE_R(crate::FieldReader<bool>);
-impl IO_MUX_RESET_DISABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IO_MUX_RESET_DISABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IO_MUX_RESET_DISABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IO_MUX_RESET_DISABLE_R = crate::BitReader<bool>;
 #[doc = "Field `IO_MUX_RESET_DISABLE` writer - disable io_mux reset"]
-pub struct IO_MUX_RESET_DISABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IO_MUX_RESET_DISABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type IO_MUX_RESET_DISABLE_W<'a> = crate::BitWriter<'a, u32, USB_CONF_SPEC, bool, 18>;
 impl R {
     #[doc = "Bit 18 - disable io_mux reset"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 18 - disable io_mux reset"]
     #[inline(always)]
     pub fn io_mux_reset_disable(&mut self) -> IO_MUX_RESET_DISABLE_W {
-        IO_MUX_RESET_DISABLE_W { w: self }
+        IO_MUX_RESET_DISABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

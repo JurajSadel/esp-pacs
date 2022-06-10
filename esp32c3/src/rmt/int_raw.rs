@@ -14,129 +14,25 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Fields `CH(0-1)_TX_END_INT_RAW` reader - reg_ch%s_tx_end_int_raw."]
-pub struct CH_TX_END_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_TX_END_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_END_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_END_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_END_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(2-3)_RX_END_INT_RAW` reader - reg_ch2_rx_end_int_raw."]
-pub struct CH_RX_END_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_RX_END_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_RX_END_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_RX_END_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_RX_END_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-1)_TX_ERR_INT_RAW` reader - reg_ch%s_err_int_raw."]
-pub struct CH_TX_ERR_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_TX_ERR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_ERR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_ERR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(2-3)_RX_ERR_INT_RAW` reader - reg_ch2_err_int_raw."]
-pub struct CH_RX_ERR_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_RX_ERR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_RX_ERR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_RX_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_RX_ERR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-1)_TX_THR_EVENT_INT_RAW` reader - reg_ch%s_tx_thr_event_int_raw."]
-pub struct CH_TX_THR_EVENT_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_TX_THR_EVENT_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_THR_EVENT_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_THR_EVENT_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CH2_RX_THR_EVENT_INT_RAW` reader - reg_ch2_rx_thr_event_int_raw."]
-pub struct CH2_RX_THR_EVENT_INT_RAW_R(crate::FieldReader<bool>);
-impl CH2_RX_THR_EVENT_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH2_RX_THR_EVENT_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH2_RX_THR_EVENT_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH2_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CH3_RX_THR_EVENT_INT_RAW` reader - reg_ch3_rx_thr_event_int_raw."]
-pub struct CH3_RX_THR_EVENT_INT_RAW_R(crate::FieldReader<bool>);
-impl CH3_RX_THR_EVENT_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH3_RX_THR_EVENT_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH3_RX_THR_EVENT_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH3_RX_THR_EVENT_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-1)_TX_LOOP_INT_RAW` reader - reg_ch%s_tx_loop_int_raw."]
-pub struct CH_TX_LOOP_INT_RAW_R(crate::FieldReader<bool>);
-impl CH_TX_LOOP_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_LOOP_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_LOOP_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_LOOP_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "reg_ch(0-1)_tx_end_int_raw."]
     #[inline(always)]
-    pub unsafe fn ch_tx_end_int_raw(&self, n: usize) -> CH_TX_END_INT_RAW_R {
+    pub unsafe fn ch_tx_end_int_raw(&self, n: u8) -> CH_TX_END_INT_RAW_R {
         CH_TX_END_INT_RAW_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - reg_ch0_tx_end_int_raw."]
@@ -151,7 +47,7 @@ impl R {
     }
     #[doc = "reg_ch2_rx_end_int_raw."]
     #[inline(always)]
-    pub unsafe fn ch_rx_end_int_raw(&self, n: usize) -> CH_RX_END_INT_RAW_R {
+    pub unsafe fn ch_rx_end_int_raw(&self, n: u8) -> CH_RX_END_INT_RAW_R {
         CH_RX_END_INT_RAW_R::new(((self.bits >> (n - 2 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - reg_ch2_rx_end_int_raw."]
@@ -166,7 +62,7 @@ impl R {
     }
     #[doc = "reg_ch(0-1)_err_int_raw."]
     #[inline(always)]
-    pub unsafe fn ch_tx_err_int_raw(&self, n: usize) -> CH_TX_ERR_INT_RAW_R {
+    pub unsafe fn ch_tx_err_int_raw(&self, n: u8) -> CH_TX_ERR_INT_RAW_R {
         CH_TX_ERR_INT_RAW_R::new(((self.bits >> (n + 4)) & 1) != 0)
     }
     #[doc = "Bit 4 - reg_ch0_err_int_raw."]
@@ -181,7 +77,7 @@ impl R {
     }
     #[doc = "reg_ch2_err_int_raw."]
     #[inline(always)]
-    pub unsafe fn ch_rx_err_int_raw(&self, n: usize) -> CH_RX_ERR_INT_RAW_R {
+    pub unsafe fn ch_rx_err_int_raw(&self, n: u8) -> CH_RX_ERR_INT_RAW_R {
         CH_RX_ERR_INT_RAW_R::new(((self.bits >> (n - 2 + 6)) & 1) != 0)
     }
     #[doc = "Bit 6 - reg_ch2_err_int_raw."]
@@ -196,7 +92,7 @@ impl R {
     }
     #[doc = "reg_ch(0-1)_tx_thr_event_int_raw."]
     #[inline(always)]
-    pub unsafe fn ch_tx_thr_event_int_raw(&self, n: usize) -> CH_TX_THR_EVENT_INT_RAW_R {
+    pub unsafe fn ch_tx_thr_event_int_raw(&self, n: u8) -> CH_TX_THR_EVENT_INT_RAW_R {
         CH_TX_THR_EVENT_INT_RAW_R::new(((self.bits >> (n + 8)) & 1) != 0)
     }
     #[doc = "Bit 8 - reg_ch0_tx_thr_event_int_raw."]
@@ -221,7 +117,7 @@ impl R {
     }
     #[doc = "reg_ch(0-1)_tx_loop_int_raw."]
     #[inline(always)]
-    pub unsafe fn ch_tx_loop_int_raw(&self, n: usize) -> CH_TX_LOOP_INT_RAW_R {
+    pub unsafe fn ch_tx_loop_int_raw(&self, n: u8) -> CH_TX_LOOP_INT_RAW_R {
         CH_TX_LOOP_INT_RAW_R::new(((self.bits >> (n + 12)) & 1) != 0)
     }
     #[doc = "Bit 12 - reg_ch0_tx_loop_int_raw."]

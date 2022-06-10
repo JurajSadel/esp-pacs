@@ -35,42 +35,9 @@ impl From<crate::W<CORE_1_RCD_RECORDING_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_RCD_RECORDING` reader - Pdebug record enable,set 1 to record Core1 pdebug interface signal"]
-pub struct CORE_1_RCD_RECORDING_R(crate::FieldReader<bool>);
-impl CORE_1_RCD_RECORDING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_RCD_RECORDING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_RCD_RECORDING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_RCD_RECORDING_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_RCD_RECORDING` writer - Pdebug record enable,set 1 to record Core1 pdebug interface signal"]
-pub struct CORE_1_RCD_RECORDING_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_RCD_RECORDING_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CORE_1_RCD_RECORDING_W<'a> = crate::BitWriter<'a, u32, CORE_1_RCD_RECORDING_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - Pdebug record enable,set 1 to record Core1 pdebug interface signal"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0 - Pdebug record enable,set 1 to record Core1 pdebug interface signal"]
     #[inline(always)]
     pub fn core_1_rcd_recording(&mut self) -> CORE_1_RCD_RECORDING_W {
-        CORE_1_RCD_RECORDING_W { w: self }
+        CORE_1_RCD_RECORDING_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

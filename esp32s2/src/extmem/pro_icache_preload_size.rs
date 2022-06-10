@@ -35,69 +35,15 @@ impl From<crate::W<PRO_ICACHE_PRELOAD_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_PRELOAD_SIZE` reader - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
-pub struct PRO_ICACHE_PRELOAD_SIZE_R(crate::FieldReader<u16>);
-impl PRO_ICACHE_PRELOAD_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PRO_ICACHE_PRELOAD_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ICACHE_PRELOAD_SIZE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ICACHE_PRELOAD_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_SIZE` writer - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
-pub struct PRO_ICACHE_PRELOAD_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ICACHE_PRELOAD_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type PRO_ICACHE_PRELOAD_SIZE_W<'a> =
+    crate::FieldWriter<'a, u32, PRO_ICACHE_PRELOAD_SIZE_SPEC, u16, u16, 10, 0>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_ORDER` reader - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
-pub struct PRO_ICACHE_PRELOAD_ORDER_R(crate::FieldReader<bool>);
-impl PRO_ICACHE_PRELOAD_ORDER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ICACHE_PRELOAD_ORDER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ICACHE_PRELOAD_ORDER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ICACHE_PRELOAD_ORDER_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_ORDER` writer - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
-pub struct PRO_ICACHE_PRELOAD_ORDER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ICACHE_PRELOAD_ORDER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type PRO_ICACHE_PRELOAD_ORDER_W<'a> =
+    crate::BitWriter<'a, u32, PRO_ICACHE_PRELOAD_SIZE_SPEC, bool, 10>;
 impl R {
     #[doc = "Bits 0:9 - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
@@ -114,12 +60,12 @@ impl W {
     #[doc = "Bits 0:9 - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_ICACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
     pub fn pro_icache_preload_size(&mut self) -> PRO_ICACHE_PRELOAD_SIZE_W {
-        PRO_ICACHE_PRELOAD_SIZE_W { w: self }
+        PRO_ICACHE_PRELOAD_SIZE_W::new(self)
     }
     #[doc = "Bit 10 - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
     pub fn pro_icache_preload_order(&mut self) -> PRO_ICACHE_PRELOAD_ORDER_W {
-        PRO_ICACHE_PRELOAD_ORDER_W { w: self }
+        PRO_ICACHE_PRELOAD_ORDER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

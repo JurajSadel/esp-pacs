@@ -14,20 +14,7 @@ impl From<crate::R<LC_STATE1_SPEC>> for R {
     }
 }
 #[doc = "Field `LC_STATE1` reader - "]
-pub struct LC_STATE1_R(crate::FieldReader<u32>);
-impl LC_STATE1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        LC_STATE1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LC_STATE1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LC_STATE1_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

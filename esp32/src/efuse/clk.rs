@@ -35,96 +35,17 @@ impl From<crate::W<CLK_SPEC>> for W {
     }
 }
 #[doc = "Field `SEL0` reader - efuse timing configure"]
-pub struct SEL0_R(crate::FieldReader<u8>);
-impl SEL0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEL0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEL0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEL0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SEL0` writer - efuse timing configure"]
-pub struct SEL0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEL0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type SEL0_W<'a> = crate::FieldWriter<'a, u32, CLK_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `SEL1` reader - efuse timing configure"]
-pub struct SEL1_R(crate::FieldReader<u8>);
-impl SEL1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEL1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEL1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEL1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SEL1` writer - efuse timing configure"]
-pub struct SEL1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEL1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type SEL1_W<'a> = crate::FieldWriter<'a, u32, CLK_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `EN` reader - "]
-pub struct EN_R(crate::FieldReader<bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - "]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type EN_W<'a> = crate::BitWriter<'a, u32, CLK_SPEC, bool, 16>;
 impl R {
     #[doc = "Bits 0:7 - efuse timing configure"]
     #[inline(always)]
@@ -146,17 +67,17 @@ impl W {
     #[doc = "Bits 0:7 - efuse timing configure"]
     #[inline(always)]
     pub fn sel0(&mut self) -> SEL0_W {
-        SEL0_W { w: self }
+        SEL0_W::new(self)
     }
     #[doc = "Bits 8:15 - efuse timing configure"]
     #[inline(always)]
     pub fn sel1(&mut self) -> SEL1_W {
-        SEL1_W { w: self }
+        SEL1_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+        EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

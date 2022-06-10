@@ -14,20 +14,7 @@ impl From<crate::R<FSM_SPEC>> for R {
     }
 }
 #[doc = "Field `ST` reader - The status of SPI1 state machine. 0: idle state(IDLE), 1: preparation state(PREP), 2: send command state(CMD), 3: send address state(ADDR), 4: red data state(DIN), 5:write data state(DOUT), 6: wait state(DUMMY), 7: done state(DONE)."]
-pub struct ST_R(crate::FieldReader<u8>);
-impl ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ST_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:2 - The status of SPI1 state machine. 0: idle state(IDLE), 1: preparation state(PREP), 2: send command state(CMD), 3: send address state(ADDR), 4: red data state(DIN), 5:write data state(DOUT), 6: wait state(DUMMY), 7: done state(DONE)."]
     #[inline(always)]

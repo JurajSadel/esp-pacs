@@ -14,20 +14,7 @@ impl From<crate::R<SAR_READ_STATUS2_SPEC>> for R {
     }
 }
 #[doc = "Field `SAR2_READER_STATUS` reader - "]
-pub struct SAR2_READER_STATUS_R(crate::FieldReader<u32>);
-impl SAR2_READER_STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SAR2_READER_STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_READER_STATUS_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_READER_STATUS_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

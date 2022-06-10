@@ -35,32 +35,10 @@ impl From<crate::W<CORE_0_MESSAGE_MAX_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_MESSAGE_MAX` reader - This filed is used to set the max value of clear write_buffer"]
-pub struct CORE_0_MESSAGE_MAX_R(crate::FieldReader<u8>);
-impl CORE_0_MESSAGE_MAX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CORE_0_MESSAGE_MAX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_MESSAGE_MAX_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_MESSAGE_MAX_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CORE_0_MESSAGE_MAX` writer - This filed is used to set the max value of clear write_buffer"]
-pub struct CORE_0_MESSAGE_MAX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_MESSAGE_MAX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type CORE_0_MESSAGE_MAX_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_0_MESSAGE_MAX_SPEC, u8, u8, 4, 0>;
 impl R {
     #[doc = "Bits 0:3 - This filed is used to set the max value of clear write_buffer"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:3 - This filed is used to set the max value of clear write_buffer"]
     #[inline(always)]
     pub fn core_0_message_max(&mut self) -> CORE_0_MESSAGE_MAX_W {
-        CORE_0_MESSAGE_MAX_W { w: self }
+        CORE_0_MESSAGE_MAX_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

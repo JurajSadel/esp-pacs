@@ -35,232 +35,31 @@ impl From<crate::W<U0_STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_STATUS_U0` reader - "]
-pub struct CORE_STATUS_U0_R(crate::FieldReader<u32>);
-impl CORE_STATUS_U0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_STATUS_U0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_STATUS_U0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_STATUS_U0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `STATUS_CNT_MODE` reader - "]
-pub struct STATUS_CNT_MODE_R(crate::FieldReader<u8>);
-impl STATUS_CNT_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STATUS_CNT_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS_CNT_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATUS_CNT_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `STATUS_CNT_MODE` writer - "]
-pub struct STATUS_CNT_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS_CNT_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type STATUS_CNT_MODE_W<'a> = crate::FieldWriter<'a, u32, U0_STATUS_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `STATUS_THRES1` reader - "]
-pub struct STATUS_THRES1_R(crate::FieldReader<bool>);
-impl STATUS_THRES1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STATUS_THRES1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS_THRES1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATUS_THRES1_R = crate::BitReader<bool>;
 #[doc = "Field `STATUS_THRES1` writer - "]
-pub struct STATUS_THRES1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS_THRES1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type STATUS_THRES1_W<'a> = crate::BitWriter<'a, u32, U0_STATUS_SPEC, bool, 2>;
 #[doc = "Field `STATUS_THRES0` reader - "]
-pub struct STATUS_THRES0_R(crate::FieldReader<bool>);
-impl STATUS_THRES0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STATUS_THRES0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS_THRES0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATUS_THRES0_R = crate::BitReader<bool>;
 #[doc = "Field `STATUS_THRES0` writer - "]
-pub struct STATUS_THRES0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS_THRES0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type STATUS_THRES0_W<'a> = crate::BitWriter<'a, u32, U0_STATUS_SPEC, bool, 3>;
 #[doc = "Field `STATUS_L_LIM` reader - "]
-pub struct STATUS_L_LIM_R(crate::FieldReader<bool>);
-impl STATUS_L_LIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STATUS_L_LIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS_L_LIM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATUS_L_LIM_R = crate::BitReader<bool>;
 #[doc = "Field `STATUS_L_LIM` writer - "]
-pub struct STATUS_L_LIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS_L_LIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type STATUS_L_LIM_W<'a> = crate::BitWriter<'a, u32, U0_STATUS_SPEC, bool, 4>;
 #[doc = "Field `STATUS_H_LIM` reader - "]
-pub struct STATUS_H_LIM_R(crate::FieldReader<bool>);
-impl STATUS_H_LIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STATUS_H_LIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS_H_LIM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATUS_H_LIM_R = crate::BitReader<bool>;
 #[doc = "Field `STATUS_H_LIM` writer - "]
-pub struct STATUS_H_LIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS_H_LIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type STATUS_H_LIM_W<'a> = crate::BitWriter<'a, u32, U0_STATUS_SPEC, bool, 5>;
 #[doc = "Field `STATUS_ZERO` reader - "]
-pub struct STATUS_ZERO_R(crate::FieldReader<bool>);
-impl STATUS_ZERO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STATUS_ZERO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS_ZERO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATUS_ZERO_R = crate::BitReader<bool>;
 #[doc = "Field `STATUS_ZERO` writer - "]
-pub struct STATUS_ZERO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS_ZERO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type STATUS_ZERO_W<'a> = crate::BitWriter<'a, u32, U0_STATUS_SPEC, bool, 6>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -302,32 +101,32 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn status_cnt_mode(&mut self) -> STATUS_CNT_MODE_W {
-        STATUS_CNT_MODE_W { w: self }
+        STATUS_CNT_MODE_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn status_thres1(&mut self) -> STATUS_THRES1_W {
-        STATUS_THRES1_W { w: self }
+        STATUS_THRES1_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn status_thres0(&mut self) -> STATUS_THRES0_W {
-        STATUS_THRES0_W { w: self }
+        STATUS_THRES0_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn status_l_lim(&mut self) -> STATUS_L_LIM_W {
-        STATUS_L_LIM_W { w: self }
+        STATUS_L_LIM_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn status_h_lim(&mut self) -> STATUS_H_LIM_W {
-        STATUS_H_LIM_W { w: self }
+        STATUS_H_LIM_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn status_zero(&mut self) -> STATUS_ZERO_W {
-        STATUS_ZERO_W { w: self }
+        STATUS_ZERO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

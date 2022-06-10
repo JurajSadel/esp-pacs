@@ -35,94 +35,17 @@ impl From<crate::W<APB_PERIPHERAL_INTR_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_PERI_BYTE_ERROR_CLR` reader - The clear signal for APB peripheral interrupt."]
-pub struct APB_PERI_BYTE_ERROR_CLR_R(crate::FieldReader<bool>);
-impl APB_PERI_BYTE_ERROR_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_PERI_BYTE_ERROR_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_PERI_BYTE_ERROR_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_PERI_BYTE_ERROR_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `APB_PERI_BYTE_ERROR_CLR` writer - The clear signal for APB peripheral interrupt."]
-pub struct APB_PERI_BYTE_ERROR_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_PERI_BYTE_ERROR_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type APB_PERI_BYTE_ERROR_CLR_W<'a> =
+    crate::BitWriter<'a, u32, APB_PERIPHERAL_INTR_SPEC, bool, 0>;
 #[doc = "Field `APB_PERI_BYTE_ERROR_EN` reader - The enable signal for APB peripheral access interrupt."]
-pub struct APB_PERI_BYTE_ERROR_EN_R(crate::FieldReader<bool>);
-impl APB_PERI_BYTE_ERROR_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_PERI_BYTE_ERROR_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_PERI_BYTE_ERROR_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_PERI_BYTE_ERROR_EN_R = crate::BitReader<bool>;
 #[doc = "Field `APB_PERI_BYTE_ERROR_EN` writer - The enable signal for APB peripheral access interrupt."]
-pub struct APB_PERI_BYTE_ERROR_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_PERI_BYTE_ERROR_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type APB_PERI_BYTE_ERROR_EN_W<'a> =
+    crate::BitWriter<'a, u32, APB_PERIPHERAL_INTR_SPEC, bool, 1>;
 #[doc = "Field `APB_PERI_BYTE_ERROR_INTR` reader - APB peripheral access interrupt signal."]
-pub struct APB_PERI_BYTE_ERROR_INTR_R(crate::FieldReader<bool>);
-impl APB_PERI_BYTE_ERROR_INTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_PERI_BYTE_ERROR_INTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_PERI_BYTE_ERROR_INTR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_PERI_BYTE_ERROR_INTR_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The clear signal for APB peripheral interrupt."]
     #[inline(always)]
@@ -144,12 +67,12 @@ impl W {
     #[doc = "Bit 0 - The clear signal for APB peripheral interrupt."]
     #[inline(always)]
     pub fn apb_peri_byte_error_clr(&mut self) -> APB_PERI_BYTE_ERROR_CLR_W {
-        APB_PERI_BYTE_ERROR_CLR_W { w: self }
+        APB_PERI_BYTE_ERROR_CLR_W::new(self)
     }
     #[doc = "Bit 1 - The enable signal for APB peripheral access interrupt."]
     #[inline(always)]
     pub fn apb_peri_byte_error_en(&mut self) -> APB_PERI_BYTE_ERROR_EN_W {
-        APB_PERI_BYTE_ERROR_EN_W { w: self }
+        APB_PERI_BYTE_ERROR_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

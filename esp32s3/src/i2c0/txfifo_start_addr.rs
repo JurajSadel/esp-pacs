@@ -14,20 +14,7 @@ impl From<crate::R<TXFIFO_START_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `TXFIFO_START_ADDR` reader - This is the I2C txfifo first address."]
-pub struct TXFIFO_START_ADDR_R(crate::FieldReader<u32>);
-impl TXFIFO_START_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TXFIFO_START_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFIFO_START_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFIFO_START_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This is the I2C txfifo first address."]
     #[inline(always)]

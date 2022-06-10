@@ -35,160 +35,25 @@ impl From<crate::W<CH_RX_CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `DIV_CNT` reader - reg_div_cnt_ch2."]
-pub struct DIV_CNT_R(crate::FieldReader<u8>);
-impl DIV_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DIV_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIV_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIV_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DIV_CNT` writer - reg_div_cnt_ch2."]
-pub struct DIV_CNT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIV_CNT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type DIV_CNT_W<'a> = crate::FieldWriter<'a, u32, CH_RX_CONF0_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `IDLE_THRES` reader - reg_idle_thres_ch2."]
-pub struct IDLE_THRES_R(crate::FieldReader<u16>);
-impl IDLE_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        IDLE_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IDLE_THRES_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IDLE_THRES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `IDLE_THRES` writer - reg_idle_thres_ch2."]
-pub struct IDLE_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IDLE_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7fff << 8)) | ((value as u32 & 0x7fff) << 8);
-        self.w
-    }
-}
+pub type IDLE_THRES_W<'a> = crate::FieldWriter<'a, u32, CH_RX_CONF0_SPEC, u16, u16, 15, 8>;
 #[doc = "Field `MEM_SIZE` reader - reg_mem_size_ch2."]
-pub struct MEM_SIZE_R(crate::FieldReader<u8>);
-impl MEM_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MEM_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_SIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_SIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MEM_SIZE` writer - reg_mem_size_ch2."]
-pub struct MEM_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 23)) | ((value as u32 & 7) << 23);
-        self.w
-    }
-}
+pub type MEM_SIZE_W<'a> = crate::FieldWriter<'a, u32, CH_RX_CONF0_SPEC, u8, u8, 3, 23>;
 #[doc = "Field `CARRIER_EN` reader - reg_carrier_en_ch2."]
-pub struct CARRIER_EN_R(crate::FieldReader<bool>);
-impl CARRIER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARRIER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CARRIER_EN` writer - reg_carrier_en_ch2."]
-pub struct CARRIER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type CARRIER_EN_W<'a> = crate::BitWriter<'a, u32, CH_RX_CONF0_SPEC, bool, 28>;
 #[doc = "Field `CARRIER_OUT_LV` reader - reg_carrier_out_lv_ch2."]
-pub struct CARRIER_OUT_LV_R(crate::FieldReader<bool>);
-impl CARRIER_OUT_LV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CARRIER_OUT_LV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CARRIER_OUT_LV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CARRIER_OUT_LV_R = crate::BitReader<bool>;
 #[doc = "Field `CARRIER_OUT_LV` writer - reg_carrier_out_lv_ch2."]
-pub struct CARRIER_OUT_LV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARRIER_OUT_LV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type CARRIER_OUT_LV_W<'a> = crate::BitWriter<'a, u32, CH_RX_CONF0_SPEC, bool, 29>;
 impl R {
     #[doc = "Bits 0:7 - reg_div_cnt_ch2."]
     #[inline(always)]
@@ -220,27 +85,27 @@ impl W {
     #[doc = "Bits 0:7 - reg_div_cnt_ch2."]
     #[inline(always)]
     pub fn div_cnt(&mut self) -> DIV_CNT_W {
-        DIV_CNT_W { w: self }
+        DIV_CNT_W::new(self)
     }
     #[doc = "Bits 8:22 - reg_idle_thres_ch2."]
     #[inline(always)]
     pub fn idle_thres(&mut self) -> IDLE_THRES_W {
-        IDLE_THRES_W { w: self }
+        IDLE_THRES_W::new(self)
     }
     #[doc = "Bits 23:25 - reg_mem_size_ch2."]
     #[inline(always)]
     pub fn mem_size(&mut self) -> MEM_SIZE_W {
-        MEM_SIZE_W { w: self }
+        MEM_SIZE_W::new(self)
     }
     #[doc = "Bit 28 - reg_carrier_en_ch2."]
     #[inline(always)]
     pub fn carrier_en(&mut self) -> CARRIER_EN_W {
-        CARRIER_EN_W { w: self }
+        CARRIER_EN_W::new(self)
     }
     #[doc = "Bit 29 - reg_carrier_out_lv_ch2."]
     #[inline(always)]
     pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W {
-        CARRIER_OUT_LV_W { w: self }
+        CARRIER_OUT_LV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

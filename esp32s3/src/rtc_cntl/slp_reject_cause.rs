@@ -14,20 +14,7 @@ impl From<crate::R<SLP_REJECT_CAUSE_SPEC>> for R {
     }
 }
 #[doc = "Field `REJECT_CAUSE` reader - sleep reject cause"]
-pub struct REJECT_CAUSE_R(crate::FieldReader<u32>);
-impl REJECT_CAUSE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        REJECT_CAUSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REJECT_CAUSE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REJECT_CAUSE_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:17 - sleep reject cause"]
     #[inline(always)]

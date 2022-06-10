@@ -14,65 +14,13 @@ impl From<crate::R<RX_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `SLC0_RX_FULL` reader - "]
-pub struct SLC0_RX_FULL_R(crate::FieldReader<bool>);
-impl SLC0_RX_FULL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_RX_FULL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_FULL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_FULL_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_RX_EMPTY` reader - "]
-pub struct SLC0_RX_EMPTY_R(crate::FieldReader<bool>);
-impl SLC0_RX_EMPTY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_RX_EMPTY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_EMPTY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_EMPTY_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_RX_FULL` reader - "]
-pub struct SLC1_RX_FULL_R(crate::FieldReader<bool>);
-impl SLC1_RX_FULL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_RX_FULL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_RX_FULL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_RX_FULL_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_RX_EMPTY` reader - "]
-pub struct SLC1_RX_EMPTY_R(crate::FieldReader<bool>);
-impl SLC1_RX_EMPTY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_RX_EMPTY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_RX_EMPTY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_RX_EMPTY_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

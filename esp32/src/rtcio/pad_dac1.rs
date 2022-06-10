@@ -35,456 +35,57 @@ impl From<crate::W<PAD_DAC1_SPEC>> for W {
     }
 }
 #[doc = "Field `PDAC1_DAC_XPD_FORCE` reader - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
-pub struct PDAC1_DAC_XPD_FORCE_R(crate::FieldReader<bool>);
-impl PDAC1_DAC_XPD_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_DAC_XPD_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_DAC_XPD_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_DAC_XPD_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_DAC_XPD_FORCE` writer - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
-pub struct PDAC1_DAC_XPD_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_DAC_XPD_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type PDAC1_DAC_XPD_FORCE_W<'a> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, 10>;
 #[doc = "Field `PDAC1_FUN_IE` reader - the input enable of the pad"]
-pub struct PDAC1_FUN_IE_R(crate::FieldReader<bool>);
-impl PDAC1_FUN_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_FUN_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_FUN_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_FUN_IE_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_FUN_IE` writer - the input enable of the pad"]
-pub struct PDAC1_FUN_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_FUN_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type PDAC1_FUN_IE_W<'a> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, 11>;
 #[doc = "Field `PDAC1_SLP_OE` reader - the output enable of the pad in sleep status"]
-pub struct PDAC1_SLP_OE_R(crate::FieldReader<bool>);
-impl PDAC1_SLP_OE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_SLP_OE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_SLP_OE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_SLP_OE_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_SLP_OE` writer - the output enable of the pad in sleep status"]
-pub struct PDAC1_SLP_OE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_SLP_OE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type PDAC1_SLP_OE_W<'a> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, 12>;
 #[doc = "Field `PDAC1_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct PDAC1_SLP_IE_R(crate::FieldReader<bool>);
-impl PDAC1_SLP_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_SLP_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_SLP_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_SLP_IE_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub struct PDAC1_SLP_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_SLP_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type PDAC1_SLP_IE_W<'a> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, 13>;
 #[doc = "Field `PDAC1_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct PDAC1_SLP_SEL_R(crate::FieldReader<bool>);
-impl PDAC1_SLP_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_SLP_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_SLP_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_SLP_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub struct PDAC1_SLP_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_SLP_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type PDAC1_SLP_SEL_W<'a> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, 14>;
 #[doc = "Field `PDAC1_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct PDAC1_FUN_SEL_R(crate::FieldReader<u8>);
-impl PDAC1_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PDAC1_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PDAC1_FUN_SEL` writer - the functional selection signal of the pad"]
-pub struct PDAC1_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 15)) | ((value as u32 & 3) << 15);
-        self.w
-    }
-}
+pub type PDAC1_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, PAD_DAC1_SPEC, u8, u8, 2, 15>;
 #[doc = "Field `PDAC1_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct PDAC1_MUX_SEL_R(crate::FieldReader<bool>);
-impl PDAC1_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct PDAC1_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type PDAC1_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, 17>;
 #[doc = "Field `PDAC1_XPD_DAC` reader - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
-pub struct PDAC1_XPD_DAC_R(crate::FieldReader<bool>);
-impl PDAC1_XPD_DAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_XPD_DAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_XPD_DAC_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_XPD_DAC_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_XPD_DAC` writer - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
-pub struct PDAC1_XPD_DAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_XPD_DAC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type PDAC1_XPD_DAC_W<'a> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, 18>;
 #[doc = "Field `PDAC1_DAC` reader - PAD DAC1 control code."]
-pub struct PDAC1_DAC_R(crate::FieldReader<u8>);
-impl PDAC1_DAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PDAC1_DAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_DAC_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_DAC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PDAC1_DAC` writer - PAD DAC1 control code."]
-pub struct PDAC1_DAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_DAC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 19)) | ((value as u32 & 0xff) << 19);
-        self.w
-    }
-}
+pub type PDAC1_DAC_W<'a> = crate::FieldWriter<'a, u32, PAD_DAC1_SPEC, u8, u8, 8, 19>;
 #[doc = "Field `PDAC1_RUE` reader - the pull up enable of the pad"]
-pub struct PDAC1_RUE_R(crate::FieldReader<bool>);
-impl PDAC1_RUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_RUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_RUE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_RUE_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_RUE` writer - the pull up enable of the pad"]
-pub struct PDAC1_RUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_RUE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type PDAC1_RUE_W<'a> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, 27>;
 #[doc = "Field `PDAC1_RDE` reader - the pull down enable of the pad"]
-pub struct PDAC1_RDE_R(crate::FieldReader<bool>);
-impl PDAC1_RDE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_RDE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_RDE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_RDE_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_RDE` writer - the pull down enable of the pad"]
-pub struct PDAC1_RDE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_RDE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type PDAC1_RDE_W<'a> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, 28>;
 #[doc = "Field `PDAC1_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct PDAC1_HOLD_R(crate::FieldReader<bool>);
-impl PDAC1_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDAC1_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `PDAC1_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct PDAC1_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type PDAC1_HOLD_W<'a> = crate::BitWriter<'a, u32, PAD_DAC1_SPEC, bool, 29>;
 #[doc = "Field `PDAC1_DRV` reader - the driver strength of the pad"]
-pub struct PDAC1_DRV_R(crate::FieldReader<u8>);
-impl PDAC1_DRV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PDAC1_DRV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDAC1_DRV_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PDAC1_DRV_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PDAC1_DRV` writer - the driver strength of the pad"]
-pub struct PDAC1_DRV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDAC1_DRV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
-        self.w
-    }
-}
+pub type PDAC1_DRV_W<'a> = crate::FieldWriter<'a, u32, PAD_DAC1_SPEC, u8, u8, 2, 30>;
 impl R {
     #[doc = "Bit 10 - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
@@ -556,67 +157,67 @@ impl W {
     #[doc = "Bit 10 - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
     pub fn pdac1_dac_xpd_force(&mut self) -> PDAC1_DAC_XPD_FORCE_W {
-        PDAC1_DAC_XPD_FORCE_W { w: self }
+        PDAC1_DAC_XPD_FORCE_W::new(self)
     }
     #[doc = "Bit 11 - the input enable of the pad"]
     #[inline(always)]
     pub fn pdac1_fun_ie(&mut self) -> PDAC1_FUN_IE_W {
-        PDAC1_FUN_IE_W { w: self }
+        PDAC1_FUN_IE_W::new(self)
     }
     #[doc = "Bit 12 - the output enable of the pad in sleep status"]
     #[inline(always)]
     pub fn pdac1_slp_oe(&mut self) -> PDAC1_SLP_OE_W {
-        PDAC1_SLP_OE_W { w: self }
+        PDAC1_SLP_OE_W::new(self)
     }
     #[doc = "Bit 13 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn pdac1_slp_ie(&mut self) -> PDAC1_SLP_IE_W {
-        PDAC1_SLP_IE_W { w: self }
+        PDAC1_SLP_IE_W::new(self)
     }
     #[doc = "Bit 14 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn pdac1_slp_sel(&mut self) -> PDAC1_SLP_SEL_W {
-        PDAC1_SLP_SEL_W { w: self }
+        PDAC1_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 15:16 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn pdac1_fun_sel(&mut self) -> PDAC1_FUN_SEL_W {
-        PDAC1_FUN_SEL_W { w: self }
+        PDAC1_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 17 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn pdac1_mux_sel(&mut self) -> PDAC1_MUX_SEL_W {
-        PDAC1_MUX_SEL_W { w: self }
+        PDAC1_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 18 - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
     pub fn pdac1_xpd_dac(&mut self) -> PDAC1_XPD_DAC_W {
-        PDAC1_XPD_DAC_W { w: self }
+        PDAC1_XPD_DAC_W::new(self)
     }
     #[doc = "Bits 19:26 - PAD DAC1 control code."]
     #[inline(always)]
     pub fn pdac1_dac(&mut self) -> PDAC1_DAC_W {
-        PDAC1_DAC_W { w: self }
+        PDAC1_DAC_W::new(self)
     }
     #[doc = "Bit 27 - the pull up enable of the pad"]
     #[inline(always)]
     pub fn pdac1_rue(&mut self) -> PDAC1_RUE_W {
-        PDAC1_RUE_W { w: self }
+        PDAC1_RUE_W::new(self)
     }
     #[doc = "Bit 28 - the pull down enable of the pad"]
     #[inline(always)]
     pub fn pdac1_rde(&mut self) -> PDAC1_RDE_W {
-        PDAC1_RDE_W { w: self }
+        PDAC1_RDE_W::new(self)
     }
     #[doc = "Bit 29 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn pdac1_hold(&mut self) -> PDAC1_HOLD_W {
-        PDAC1_HOLD_W { w: self }
+        PDAC1_HOLD_W::new(self)
     }
     #[doc = "Bits 30:31 - the driver strength of the pad"]
     #[inline(always)]
     pub fn pdac1_drv(&mut self) -> PDAC1_DRV_W {
-        PDAC1_DRV_W { w: self }
+        PDAC1_DRV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

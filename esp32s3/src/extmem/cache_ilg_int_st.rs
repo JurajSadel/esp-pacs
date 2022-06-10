@@ -14,185 +14,29 @@ impl From<crate::R<CACHE_ILG_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `ICACHE_SYNC_OP_FAULT_ST` reader - The bit is used to indicate interrupt by sync configurations fault."]
-pub struct ICACHE_SYNC_OP_FAULT_ST_R(crate::FieldReader<bool>);
-impl ICACHE_SYNC_OP_FAULT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_SYNC_OP_FAULT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_SYNC_OP_FAULT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_SYNC_OP_FAULT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `ICACHE_PRELOAD_OP_FAULT_ST` reader - The bit is used to indicate interrupt by preload configurations fault."]
-pub struct ICACHE_PRELOAD_OP_FAULT_ST_R(crate::FieldReader<bool>);
-impl ICACHE_PRELOAD_OP_FAULT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_PRELOAD_OP_FAULT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_PRELOAD_OP_FAULT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_PRELOAD_OP_FAULT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_SYNC_OP_FAULT_ST` reader - The bit is used to indicate interrupt by sync configurations fault."]
-pub struct DCACHE_SYNC_OP_FAULT_ST_R(crate::FieldReader<bool>);
-impl DCACHE_SYNC_OP_FAULT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_SYNC_OP_FAULT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_SYNC_OP_FAULT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_SYNC_OP_FAULT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_PRELOAD_OP_FAULT_ST` reader - The bit is used to indicate interrupt by preload configurations fault."]
-pub struct DCACHE_PRELOAD_OP_FAULT_ST_R(crate::FieldReader<bool>);
-impl DCACHE_PRELOAD_OP_FAULT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_PRELOAD_OP_FAULT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_PRELOAD_OP_FAULT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_PRELOAD_OP_FAULT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_WRITE_FLASH_ST` reader - The bit is used to indicate interrupt by dcache trying to write flash."]
-pub struct DCACHE_WRITE_FLASH_ST_R(crate::FieldReader<bool>);
-impl DCACHE_WRITE_FLASH_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_WRITE_FLASH_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_WRITE_FLASH_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_WRITE_FLASH_ST_R = crate::BitReader<bool>;
 #[doc = "Field `MMU_ENTRY_FAULT_ST` reader - The bit is used to indicate interrupt by mmu entry fault."]
-pub struct MMU_ENTRY_FAULT_ST_R(crate::FieldReader<bool>);
-impl MMU_ENTRY_FAULT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MMU_ENTRY_FAULT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MMU_ENTRY_FAULT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MMU_ENTRY_FAULT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DCACHE_OCCUPY_EXC_ST` reader - The bit is used to indicate interrupt by dcache trying to replace a line whose blocks all have been occupied by occupy-mode."]
-pub struct DCACHE_OCCUPY_EXC_ST_R(crate::FieldReader<bool>);
-impl DCACHE_OCCUPY_EXC_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DCACHE_OCCUPY_EXC_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DCACHE_OCCUPY_EXC_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DCACHE_OCCUPY_EXC_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IBUS_ACS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by ibus access flash/spiram counter overflow."]
-pub struct IBUS_ACS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl IBUS_ACS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IBUS_ACS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IBUS_ACS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IBUS_ACS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `IBUS_ACS_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by ibus access flash/spiram miss counter overflow."]
-pub struct IBUS_ACS_MISS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl IBUS_ACS_MISS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IBUS_ACS_MISS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IBUS_ACS_MISS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IBUS_ACS_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS_ACS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus access flash/spiram counter overflow."]
-pub struct DBUS_ACS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS_ACS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS_ACS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS_ACS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS_ACS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS_ACS_FLASH_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus access flash miss counter overflow."]
-pub struct DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS_ACS_FLASH_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DBUS_ACS_SPIRAM_MISS_CNT_OVF_ST` reader - The bit is used to indicate interrupt by dbus access spiram miss counter overflow."]
-pub struct DBUS_ACS_SPIRAM_MISS_CNT_OVF_ST_R(crate::FieldReader<bool>);
-impl DBUS_ACS_SPIRAM_MISS_CNT_OVF_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DBUS_ACS_SPIRAM_MISS_CNT_OVF_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DBUS_ACS_SPIRAM_MISS_CNT_OVF_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DBUS_ACS_SPIRAM_MISS_CNT_OVF_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The bit is used to indicate interrupt by sync configurations fault."]
     #[inline(always)]

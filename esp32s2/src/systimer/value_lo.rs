@@ -14,20 +14,7 @@ impl From<crate::R<VALUE_LO_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER_VALUE_LO` reader - System timer value, low 32 bits."]
-pub struct TIMER_VALUE_LO_R(crate::FieldReader<u32>);
-impl TIMER_VALUE_LO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TIMER_VALUE_LO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER_VALUE_LO_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER_VALUE_LO_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - System timer value, low 32 bits."]
     #[inline(always)]

@@ -14,20 +14,7 @@ impl From<crate::R<EXTMEM_REJECT_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `EXTMEM_REJECT_ADDR` reader - This register store the first address rejected by permission control when accessing external RAM."]
-pub struct EXTMEM_REJECT_ADDR_R(crate::FieldReader<u32>);
-impl EXTMEM_REJECT_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        EXTMEM_REJECT_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTMEM_REJECT_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTMEM_REJECT_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register store the first address rejected by permission control when accessing external RAM."]
     #[inline(always)]

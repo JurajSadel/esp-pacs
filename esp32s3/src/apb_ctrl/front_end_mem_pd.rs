@@ -35,301 +35,37 @@ impl From<crate::W<FRONT_END_MEM_PD_SPEC>> for W {
     }
 }
 #[doc = "Field `AGC_MEM_FORCE_PU` reader - ******* Description ***********"]
-pub struct AGC_MEM_FORCE_PU_R(crate::FieldReader<bool>);
-impl AGC_MEM_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AGC_MEM_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AGC_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AGC_MEM_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `AGC_MEM_FORCE_PU` writer - ******* Description ***********"]
-pub struct AGC_MEM_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AGC_MEM_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type AGC_MEM_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, 0>;
 #[doc = "Field `AGC_MEM_FORCE_PD` reader - ******* Description ***********"]
-pub struct AGC_MEM_FORCE_PD_R(crate::FieldReader<bool>);
-impl AGC_MEM_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AGC_MEM_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AGC_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AGC_MEM_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `AGC_MEM_FORCE_PD` writer - ******* Description ***********"]
-pub struct AGC_MEM_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AGC_MEM_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type AGC_MEM_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, 1>;
 #[doc = "Field `PBUS_MEM_FORCE_PU` reader - ******* Description ***********"]
-pub struct PBUS_MEM_FORCE_PU_R(crate::FieldReader<bool>);
-impl PBUS_MEM_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PBUS_MEM_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PBUS_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PBUS_MEM_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `PBUS_MEM_FORCE_PU` writer - ******* Description ***********"]
-pub struct PBUS_MEM_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PBUS_MEM_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PBUS_MEM_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, 2>;
 #[doc = "Field `PBUS_MEM_FORCE_PD` reader - ******* Description ***********"]
-pub struct PBUS_MEM_FORCE_PD_R(crate::FieldReader<bool>);
-impl PBUS_MEM_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PBUS_MEM_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PBUS_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PBUS_MEM_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `PBUS_MEM_FORCE_PD` writer - ******* Description ***********"]
-pub struct PBUS_MEM_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PBUS_MEM_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type PBUS_MEM_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, 3>;
 #[doc = "Field `DC_MEM_FORCE_PU` reader - ******* Description ***********"]
-pub struct DC_MEM_FORCE_PU_R(crate::FieldReader<bool>);
-impl DC_MEM_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DC_MEM_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DC_MEM_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `DC_MEM_FORCE_PU` writer - ******* Description ***********"]
-pub struct DC_MEM_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DC_MEM_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type DC_MEM_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, 4>;
 #[doc = "Field `DC_MEM_FORCE_PD` reader - ******* Description ***********"]
-pub struct DC_MEM_FORCE_PD_R(crate::FieldReader<bool>);
-impl DC_MEM_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DC_MEM_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DC_MEM_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `DC_MEM_FORCE_PD` writer - ******* Description ***********"]
-pub struct DC_MEM_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DC_MEM_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type DC_MEM_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, 5>;
 #[doc = "Field `FREQ_MEM_FORCE_PU` reader - ******* Description ***********"]
-pub struct FREQ_MEM_FORCE_PU_R(crate::FieldReader<bool>);
-impl FREQ_MEM_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FREQ_MEM_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FREQ_MEM_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FREQ_MEM_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `FREQ_MEM_FORCE_PU` writer - ******* Description ***********"]
-pub struct FREQ_MEM_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FREQ_MEM_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type FREQ_MEM_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, 6>;
 #[doc = "Field `FREQ_MEM_FORCE_PD` reader - ******* Description ***********"]
-pub struct FREQ_MEM_FORCE_PD_R(crate::FieldReader<bool>);
-impl FREQ_MEM_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FREQ_MEM_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FREQ_MEM_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FREQ_MEM_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `FREQ_MEM_FORCE_PD` writer - ******* Description ***********"]
-pub struct FREQ_MEM_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FREQ_MEM_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type FREQ_MEM_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, FRONT_END_MEM_PD_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
@@ -376,42 +112,42 @@ impl W {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
     pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W {
-        AGC_MEM_FORCE_PU_W { w: self }
+        AGC_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 1 - ******* Description ***********"]
     #[inline(always)]
     pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W {
-        AGC_MEM_FORCE_PD_W { w: self }
+        AGC_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 2 - ******* Description ***********"]
     #[inline(always)]
     pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W {
-        PBUS_MEM_FORCE_PU_W { w: self }
+        PBUS_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 3 - ******* Description ***********"]
     #[inline(always)]
     pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W {
-        PBUS_MEM_FORCE_PD_W { w: self }
+        PBUS_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 4 - ******* Description ***********"]
     #[inline(always)]
     pub fn dc_mem_force_pu(&mut self) -> DC_MEM_FORCE_PU_W {
-        DC_MEM_FORCE_PU_W { w: self }
+        DC_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 5 - ******* Description ***********"]
     #[inline(always)]
     pub fn dc_mem_force_pd(&mut self) -> DC_MEM_FORCE_PD_W {
-        DC_MEM_FORCE_PD_W { w: self }
+        DC_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 6 - ******* Description ***********"]
     #[inline(always)]
     pub fn freq_mem_force_pu(&mut self) -> FREQ_MEM_FORCE_PU_W {
-        FREQ_MEM_FORCE_PU_W { w: self }
+        FREQ_MEM_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 7 - ******* Description ***********"]
     #[inline(always)]
     pub fn freq_mem_force_pd(&mut self) -> FREQ_MEM_FORCE_PD_W {
-        FREQ_MEM_FORCE_PD_W { w: self }
+        FREQ_MEM_FORCE_PD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,20 +14,7 @@ impl From<crate::R<STATE1_SPEC>> for R {
     }
 }
 #[doc = "Field `ENCODE_STATE` reader - UHCI encoder status."]
-pub struct ENCODE_STATE_R(crate::FieldReader<u8>);
-impl ENCODE_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ENCODE_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENCODE_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENCODE_STATE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:2 - UHCI encoder status."]
     #[inline(always)]

@@ -14,35 +14,9 @@ impl From<crate::R<FSM_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `ST_URX_OUT` reader - This is the status register of receiver."]
-pub struct ST_URX_OUT_R(crate::FieldReader<u8>);
-impl ST_URX_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ST_URX_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ST_URX_OUT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ST_URX_OUT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ST_UTX_OUT` reader - This is the status register of transmitter."]
-pub struct ST_UTX_OUT_R(crate::FieldReader<u8>);
-impl ST_UTX_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ST_UTX_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ST_UTX_OUT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ST_UTX_OUT_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:3 - This is the status register of receiver."]
     #[inline(always)]

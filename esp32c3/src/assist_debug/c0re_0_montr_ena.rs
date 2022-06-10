@@ -35,449 +35,59 @@ impl From<crate::W<C0RE_0_MONTR_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_AREA_DRAM0_0_RD_ENA` reader - reg_core_0_area_dram0_0_rd_ena"]
-pub struct CORE_0_AREA_DRAM0_0_RD_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_AREA_DRAM0_0_RD_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_AREA_DRAM0_0_RD_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_AREA_DRAM0_0_RD_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_AREA_DRAM0_0_RD_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_AREA_DRAM0_0_RD_ENA` writer - reg_core_0_area_dram0_0_rd_ena"]
-pub struct CORE_0_AREA_DRAM0_0_RD_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_AREA_DRAM0_0_RD_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CORE_0_AREA_DRAM0_0_RD_ENA_W<'a> =
+    crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 0>;
 #[doc = "Field `CORE_0_AREA_DRAM0_0_WR_ENA` reader - reg_core_0_area_dram0_0_wr_ena"]
-pub struct CORE_0_AREA_DRAM0_0_WR_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_AREA_DRAM0_0_WR_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_AREA_DRAM0_0_WR_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_AREA_DRAM0_0_WR_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_AREA_DRAM0_0_WR_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_AREA_DRAM0_0_WR_ENA` writer - reg_core_0_area_dram0_0_wr_ena"]
-pub struct CORE_0_AREA_DRAM0_0_WR_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_AREA_DRAM0_0_WR_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CORE_0_AREA_DRAM0_0_WR_ENA_W<'a> =
+    crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 1>;
 #[doc = "Field `CORE_0_AREA_DRAM0_1_RD_ENA` reader - reg_core_0_area_dram0_1_rd_ena"]
-pub struct CORE_0_AREA_DRAM0_1_RD_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_AREA_DRAM0_1_RD_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_AREA_DRAM0_1_RD_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_AREA_DRAM0_1_RD_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_AREA_DRAM0_1_RD_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_AREA_DRAM0_1_RD_ENA` writer - reg_core_0_area_dram0_1_rd_ena"]
-pub struct CORE_0_AREA_DRAM0_1_RD_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_AREA_DRAM0_1_RD_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CORE_0_AREA_DRAM0_1_RD_ENA_W<'a> =
+    crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 2>;
 #[doc = "Field `CORE_0_AREA_DRAM0_1_WR_ENA` reader - reg_core_0_area_dram0_1_wr_ena"]
-pub struct CORE_0_AREA_DRAM0_1_WR_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_AREA_DRAM0_1_WR_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_AREA_DRAM0_1_WR_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_AREA_DRAM0_1_WR_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_AREA_DRAM0_1_WR_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_AREA_DRAM0_1_WR_ENA` writer - reg_core_0_area_dram0_1_wr_ena"]
-pub struct CORE_0_AREA_DRAM0_1_WR_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_AREA_DRAM0_1_WR_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CORE_0_AREA_DRAM0_1_WR_ENA_W<'a> =
+    crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 3>;
 #[doc = "Field `CORE_0_AREA_PIF_0_RD_ENA` reader - reg_core_0_area_pif_0_rd_ena"]
-pub struct CORE_0_AREA_PIF_0_RD_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_AREA_PIF_0_RD_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_AREA_PIF_0_RD_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_AREA_PIF_0_RD_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_AREA_PIF_0_RD_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_AREA_PIF_0_RD_ENA` writer - reg_core_0_area_pif_0_rd_ena"]
-pub struct CORE_0_AREA_PIF_0_RD_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_AREA_PIF_0_RD_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type CORE_0_AREA_PIF_0_RD_ENA_W<'a> = crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 4>;
 #[doc = "Field `CORE_0_AREA_PIF_0_WR_ENA` reader - reg_core_0_area_pif_0_wr_ena"]
-pub struct CORE_0_AREA_PIF_0_WR_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_AREA_PIF_0_WR_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_AREA_PIF_0_WR_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_AREA_PIF_0_WR_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_AREA_PIF_0_WR_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_AREA_PIF_0_WR_ENA` writer - reg_core_0_area_pif_0_wr_ena"]
-pub struct CORE_0_AREA_PIF_0_WR_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_AREA_PIF_0_WR_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CORE_0_AREA_PIF_0_WR_ENA_W<'a> = crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 5>;
 #[doc = "Field `CORE_0_AREA_PIF_1_RD_ENA` reader - reg_core_0_area_pif_1_rd_ena"]
-pub struct CORE_0_AREA_PIF_1_RD_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_AREA_PIF_1_RD_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_AREA_PIF_1_RD_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_AREA_PIF_1_RD_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_AREA_PIF_1_RD_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_AREA_PIF_1_RD_ENA` writer - reg_core_0_area_pif_1_rd_ena"]
-pub struct CORE_0_AREA_PIF_1_RD_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_AREA_PIF_1_RD_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CORE_0_AREA_PIF_1_RD_ENA_W<'a> = crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 6>;
 #[doc = "Field `CORE_0_AREA_PIF_1_WR_ENA` reader - reg_core_0_area_pif_1_wr_ena"]
-pub struct CORE_0_AREA_PIF_1_WR_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_AREA_PIF_1_WR_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_AREA_PIF_1_WR_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_AREA_PIF_1_WR_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_AREA_PIF_1_WR_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_AREA_PIF_1_WR_ENA` writer - reg_core_0_area_pif_1_wr_ena"]
-pub struct CORE_0_AREA_PIF_1_WR_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_AREA_PIF_1_WR_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type CORE_0_AREA_PIF_1_WR_ENA_W<'a> = crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 7>;
 #[doc = "Field `CORE_0_SP_SPILL_MIN_ENA` reader - reg_core_0_sp_spill_min_ena"]
-pub struct CORE_0_SP_SPILL_MIN_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_SP_SPILL_MIN_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_SP_SPILL_MIN_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_SP_SPILL_MIN_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_SP_SPILL_MIN_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_SP_SPILL_MIN_ENA` writer - reg_core_0_sp_spill_min_ena"]
-pub struct CORE_0_SP_SPILL_MIN_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_SP_SPILL_MIN_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type CORE_0_SP_SPILL_MIN_ENA_W<'a> = crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 8>;
 #[doc = "Field `CORE_0_SP_SPILL_MAX_ENA` reader - reg_core_0_sp_spill_max_ena"]
-pub struct CORE_0_SP_SPILL_MAX_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_SP_SPILL_MAX_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_SP_SPILL_MAX_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_SP_SPILL_MAX_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_SP_SPILL_MAX_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_SP_SPILL_MAX_ENA` writer - reg_core_0_sp_spill_max_ena"]
-pub struct CORE_0_SP_SPILL_MAX_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_SP_SPILL_MAX_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type CORE_0_SP_SPILL_MAX_ENA_W<'a> = crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 9>;
 #[doc = "Field `CORE_0_IRAM0_EXCEPTION_MONITOR_ENA` reader - reg_core_0_iram0_exception_monitor_ena"]
-pub struct CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_IRAM0_EXCEPTION_MONITOR_ENA` writer - reg_core_0_iram0_exception_monitor_ena"]
-pub struct CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W<'a> =
+    crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 10>;
 #[doc = "Field `CORE_0_DRAM0_EXCEPTION_MONITOR_ENA` reader - reg_core_0_dram0_exception_monitor_ena"]
-pub struct CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R(crate::FieldReader<bool>);
-impl CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_DRAM0_EXCEPTION_MONITOR_ENA` writer - reg_core_0_dram0_exception_monitor_ena"]
-pub struct CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W<'a> =
+    crate::BitWriter<'a, u32, C0RE_0_MONTR_ENA_SPEC, bool, 11>;
 impl R {
     #[doc = "Bit 0 - reg_core_0_area_dram0_0_rd_ena"]
     #[inline(always)]
@@ -544,62 +154,62 @@ impl W {
     #[doc = "Bit 0 - reg_core_0_area_dram0_0_rd_ena"]
     #[inline(always)]
     pub fn core_0_area_dram0_0_rd_ena(&mut self) -> CORE_0_AREA_DRAM0_0_RD_ENA_W {
-        CORE_0_AREA_DRAM0_0_RD_ENA_W { w: self }
+        CORE_0_AREA_DRAM0_0_RD_ENA_W::new(self)
     }
     #[doc = "Bit 1 - reg_core_0_area_dram0_0_wr_ena"]
     #[inline(always)]
     pub fn core_0_area_dram0_0_wr_ena(&mut self) -> CORE_0_AREA_DRAM0_0_WR_ENA_W {
-        CORE_0_AREA_DRAM0_0_WR_ENA_W { w: self }
+        CORE_0_AREA_DRAM0_0_WR_ENA_W::new(self)
     }
     #[doc = "Bit 2 - reg_core_0_area_dram0_1_rd_ena"]
     #[inline(always)]
     pub fn core_0_area_dram0_1_rd_ena(&mut self) -> CORE_0_AREA_DRAM0_1_RD_ENA_W {
-        CORE_0_AREA_DRAM0_1_RD_ENA_W { w: self }
+        CORE_0_AREA_DRAM0_1_RD_ENA_W::new(self)
     }
     #[doc = "Bit 3 - reg_core_0_area_dram0_1_wr_ena"]
     #[inline(always)]
     pub fn core_0_area_dram0_1_wr_ena(&mut self) -> CORE_0_AREA_DRAM0_1_WR_ENA_W {
-        CORE_0_AREA_DRAM0_1_WR_ENA_W { w: self }
+        CORE_0_AREA_DRAM0_1_WR_ENA_W::new(self)
     }
     #[doc = "Bit 4 - reg_core_0_area_pif_0_rd_ena"]
     #[inline(always)]
     pub fn core_0_area_pif_0_rd_ena(&mut self) -> CORE_0_AREA_PIF_0_RD_ENA_W {
-        CORE_0_AREA_PIF_0_RD_ENA_W { w: self }
+        CORE_0_AREA_PIF_0_RD_ENA_W::new(self)
     }
     #[doc = "Bit 5 - reg_core_0_area_pif_0_wr_ena"]
     #[inline(always)]
     pub fn core_0_area_pif_0_wr_ena(&mut self) -> CORE_0_AREA_PIF_0_WR_ENA_W {
-        CORE_0_AREA_PIF_0_WR_ENA_W { w: self }
+        CORE_0_AREA_PIF_0_WR_ENA_W::new(self)
     }
     #[doc = "Bit 6 - reg_core_0_area_pif_1_rd_ena"]
     #[inline(always)]
     pub fn core_0_area_pif_1_rd_ena(&mut self) -> CORE_0_AREA_PIF_1_RD_ENA_W {
-        CORE_0_AREA_PIF_1_RD_ENA_W { w: self }
+        CORE_0_AREA_PIF_1_RD_ENA_W::new(self)
     }
     #[doc = "Bit 7 - reg_core_0_area_pif_1_wr_ena"]
     #[inline(always)]
     pub fn core_0_area_pif_1_wr_ena(&mut self) -> CORE_0_AREA_PIF_1_WR_ENA_W {
-        CORE_0_AREA_PIF_1_WR_ENA_W { w: self }
+        CORE_0_AREA_PIF_1_WR_ENA_W::new(self)
     }
     #[doc = "Bit 8 - reg_core_0_sp_spill_min_ena"]
     #[inline(always)]
     pub fn core_0_sp_spill_min_ena(&mut self) -> CORE_0_SP_SPILL_MIN_ENA_W {
-        CORE_0_SP_SPILL_MIN_ENA_W { w: self }
+        CORE_0_SP_SPILL_MIN_ENA_W::new(self)
     }
     #[doc = "Bit 9 - reg_core_0_sp_spill_max_ena"]
     #[inline(always)]
     pub fn core_0_sp_spill_max_ena(&mut self) -> CORE_0_SP_SPILL_MAX_ENA_W {
-        CORE_0_SP_SPILL_MAX_ENA_W { w: self }
+        CORE_0_SP_SPILL_MAX_ENA_W::new(self)
     }
     #[doc = "Bit 10 - reg_core_0_iram0_exception_monitor_ena"]
     #[inline(always)]
     pub fn core_0_iram0_exception_monitor_ena(&mut self) -> CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W {
-        CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W { w: self }
+        CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W::new(self)
     }
     #[doc = "Bit 11 - reg_core_0_dram0_exception_monitor_ena"]
     #[inline(always)]
     pub fn core_0_dram0_exception_monitor_ena(&mut self) -> CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W {
-        CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W { w: self }
+        CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

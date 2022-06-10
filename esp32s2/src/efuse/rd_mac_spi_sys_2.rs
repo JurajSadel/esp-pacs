@@ -14,20 +14,7 @@ impl From<crate::R<RD_MAC_SPI_SYS_2_SPEC>> for R {
     }
 }
 #[doc = "Field `SPI_PAD_CONF_1` reader - Stores the first part of SPI_PAD_CONF."]
-pub struct SPI_PAD_CONF_1_R(crate::FieldReader<u32>);
-impl SPI_PAD_CONF_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SPI_PAD_CONF_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_PAD_CONF_1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_PAD_CONF_1_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the first part of SPI_PAD_CONF."]
     #[inline(always)]

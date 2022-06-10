@@ -35,32 +35,9 @@ impl From<crate::W<SRAM_ACE0_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM_ACE0_SIZE` reader - ******* Description ***********"]
-pub struct SRAM_ACE0_SIZE_R(crate::FieldReader<u16>);
-impl SRAM_ACE0_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SRAM_ACE0_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRAM_ACE0_SIZE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRAM_ACE0_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SRAM_ACE0_SIZE` writer - ******* Description ***********"]
-pub struct SRAM_ACE0_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_ACE0_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type SRAM_ACE0_SIZE_W<'a> = crate::FieldWriter<'a, u32, SRAM_ACE0_SIZE_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15 - ******* Description ***********"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:15 - ******* Description ***********"]
     #[inline(always)]
     pub fn sram_ace0_size(&mut self) -> SRAM_ACE0_SIZE_W {
-        SRAM_ACE0_SIZE_W { w: self }
+        SRAM_ACE0_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

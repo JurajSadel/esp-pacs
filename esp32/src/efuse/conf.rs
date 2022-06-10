@@ -35,69 +35,13 @@ impl From<crate::W<CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `OP_CODE` reader - efuse operation code"]
-pub struct OP_CODE_R(crate::FieldReader<u16>);
-impl OP_CODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        OP_CODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OP_CODE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OP_CODE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `OP_CODE` writer - efuse operation code"]
-pub struct OP_CODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OP_CODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type OP_CODE_W<'a> = crate::FieldWriter<'a, u32, CONF_SPEC, u16, u16, 16, 0>;
 #[doc = "Field `FORCE_NO_WR_RD_DIS` reader - "]
-pub struct FORCE_NO_WR_RD_DIS_R(crate::FieldReader<bool>);
-impl FORCE_NO_WR_RD_DIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_NO_WR_RD_DIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_NO_WR_RD_DIS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_NO_WR_RD_DIS_R = crate::BitReader<bool>;
 #[doc = "Field `FORCE_NO_WR_RD_DIS` writer - "]
-pub struct FORCE_NO_WR_RD_DIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_NO_WR_RD_DIS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type FORCE_NO_WR_RD_DIS_W<'a> = crate::BitWriter<'a, u32, CONF_SPEC, bool, 16>;
 impl R {
     #[doc = "Bits 0:15 - efuse operation code"]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:15 - efuse operation code"]
     #[inline(always)]
     pub fn op_code(&mut self) -> OP_CODE_W {
-        OP_CODE_W { w: self }
+        OP_CODE_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn force_no_wr_rd_dis(&mut self) -> FORCE_NO_WR_RD_DIS_W {
-        FORCE_NO_WR_RD_DIS_W { w: self }
+        FORCE_NO_WR_RD_DIS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

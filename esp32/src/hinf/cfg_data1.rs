@@ -35,413 +35,55 @@ impl From<crate::W<CFG_DATA1_SPEC>> for W {
     }
 }
 #[doc = "Field `SDIO_ENABLE` reader - "]
-pub struct SDIO_ENABLE_R(crate::FieldReader<bool>);
-impl SDIO_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_ENABLE` writer - "]
-pub struct SDIO_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SDIO_ENABLE_W<'a> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, 0>;
 #[doc = "Field `SDIO_IOREADY1` reader - "]
-pub struct SDIO_IOREADY1_R(crate::FieldReader<bool>);
-impl SDIO_IOREADY1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_IOREADY1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_IOREADY1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_IOREADY1_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_IOREADY1` writer - "]
-pub struct SDIO_IOREADY1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_IOREADY1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SDIO_IOREADY1_W<'a> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, 1>;
 #[doc = "Field `HIGHSPEED_ENABLE` reader - "]
-pub struct HIGHSPEED_ENABLE_R(crate::FieldReader<bool>);
-impl HIGHSPEED_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HIGHSPEED_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HIGHSPEED_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HIGHSPEED_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `HIGHSPEED_ENABLE` writer - "]
-pub struct HIGHSPEED_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HIGHSPEED_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type HIGHSPEED_ENABLE_W<'a> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, 2>;
 #[doc = "Field `HIGHSPEED_MODE` reader - "]
-pub struct HIGHSPEED_MODE_R(crate::FieldReader<bool>);
-impl HIGHSPEED_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HIGHSPEED_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HIGHSPEED_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HIGHSPEED_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_CD_ENABLE` reader - "]
-pub struct SDIO_CD_ENABLE_R(crate::FieldReader<bool>);
-impl SDIO_CD_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_CD_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_CD_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_CD_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_CD_ENABLE` writer - "]
-pub struct SDIO_CD_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_CD_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SDIO_CD_ENABLE_W<'a> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, 4>;
 #[doc = "Field `SDIO_IOREADY2` reader - "]
-pub struct SDIO_IOREADY2_R(crate::FieldReader<bool>);
-impl SDIO_IOREADY2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_IOREADY2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_IOREADY2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_IOREADY2_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_IOREADY2` writer - "]
-pub struct SDIO_IOREADY2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_IOREADY2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type SDIO_IOREADY2_W<'a> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, 5>;
 #[doc = "Field `SDIO_INT_MASK` reader - "]
-pub struct SDIO_INT_MASK_R(crate::FieldReader<bool>);
-impl SDIO_INT_MASK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_INT_MASK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_INT_MASK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_INT_MASK_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_INT_MASK` writer - "]
-pub struct SDIO_INT_MASK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_INT_MASK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type SDIO_INT_MASK_W<'a> = crate::BitWriter<'a, u32, CFG_DATA1_SPEC, bool, 6>;
 #[doc = "Field `IOENABLE2` reader - "]
-pub struct IOENABLE2_R(crate::FieldReader<bool>);
-impl IOENABLE2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IOENABLE2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IOENABLE2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IOENABLE2_R = crate::BitReader<bool>;
 #[doc = "Field `CD_DISABLE` reader - "]
-pub struct CD_DISABLE_R(crate::FieldReader<bool>);
-impl CD_DISABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CD_DISABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CD_DISABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CD_DISABLE_R = crate::BitReader<bool>;
 #[doc = "Field `FUNC1_EPS` reader - "]
-pub struct FUNC1_EPS_R(crate::FieldReader<bool>);
-impl FUNC1_EPS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FUNC1_EPS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FUNC1_EPS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FUNC1_EPS_R = crate::BitReader<bool>;
 #[doc = "Field `EMP` reader - "]
-pub struct EMP_R(crate::FieldReader<bool>);
-impl EMP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EMP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EMP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EMP_R = crate::BitReader<bool>;
 #[doc = "Field `IOENABLE1` reader - "]
-pub struct IOENABLE1_R(crate::FieldReader<bool>);
-impl IOENABLE1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IOENABLE1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IOENABLE1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IOENABLE1_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO20_CONF0` reader - "]
-pub struct SDIO20_CONF0_R(crate::FieldReader<u8>);
-impl SDIO20_CONF0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SDIO20_CONF0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO20_CONF0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO20_CONF0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SDIO20_CONF0` writer - "]
-pub struct SDIO20_CONF0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO20_CONF0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u32 & 0x0f) << 12);
-        self.w
-    }
-}
+pub type SDIO20_CONF0_W<'a> = crate::FieldWriter<'a, u32, CFG_DATA1_SPEC, u8, u8, 4, 12>;
 #[doc = "Field `SDIO_VER` reader - "]
-pub struct SDIO_VER_R(crate::FieldReader<u16>);
-impl SDIO_VER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SDIO_VER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_VER_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_VER_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SDIO_VER` writer - "]
-pub struct SDIO_VER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_VER_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 16)) | ((value as u32 & 0x0fff) << 16);
-        self.w
-    }
-}
+pub type SDIO_VER_W<'a> = crate::FieldWriter<'a, u32, CFG_DATA1_SPEC, u16, u16, 12, 16>;
 #[doc = "Field `FUNC2_EPS` reader - "]
-pub struct FUNC2_EPS_R(crate::FieldReader<bool>);
-impl FUNC2_EPS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FUNC2_EPS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FUNC2_EPS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FUNC2_EPS_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO20_CONF1` reader - "]
-pub struct SDIO20_CONF1_R(crate::FieldReader<u8>);
-impl SDIO20_CONF1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SDIO20_CONF1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO20_CONF1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO20_CONF1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SDIO20_CONF1` writer - "]
-pub struct SDIO20_CONF1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO20_CONF1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 29)) | ((value as u32 & 7) << 29);
-        self.w
-    }
-}
+pub type SDIO20_CONF1_W<'a> = crate::FieldWriter<'a, u32, CFG_DATA1_SPEC, u8, u8, 3, 29>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -528,47 +170,47 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn sdio_enable(&mut self) -> SDIO_ENABLE_W {
-        SDIO_ENABLE_W { w: self }
+        SDIO_ENABLE_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn sdio_ioready1(&mut self) -> SDIO_IOREADY1_W {
-        SDIO_IOREADY1_W { w: self }
+        SDIO_IOREADY1_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn highspeed_enable(&mut self) -> HIGHSPEED_ENABLE_W {
-        HIGHSPEED_ENABLE_W { w: self }
+        HIGHSPEED_ENABLE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn sdio_cd_enable(&mut self) -> SDIO_CD_ENABLE_W {
-        SDIO_CD_ENABLE_W { w: self }
+        SDIO_CD_ENABLE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn sdio_ioready2(&mut self) -> SDIO_IOREADY2_W {
-        SDIO_IOREADY2_W { w: self }
+        SDIO_IOREADY2_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn sdio_int_mask(&mut self) -> SDIO_INT_MASK_W {
-        SDIO_INT_MASK_W { w: self }
+        SDIO_INT_MASK_W::new(self)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
     pub fn sdio20_conf0(&mut self) -> SDIO20_CONF0_W {
-        SDIO20_CONF0_W { w: self }
+        SDIO20_CONF0_W::new(self)
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
     pub fn sdio_ver(&mut self) -> SDIO_VER_W {
-        SDIO_VER_W { w: self }
+        SDIO_VER_W::new(self)
     }
     #[doc = "Bits 29:31"]
     #[inline(always)]
     pub fn sdio20_conf1(&mut self) -> SDIO20_CONF1_W {
-        SDIO20_CONF1_W { w: self }
+        SDIO20_CONF1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -20,140 +20,40 @@ impl From<crate::W<CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_REQ` writer - Set the bit to 1 to allow the driving nodes start transmission."]
-pub struct TX_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TX_REQ_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 0>;
 #[doc = "Field `ABORT_TX` writer - Set the bit to 1 to cancel a pending transmission request."]
-pub struct ABORT_TX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ABORT_TX_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ABORT_TX_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 1>;
 #[doc = "Field `RELEASE_BUF` writer - Set the bit to 1 to release the RX buffer."]
-pub struct RELEASE_BUF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RELEASE_BUF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type RELEASE_BUF_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 2>;
 #[doc = "Field `CLR_OVERRUN` writer - Set the bit to 1 to clear the data overrun status bit."]
-pub struct CLR_OVERRUN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLR_OVERRUN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CLR_OVERRUN_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 3>;
 #[doc = "Field `SELF_RX_REQ` writer - Self reception request command. Set the bit to 1 to allow a message be transmitted and received simultaneously."]
-pub struct SELF_RX_REQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SELF_RX_REQ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SELF_RX_REQ_W<'a> = crate::BitWriter<'a, u32, CMD_SPEC, bool, 4>;
 impl W {
     #[doc = "Bit 0 - Set the bit to 1 to allow the driving nodes start transmission."]
     #[inline(always)]
     pub fn tx_req(&mut self) -> TX_REQ_W {
-        TX_REQ_W { w: self }
+        TX_REQ_W::new(self)
     }
     #[doc = "Bit 1 - Set the bit to 1 to cancel a pending transmission request."]
     #[inline(always)]
     pub fn abort_tx(&mut self) -> ABORT_TX_W {
-        ABORT_TX_W { w: self }
+        ABORT_TX_W::new(self)
     }
     #[doc = "Bit 2 - Set the bit to 1 to release the RX buffer."]
     #[inline(always)]
     pub fn release_buf(&mut self) -> RELEASE_BUF_W {
-        RELEASE_BUF_W { w: self }
+        RELEASE_BUF_W::new(self)
     }
     #[doc = "Bit 3 - Set the bit to 1 to clear the data overrun status bit."]
     #[inline(always)]
     pub fn clr_overrun(&mut self) -> CLR_OVERRUN_W {
-        CLR_OVERRUN_W { w: self }
+        CLR_OVERRUN_W::new(self)
     }
     #[doc = "Bit 4 - Self reception request command. Set the bit to 1 to allow a message be transmitted and received simultaneously."]
     #[inline(always)]
     pub fn self_rx_req(&mut self) -> SELF_RX_REQ_W {
-        SELF_RX_REQ_W { w: self }
+        SELF_RX_REQ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

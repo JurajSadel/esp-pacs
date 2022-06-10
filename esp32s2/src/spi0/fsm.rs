@@ -35,47 +35,11 @@ impl From<crate::W<FSM_SPEC>> for W {
     }
 }
 #[doc = "Field `ST` reader - The status of spi state machine. 0: idle state, 1: preparation state, 2: send command state, 3: send data state, 4: red data state, 5:write data state, 6: wait state, 7: done state."]
-pub struct ST_R(crate::FieldReader<u8>);
-impl ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MST_DMA_RD_BYTELEN` reader - Define the master DMA read byte length in non seg-conf-trans or seg-conf-trans mode. Invalid when SPI_RX_EOF_EN is 0. Can be configured in CONF state.."]
-pub struct MST_DMA_RD_BYTELEN_R(crate::FieldReader<u32>);
-impl MST_DMA_RD_BYTELEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        MST_DMA_RD_BYTELEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MST_DMA_RD_BYTELEN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MST_DMA_RD_BYTELEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `MST_DMA_RD_BYTELEN` writer - Define the master DMA read byte length in non seg-conf-trans or seg-conf-trans mode. Invalid when SPI_RX_EOF_EN is 0. Can be configured in CONF state.."]
-pub struct MST_DMA_RD_BYTELEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MST_DMA_RD_BYTELEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x000f_ffff << 12)) | ((value as u32 & 0x000f_ffff) << 12);
-        self.w
-    }
-}
+pub type MST_DMA_RD_BYTELEN_W<'a> = crate::FieldWriter<'a, u32, FSM_SPEC, u32, u32, 20, 12>;
 impl R {
     #[doc = "Bits 0:3 - The status of spi state machine. 0: idle state, 1: preparation state, 2: send command state, 3: send data state, 4: red data state, 5:write data state, 6: wait state, 7: done state."]
     #[inline(always)]
@@ -92,7 +56,7 @@ impl W {
     #[doc = "Bits 12:31 - Define the master DMA read byte length in non seg-conf-trans or seg-conf-trans mode. Invalid when SPI_RX_EOF_EN is 0. Can be configured in CONF state.."]
     #[inline(always)]
     pub fn mst_dma_rd_bytelen(&mut self) -> MST_DMA_RD_BYTELEN_W {
-        MST_DMA_RD_BYTELEN_W { w: self }
+        MST_DMA_RD_BYTELEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

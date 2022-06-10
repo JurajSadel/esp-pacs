@@ -35,32 +35,10 @@ impl From<crate::W<TRACEMEM_MUX_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `TRACEMEM_MUX_MODE` reader - "]
-pub struct TRACEMEM_MUX_MODE_R(crate::FieldReader<u8>);
-impl TRACEMEM_MUX_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TRACEMEM_MUX_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRACEMEM_MUX_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRACEMEM_MUX_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TRACEMEM_MUX_MODE` writer - "]
-pub struct TRACEMEM_MUX_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TRACEMEM_MUX_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type TRACEMEM_MUX_MODE_W<'a> =
+    crate::FieldWriter<'a, u32, TRACEMEM_MUX_MODE_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn tracemem_mux_mode(&mut self) -> TRACEMEM_MUX_MODE_W {
-        TRACEMEM_MUX_MODE_W { w: self }
+        TRACEMEM_MUX_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

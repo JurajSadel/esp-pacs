@@ -35,204 +35,33 @@ impl From<crate::W<DBG_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_DEBUG_12M_NO_GATING` reader - use for debug"]
-pub struct RTC_DEBUG_12M_NO_GATING_R(crate::FieldReader<bool>);
-impl RTC_DEBUG_12M_NO_GATING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_DEBUG_12M_NO_GATING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_DEBUG_12M_NO_GATING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_DEBUG_12M_NO_GATING_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_DEBUG_12M_NO_GATING` writer - use for debug"]
-pub struct RTC_DEBUG_12M_NO_GATING_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_DEBUG_12M_NO_GATING_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type RTC_DEBUG_12M_NO_GATING_W<'a> = crate::BitWriter<'a, u32, DBG_SEL_SPEC, bool, 1>;
 #[doc = "Field `RTC_DEBUG_BIT_SEL` reader - use for debug"]
-pub struct RTC_DEBUG_BIT_SEL_R(crate::FieldReader<u8>);
-impl RTC_DEBUG_BIT_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_DEBUG_BIT_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_DEBUG_BIT_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_DEBUG_BIT_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_DEBUG_BIT_SEL` writer - use for debug"]
-pub struct RTC_DEBUG_BIT_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_DEBUG_BIT_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 2)) | ((value as u32 & 0x1f) << 2);
-        self.w
-    }
-}
+pub type RTC_DEBUG_BIT_SEL_W<'a> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, 2>;
 #[doc = "Field `RTC_DEBUG_SEL0` reader - use for debug"]
-pub struct RTC_DEBUG_SEL0_R(crate::FieldReader<u8>);
-impl RTC_DEBUG_SEL0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_DEBUG_SEL0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_DEBUG_SEL0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_DEBUG_SEL0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_DEBUG_SEL0` writer - use for debug"]
-pub struct RTC_DEBUG_SEL0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_DEBUG_SEL0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 7)) | ((value as u32 & 0x1f) << 7);
-        self.w
-    }
-}
+pub type RTC_DEBUG_SEL0_W<'a> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, 7>;
 #[doc = "Field `RTC_DEBUG_SEL1` reader - use for debug"]
-pub struct RTC_DEBUG_SEL1_R(crate::FieldReader<u8>);
-impl RTC_DEBUG_SEL1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_DEBUG_SEL1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_DEBUG_SEL1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_DEBUG_SEL1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_DEBUG_SEL1` writer - use for debug"]
-pub struct RTC_DEBUG_SEL1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_DEBUG_SEL1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 12)) | ((value as u32 & 0x1f) << 12);
-        self.w
-    }
-}
+pub type RTC_DEBUG_SEL1_W<'a> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, 12>;
 #[doc = "Field `RTC_DEBUG_SEL2` reader - use for debug"]
-pub struct RTC_DEBUG_SEL2_R(crate::FieldReader<u8>);
-impl RTC_DEBUG_SEL2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_DEBUG_SEL2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_DEBUG_SEL2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_DEBUG_SEL2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_DEBUG_SEL2` writer - use for debug"]
-pub struct RTC_DEBUG_SEL2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_DEBUG_SEL2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 17)) | ((value as u32 & 0x1f) << 17);
-        self.w
-    }
-}
+pub type RTC_DEBUG_SEL2_W<'a> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, 17>;
 #[doc = "Field `RTC_DEBUG_SEL3` reader - use for debug"]
-pub struct RTC_DEBUG_SEL3_R(crate::FieldReader<u8>);
-impl RTC_DEBUG_SEL3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_DEBUG_SEL3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_DEBUG_SEL3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_DEBUG_SEL3_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_DEBUG_SEL3` writer - use for debug"]
-pub struct RTC_DEBUG_SEL3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_DEBUG_SEL3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 22)) | ((value as u32 & 0x1f) << 22);
-        self.w
-    }
-}
+pub type RTC_DEBUG_SEL3_W<'a> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, 22>;
 #[doc = "Field `RTC_DEBUG_SEL4` reader - use for debug"]
-pub struct RTC_DEBUG_SEL4_R(crate::FieldReader<u8>);
-impl RTC_DEBUG_SEL4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RTC_DEBUG_SEL4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_DEBUG_SEL4_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_DEBUG_SEL4_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RTC_DEBUG_SEL4` writer - use for debug"]
-pub struct RTC_DEBUG_SEL4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_DEBUG_SEL4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 27)) | ((value as u32 & 0x1f) << 27);
-        self.w
-    }
-}
+pub type RTC_DEBUG_SEL4_W<'a> = crate::FieldWriter<'a, u32, DBG_SEL_SPEC, u8, u8, 5, 27>;
 impl R {
     #[doc = "Bit 1 - use for debug"]
     #[inline(always)]
@@ -274,37 +103,37 @@ impl W {
     #[doc = "Bit 1 - use for debug"]
     #[inline(always)]
     pub fn rtc_debug_12m_no_gating(&mut self) -> RTC_DEBUG_12M_NO_GATING_W {
-        RTC_DEBUG_12M_NO_GATING_W { w: self }
+        RTC_DEBUG_12M_NO_GATING_W::new(self)
     }
     #[doc = "Bits 2:6 - use for debug"]
     #[inline(always)]
     pub fn rtc_debug_bit_sel(&mut self) -> RTC_DEBUG_BIT_SEL_W {
-        RTC_DEBUG_BIT_SEL_W { w: self }
+        RTC_DEBUG_BIT_SEL_W::new(self)
     }
     #[doc = "Bits 7:11 - use for debug"]
     #[inline(always)]
     pub fn rtc_debug_sel0(&mut self) -> RTC_DEBUG_SEL0_W {
-        RTC_DEBUG_SEL0_W { w: self }
+        RTC_DEBUG_SEL0_W::new(self)
     }
     #[doc = "Bits 12:16 - use for debug"]
     #[inline(always)]
     pub fn rtc_debug_sel1(&mut self) -> RTC_DEBUG_SEL1_W {
-        RTC_DEBUG_SEL1_W { w: self }
+        RTC_DEBUG_SEL1_W::new(self)
     }
     #[doc = "Bits 17:21 - use for debug"]
     #[inline(always)]
     pub fn rtc_debug_sel2(&mut self) -> RTC_DEBUG_SEL2_W {
-        RTC_DEBUG_SEL2_W { w: self }
+        RTC_DEBUG_SEL2_W::new(self)
     }
     #[doc = "Bits 22:26 - use for debug"]
     #[inline(always)]
     pub fn rtc_debug_sel3(&mut self) -> RTC_DEBUG_SEL3_W {
-        RTC_DEBUG_SEL3_W { w: self }
+        RTC_DEBUG_SEL3_W::new(self)
     }
     #[doc = "Bits 27:31 - use for debug"]
     #[inline(always)]
     pub fn rtc_debug_sel4(&mut self) -> RTC_DEBUG_SEL4_W {
-        RTC_DEBUG_SEL4_W { w: self }
+        RTC_DEBUG_SEL4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

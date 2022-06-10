@@ -35,429 +35,55 @@ impl From<crate::W<RX_DSCR_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SLC0_TOKEN_NO_REPLACE` reader - "]
-pub struct SLC0_TOKEN_NO_REPLACE_R(crate::FieldReader<bool>);
-impl SLC0_TOKEN_NO_REPLACE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_TOKEN_NO_REPLACE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_TOKEN_NO_REPLACE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_TOKEN_NO_REPLACE_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_TOKEN_NO_REPLACE` writer - "]
-pub struct SLC0_TOKEN_NO_REPLACE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_TOKEN_NO_REPLACE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SLC0_TOKEN_NO_REPLACE_W<'a> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, 0>;
 #[doc = "Field `SLC0_INFOR_NO_REPLACE` reader - "]
-pub struct SLC0_INFOR_NO_REPLACE_R(crate::FieldReader<bool>);
-impl SLC0_INFOR_NO_REPLACE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_INFOR_NO_REPLACE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_INFOR_NO_REPLACE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_INFOR_NO_REPLACE_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_INFOR_NO_REPLACE` writer - "]
-pub struct SLC0_INFOR_NO_REPLACE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_INFOR_NO_REPLACE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SLC0_INFOR_NO_REPLACE_W<'a> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, 1>;
 #[doc = "Field `SLC0_RX_FILL_MODE` reader - "]
-pub struct SLC0_RX_FILL_MODE_R(crate::FieldReader<bool>);
-impl SLC0_RX_FILL_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_RX_FILL_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_FILL_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_FILL_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_RX_FILL_MODE` writer - "]
-pub struct SLC0_RX_FILL_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_RX_FILL_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type SLC0_RX_FILL_MODE_W<'a> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, 2>;
 #[doc = "Field `SLC0_RX_EOF_MODE` reader - "]
-pub struct SLC0_RX_EOF_MODE_R(crate::FieldReader<bool>);
-impl SLC0_RX_EOF_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_RX_EOF_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_EOF_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_EOF_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_RX_EOF_MODE` writer - "]
-pub struct SLC0_RX_EOF_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_RX_EOF_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type SLC0_RX_EOF_MODE_W<'a> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, 3>;
 #[doc = "Field `SLC0_RX_FILL_EN` reader - "]
-pub struct SLC0_RX_FILL_EN_R(crate::FieldReader<bool>);
-impl SLC0_RX_FILL_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC0_RX_FILL_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RX_FILL_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RX_FILL_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC0_RX_FILL_EN` writer - "]
-pub struct SLC0_RX_FILL_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_RX_FILL_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SLC0_RX_FILL_EN_W<'a> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, 4>;
 #[doc = "Field `SLC0_RD_RETRY_THRESHOLD` reader - "]
-pub struct SLC0_RD_RETRY_THRESHOLD_R(crate::FieldReader<u16>);
-impl SLC0_RD_RETRY_THRESHOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SLC0_RD_RETRY_THRESHOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC0_RD_RETRY_THRESHOLD_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC0_RD_RETRY_THRESHOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC0_RD_RETRY_THRESHOLD` writer - "]
-pub struct SLC0_RD_RETRY_THRESHOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC0_RD_RETRY_THRESHOLD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff << 5)) | ((value as u32 & 0x07ff) << 5);
-        self.w
-    }
-}
+pub type SLC0_RD_RETRY_THRESHOLD_W<'a> =
+    crate::FieldWriter<'a, u32, RX_DSCR_CONF_SPEC, u16, u16, 11, 5>;
 #[doc = "Field `SLC1_TOKEN_NO_REPLACE` reader - "]
-pub struct SLC1_TOKEN_NO_REPLACE_R(crate::FieldReader<bool>);
-impl SLC1_TOKEN_NO_REPLACE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_TOKEN_NO_REPLACE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_TOKEN_NO_REPLACE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_TOKEN_NO_REPLACE_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_TOKEN_NO_REPLACE` writer - "]
-pub struct SLC1_TOKEN_NO_REPLACE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_TOKEN_NO_REPLACE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SLC1_TOKEN_NO_REPLACE_W<'a> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, 16>;
 #[doc = "Field `SLC1_INFOR_NO_REPLACE` reader - "]
-pub struct SLC1_INFOR_NO_REPLACE_R(crate::FieldReader<bool>);
-impl SLC1_INFOR_NO_REPLACE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_INFOR_NO_REPLACE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_INFOR_NO_REPLACE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_INFOR_NO_REPLACE_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_INFOR_NO_REPLACE` writer - "]
-pub struct SLC1_INFOR_NO_REPLACE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_INFOR_NO_REPLACE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type SLC1_INFOR_NO_REPLACE_W<'a> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, 17>;
 #[doc = "Field `SLC1_RX_FILL_MODE` reader - "]
-pub struct SLC1_RX_FILL_MODE_R(crate::FieldReader<bool>);
-impl SLC1_RX_FILL_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_RX_FILL_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_RX_FILL_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_RX_FILL_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_RX_FILL_MODE` writer - "]
-pub struct SLC1_RX_FILL_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_RX_FILL_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type SLC1_RX_FILL_MODE_W<'a> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, 18>;
 #[doc = "Field `SLC1_RX_EOF_MODE` reader - "]
-pub struct SLC1_RX_EOF_MODE_R(crate::FieldReader<bool>);
-impl SLC1_RX_EOF_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_RX_EOF_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_RX_EOF_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_RX_EOF_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_RX_EOF_MODE` writer - "]
-pub struct SLC1_RX_EOF_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_RX_EOF_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type SLC1_RX_EOF_MODE_W<'a> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, 19>;
 #[doc = "Field `SLC1_RX_FILL_EN` reader - "]
-pub struct SLC1_RX_FILL_EN_R(crate::FieldReader<bool>);
-impl SLC1_RX_FILL_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLC1_RX_FILL_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_RX_FILL_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_RX_FILL_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SLC1_RX_FILL_EN` writer - "]
-pub struct SLC1_RX_FILL_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_RX_FILL_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type SLC1_RX_FILL_EN_W<'a> = crate::BitWriter<'a, u32, RX_DSCR_CONF_SPEC, bool, 20>;
 #[doc = "Field `SLC1_RD_RETRY_THRESHOLD` reader - "]
-pub struct SLC1_RD_RETRY_THRESHOLD_R(crate::FieldReader<u16>);
-impl SLC1_RD_RETRY_THRESHOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SLC1_RD_RETRY_THRESHOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLC1_RD_RETRY_THRESHOLD_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLC1_RD_RETRY_THRESHOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SLC1_RD_RETRY_THRESHOLD` writer - "]
-pub struct SLC1_RD_RETRY_THRESHOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLC1_RD_RETRY_THRESHOLD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff << 21)) | ((value as u32 & 0x07ff) << 21);
-        self.w
-    }
-}
+pub type SLC1_RD_RETRY_THRESHOLD_W<'a> =
+    crate::FieldWriter<'a, u32, RX_DSCR_CONF_SPEC, u16, u16, 11, 21>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -524,62 +150,62 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn slc0_token_no_replace(&mut self) -> SLC0_TOKEN_NO_REPLACE_W {
-        SLC0_TOKEN_NO_REPLACE_W { w: self }
+        SLC0_TOKEN_NO_REPLACE_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn slc0_infor_no_replace(&mut self) -> SLC0_INFOR_NO_REPLACE_W {
-        SLC0_INFOR_NO_REPLACE_W { w: self }
+        SLC0_INFOR_NO_REPLACE_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn slc0_rx_fill_mode(&mut self) -> SLC0_RX_FILL_MODE_W {
-        SLC0_RX_FILL_MODE_W { w: self }
+        SLC0_RX_FILL_MODE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn slc0_rx_eof_mode(&mut self) -> SLC0_RX_EOF_MODE_W {
-        SLC0_RX_EOF_MODE_W { w: self }
+        SLC0_RX_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn slc0_rx_fill_en(&mut self) -> SLC0_RX_FILL_EN_W {
-        SLC0_RX_FILL_EN_W { w: self }
+        SLC0_RX_FILL_EN_W::new(self)
     }
     #[doc = "Bits 5:15"]
     #[inline(always)]
     pub fn slc0_rd_retry_threshold(&mut self) -> SLC0_RD_RETRY_THRESHOLD_W {
-        SLC0_RD_RETRY_THRESHOLD_W { w: self }
+        SLC0_RD_RETRY_THRESHOLD_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn slc1_token_no_replace(&mut self) -> SLC1_TOKEN_NO_REPLACE_W {
-        SLC1_TOKEN_NO_REPLACE_W { w: self }
+        SLC1_TOKEN_NO_REPLACE_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn slc1_infor_no_replace(&mut self) -> SLC1_INFOR_NO_REPLACE_W {
-        SLC1_INFOR_NO_REPLACE_W { w: self }
+        SLC1_INFOR_NO_REPLACE_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn slc1_rx_fill_mode(&mut self) -> SLC1_RX_FILL_MODE_W {
-        SLC1_RX_FILL_MODE_W { w: self }
+        SLC1_RX_FILL_MODE_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     pub fn slc1_rx_eof_mode(&mut self) -> SLC1_RX_EOF_MODE_W {
-        SLC1_RX_EOF_MODE_W { w: self }
+        SLC1_RX_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn slc1_rx_fill_en(&mut self) -> SLC1_RX_FILL_EN_W {
-        SLC1_RX_FILL_EN_W { w: self }
+        SLC1_RX_FILL_EN_W::new(self)
     }
     #[doc = "Bits 21:31"]
     #[inline(always)]
     pub fn slc1_rd_retry_threshold(&mut self) -> SLC1_RD_RETRY_THRESHOLD_W {
-        SLC1_RD_RETRY_THRESHOLD_W { w: self }
+        SLC1_RD_RETRY_THRESHOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

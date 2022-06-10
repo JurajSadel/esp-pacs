@@ -14,20 +14,7 @@ impl From<crate::R<PRO_INTRUSION_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_INTRUSION_RECORD` reader - "]
-pub struct PRO_INTRUSION_RECORD_R(crate::FieldReader<u8>);
-impl PRO_INTRUSION_RECORD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PRO_INTRUSION_RECORD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_INTRUSION_RECORD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_INTRUSION_RECORD_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]

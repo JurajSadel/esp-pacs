@@ -20,113 +20,33 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC2_THRES_INT_CLR` writer - Clear bit of APB_SARADC_ADC2_THRES_INT interrupt."]
-pub struct ADC2_THRES_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_THRES_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type ADC2_THRES_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 28>;
 #[doc = "Field `ADC1_THRES_INT_CLR` writer - Clear bit of APB_SARADC_ADC1_THRES_INT interrupt."]
-pub struct ADC1_THRES_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_THRES_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type ADC1_THRES_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 29>;
 #[doc = "Field `ADC2_DONE_INT_CLR` writer - Clear bit of APB_SARADC_ADC2_DONE_INT interrupt."]
-pub struct ADC2_DONE_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_DONE_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type ADC2_DONE_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 30>;
 #[doc = "Field `ADC1_DONE_INT_CLR` writer - Clear bit of APB_SARADC_ADC1_DONE_INT interrupt."]
-pub struct ADC1_DONE_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_DONE_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type ADC1_DONE_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 31>;
 impl W {
     #[doc = "Bit 28 - Clear bit of APB_SARADC_ADC2_THRES_INT interrupt."]
     #[inline(always)]
     pub fn adc2_thres_int_clr(&mut self) -> ADC2_THRES_INT_CLR_W {
-        ADC2_THRES_INT_CLR_W { w: self }
+        ADC2_THRES_INT_CLR_W::new(self)
     }
     #[doc = "Bit 29 - Clear bit of APB_SARADC_ADC1_THRES_INT interrupt."]
     #[inline(always)]
     pub fn adc1_thres_int_clr(&mut self) -> ADC1_THRES_INT_CLR_W {
-        ADC1_THRES_INT_CLR_W { w: self }
+        ADC1_THRES_INT_CLR_W::new(self)
     }
     #[doc = "Bit 30 - Clear bit of APB_SARADC_ADC2_DONE_INT interrupt."]
     #[inline(always)]
     pub fn adc2_done_int_clr(&mut self) -> ADC2_DONE_INT_CLR_W {
-        ADC2_DONE_INT_CLR_W { w: self }
+        ADC2_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 31 - Clear bit of APB_SARADC_ADC1_DONE_INT interrupt."]
     #[inline(always)]
     pub fn adc1_done_int_clr(&mut self) -> ADC1_DONE_INT_CLR_W {
-        ADC1_DONE_INT_CLR_W { w: self }
+        ADC1_DONE_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

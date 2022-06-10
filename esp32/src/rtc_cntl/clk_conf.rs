@@ -54,13 +54,9 @@ impl From<CK8M_DIV_A> for u8 {
     }
 }
 #[doc = "Field `CK8M_DIV` reader - CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024."]
-pub struct CK8M_DIV_R(crate::FieldReader<u8>);
+pub type CK8M_DIV_R = crate::FieldReader<u8, CK8M_DIV_A>;
 impl CK8M_DIV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CK8M_DIV_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CK8M_DIV_A {
         match self.bits {
@@ -74,41 +70,27 @@ impl CK8M_DIV_R {
     #[doc = "Checks if the value of the field is `DIV128`"]
     #[inline(always)]
     pub fn is_div128(&self) -> bool {
-        **self == CK8M_DIV_A::DIV128
+        *self == CK8M_DIV_A::DIV128
     }
     #[doc = "Checks if the value of the field is `DIV256`"]
     #[inline(always)]
     pub fn is_div256(&self) -> bool {
-        **self == CK8M_DIV_A::DIV256
+        *self == CK8M_DIV_A::DIV256
     }
     #[doc = "Checks if the value of the field is `DIV512`"]
     #[inline(always)]
     pub fn is_div512(&self) -> bool {
-        **self == CK8M_DIV_A::DIV512
+        *self == CK8M_DIV_A::DIV512
     }
     #[doc = "Checks if the value of the field is `DIV1024`"]
     #[inline(always)]
     pub fn is_div1024(&self) -> bool {
-        **self == CK8M_DIV_A::DIV1024
-    }
-}
-impl core::ops::Deref for CK8M_DIV_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CK8M_DIV_A::DIV1024
     }
 }
 #[doc = "Field `CK8M_DIV` writer - CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024."]
-pub struct CK8M_DIV_W<'a> {
-    w: &'a mut W,
-}
+pub type CK8M_DIV_W<'a> = crate::FieldWriterSafe<'a, u32, CLK_CONF_SPEC, u8, CK8M_DIV_A, 2, 4>;
 impl<'a> CK8M_DIV_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CK8M_DIV_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
     #[doc = "`0`"]
     #[inline(always)]
     pub fn div128(self) -> &'a mut W {
@@ -129,50 +111,11 @@ impl<'a> CK8M_DIV_W<'a> {
     pub fn div1024(self) -> &'a mut W {
         self.variant(CK8M_DIV_A::DIV1024)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
 }
 #[doc = "Field `ENB_CK8M` reader - disable CK8M and CK8M_D256_OUT"]
-pub struct ENB_CK8M_R(crate::FieldReader<bool>);
-impl ENB_CK8M_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENB_CK8M_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENB_CK8M_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENB_CK8M_R = crate::BitReader<bool>;
 #[doc = "Field `ENB_CK8M` writer - disable CK8M and CK8M_D256_OUT"]
-pub struct ENB_CK8M_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENB_CK8M_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type ENB_CK8M_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 6>;
 #[doc = "1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ENB_CK8M_DIV_A {
@@ -188,13 +131,9 @@ impl From<ENB_CK8M_DIV_A> for bool {
     }
 }
 #[doc = "Field `ENB_CK8M_DIV` reader - 1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256"]
-pub struct ENB_CK8M_DIV_R(crate::FieldReader<bool>);
+pub type ENB_CK8M_DIV_R = crate::BitReader<ENB_CK8M_DIV_A>;
 impl ENB_CK8M_DIV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENB_CK8M_DIV_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> ENB_CK8M_DIV_A {
         match self.bits {
@@ -205,31 +144,17 @@ impl ENB_CK8M_DIV_R {
     #[doc = "Checks if the value of the field is `CK8M_DIV_256`"]
     #[inline(always)]
     pub fn is_ck8m_div_256(&self) -> bool {
-        **self == ENB_CK8M_DIV_A::CK8M_DIV_256
+        *self == ENB_CK8M_DIV_A::CK8M_DIV_256
     }
     #[doc = "Checks if the value of the field is `CK8M`"]
     #[inline(always)]
     pub fn is_ck8m(&self) -> bool {
-        **self == ENB_CK8M_DIV_A::CK8M
-    }
-}
-impl core::ops::Deref for ENB_CK8M_DIV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == ENB_CK8M_DIV_A::CK8M
     }
 }
 #[doc = "Field `ENB_CK8M_DIV` writer - 1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256"]
-pub struct ENB_CK8M_DIV_W<'a> {
-    w: &'a mut W,
-}
+pub type ENB_CK8M_DIV_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, ENB_CK8M_DIV_A, 7>;
 impl<'a> ENB_CK8M_DIV_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: ENB_CK8M_DIV_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "`0`"]
     #[inline(always)]
     pub fn ck8m_div_256(self) -> &'a mut W {
@@ -240,373 +165,47 @@ impl<'a> ENB_CK8M_DIV_W<'a> {
     pub fn ck8m(self) -> &'a mut W {
         self.variant(ENB_CK8M_DIV_A::CK8M)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
 }
 #[doc = "Field `DIG_XTAL32K_EN` reader - enable CK_XTAL_32K for digital core (no relationship with RTC core)"]
-pub struct DIG_XTAL32K_EN_R(crate::FieldReader<bool>);
-impl DIG_XTAL32K_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIG_XTAL32K_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIG_XTAL32K_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIG_XTAL32K_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DIG_XTAL32K_EN` writer - enable CK_XTAL_32K for digital core (no relationship with RTC core)"]
-pub struct DIG_XTAL32K_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIG_XTAL32K_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type DIG_XTAL32K_EN_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 8>;
 #[doc = "Field `DIG_CLK8M_D256_EN` reader - enable CK8M_D256_OUT for digital core (no relationship with RTC core)"]
-pub struct DIG_CLK8M_D256_EN_R(crate::FieldReader<bool>);
-impl DIG_CLK8M_D256_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIG_CLK8M_D256_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIG_CLK8M_D256_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIG_CLK8M_D256_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DIG_CLK8M_D256_EN` writer - enable CK8M_D256_OUT for digital core (no relationship with RTC core)"]
-pub struct DIG_CLK8M_D256_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIG_CLK8M_D256_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type DIG_CLK8M_D256_EN_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 9>;
 #[doc = "Field `DIG_CLK8M_EN` reader - enable CK8M for digital core (no relationship with RTC core)"]
-pub struct DIG_CLK8M_EN_R(crate::FieldReader<bool>);
-impl DIG_CLK8M_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIG_CLK8M_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIG_CLK8M_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIG_CLK8M_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DIG_CLK8M_EN` writer - enable CK8M for digital core (no relationship with RTC core)"]
-pub struct DIG_CLK8M_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIG_CLK8M_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type DIG_CLK8M_EN_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 10>;
 #[doc = "Field `CK8M_DFREQ_FORCE` reader - "]
-pub struct CK8M_DFREQ_FORCE_R(crate::FieldReader<bool>);
-impl CK8M_DFREQ_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CK8M_DFREQ_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK8M_DFREQ_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK8M_DFREQ_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `CK8M_DFREQ_FORCE` writer - "]
-pub struct CK8M_DFREQ_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK8M_DFREQ_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type CK8M_DFREQ_FORCE_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 11>;
 #[doc = "Field `CK8M_DIV_SEL` reader - divider = reg_ck8m_div_sel + 1"]
-pub struct CK8M_DIV_SEL_R(crate::FieldReader<u8>);
-impl CK8M_DIV_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CK8M_DIV_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK8M_DIV_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK8M_DIV_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CK8M_DIV_SEL` writer - divider = reg_ck8m_div_sel + 1"]
-pub struct CK8M_DIV_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK8M_DIV_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
-        self.w
-    }
-}
+pub type CK8M_DIV_SEL_W<'a> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 3, 12>;
 #[doc = "Field `XTAL_FORCE_NOGATING` reader - XTAL force no gating during sleep"]
-pub struct XTAL_FORCE_NOGATING_R(crate::FieldReader<bool>);
-impl XTAL_FORCE_NOGATING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XTAL_FORCE_NOGATING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XTAL_FORCE_NOGATING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XTAL_FORCE_NOGATING_R = crate::BitReader<bool>;
 #[doc = "Field `XTAL_FORCE_NOGATING` writer - XTAL force no gating during sleep"]
-pub struct XTAL_FORCE_NOGATING_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XTAL_FORCE_NOGATING_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type XTAL_FORCE_NOGATING_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 15>;
 #[doc = "Field `CK8M_FORCE_NOGATING` reader - CK8M force no gating during sleep"]
-pub struct CK8M_FORCE_NOGATING_R(crate::FieldReader<bool>);
-impl CK8M_FORCE_NOGATING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CK8M_FORCE_NOGATING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK8M_FORCE_NOGATING_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK8M_FORCE_NOGATING_R = crate::BitReader<bool>;
 #[doc = "Field `CK8M_FORCE_NOGATING` writer - CK8M force no gating during sleep"]
-pub struct CK8M_FORCE_NOGATING_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK8M_FORCE_NOGATING_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type CK8M_FORCE_NOGATING_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 16>;
 #[doc = "Field `CK8M_DFREQ` reader - CK8M_DFREQ"]
-pub struct CK8M_DFREQ_R(crate::FieldReader<u8>);
-impl CK8M_DFREQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CK8M_DFREQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK8M_DFREQ_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK8M_DFREQ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CK8M_DFREQ` writer - CK8M_DFREQ"]
-pub struct CK8M_DFREQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK8M_DFREQ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 17)) | ((value as u32 & 0xff) << 17);
-        self.w
-    }
-}
+pub type CK8M_DFREQ_W<'a> = crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, u8, 8, 17>;
 #[doc = "Field `CK8M_FORCE_PD` reader - CK8M force power down"]
-pub struct CK8M_FORCE_PD_R(crate::FieldReader<bool>);
-impl CK8M_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CK8M_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK8M_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK8M_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `CK8M_FORCE_PD` writer - CK8M force power down"]
-pub struct CK8M_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK8M_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type CK8M_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 25>;
 #[doc = "Field `CK8M_FORCE_PU` reader - CK8M force power up"]
-pub struct CK8M_FORCE_PU_R(crate::FieldReader<bool>);
-impl CK8M_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CK8M_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK8M_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK8M_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `CK8M_FORCE_PU` writer - CK8M force power up"]
-pub struct CK8M_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK8M_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type CK8M_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, bool, 26>;
 #[doc = "SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
@@ -627,13 +226,9 @@ impl From<SOC_CLK_SEL_A> for u8 {
     }
 }
 #[doc = "Field `SOC_CLK_SEL` reader - SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL"]
-pub struct SOC_CLK_SEL_R(crate::FieldReader<u8>);
+pub type SOC_CLK_SEL_R = crate::FieldReader<u8, SOC_CLK_SEL_A>;
 impl SOC_CLK_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SOC_CLK_SEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> SOC_CLK_SEL_A {
         match self.bits {
@@ -647,41 +242,28 @@ impl SOC_CLK_SEL_R {
     #[doc = "Checks if the value of the field is `XTAL`"]
     #[inline(always)]
     pub fn is_xtal(&self) -> bool {
-        **self == SOC_CLK_SEL_A::XTAL
+        *self == SOC_CLK_SEL_A::XTAL
     }
     #[doc = "Checks if the value of the field is `PLL`"]
     #[inline(always)]
     pub fn is_pll(&self) -> bool {
-        **self == SOC_CLK_SEL_A::PLL
+        *self == SOC_CLK_SEL_A::PLL
     }
     #[doc = "Checks if the value of the field is `CK8M`"]
     #[inline(always)]
     pub fn is_ck8m(&self) -> bool {
-        **self == SOC_CLK_SEL_A::CK8M
+        *self == SOC_CLK_SEL_A::CK8M
     }
     #[doc = "Checks if the value of the field is `APLL`"]
     #[inline(always)]
     pub fn is_apll(&self) -> bool {
-        **self == SOC_CLK_SEL_A::APLL
-    }
-}
-impl core::ops::Deref for SOC_CLK_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SOC_CLK_SEL_A::APLL
     }
 }
 #[doc = "Field `SOC_CLK_SEL` writer - SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL"]
-pub struct SOC_CLK_SEL_W<'a> {
-    w: &'a mut W,
-}
+pub type SOC_CLK_SEL_W<'a> =
+    crate::FieldWriterSafe<'a, u32, CLK_CONF_SPEC, u8, SOC_CLK_SEL_A, 2, 27>;
 impl<'a> SOC_CLK_SEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SOC_CLK_SEL_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
     #[doc = "`0`"]
     #[inline(always)]
     pub fn xtal(self) -> &'a mut W {
@@ -702,12 +284,6 @@ impl<'a> SOC_CLK_SEL_W<'a> {
     pub fn apll(self) -> &'a mut W {
         self.variant(SOC_CLK_SEL_A::APLL)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 27)) | ((value as u32 & 3) << 27);
-        self.w
-    }
 }
 #[doc = "fast_clk_rtc sel. 0: XTAL div 4 1: CK8M\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -724,13 +300,9 @@ impl From<FAST_CLK_RTC_SEL_A> for bool {
     }
 }
 #[doc = "Field `FAST_CLK_RTC_SEL` reader - fast_clk_rtc sel. 0: XTAL div 4 1: CK8M"]
-pub struct FAST_CLK_RTC_SEL_R(crate::FieldReader<bool>);
+pub type FAST_CLK_RTC_SEL_R = crate::BitReader<FAST_CLK_RTC_SEL_A>;
 impl FAST_CLK_RTC_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FAST_CLK_RTC_SEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> FAST_CLK_RTC_SEL_A {
         match self.bits {
@@ -741,31 +313,17 @@ impl FAST_CLK_RTC_SEL_R {
     #[doc = "Checks if the value of the field is `XTAL_DIV_4`"]
     #[inline(always)]
     pub fn is_xtal_div_4(&self) -> bool {
-        **self == FAST_CLK_RTC_SEL_A::XTAL_DIV_4
+        *self == FAST_CLK_RTC_SEL_A::XTAL_DIV_4
     }
     #[doc = "Checks if the value of the field is `CK8M`"]
     #[inline(always)]
     pub fn is_ck8m(&self) -> bool {
-        **self == FAST_CLK_RTC_SEL_A::CK8M
-    }
-}
-impl core::ops::Deref for FAST_CLK_RTC_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == FAST_CLK_RTC_SEL_A::CK8M
     }
 }
 #[doc = "Field `FAST_CLK_RTC_SEL` writer - fast_clk_rtc sel. 0: XTAL div 4 1: CK8M"]
-pub struct FAST_CLK_RTC_SEL_W<'a> {
-    w: &'a mut W,
-}
+pub type FAST_CLK_RTC_SEL_W<'a> = crate::BitWriter<'a, u32, CLK_CONF_SPEC, FAST_CLK_RTC_SEL_A, 29>;
 impl<'a> FAST_CLK_RTC_SEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: FAST_CLK_RTC_SEL_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
     #[doc = "`0`"]
     #[inline(always)]
     pub fn xtal_div_4(self) -> &'a mut W {
@@ -775,22 +333,6 @@ impl<'a> FAST_CLK_RTC_SEL_W<'a> {
     #[inline(always)]
     pub fn ck8m(self) -> &'a mut W {
         self.variant(FAST_CLK_RTC_SEL_A::CK8M)
-    }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
     }
 }
 #[doc = "slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT\n\nValue on reset: 0"]
@@ -811,13 +353,9 @@ impl From<ANA_CLK_RTC_SEL_A> for u8 {
     }
 }
 #[doc = "Field `ANA_CLK_RTC_SEL` reader - slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT"]
-pub struct ANA_CLK_RTC_SEL_R(crate::FieldReader<u8>);
+pub type ANA_CLK_RTC_SEL_R = crate::FieldReader<u8, ANA_CLK_RTC_SEL_A>;
 impl ANA_CLK_RTC_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ANA_CLK_RTC_SEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<ANA_CLK_RTC_SEL_A> {
         match self.bits {
@@ -830,36 +368,23 @@ impl ANA_CLK_RTC_SEL_R {
     #[doc = "Checks if the value of the field is `SLOW_CK`"]
     #[inline(always)]
     pub fn is_slow_ck(&self) -> bool {
-        **self == ANA_CLK_RTC_SEL_A::SLOW_CK
+        *self == ANA_CLK_RTC_SEL_A::SLOW_CK
     }
     #[doc = "Checks if the value of the field is `CK_XTAL_32K`"]
     #[inline(always)]
     pub fn is_ck_xtal_32k(&self) -> bool {
-        **self == ANA_CLK_RTC_SEL_A::CK_XTAL_32K
+        *self == ANA_CLK_RTC_SEL_A::CK_XTAL_32K
     }
     #[doc = "Checks if the value of the field is `CK8M_D256_OUT`"]
     #[inline(always)]
     pub fn is_ck8m_d256_out(&self) -> bool {
-        **self == ANA_CLK_RTC_SEL_A::CK8M_D256_OUT
-    }
-}
-impl core::ops::Deref for ANA_CLK_RTC_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == ANA_CLK_RTC_SEL_A::CK8M_D256_OUT
     }
 }
 #[doc = "Field `ANA_CLK_RTC_SEL` writer - slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT"]
-pub struct ANA_CLK_RTC_SEL_W<'a> {
-    w: &'a mut W,
-}
+pub type ANA_CLK_RTC_SEL_W<'a> =
+    crate::FieldWriter<'a, u32, CLK_CONF_SPEC, u8, ANA_CLK_RTC_SEL_A, 2, 30>;
 impl<'a> ANA_CLK_RTC_SEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: ANA_CLK_RTC_SEL_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
     #[doc = "`0`"]
     #[inline(always)]
     pub fn slow_ck(self) -> &'a mut W {
@@ -874,12 +399,6 @@ impl<'a> ANA_CLK_RTC_SEL_W<'a> {
     #[inline(always)]
     pub fn ck8m_d256_out(self) -> &'a mut W {
         self.variant(ANA_CLK_RTC_SEL_A::CK8M_D256_OUT)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
-        self.w
     }
 }
 impl R {
@@ -968,82 +487,82 @@ impl W {
     #[doc = "Bits 4:5 - CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024."]
     #[inline(always)]
     pub fn ck8m_div(&mut self) -> CK8M_DIV_W {
-        CK8M_DIV_W { w: self }
+        CK8M_DIV_W::new(self)
     }
     #[doc = "Bit 6 - disable CK8M and CK8M_D256_OUT"]
     #[inline(always)]
     pub fn enb_ck8m(&mut self) -> ENB_CK8M_W {
-        ENB_CK8M_W { w: self }
+        ENB_CK8M_W::new(self)
     }
     #[doc = "Bit 7 - 1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256"]
     #[inline(always)]
     pub fn enb_ck8m_div(&mut self) -> ENB_CK8M_DIV_W {
-        ENB_CK8M_DIV_W { w: self }
+        ENB_CK8M_DIV_W::new(self)
     }
     #[doc = "Bit 8 - enable CK_XTAL_32K for digital core (no relationship with RTC core)"]
     #[inline(always)]
     pub fn dig_xtal32k_en(&mut self) -> DIG_XTAL32K_EN_W {
-        DIG_XTAL32K_EN_W { w: self }
+        DIG_XTAL32K_EN_W::new(self)
     }
     #[doc = "Bit 9 - enable CK8M_D256_OUT for digital core (no relationship with RTC core)"]
     #[inline(always)]
     pub fn dig_clk8m_d256_en(&mut self) -> DIG_CLK8M_D256_EN_W {
-        DIG_CLK8M_D256_EN_W { w: self }
+        DIG_CLK8M_D256_EN_W::new(self)
     }
     #[doc = "Bit 10 - enable CK8M for digital core (no relationship with RTC core)"]
     #[inline(always)]
     pub fn dig_clk8m_en(&mut self) -> DIG_CLK8M_EN_W {
-        DIG_CLK8M_EN_W { w: self }
+        DIG_CLK8M_EN_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn ck8m_dfreq_force(&mut self) -> CK8M_DFREQ_FORCE_W {
-        CK8M_DFREQ_FORCE_W { w: self }
+        CK8M_DFREQ_FORCE_W::new(self)
     }
     #[doc = "Bits 12:14 - divider = reg_ck8m_div_sel + 1"]
     #[inline(always)]
     pub fn ck8m_div_sel(&mut self) -> CK8M_DIV_SEL_W {
-        CK8M_DIV_SEL_W { w: self }
+        CK8M_DIV_SEL_W::new(self)
     }
     #[doc = "Bit 15 - XTAL force no gating during sleep"]
     #[inline(always)]
     pub fn xtal_force_nogating(&mut self) -> XTAL_FORCE_NOGATING_W {
-        XTAL_FORCE_NOGATING_W { w: self }
+        XTAL_FORCE_NOGATING_W::new(self)
     }
     #[doc = "Bit 16 - CK8M force no gating during sleep"]
     #[inline(always)]
     pub fn ck8m_force_nogating(&mut self) -> CK8M_FORCE_NOGATING_W {
-        CK8M_FORCE_NOGATING_W { w: self }
+        CK8M_FORCE_NOGATING_W::new(self)
     }
     #[doc = "Bits 17:24 - CK8M_DFREQ"]
     #[inline(always)]
     pub fn ck8m_dfreq(&mut self) -> CK8M_DFREQ_W {
-        CK8M_DFREQ_W { w: self }
+        CK8M_DFREQ_W::new(self)
     }
     #[doc = "Bit 25 - CK8M force power down"]
     #[inline(always)]
     pub fn ck8m_force_pd(&mut self) -> CK8M_FORCE_PD_W {
-        CK8M_FORCE_PD_W { w: self }
+        CK8M_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 26 - CK8M force power up"]
     #[inline(always)]
     pub fn ck8m_force_pu(&mut self) -> CK8M_FORCE_PU_W {
-        CK8M_FORCE_PU_W { w: self }
+        CK8M_FORCE_PU_W::new(self)
     }
     #[doc = "Bits 27:28 - SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL"]
     #[inline(always)]
     pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W {
-        SOC_CLK_SEL_W { w: self }
+        SOC_CLK_SEL_W::new(self)
     }
     #[doc = "Bit 29 - fast_clk_rtc sel. 0: XTAL div 4 1: CK8M"]
     #[inline(always)]
     pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W {
-        FAST_CLK_RTC_SEL_W { w: self }
+        FAST_CLK_RTC_SEL_W::new(self)
     }
     #[doc = "Bits 30:31 - slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT"]
     #[inline(always)]
     pub fn ana_clk_rtc_sel(&mut self) -> ANA_CLK_RTC_SEL_W {
-        ANA_CLK_RTC_SEL_W { w: self }
+        ANA_CLK_RTC_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,221 +35,37 @@ impl From<crate::W<RX_TIMING_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_SD_IN_DM` reader - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_SD_IN_DM_R(crate::FieldReader<u8>);
-impl RX_SD_IN_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_SD_IN_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_SD_IN_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_SD_IN_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_SD_IN_DM` writer - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_SD_IN_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_SD_IN_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type RX_SD_IN_DM_W<'a> = crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `RX_SD1_IN_DM` reader - The delay mode of I2S Rx SD1 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_SD1_IN_DM_R(crate::FieldReader<u8>);
-impl RX_SD1_IN_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_SD1_IN_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_SD1_IN_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_SD1_IN_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_SD1_IN_DM` writer - The delay mode of I2S Rx SD1 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_SD1_IN_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_SD1_IN_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type RX_SD1_IN_DM_W<'a> = crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `RX_SD2_IN_DM` reader - The delay mode of I2S Rx SD2 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_SD2_IN_DM_R(crate::FieldReader<u8>);
-impl RX_SD2_IN_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_SD2_IN_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_SD2_IN_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_SD2_IN_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_SD2_IN_DM` writer - The delay mode of I2S Rx SD2 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_SD2_IN_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_SD2_IN_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type RX_SD2_IN_DM_W<'a> = crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `RX_SD3_IN_DM` reader - The delay mode of I2S Rx SD3 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_SD3_IN_DM_R(crate::FieldReader<u8>);
-impl RX_SD3_IN_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_SD3_IN_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_SD3_IN_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_SD3_IN_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_SD3_IN_DM` writer - The delay mode of I2S Rx SD3 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_SD3_IN_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_SD3_IN_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type RX_SD3_IN_DM_W<'a> = crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, 12>;
 #[doc = "Field `RX_WS_OUT_DM` reader - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_WS_OUT_DM_R(crate::FieldReader<u8>);
-impl RX_WS_OUT_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_WS_OUT_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_WS_OUT_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_WS_OUT_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_WS_OUT_DM` writer - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_WS_OUT_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_WS_OUT_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type RX_WS_OUT_DM_W<'a> = crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, 16>;
 #[doc = "Field `RX_BCK_OUT_DM` reader - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_BCK_OUT_DM_R(crate::FieldReader<u8>);
-impl RX_BCK_OUT_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_BCK_OUT_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_BCK_OUT_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_BCK_OUT_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_BCK_OUT_DM` writer - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_BCK_OUT_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_BCK_OUT_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
-        self.w
-    }
-}
+pub type RX_BCK_OUT_DM_W<'a> = crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, 20>;
 #[doc = "Field `RX_WS_IN_DM` reader - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_WS_IN_DM_R(crate::FieldReader<u8>);
-impl RX_WS_IN_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_WS_IN_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_WS_IN_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_WS_IN_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_WS_IN_DM` writer - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_WS_IN_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_WS_IN_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
-        self.w
-    }
-}
+pub type RX_WS_IN_DM_W<'a> = crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, 24>;
 #[doc = "Field `RX_BCK_IN_DM` reader - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_BCK_IN_DM_R(crate::FieldReader<u8>);
-impl RX_BCK_IN_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_BCK_IN_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_BCK_IN_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_BCK_IN_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RX_BCK_IN_DM` writer - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct RX_BCK_IN_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_BCK_IN_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
-        self.w
-    }
-}
+pub type RX_BCK_IN_DM_W<'a> = crate::FieldWriter<'a, u32, RX_TIMING_SPEC, u8, u8, 2, 28>;
 impl R {
     #[doc = "Bits 0:1 - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
@@ -296,42 +112,42 @@ impl W {
     #[doc = "Bits 0:1 - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn rx_sd_in_dm(&mut self) -> RX_SD_IN_DM_W {
-        RX_SD_IN_DM_W { w: self }
+        RX_SD_IN_DM_W::new(self)
     }
     #[doc = "Bits 4:5 - The delay mode of I2S Rx SD1 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn rx_sd1_in_dm(&mut self) -> RX_SD1_IN_DM_W {
-        RX_SD1_IN_DM_W { w: self }
+        RX_SD1_IN_DM_W::new(self)
     }
     #[doc = "Bits 8:9 - The delay mode of I2S Rx SD2 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn rx_sd2_in_dm(&mut self) -> RX_SD2_IN_DM_W {
-        RX_SD2_IN_DM_W { w: self }
+        RX_SD2_IN_DM_W::new(self)
     }
     #[doc = "Bits 12:13 - The delay mode of I2S Rx SD3 input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn rx_sd3_in_dm(&mut self) -> RX_SD3_IN_DM_W {
-        RX_SD3_IN_DM_W { w: self }
+        RX_SD3_IN_DM_W::new(self)
     }
     #[doc = "Bits 16:17 - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn rx_ws_out_dm(&mut self) -> RX_WS_OUT_DM_W {
-        RX_WS_OUT_DM_W { w: self }
+        RX_WS_OUT_DM_W::new(self)
     }
     #[doc = "Bits 20:21 - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn rx_bck_out_dm(&mut self) -> RX_BCK_OUT_DM_W {
-        RX_BCK_OUT_DM_W { w: self }
+        RX_BCK_OUT_DM_W::new(self)
     }
     #[doc = "Bits 24:25 - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn rx_ws_in_dm(&mut self) -> RX_WS_IN_DM_W {
-        RX_WS_IN_DM_W { w: self }
+        RX_WS_IN_DM_W::new(self)
     }
     #[doc = "Bits 28:29 - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn rx_bck_in_dm(&mut self) -> RX_BCK_IN_DM_W {
-        RX_BCK_IN_DM_W { w: self }
+        RX_BCK_IN_DM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

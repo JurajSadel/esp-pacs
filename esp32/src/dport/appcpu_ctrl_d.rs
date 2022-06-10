@@ -35,32 +35,9 @@ impl From<crate::W<APPCPU_CTRL_D_SPEC>> for W {
     }
 }
 #[doc = "Field `APPCPU_BOOT_ADDR` reader - "]
-pub struct APPCPU_BOOT_ADDR_R(crate::FieldReader<u32>);
-impl APPCPU_BOOT_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        APPCPU_BOOT_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APPCPU_BOOT_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APPCPU_BOOT_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `APPCPU_BOOT_ADDR` writer - "]
-pub struct APPCPU_BOOT_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APPCPU_BOOT_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type APPCPU_BOOT_ADDR_W<'a> = crate::FieldWriter<'a, u32, APPCPU_CTRL_D_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn appcpu_boot_addr(&mut self) -> APPCPU_BOOT_ADDR_W {
-        APPCPU_BOOT_ADDR_W { w: self }
+        APPCPU_BOOT_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,42 +35,9 @@ impl From<crate::W<EXT_WAKEUP_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_WAKEUP_FILTER` reader - enable filter for gpio wakeup event"]
-pub struct GPIO_WAKEUP_FILTER_R(crate::FieldReader<bool>);
-impl GPIO_WAKEUP_FILTER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO_WAKEUP_FILTER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO_WAKEUP_FILTER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO_WAKEUP_FILTER_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO_WAKEUP_FILTER` writer - enable filter for gpio wakeup event"]
-pub struct GPIO_WAKEUP_FILTER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO_WAKEUP_FILTER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type GPIO_WAKEUP_FILTER_W<'a> = crate::BitWriter<'a, u32, EXT_WAKEUP_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 31 - enable filter for gpio wakeup event"]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 31 - enable filter for gpio wakeup event"]
     #[inline(always)]
     pub fn gpio_wakeup_filter(&mut self) -> GPIO_WAKEUP_FILTER_W {
-        GPIO_WAKEUP_FILTER_W { w: self }
+        GPIO_WAKEUP_FILTER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

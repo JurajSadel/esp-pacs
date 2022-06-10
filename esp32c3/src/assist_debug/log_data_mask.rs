@@ -35,32 +35,9 @@ impl From<crate::W<LOG_DATA_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_DATA_SIZE` reader - reg_log_data_size"]
-pub struct LOG_DATA_SIZE_R(crate::FieldReader<u16>);
-impl LOG_DATA_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        LOG_DATA_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOG_DATA_SIZE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOG_DATA_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `LOG_DATA_SIZE` writer - reg_log_data_size"]
-pub struct LOG_DATA_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOG_DATA_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type LOG_DATA_SIZE_W<'a> = crate::FieldWriter<'a, u32, LOG_DATA_MASK_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15 - reg_log_data_size"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:15 - reg_log_data_size"]
     #[inline(always)]
     pub fn log_data_size(&mut self) -> LOG_DATA_SIZE_W {
-        LOG_DATA_SIZE_W { w: self }
+        LOG_DATA_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

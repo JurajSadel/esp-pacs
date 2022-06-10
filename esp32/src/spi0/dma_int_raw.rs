@@ -14,140 +14,23 @@ impl From<crate::R<DMA_INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `INLINK_DSCR_EMPTY_INT_RAW` reader - The raw bit for lack of enough inlink descriptors."]
-pub struct INLINK_DSCR_EMPTY_INT_RAW_R(crate::FieldReader<bool>);
-impl INLINK_DSCR_EMPTY_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INLINK_DSCR_EMPTY_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_DSCR_EMPTY_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_DSCR_EMPTY_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `OUTLINK_DSCR_ERROR_INT_RAW` reader - The raw bit for outlink descriptor error."]
-pub struct OUTLINK_DSCR_ERROR_INT_RAW_R(crate::FieldReader<bool>);
-impl OUTLINK_DSCR_ERROR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTLINK_DSCR_ERROR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_DSCR_ERROR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_DSCR_ERROR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `INLINK_DSCR_ERROR_INT_RAW` reader - The raw bit for inlink descriptor error."]
-pub struct INLINK_DSCR_ERROR_INT_RAW_R(crate::FieldReader<bool>);
-impl INLINK_DSCR_ERROR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INLINK_DSCR_ERROR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INLINK_DSCR_ERROR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INLINK_DSCR_ERROR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `IN_DONE_INT_RAW` reader - The raw bit for completing usage of a inlink descriptor."]
-pub struct IN_DONE_INT_RAW_R(crate::FieldReader<bool>);
-impl IN_DONE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_DONE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_DONE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `IN_ERR_EOF_INT_RAW` reader - The raw bit for receiving error."]
-pub struct IN_ERR_EOF_INT_RAW_R(crate::FieldReader<bool>);
-impl IN_ERR_EOF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_ERR_EOF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_ERR_EOF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_ERR_EOF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `IN_SUC_EOF_INT_RAW` reader - The raw bit for completing receiving all the packets from host."]
-pub struct IN_SUC_EOF_INT_RAW_R(crate::FieldReader<bool>);
-impl IN_SUC_EOF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_SUC_EOF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_SUC_EOF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_SUC_EOF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DONE_INT_RAW` reader - The raw bit for completing usage of a outlink descriptor."]
-pub struct OUT_DONE_INT_RAW_R(crate::FieldReader<bool>);
-impl OUT_DONE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DONE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DONE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DONE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EOF_INT_RAW` reader - The raw bit for sending a packet to host done."]
-pub struct OUT_EOF_INT_RAW_R(crate::FieldReader<bool>);
-impl OUT_EOF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EOF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EOF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EOF_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_TOTAL_EOF_INT_RAW` reader - The raw bit for sending all the packets to host done."]
-pub struct OUT_TOTAL_EOF_INT_RAW_R(crate::FieldReader<bool>);
-impl OUT_TOTAL_EOF_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_TOTAL_EOF_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_TOTAL_EOF_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_TOTAL_EOF_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The raw bit for lack of enough inlink descriptors."]
     #[inline(always)]

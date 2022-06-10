@@ -35,234 +35,33 @@ impl From<crate::W<LCD_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `LCD_VSYNC_WIDTH` reader - It is the position of LCD_VSYNC active pulse in a line."]
-pub struct LCD_VSYNC_WIDTH_R(crate::FieldReader<u8>);
-impl LCD_VSYNC_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LCD_VSYNC_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_VSYNC_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_VSYNC_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LCD_VSYNC_WIDTH` writer - It is the position of LCD_VSYNC active pulse in a line."]
-pub struct LCD_VSYNC_WIDTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_VSYNC_WIDTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type LCD_VSYNC_WIDTH_W<'a> = crate::FieldWriter<'a, u32, LCD_CTRL2_SPEC, u8, u8, 7, 0>;
 #[doc = "Field `LCD_VSYNC_IDLE_POL` reader - It is the idle value of LCD_VSYNC."]
-pub struct LCD_VSYNC_IDLE_POL_R(crate::FieldReader<bool>);
-impl LCD_VSYNC_IDLE_POL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_VSYNC_IDLE_POL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_VSYNC_IDLE_POL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_VSYNC_IDLE_POL_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_VSYNC_IDLE_POL` writer - It is the idle value of LCD_VSYNC."]
-pub struct LCD_VSYNC_IDLE_POL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_VSYNC_IDLE_POL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type LCD_VSYNC_IDLE_POL_W<'a> = crate::BitWriter<'a, u32, LCD_CTRL2_SPEC, bool, 7>;
 #[doc = "Field `LCD_DE_IDLE_POL` reader - It is the idle value of LCD_DE."]
-pub struct LCD_DE_IDLE_POL_R(crate::FieldReader<bool>);
-impl LCD_DE_IDLE_POL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_DE_IDLE_POL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_DE_IDLE_POL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_DE_IDLE_POL_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_DE_IDLE_POL` writer - It is the idle value of LCD_DE."]
-pub struct LCD_DE_IDLE_POL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_DE_IDLE_POL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type LCD_DE_IDLE_POL_W<'a> = crate::BitWriter<'a, u32, LCD_CTRL2_SPEC, bool, 8>;
 #[doc = "Field `LCD_HS_BLANK_EN` reader - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
-pub struct LCD_HS_BLANK_EN_R(crate::FieldReader<bool>);
-impl LCD_HS_BLANK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_HS_BLANK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_HS_BLANK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_HS_BLANK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_HS_BLANK_EN` writer - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
-pub struct LCD_HS_BLANK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_HS_BLANK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type LCD_HS_BLANK_EN_W<'a> = crate::BitWriter<'a, u32, LCD_CTRL2_SPEC, bool, 9>;
 #[doc = "Field `LCD_HSYNC_WIDTH` reader - It is the position of LCD_HSYNC active pulse in a line."]
-pub struct LCD_HSYNC_WIDTH_R(crate::FieldReader<u8>);
-impl LCD_HSYNC_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LCD_HSYNC_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_HSYNC_WIDTH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_HSYNC_WIDTH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LCD_HSYNC_WIDTH` writer - It is the position of LCD_HSYNC active pulse in a line."]
-pub struct LCD_HSYNC_WIDTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_HSYNC_WIDTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7f << 16)) | ((value as u32 & 0x7f) << 16);
-        self.w
-    }
-}
+pub type LCD_HSYNC_WIDTH_W<'a> = crate::FieldWriter<'a, u32, LCD_CTRL2_SPEC, u8, u8, 7, 16>;
 #[doc = "Field `LCD_HSYNC_IDLE_POL` reader - It is the idle value of LCD_HSYNC."]
-pub struct LCD_HSYNC_IDLE_POL_R(crate::FieldReader<bool>);
-impl LCD_HSYNC_IDLE_POL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_HSYNC_IDLE_POL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_HSYNC_IDLE_POL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_HSYNC_IDLE_POL_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_HSYNC_IDLE_POL` writer - It is the idle value of LCD_HSYNC."]
-pub struct LCD_HSYNC_IDLE_POL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_HSYNC_IDLE_POL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type LCD_HSYNC_IDLE_POL_W<'a> = crate::BitWriter<'a, u32, LCD_CTRL2_SPEC, bool, 23>;
 #[doc = "Field `LCD_HSYNC_POSITION` reader - It is the position of LCD_HSYNC active pulse in a line."]
-pub struct LCD_HSYNC_POSITION_R(crate::FieldReader<u8>);
-impl LCD_HSYNC_POSITION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LCD_HSYNC_POSITION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_HSYNC_POSITION_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_HSYNC_POSITION_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LCD_HSYNC_POSITION` writer - It is the position of LCD_HSYNC active pulse in a line."]
-pub struct LCD_HSYNC_POSITION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_HSYNC_POSITION_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 24)) | ((value as u32 & 0xff) << 24);
-        self.w
-    }
-}
+pub type LCD_HSYNC_POSITION_W<'a> = crate::FieldWriter<'a, u32, LCD_CTRL2_SPEC, u8, u8, 8, 24>;
 impl R {
     #[doc = "Bits 0:6 - It is the position of LCD_VSYNC active pulse in a line."]
     #[inline(always)]
@@ -304,37 +103,37 @@ impl W {
     #[doc = "Bits 0:6 - It is the position of LCD_VSYNC active pulse in a line."]
     #[inline(always)]
     pub fn lcd_vsync_width(&mut self) -> LCD_VSYNC_WIDTH_W {
-        LCD_VSYNC_WIDTH_W { w: self }
+        LCD_VSYNC_WIDTH_W::new(self)
     }
     #[doc = "Bit 7 - It is the idle value of LCD_VSYNC."]
     #[inline(always)]
     pub fn lcd_vsync_idle_pol(&mut self) -> LCD_VSYNC_IDLE_POL_W {
-        LCD_VSYNC_IDLE_POL_W { w: self }
+        LCD_VSYNC_IDLE_POL_W::new(self)
     }
     #[doc = "Bit 8 - It is the idle value of LCD_DE."]
     #[inline(always)]
     pub fn lcd_de_idle_pol(&mut self) -> LCD_DE_IDLE_POL_W {
-        LCD_DE_IDLE_POL_W { w: self }
+        LCD_DE_IDLE_POL_W::new(self)
     }
     #[doc = "Bit 9 - 1: The pulse of LCD_HSYNC is out in vertical blanking lines RGB mode. 0: LCD_HSYNC pulse is valid only in active region lines in RGB mode."]
     #[inline(always)]
     pub fn lcd_hs_blank_en(&mut self) -> LCD_HS_BLANK_EN_W {
-        LCD_HS_BLANK_EN_W { w: self }
+        LCD_HS_BLANK_EN_W::new(self)
     }
     #[doc = "Bits 16:22 - It is the position of LCD_HSYNC active pulse in a line."]
     #[inline(always)]
     pub fn lcd_hsync_width(&mut self) -> LCD_HSYNC_WIDTH_W {
-        LCD_HSYNC_WIDTH_W { w: self }
+        LCD_HSYNC_WIDTH_W::new(self)
     }
     #[doc = "Bit 23 - It is the idle value of LCD_HSYNC."]
     #[inline(always)]
     pub fn lcd_hsync_idle_pol(&mut self) -> LCD_HSYNC_IDLE_POL_W {
-        LCD_HSYNC_IDLE_POL_W { w: self }
+        LCD_HSYNC_IDLE_POL_W::new(self)
     }
     #[doc = "Bits 24:31 - It is the position of LCD_HSYNC active pulse in a line."]
     #[inline(always)]
     pub fn lcd_hsync_position(&mut self) -> LCD_HSYNC_POSITION_W {
-        LCD_HSYNC_POSITION_W { w: self }
+        LCD_HSYNC_POSITION_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

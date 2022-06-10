@@ -35,162 +35,25 @@ impl From<crate::W<PRO_DCACHE_DBUG0_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_SLAVE_WDATA` reader - "]
-pub struct PRO_SLAVE_WDATA_R(crate::FieldReader<bool>);
-impl PRO_SLAVE_WDATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_SLAVE_WDATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_SLAVE_WDATA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_SLAVE_WDATA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_SLAVE_WDATA` writer - "]
-pub struct PRO_SLAVE_WDATA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_SLAVE_WDATA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_SLAVE_WDATA_W<'a> = crate::BitWriter<'a, u32, PRO_DCACHE_DBUG0_SPEC, bool, 0>;
 #[doc = "Field `PRO_CACHE_MMU_IA` reader - "]
-pub struct PRO_CACHE_MMU_IA_R(crate::FieldReader<bool>);
-impl PRO_CACHE_MMU_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_CACHE_MMU_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_MMU_IA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_MMU_IA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_CACHE_IA` reader - "]
-pub struct PRO_CACHE_IA_R(crate::FieldReader<u8>);
-impl PRO_CACHE_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PRO_CACHE_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_IA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_IA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PRO_CACHE_STATE` reader - "]
-pub struct PRO_CACHE_STATE_R(crate::FieldReader<u16>);
-impl PRO_CACHE_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PRO_CACHE_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_STATE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_STATE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_WR_BAK_TO_READ` reader - "]
-pub struct PRO_WR_BAK_TO_READ_R(crate::FieldReader<bool>);
-impl PRO_WR_BAK_TO_READ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_WR_BAK_TO_READ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_WR_BAK_TO_READ_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_WR_BAK_TO_READ_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_TX_END` reader - "]
-pub struct PRO_TX_END_R(crate::FieldReader<bool>);
-impl PRO_TX_END_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_TX_END_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_TX_END_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_TX_END_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_SLAVE_WR` reader - "]
-pub struct PRO_SLAVE_WR_R(crate::FieldReader<bool>);
-impl PRO_SLAVE_WR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_SLAVE_WR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_SLAVE_WR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_SLAVE_WR_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_SLAVE_WDATA_V` reader - "]
-pub struct PRO_SLAVE_WDATA_V_R(crate::FieldReader<bool>);
-impl PRO_SLAVE_WDATA_V_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_SLAVE_WDATA_V_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_SLAVE_WDATA_V_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_SLAVE_WDATA_V_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_RX_END` reader - "]
-pub struct PRO_RX_END_R(crate::FieldReader<bool>);
-impl PRO_RX_END_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_RX_END_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_RX_END_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_RX_END_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -242,7 +105,7 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro_slave_wdata(&mut self) -> PRO_SLAVE_WDATA_W {
-        PRO_SLAVE_WDATA_W { w: self }
+        PRO_SLAVE_WDATA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,42 +35,10 @@ impl From<crate::W<EXTMEM_REJECT_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `EXTMEM_REJECT_INT_ENA` reader - The interrupt enable bit for the EXTMEM_REJECT_INT interrupt."]
-pub struct EXTMEM_REJECT_INT_ENA_R(crate::FieldReader<bool>);
-impl EXTMEM_REJECT_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXTMEM_REJECT_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTMEM_REJECT_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTMEM_REJECT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `EXTMEM_REJECT_INT_ENA` writer - The interrupt enable bit for the EXTMEM_REJECT_INT interrupt."]
-pub struct EXTMEM_REJECT_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTMEM_REJECT_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type EXTMEM_REJECT_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, EXTMEM_REJECT_INT_ENA_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - The interrupt enable bit for the EXTMEM_REJECT_INT interrupt."]
     #[inline(always)]
@@ -82,7 +50,7 @@ impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the EXTMEM_REJECT_INT interrupt."]
     #[inline(always)]
     pub fn extmem_reject_int_ena(&mut self) -> EXTMEM_REJECT_INT_ENA_W {
-        EXTMEM_REJECT_INT_ENA_W { w: self }
+        EXTMEM_REJECT_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

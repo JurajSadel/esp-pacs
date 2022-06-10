@@ -14,305 +14,45 @@ impl From<crate::R<RD_REPEAT_DATA0_SPEC>> for R {
     }
 }
 #[doc = "Field `RD_DIS` reader - Set this bit to disable reading from BlOCK4-10."]
-pub struct RD_DIS_R(crate::FieldReader<u8>);
-impl RD_DIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_DIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_DIS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_DIS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DIS_RTC_RAM_BOOT` reader - Set this bit to disable boot from RTC RAM."]
-pub struct DIS_RTC_RAM_BOOT_R(crate::FieldReader<bool>);
-impl DIS_RTC_RAM_BOOT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_RTC_RAM_BOOT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_RTC_RAM_BOOT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_RTC_RAM_BOOT_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_ICACHE` reader - Set this bit to disable Icache."]
-pub struct DIS_ICACHE_R(crate::FieldReader<bool>);
-impl DIS_ICACHE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_ICACHE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_ICACHE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_ICACHE_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_DCACHE` reader - Set this bit to disable Dcache."]
-pub struct DIS_DCACHE_R(crate::FieldReader<bool>);
-impl DIS_DCACHE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_DCACHE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_DCACHE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_DCACHE_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_DOWNLOAD_ICACHE` reader - Set this bit to disable Icache in download mode (boot_mode\\[3:0\\] is 0, 1, 2, 3, 6, 7)."]
-pub struct DIS_DOWNLOAD_ICACHE_R(crate::FieldReader<bool>);
-impl DIS_DOWNLOAD_ICACHE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_DOWNLOAD_ICACHE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_DOWNLOAD_ICACHE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_DOWNLOAD_ICACHE_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_DOWNLOAD_DCACHE` reader - Set this bit to disable Dcache in download mode ( boot_mode\\[3:0\\] is 0, 1, 2, 3, 6, 7)."]
-pub struct DIS_DOWNLOAD_DCACHE_R(crate::FieldReader<bool>);
-impl DIS_DOWNLOAD_DCACHE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_DOWNLOAD_DCACHE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_DOWNLOAD_DCACHE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_DOWNLOAD_DCACHE_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_FORCE_DOWNLOAD` reader - Set this bit to disable the function that forces chip into download mode."]
-pub struct DIS_FORCE_DOWNLOAD_R(crate::FieldReader<bool>);
-impl DIS_FORCE_DOWNLOAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_FORCE_DOWNLOAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_FORCE_DOWNLOAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_FORCE_DOWNLOAD_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_USB` reader - Set this bit to disable USB function."]
-pub struct DIS_USB_R(crate::FieldReader<bool>);
-impl DIS_USB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_USB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_USB_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_USB_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_CAN` reader - Set this bit to disable CAN function."]
-pub struct DIS_CAN_R(crate::FieldReader<bool>);
-impl DIS_CAN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_CAN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_CAN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_CAN_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_APP_CPU` reader - Disable app cpu."]
-pub struct DIS_APP_CPU_R(crate::FieldReader<bool>);
-impl DIS_APP_CPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_APP_CPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_APP_CPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_APP_CPU_R = crate::BitReader<bool>;
 #[doc = "Field `SOFT_DIS_JTAG` reader - Set these bits to disable JTAG in the soft way (odd number 1 means disable ). JTAG can be enabled in HMAC module."]
-pub struct SOFT_DIS_JTAG_R(crate::FieldReader<u8>);
-impl SOFT_DIS_JTAG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SOFT_DIS_JTAG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SOFT_DIS_JTAG_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SOFT_DIS_JTAG_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DIS_PAD_JTAG` reader - Set this bit to disable JTAG in the hard way. JTAG is disabled permanently."]
-pub struct DIS_PAD_JTAG_R(crate::FieldReader<bool>);
-impl DIS_PAD_JTAG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_PAD_JTAG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_PAD_JTAG_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_PAD_JTAG_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_DOWNLOAD_MANUAL_ENCRYPT` reader - Set this bit to disable flash encryption when in download boot modes."]
-pub struct DIS_DOWNLOAD_MANUAL_ENCRYPT_R(crate::FieldReader<bool>);
-impl DIS_DOWNLOAD_MANUAL_ENCRYPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_DOWNLOAD_MANUAL_ENCRYPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_DOWNLOAD_MANUAL_ENCRYPT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_DOWNLOAD_MANUAL_ENCRYPT_R = crate::BitReader<bool>;
 #[doc = "Field `USB_DREFH` reader - Controls single-end input threshold vrefh, 1.76 V to 2 V with step of 80 mV, stored in eFuse."]
-pub struct USB_DREFH_R(crate::FieldReader<u8>);
-impl USB_DREFH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        USB_DREFH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_DREFH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_DREFH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `USB_DREFL` reader - Controls single-end input threshold vrefl, 0.8 V to 1.04 V with step of 80 mV, stored in eFuse."]
-pub struct USB_DREFL_R(crate::FieldReader<u8>);
-impl USB_DREFL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        USB_DREFL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_DREFL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_DREFL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `USB_EXCHG_PINS` reader - Set this bit to exchange USB D+ and D- pins."]
-pub struct USB_EXCHG_PINS_R(crate::FieldReader<bool>);
-impl USB_EXCHG_PINS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_EXCHG_PINS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_EXCHG_PINS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_EXCHG_PINS_R = crate::BitReader<bool>;
 #[doc = "Field `EXT_PHY_ENABLE` reader - Set this bit to enable external PHY."]
-pub struct EXT_PHY_ENABLE_R(crate::FieldReader<bool>);
-impl EXT_PHY_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXT_PHY_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXT_PHY_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXT_PHY_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `BTLC_GPIO_ENABLE` reader - Bluetooth GPIO signal output security level control."]
-pub struct BTLC_GPIO_ENABLE_R(crate::FieldReader<u8>);
-impl BTLC_GPIO_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BTLC_GPIO_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BTLC_GPIO_ENABLE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BTLC_GPIO_ENABLE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VDD_SPI_MODECURLIM` reader - SPI regulator switches current limit mode."]
-pub struct VDD_SPI_MODECURLIM_R(crate::FieldReader<bool>);
-impl VDD_SPI_MODECURLIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VDD_SPI_MODECURLIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_MODECURLIM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_MODECURLIM_R = crate::BitReader<bool>;
 #[doc = "Field `VDD_SPI_DREFH` reader - SPI regulator high voltage reference."]
-pub struct VDD_SPI_DREFH_R(crate::FieldReader<u8>);
-impl VDD_SPI_DREFH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VDD_SPI_DREFH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_DREFH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_DREFH_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:6 - Set this bit to disable reading from BlOCK4-10."]
     #[inline(always)]

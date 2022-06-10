@@ -35,106 +35,17 @@ impl From<crate::W<DMA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_ADC_EOF_NUM` reader - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
-pub struct APB_ADC_EOF_NUM_R(crate::FieldReader<u16>);
-impl APB_ADC_EOF_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        APB_ADC_EOF_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_ADC_EOF_NUM_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_ADC_EOF_NUM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `APB_ADC_EOF_NUM` writer - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
-pub struct APB_ADC_EOF_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_ADC_EOF_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type APB_ADC_EOF_NUM_W<'a> = crate::FieldWriter<'a, u32, DMA_CONF_SPEC, u16, u16, 16, 0>;
 #[doc = "Field `APB_ADC_RESET_FSM` reader - Reset DIG ADC CTRL status."]
-pub struct APB_ADC_RESET_FSM_R(crate::FieldReader<bool>);
-impl APB_ADC_RESET_FSM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_ADC_RESET_FSM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_ADC_RESET_FSM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_ADC_RESET_FSM_R = crate::BitReader<bool>;
 #[doc = "Field `APB_ADC_RESET_FSM` writer - Reset DIG ADC CTRL status."]
-pub struct APB_ADC_RESET_FSM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_ADC_RESET_FSM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type APB_ADC_RESET_FSM_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 30>;
 #[doc = "Field `APB_ADC_TRANS` reader - Set this bit, DIG ADC CTRL uses SPI DMA."]
-pub struct APB_ADC_TRANS_R(crate::FieldReader<bool>);
-impl APB_ADC_TRANS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APB_ADC_TRANS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_ADC_TRANS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_ADC_TRANS_R = crate::BitReader<bool>;
 #[doc = "Field `APB_ADC_TRANS` writer - Set this bit, DIG ADC CTRL uses SPI DMA."]
-pub struct APB_ADC_TRANS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_ADC_TRANS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type APB_ADC_TRANS_W<'a> = crate::BitWriter<'a, u32, DMA_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:15 - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
     #[inline(always)]
@@ -156,17 +67,17 @@ impl W {
     #[doc = "Bits 0:15 - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
     #[inline(always)]
     pub fn apb_adc_eof_num(&mut self) -> APB_ADC_EOF_NUM_W {
-        APB_ADC_EOF_NUM_W { w: self }
+        APB_ADC_EOF_NUM_W::new(self)
     }
     #[doc = "Bit 30 - Reset DIG ADC CTRL status."]
     #[inline(always)]
     pub fn apb_adc_reset_fsm(&mut self) -> APB_ADC_RESET_FSM_W {
-        APB_ADC_RESET_FSM_W { w: self }
+        APB_ADC_RESET_FSM_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit, DIG ADC CTRL uses SPI DMA."]
     #[inline(always)]
     pub fn apb_adc_trans(&mut self) -> APB_ADC_TRANS_W {
-        APB_ADC_TRANS_W { w: self }
+        APB_ADC_TRANS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<SDA_DUTY_SPEC>> for W {
     }
 }
 #[doc = "Field `NUM` reader - time period for SDA to toggle after SCL goes low"]
-pub struct NUM_R(crate::FieldReader<u32>);
-impl NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NUM_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NUM_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `NUM` writer - time period for SDA to toggle after SCL goes low"]
-pub struct NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type NUM_W<'a> = crate::FieldWriter<'a, u32, SDA_DUTY_SPEC, u32, u32, 20, 0>;
 impl R {
     #[doc = "Bits 0:19 - time period for SDA to toggle after SCL goes low"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:19 - time period for SDA to toggle after SCL goes low"]
     #[inline(always)]
     pub fn num(&mut self) -> NUM_W {
-        NUM_W { w: self }
+        NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<UHS_SPEC>> for W {
     }
 }
 #[doc = "Field `DDR` reader - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
-pub struct DDR_R(crate::FieldReader<u8>);
-impl DDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DDR` writer - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
-pub struct DDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type DDR_W<'a> = crate::FieldWriter<'a, u32, UHS_SPEC, u8, u8, 2, 16>;
 impl R {
     #[doc = "Bits 16:17 - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 16:17 - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
     #[inline(always)]
     pub fn ddr(&mut self) -> DDR_W {
-        DDR_W { w: self }
+        DDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

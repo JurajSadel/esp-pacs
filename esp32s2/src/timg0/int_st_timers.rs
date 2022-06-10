@@ -14,65 +14,13 @@ impl From<crate::R<INT_ST_TIMERS_SPEC>> for R {
     }
 }
 #[doc = "Field `T0_INT_ST` reader - The masked interrupt status bit for the TIMG_T0_INT interrupt."]
-pub struct T0_INT_ST_R(crate::FieldReader<bool>);
-impl T0_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T0_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `T1_INT_ST` reader - The masked interrupt status bit for the TIMG_T1_INT interrupt."]
-pub struct T1_INT_ST_R(crate::FieldReader<bool>);
-impl T1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        T1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `WDT_INT_ST` reader - The masked interrupt status bit for the TIMG_WDT_INT interrupt."]
-pub struct WDT_INT_ST_R(crate::FieldReader<bool>);
-impl WDT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WDT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WDT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WDT_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `LACT_INT_ST` reader - The masked interrupt status bit for the TIMG_LACT_INT interrupt."]
-pub struct LACT_INT_ST_R(crate::FieldReader<bool>);
-impl LACT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LACT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LACT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LACT_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The masked interrupt status bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]

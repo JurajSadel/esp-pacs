@@ -35,227 +35,29 @@ impl From<crate::W<FLOW_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SW_FLOW_CON_EN` reader - Set this bit to enable software flow control. it is used with register sw_xon or sw_xoff ."]
-pub struct SW_FLOW_CON_EN_R(crate::FieldReader<bool>);
-impl SW_FLOW_CON_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SW_FLOW_CON_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_FLOW_CON_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_FLOW_CON_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SW_FLOW_CON_EN` writer - Set this bit to enable software flow control. it is used with register sw_xon or sw_xoff ."]
-pub struct SW_FLOW_CON_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_FLOW_CON_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SW_FLOW_CON_EN_W<'a> = crate::BitWriter<'a, u32, FLOW_CONF_SPEC, bool, 0>;
 #[doc = "Field `XONOFF_DEL` reader - Set this bit to remove flow control char from the received data."]
-pub struct XONOFF_DEL_R(crate::FieldReader<bool>);
-impl XONOFF_DEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XONOFF_DEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XONOFF_DEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XONOFF_DEL_R = crate::BitReader<bool>;
 #[doc = "Field `XONOFF_DEL` writer - Set this bit to remove flow control char from the received data."]
-pub struct XONOFF_DEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XONOFF_DEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type XONOFF_DEL_W<'a> = crate::BitWriter<'a, u32, FLOW_CONF_SPEC, bool, 1>;
 #[doc = "Field `FORCE_XON` reader - Set this bit to clear ctsn to stop the transmitter from sending data."]
-pub struct FORCE_XON_R(crate::FieldReader<bool>);
-impl FORCE_XON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_XON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_XON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_XON_R = crate::BitReader<bool>;
 #[doc = "Field `FORCE_XON` writer - Set this bit to clear ctsn to stop the transmitter from sending data."]
-pub struct FORCE_XON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_XON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type FORCE_XON_W<'a> = crate::BitWriter<'a, u32, FLOW_CONF_SPEC, bool, 2>;
 #[doc = "Field `FORCE_XOFF` reader - Set this bit to set ctsn to enable the transmitter to go on sending data."]
-pub struct FORCE_XOFF_R(crate::FieldReader<bool>);
-impl FORCE_XOFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_XOFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_XOFF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_XOFF_R = crate::BitReader<bool>;
 #[doc = "Field `FORCE_XOFF` writer - Set this bit to set ctsn to enable the transmitter to go on sending data."]
-pub struct FORCE_XOFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_XOFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type FORCE_XOFF_W<'a> = crate::BitWriter<'a, u32, FLOW_CONF_SPEC, bool, 3>;
 #[doc = "Field `SEND_XON` reader - Set this bit to send xon char. it is cleared by hardware automatically."]
-pub struct SEND_XON_R(crate::FieldReader<bool>);
-impl SEND_XON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SEND_XON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEND_XON_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEND_XON_R = crate::BitReader<bool>;
 #[doc = "Field `SEND_XON` writer - Set this bit to send xon char. it is cleared by hardware automatically."]
-pub struct SEND_XON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEND_XON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SEND_XON_W<'a> = crate::BitWriter<'a, u32, FLOW_CONF_SPEC, bool, 4>;
 #[doc = "Field `SEND_XOFF` reader - Set this bit to send xoff char. it is cleared by hardware automatically."]
-pub struct SEND_XOFF_R(crate::FieldReader<bool>);
-impl SEND_XOFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SEND_XOFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEND_XOFF_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEND_XOFF_R = crate::BitReader<bool>;
 #[doc = "Field `SEND_XOFF` writer - Set this bit to send xoff char. it is cleared by hardware automatically."]
-pub struct SEND_XOFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEND_XOFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type SEND_XOFF_W<'a> = crate::BitWriter<'a, u32, FLOW_CONF_SPEC, bool, 5>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable software flow control. it is used with register sw_xon or sw_xoff ."]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable software flow control. it is used with register sw_xon or sw_xoff ."]
     #[inline(always)]
     pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W {
-        SW_FLOW_CON_EN_W { w: self }
+        SW_FLOW_CON_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to remove flow control char from the received data."]
     #[inline(always)]
     pub fn xonoff_del(&mut self) -> XONOFF_DEL_W {
-        XONOFF_DEL_W { w: self }
+        XONOFF_DEL_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear ctsn to stop the transmitter from sending data."]
     #[inline(always)]
     pub fn force_xon(&mut self) -> FORCE_XON_W {
-        FORCE_XON_W { w: self }
+        FORCE_XON_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to set ctsn to enable the transmitter to go on sending data."]
     #[inline(always)]
     pub fn force_xoff(&mut self) -> FORCE_XOFF_W {
-        FORCE_XOFF_W { w: self }
+        FORCE_XOFF_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to send xon char. it is cleared by hardware automatically."]
     #[inline(always)]
     pub fn send_xon(&mut self) -> SEND_XON_W {
-        SEND_XON_W { w: self }
+        SEND_XON_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to send xoff char. it is cleared by hardware automatically."]
     #[inline(always)]
     pub fn send_xoff(&mut self) -> SEND_XOFF_W {
-        SEND_XOFF_W { w: self }
+        SEND_XOFF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

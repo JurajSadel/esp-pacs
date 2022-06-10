@@ -14,20 +14,7 @@ impl From<crate::R<CPUSDIO_INT1_SPEC>> for R {
     }
 }
 #[doc = "Field `SDIO1_INT` reader - GPIO32~53 CPU SDIO interrupt status."]
-pub struct SDIO1_INT_R(crate::FieldReader<u32>);
-impl SDIO1_INT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SDIO1_INT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO1_INT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO1_INT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:21 - GPIO32~53 CPU SDIO interrupt status."]
     #[inline(always)]

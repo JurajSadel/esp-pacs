@@ -35,32 +35,9 @@ impl From<crate::W<LINESIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `LINESIZE` reader - Configures the data size of a single encryption. 0: 128 bits. 1: 256 bits. 2: 512 bits."]
-pub struct LINESIZE_R(crate::FieldReader<u8>);
-impl LINESIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LINESIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LINESIZE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LINESIZE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LINESIZE` writer - Configures the data size of a single encryption. 0: 128 bits. 1: 256 bits. 2: 512 bits."]
-pub struct LINESIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LINESIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type LINESIZE_W<'a> = crate::FieldWriter<'a, u32, LINESIZE_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1 - Configures the data size of a single encryption. 0: 128 bits. 1: 256 bits. 2: 512 bits."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:1 - Configures the data size of a single encryption. 0: 128 bits. 1: 256 bits. 2: 512 bits."]
     #[inline(always)]
     pub fn linesize(&mut self) -> LINESIZE_W {
-        LINESIZE_W { w: self }
+        LINESIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,227 +35,29 @@ impl From<crate::W<FLASH_SUS_CMD_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_PER` reader - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_PER_R(crate::FieldReader<bool>);
-impl FLASH_PER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_PER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_PER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_PER_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_PER` writer - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_PER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_PER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type FLASH_PER_W<'a> = crate::BitWriter<'a, u32, FLASH_SUS_CMD_SPEC, bool, 0>;
 #[doc = "Field `FLASH_PES` reader - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_PES_R(crate::FieldReader<bool>);
-impl FLASH_PES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_PES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_PES_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_PES_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_PES` writer - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
-pub struct FLASH_PES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_PES_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type FLASH_PES_W<'a> = crate::BitWriter<'a, u32, FLASH_SUS_CMD_SPEC, bool, 1>;
 #[doc = "Field `FLASH_PER_WAIT_EN` reader - Set this bit to add delay time after program erase resume(PER) is sent."]
-pub struct FLASH_PER_WAIT_EN_R(crate::FieldReader<bool>);
-impl FLASH_PER_WAIT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_PER_WAIT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_PER_WAIT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_PER_WAIT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_PER_WAIT_EN` writer - Set this bit to add delay time after program erase resume(PER) is sent."]
-pub struct FLASH_PER_WAIT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_PER_WAIT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type FLASH_PER_WAIT_EN_W<'a> = crate::BitWriter<'a, u32, FLASH_SUS_CMD_SPEC, bool, 2>;
 #[doc = "Field `FLASH_PES_WAIT_EN` reader - Set this bit to add delay time after program erase suspend(PES) command is sent."]
-pub struct FLASH_PES_WAIT_EN_R(crate::FieldReader<bool>);
-impl FLASH_PES_WAIT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_PES_WAIT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_PES_WAIT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_PES_WAIT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_PES_WAIT_EN` writer - Set this bit to add delay time after program erase suspend(PES) command is sent."]
-pub struct FLASH_PES_WAIT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_PES_WAIT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type FLASH_PES_WAIT_EN_W<'a> = crate::BitWriter<'a, u32, FLASH_SUS_CMD_SPEC, bool, 3>;
 #[doc = "Field `PES_PER_EN` reader - Set this bit to enable PES transfer trigger PES transfer option."]
-pub struct PES_PER_EN_R(crate::FieldReader<bool>);
-impl PES_PER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PES_PER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PES_PER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PES_PER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PES_PER_EN` writer - Set this bit to enable PES transfer trigger PES transfer option."]
-pub struct PES_PER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PES_PER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PES_PER_EN_W<'a> = crate::BitWriter<'a, u32, FLASH_SUS_CMD_SPEC, bool, 4>;
 #[doc = "Field `PESR_IDLE_EN` reader - 1: Separate PER flash wait idle and PES flash wait idle. 0: Not separate."]
-pub struct PESR_IDLE_EN_R(crate::FieldReader<bool>);
-impl PESR_IDLE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PESR_IDLE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PESR_IDLE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PESR_IDLE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `PESR_IDLE_EN` writer - 1: Separate PER flash wait idle and PES flash wait idle. 0: Not separate."]
-pub struct PESR_IDLE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PESR_IDLE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type PESR_IDLE_EN_W<'a> = crate::BitWriter<'a, u32, FLASH_SUS_CMD_SPEC, bool, 5>;
 impl R {
     #[doc = "Bit 0 - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
@@ -292,32 +94,32 @@ impl W {
     #[doc = "Bit 0 - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     pub fn flash_per(&mut self) -> FLASH_PER_W {
-        FLASH_PER_W { w: self }
+        FLASH_PER_W::new(self)
     }
     #[doc = "Bit 1 - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
     pub fn flash_pes(&mut self) -> FLASH_PES_W {
-        FLASH_PES_W { w: self }
+        FLASH_PES_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to add delay time after program erase resume(PER) is sent."]
     #[inline(always)]
     pub fn flash_per_wait_en(&mut self) -> FLASH_PER_WAIT_EN_W {
-        FLASH_PER_WAIT_EN_W { w: self }
+        FLASH_PER_WAIT_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to add delay time after program erase suspend(PES) command is sent."]
     #[inline(always)]
     pub fn flash_pes_wait_en(&mut self) -> FLASH_PES_WAIT_EN_W {
-        FLASH_PES_WAIT_EN_W { w: self }
+        FLASH_PES_WAIT_EN_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable PES transfer trigger PES transfer option."]
     #[inline(always)]
     pub fn pes_per_en(&mut self) -> PES_PER_EN_W {
-        PES_PER_EN_W { w: self }
+        PES_PER_EN_W::new(self)
     }
     #[doc = "Bit 5 - 1: Separate PER flash wait idle and PES flash wait idle. 0: Not separate."]
     #[inline(always)]
     pub fn pesr_idle_en(&mut self) -> PESR_IDLE_EN_W {
-        PESR_IDLE_EN_W { w: self }
+        PESR_IDLE_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

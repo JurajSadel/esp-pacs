@@ -35,271 +35,37 @@ impl From<crate::W<ARB_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC_ARB_APB_FORCE` reader - adc2 arbiter force to enableapb controller"]
-pub struct ADC_ARB_APB_FORCE_R(crate::FieldReader<bool>);
-impl ADC_ARB_APB_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_ARB_APB_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_ARB_APB_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_ARB_APB_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_ARB_APB_FORCE` writer - adc2 arbiter force to enableapb controller"]
-pub struct ADC_ARB_APB_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_ARB_APB_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type ADC_ARB_APB_FORCE_W<'a> = crate::BitWriter<'a, u32, ARB_CTRL_SPEC, bool, 2>;
 #[doc = "Field `ADC_ARB_RTC_FORCE` reader - adc2 arbiter force to enable rtc controller"]
-pub struct ADC_ARB_RTC_FORCE_R(crate::FieldReader<bool>);
-impl ADC_ARB_RTC_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_ARB_RTC_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_ARB_RTC_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_ARB_RTC_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_ARB_RTC_FORCE` writer - adc2 arbiter force to enable rtc controller"]
-pub struct ADC_ARB_RTC_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_ARB_RTC_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type ADC_ARB_RTC_FORCE_W<'a> = crate::BitWriter<'a, u32, ARB_CTRL_SPEC, bool, 3>;
 #[doc = "Field `ADC_ARB_WIFI_FORCE` reader - adc2 arbiter force to enable wifi controller"]
-pub struct ADC_ARB_WIFI_FORCE_R(crate::FieldReader<bool>);
-impl ADC_ARB_WIFI_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_ARB_WIFI_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_ARB_WIFI_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_ARB_WIFI_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_ARB_WIFI_FORCE` writer - adc2 arbiter force to enable wifi controller"]
-pub struct ADC_ARB_WIFI_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_ARB_WIFI_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type ADC_ARB_WIFI_FORCE_W<'a> = crate::BitWriter<'a, u32, ARB_CTRL_SPEC, bool, 4>;
 #[doc = "Field `ADC_ARB_GRANT_FORCE` reader - adc2 arbiter force grant"]
-pub struct ADC_ARB_GRANT_FORCE_R(crate::FieldReader<bool>);
-impl ADC_ARB_GRANT_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_ARB_GRANT_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_ARB_GRANT_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_ARB_GRANT_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_ARB_GRANT_FORCE` writer - adc2 arbiter force grant"]
-pub struct ADC_ARB_GRANT_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_ARB_GRANT_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type ADC_ARB_GRANT_FORCE_W<'a> = crate::BitWriter<'a, u32, ARB_CTRL_SPEC, bool, 5>;
 #[doc = "Field `ADC_ARB_APB_PRIORITY` reader - Set adc2 arbiterapb priority"]
-pub struct ADC_ARB_APB_PRIORITY_R(crate::FieldReader<u8>);
-impl ADC_ARB_APB_PRIORITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADC_ARB_APB_PRIORITY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_ARB_APB_PRIORITY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_ARB_APB_PRIORITY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC_ARB_APB_PRIORITY` writer - Set adc2 arbiterapb priority"]
-pub struct ADC_ARB_APB_PRIORITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_ARB_APB_PRIORITY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type ADC_ARB_APB_PRIORITY_W<'a> = crate::FieldWriter<'a, u32, ARB_CTRL_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `ADC_ARB_RTC_PRIORITY` reader - Set adc2 arbiter rtc priority"]
-pub struct ADC_ARB_RTC_PRIORITY_R(crate::FieldReader<u8>);
-impl ADC_ARB_RTC_PRIORITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADC_ARB_RTC_PRIORITY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_ARB_RTC_PRIORITY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_ARB_RTC_PRIORITY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC_ARB_RTC_PRIORITY` writer - Set adc2 arbiter rtc priority"]
-pub struct ADC_ARB_RTC_PRIORITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_ARB_RTC_PRIORITY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type ADC_ARB_RTC_PRIORITY_W<'a> = crate::FieldWriter<'a, u32, ARB_CTRL_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `ADC_ARB_WIFI_PRIORITY` reader - Set adc2 arbiter wifi priority"]
-pub struct ADC_ARB_WIFI_PRIORITY_R(crate::FieldReader<u8>);
-impl ADC_ARB_WIFI_PRIORITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADC_ARB_WIFI_PRIORITY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_ARB_WIFI_PRIORITY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_ARB_WIFI_PRIORITY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC_ARB_WIFI_PRIORITY` writer - Set adc2 arbiter wifi priority"]
-pub struct ADC_ARB_WIFI_PRIORITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_ARB_WIFI_PRIORITY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type ADC_ARB_WIFI_PRIORITY_W<'a> = crate::FieldWriter<'a, u32, ARB_CTRL_SPEC, u8, u8, 2, 10>;
 #[doc = "Field `ADC_ARB_FIX_PRIORITY` reader - adc2 arbiter uses fixed priority"]
-pub struct ADC_ARB_FIX_PRIORITY_R(crate::FieldReader<bool>);
-impl ADC_ARB_FIX_PRIORITY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC_ARB_FIX_PRIORITY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC_ARB_FIX_PRIORITY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC_ARB_FIX_PRIORITY_R = crate::BitReader<bool>;
 #[doc = "Field `ADC_ARB_FIX_PRIORITY` writer - adc2 arbiter uses fixed priority"]
-pub struct ADC_ARB_FIX_PRIORITY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC_ARB_FIX_PRIORITY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type ADC_ARB_FIX_PRIORITY_W<'a> = crate::BitWriter<'a, u32, ARB_CTRL_SPEC, bool, 12>;
 impl R {
     #[doc = "Bit 2 - adc2 arbiter force to enableapb controller"]
     #[inline(always)]
@@ -346,42 +112,42 @@ impl W {
     #[doc = "Bit 2 - adc2 arbiter force to enableapb controller"]
     #[inline(always)]
     pub fn adc_arb_apb_force(&mut self) -> ADC_ARB_APB_FORCE_W {
-        ADC_ARB_APB_FORCE_W { w: self }
+        ADC_ARB_APB_FORCE_W::new(self)
     }
     #[doc = "Bit 3 - adc2 arbiter force to enable rtc controller"]
     #[inline(always)]
     pub fn adc_arb_rtc_force(&mut self) -> ADC_ARB_RTC_FORCE_W {
-        ADC_ARB_RTC_FORCE_W { w: self }
+        ADC_ARB_RTC_FORCE_W::new(self)
     }
     #[doc = "Bit 4 - adc2 arbiter force to enable wifi controller"]
     #[inline(always)]
     pub fn adc_arb_wifi_force(&mut self) -> ADC_ARB_WIFI_FORCE_W {
-        ADC_ARB_WIFI_FORCE_W { w: self }
+        ADC_ARB_WIFI_FORCE_W::new(self)
     }
     #[doc = "Bit 5 - adc2 arbiter force grant"]
     #[inline(always)]
     pub fn adc_arb_grant_force(&mut self) -> ADC_ARB_GRANT_FORCE_W {
-        ADC_ARB_GRANT_FORCE_W { w: self }
+        ADC_ARB_GRANT_FORCE_W::new(self)
     }
     #[doc = "Bits 6:7 - Set adc2 arbiterapb priority"]
     #[inline(always)]
     pub fn adc_arb_apb_priority(&mut self) -> ADC_ARB_APB_PRIORITY_W {
-        ADC_ARB_APB_PRIORITY_W { w: self }
+        ADC_ARB_APB_PRIORITY_W::new(self)
     }
     #[doc = "Bits 8:9 - Set adc2 arbiter rtc priority"]
     #[inline(always)]
     pub fn adc_arb_rtc_priority(&mut self) -> ADC_ARB_RTC_PRIORITY_W {
-        ADC_ARB_RTC_PRIORITY_W { w: self }
+        ADC_ARB_RTC_PRIORITY_W::new(self)
     }
     #[doc = "Bits 10:11 - Set adc2 arbiter wifi priority"]
     #[inline(always)]
     pub fn adc_arb_wifi_priority(&mut self) -> ADC_ARB_WIFI_PRIORITY_W {
-        ADC_ARB_WIFI_PRIORITY_W { w: self }
+        ADC_ARB_WIFI_PRIORITY_W::new(self)
     }
     #[doc = "Bit 12 - adc2 arbiter uses fixed priority"]
     #[inline(always)]
     pub fn adc_arb_fix_priority(&mut self) -> ADC_ARB_FIX_PRIORITY_W {
-        ADC_ARB_FIX_PRIORITY_W { w: self }
+        ADC_ARB_FIX_PRIORITY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

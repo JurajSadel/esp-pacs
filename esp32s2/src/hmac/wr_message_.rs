@@ -20,22 +20,12 @@ impl From<crate::W<WR_MESSAGE__SPEC>> for W {
     }
 }
 #[doc = "Field `WDATA` writer - Store the %sth 32-bit of message."]
-pub struct WDATA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDATA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type WDATA_W<'a> = crate::FieldWriter<'a, u32, WR_MESSAGE__SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31 - Store the %sth 32-bit of message."]
     #[inline(always)]
     pub fn wdata(&mut self) -> WDATA_W {
-        WDATA_W { w: self }
+        WDATA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

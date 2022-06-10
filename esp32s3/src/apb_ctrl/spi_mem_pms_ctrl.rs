@@ -35,57 +35,11 @@ impl From<crate::W<SPI_MEM_PMS_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_MEM_REJECT_INT` reader - ******* Description ***********"]
-pub struct SPI_MEM_REJECT_INT_R(crate::FieldReader<bool>);
-impl SPI_MEM_REJECT_INT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_MEM_REJECT_INT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_MEM_REJECT_INT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_MEM_REJECT_INT_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_MEM_REJECT_CLR` writer - ******* Description ***********"]
-pub struct SPI_MEM_REJECT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_MEM_REJECT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SPI_MEM_REJECT_CLR_W<'a> = crate::BitWriter<'a, u32, SPI_MEM_PMS_CTRL_SPEC, bool, 1>;
 #[doc = "Field `SPI_MEM_REJECT_CDE` reader - ******* Description ***********"]
-pub struct SPI_MEM_REJECT_CDE_R(crate::FieldReader<u8>);
-impl SPI_MEM_REJECT_CDE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_MEM_REJECT_CDE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_MEM_REJECT_CDE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_MEM_REJECT_CDE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
@@ -102,7 +56,7 @@ impl W {
     #[doc = "Bit 1 - ******* Description ***********"]
     #[inline(always)]
     pub fn spi_mem_reject_clr(&mut self) -> SPI_MEM_REJECT_CLR_W {
-        SPI_MEM_REJECT_CLR_W { w: self }
+        SPI_MEM_REJECT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

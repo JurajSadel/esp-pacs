@@ -35,42 +35,9 @@ impl From<crate::W<OPTIONS1_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_DOWNLOAD_BOOT` reader - Set this bit to force the chip to boot from the download mode."]
-pub struct FORCE_DOWNLOAD_BOOT_R(crate::FieldReader<bool>);
-impl FORCE_DOWNLOAD_BOOT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_DOWNLOAD_BOOT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_DOWNLOAD_BOOT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_DOWNLOAD_BOOT_R = crate::BitReader<bool>;
 #[doc = "Field `FORCE_DOWNLOAD_BOOT` writer - Set this bit to force the chip to boot from the download mode."]
-pub struct FORCE_DOWNLOAD_BOOT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_DOWNLOAD_BOOT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type FORCE_DOWNLOAD_BOOT_W<'a> = crate::BitWriter<'a, u32, OPTIONS1_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - Set this bit to force the chip to boot from the download mode."]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0 - Set this bit to force the chip to boot from the download mode."]
     #[inline(always)]
     pub fn force_download_boot(&mut self) -> FORCE_DOWNLOAD_BOOT_W {
-        FORCE_DOWNLOAD_BOOT_W { w: self }
+        FORCE_DOWNLOAD_BOOT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

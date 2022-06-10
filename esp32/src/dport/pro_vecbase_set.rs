@@ -35,32 +35,9 @@ impl From<crate::W<PRO_VECBASE_SET_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_OUT_VECBASE` reader - "]
-pub struct PRO_OUT_VECBASE_R(crate::FieldReader<u32>);
-impl PRO_OUT_VECBASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PRO_OUT_VECBASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_OUT_VECBASE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_OUT_VECBASE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRO_OUT_VECBASE` writer - "]
-pub struct PRO_OUT_VECBASE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_OUT_VECBASE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x003f_ffff) | (value as u32 & 0x003f_ffff);
-        self.w
-    }
-}
+pub type PRO_OUT_VECBASE_W<'a> = crate::FieldWriter<'a, u32, PRO_VECBASE_SET_SPEC, u32, u32, 22, 0>;
 impl R {
     #[doc = "Bits 0:21"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:21"]
     #[inline(always)]
     pub fn pro_out_vecbase(&mut self) -> PRO_OUT_VECBASE_W {
-        PRO_OUT_VECBASE_W { w: self }
+        PRO_OUT_VECBASE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,200 +14,31 @@ impl From<crate::R<RD_REPEAT_ERR2_SPEC>> for R {
     }
 }
 #[doc = "Field `KEY_PURPOSE_2_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct KEY_PURPOSE_2_ERR_R(crate::FieldReader<u8>);
-impl KEY_PURPOSE_2_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_PURPOSE_2_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_PURPOSE_2_ERR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_PURPOSE_2_ERR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `KEY_PURPOSE_3_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct KEY_PURPOSE_3_ERR_R(crate::FieldReader<u8>);
-impl KEY_PURPOSE_3_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_PURPOSE_3_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_PURPOSE_3_ERR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_PURPOSE_3_ERR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `KEY_PURPOSE_4_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct KEY_PURPOSE_4_ERR_R(crate::FieldReader<u8>);
-impl KEY_PURPOSE_4_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_PURPOSE_4_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_PURPOSE_4_ERR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_PURPOSE_4_ERR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `KEY_PURPOSE_5_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct KEY_PURPOSE_5_ERR_R(crate::FieldReader<u8>);
-impl KEY_PURPOSE_5_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_PURPOSE_5_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_PURPOSE_5_ERR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_PURPOSE_5_ERR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RPT4_RESERVED0_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct RPT4_RESERVED0_ERR_R(crate::FieldReader<u8>);
-impl RPT4_RESERVED0_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RPT4_RESERVED0_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RPT4_RESERVED0_ERR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RPT4_RESERVED0_ERR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SECURE_BOOT_EN_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct SECURE_BOOT_EN_ERR_R(crate::FieldReader<bool>);
-impl SECURE_BOOT_EN_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECURE_BOOT_EN_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECURE_BOOT_EN_ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECURE_BOOT_EN_ERR_R = crate::BitReader<bool>;
 #[doc = "Field `SECURE_BOOT_AGGRESSIVE_REVOKE_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R(crate::FieldReader<bool>);
-impl SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECURE_BOOT_AGGRESSIVE_REVOKE_ERR_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_USB_JTAG_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct DIS_USB_JTAG_ERR_R(crate::FieldReader<bool>);
-impl DIS_USB_JTAG_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_USB_JTAG_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_USB_JTAG_ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_USB_JTAG_ERR_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_USB_DEVICE_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct DIS_USB_DEVICE_ERR_R(crate::FieldReader<bool>);
-impl DIS_USB_DEVICE_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_USB_DEVICE_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_USB_DEVICE_ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_USB_DEVICE_ERR_R = crate::BitReader<bool>;
 #[doc = "Field `STRAP_JTAG_SEL_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct STRAP_JTAG_SEL_ERR_R(crate::FieldReader<bool>);
-impl STRAP_JTAG_SEL_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STRAP_JTAG_SEL_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STRAP_JTAG_SEL_ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STRAP_JTAG_SEL_ERR_R = crate::BitReader<bool>;
 #[doc = "Field `USB_PHY_SEL_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct USB_PHY_SEL_ERR_R(crate::FieldReader<bool>);
-impl USB_PHY_SEL_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        USB_PHY_SEL_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for USB_PHY_SEL_ERR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type USB_PHY_SEL_ERR_R = crate::BitReader<bool>;
 #[doc = "Field `POWER_GLITCH_DSENSE_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct POWER_GLITCH_DSENSE_ERR_R(crate::FieldReader<u8>);
-impl POWER_GLITCH_DSENSE_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        POWER_GLITCH_DSENSE_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POWER_GLITCH_DSENSE_ERR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POWER_GLITCH_DSENSE_ERR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FLASH_TPUW_ERR` reader - If any bits in this filed are 1, then it indicates a programming error."]
-pub struct FLASH_TPUW_ERR_R(crate::FieldReader<u8>);
-impl FLASH_TPUW_ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FLASH_TPUW_ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_TPUW_ERR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_TPUW_ERR_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:3 - If any bits in this filed are 1, then it indicates a programming error."]
     #[inline(always)]

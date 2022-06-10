@@ -35,301 +35,37 @@ impl From<crate::W<INTR_RLS_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO0_INT_ENA` reader - The enable bit for DEDIC_GPIO0_INT_ST register."]
-pub struct GPIO0_INT_ENA_R(crate::FieldReader<bool>);
-impl GPIO0_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO0_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO0_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO0_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO0_INT_ENA` writer - The enable bit for DEDIC_GPIO0_INT_ST register."]
-pub struct GPIO0_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO0_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type GPIO0_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, 0>;
 #[doc = "Field `GPIO1_INT_ENA` reader - The enable bit for DEDIC_GPIO1_INT_ST register."]
-pub struct GPIO1_INT_ENA_R(crate::FieldReader<bool>);
-impl GPIO1_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO1_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO1_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO1_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO1_INT_ENA` writer - The enable bit for DEDIC_GPIO1_INT_ST register."]
-pub struct GPIO1_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO1_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type GPIO1_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, 1>;
 #[doc = "Field `GPIO2_INT_ENA` reader - The enable bit for DEDIC_GPIO2_INT_ST register."]
-pub struct GPIO2_INT_ENA_R(crate::FieldReader<bool>);
-impl GPIO2_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO2_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO2_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO2_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO2_INT_ENA` writer - The enable bit for DEDIC_GPIO2_INT_ST register."]
-pub struct GPIO2_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO2_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type GPIO2_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, 2>;
 #[doc = "Field `GPIO3_INT_ENA` reader - The enable bit for DEDIC_GPIO3_INT_ST register."]
-pub struct GPIO3_INT_ENA_R(crate::FieldReader<bool>);
-impl GPIO3_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO3_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO3_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO3_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO3_INT_ENA` writer - The enable bit for DEDIC_GPIO3_INT_ST register."]
-pub struct GPIO3_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO3_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type GPIO3_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, 3>;
 #[doc = "Field `GPIO4_INT_ENA` reader - The enable bit for DEDIC_GPIO4_INT_ST register."]
-pub struct GPIO4_INT_ENA_R(crate::FieldReader<bool>);
-impl GPIO4_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO4_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO4_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO4_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO4_INT_ENA` writer - The enable bit for DEDIC_GPIO4_INT_ST register."]
-pub struct GPIO4_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO4_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type GPIO4_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, 4>;
 #[doc = "Field `GPIO5_INT_ENA` reader - The enable bit for DEDIC_GPIO5_INT_ST register."]
-pub struct GPIO5_INT_ENA_R(crate::FieldReader<bool>);
-impl GPIO5_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO5_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO5_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO5_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO5_INT_ENA` writer - The enable bit for DEDIC_GPIO5_INT_ST register."]
-pub struct GPIO5_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO5_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type GPIO5_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, 5>;
 #[doc = "Field `GPIO6_INT_ENA` reader - The enable bit for DEDIC_GPIO6_INT_ST register."]
-pub struct GPIO6_INT_ENA_R(crate::FieldReader<bool>);
-impl GPIO6_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO6_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO6_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO6_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO6_INT_ENA` writer - The enable bit for DEDIC_GPIO6_INT_ST register."]
-pub struct GPIO6_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO6_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type GPIO6_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, 6>;
 #[doc = "Field `GPIO7_INT_ENA` reader - The enable bit for DEDIC_GPIO7_INT_ST register."]
-pub struct GPIO7_INT_ENA_R(crate::FieldReader<bool>);
-impl GPIO7_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GPIO7_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO7_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO7_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `GPIO7_INT_ENA` writer - The enable bit for DEDIC_GPIO7_INT_ST register."]
-pub struct GPIO7_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO7_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type GPIO7_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INTR_RLS_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 0 - The enable bit for DEDIC_GPIO0_INT_ST register."]
     #[inline(always)]
@@ -376,42 +112,42 @@ impl W {
     #[doc = "Bit 0 - The enable bit for DEDIC_GPIO0_INT_ST register."]
     #[inline(always)]
     pub fn gpio0_int_ena(&mut self) -> GPIO0_INT_ENA_W {
-        GPIO0_INT_ENA_W { w: self }
+        GPIO0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - The enable bit for DEDIC_GPIO1_INT_ST register."]
     #[inline(always)]
     pub fn gpio1_int_ena(&mut self) -> GPIO1_INT_ENA_W {
-        GPIO1_INT_ENA_W { w: self }
+        GPIO1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The enable bit for DEDIC_GPIO2_INT_ST register."]
     #[inline(always)]
     pub fn gpio2_int_ena(&mut self) -> GPIO2_INT_ENA_W {
-        GPIO2_INT_ENA_W { w: self }
+        GPIO2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - The enable bit for DEDIC_GPIO3_INT_ST register."]
     #[inline(always)]
     pub fn gpio3_int_ena(&mut self) -> GPIO3_INT_ENA_W {
-        GPIO3_INT_ENA_W { w: self }
+        GPIO3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - The enable bit for DEDIC_GPIO4_INT_ST register."]
     #[inline(always)]
     pub fn gpio4_int_ena(&mut self) -> GPIO4_INT_ENA_W {
-        GPIO4_INT_ENA_W { w: self }
+        GPIO4_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The enable bit for DEDIC_GPIO5_INT_ST register."]
     #[inline(always)]
     pub fn gpio5_int_ena(&mut self) -> GPIO5_INT_ENA_W {
-        GPIO5_INT_ENA_W { w: self }
+        GPIO5_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - The enable bit for DEDIC_GPIO6_INT_ST register."]
     #[inline(always)]
     pub fn gpio6_int_ena(&mut self) -> GPIO6_INT_ENA_W {
-        GPIO6_INT_ENA_W { w: self }
+        GPIO6_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - The enable bit for DEDIC_GPIO7_INT_ST register."]
     #[inline(always)]
     pub fn gpio7_int_ena(&mut self) -> GPIO7_INT_ENA_W {
-        GPIO7_INT_ENA_W { w: self }
+        GPIO7_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

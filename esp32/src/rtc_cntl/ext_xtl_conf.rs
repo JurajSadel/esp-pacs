@@ -35,79 +35,13 @@ impl From<crate::W<EXT_XTL_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `XTL_EXT_CTR_LV` reader - 0: power down XTAL at high level 1: power down XTAL at low level"]
-pub struct XTL_EXT_CTR_LV_R(crate::FieldReader<bool>);
-impl XTL_EXT_CTR_LV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XTL_EXT_CTR_LV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XTL_EXT_CTR_LV_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XTL_EXT_CTR_LV_R = crate::BitReader<bool>;
 #[doc = "Field `XTL_EXT_CTR_LV` writer - 0: power down XTAL at high level 1: power down XTAL at low level"]
-pub struct XTL_EXT_CTR_LV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XTL_EXT_CTR_LV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type XTL_EXT_CTR_LV_W<'a> = crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, 30>;
 #[doc = "Field `XTL_EXT_CTR_EN` reader - enable control XTAL by external pads"]
-pub struct XTL_EXT_CTR_EN_R(crate::FieldReader<bool>);
-impl XTL_EXT_CTR_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XTL_EXT_CTR_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XTL_EXT_CTR_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XTL_EXT_CTR_EN_R = crate::BitReader<bool>;
 #[doc = "Field `XTL_EXT_CTR_EN` writer - enable control XTAL by external pads"]
-pub struct XTL_EXT_CTR_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XTL_EXT_CTR_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type XTL_EXT_CTR_EN_W<'a> = crate::BitWriter<'a, u32, EXT_XTL_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 30 - 0: power down XTAL at high level 1: power down XTAL at low level"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 30 - 0: power down XTAL at high level 1: power down XTAL at low level"]
     #[inline(always)]
     pub fn xtl_ext_ctr_lv(&mut self) -> XTL_EXT_CTR_LV_W {
-        XTL_EXT_CTR_LV_W { w: self }
+        XTL_EXT_CTR_LV_W::new(self)
     }
     #[doc = "Bit 31 - enable control XTAL by external pads"]
     #[inline(always)]
     pub fn xtl_ext_ctr_en(&mut self) -> XTL_EXT_CTR_EN_W {
-        XTL_EXT_CTR_EN_W { w: self }
+        XTL_EXT_CTR_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

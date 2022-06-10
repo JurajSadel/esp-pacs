@@ -35,214 +35,35 @@ impl From<crate::W<RETENTION_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RETENTION_TAG_MODE` reader - No public"]
-pub struct RETENTION_TAG_MODE_R(crate::FieldReader<u8>);
-impl RETENTION_TAG_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RETENTION_TAG_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RETENTION_TAG_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RETENTION_TAG_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RETENTION_TAG_MODE` writer - No public"]
-pub struct RETENTION_TAG_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RETENTION_TAG_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 10)) | ((value as u32 & 0x0f) << 10);
-        self.w
-    }
-}
+pub type RETENTION_TAG_MODE_W<'a> = crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u8, u8, 4, 10>;
 #[doc = "Field `RETENTION_TARGET` reader - congfigure retention target cpu and/or tag"]
-pub struct RETENTION_TARGET_R(crate::FieldReader<u8>);
-impl RETENTION_TARGET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RETENTION_TARGET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RETENTION_TARGET_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RETENTION_TARGET_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RETENTION_TARGET` writer - congfigure retention target cpu and/or tag"]
-pub struct RETENTION_TARGET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RETENTION_TARGET_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type RETENTION_TARGET_W<'a> = crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u8, u8, 2, 14>;
 #[doc = "Field `RETENTION_CLK_SEL` reader - No public"]
-pub struct RETENTION_CLK_SEL_R(crate::FieldReader<bool>);
-impl RETENTION_CLK_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RETENTION_CLK_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RETENTION_CLK_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RETENTION_CLK_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `RETENTION_CLK_SEL` writer - No public"]
-pub struct RETENTION_CLK_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RETENTION_CLK_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type RETENTION_CLK_SEL_W<'a> = crate::BitWriter<'a, u32, RETENTION_CTRL_SPEC, bool, 16>;
 #[doc = "Field `RETENTION_DONE_WAIT` reader - wait retention done cycle"]
-pub struct RETENTION_DONE_WAIT_R(crate::FieldReader<u8>);
-impl RETENTION_DONE_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RETENTION_DONE_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RETENTION_DONE_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RETENTION_DONE_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RETENTION_DONE_WAIT` writer - wait retention done cycle"]
-pub struct RETENTION_DONE_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RETENTION_DONE_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 17)) | ((value as u32 & 7) << 17);
-        self.w
-    }
-}
+pub type RETENTION_DONE_WAIT_W<'a> =
+    crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u8, u8, 3, 17>;
 #[doc = "Field `RETENTION_CLKOFF_WAIT` reader - wait clk off cycle"]
-pub struct RETENTION_CLKOFF_WAIT_R(crate::FieldReader<u8>);
-impl RETENTION_CLKOFF_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RETENTION_CLKOFF_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RETENTION_CLKOFF_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RETENTION_CLKOFF_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RETENTION_CLKOFF_WAIT` writer - wait clk off cycle"]
-pub struct RETENTION_CLKOFF_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RETENTION_CLKOFF_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | ((value as u32 & 0x0f) << 20);
-        self.w
-    }
-}
+pub type RETENTION_CLKOFF_WAIT_W<'a> =
+    crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u8, u8, 4, 20>;
 #[doc = "Field `RETENTION_EN` reader - enable retention"]
-pub struct RETENTION_EN_R(crate::FieldReader<bool>);
-impl RETENTION_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RETENTION_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RETENTION_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RETENTION_EN_R = crate::BitReader<bool>;
 #[doc = "Field `RETENTION_EN` writer - enable retention"]
-pub struct RETENTION_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RETENTION_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type RETENTION_EN_W<'a> = crate::BitWriter<'a, u32, RETENTION_CTRL_SPEC, bool, 24>;
 #[doc = "Field `RETENTION_WAIT` reader - wait cycles for rention operation"]
-pub struct RETENTION_WAIT_R(crate::FieldReader<u8>);
-impl RETENTION_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RETENTION_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RETENTION_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RETENTION_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RETENTION_WAIT` writer - wait cycles for rention operation"]
-pub struct RETENTION_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RETENTION_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x7f << 25)) | ((value as u32 & 0x7f) << 25);
-        self.w
-    }
-}
+pub type RETENTION_WAIT_W<'a> = crate::FieldWriter<'a, u32, RETENTION_CTRL_SPEC, u8, u8, 7, 25>;
 impl R {
     #[doc = "Bits 10:13 - No public"]
     #[inline(always)]
@@ -284,37 +105,37 @@ impl W {
     #[doc = "Bits 10:13 - No public"]
     #[inline(always)]
     pub fn retention_tag_mode(&mut self) -> RETENTION_TAG_MODE_W {
-        RETENTION_TAG_MODE_W { w: self }
+        RETENTION_TAG_MODE_W::new(self)
     }
     #[doc = "Bits 14:15 - congfigure retention target cpu and/or tag"]
     #[inline(always)]
     pub fn retention_target(&mut self) -> RETENTION_TARGET_W {
-        RETENTION_TARGET_W { w: self }
+        RETENTION_TARGET_W::new(self)
     }
     #[doc = "Bit 16 - No public"]
     #[inline(always)]
     pub fn retention_clk_sel(&mut self) -> RETENTION_CLK_SEL_W {
-        RETENTION_CLK_SEL_W { w: self }
+        RETENTION_CLK_SEL_W::new(self)
     }
     #[doc = "Bits 17:19 - wait retention done cycle"]
     #[inline(always)]
     pub fn retention_done_wait(&mut self) -> RETENTION_DONE_WAIT_W {
-        RETENTION_DONE_WAIT_W { w: self }
+        RETENTION_DONE_WAIT_W::new(self)
     }
     #[doc = "Bits 20:23 - wait clk off cycle"]
     #[inline(always)]
     pub fn retention_clkoff_wait(&mut self) -> RETENTION_CLKOFF_WAIT_W {
-        RETENTION_CLKOFF_WAIT_W { w: self }
+        RETENTION_CLKOFF_WAIT_W::new(self)
     }
     #[doc = "Bit 24 - enable retention"]
     #[inline(always)]
     pub fn retention_en(&mut self) -> RETENTION_EN_W {
-        RETENTION_EN_W { w: self }
+        RETENTION_EN_W::new(self)
     }
     #[doc = "Bits 25:31 - wait cycles for rention operation"]
     #[inline(always)]
     pub fn retention_wait(&mut self) -> RETENTION_WAIT_W {
-        RETENTION_WAIT_W { w: self }
+        RETENTION_WAIT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

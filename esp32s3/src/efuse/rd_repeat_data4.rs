@@ -14,20 +14,7 @@ impl From<crate::R<RD_REPEAT_DATA4_SPEC>> for R {
     }
 }
 #[doc = "Field `RPT4_RESERVED2` reader - Reserved (used for four backups method)."]
-pub struct RPT4_RESERVED2_R(crate::FieldReader<u32>);
-impl RPT4_RESERVED2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RPT4_RESERVED2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RPT4_RESERVED2_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RPT4_RESERVED2_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:23 - Reserved (used for four backups method)."]
     #[inline(always)]

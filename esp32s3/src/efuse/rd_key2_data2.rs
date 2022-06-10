@@ -14,20 +14,7 @@ impl From<crate::R<RD_KEY2_DATA2_SPEC>> for R {
     }
 }
 #[doc = "Field `KEY2_DATA2` reader - Stores the second 32 bits of KEY2."]
-pub struct KEY2_DATA2_R(crate::FieldReader<u32>);
-impl KEY2_DATA2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        KEY2_DATA2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY2_DATA2_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY2_DATA2_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the second 32 bits of KEY2."]
     #[inline(always)]

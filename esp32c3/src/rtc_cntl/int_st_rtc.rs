@@ -14,140 +14,23 @@ impl From<crate::R<INT_ST_RTC_SPEC>> for R {
     }
 }
 #[doc = "Field `SLP_WAKEUP_INT_ST` reader - sleep wakeup interrupt state"]
-pub struct SLP_WAKEUP_INT_ST_R(crate::FieldReader<bool>);
-impl SLP_WAKEUP_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLP_WAKEUP_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLP_WAKEUP_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLP_WAKEUP_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `SLP_REJECT_INT_ST` reader - sleep reject interrupt state"]
-pub struct SLP_REJECT_INT_ST_R(crate::FieldReader<bool>);
-impl SLP_REJECT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLP_REJECT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLP_REJECT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLP_REJECT_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_WDT_INT_ST` reader - RTC WDT interrupt state"]
-pub struct RTC_WDT_INT_ST_R(crate::FieldReader<bool>);
-impl RTC_WDT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_WDT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_WDT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_WDT_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_BROWN_OUT_INT_ST` reader - brown out interrupt state"]
-pub struct RTC_BROWN_OUT_INT_ST_R(crate::FieldReader<bool>);
-impl RTC_BROWN_OUT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_BROWN_OUT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_BROWN_OUT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_BROWN_OUT_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_MAIN_TIMER_INT_ST` reader - RTC main timer interrupt state"]
-pub struct RTC_MAIN_TIMER_INT_ST_R(crate::FieldReader<bool>);
-impl RTC_MAIN_TIMER_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_MAIN_TIMER_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_MAIN_TIMER_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_MAIN_TIMER_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_SWD_INT_ST` reader - super watch dog interrupt state"]
-pub struct RTC_SWD_INT_ST_R(crate::FieldReader<bool>);
-impl RTC_SWD_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_SWD_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_SWD_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_SWD_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_XTAL32K_DEAD_INT_ST` reader - xtal32k dead detection interrupt state"]
-pub struct RTC_XTAL32K_DEAD_INT_ST_R(crate::FieldReader<bool>);
-impl RTC_XTAL32K_DEAD_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_XTAL32K_DEAD_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_XTAL32K_DEAD_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_XTAL32K_DEAD_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_GLITCH_DET_INT_ST` reader - glitch_det_interrupt state"]
-pub struct RTC_GLITCH_DET_INT_ST_R(crate::FieldReader<bool>);
-impl RTC_GLITCH_DET_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_GLITCH_DET_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GLITCH_DET_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GLITCH_DET_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `RTC_BBPLL_CAL_INT_ST` reader - bbpll cal end interrupt state"]
-pub struct RTC_BBPLL_CAL_INT_ST_R(crate::FieldReader<bool>);
-impl RTC_BBPLL_CAL_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_BBPLL_CAL_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_BBPLL_CAL_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_BBPLL_CAL_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - sleep wakeup interrupt state"]
     #[inline(always)]

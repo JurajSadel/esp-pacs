@@ -35,113 +35,21 @@ impl From<crate::W<CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `CS_SETUP_TIME` reader - (cycles+1) of prepare phase by spi clock this bits are combined with SPI_CS_SETUP bit. Can be configured in CONF state."]
-pub struct CS_SETUP_TIME_R(crate::FieldReader<u16>);
-impl CS_SETUP_TIME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CS_SETUP_TIME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_SETUP_TIME_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_SETUP_TIME_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CS_SETUP_TIME` writer - (cycles+1) of prepare phase by spi clock this bits are combined with SPI_CS_SETUP bit. Can be configured in CONF state."]
-pub struct CS_SETUP_TIME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_SETUP_TIME_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1fff) | (value as u32 & 0x1fff);
-        self.w
-    }
-}
+pub type CS_SETUP_TIME_W<'a> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u16, u16, 13, 0>;
 #[doc = "Field `CS_HOLD_TIME` reader - delay cycles of cs pin by spi clock this bits are combined with SPI_CS_HOLD bit. Can be configured in CONF state."]
-pub struct CS_HOLD_TIME_R(crate::FieldReader<u16>);
-impl CS_HOLD_TIME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CS_HOLD_TIME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_HOLD_TIME_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_HOLD_TIME_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CS_HOLD_TIME` writer - delay cycles of cs pin by spi clock this bits are combined with SPI_CS_HOLD bit. Can be configured in CONF state."]
-pub struct CS_HOLD_TIME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_HOLD_TIME_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1fff << 13)) | ((value as u32 & 0x1fff) << 13);
-        self.w
-    }
-}
+pub type CS_HOLD_TIME_W<'a> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u16, u16, 13, 13>;
 #[doc = "Field `CS_DELAY_MODE` reader - spi_cs signal is delayed by spi_clk . 0: zero 1: if SPI_CK_OUT_EDGE or SPI_CK_IDLE_EDGE is set 1 delayed by half cycle else delayed by one cycle 2: if SPI_CK_OUT_EDGE or SPI_CK_IDLE_EDGE is set 1 delayed by one cycle, else delayed by half cycle 3: delayed one cycle. Can be configured in CONF state."]
-pub struct CS_DELAY_MODE_R(crate::FieldReader<u8>);
-impl CS_DELAY_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CS_DELAY_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_DELAY_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_DELAY_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CS_DELAY_MODE` writer - spi_cs signal is delayed by spi_clk . 0: zero 1: if SPI_CK_OUT_EDGE or SPI_CK_IDLE_EDGE is set 1 delayed by half cycle else delayed by one cycle 2: if SPI_CK_OUT_EDGE or SPI_CK_IDLE_EDGE is set 1 delayed by one cycle, else delayed by half cycle 3: delayed one cycle. Can be configured in CONF state."]
-pub struct CS_DELAY_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_DELAY_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 26)) | ((value as u32 & 7) << 26);
-        self.w
-    }
-}
+pub type CS_DELAY_MODE_W<'a> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 3, 26>;
 #[doc = "Field `CS_DELAY_NUM` reader - spi_cs signal is delayed by system clock cycles. Can be configured in CONF state."]
-pub struct CS_DELAY_NUM_R(crate::FieldReader<u8>);
-impl CS_DELAY_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CS_DELAY_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_DELAY_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_DELAY_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CS_DELAY_NUM` writer - spi_cs signal is delayed by system clock cycles. Can be configured in CONF state."]
-pub struct CS_DELAY_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_DELAY_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 29)) | ((value as u32 & 3) << 29);
-        self.w
-    }
-}
+pub type CS_DELAY_NUM_W<'a> = crate::FieldWriter<'a, u32, CTRL2_SPEC, u8, u8, 2, 29>;
 impl R {
     #[doc = "Bits 0:12 - (cycles+1) of prepare phase by spi clock this bits are combined with SPI_CS_SETUP bit. Can be configured in CONF state."]
     #[inline(always)]
@@ -168,22 +76,22 @@ impl W {
     #[doc = "Bits 0:12 - (cycles+1) of prepare phase by spi clock this bits are combined with SPI_CS_SETUP bit. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W {
-        CS_SETUP_TIME_W { w: self }
+        CS_SETUP_TIME_W::new(self)
     }
     #[doc = "Bits 13:25 - delay cycles of cs pin by spi clock this bits are combined with SPI_CS_HOLD bit. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W {
-        CS_HOLD_TIME_W { w: self }
+        CS_HOLD_TIME_W::new(self)
     }
     #[doc = "Bits 26:28 - spi_cs signal is delayed by spi_clk . 0: zero 1: if SPI_CK_OUT_EDGE or SPI_CK_IDLE_EDGE is set 1 delayed by half cycle else delayed by one cycle 2: if SPI_CK_OUT_EDGE or SPI_CK_IDLE_EDGE is set 1 delayed by one cycle, else delayed by half cycle 3: delayed one cycle. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_delay_mode(&mut self) -> CS_DELAY_MODE_W {
-        CS_DELAY_MODE_W { w: self }
+        CS_DELAY_MODE_W::new(self)
     }
     #[doc = "Bits 29:30 - spi_cs signal is delayed by system clock cycles. Can be configured in CONF state."]
     #[inline(always)]
     pub fn cs_delay_num(&mut self) -> CS_DELAY_NUM_W {
-        CS_DELAY_NUM_W { w: self }
+        CS_DELAY_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

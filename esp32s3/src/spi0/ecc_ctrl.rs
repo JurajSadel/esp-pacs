@@ -35,69 +35,13 @@ impl From<crate::W<ECC_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `ECC_ERR_INT_NUM` reader - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
-pub struct ECC_ERR_INT_NUM_R(crate::FieldReader<u8>);
-impl ECC_ERR_INT_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ECC_ERR_INT_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ECC_ERR_INT_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ECC_ERR_INT_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ECC_ERR_INT_NUM` writer - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
-pub struct ECC_ERR_INT_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ECC_ERR_INT_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type ECC_ERR_INT_NUM_W<'a> = crate::FieldWriter<'a, u32, ECC_CTRL_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `SPI_FMEM_ECC_ERR_INT_EN` reader - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
-pub struct SPI_FMEM_ECC_ERR_INT_EN_R(crate::FieldReader<bool>);
-impl SPI_FMEM_ECC_ERR_INT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_FMEM_ECC_ERR_INT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_FMEM_ECC_ERR_INT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_FMEM_ECC_ERR_INT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_FMEM_ECC_ERR_INT_EN` writer - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
-pub struct SPI_FMEM_ECC_ERR_INT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_FMEM_ECC_ERR_INT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type SPI_FMEM_ECC_ERR_INT_EN_W<'a> = crate::BitWriter<'a, u32, ECC_CTRL_SPEC, bool, 8>;
 impl R {
     #[doc = "Bits 0:7 - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:7 - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
     pub fn ecc_err_int_num(&mut self) -> ECC_ERR_INT_NUM_W {
-        ECC_ERR_INT_NUM_W { w: self }
+        ECC_ERR_INT_NUM_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
     #[inline(always)]
     pub fn spi_fmem_ecc_err_int_en(&mut self) -> SPI_FMEM_ECC_ERR_INT_EN_W {
-        SPI_FMEM_ECC_ERR_INT_EN_W { w: self }
+        SPI_FMEM_ECC_ERR_INT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

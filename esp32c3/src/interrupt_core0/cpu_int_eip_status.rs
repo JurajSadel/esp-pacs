@@ -14,20 +14,7 @@ impl From<crate::R<CPU_INT_EIP_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `CPU_INT_EIP_STATUS` reader - reg_core0_cpu_int_eip_status"]
-pub struct CPU_INT_EIP_STATUS_R(crate::FieldReader<u32>);
-impl CPU_INT_EIP_STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CPU_INT_EIP_STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CPU_INT_EIP_STATUS_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CPU_INT_EIP_STATUS_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_core0_cpu_int_eip_status"]
     #[inline(always)]

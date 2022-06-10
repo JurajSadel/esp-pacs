@@ -35,116 +35,18 @@ impl From<crate::W<APP_CPU_RECORD_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `APP_CPU_RECORD_ENABLE` reader - "]
-pub struct APP_CPU_RECORD_ENABLE_R(crate::FieldReader<bool>);
-impl APP_CPU_RECORD_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CPU_RECORD_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CPU_RECORD_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CPU_RECORD_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CPU_RECORD_ENABLE` writer - "]
-pub struct APP_CPU_RECORD_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CPU_RECORD_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type APP_CPU_RECORD_ENABLE_W<'a> = crate::BitWriter<'a, u32, APP_CPU_RECORD_CTRL_SPEC, bool, 0>;
 #[doc = "Field `APP_CPU_RECORD_DISABLE` reader - "]
-pub struct APP_CPU_RECORD_DISABLE_R(crate::FieldReader<bool>);
-impl APP_CPU_RECORD_DISABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CPU_RECORD_DISABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CPU_RECORD_DISABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CPU_RECORD_DISABLE_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CPU_RECORD_DISABLE` writer - "]
-pub struct APP_CPU_RECORD_DISABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CPU_RECORD_DISABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type APP_CPU_RECORD_DISABLE_W<'a> =
+    crate::BitWriter<'a, u32, APP_CPU_RECORD_CTRL_SPEC, bool, 4>;
 #[doc = "Field `APP_CPU_PDEBUG_ENABLE` reader - "]
-pub struct APP_CPU_PDEBUG_ENABLE_R(crate::FieldReader<bool>);
-impl APP_CPU_PDEBUG_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_CPU_PDEBUG_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_CPU_PDEBUG_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_CPU_PDEBUG_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `APP_CPU_PDEBUG_ENABLE` writer - "]
-pub struct APP_CPU_PDEBUG_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_CPU_PDEBUG_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type APP_CPU_PDEBUG_ENABLE_W<'a> = crate::BitWriter<'a, u32, APP_CPU_RECORD_CTRL_SPEC, bool, 8>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -166,17 +68,17 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn app_cpu_record_enable(&mut self) -> APP_CPU_RECORD_ENABLE_W {
-        APP_CPU_RECORD_ENABLE_W { w: self }
+        APP_CPU_RECORD_ENABLE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn app_cpu_record_disable(&mut self) -> APP_CPU_RECORD_DISABLE_W {
-        APP_CPU_RECORD_DISABLE_W { w: self }
+        APP_CPU_RECORD_DISABLE_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn app_cpu_pdebug_enable(&mut self) -> APP_CPU_PDEBUG_ENABLE_W {
-        APP_CPU_PDEBUG_ENABLE_W { w: self }
+        APP_CPU_PDEBUG_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

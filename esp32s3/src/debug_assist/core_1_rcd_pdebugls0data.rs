@@ -14,20 +14,7 @@ impl From<crate::R<CORE_1_RCD_PDEBUGLS0DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_RCD_PDEBUGLS0DATA` reader - Core1_pdebug_s0data"]
-pub struct CORE_1_RCD_PDEBUGLS0DATA_R(crate::FieldReader<u32>);
-impl CORE_1_RCD_PDEBUGLS0DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_1_RCD_PDEBUGLS0DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_RCD_PDEBUGLS0DATA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_RCD_PDEBUGLS0DATA_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Core1_pdebug_s0data"]
     #[inline(always)]

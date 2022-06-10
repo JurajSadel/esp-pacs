@@ -35,59 +35,13 @@ impl From<crate::W<MEM_POWER_UP_SPEC>> for W {
     }
 }
 #[doc = "Field `ROM_POWER_UP` reader - ******* Description ***********"]
-pub struct ROM_POWER_UP_R(crate::FieldReader<u8>);
-impl ROM_POWER_UP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ROM_POWER_UP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ROM_POWER_UP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ROM_POWER_UP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ROM_POWER_UP` writer - ******* Description ***********"]
-pub struct ROM_POWER_UP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ROM_POWER_UP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type ROM_POWER_UP_W<'a> = crate::FieldWriter<'a, u32, MEM_POWER_UP_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `SRAM_POWER_UP` reader - ******* Description ***********"]
-pub struct SRAM_POWER_UP_R(crate::FieldReader<u16>);
-impl SRAM_POWER_UP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SRAM_POWER_UP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SRAM_POWER_UP_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SRAM_POWER_UP_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SRAM_POWER_UP` writer - ******* Description ***********"]
-pub struct SRAM_POWER_UP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SRAM_POWER_UP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff << 3)) | ((value as u32 & 0x07ff) << 3);
-        self.w
-    }
-}
+pub type SRAM_POWER_UP_W<'a> = crate::FieldWriter<'a, u32, MEM_POWER_UP_SPEC, u16, u16, 11, 3>;
 impl R {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]
     pub fn rom_power_up(&mut self) -> ROM_POWER_UP_W {
-        ROM_POWER_UP_W { w: self }
+        ROM_POWER_UP_W::new(self)
     }
     #[doc = "Bits 3:13 - ******* Description ***********"]
     #[inline(always)]
     pub fn sram_power_up(&mut self) -> SRAM_POWER_UP_W {
-        SRAM_POWER_UP_W { w: self }
+        SRAM_POWER_UP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

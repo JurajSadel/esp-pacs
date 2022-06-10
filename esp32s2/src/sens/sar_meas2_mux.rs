@@ -35,69 +35,13 @@ impl From<crate::W<SAR_MEAS2_MUX_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR2_PWDET_CCT` reader - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
-pub struct SAR2_PWDET_CCT_R(crate::FieldReader<u8>);
-impl SAR2_PWDET_CCT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR2_PWDET_CCT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_PWDET_CCT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_PWDET_CCT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR2_PWDET_CCT` writer - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
-pub struct SAR2_PWDET_CCT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_PWDET_CCT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 28)) | ((value as u32 & 7) << 28);
-        self.w
-    }
-}
+pub type SAR2_PWDET_CCT_W<'a> = crate::FieldWriter<'a, u32, SAR_MEAS2_MUX_SPEC, u8, u8, 3, 28>;
 #[doc = "Field `SAR2_RTC_FORCE` reader - In sleep, force to use RTC to control ADC."]
-pub struct SAR2_RTC_FORCE_R(crate::FieldReader<bool>);
-impl SAR2_RTC_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR2_RTC_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_RTC_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_RTC_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `SAR2_RTC_FORCE` writer - In sleep, force to use RTC to control ADC."]
-pub struct SAR2_RTC_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_RTC_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type SAR2_RTC_FORCE_W<'a> = crate::BitWriter<'a, u32, SAR_MEAS2_MUX_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT, PA power detector capacitance tuning."]
     #[inline(always)]
     pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W {
-        SAR2_PWDET_CCT_W { w: self }
+        SAR2_PWDET_CCT_W::new(self)
     }
     #[doc = "Bit 31 - In sleep, force to use RTC to control ADC."]
     #[inline(always)]
     pub fn sar2_rtc_force(&mut self) -> SAR2_RTC_FORCE_W {
-        SAR2_RTC_FORCE_W { w: self }
+        SAR2_RTC_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `MODE` reader - Stores the mode of modular exponentiation."]
-pub struct MODE_R(crate::FieldReader<u8>);
-impl MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MODE` writer - Stores the mode of modular exponentiation."]
-pub struct MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type MODE_W<'a> = crate::FieldWriter<'a, u32, MODE_SPEC, u8, u8, 7, 0>;
 impl R {
     #[doc = "Bits 0:6 - Stores the mode of modular exponentiation."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:6 - Stores the mode of modular exponentiation."]
     #[inline(always)]
     pub fn mode(&mut self) -> MODE_W {
-        MODE_W { w: self }
+        MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

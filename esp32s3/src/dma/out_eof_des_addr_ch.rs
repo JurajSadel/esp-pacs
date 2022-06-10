@@ -14,20 +14,7 @@ impl From<crate::R<OUT_EOF_DES_ADDR_CH_SPEC>> for R {
     }
 }
 #[doc = "Field `OUT_EOF_DES_ADDR_CH` reader - This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1."]
-pub struct OUT_EOF_DES_ADDR_CH_R(crate::FieldReader<u32>);
-impl OUT_EOF_DES_ADDR_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        OUT_EOF_DES_ADDR_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EOF_DES_ADDR_CH_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EOF_DES_ADDR_CH_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - This register stores the address of the outlink descriptor when the EOF bit in this descriptor is 1."]
     #[inline(always)]

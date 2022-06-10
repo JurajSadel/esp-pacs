@@ -14,20 +14,7 @@ impl From<crate::R<T0HI_SPEC>> for R {
     }
 }
 #[doc = "Field `T0_HI` reader - Register to store timer 0 time-base counter current value higher 32 bits."]
-pub struct T0_HI_R(crate::FieldReader<u32>);
-impl T0_HI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        T0_HI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_HI_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_HI_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Register to store timer 0 time-base counter current value higher 32 bits."]
     #[inline(always)]

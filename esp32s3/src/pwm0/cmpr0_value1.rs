@@ -35,32 +35,9 @@ impl From<crate::W<CMPR0_VALUE1_SPEC>> for W {
     }
 }
 #[doc = "Field `CMPR0_B` reader - PWM generator 0 time stamp B's shadow register"]
-pub struct CMPR0_B_R(crate::FieldReader<u16>);
-impl CMPR0_B_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CMPR0_B_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMPR0_B_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMPR0_B_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CMPR0_B` writer - PWM generator 0 time stamp B's shadow register"]
-pub struct CMPR0_B_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CMPR0_B_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type CMPR0_B_W<'a> = crate::FieldWriter<'a, u32, CMPR0_VALUE1_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15 - PWM generator 0 time stamp B's shadow register"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:15 - PWM generator 0 time stamp B's shadow register"]
     #[inline(always)]
     pub fn cmpr0_b(&mut self) -> CMPR0_B_W {
-        CMPR0_B_W { w: self }
+        CMPR0_B_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

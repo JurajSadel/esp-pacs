@@ -35,298 +35,44 @@ impl From<crate::W<SPI_SMEM_AC_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_SMEM_CS_SETUP` reader - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
-pub struct SPI_SMEM_CS_SETUP_R(crate::FieldReader<bool>);
-impl SPI_SMEM_CS_SETUP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_SMEM_CS_SETUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_CS_SETUP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_CS_SETUP_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_SMEM_CS_SETUP` writer - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
-pub struct SPI_SMEM_CS_SETUP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_CS_SETUP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SPI_SMEM_CS_SETUP_W<'a> = crate::BitWriter<'a, u32, SPI_SMEM_AC_SPEC, bool, 0>;
 #[doc = "Field `SPI_SMEM_CS_HOLD` reader - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
-pub struct SPI_SMEM_CS_HOLD_R(crate::FieldReader<bool>);
-impl SPI_SMEM_CS_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_SMEM_CS_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_CS_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_CS_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_SMEM_CS_HOLD` writer - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
-pub struct SPI_SMEM_CS_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_CS_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SPI_SMEM_CS_HOLD_W<'a> = crate::BitWriter<'a, u32, SPI_SMEM_AC_SPEC, bool, 1>;
 #[doc = "Field `SPI_SMEM_CS_SETUP_TIME` reader - (cycles-1) of PREP phase by SPI_CLK, which is the SPI_CS setup time. These bits are combined with SPI_MEM_CS_SETUP bit."]
-pub struct SPI_SMEM_CS_SETUP_TIME_R(crate::FieldReader<u8>);
-impl SPI_SMEM_CS_SETUP_TIME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_CS_SETUP_TIME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_CS_SETUP_TIME_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_CS_SETUP_TIME_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_CS_SETUP_TIME` writer - (cycles-1) of PREP phase by SPI_CLK, which is the SPI_CS setup time. These bits are combined with SPI_MEM_CS_SETUP bit."]
-pub struct SPI_SMEM_CS_SETUP_TIME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_CS_SETUP_TIME_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 2)) | ((value as u32 & 0x1f) << 2);
-        self.w
-    }
-}
+pub type SPI_SMEM_CS_SETUP_TIME_W<'a> = crate::FieldWriter<'a, u32, SPI_SMEM_AC_SPEC, u8, u8, 5, 2>;
 #[doc = "Field `SPI_SMEM_CS_HOLD_TIME` reader - SPI Bus CS (SPI_CS) signal is delayed to inactive by SPI Bus clock (SPI_CLK), which is the SPI_CS hold time in non-ECC mode. These bits are combined with SPI_MEM_CS_HOLD bit."]
-pub struct SPI_SMEM_CS_HOLD_TIME_R(crate::FieldReader<u8>);
-impl SPI_SMEM_CS_HOLD_TIME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_CS_HOLD_TIME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_CS_HOLD_TIME_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_CS_HOLD_TIME_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_CS_HOLD_TIME` writer - SPI Bus CS (SPI_CS) signal is delayed to inactive by SPI Bus clock (SPI_CLK), which is the SPI_CS hold time in non-ECC mode. These bits are combined with SPI_MEM_CS_HOLD bit."]
-pub struct SPI_SMEM_CS_HOLD_TIME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_CS_HOLD_TIME_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 7)) | ((value as u32 & 0x1f) << 7);
-        self.w
-    }
-}
+pub type SPI_SMEM_CS_HOLD_TIME_W<'a> = crate::FieldWriter<'a, u32, SPI_SMEM_AC_SPEC, u8, u8, 5, 7>;
 #[doc = "Field `SPI_SMEM_ECC_CS_HOLD_TIME` reader - SPI_SMEM_CS_HOLD_TIME + SPI_SMEM_ECC_CS_HOLD_TIME is the MSPI CS hold cycles in ECC mode when accesses to external RAM."]
-pub struct SPI_SMEM_ECC_CS_HOLD_TIME_R(crate::FieldReader<u8>);
-impl SPI_SMEM_ECC_CS_HOLD_TIME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_ECC_CS_HOLD_TIME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_ECC_CS_HOLD_TIME_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_ECC_CS_HOLD_TIME_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_ECC_CS_HOLD_TIME` writer - SPI_SMEM_CS_HOLD_TIME + SPI_SMEM_ECC_CS_HOLD_TIME is the MSPI CS hold cycles in ECC mode when accesses to external RAM."]
-pub struct SPI_SMEM_ECC_CS_HOLD_TIME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_ECC_CS_HOLD_TIME_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
-        self.w
-    }
-}
+pub type SPI_SMEM_ECC_CS_HOLD_TIME_W<'a> =
+    crate::FieldWriter<'a, u32, SPI_SMEM_AC_SPEC, u8, u8, 3, 12>;
 #[doc = "Field `SPI_SMEM_ECC_SKIP_PAGE_CORNER` reader - 1: MSPI skips page corner when accesses to external RAM. 0: Not skip page corner when accesses to external RAM."]
-pub struct SPI_SMEM_ECC_SKIP_PAGE_CORNER_R(crate::FieldReader<bool>);
-impl SPI_SMEM_ECC_SKIP_PAGE_CORNER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_SMEM_ECC_SKIP_PAGE_CORNER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_ECC_SKIP_PAGE_CORNER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_ECC_SKIP_PAGE_CORNER_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_SMEM_ECC_SKIP_PAGE_CORNER` writer - 1: MSPI skips page corner when accesses to external RAM. 0: Not skip page corner when accesses to external RAM."]
-pub struct SPI_SMEM_ECC_SKIP_PAGE_CORNER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_ECC_SKIP_PAGE_CORNER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type SPI_SMEM_ECC_SKIP_PAGE_CORNER_W<'a> =
+    crate::BitWriter<'a, u32, SPI_SMEM_AC_SPEC, bool, 15>;
 #[doc = "Field `SPI_SMEM_ECC_16TO18_BYTE_EN` reader - Set this bit to enable MSPI ECC 16 bytes data with 2 ECC bytes mode when accesses to external RAM."]
-pub struct SPI_SMEM_ECC_16TO18_BYTE_EN_R(crate::FieldReader<bool>);
-impl SPI_SMEM_ECC_16TO18_BYTE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_SMEM_ECC_16TO18_BYTE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_ECC_16TO18_BYTE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_ECC_16TO18_BYTE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_SMEM_ECC_16TO18_BYTE_EN` writer - Set this bit to enable MSPI ECC 16 bytes data with 2 ECC bytes mode when accesses to external RAM."]
-pub struct SPI_SMEM_ECC_16TO18_BYTE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_ECC_16TO18_BYTE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SPI_SMEM_ECC_16TO18_BYTE_EN_W<'a> = crate::BitWriter<'a, u32, SPI_SMEM_AC_SPEC, bool, 16>;
 #[doc = "Field `SPI_SMEM_ECC_ERR_INT_EN` reader - Set this bit to calculate the error times of MSPI ECC read when accesses to external RAM."]
-pub struct SPI_SMEM_ECC_ERR_INT_EN_R(crate::FieldReader<bool>);
-impl SPI_SMEM_ECC_ERR_INT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPI_SMEM_ECC_ERR_INT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_ECC_ERR_INT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_ECC_ERR_INT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_SMEM_ECC_ERR_INT_EN` writer - Set this bit to calculate the error times of MSPI ECC read when accesses to external RAM."]
-pub struct SPI_SMEM_ECC_ERR_INT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_ECC_ERR_INT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type SPI_SMEM_ECC_ERR_INT_EN_W<'a> = crate::BitWriter<'a, u32, SPI_SMEM_AC_SPEC, bool, 24>;
 #[doc = "Field `SPI_SMEM_CS_HOLD_DELAY` reader - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to external RAM. tSHSL is (SPI_SMEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
-pub struct SPI_SMEM_CS_HOLD_DELAY_R(crate::FieldReader<u8>);
-impl SPI_SMEM_CS_HOLD_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_SMEM_CS_HOLD_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_SMEM_CS_HOLD_DELAY_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_SMEM_CS_HOLD_DELAY_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_SMEM_CS_HOLD_DELAY` writer - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to external RAM. tSHSL is (SPI_SMEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
-pub struct SPI_SMEM_CS_HOLD_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_SMEM_CS_HOLD_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 25)) | ((value as u32 & 0x3f) << 25);
-        self.w
-    }
-}
+pub type SPI_SMEM_CS_HOLD_DELAY_W<'a> =
+    crate::FieldWriter<'a, u32, SPI_SMEM_AC_SPEC, u8, u8, 6, 25>;
 impl R {
     #[doc = "Bit 0 - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
     #[inline(always)]
@@ -378,47 +124,47 @@ impl W {
     #[doc = "Bit 0 - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
     #[inline(always)]
     pub fn spi_smem_cs_setup(&mut self) -> SPI_SMEM_CS_SETUP_W {
-        SPI_SMEM_CS_SETUP_W { w: self }
+        SPI_SMEM_CS_SETUP_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
     #[inline(always)]
     pub fn spi_smem_cs_hold(&mut self) -> SPI_SMEM_CS_HOLD_W {
-        SPI_SMEM_CS_HOLD_W { w: self }
+        SPI_SMEM_CS_HOLD_W::new(self)
     }
     #[doc = "Bits 2:6 - (cycles-1) of PREP phase by SPI_CLK, which is the SPI_CS setup time. These bits are combined with SPI_MEM_CS_SETUP bit."]
     #[inline(always)]
     pub fn spi_smem_cs_setup_time(&mut self) -> SPI_SMEM_CS_SETUP_TIME_W {
-        SPI_SMEM_CS_SETUP_TIME_W { w: self }
+        SPI_SMEM_CS_SETUP_TIME_W::new(self)
     }
     #[doc = "Bits 7:11 - SPI Bus CS (SPI_CS) signal is delayed to inactive by SPI Bus clock (SPI_CLK), which is the SPI_CS hold time in non-ECC mode. These bits are combined with SPI_MEM_CS_HOLD bit."]
     #[inline(always)]
     pub fn spi_smem_cs_hold_time(&mut self) -> SPI_SMEM_CS_HOLD_TIME_W {
-        SPI_SMEM_CS_HOLD_TIME_W { w: self }
+        SPI_SMEM_CS_HOLD_TIME_W::new(self)
     }
     #[doc = "Bits 12:14 - SPI_SMEM_CS_HOLD_TIME + SPI_SMEM_ECC_CS_HOLD_TIME is the MSPI CS hold cycles in ECC mode when accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_ecc_cs_hold_time(&mut self) -> SPI_SMEM_ECC_CS_HOLD_TIME_W {
-        SPI_SMEM_ECC_CS_HOLD_TIME_W { w: self }
+        SPI_SMEM_ECC_CS_HOLD_TIME_W::new(self)
     }
     #[doc = "Bit 15 - 1: MSPI skips page corner when accesses to external RAM. 0: Not skip page corner when accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_ecc_skip_page_corner(&mut self) -> SPI_SMEM_ECC_SKIP_PAGE_CORNER_W {
-        SPI_SMEM_ECC_SKIP_PAGE_CORNER_W { w: self }
+        SPI_SMEM_ECC_SKIP_PAGE_CORNER_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to enable MSPI ECC 16 bytes data with 2 ECC bytes mode when accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_ecc_16to18_byte_en(&mut self) -> SPI_SMEM_ECC_16TO18_BYTE_EN_W {
-        SPI_SMEM_ECC_16TO18_BYTE_EN_W { w: self }
+        SPI_SMEM_ECC_16TO18_BYTE_EN_W::new(self)
     }
     #[doc = "Bit 24 - Set this bit to calculate the error times of MSPI ECC read when accesses to external RAM."]
     #[inline(always)]
     pub fn spi_smem_ecc_err_int_en(&mut self) -> SPI_SMEM_ECC_ERR_INT_EN_W {
-        SPI_SMEM_ECC_ERR_INT_EN_W { w: self }
+        SPI_SMEM_ECC_ERR_INT_EN_W::new(self)
     }
     #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to external RAM. tSHSL is (SPI_SMEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
     #[inline(always)]
     pub fn spi_smem_cs_hold_delay(&mut self) -> SPI_SMEM_CS_HOLD_DELAY_W {
-        SPI_SMEM_CS_HOLD_DELAY_W { w: self }
+        SPI_SMEM_CS_HOLD_DELAY_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

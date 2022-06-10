@@ -35,190 +35,25 @@ impl From<crate::W<THRES_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `THRES_ALL_EN` reader - enable thres0 to monitor all channel"]
-pub struct THRES_ALL_EN_R(crate::FieldReader<bool>);
-impl THRES_ALL_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        THRES_ALL_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for THRES_ALL_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type THRES_ALL_EN_R = crate::BitReader<bool>;
 #[doc = "Field `THRES_ALL_EN` writer - enable thres0 to monitor all channel"]
-pub struct THRES_ALL_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> THRES_ALL_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type THRES_ALL_EN_W<'a> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, 27>;
 #[doc = "Field `THRES3_EN` reader - no public"]
-pub struct THRES3_EN_R(crate::FieldReader<bool>);
-impl THRES3_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        THRES3_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for THRES3_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type THRES3_EN_R = crate::BitReader<bool>;
 #[doc = "Field `THRES3_EN` writer - no public"]
-pub struct THRES3_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> THRES3_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type THRES3_EN_W<'a> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, 28>;
 #[doc = "Field `THRES2_EN` reader - no public"]
-pub struct THRES2_EN_R(crate::FieldReader<bool>);
-impl THRES2_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        THRES2_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for THRES2_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type THRES2_EN_R = crate::BitReader<bool>;
 #[doc = "Field `THRES2_EN` writer - no public"]
-pub struct THRES2_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> THRES2_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type THRES2_EN_W<'a> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, 29>;
 #[doc = "Field `THRES1_EN` reader - enable thres1"]
-pub struct THRES1_EN_R(crate::FieldReader<bool>);
-impl THRES1_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        THRES1_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for THRES1_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type THRES1_EN_R = crate::BitReader<bool>;
 #[doc = "Field `THRES1_EN` writer - enable thres1"]
-pub struct THRES1_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> THRES1_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type THRES1_EN_W<'a> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, 30>;
 #[doc = "Field `THRES0_EN` reader - enable thres0"]
-pub struct THRES0_EN_R(crate::FieldReader<bool>);
-impl THRES0_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        THRES0_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for THRES0_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type THRES0_EN_R = crate::BitReader<bool>;
 #[doc = "Field `THRES0_EN` writer - enable thres0"]
-pub struct THRES0_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> THRES0_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type THRES0_EN_W<'a> = crate::BitWriter<'a, u32, THRES_CTRL_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 27 - enable thres0 to monitor all channel"]
     #[inline(always)]
@@ -250,27 +85,27 @@ impl W {
     #[doc = "Bit 27 - enable thres0 to monitor all channel"]
     #[inline(always)]
     pub fn thres_all_en(&mut self) -> THRES_ALL_EN_W {
-        THRES_ALL_EN_W { w: self }
+        THRES_ALL_EN_W::new(self)
     }
     #[doc = "Bit 28 - no public"]
     #[inline(always)]
     pub fn thres3_en(&mut self) -> THRES3_EN_W {
-        THRES3_EN_W { w: self }
+        THRES3_EN_W::new(self)
     }
     #[doc = "Bit 29 - no public"]
     #[inline(always)]
     pub fn thres2_en(&mut self) -> THRES2_EN_W {
-        THRES2_EN_W { w: self }
+        THRES2_EN_W::new(self)
     }
     #[doc = "Bit 30 - enable thres1"]
     #[inline(always)]
     pub fn thres1_en(&mut self) -> THRES1_EN_W {
-        THRES1_EN_W { w: self }
+        THRES1_EN_W::new(self)
     }
     #[doc = "Bit 31 - enable thres0"]
     #[inline(always)]
     pub fn thres0_en(&mut self) -> THRES0_EN_W {
-        THRES0_EN_W { w: self }
+        THRES0_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

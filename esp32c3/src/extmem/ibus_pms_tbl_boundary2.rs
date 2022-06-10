@@ -35,32 +35,10 @@ impl From<crate::W<IBUS_PMS_TBL_BOUNDARY2_SPEC>> for W {
     }
 }
 #[doc = "Field `IBUS_PMS_BOUNDARY2` reader - The bit is used to configure the ibus permission control section boundary2"]
-pub struct IBUS_PMS_BOUNDARY2_R(crate::FieldReader<u16>);
-impl IBUS_PMS_BOUNDARY2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        IBUS_PMS_BOUNDARY2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IBUS_PMS_BOUNDARY2_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IBUS_PMS_BOUNDARY2_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `IBUS_PMS_BOUNDARY2` writer - The bit is used to configure the ibus permission control section boundary2"]
-pub struct IBUS_PMS_BOUNDARY2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IBUS_PMS_BOUNDARY2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type IBUS_PMS_BOUNDARY2_W<'a> =
+    crate::FieldWriter<'a, u32, IBUS_PMS_TBL_BOUNDARY2_SPEC, u16, u16, 12, 0>;
 impl R {
     #[doc = "Bits 0:11 - The bit is used to configure the ibus permission control section boundary2"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:11 - The bit is used to configure the ibus permission control section boundary2"]
     #[inline(always)]
     pub fn ibus_pms_boundary2(&mut self) -> IBUS_PMS_BOUNDARY2_W {
-        IBUS_PMS_BOUNDARY2_W { w: self }
+        IBUS_PMS_BOUNDARY2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

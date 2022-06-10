@@ -35,338 +35,41 @@ impl From<crate::W<CACHE_FCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_REQ_EN` reader - Set this bit to enable Cache's access and SPI0's transfer."]
-pub struct CACHE_REQ_EN_R(crate::FieldReader<bool>);
-impl CACHE_REQ_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACHE_REQ_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_REQ_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_REQ_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CACHE_REQ_EN` writer - Set this bit to enable Cache's access and SPI0's transfer."]
-pub struct CACHE_REQ_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_REQ_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CACHE_REQ_EN_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 0>;
 #[doc = "Field `CACHE_USR_CMD_4BYTE` reader - Set this bit to enable SPI0 read flash with 32 bits address. The value of SPI_MEM_USR_ADDR_BITLEN should be 31."]
-pub struct CACHE_USR_CMD_4BYTE_R(crate::FieldReader<bool>);
-impl CACHE_USR_CMD_4BYTE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACHE_USR_CMD_4BYTE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_USR_CMD_4BYTE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_USR_CMD_4BYTE_R = crate::BitReader<bool>;
 #[doc = "Field `CACHE_USR_CMD_4BYTE` writer - Set this bit to enable SPI0 read flash with 32 bits address. The value of SPI_MEM_USR_ADDR_BITLEN should be 31."]
-pub struct CACHE_USR_CMD_4BYTE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_USR_CMD_4BYTE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CACHE_USR_CMD_4BYTE_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 1>;
 #[doc = "Field `CACHE_FLASH_USR_CMD` reader - 1: The command value of SPI0 reads flash is SPI_MEM_USR_COMMAND_VALUE. 0: Hardware read command value, controlled by SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QUAD, SPI_MEM_FREAD_DUAL and SPI_MEM_FASTRD_MODE bits."]
-pub struct CACHE_FLASH_USR_CMD_R(crate::FieldReader<bool>);
-impl CACHE_FLASH_USR_CMD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACHE_FLASH_USR_CMD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_FLASH_USR_CMD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_FLASH_USR_CMD_R = crate::BitReader<bool>;
 #[doc = "Field `CACHE_FLASH_USR_CMD` writer - 1: The command value of SPI0 reads flash is SPI_MEM_USR_COMMAND_VALUE. 0: Hardware read command value, controlled by SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QUAD, SPI_MEM_FREAD_DUAL and SPI_MEM_FASTRD_MODE bits."]
-pub struct CACHE_FLASH_USR_CMD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_FLASH_USR_CMD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CACHE_FLASH_USR_CMD_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 2>;
 #[doc = "Field `FDIN_DUAL` reader - When SPI0 accesses to flash, set this bit to enable 2-bm in DIN phase."]
-pub struct FDIN_DUAL_R(crate::FieldReader<bool>);
-impl FDIN_DUAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FDIN_DUAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FDIN_DUAL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FDIN_DUAL_R = crate::BitReader<bool>;
 #[doc = "Field `FDIN_DUAL` writer - When SPI0 accesses to flash, set this bit to enable 2-bm in DIN phase."]
-pub struct FDIN_DUAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FDIN_DUAL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type FDIN_DUAL_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 3>;
 #[doc = "Field `FDOUT_DUAL` reader - When SPI0 accesses to flash, set this bit to enable 2-bm in DOUT phase."]
-pub struct FDOUT_DUAL_R(crate::FieldReader<bool>);
-impl FDOUT_DUAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FDOUT_DUAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FDOUT_DUAL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FDOUT_DUAL_R = crate::BitReader<bool>;
 #[doc = "Field `FDOUT_DUAL` writer - When SPI0 accesses to flash, set this bit to enable 2-bm in DOUT phase."]
-pub struct FDOUT_DUAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FDOUT_DUAL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type FDOUT_DUAL_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 4>;
 #[doc = "Field `FADDR_DUAL` reader - When SPI0 accesses to flash, set this bit to enable 2-bm in ADDR phase."]
-pub struct FADDR_DUAL_R(crate::FieldReader<bool>);
-impl FADDR_DUAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FADDR_DUAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FADDR_DUAL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FADDR_DUAL_R = crate::BitReader<bool>;
 #[doc = "Field `FADDR_DUAL` writer - When SPI0 accesses to flash, set this bit to enable 2-bm in ADDR phase."]
-pub struct FADDR_DUAL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FADDR_DUAL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type FADDR_DUAL_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 5>;
 #[doc = "Field `FDIN_QUAD` reader - When SPI0 accesses to flash, set this bit to enable 4-bm in DIN phase."]
-pub struct FDIN_QUAD_R(crate::FieldReader<bool>);
-impl FDIN_QUAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FDIN_QUAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FDIN_QUAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FDIN_QUAD_R = crate::BitReader<bool>;
 #[doc = "Field `FDIN_QUAD` writer - When SPI0 accesses to flash, set this bit to enable 4-bm in DIN phase."]
-pub struct FDIN_QUAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FDIN_QUAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type FDIN_QUAD_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 6>;
 #[doc = "Field `FDOUT_QUAD` reader - When SPI0 accesses to flash, set this bit to enable 4-bm in DOUT phase."]
-pub struct FDOUT_QUAD_R(crate::FieldReader<bool>);
-impl FDOUT_QUAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FDOUT_QUAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FDOUT_QUAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FDOUT_QUAD_R = crate::BitReader<bool>;
 #[doc = "Field `FDOUT_QUAD` writer - When SPI0 accesses to flash, set this bit to enable 4-bm in DOUT phase."]
-pub struct FDOUT_QUAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FDOUT_QUAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type FDOUT_QUAD_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 7>;
 #[doc = "Field `FADDR_QUAD` reader - When SPI0 accesses to flash, set this bit to enable 4-bm in ADDR phase."]
-pub struct FADDR_QUAD_R(crate::FieldReader<bool>);
-impl FADDR_QUAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FADDR_QUAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FADDR_QUAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FADDR_QUAD_R = crate::BitReader<bool>;
 #[doc = "Field `FADDR_QUAD` writer - When SPI0 accesses to flash, set this bit to enable 4-bm in ADDR phase."]
-pub struct FADDR_QUAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FADDR_QUAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type FADDR_QUAD_W<'a> = crate::BitWriter<'a, u32, CACHE_FCTRL_SPEC, bool, 8>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable Cache's access and SPI0's transfer."]
     #[inline(always)]
@@ -418,47 +121,47 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable Cache's access and SPI0's transfer."]
     #[inline(always)]
     pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W {
-        CACHE_REQ_EN_W { w: self }
+        CACHE_REQ_EN_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to enable SPI0 read flash with 32 bits address. The value of SPI_MEM_USR_ADDR_BITLEN should be 31."]
     #[inline(always)]
     pub fn cache_usr_cmd_4byte(&mut self) -> CACHE_USR_CMD_4BYTE_W {
-        CACHE_USR_CMD_4BYTE_W { w: self }
+        CACHE_USR_CMD_4BYTE_W::new(self)
     }
     #[doc = "Bit 2 - 1: The command value of SPI0 reads flash is SPI_MEM_USR_COMMAND_VALUE. 0: Hardware read command value, controlled by SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QUAD, SPI_MEM_FREAD_DUAL and SPI_MEM_FASTRD_MODE bits."]
     #[inline(always)]
     pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W {
-        CACHE_FLASH_USR_CMD_W { w: self }
+        CACHE_FLASH_USR_CMD_W::new(self)
     }
     #[doc = "Bit 3 - When SPI0 accesses to flash, set this bit to enable 2-bm in DIN phase."]
     #[inline(always)]
     pub fn fdin_dual(&mut self) -> FDIN_DUAL_W {
-        FDIN_DUAL_W { w: self }
+        FDIN_DUAL_W::new(self)
     }
     #[doc = "Bit 4 - When SPI0 accesses to flash, set this bit to enable 2-bm in DOUT phase."]
     #[inline(always)]
     pub fn fdout_dual(&mut self) -> FDOUT_DUAL_W {
-        FDOUT_DUAL_W { w: self }
+        FDOUT_DUAL_W::new(self)
     }
     #[doc = "Bit 5 - When SPI0 accesses to flash, set this bit to enable 2-bm in ADDR phase."]
     #[inline(always)]
     pub fn faddr_dual(&mut self) -> FADDR_DUAL_W {
-        FADDR_DUAL_W { w: self }
+        FADDR_DUAL_W::new(self)
     }
     #[doc = "Bit 6 - When SPI0 accesses to flash, set this bit to enable 4-bm in DIN phase."]
     #[inline(always)]
     pub fn fdin_quad(&mut self) -> FDIN_QUAD_W {
-        FDIN_QUAD_W { w: self }
+        FDIN_QUAD_W::new(self)
     }
     #[doc = "Bit 7 - When SPI0 accesses to flash, set this bit to enable 4-bm in DOUT phase."]
     #[inline(always)]
     pub fn fdout_quad(&mut self) -> FDOUT_QUAD_W {
-        FDOUT_QUAD_W { w: self }
+        FDOUT_QUAD_W::new(self)
     }
     #[doc = "Bit 8 - When SPI0 accesses to flash, set this bit to enable 4-bm in ADDR phase."]
     #[inline(always)]
     pub fn faddr_quad(&mut self) -> FADDR_QUAD_W {
-        FADDR_QUAD_W { w: self }
+        FADDR_QUAD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<FLASH_ACE3_ATTR_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_ACE3_ATTR` reader - reg_flash_ace3_attr"]
-pub struct FLASH_ACE3_ATTR_R(crate::FieldReader<u8>);
-impl FLASH_ACE3_ATTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FLASH_ACE3_ATTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_ACE3_ATTR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_ACE3_ATTR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FLASH_ACE3_ATTR` writer - reg_flash_ace3_attr"]
-pub struct FLASH_ACE3_ATTR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_ACE3_ATTR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type FLASH_ACE3_ATTR_W<'a> = crate::FieldWriter<'a, u32, FLASH_ACE3_ATTR_SPEC, u8, u8, 2, 0>;
 impl R {
     #[doc = "Bits 0:1 - reg_flash_ace3_attr"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:1 - reg_flash_ace3_attr"]
     #[inline(always)]
     pub fn flash_ace3_attr(&mut self) -> FLASH_ACE3_ATTR_W {
-        FLASH_ACE3_ATTR_W { w: self }
+        FLASH_ACE3_ATTR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

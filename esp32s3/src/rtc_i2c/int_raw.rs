@@ -14,140 +14,23 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `SLAVE_TRAN_COMP_INT_RAW` reader - slave transit complete interrupt raw"]
-pub struct SLAVE_TRAN_COMP_INT_RAW_R(crate::FieldReader<bool>);
-impl SLAVE_TRAN_COMP_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLAVE_TRAN_COMP_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLAVE_TRAN_COMP_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SLAVE_TRAN_COMP_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `ARBITRATION_LOST_INT_RAW` reader - arbitration lost interrupt raw"]
-pub struct ARBITRATION_LOST_INT_RAW_R(crate::FieldReader<bool>);
-impl ARBITRATION_LOST_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARBITRATION_LOST_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARBITRATION_LOST_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARBITRATION_LOST_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `MASTER_TRAN_COMP_INT_RAW` reader - master transit complete interrupt raw"]
-pub struct MASTER_TRAN_COMP_INT_RAW_R(crate::FieldReader<bool>);
-impl MASTER_TRAN_COMP_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASTER_TRAN_COMP_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASTER_TRAN_COMP_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASTER_TRAN_COMP_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `TRANS_COMPLETE_INT_RAW` reader - transit complete interrupt raw"]
-pub struct TRANS_COMPLETE_INT_RAW_R(crate::FieldReader<bool>);
-impl TRANS_COMPLETE_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TRANS_COMPLETE_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TRANS_COMPLETE_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TRANS_COMPLETE_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `TIME_OUT_INT_RAW` reader - time out interrupt raw"]
-pub struct TIME_OUT_INT_RAW_R(crate::FieldReader<bool>);
-impl TIME_OUT_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIME_OUT_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_OUT_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_OUT_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `ACK_ERR_INT_RAW` reader - ack error interrupt raw"]
-pub struct ACK_ERR_INT_RAW_R(crate::FieldReader<bool>);
-impl ACK_ERR_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ACK_ERR_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ACK_ERR_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ACK_ERR_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `RX_DATA_INT_RAW` reader - receive data interrupt raw"]
-pub struct RX_DATA_INT_RAW_R(crate::FieldReader<bool>);
-impl RX_DATA_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RX_DATA_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_DATA_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_DATA_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `TX_DATA_INT_RAW` reader - transit data interrupt raw"]
-pub struct TX_DATA_INT_RAW_R(crate::FieldReader<bool>);
-impl TX_DATA_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_DATA_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DATA_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_DATA_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `DETECT_START_INT_RAW` reader - detect start interrupt raw"]
-pub struct DETECT_START_INT_RAW_R(crate::FieldReader<bool>);
-impl DETECT_START_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DETECT_START_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DETECT_START_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DETECT_START_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - slave transit complete interrupt raw"]
     #[inline(always)]

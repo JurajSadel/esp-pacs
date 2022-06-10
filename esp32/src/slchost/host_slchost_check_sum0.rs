@@ -14,20 +14,7 @@ impl From<crate::R<HOST_SLCHOST_CHECK_SUM0_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_SLCHOST_CHECK_SUM0` reader - "]
-pub struct HOST_SLCHOST_CHECK_SUM0_R(crate::FieldReader<u32>);
-impl HOST_SLCHOST_CHECK_SUM0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        HOST_SLCHOST_CHECK_SUM0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLCHOST_CHECK_SUM0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLCHOST_CHECK_SUM0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

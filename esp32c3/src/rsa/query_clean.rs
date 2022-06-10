@@ -14,20 +14,7 @@ impl From<crate::R<QUERY_CLEAN_SPEC>> for R {
     }
 }
 #[doc = "Field `QUERY_CLEAN` reader - query clean"]
-pub struct QUERY_CLEAN_R(crate::FieldReader<bool>);
-impl QUERY_CLEAN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        QUERY_CLEAN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for QUERY_CLEAN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type QUERY_CLEAN_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - query clean"]
     #[inline(always)]

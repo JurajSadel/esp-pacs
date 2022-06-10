@@ -20,59 +20,19 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
     }
 }
 #[doc = "Field `DONE_INT_CLR` writer - x"]
-pub struct DONE_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DONE_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type DONE_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 0>;
 #[doc = "Field `ERR_INT_CLR` writer - x"]
-pub struct ERR_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERR_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ERR_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 1>;
 impl W {
     #[doc = "Bit 0 - x"]
     #[inline(always)]
     pub fn done_int_clr(&mut self) -> DONE_INT_CLR_W {
-        DONE_INT_CLR_W { w: self }
+        DONE_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - x"]
     #[inline(always)]
     pub fn err_int_clr(&mut self) -> ERR_INT_CLR_W {
-        ERR_INT_CLR_W { w: self }
+        ERR_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

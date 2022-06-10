@@ -14,20 +14,7 @@ impl From<crate::R<POSPULSE_SPEC>> for R {
     }
 }
 #[doc = "Field `POSEDGE_MIN_CNT` reader - This register stores the minimal input clock count between two positive edges. It is used in boudrate-detect process."]
-pub struct POSEDGE_MIN_CNT_R(crate::FieldReader<u16>);
-impl POSEDGE_MIN_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        POSEDGE_MIN_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POSEDGE_MIN_CNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POSEDGE_MIN_CNT_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:11 - This register stores the minimal input clock count between two positive edges. It is used in boudrate-detect process."]
     #[inline(always)]

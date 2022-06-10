@@ -14,35 +14,9 @@ impl From<crate::R<C0RE_0_DEBUG_MODE_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_0_DEBUG_MODE` reader - reg_core_0_debug_mode"]
-pub struct CORE_0_DEBUG_MODE_R(crate::FieldReader<bool>);
-impl CORE_0_DEBUG_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_DEBUG_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_DEBUG_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_DEBUG_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_DEBUG_MODULE_ACTIVE` reader - reg_core_0_debug_module_active"]
-pub struct CORE_0_DEBUG_MODULE_ACTIVE_R(crate::FieldReader<bool>);
-impl CORE_0_DEBUG_MODULE_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_DEBUG_MODULE_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_DEBUG_MODULE_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_DEBUG_MODULE_ACTIVE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - reg_core_0_debug_mode"]
     #[inline(always)]

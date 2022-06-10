@@ -14,20 +14,7 @@ impl From<crate::R<BUSY_SPEC>> for R {
     }
 }
 #[doc = "Field `STATE` reader - sha busy state. 1'b0: idle 1'b1: busy"]
-pub struct STATE_R(crate::FieldReader<bool>);
-impl STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - sha busy state. 1'b0: idle 1'b1: busy"]
     #[inline(always)]

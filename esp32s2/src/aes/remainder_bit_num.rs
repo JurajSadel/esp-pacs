@@ -35,32 +35,10 @@ impl From<crate::W<REMAINDER_BIT_NUM_SPEC>> for W {
     }
 }
 #[doc = "Field `REMAINDER_BIT_NUM` reader - Stores the Remainder Bit Number for the GCM operation."]
-pub struct REMAINDER_BIT_NUM_R(crate::FieldReader<u8>);
-impl REMAINDER_BIT_NUM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REMAINDER_BIT_NUM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REMAINDER_BIT_NUM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REMAINDER_BIT_NUM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `REMAINDER_BIT_NUM` writer - Stores the Remainder Bit Number for the GCM operation."]
-pub struct REMAINDER_BIT_NUM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REMAINDER_BIT_NUM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type REMAINDER_BIT_NUM_W<'a> =
+    crate::FieldWriter<'a, u32, REMAINDER_BIT_NUM_SPEC, u8, u8, 7, 0>;
 impl R {
     #[doc = "Bits 0:6 - Stores the Remainder Bit Number for the GCM operation."]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:6 - Stores the Remainder Bit Number for the GCM operation."]
     #[inline(always)]
     pub fn remainder_bit_num(&mut self) -> REMAINDER_BIT_NUM_W {
-        REMAINDER_BIT_NUM_W { w: self }
+        REMAINDER_BIT_NUM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

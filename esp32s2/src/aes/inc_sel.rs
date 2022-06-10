@@ -35,42 +35,9 @@ impl From<crate::W<INC_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `INC_SEL` reader - Defines the Standard Incrementing Function for CTR block operation. Set this bit to 0 or 1 to choose INC 32 or INC 128 ."]
-pub struct INC_SEL_R(crate::FieldReader<bool>);
-impl INC_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INC_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INC_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INC_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `INC_SEL` writer - Defines the Standard Incrementing Function for CTR block operation. Set this bit to 0 or 1 to choose INC 32 or INC 128 ."]
-pub struct INC_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INC_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type INC_SEL_W<'a> = crate::BitWriter<'a, u32, INC_SEL_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - Defines the Standard Incrementing Function for CTR block operation. Set this bit to 0 or 1 to choose INC 32 or INC 128 ."]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0 - Defines the Standard Incrementing Function for CTR block operation. Set this bit to 0 or 1 to choose INC 32 or INC 128 ."]
     #[inline(always)]
     pub fn inc_sel(&mut self) -> INC_SEL_W {
-        INC_SEL_W { w: self }
+        INC_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

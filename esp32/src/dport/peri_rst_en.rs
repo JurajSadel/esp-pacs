@@ -35,32 +35,9 @@ impl From<crate::W<PERI_RST_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `PERI_RST_EN` reader - "]
-pub struct PERI_RST_EN_R(crate::FieldReader<u32>);
-impl PERI_RST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PERI_RST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERI_RST_EN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERI_RST_EN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PERI_RST_EN` writer - "]
-pub struct PERI_RST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERI_RST_EN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type PERI_RST_EN_W<'a> = crate::FieldWriter<'a, u32, PERI_RST_EN_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn peri_rst_en(&mut self) -> PERI_RST_EN_W {
-        PERI_RST_EN_W { w: self }
+        PERI_RST_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

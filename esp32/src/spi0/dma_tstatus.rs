@@ -14,20 +14,7 @@ impl From<crate::R<DMA_TSTATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `DMA_IN_STATUS` reader - spi dma write data to memory status."]
-pub struct DMA_IN_STATUS_R(crate::FieldReader<u32>);
-impl DMA_IN_STATUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DMA_IN_STATUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMA_IN_STATUS_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMA_IN_STATUS_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - spi dma write data to memory status."]
     #[inline(always)]

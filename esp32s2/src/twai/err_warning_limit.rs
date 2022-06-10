@@ -35,32 +35,10 @@ impl From<crate::W<ERR_WARNING_LIMIT_SPEC>> for W {
     }
 }
 #[doc = "Field `ERR_WARNING_LIMIT` reader - Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid)."]
-pub struct ERR_WARNING_LIMIT_R(crate::FieldReader<u8>);
-impl ERR_WARNING_LIMIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ERR_WARNING_LIMIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERR_WARNING_LIMIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ERR_WARNING_LIMIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ERR_WARNING_LIMIT` writer - Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid)."]
-pub struct ERR_WARNING_LIMIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERR_WARNING_LIMIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type ERR_WARNING_LIMIT_W<'a> =
+    crate::FieldWriter<'a, u32, ERR_WARNING_LIMIT_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid)."]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:7 - Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid)."]
     #[inline(always)]
     pub fn err_warning_limit(&mut self) -> ERR_WARNING_LIMIT_W {
-        ERR_WARNING_LIMIT_W { w: self }
+        ERR_WARNING_LIMIT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

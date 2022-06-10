@@ -35,42 +35,9 @@ impl From<crate::W<CACHE_SOURCE_0_SPEC>> for W {
     }
 }
 #[doc = "Field `CACHE_SOURCE_LOCK` reader - Lock register. Setting to 1 locks cache access permission control registers."]
-pub struct CACHE_SOURCE_LOCK_R(crate::FieldReader<bool>);
-impl CACHE_SOURCE_LOCK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CACHE_SOURCE_LOCK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_SOURCE_LOCK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_SOURCE_LOCK_R = crate::BitReader<bool>;
 #[doc = "Field `CACHE_SOURCE_LOCK` writer - Lock register. Setting to 1 locks cache access permission control registers."]
-pub struct CACHE_SOURCE_LOCK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CACHE_SOURCE_LOCK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CACHE_SOURCE_LOCK_W<'a> = crate::BitWriter<'a, u32, CACHE_SOURCE_0_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks cache access permission control registers."]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks cache access permission control registers."]
     #[inline(always)]
     pub fn cache_source_lock(&mut self) -> CACHE_SOURCE_LOCK_W {
-        CACHE_SOURCE_LOCK_W { w: self }
+        CACHE_SOURCE_LOCK_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

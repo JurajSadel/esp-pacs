@@ -14,65 +14,13 @@ impl From<crate::R<INT_RAW_SPEC>> for R {
     }
 }
 #[doc = "Field `CNT_THR_EVENT_U0_INT_RAW` reader - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
-pub struct CNT_THR_EVENT_U0_INT_RAW_R(crate::FieldReader<bool>);
-impl CNT_THR_EVENT_U0_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_THR_EVENT_U0_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_THR_EVENT_U0_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_THR_EVENT_U0_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_THR_EVENT_U1_INT_RAW` reader - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
-pub struct CNT_THR_EVENT_U1_INT_RAW_R(crate::FieldReader<bool>);
-impl CNT_THR_EVENT_U1_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_THR_EVENT_U1_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_THR_EVENT_U1_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_THR_EVENT_U1_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_THR_EVENT_U2_INT_RAW` reader - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
-pub struct CNT_THR_EVENT_U2_INT_RAW_R(crate::FieldReader<bool>);
-impl CNT_THR_EVENT_U2_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_THR_EVENT_U2_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_THR_EVENT_U2_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_THR_EVENT_U2_INT_RAW_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_THR_EVENT_U3_INT_RAW` reader - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
-pub struct CNT_THR_EVENT_U3_INT_RAW_R(crate::FieldReader<bool>);
-impl CNT_THR_EVENT_U3_INT_RAW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_THR_EVENT_U3_INT_RAW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_THR_EVENT_U3_INT_RAW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_THR_EVENT_U3_INT_RAW_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The raw interrupt status bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
     #[inline(always)]

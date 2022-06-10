@@ -35,217 +35,29 @@ impl From<crate::W<AHB_LITE_MASK_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO` reader - "]
-pub struct PRO_R(crate::FieldReader<bool>);
-impl PRO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_R = crate::BitReader<bool>;
 #[doc = "Field `PRO` writer - "]
-pub struct PRO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PRO_W<'a> = crate::BitWriter<'a, u32, AHB_LITE_MASK_SPEC, bool, 0>;
 #[doc = "Field `APP` reader - "]
-pub struct APP_R(crate::FieldReader<bool>);
-impl APP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_R = crate::BitReader<bool>;
 #[doc = "Field `APP` writer - "]
-pub struct APP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type APP_W<'a> = crate::BitWriter<'a, u32, AHB_LITE_MASK_SPEC, bool, 4>;
 #[doc = "Field `SDIO` reader - "]
-pub struct SDIO_R(crate::FieldReader<bool>);
-impl SDIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO` writer - "]
-pub struct SDIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type SDIO_W<'a> = crate::BitWriter<'a, u32, AHB_LITE_MASK_SPEC, bool, 8>;
 #[doc = "Field `PRODPORT` reader - "]
-pub struct PRODPORT_R(crate::FieldReader<bool>);
-impl PRODPORT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRODPORT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRODPORT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRODPORT_R = crate::BitReader<bool>;
 #[doc = "Field `PRODPORT` writer - "]
-pub struct PRODPORT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRODPORT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type PRODPORT_W<'a> = crate::BitWriter<'a, u32, AHB_LITE_MASK_SPEC, bool, 9>;
 #[doc = "Field `APPDPORT` reader - "]
-pub struct APPDPORT_R(crate::FieldReader<bool>);
-impl APPDPORT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        APPDPORT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APPDPORT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APPDPORT_R = crate::BitReader<bool>;
 #[doc = "Field `APPDPORT` writer - "]
-pub struct APPDPORT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APPDPORT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type APPDPORT_W<'a> = crate::BitWriter<'a, u32, AHB_LITE_MASK_SPEC, bool, 10>;
 #[doc = "Field `AHB_LITE_SDHOST_PID` reader - "]
-pub struct AHB_LITE_SDHOST_PID_R(crate::FieldReader<u8>);
-impl AHB_LITE_SDHOST_PID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        AHB_LITE_SDHOST_PID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHB_LITE_SDHOST_PID_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHB_LITE_SDHOST_PID_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `AHB_LITE_SDHOST_PID` writer - "]
-pub struct AHB_LITE_SDHOST_PID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AHB_LITE_SDHOST_PID_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
-        self.w
-    }
-}
+pub type AHB_LITE_SDHOST_PID_W<'a> = crate::FieldWriter<'a, u32, AHB_LITE_MASK_SPEC, u8, u8, 3, 11>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -282,32 +94,32 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn pro(&mut self) -> PRO_W {
-        PRO_W { w: self }
+        PRO_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn app(&mut self) -> APP_W {
-        APP_W { w: self }
+        APP_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn sdio(&mut self) -> SDIO_W {
-        SDIO_W { w: self }
+        SDIO_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn prodport(&mut self) -> PRODPORT_W {
-        PRODPORT_W { w: self }
+        PRODPORT_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn appdport(&mut self) -> APPDPORT_W {
-        APPDPORT_W { w: self }
+        APPDPORT_W::new(self)
     }
     #[doc = "Bits 11:13"]
     #[inline(always)]
     pub fn ahb_lite_sdhost_pid(&mut self) -> AHB_LITE_SDHOST_PID_W {
-        AHB_LITE_SDHOST_PID_W { w: self }
+        AHB_LITE_SDHOST_PID_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

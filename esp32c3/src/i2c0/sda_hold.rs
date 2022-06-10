@@ -35,32 +35,9 @@ impl From<crate::W<SDA_HOLD_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME` reader - reg_sda_hold_time"]
-pub struct TIME_R(crate::FieldReader<u16>);
-impl TIME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TIME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TIME` writer - reg_sda_hold_time"]
-pub struct TIME_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIME_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01ff) | (value as u32 & 0x01ff);
-        self.w
-    }
-}
+pub type TIME_W<'a> = crate::FieldWriter<'a, u32, SDA_HOLD_SPEC, u16, u16, 9, 0>;
 impl R {
     #[doc = "Bits 0:8 - reg_sda_hold_time"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:8 - reg_sda_hold_time"]
     #[inline(always)]
     pub fn time(&mut self) -> TIME_W {
-        TIME_W { w: self }
+        TIME_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,10 @@ impl From<crate::W<AHBLITE_MPU_TABLE_PCNT_SPEC>> for W {
     }
 }
 #[doc = "Field `PCNT_ACCESS_GRANT_CONFIG` reader - "]
-pub struct PCNT_ACCESS_GRANT_CONFIG_R(crate::FieldReader<u8>);
-impl PCNT_ACCESS_GRANT_CONFIG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PCNT_ACCESS_GRANT_CONFIG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PCNT_ACCESS_GRANT_CONFIG_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PCNT_ACCESS_GRANT_CONFIG_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PCNT_ACCESS_GRANT_CONFIG` writer - "]
-pub struct PCNT_ACCESS_GRANT_CONFIG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PCNT_ACCESS_GRANT_CONFIG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type PCNT_ACCESS_GRANT_CONFIG_W<'a> =
+    crate::FieldWriter<'a, u32, AHBLITE_MPU_TABLE_PCNT_SPEC, u8, u8, 6, 0>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
     pub fn pcnt_access_grant_config(&mut self) -> PCNT_ACCESS_GRANT_CONFIG_W {
-        PCNT_ACCESS_GRANT_CONFIG_W { w: self }
+        PCNT_ACCESS_GRANT_CONFIG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

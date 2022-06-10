@@ -35,59 +35,14 @@ impl From<crate::W<SCL_HIGH_PERIOD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_HIGH_PERIOD` reader - This register is used to configure for how long SCL remains high in master mode, in I2C module clock cycles."]
-pub struct SCL_HIGH_PERIOD_R(crate::FieldReader<u16>);
-impl SCL_HIGH_PERIOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SCL_HIGH_PERIOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_HIGH_PERIOD_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_HIGH_PERIOD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SCL_HIGH_PERIOD` writer - This register is used to configure for how long SCL remains high in master mode, in I2C module clock cycles."]
-pub struct SCL_HIGH_PERIOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_HIGH_PERIOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff) | (value as u32 & 0x3fff);
-        self.w
-    }
-}
+pub type SCL_HIGH_PERIOD_W<'a> = crate::FieldWriter<'a, u32, SCL_HIGH_PERIOD_SPEC, u16, u16, 14, 0>;
 #[doc = "Field `SCL_WAIT_HIGH_PERIOD` reader - This register is used to configure for the SCL_FSM's waiting period for SCL to go high in master mode, in I2C module clock cycles."]
-pub struct SCL_WAIT_HIGH_PERIOD_R(crate::FieldReader<u16>);
-impl SCL_WAIT_HIGH_PERIOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SCL_WAIT_HIGH_PERIOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_WAIT_HIGH_PERIOD_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_WAIT_HIGH_PERIOD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SCL_WAIT_HIGH_PERIOD` writer - This register is used to configure for the SCL_FSM's waiting period for SCL to go high in master mode, in I2C module clock cycles."]
-pub struct SCL_WAIT_HIGH_PERIOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_WAIT_HIGH_PERIOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3fff << 14)) | ((value as u32 & 0x3fff) << 14);
-        self.w
-    }
-}
+pub type SCL_WAIT_HIGH_PERIOD_W<'a> =
+    crate::FieldWriter<'a, u32, SCL_HIGH_PERIOD_SPEC, u16, u16, 14, 14>;
 impl R {
     #[doc = "Bits 0:13 - This register is used to configure for how long SCL remains high in master mode, in I2C module clock cycles."]
     #[inline(always)]
@@ -104,12 +59,12 @@ impl W {
     #[doc = "Bits 0:13 - This register is used to configure for how long SCL remains high in master mode, in I2C module clock cycles."]
     #[inline(always)]
     pub fn scl_high_period(&mut self) -> SCL_HIGH_PERIOD_W {
-        SCL_HIGH_PERIOD_W { w: self }
+        SCL_HIGH_PERIOD_W::new(self)
     }
     #[doc = "Bits 14:27 - This register is used to configure for the SCL_FSM's waiting period for SCL to go high in master mode, in I2C module clock cycles."]
     #[inline(always)]
     pub fn scl_wait_high_period(&mut self) -> SCL_WAIT_HIGH_PERIOD_W {
-        SCL_WAIT_HIGH_PERIOD_W { w: self }
+        SCL_WAIT_HIGH_PERIOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

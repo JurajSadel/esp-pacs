@@ -14,69 +14,17 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Fields `CH(0-7)_TX_END_INT_ST` reader - The interrupt state bit for channel %s's mt_ch%s_tx_end_int_raw when mt_ch%s_tx_end_int_ena is set to %s."]
-pub struct CH_TX_END_INT_ST_R(crate::FieldReader<bool>);
-impl CH_TX_END_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_END_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_END_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_END_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-7)_RX_END_INT_ST` reader - The interrupt state bit for channel %s's rmt_ch%s_rx_end_int_raw when rmt_ch%s_rx_end_int_ena is set to %s."]
-pub struct CH_RX_END_INT_ST_R(crate::FieldReader<bool>);
-impl CH_RX_END_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_RX_END_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_RX_END_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_RX_END_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-7)_ERR_INT_ST` reader - The interrupt state bit for channel %s's rmt_ch%s_err_int_raw when rmt_ch%s_err_int_ena is set to %s."]
-pub struct CH_ERR_INT_ST_R(crate::FieldReader<bool>);
-impl CH_ERR_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_ERR_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_ERR_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_ERR_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Fields `CH(0-7)_TX_THR_EVENT_INT_ST` reader - The interrupt state bit for channel %s's rmt_ch%s_tx_thr_event_int_raw when mt_ch%s_tx_thr_event_int_ena is set to 1."]
-pub struct CH_TX_THR_EVENT_INT_ST_R(crate::FieldReader<bool>);
-impl CH_TX_THR_EVENT_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH_TX_THR_EVENT_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH_TX_THR_EVENT_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH_TX_THR_EVENT_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "The interrupt state bit for channel (0-7)'s mt_ch(0-7)_tx_end_int_raw when mt_ch(0-7)_tx_end_int_ena is set to (0-7)."]
     #[inline(always)]
-    pub unsafe fn ch_tx_end_int_st(&self, n: usize) -> CH_TX_END_INT_ST_R {
+    pub unsafe fn ch_tx_end_int_st(&self, n: u8) -> CH_TX_END_INT_ST_R {
         CH_TX_END_INT_ST_R::new(((self.bits >> (n * 3)) & 1) != 0)
     }
     #[doc = "Bit 0 - The interrupt state bit for channel 0's mt_ch0_tx_end_int_raw when mt_ch0_tx_end_int_ena is set to 0."]
@@ -121,7 +69,7 @@ impl R {
     }
     #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_rx_end_int_raw when rmt_ch(0-7)_rx_end_int_ena is set to (0-7)."]
     #[inline(always)]
-    pub unsafe fn ch_rx_end_int_st(&self, n: usize) -> CH_RX_END_INT_ST_R {
+    pub unsafe fn ch_rx_end_int_st(&self, n: u8) -> CH_RX_END_INT_ST_R {
         CH_RX_END_INT_ST_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - The interrupt state bit for channel 0's rmt_ch0_rx_end_int_raw when rmt_ch0_rx_end_int_ena is set to 0."]
@@ -166,7 +114,7 @@ impl R {
     }
     #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_err_int_raw when rmt_ch(0-7)_err_int_ena is set to (0-7)."]
     #[inline(always)]
-    pub unsafe fn ch_err_int_st(&self, n: usize) -> CH_ERR_INT_ST_R {
+    pub unsafe fn ch_err_int_st(&self, n: u8) -> CH_ERR_INT_ST_R {
         CH_ERR_INT_ST_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - The interrupt state bit for channel 0's rmt_ch0_err_int_raw when rmt_ch0_err_int_ena is set to 0."]
@@ -211,7 +159,7 @@ impl R {
     }
     #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_tx_thr_event_int_raw when mt_ch(0-7)_tx_thr_event_int_ena is set to 1."]
     #[inline(always)]
-    pub unsafe fn ch_tx_thr_event_int_st(&self, n: usize) -> CH_TX_THR_EVENT_INT_ST_R {
+    pub unsafe fn ch_tx_thr_event_int_st(&self, n: u8) -> CH_TX_THR_EVENT_INT_ST_R {
         CH_TX_THR_EVENT_INT_ST_R::new(((self.bits >> (n + 24)) & 1) != 0)
     }
     #[doc = "Bit 24 - The interrupt state bit for channel 0's rmt_ch0_tx_thr_event_int_raw when mt_ch0_tx_thr_event_int_ena is set to 1."]

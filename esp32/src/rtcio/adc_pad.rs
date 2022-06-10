@@ -35,429 +35,53 @@ impl From<crate::W<ADC_PAD_SPEC>> for W {
     }
 }
 #[doc = "Field `ADC2_FUN_IE` reader - the input enable of the pad"]
-pub struct ADC2_FUN_IE_R(crate::FieldReader<bool>);
-impl ADC2_FUN_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC2_FUN_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_FUN_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_FUN_IE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC2_FUN_IE` writer - the input enable of the pad"]
-pub struct ADC2_FUN_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_FUN_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type ADC2_FUN_IE_W<'a> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, 18>;
 #[doc = "Field `ADC2_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct ADC2_SLP_IE_R(crate::FieldReader<bool>);
-impl ADC2_SLP_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC2_SLP_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_SLP_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_SLP_IE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC2_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub struct ADC2_SLP_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_SLP_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type ADC2_SLP_IE_W<'a> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, 19>;
 #[doc = "Field `ADC2_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct ADC2_SLP_SEL_R(crate::FieldReader<bool>);
-impl ADC2_SLP_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC2_SLP_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_SLP_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_SLP_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `ADC2_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub struct ADC2_SLP_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_SLP_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type ADC2_SLP_SEL_W<'a> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, 20>;
 #[doc = "Field `ADC2_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct ADC2_FUN_SEL_R(crate::FieldReader<u8>);
-impl ADC2_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADC2_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC2_FUN_SEL` writer - the functional selection signal of the pad"]
-pub struct ADC2_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 21)) | ((value as u32 & 3) << 21);
-        self.w
-    }
-}
+pub type ADC2_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, ADC_PAD_SPEC, u8, u8, 2, 21>;
 #[doc = "Field `ADC1_FUN_IE` reader - the input enable of the pad"]
-pub struct ADC1_FUN_IE_R(crate::FieldReader<bool>);
-impl ADC1_FUN_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC1_FUN_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_FUN_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_FUN_IE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1_FUN_IE` writer - the input enable of the pad"]
-pub struct ADC1_FUN_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_FUN_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type ADC1_FUN_IE_W<'a> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, 23>;
 #[doc = "Field `ADC1_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct ADC1_SLP_IE_R(crate::FieldReader<bool>);
-impl ADC1_SLP_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC1_SLP_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_SLP_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_SLP_IE_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub struct ADC1_SLP_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_SLP_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type ADC1_SLP_IE_W<'a> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, 24>;
 #[doc = "Field `ADC1_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct ADC1_SLP_SEL_R(crate::FieldReader<bool>);
-impl ADC1_SLP_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC1_SLP_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_SLP_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_SLP_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub struct ADC1_SLP_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_SLP_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type ADC1_SLP_SEL_W<'a> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, 25>;
 #[doc = "Field `ADC1_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct ADC1_FUN_SEL_R(crate::FieldReader<u8>);
-impl ADC1_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADC1_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADC1_FUN_SEL` writer - the functional selection signal of the pad"]
-pub struct ADC1_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 26)) | ((value as u32 & 3) << 26);
-        self.w
-    }
-}
+pub type ADC1_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, ADC_PAD_SPEC, u8, u8, 2, 26>;
 #[doc = "Field `ADC2_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct ADC2_MUX_SEL_R(crate::FieldReader<bool>);
-impl ADC2_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC2_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `ADC2_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct ADC2_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type ADC2_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, 28>;
 #[doc = "Field `ADC1_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct ADC1_MUX_SEL_R(crate::FieldReader<bool>);
-impl ADC1_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC1_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct ADC1_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type ADC1_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, 29>;
 #[doc = "Field `ADC2_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct ADC2_HOLD_R(crate::FieldReader<bool>);
-impl ADC2_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC2_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC2_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC2_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `ADC2_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct ADC2_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC2_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type ADC2_HOLD_W<'a> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, 30>;
 #[doc = "Field `ADC1_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct ADC1_HOLD_R(crate::FieldReader<bool>);
-impl ADC1_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ADC1_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADC1_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADC1_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `ADC1_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct ADC1_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADC1_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type ADC1_HOLD_W<'a> = crate::BitWriter<'a, u32, ADC_PAD_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 18 - the input enable of the pad"]
     #[inline(always)]
@@ -524,62 +148,62 @@ impl W {
     #[doc = "Bit 18 - the input enable of the pad"]
     #[inline(always)]
     pub fn adc2_fun_ie(&mut self) -> ADC2_FUN_IE_W {
-        ADC2_FUN_IE_W { w: self }
+        ADC2_FUN_IE_W::new(self)
     }
     #[doc = "Bit 19 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn adc2_slp_ie(&mut self) -> ADC2_SLP_IE_W {
-        ADC2_SLP_IE_W { w: self }
+        ADC2_SLP_IE_W::new(self)
     }
     #[doc = "Bit 20 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn adc2_slp_sel(&mut self) -> ADC2_SLP_SEL_W {
-        ADC2_SLP_SEL_W { w: self }
+        ADC2_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 21:22 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn adc2_fun_sel(&mut self) -> ADC2_FUN_SEL_W {
-        ADC2_FUN_SEL_W { w: self }
+        ADC2_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 23 - the input enable of the pad"]
     #[inline(always)]
     pub fn adc1_fun_ie(&mut self) -> ADC1_FUN_IE_W {
-        ADC1_FUN_IE_W { w: self }
+        ADC1_FUN_IE_W::new(self)
     }
     #[doc = "Bit 24 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn adc1_slp_ie(&mut self) -> ADC1_SLP_IE_W {
-        ADC1_SLP_IE_W { w: self }
+        ADC1_SLP_IE_W::new(self)
     }
     #[doc = "Bit 25 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn adc1_slp_sel(&mut self) -> ADC1_SLP_SEL_W {
-        ADC1_SLP_SEL_W { w: self }
+        ADC1_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 26:27 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn adc1_fun_sel(&mut self) -> ADC1_FUN_SEL_W {
-        ADC1_FUN_SEL_W { w: self }
+        ADC1_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 28 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn adc2_mux_sel(&mut self) -> ADC2_MUX_SEL_W {
-        ADC2_MUX_SEL_W { w: self }
+        ADC2_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 29 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn adc1_mux_sel(&mut self) -> ADC1_MUX_SEL_W {
-        ADC1_MUX_SEL_W { w: self }
+        ADC1_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 30 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn adc2_hold(&mut self) -> ADC2_HOLD_W {
-        ADC2_HOLD_W { w: self }
+        ADC2_HOLD_W::new(self)
     }
     #[doc = "Bit 31 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn adc1_hold(&mut self) -> ADC1_HOLD_W {
-        ADC1_HOLD_W { w: self }
+        ADC1_HOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

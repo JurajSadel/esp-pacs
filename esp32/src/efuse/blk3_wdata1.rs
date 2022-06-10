@@ -35,32 +35,9 @@ impl From<crate::W<BLK3_WDATA1_SPEC>> for W {
     }
 }
 #[doc = "Field `BLK3_DIN1` reader - program for BLOCK3"]
-pub struct BLK3_DIN1_R(crate::FieldReader<u32>);
-impl BLK3_DIN1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BLK3_DIN1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BLK3_DIN1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BLK3_DIN1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BLK3_DIN1` writer - program for BLOCK3"]
-pub struct BLK3_DIN1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BLK3_DIN1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type BLK3_DIN1_W<'a> = crate::FieldWriter<'a, u32, BLK3_WDATA1_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - program for BLOCK3"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - program for BLOCK3"]
     #[inline(always)]
     pub fn blk3_din1(&mut self) -> BLK3_DIN1_W {
-        BLK3_DIN1_W { w: self }
+        BLK3_DIN1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

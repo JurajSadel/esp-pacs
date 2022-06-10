@@ -35,255 +35,35 @@ impl From<crate::W<BLK0_RDATA3_SPEC>> for W {
     }
 }
 #[doc = "Field `RD_CHIP_VER_DIS_APP_CPU` reader - "]
-pub struct RD_CHIP_VER_DIS_APP_CPU_R(crate::FieldReader<bool>);
-impl RD_CHIP_VER_DIS_APP_CPU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_CHIP_VER_DIS_APP_CPU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_CHIP_VER_DIS_APP_CPU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_CHIP_VER_DIS_APP_CPU_R = crate::BitReader<bool>;
 #[doc = "Field `RD_CHIP_VER_DIS_BT` reader - "]
-pub struct RD_CHIP_VER_DIS_BT_R(crate::FieldReader<bool>);
-impl RD_CHIP_VER_DIS_BT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_CHIP_VER_DIS_BT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_CHIP_VER_DIS_BT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_CHIP_VER_DIS_BT_R = crate::BitReader<bool>;
 #[doc = "Field `RD_CHIP_VER_PKG_4BIT` reader - most significant bit of chip package"]
-pub struct RD_CHIP_VER_PKG_4BIT_R(crate::FieldReader<bool>);
-impl RD_CHIP_VER_PKG_4BIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_CHIP_VER_PKG_4BIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_CHIP_VER_PKG_4BIT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_CHIP_VER_PKG_4BIT_R = crate::BitReader<bool>;
 #[doc = "Field `RD_CHIP_VER_DIS_CACHE` reader - "]
-pub struct RD_CHIP_VER_DIS_CACHE_R(crate::FieldReader<bool>);
-impl RD_CHIP_VER_DIS_CACHE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_CHIP_VER_DIS_CACHE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_CHIP_VER_DIS_CACHE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_CHIP_VER_DIS_CACHE_R = crate::BitReader<bool>;
 #[doc = "Field `RD_SPI_PAD_CONFIG_HD` reader - read for SPI_pad_config_hd"]
-pub struct RD_SPI_PAD_CONFIG_HD_R(crate::FieldReader<u8>);
-impl RD_SPI_PAD_CONFIG_HD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_SPI_PAD_CONFIG_HD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_SPI_PAD_CONFIG_HD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_SPI_PAD_CONFIG_HD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_CHIP_VER_PKG` reader - least significant bits of chip package"]
-pub struct RD_CHIP_VER_PKG_R(crate::FieldReader<u8>);
-impl RD_CHIP_VER_PKG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RD_CHIP_VER_PKG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_CHIP_VER_PKG_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_CHIP_VER_PKG_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `RD_CHIP_VER_PKG` writer - least significant bits of chip package"]
-pub struct RD_CHIP_VER_PKG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RD_CHIP_VER_PKG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
-        self.w
-    }
-}
+pub type RD_CHIP_VER_PKG_W<'a> = crate::FieldWriter<'a, u32, BLK0_RDATA3_SPEC, u8, u8, 3, 9>;
 #[doc = "Field `RD_CHIP_CPU_FREQ_LOW` reader - If set alongside EFUSE_RD_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise"]
-pub struct RD_CHIP_CPU_FREQ_LOW_R(crate::FieldReader<bool>);
-impl RD_CHIP_CPU_FREQ_LOW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_CHIP_CPU_FREQ_LOW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_CHIP_CPU_FREQ_LOW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_CHIP_CPU_FREQ_LOW_R = crate::BitReader<bool>;
 #[doc = "Field `RD_CHIP_CPU_FREQ_LOW` writer - If set alongside EFUSE_RD_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise"]
-pub struct RD_CHIP_CPU_FREQ_LOW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RD_CHIP_CPU_FREQ_LOW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type RD_CHIP_CPU_FREQ_LOW_W<'a> = crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, 12>;
 #[doc = "Field `RD_CHIP_CPU_FREQ_RATED` reader - If set, the ESP32's maximum CPU frequency has been rated"]
-pub struct RD_CHIP_CPU_FREQ_RATED_R(crate::FieldReader<bool>);
-impl RD_CHIP_CPU_FREQ_RATED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_CHIP_CPU_FREQ_RATED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_CHIP_CPU_FREQ_RATED_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_CHIP_CPU_FREQ_RATED_R = crate::BitReader<bool>;
 #[doc = "Field `RD_CHIP_CPU_FREQ_RATED` writer - If set, the ESP32's maximum CPU frequency has been rated"]
-pub struct RD_CHIP_CPU_FREQ_RATED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RD_CHIP_CPU_FREQ_RATED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type RD_CHIP_CPU_FREQ_RATED_W<'a> = crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, 13>;
 #[doc = "Field `RD_BLK3_PART_RESERVE` reader - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
-pub struct RD_BLK3_PART_RESERVE_R(crate::FieldReader<bool>);
-impl RD_BLK3_PART_RESERVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_BLK3_PART_RESERVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_BLK3_PART_RESERVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_BLK3_PART_RESERVE_R = crate::BitReader<bool>;
 #[doc = "Field `RD_BLK3_PART_RESERVE` writer - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
-pub struct RD_BLK3_PART_RESERVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RD_BLK3_PART_RESERVE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type RD_BLK3_PART_RESERVE_W<'a> = crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, 14>;
 #[doc = "Field `RD_CHIP_VER_REV1` reader - bit is set to 1 for rev1 silicon"]
-pub struct RD_CHIP_VER_REV1_R(crate::FieldReader<bool>);
-impl RD_CHIP_VER_REV1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RD_CHIP_VER_REV1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RD_CHIP_VER_REV1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RD_CHIP_VER_REV1_R = crate::BitReader<bool>;
 #[doc = "Field `RD_CHIP_VER_REV1` writer - bit is set to 1 for rev1 silicon"]
-pub struct RD_CHIP_VER_REV1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RD_CHIP_VER_REV1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type RD_CHIP_VER_REV1_W<'a> = crate::BitWriter<'a, u32, BLK0_RDATA3_SPEC, bool, 15>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -340,27 +120,27 @@ impl W {
     #[doc = "Bits 9:11 - least significant bits of chip package"]
     #[inline(always)]
     pub fn rd_chip_ver_pkg(&mut self) -> RD_CHIP_VER_PKG_W {
-        RD_CHIP_VER_PKG_W { w: self }
+        RD_CHIP_VER_PKG_W::new(self)
     }
     #[doc = "Bit 12 - If set alongside EFUSE_RD_CHIP_CPU_FREQ_RATED, the ESP32's max CPU frequency is rated for 160MHz. 240MHz otherwise"]
     #[inline(always)]
     pub fn rd_chip_cpu_freq_low(&mut self) -> RD_CHIP_CPU_FREQ_LOW_W {
-        RD_CHIP_CPU_FREQ_LOW_W { w: self }
+        RD_CHIP_CPU_FREQ_LOW_W::new(self)
     }
     #[doc = "Bit 13 - If set, the ESP32's maximum CPU frequency has been rated"]
     #[inline(always)]
     pub fn rd_chip_cpu_freq_rated(&mut self) -> RD_CHIP_CPU_FREQ_RATED_W {
-        RD_CHIP_CPU_FREQ_RATED_W { w: self }
+        RD_CHIP_CPU_FREQ_RATED_W::new(self)
     }
     #[doc = "Bit 14 - If set, this bit indicates that BLOCK3\\[143:96\\] is reserved for internal use"]
     #[inline(always)]
     pub fn rd_blk3_part_reserve(&mut self) -> RD_BLK3_PART_RESERVE_W {
-        RD_BLK3_PART_RESERVE_W { w: self }
+        RD_BLK3_PART_RESERVE_W::new(self)
     }
     #[doc = "Bit 15 - bit is set to 1 for rev1 silicon"]
     #[inline(always)]
     pub fn rd_chip_ver_rev1(&mut self) -> RD_CHIP_VER_REV1_W {
-        RD_CHIP_VER_REV1_W { w: self }
+        RD_CHIP_VER_REV1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

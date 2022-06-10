@@ -14,20 +14,7 @@ impl From<crate::R<RD_RESULT__SPEC>> for R {
     }
 }
 #[doc = "Field `RDATA` reader - Read the %sth 32-bit of hash result."]
-pub struct RDATA_R(crate::FieldReader<u32>);
-impl RDATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RDATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RDATA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RDATA_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Read the %sth 32-bit of hash result."]
     #[inline(always)]

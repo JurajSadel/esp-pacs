@@ -35,291 +35,37 @@ impl From<crate::W<SAR_AMP_CTRL2_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR1_DAC_XPD_FSM_IDLE` reader - "]
-pub struct SAR1_DAC_XPD_FSM_IDLE_R(crate::FieldReader<bool>);
-impl SAR1_DAC_XPD_FSM_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR1_DAC_XPD_FSM_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR1_DAC_XPD_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR1_DAC_XPD_FSM_IDLE_R = crate::BitReader<bool>;
 #[doc = "Field `SAR1_DAC_XPD_FSM_IDLE` writer - "]
-pub struct SAR1_DAC_XPD_FSM_IDLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR1_DAC_XPD_FSM_IDLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type SAR1_DAC_XPD_FSM_IDLE_W<'a> = crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, 0>;
 #[doc = "Field `XPD_SAR_AMP_FSM_IDLE` reader - "]
-pub struct XPD_SAR_AMP_FSM_IDLE_R(crate::FieldReader<bool>);
-impl XPD_SAR_AMP_FSM_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_SAR_AMP_FSM_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_SAR_AMP_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_SAR_AMP_FSM_IDLE_R = crate::BitReader<bool>;
 #[doc = "Field `XPD_SAR_AMP_FSM_IDLE` writer - "]
-pub struct XPD_SAR_AMP_FSM_IDLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XPD_SAR_AMP_FSM_IDLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type XPD_SAR_AMP_FSM_IDLE_W<'a> = crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, 1>;
 #[doc = "Field `AMP_RST_FB_FSM_IDLE` reader - "]
-pub struct AMP_RST_FB_FSM_IDLE_R(crate::FieldReader<bool>);
-impl AMP_RST_FB_FSM_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AMP_RST_FB_FSM_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AMP_RST_FB_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AMP_RST_FB_FSM_IDLE_R = crate::BitReader<bool>;
 #[doc = "Field `AMP_RST_FB_FSM_IDLE` writer - "]
-pub struct AMP_RST_FB_FSM_IDLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AMP_RST_FB_FSM_IDLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type AMP_RST_FB_FSM_IDLE_W<'a> = crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, 2>;
 #[doc = "Field `AMP_SHORT_REF_FSM_IDLE` reader - "]
-pub struct AMP_SHORT_REF_FSM_IDLE_R(crate::FieldReader<bool>);
-impl AMP_SHORT_REF_FSM_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AMP_SHORT_REF_FSM_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AMP_SHORT_REF_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AMP_SHORT_REF_FSM_IDLE_R = crate::BitReader<bool>;
 #[doc = "Field `AMP_SHORT_REF_FSM_IDLE` writer - "]
-pub struct AMP_SHORT_REF_FSM_IDLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AMP_SHORT_REF_FSM_IDLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type AMP_SHORT_REF_FSM_IDLE_W<'a> = crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, 3>;
 #[doc = "Field `AMP_SHORT_REF_GND_FSM_IDLE` reader - "]
-pub struct AMP_SHORT_REF_GND_FSM_IDLE_R(crate::FieldReader<bool>);
-impl AMP_SHORT_REF_GND_FSM_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AMP_SHORT_REF_GND_FSM_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AMP_SHORT_REF_GND_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AMP_SHORT_REF_GND_FSM_IDLE_R = crate::BitReader<bool>;
 #[doc = "Field `AMP_SHORT_REF_GND_FSM_IDLE` writer - "]
-pub struct AMP_SHORT_REF_GND_FSM_IDLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AMP_SHORT_REF_GND_FSM_IDLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type AMP_SHORT_REF_GND_FSM_IDLE_W<'a> = crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, 4>;
 #[doc = "Field `XPD_SAR_FSM_IDLE` reader - "]
-pub struct XPD_SAR_FSM_IDLE_R(crate::FieldReader<bool>);
-impl XPD_SAR_FSM_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_SAR_FSM_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_SAR_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_SAR_FSM_IDLE_R = crate::BitReader<bool>;
 #[doc = "Field `XPD_SAR_FSM_IDLE` writer - "]
-pub struct XPD_SAR_FSM_IDLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XPD_SAR_FSM_IDLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type XPD_SAR_FSM_IDLE_W<'a> = crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, 5>;
 #[doc = "Field `SAR_RSTB_FSM_IDLE` reader - "]
-pub struct SAR_RSTB_FSM_IDLE_R(crate::FieldReader<bool>);
-impl SAR_RSTB_FSM_IDLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR_RSTB_FSM_IDLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_RSTB_FSM_IDLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_RSTB_FSM_IDLE_R = crate::BitReader<bool>;
 #[doc = "Field `SAR_RSTB_FSM_IDLE` writer - "]
-pub struct SAR_RSTB_FSM_IDLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_RSTB_FSM_IDLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type SAR_RSTB_FSM_IDLE_W<'a> = crate::BitWriter<'a, u32, SAR_AMP_CTRL2_SPEC, bool, 6>;
 #[doc = "Field `SAR_AMP_WAIT3` reader - "]
-pub struct SAR_AMP_WAIT3_R(crate::FieldReader<u16>);
-impl SAR_AMP_WAIT3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SAR_AMP_WAIT3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_AMP_WAIT3_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_AMP_WAIT3_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR_AMP_WAIT3` writer - "]
-pub struct SAR_AMP_WAIT3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_AMP_WAIT3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
+pub type SAR_AMP_WAIT3_W<'a> = crate::FieldWriter<'a, u32, SAR_AMP_CTRL2_SPEC, u16, u16, 16, 16>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -366,42 +112,42 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn sar1_dac_xpd_fsm_idle(&mut self) -> SAR1_DAC_XPD_FSM_IDLE_W {
-        SAR1_DAC_XPD_FSM_IDLE_W { w: self }
+        SAR1_DAC_XPD_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn xpd_sar_amp_fsm_idle(&mut self) -> XPD_SAR_AMP_FSM_IDLE_W {
-        XPD_SAR_AMP_FSM_IDLE_W { w: self }
+        XPD_SAR_AMP_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn amp_rst_fb_fsm_idle(&mut self) -> AMP_RST_FB_FSM_IDLE_W {
-        AMP_RST_FB_FSM_IDLE_W { w: self }
+        AMP_RST_FB_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn amp_short_ref_fsm_idle(&mut self) -> AMP_SHORT_REF_FSM_IDLE_W {
-        AMP_SHORT_REF_FSM_IDLE_W { w: self }
+        AMP_SHORT_REF_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn amp_short_ref_gnd_fsm_idle(&mut self) -> AMP_SHORT_REF_GND_FSM_IDLE_W {
-        AMP_SHORT_REF_GND_FSM_IDLE_W { w: self }
+        AMP_SHORT_REF_GND_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn xpd_sar_fsm_idle(&mut self) -> XPD_SAR_FSM_IDLE_W {
-        XPD_SAR_FSM_IDLE_W { w: self }
+        XPD_SAR_FSM_IDLE_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn sar_rstb_fsm_idle(&mut self) -> SAR_RSTB_FSM_IDLE_W {
-        SAR_RSTB_FSM_IDLE_W { w: self }
+        SAR_RSTB_FSM_IDLE_W::new(self)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
     pub fn sar_amp_wait3(&mut self) -> SAR_AMP_WAIT3_W {
-        SAR_AMP_WAIT3_W { w: self }
+        SAR_AMP_WAIT3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

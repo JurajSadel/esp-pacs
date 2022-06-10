@@ -35,32 +35,9 @@ impl From<crate::W<SCL_ST_TIME_OUT_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_ST_TO` reader - The threshold value of SCL_FSM state unchanged period."]
-pub struct SCL_ST_TO_R(crate::FieldReader<u32>);
-impl SCL_ST_TO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SCL_ST_TO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_ST_TO_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_ST_TO_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SCL_ST_TO` writer - The threshold value of SCL_FSM state unchanged period."]
-pub struct SCL_ST_TO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_ST_TO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
-        self.w
-    }
-}
+pub type SCL_ST_TO_W<'a> = crate::FieldWriter<'a, u32, SCL_ST_TIME_OUT_SPEC, u32, u32, 24, 0>;
 impl R {
     #[doc = "Bits 0:23 - The threshold value of SCL_FSM state unchanged period."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:23 - The threshold value of SCL_FSM state unchanged period."]
     #[inline(always)]
     pub fn scl_st_to(&mut self) -> SCL_ST_TO_W {
-        SCL_ST_TO_W { w: self }
+        SCL_ST_TO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

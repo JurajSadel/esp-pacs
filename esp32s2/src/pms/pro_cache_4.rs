@@ -14,20 +14,7 @@ impl From<crate::R<PRO_CACHE_4_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_CACHE_ILG_ST_D` reader - Record the illegitimate information of Dcache to access memory. \\[16\\]: access enable, active low. \\[15:4\\]: store the bits \\[11:0\\] of address. \\[3:0\\]: Dcache bus write byte enables, active low."]
-pub struct PRO_CACHE_ILG_ST_D_R(crate::FieldReader<u32>);
-impl PRO_CACHE_ILG_ST_D_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PRO_CACHE_ILG_ST_D_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_CACHE_ILG_ST_D_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_CACHE_ILG_ST_D_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:16 - Record the illegitimate information of Dcache to access memory. \\[16\\]: access enable, active low. \\[15:4\\]: store the bits \\[11:0\\] of address. \\[3:0\\]: Dcache bus write byte enables, active low."]
     #[inline(always)]

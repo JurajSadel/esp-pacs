@@ -35,32 +35,9 @@ impl From<crate::W<LSCH4_HPOINT_SPEC>> for W {
     }
 }
 #[doc = "Field `HPOINT_LSCH4` reader - reg_hpoint_lsch4."]
-pub struct HPOINT_LSCH4_R(crate::FieldReader<u16>);
-impl HPOINT_LSCH4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        HPOINT_LSCH4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HPOINT_LSCH4_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HPOINT_LSCH4_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `HPOINT_LSCH4` writer - reg_hpoint_lsch4."]
-pub struct HPOINT_LSCH4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HPOINT_LSCH4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff) | (value as u32 & 0x3fff);
-        self.w
-    }
-}
+pub type HPOINT_LSCH4_W<'a> = crate::FieldWriter<'a, u32, LSCH4_HPOINT_SPEC, u16, u16, 14, 0>;
 impl R {
     #[doc = "Bits 0:13 - reg_hpoint_lsch4."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:13 - reg_hpoint_lsch4."]
     #[inline(always)]
     pub fn hpoint_lsch4(&mut self) -> HPOINT_LSCH4_W {
-        HPOINT_LSCH4_W { w: self }
+        HPOINT_LSCH4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

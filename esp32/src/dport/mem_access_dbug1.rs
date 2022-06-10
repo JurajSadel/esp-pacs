@@ -14,95 +14,17 @@ impl From<crate::R<MEM_ACCESS_DBUG1_SPEC>> for R {
     }
 }
 #[doc = "Field `INTERNAL_SRAM_MMU_MISS` reader - "]
-pub struct INTERNAL_SRAM_MMU_MISS_R(crate::FieldReader<u8>);
-impl INTERNAL_SRAM_MMU_MISS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INTERNAL_SRAM_MMU_MISS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERNAL_SRAM_MMU_MISS_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERNAL_SRAM_MMU_MISS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ARB_IA` reader - "]
-pub struct ARB_IA_R(crate::FieldReader<u8>);
-impl ARB_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ARB_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARB_IA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARB_IA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PIDGEN_IA` reader - "]
-pub struct PIDGEN_IA_R(crate::FieldReader<u8>);
-impl PIDGEN_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIDGEN_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIDGEN_IA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIDGEN_IA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `AHB_ACCESS_DENY` reader - "]
-pub struct AHB_ACCESS_DENY_R(crate::FieldReader<bool>);
-impl AHB_ACCESS_DENY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AHB_ACCESS_DENY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHB_ACCESS_DENY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHB_ACCESS_DENY_R = crate::BitReader<bool>;
 #[doc = "Field `AHBLITE_ACCESS_DENY` reader - "]
-pub struct AHBLITE_ACCESS_DENY_R(crate::FieldReader<bool>);
-impl AHBLITE_ACCESS_DENY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AHBLITE_ACCESS_DENY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHBLITE_ACCESS_DENY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHBLITE_ACCESS_DENY_R = crate::BitReader<bool>;
 #[doc = "Field `AHBLITE_IA` reader - "]
-pub struct AHBLITE_IA_R(crate::FieldReader<bool>);
-impl AHBLITE_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AHBLITE_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHBLITE_IA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHBLITE_IA_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]

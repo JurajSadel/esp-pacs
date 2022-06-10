@@ -35,59 +35,13 @@ impl From<crate::W<CLKENA_SPEC>> for W {
     }
 }
 #[doc = "Field `CCLK_ENABLE` reader - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
-pub struct CCLK_ENABLE_R(crate::FieldReader<u8>);
-impl CCLK_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CCLK_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CCLK_ENABLE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CCLK_ENABLE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CCLK_ENABLE` writer - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
-pub struct CCLK_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CCLK_ENABLE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type CCLK_ENABLE_W<'a> = crate::FieldWriter<'a, u32, CLKENA_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `LP_ENABLE` reader - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
-pub struct LP_ENABLE_R(crate::FieldReader<u8>);
-impl LP_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        LP_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LP_ENABLE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LP_ENABLE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `LP_ENABLE` writer - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
-pub struct LP_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LP_ENABLE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type LP_ENABLE_W<'a> = crate::FieldWriter<'a, u32, CLKENA_SPEC, u8, u8, 2, 16>;
 impl R {
     #[doc = "Bits 0:1 - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:1 - Clock-enable control for two SD card clocks and one MMC card clock is supported. One bit per card. 0: Clock disabled; 1: Clock enabled."]
     #[inline(always)]
     pub fn cclk_enable(&mut self) -> CCLK_ENABLE_W {
-        CCLK_ENABLE_W { w: self }
+        CCLK_ENABLE_W::new(self)
     }
     #[doc = "Bits 16:17 - Disable clock when the card is in IDLE state. One bit per card. 0: clock disabled; 1: clock enabled."]
     #[inline(always)]
     pub fn lp_enable(&mut self) -> LP_ENABLE_W {
-        LP_ENABLE_W { w: self }
+        LP_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

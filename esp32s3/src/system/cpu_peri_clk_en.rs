@@ -35,79 +35,13 @@ impl From<crate::W<CPU_PERI_CLK_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_EN_ASSIST_DEBUG` reader - Set 1 to open assist_debug module clock"]
-pub struct CLK_EN_ASSIST_DEBUG_R(crate::FieldReader<bool>);
-impl CLK_EN_ASSIST_DEBUG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_ASSIST_DEBUG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_ASSIST_DEBUG_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_ASSIST_DEBUG_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN_ASSIST_DEBUG` writer - Set 1 to open assist_debug module clock"]
-pub struct CLK_EN_ASSIST_DEBUG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_ASSIST_DEBUG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CLK_EN_ASSIST_DEBUG_W<'a> = crate::BitWriter<'a, u32, CPU_PERI_CLK_EN_SPEC, bool, 6>;
 #[doc = "Field `CLK_EN_DEDICATED_GPIO` reader - Set 1 to open dedicated_gpio module clk"]
-pub struct CLK_EN_DEDICATED_GPIO_R(crate::FieldReader<bool>);
-impl CLK_EN_DEDICATED_GPIO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_DEDICATED_GPIO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_DEDICATED_GPIO_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_DEDICATED_GPIO_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN_DEDICATED_GPIO` writer - Set 1 to open dedicated_gpio module clk"]
-pub struct CLK_EN_DEDICATED_GPIO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_DEDICATED_GPIO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type CLK_EN_DEDICATED_GPIO_W<'a> = crate::BitWriter<'a, u32, CPU_PERI_CLK_EN_SPEC, bool, 7>;
 impl R {
     #[doc = "Bit 6 - Set 1 to open assist_debug module clock"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 6 - Set 1 to open assist_debug module clock"]
     #[inline(always)]
     pub fn clk_en_assist_debug(&mut self) -> CLK_EN_ASSIST_DEBUG_W {
-        CLK_EN_ASSIST_DEBUG_W { w: self }
+        CLK_EN_ASSIST_DEBUG_W::new(self)
     }
     #[doc = "Bit 7 - Set 1 to open dedicated_gpio module clk"]
     #[inline(always)]
     pub fn clk_en_dedicated_gpio(&mut self) -> CLK_EN_DEDICATED_GPIO_W {
-        CLK_EN_DEDICATED_GPIO_W { w: self }
+        CLK_EN_DEDICATED_GPIO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,59 +35,13 @@ impl From<crate::W<TIMER0_CFG1_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER0_START` reader - PWM timer0 start and stop control. 0: if PWM timer0 starts, then stops at TEZ, 1: if timer0 starts, then stops at TEP, 2: PWM timer0 starts and runs on, 3: timer0 starts and stops at the next TEZ, 4: timer0 starts and stops at the next TEP. TEP here and below means the event that happens when the timer equals to period"]
-pub struct TIMER0_START_R(crate::FieldReader<u8>);
-impl TIMER0_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER0_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER0_START_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER0_START_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER0_START` writer - PWM timer0 start and stop control. 0: if PWM timer0 starts, then stops at TEZ, 1: if timer0 starts, then stops at TEP, 2: PWM timer0 starts and runs on, 3: timer0 starts and stops at the next TEZ, 4: timer0 starts and stops at the next TEP. TEP here and below means the event that happens when the timer equals to period"]
-pub struct TIMER0_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER0_START_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type TIMER0_START_W<'a> = crate::FieldWriter<'a, u32, TIMER0_CFG1_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `TIMER0_MOD` reader - PWM timer0 working mode, 0: freeze, 1: increase mode, 2: decrease mode, 3: up-down mode"]
-pub struct TIMER0_MOD_R(crate::FieldReader<u8>);
-impl TIMER0_MOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER0_MOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER0_MOD_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER0_MOD_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER0_MOD` writer - PWM timer0 working mode, 0: freeze, 1: increase mode, 2: decrease mode, 3: up-down mode"]
-pub struct TIMER0_MOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER0_MOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 3)) | ((value as u32 & 3) << 3);
-        self.w
-    }
-}
+pub type TIMER0_MOD_W<'a> = crate::FieldWriter<'a, u32, TIMER0_CFG1_SPEC, u8, u8, 2, 3>;
 impl R {
     #[doc = "Bits 0:2 - PWM timer0 start and stop control. 0: if PWM timer0 starts, then stops at TEZ, 1: if timer0 starts, then stops at TEP, 2: PWM timer0 starts and runs on, 3: timer0 starts and stops at the next TEZ, 4: timer0 starts and stops at the next TEP. TEP here and below means the event that happens when the timer equals to period"]
     #[inline(always)]
@@ -104,12 +58,12 @@ impl W {
     #[doc = "Bits 0:2 - PWM timer0 start and stop control. 0: if PWM timer0 starts, then stops at TEZ, 1: if timer0 starts, then stops at TEP, 2: PWM timer0 starts and runs on, 3: timer0 starts and stops at the next TEZ, 4: timer0 starts and stops at the next TEP. TEP here and below means the event that happens when the timer equals to period"]
     #[inline(always)]
     pub fn timer0_start(&mut self) -> TIMER0_START_W {
-        TIMER0_START_W { w: self }
+        TIMER0_START_W::new(self)
     }
     #[doc = "Bits 3:4 - PWM timer0 working mode, 0: freeze, 1: increase mode, 2: decrease mode, 3: up-down mode"]
     #[inline(always)]
     pub fn timer0_mod(&mut self) -> TIMER0_MOD_W {
-        TIMER0_MOD_W { w: self }
+        TIMER0_MOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

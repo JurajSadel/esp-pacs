@@ -35,89 +35,18 @@ impl From<crate::W<SAR_SLAVE_ADDR3_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_SLAVE_ADDR5` reader - "]
-pub struct I2C_SLAVE_ADDR5_R(crate::FieldReader<u16>);
-impl I2C_SLAVE_ADDR5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        I2C_SLAVE_ADDR5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2C_SLAVE_ADDR5_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2C_SLAVE_ADDR5_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `I2C_SLAVE_ADDR5` writer - "]
-pub struct I2C_SLAVE_ADDR5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_SLAVE_ADDR5_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff) | (value as u32 & 0x07ff);
-        self.w
-    }
-}
+pub type I2C_SLAVE_ADDR5_W<'a> = crate::FieldWriter<'a, u32, SAR_SLAVE_ADDR3_SPEC, u16, u16, 11, 0>;
 #[doc = "Field `I2C_SLAVE_ADDR4` reader - "]
-pub struct I2C_SLAVE_ADDR4_R(crate::FieldReader<u16>);
-impl I2C_SLAVE_ADDR4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        I2C_SLAVE_ADDR4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2C_SLAVE_ADDR4_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2C_SLAVE_ADDR4_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `I2C_SLAVE_ADDR4` writer - "]
-pub struct I2C_SLAVE_ADDR4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_SLAVE_ADDR4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07ff << 11)) | ((value as u32 & 0x07ff) << 11);
-        self.w
-    }
-}
+pub type I2C_SLAVE_ADDR4_W<'a> =
+    crate::FieldWriter<'a, u32, SAR_SLAVE_ADDR3_SPEC, u16, u16, 11, 11>;
 #[doc = "Field `TSENS_OUT` reader - temperature sensor data out"]
-pub struct TSENS_OUT_R(crate::FieldReader<u8>);
-impl TSENS_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TSENS_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TSENS_OUT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TSENS_OUT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TSENS_RDY_OUT` reader - indicate temperature sensor out ready"]
-pub struct TSENS_RDY_OUT_R(crate::FieldReader<bool>);
-impl TSENS_RDY_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TSENS_RDY_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TSENS_RDY_OUT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TSENS_RDY_OUT_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]
@@ -144,12 +73,12 @@ impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
     pub fn i2c_slave_addr5(&mut self) -> I2C_SLAVE_ADDR5_W {
-        I2C_SLAVE_ADDR5_W { w: self }
+        I2C_SLAVE_ADDR5_W::new(self)
     }
     #[doc = "Bits 11:21"]
     #[inline(always)]
     pub fn i2c_slave_addr4(&mut self) -> I2C_SLAVE_ADDR4_W {
-        I2C_SLAVE_ADDR4_W { w: self }
+        I2C_SLAVE_ADDR4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,439 +35,53 @@ impl From<crate::W<CONF2_SPEC>> for W {
     }
 }
 #[doc = "Field `CAMERA_EN` reader - Set this bit to enable camera mode."]
-pub struct CAMERA_EN_R(crate::FieldReader<bool>);
-impl CAMERA_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAMERA_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAMERA_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAMERA_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CAMERA_EN` writer - Set this bit to enable camera mode."]
-pub struct CAMERA_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAMERA_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CAMERA_EN_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 0>;
 #[doc = "Field `LCD_TX_WRX2_EN` reader - LCD WR double for one datum."]
-pub struct LCD_TX_WRX2_EN_R(crate::FieldReader<bool>);
-impl LCD_TX_WRX2_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_TX_WRX2_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_TX_WRX2_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_TX_WRX2_EN_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_TX_WRX2_EN` writer - LCD WR double for one datum."]
-pub struct LCD_TX_WRX2_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_TX_WRX2_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type LCD_TX_WRX2_EN_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 1>;
 #[doc = "Field `LCD_TX_SDX2_EN` reader - Set this bit to duplicate data pairs (Frame Form 2) in LCD mode."]
-pub struct LCD_TX_SDX2_EN_R(crate::FieldReader<bool>);
-impl LCD_TX_SDX2_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_TX_SDX2_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_TX_SDX2_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_TX_SDX2_EN_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_TX_SDX2_EN` writer - Set this bit to duplicate data pairs (Frame Form 2) in LCD mode."]
-pub struct LCD_TX_SDX2_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_TX_SDX2_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type LCD_TX_SDX2_EN_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 2>;
 #[doc = "Field `DATA_ENABLE_TEST_EN` reader - for debug camera mode enable"]
-pub struct DATA_ENABLE_TEST_EN_R(crate::FieldReader<bool>);
-impl DATA_ENABLE_TEST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DATA_ENABLE_TEST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_ENABLE_TEST_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATA_ENABLE_TEST_EN_R = crate::BitReader<bool>;
 #[doc = "Field `DATA_ENABLE_TEST_EN` writer - for debug camera mode enable"]
-pub struct DATA_ENABLE_TEST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATA_ENABLE_TEST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type DATA_ENABLE_TEST_EN_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 3>;
 #[doc = "Field `DATA_ENABLE` reader - for debug camera mode enable"]
-pub struct DATA_ENABLE_R(crate::FieldReader<bool>);
-impl DATA_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DATA_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_ENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATA_ENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `DATA_ENABLE` writer - for debug camera mode enable"]
-pub struct DATA_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATA_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type DATA_ENABLE_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 4>;
 #[doc = "Field `LCD_EN` reader - Set this bit to enable LCD mode."]
-pub struct LCD_EN_R(crate::FieldReader<bool>);
-impl LCD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LCD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LCD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LCD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `LCD_EN` writer - Set this bit to enable LCD mode."]
-pub struct LCD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LCD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type LCD_EN_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 5>;
 #[doc = "Field `EXT_ADC_START_EN` reader - Set this bit to enable the function that ADC mode is triggered by external signal."]
-pub struct EXT_ADC_START_EN_R(crate::FieldReader<bool>);
-impl EXT_ADC_START_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EXT_ADC_START_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXT_ADC_START_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXT_ADC_START_EN_R = crate::BitReader<bool>;
 #[doc = "Field `EXT_ADC_START_EN` writer - Set this bit to enable the function that ADC mode is triggered by external signal."]
-pub struct EXT_ADC_START_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXT_ADC_START_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type EXT_ADC_START_EN_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 6>;
 #[doc = "Field `INTER_VALID_EN` reader - Set this bit to enable camera VGA reducing-resolution mode: only receive two consecutive cycle data in four consecutive clocks."]
-pub struct INTER_VALID_EN_R(crate::FieldReader<bool>);
-impl INTER_VALID_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTER_VALID_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTER_VALID_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTER_VALID_EN_R = crate::BitReader<bool>;
 #[doc = "Field `INTER_VALID_EN` writer - Set this bit to enable camera VGA reducing-resolution mode: only receive two consecutive cycle data in four consecutive clocks."]
-pub struct INTER_VALID_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTER_VALID_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type INTER_VALID_EN_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 7>;
 #[doc = "Field `CAM_SYNC_FIFO_RESET` reader - Set this bit to reset FIFO in camera mode."]
-pub struct CAM_SYNC_FIFO_RESET_R(crate::FieldReader<bool>);
-impl CAM_SYNC_FIFO_RESET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAM_SYNC_FIFO_RESET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAM_SYNC_FIFO_RESET_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAM_SYNC_FIFO_RESET_R = crate::BitReader<bool>;
 #[doc = "Field `CAM_SYNC_FIFO_RESET` writer - Set this bit to reset FIFO in camera mode."]
-pub struct CAM_SYNC_FIFO_RESET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAM_SYNC_FIFO_RESET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type CAM_SYNC_FIFO_RESET_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 8>;
 #[doc = "Field `CAM_CLK_LOOPBACK` reader - Set this bit to loopback PCLK from I2S0I_WS_out."]
-pub struct CAM_CLK_LOOPBACK_R(crate::FieldReader<bool>);
-impl CAM_CLK_LOOPBACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAM_CLK_LOOPBACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAM_CLK_LOOPBACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAM_CLK_LOOPBACK_R = crate::BitReader<bool>;
 #[doc = "Field `CAM_CLK_LOOPBACK` writer - Set this bit to loopback PCLK from I2S0I_WS_out."]
-pub struct CAM_CLK_LOOPBACK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAM_CLK_LOOPBACK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type CAM_CLK_LOOPBACK_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 9>;
 #[doc = "Field `VSYNC_FILTER_EN` reader - Set this bit to enable I2S VSYNC filter function."]
-pub struct VSYNC_FILTER_EN_R(crate::FieldReader<bool>);
-impl VSYNC_FILTER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VSYNC_FILTER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VSYNC_FILTER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VSYNC_FILTER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `VSYNC_FILTER_EN` writer - Set this bit to enable I2S VSYNC filter function."]
-pub struct VSYNC_FILTER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VSYNC_FILTER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type VSYNC_FILTER_EN_W<'a> = crate::BitWriter<'a, u32, CONF2_SPEC, bool, 10>;
 #[doc = "Field `VSYNC_FILTER_THRES` reader - Configure the I2S VSYNC filter threshold value."]
-pub struct VSYNC_FILTER_THRES_R(crate::FieldReader<u8>);
-impl VSYNC_FILTER_THRES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VSYNC_FILTER_THRES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VSYNC_FILTER_THRES_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VSYNC_FILTER_THRES_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VSYNC_FILTER_THRES` writer - Configure the I2S VSYNC filter threshold value."]
-pub struct VSYNC_FILTER_THRES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VSYNC_FILTER_THRES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 11)) | ((value as u32 & 7) << 11);
-        self.w
-    }
-}
+pub type VSYNC_FILTER_THRES_W<'a> = crate::FieldWriter<'a, u32, CONF2_SPEC, u8, u8, 3, 11>;
 impl R {
     #[doc = "Bit 0 - Set this bit to enable camera mode."]
     #[inline(always)]
@@ -534,62 +148,62 @@ impl W {
     #[doc = "Bit 0 - Set this bit to enable camera mode."]
     #[inline(always)]
     pub fn camera_en(&mut self) -> CAMERA_EN_W {
-        CAMERA_EN_W { w: self }
+        CAMERA_EN_W::new(self)
     }
     #[doc = "Bit 1 - LCD WR double for one datum."]
     #[inline(always)]
     pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W {
-        LCD_TX_WRX2_EN_W { w: self }
+        LCD_TX_WRX2_EN_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to duplicate data pairs (Frame Form 2) in LCD mode."]
     #[inline(always)]
     pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W {
-        LCD_TX_SDX2_EN_W { w: self }
+        LCD_TX_SDX2_EN_W::new(self)
     }
     #[doc = "Bit 3 - for debug camera mode enable"]
     #[inline(always)]
     pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W {
-        DATA_ENABLE_TEST_EN_W { w: self }
+        DATA_ENABLE_TEST_EN_W::new(self)
     }
     #[doc = "Bit 4 - for debug camera mode enable"]
     #[inline(always)]
     pub fn data_enable(&mut self) -> DATA_ENABLE_W {
-        DATA_ENABLE_W { w: self }
+        DATA_ENABLE_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable LCD mode."]
     #[inline(always)]
     pub fn lcd_en(&mut self) -> LCD_EN_W {
-        LCD_EN_W { w: self }
+        LCD_EN_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to enable the function that ADC mode is triggered by external signal."]
     #[inline(always)]
     pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W {
-        EXT_ADC_START_EN_W { w: self }
+        EXT_ADC_START_EN_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to enable camera VGA reducing-resolution mode: only receive two consecutive cycle data in four consecutive clocks."]
     #[inline(always)]
     pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W {
-        INTER_VALID_EN_W { w: self }
+        INTER_VALID_EN_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to reset FIFO in camera mode."]
     #[inline(always)]
     pub fn cam_sync_fifo_reset(&mut self) -> CAM_SYNC_FIFO_RESET_W {
-        CAM_SYNC_FIFO_RESET_W { w: self }
+        CAM_SYNC_FIFO_RESET_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to loopback PCLK from I2S0I_WS_out."]
     #[inline(always)]
     pub fn cam_clk_loopback(&mut self) -> CAM_CLK_LOOPBACK_W {
-        CAM_CLK_LOOPBACK_W { w: self }
+        CAM_CLK_LOOPBACK_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to enable I2S VSYNC filter function."]
     #[inline(always)]
     pub fn vsync_filter_en(&mut self) -> VSYNC_FILTER_EN_W {
-        VSYNC_FILTER_EN_W { w: self }
+        VSYNC_FILTER_EN_W::new(self)
     }
     #[doc = "Bits 11:13 - Configure the I2S VSYNC filter threshold value."]
     #[inline(always)]
     pub fn vsync_filter_thres(&mut self) -> VSYNC_FILTER_THRES_W {
-        VSYNC_FILTER_THRES_W { w: self }
+        VSYNC_FILTER_THRES_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

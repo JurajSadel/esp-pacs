@@ -35,32 +35,9 @@ impl From<crate::W<LOG_MAX_SPEC>> for W {
     }
 }
 #[doc = "Field `LOG_MAX` reader - reg_log_max"]
-pub struct LOG_MAX_R(crate::FieldReader<u32>);
-impl LOG_MAX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        LOG_MAX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOG_MAX_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LOG_MAX_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LOG_MAX` writer - reg_log_max"]
-pub struct LOG_MAX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOG_MAX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type LOG_MAX_W<'a> = crate::FieldWriter<'a, u32, LOG_MAX_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - reg_log_max"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - reg_log_max"]
     #[inline(always)]
     pub fn log_max(&mut self) -> LOG_MAX_W {
-        LOG_MAX_W { w: self }
+        LOG_MAX_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

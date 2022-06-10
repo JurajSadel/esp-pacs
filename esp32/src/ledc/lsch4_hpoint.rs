@@ -35,32 +35,9 @@ impl From<crate::W<LSCH4_HPOINT_SPEC>> for W {
     }
 }
 #[doc = "Field `HPOINT_LSCH4` reader - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]"]
-pub struct HPOINT_LSCH4_R(crate::FieldReader<u32>);
-impl HPOINT_LSCH4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        HPOINT_LSCH4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HPOINT_LSCH4_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HPOINT_LSCH4_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `HPOINT_LSCH4` writer - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]"]
-pub struct HPOINT_LSCH4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HPOINT_LSCH4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type HPOINT_LSCH4_W<'a> = crate::FieldWriter<'a, u32, LSCH4_HPOINT_SPEC, u32, u32, 20, 0>;
 impl R {
     #[doc = "Bits 0:19 - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:19 - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel4 has reached reg_hpoint_lsch4\\[19:0\\]"]
     #[inline(always)]
     pub fn hpoint_lsch4(&mut self) -> HPOINT_LSCH4_W {
-        HPOINT_LSCH4_W { w: self }
+        HPOINT_LSCH4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

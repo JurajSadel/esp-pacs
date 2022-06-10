@@ -35,32 +35,10 @@ impl From<crate::W<PRO_DCACHE_LOCK0_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DCACHE_LOCK0_ADDR` reader - The bits are used to configure the first start virtual address of data locking, which is combined with PRO_DCACHE_LOCK0_SIZE_REG"]
-pub struct PRO_DCACHE_LOCK0_ADDR_R(crate::FieldReader<u32>);
-impl PRO_DCACHE_LOCK0_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PRO_DCACHE_LOCK0_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_LOCK0_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_LOCK0_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PRO_DCACHE_LOCK0_ADDR` writer - The bits are used to configure the first start virtual address of data locking, which is combined with PRO_DCACHE_LOCK0_SIZE_REG"]
-pub struct PRO_DCACHE_LOCK0_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_LOCK0_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type PRO_DCACHE_LOCK0_ADDR_W<'a> =
+    crate::FieldWriter<'a, u32, PRO_DCACHE_LOCK0_ADDR_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to configure the first start virtual address of data locking, which is combined with PRO_DCACHE_LOCK0_SIZE_REG"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the first start virtual address of data locking, which is combined with PRO_DCACHE_LOCK0_SIZE_REG"]
     #[inline(always)]
     pub fn pro_dcache_lock0_addr(&mut self) -> PRO_DCACHE_LOCK0_ADDR_W {
-        PRO_DCACHE_LOCK0_ADDR_W { w: self }
+        PRO_DCACHE_LOCK0_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

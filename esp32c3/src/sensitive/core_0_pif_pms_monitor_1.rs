@@ -35,79 +35,15 @@ impl From<crate::W<CORE_0_PIF_PMS_MONITOR_1_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR` reader - core_0_pif_pms_monitor_violate_clr"]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_R(crate::FieldReader<bool>);
-impl CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR` writer - core_0_pif_pms_monitor_violate_clr"]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_W<'a> =
+    crate::BitWriter<'a, u32, CORE_0_PIF_PMS_MONITOR_1_SPEC, bool, 0>;
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_EN` reader - core_0_pif_pms_monitor_violate_en"]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_R(crate::FieldReader<bool>);
-impl CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_PIF_PMS_MONITOR_VIOLATE_EN` writer - core_0_pif_pms_monitor_violate_en"]
-pub struct CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_W<'a> =
+    crate::BitWriter<'a, u32, CORE_0_PIF_PMS_MONITOR_1_SPEC, bool, 1>;
 impl R {
     #[doc = "Bit 0 - core_0_pif_pms_monitor_violate_clr"]
     #[inline(always)]
@@ -124,12 +60,12 @@ impl W {
     #[doc = "Bit 0 - core_0_pif_pms_monitor_violate_clr"]
     #[inline(always)]
     pub fn core_0_pif_pms_monitor_violate_clr(&mut self) -> CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_W {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_W { w: self }
+        CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_W::new(self)
     }
     #[doc = "Bit 1 - core_0_pif_pms_monitor_violate_en"]
     #[inline(always)]
     pub fn core_0_pif_pms_monitor_violate_en(&mut self) -> CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_W {
-        CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_W { w: self }
+        CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

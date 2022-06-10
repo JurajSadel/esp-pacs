@@ -14,20 +14,7 @@ impl From<crate::R<HIGHPULSE_SPEC>> for R {
     }
 }
 #[doc = "Field `MIN_CNT` reader - This register stores the value of the maxinum duration time for the high level pulse. it is used in baudrate-detect process."]
-pub struct MIN_CNT_R(crate::FieldReader<u32>);
-impl MIN_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        MIN_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MIN_CNT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MIN_CNT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - This register stores the value of the maxinum duration time for the high level pulse. it is used in baudrate-detect process."]
     #[inline(always)]

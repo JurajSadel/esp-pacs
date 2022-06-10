@@ -35,69 +35,13 @@ impl From<crate::W<TO_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME_OUT_VALUE` reader - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
-pub struct TIME_OUT_VALUE_R(crate::FieldReader<u32>);
-impl TIME_OUT_VALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TIME_OUT_VALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_OUT_VALUE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_OUT_VALUE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIME_OUT_VALUE` writer - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
-pub struct TIME_OUT_VALUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIME_OUT_VALUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
-        self.w
-    }
-}
+pub type TIME_OUT_VALUE_W<'a> = crate::FieldWriter<'a, u32, TO_SPEC, u32, u32, 24, 0>;
 #[doc = "Field `TIME_OUT_EN` reader - This is the enable bit for time out control."]
-pub struct TIME_OUT_EN_R(crate::FieldReader<bool>);
-impl TIME_OUT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIME_OUT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIME_OUT_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIME_OUT_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TIME_OUT_EN` writer - This is the enable bit for time out control."]
-pub struct TIME_OUT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIME_OUT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type TIME_OUT_EN_W<'a> = crate::BitWriter<'a, u32, TO_SPEC, bool, 24>;
 impl R {
     #[doc = "Bits 0:23 - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:23 - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
     #[inline(always)]
     pub fn time_out_value(&mut self) -> TIME_OUT_VALUE_W {
-        TIME_OUT_VALUE_W { w: self }
+        TIME_OUT_VALUE_W::new(self)
     }
     #[doc = "Bit 24 - This is the enable bit for time out control."]
     #[inline(always)]
     pub fn time_out_en(&mut self) -> TIME_OUT_EN_W {
-        TIME_OUT_EN_W { w: self }
+        TIME_OUT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

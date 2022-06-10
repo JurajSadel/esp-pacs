@@ -35,32 +35,10 @@ impl From<crate::W<CORE_1_MESSAGE_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_MESSAGE_ADDR` reader - This field is used to set address that need to write when enter WORLD0"]
-pub struct CORE_1_MESSAGE_ADDR_R(crate::FieldReader<u32>);
-impl CORE_1_MESSAGE_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_1_MESSAGE_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_MESSAGE_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_MESSAGE_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_1_MESSAGE_ADDR` writer - This field is used to set address that need to write when enter WORLD0"]
-pub struct CORE_1_MESSAGE_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_MESSAGE_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CORE_1_MESSAGE_ADDR_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_1_MESSAGE_ADDR_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - This field is used to set address that need to write when enter WORLD0"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:31 - This field is used to set address that need to write when enter WORLD0"]
     #[inline(always)]
     pub fn core_1_message_addr(&mut self) -> CORE_1_MESSAGE_ADDR_W {
-        CORE_1_MESSAGE_ADDR_W { w: self }
+        CORE_1_MESSAGE_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

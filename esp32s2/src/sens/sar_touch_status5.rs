@@ -14,35 +14,9 @@ impl From<crate::R<SAR_TOUCH_STATUS5_SPEC>> for R {
     }
 }
 #[doc = "Field `TOUCH_PAD5_DATA` reader - The data of touch pad 5, depending on the setting of SENS_TOUCH_DATA_SEL."]
-pub struct TOUCH_PAD5_DATA_R(crate::FieldReader<u32>);
-impl TOUCH_PAD5_DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TOUCH_PAD5_DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD5_DATA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD5_DATA_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TOUCH_PAD5_DEBOUNCE` reader - Touch pad 5 debounce value."]
-pub struct TOUCH_PAD5_DEBOUNCE_R(crate::FieldReader<u8>);
-impl TOUCH_PAD5_DEBOUNCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_PAD5_DEBOUNCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_PAD5_DEBOUNCE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_PAD5_DEBOUNCE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:21 - The data of touch pad 5, depending on the setting of SENS_TOUCH_DATA_SEL."]
     #[inline(always)]

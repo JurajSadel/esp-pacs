@@ -35,32 +35,9 @@ impl From<crate::W<SCL_STOP_PERIOD_SPEC>> for W {
     }
 }
 #[doc = "Field `SCL_STOP_PERIOD` reader - Number of clock cycles to wait before generating a stop condition."]
-pub struct SCL_STOP_PERIOD_R(crate::FieldReader<u32>);
-impl SCL_STOP_PERIOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SCL_STOP_PERIOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCL_STOP_PERIOD_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCL_STOP_PERIOD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SCL_STOP_PERIOD` writer - Number of clock cycles to wait before generating a stop condition."]
-pub struct SCL_STOP_PERIOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCL_STOP_PERIOD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type SCL_STOP_PERIOD_W<'a> = crate::FieldWriter<'a, u32, SCL_STOP_PERIOD_SPEC, u32, u32, 20, 0>;
 impl R {
     #[doc = "Bits 0:19 - Number of clock cycles to wait before generating a stop condition."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:19 - Number of clock cycles to wait before generating a stop condition."]
     #[inline(always)]
     pub fn scl_stop_period(&mut self) -> SCL_STOP_PERIOD_W {
-        SCL_STOP_PERIOD_W { w: self }
+        SCL_STOP_PERIOD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,69 +35,14 @@ impl From<crate::W<OUT_CONF1_CH_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_CHECK_OWNER_CH` reader - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub struct OUT_CHECK_OWNER_CH_R(crate::FieldReader<bool>);
-impl OUT_CHECK_OWNER_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_CHECK_OWNER_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_CHECK_OWNER_CH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_CHECK_OWNER_CH_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_CHECK_OWNER_CH` writer - Set this bit to enable checking the owner attribute of the link descriptor."]
-pub struct OUT_CHECK_OWNER_CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_CHECK_OWNER_CH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type OUT_CHECK_OWNER_CH_W<'a> = crate::BitWriter<'a, u32, OUT_CONF1_CH_SPEC, bool, 12>;
 #[doc = "Field `OUT_EXT_MEM_BK_SIZE_CH` reader - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub struct OUT_EXT_MEM_BK_SIZE_CH_R(crate::FieldReader<u8>);
-impl OUT_EXT_MEM_BK_SIZE_CH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_EXT_MEM_BK_SIZE_CH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EXT_MEM_BK_SIZE_CH_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EXT_MEM_BK_SIZE_CH_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUT_EXT_MEM_BK_SIZE_CH` writer - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
-pub struct OUT_EXT_MEM_BK_SIZE_CH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_EXT_MEM_BK_SIZE_CH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 13)) | ((value as u32 & 3) << 13);
-        self.w
-    }
-}
+pub type OUT_EXT_MEM_BK_SIZE_CH_W<'a> =
+    crate::FieldWriter<'a, u32, OUT_CONF1_CH_SPEC, u8, u8, 2, 13>;
 impl R {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
@@ -114,12 +59,12 @@ impl W {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
     pub fn out_check_owner_ch(&mut self) -> OUT_CHECK_OWNER_CH_W {
-        OUT_CHECK_OWNER_CH_W { w: self }
+        OUT_CHECK_OWNER_CH_W::new(self)
     }
     #[doc = "Bits 13:14 - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
     pub fn out_ext_mem_bk_size_ch(&mut self) -> OUT_EXT_MEM_BK_SIZE_CH_W {
-        OUT_EXT_MEM_BK_SIZE_CH_W { w: self }
+        OUT_EXT_MEM_BK_SIZE_CH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,10 @@ impl From<crate::W<RTC_GPIO_ENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_GPIO_ENABLE` reader - RTC GPIO 0 ~ 21 enable"]
-pub struct RTC_GPIO_ENABLE_R(crate::FieldReader<u32>);
-impl RTC_GPIO_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RTC_GPIO_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_GPIO_ENABLE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RTC_GPIO_ENABLE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RTC_GPIO_ENABLE` writer - RTC GPIO 0 ~ 21 enable"]
-pub struct RTC_GPIO_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_GPIO_ENABLE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x003f_ffff << 10)) | ((value as u32 & 0x003f_ffff) << 10);
-        self.w
-    }
-}
+pub type RTC_GPIO_ENABLE_W<'a> =
+    crate::FieldWriter<'a, u32, RTC_GPIO_ENABLE_SPEC, u32, u32, 22, 10>;
 impl R {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 enable"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 enable"]
     #[inline(always)]
     pub fn rtc_gpio_enable(&mut self) -> RTC_GPIO_ENABLE_W {
-        RTC_GPIO_ENABLE_W { w: self }
+        RTC_GPIO_ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

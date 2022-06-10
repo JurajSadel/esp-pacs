@@ -35,42 +35,9 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `INT_ENA` reader - Set this bit to 1 to enable AES interrupt and 0 to disable interrupt. This field is only effective for DMA-AES operation."]
-pub struct INT_ENA_R(crate::FieldReader<bool>);
-impl INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `INT_ENA` writer - Set this bit to 1 to enable AES interrupt and 0 to disable interrupt. This field is only effective for DMA-AES operation."]
-pub struct INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - Set this bit to 1 to enable AES interrupt and 0 to disable interrupt. This field is only effective for DMA-AES operation."]
     #[inline(always)]
@@ -82,7 +49,7 @@ impl W {
     #[doc = "Bit 0 - Set this bit to 1 to enable AES interrupt and 0 to disable interrupt. This field is only effective for DMA-AES operation."]
     #[inline(always)]
     pub fn int_ena(&mut self) -> INT_ENA_W {
-        INT_ENA_W { w: self }
+        INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

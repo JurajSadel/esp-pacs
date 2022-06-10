@@ -20,356 +20,96 @@ impl From<crate::W<INT_CLR_CH0_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_DONE_CH0_INT_CLR` writer - Set this bit to clear the IN_DONE_CH_INT interrupt."]
-pub struct IN_DONE_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_DONE_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type IN_DONE_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 0>;
 #[doc = "Field `IN_SUC_EOF_CH0_INT_CLR` writer - Set this bit to clear the IN_SUC_EOF_CH_INT interrupt."]
-pub struct IN_SUC_EOF_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_SUC_EOF_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type IN_SUC_EOF_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 1>;
 #[doc = "Field `IN_ERR_EOF_CH0_INT_CLR` writer - Set this bit to clear the IN_ERR_EOF_CH_INT interrupt."]
-pub struct IN_ERR_EOF_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_ERR_EOF_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type IN_ERR_EOF_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 2>;
 #[doc = "Field `OUT_DONE_CH0_INT_CLR` writer - Set this bit to clear the OUT_DONE_CH_INT interrupt."]
-pub struct OUT_DONE_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_DONE_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type OUT_DONE_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 3>;
 #[doc = "Field `OUT_EOF_CH0_INT_CLR` writer - Set this bit to clear the OUT_EOF_CH_INT interrupt."]
-pub struct OUT_EOF_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_EOF_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type OUT_EOF_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 4>;
 #[doc = "Field `IN_DSCR_ERR_CH0_INT_CLR` writer - Set this bit to clear the IN_DSCR_ERR_CH_INT interrupt."]
-pub struct IN_DSCR_ERR_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_DSCR_ERR_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type IN_DSCR_ERR_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 5>;
 #[doc = "Field `OUT_DSCR_ERR_CH0_INT_CLR` writer - Set this bit to clear the OUT_DSCR_ERR_CH_INT interrupt."]
-pub struct OUT_DSCR_ERR_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_DSCR_ERR_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type OUT_DSCR_ERR_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 6>;
 #[doc = "Field `IN_DSCR_EMPTY_CH0_INT_CLR` writer - Set this bit to clear the IN_DSCR_EMPTY_CH_INT interrupt."]
-pub struct IN_DSCR_EMPTY_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_DSCR_EMPTY_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type IN_DSCR_EMPTY_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 7>;
 #[doc = "Field `OUT_TOTAL_EOF_CH0_INT_CLR` writer - Set this bit to clear the OUT_TOTAL_EOF_CH_INT interrupt."]
-pub struct OUT_TOTAL_EOF_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_TOTAL_EOF_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type OUT_TOTAL_EOF_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 8>;
 #[doc = "Field `INFIFO_OVF_CH0_INT_CLR` writer - Set this bit to clear the INFIFO_OVF_L1_CH_INT interrupt."]
-pub struct INFIFO_OVF_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INFIFO_OVF_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type INFIFO_OVF_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 9>;
 #[doc = "Field `INFIFO_UDF_CH0_INT_CLR` writer - Set this bit to clear the INFIFO_UDF_L1_CH_INT interrupt."]
-pub struct INFIFO_UDF_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INFIFO_UDF_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type INFIFO_UDF_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 10>;
 #[doc = "Field `OUTFIFO_OVF_CH0_INT_CLR` writer - Set this bit to clear the OUTFIFO_OVF_L1_CH_INT interrupt."]
-pub struct OUTFIFO_OVF_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTFIFO_OVF_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type OUTFIFO_OVF_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 11>;
 #[doc = "Field `OUTFIFO_UDF_CH0_INT_CLR` writer - Set this bit to clear the OUTFIFO_UDF_L1_CH_INT interrupt."]
-pub struct OUTFIFO_UDF_CH0_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTFIFO_UDF_CH0_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type OUTFIFO_UDF_CH0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_CH0_SPEC, bool, 12>;
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the IN_DONE_CH_INT interrupt."]
     #[inline(always)]
     pub fn in_done_ch0_int_clr(&mut self) -> IN_DONE_CH0_INT_CLR_W {
-        IN_DONE_CH0_INT_CLR_W { w: self }
+        IN_DONE_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to clear the IN_SUC_EOF_CH_INT interrupt."]
     #[inline(always)]
     pub fn in_suc_eof_ch0_int_clr(&mut self) -> IN_SUC_EOF_CH0_INT_CLR_W {
-        IN_SUC_EOF_CH0_INT_CLR_W { w: self }
+        IN_SUC_EOF_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear the IN_ERR_EOF_CH_INT interrupt."]
     #[inline(always)]
     pub fn in_err_eof_ch0_int_clr(&mut self) -> IN_ERR_EOF_CH0_INT_CLR_W {
-        IN_ERR_EOF_CH0_INT_CLR_W { w: self }
+        IN_ERR_EOF_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to clear the OUT_DONE_CH_INT interrupt."]
     #[inline(always)]
     pub fn out_done_ch0_int_clr(&mut self) -> OUT_DONE_CH0_INT_CLR_W {
-        OUT_DONE_CH0_INT_CLR_W { w: self }
+        OUT_DONE_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to clear the OUT_EOF_CH_INT interrupt."]
     #[inline(always)]
     pub fn out_eof_ch0_int_clr(&mut self) -> OUT_EOF_CH0_INT_CLR_W {
-        OUT_EOF_CH0_INT_CLR_W { w: self }
+        OUT_EOF_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to clear the IN_DSCR_ERR_CH_INT interrupt."]
     #[inline(always)]
     pub fn in_dscr_err_ch0_int_clr(&mut self) -> IN_DSCR_ERR_CH0_INT_CLR_W {
-        IN_DSCR_ERR_CH0_INT_CLR_W { w: self }
+        IN_DSCR_ERR_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to clear the OUT_DSCR_ERR_CH_INT interrupt."]
     #[inline(always)]
     pub fn out_dscr_err_ch0_int_clr(&mut self) -> OUT_DSCR_ERR_CH0_INT_CLR_W {
-        OUT_DSCR_ERR_CH0_INT_CLR_W { w: self }
+        OUT_DSCR_ERR_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to clear the IN_DSCR_EMPTY_CH_INT interrupt."]
     #[inline(always)]
     pub fn in_dscr_empty_ch0_int_clr(&mut self) -> IN_DSCR_EMPTY_CH0_INT_CLR_W {
-        IN_DSCR_EMPTY_CH0_INT_CLR_W { w: self }
+        IN_DSCR_EMPTY_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to clear the OUT_TOTAL_EOF_CH_INT interrupt."]
     #[inline(always)]
     pub fn out_total_eof_ch0_int_clr(&mut self) -> OUT_TOTAL_EOF_CH0_INT_CLR_W {
-        OUT_TOTAL_EOF_CH0_INT_CLR_W { w: self }
+        OUT_TOTAL_EOF_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to clear the INFIFO_OVF_L1_CH_INT interrupt."]
     #[inline(always)]
     pub fn infifo_ovf_ch0_int_clr(&mut self) -> INFIFO_OVF_CH0_INT_CLR_W {
-        INFIFO_OVF_CH0_INT_CLR_W { w: self }
+        INFIFO_OVF_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to clear the INFIFO_UDF_L1_CH_INT interrupt."]
     #[inline(always)]
     pub fn infifo_udf_ch0_int_clr(&mut self) -> INFIFO_UDF_CH0_INT_CLR_W {
-        INFIFO_UDF_CH0_INT_CLR_W { w: self }
+        INFIFO_UDF_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to clear the OUTFIFO_OVF_L1_CH_INT interrupt."]
     #[inline(always)]
     pub fn outfifo_ovf_ch0_int_clr(&mut self) -> OUTFIFO_OVF_CH0_INT_CLR_W {
-        OUTFIFO_OVF_CH0_INT_CLR_W { w: self }
+        OUTFIFO_OVF_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to clear the OUTFIFO_UDF_L1_CH_INT interrupt."]
     #[inline(always)]
     pub fn outfifo_udf_ch0_int_clr(&mut self) -> OUTFIFO_UDF_CH0_INT_CLR_W {
-        OUTFIFO_UDF_CH0_INT_CLR_W { w: self }
+        OUTFIFO_UDF_CH0_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

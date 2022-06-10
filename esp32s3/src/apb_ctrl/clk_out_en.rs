@@ -35,412 +35,49 @@ impl From<crate::W<CLK_OUT_EN_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK20_OEN` reader - ******* Description ***********"]
-pub struct CLK20_OEN_R(crate::FieldReader<bool>);
-impl CLK20_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK20_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK20_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK20_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK20_OEN` writer - ******* Description ***********"]
-pub struct CLK20_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK20_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CLK20_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 0>;
 #[doc = "Field `CLK22_OEN` reader - ******* Description ***********"]
-pub struct CLK22_OEN_R(crate::FieldReader<bool>);
-impl CLK22_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK22_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK22_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK22_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK22_OEN` writer - ******* Description ***********"]
-pub struct CLK22_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK22_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CLK22_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 1>;
 #[doc = "Field `CLK44_OEN` reader - ******* Description ***********"]
-pub struct CLK44_OEN_R(crate::FieldReader<bool>);
-impl CLK44_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK44_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK44_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK44_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK44_OEN` writer - ******* Description ***********"]
-pub struct CLK44_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK44_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type CLK44_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 2>;
 #[doc = "Field `CLK_BB_OEN` reader - ******* Description ***********"]
-pub struct CLK_BB_OEN_R(crate::FieldReader<bool>);
-impl CLK_BB_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_BB_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_BB_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_BB_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_BB_OEN` writer - ******* Description ***********"]
-pub struct CLK_BB_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_BB_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CLK_BB_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 3>;
 #[doc = "Field `CLK80_OEN` reader - ******* Description ***********"]
-pub struct CLK80_OEN_R(crate::FieldReader<bool>);
-impl CLK80_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK80_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK80_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK80_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK80_OEN` writer - ******* Description ***********"]
-pub struct CLK80_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK80_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type CLK80_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 4>;
 #[doc = "Field `CLK160_OEN` reader - ******* Description ***********"]
-pub struct CLK160_OEN_R(crate::FieldReader<bool>);
-impl CLK160_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK160_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK160_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK160_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK160_OEN` writer - ******* Description ***********"]
-pub struct CLK160_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK160_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CLK160_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 5>;
 #[doc = "Field `CLK_320M_OEN` reader - ******* Description ***********"]
-pub struct CLK_320M_OEN_R(crate::FieldReader<bool>);
-impl CLK_320M_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_320M_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_320M_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_320M_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_320M_OEN` writer - ******* Description ***********"]
-pub struct CLK_320M_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_320M_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CLK_320M_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 6>;
 #[doc = "Field `CLK_ADC_INF_OEN` reader - ******* Description ***********"]
-pub struct CLK_ADC_INF_OEN_R(crate::FieldReader<bool>);
-impl CLK_ADC_INF_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_ADC_INF_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_ADC_INF_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_ADC_INF_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_ADC_INF_OEN` writer - ******* Description ***********"]
-pub struct CLK_ADC_INF_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_ADC_INF_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type CLK_ADC_INF_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 7>;
 #[doc = "Field `CLK_DAC_CPU_OEN` reader - ******* Description ***********"]
-pub struct CLK_DAC_CPU_OEN_R(crate::FieldReader<bool>);
-impl CLK_DAC_CPU_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_DAC_CPU_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_DAC_CPU_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_DAC_CPU_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_DAC_CPU_OEN` writer - ******* Description ***********"]
-pub struct CLK_DAC_CPU_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_DAC_CPU_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type CLK_DAC_CPU_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 8>;
 #[doc = "Field `CLK40X_BB_OEN` reader - ******* Description ***********"]
-pub struct CLK40X_BB_OEN_R(crate::FieldReader<bool>);
-impl CLK40X_BB_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK40X_BB_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK40X_BB_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK40X_BB_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK40X_BB_OEN` writer - ******* Description ***********"]
-pub struct CLK40X_BB_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK40X_BB_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type CLK40X_BB_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 9>;
 #[doc = "Field `CLK_XTAL_OEN` reader - ******* Description ***********"]
-pub struct CLK_XTAL_OEN_R(crate::FieldReader<bool>);
-impl CLK_XTAL_OEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_XTAL_OEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_XTAL_OEN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_XTAL_OEN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_XTAL_OEN` writer - ******* Description ***********"]
-pub struct CLK_XTAL_OEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_XTAL_OEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type CLK_XTAL_OEN_W<'a> = crate::BitWriter<'a, u32, CLK_OUT_EN_SPEC, bool, 10>;
 impl R {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
@@ -502,57 +139,57 @@ impl W {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk20_oen(&mut self) -> CLK20_OEN_W {
-        CLK20_OEN_W { w: self }
+        CLK20_OEN_W::new(self)
     }
     #[doc = "Bit 1 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk22_oen(&mut self) -> CLK22_OEN_W {
-        CLK22_OEN_W { w: self }
+        CLK22_OEN_W::new(self)
     }
     #[doc = "Bit 2 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk44_oen(&mut self) -> CLK44_OEN_W {
-        CLK44_OEN_W { w: self }
+        CLK44_OEN_W::new(self)
     }
     #[doc = "Bit 3 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk_bb_oen(&mut self) -> CLK_BB_OEN_W {
-        CLK_BB_OEN_W { w: self }
+        CLK_BB_OEN_W::new(self)
     }
     #[doc = "Bit 4 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk80_oen(&mut self) -> CLK80_OEN_W {
-        CLK80_OEN_W { w: self }
+        CLK80_OEN_W::new(self)
     }
     #[doc = "Bit 5 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk160_oen(&mut self) -> CLK160_OEN_W {
-        CLK160_OEN_W { w: self }
+        CLK160_OEN_W::new(self)
     }
     #[doc = "Bit 6 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk_320m_oen(&mut self) -> CLK_320M_OEN_W {
-        CLK_320M_OEN_W { w: self }
+        CLK_320M_OEN_W::new(self)
     }
     #[doc = "Bit 7 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk_adc_inf_oen(&mut self) -> CLK_ADC_INF_OEN_W {
-        CLK_ADC_INF_OEN_W { w: self }
+        CLK_ADC_INF_OEN_W::new(self)
     }
     #[doc = "Bit 8 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk_dac_cpu_oen(&mut self) -> CLK_DAC_CPU_OEN_W {
-        CLK_DAC_CPU_OEN_W { w: self }
+        CLK_DAC_CPU_OEN_W::new(self)
     }
     #[doc = "Bit 9 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk40x_bb_oen(&mut self) -> CLK40X_BB_OEN_W {
-        CLK40X_BB_OEN_W { w: self }
+        CLK40X_BB_OEN_W::new(self)
     }
     #[doc = "Bit 10 - ******* Description ***********"]
     #[inline(always)]
     pub fn clk_xtal_oen(&mut self) -> CLK_XTAL_OEN_W {
-        CLK_XTAL_OEN_W { w: self }
+        CLK_XTAL_OEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<W2_SPEC>> for W {
     }
 }
 #[doc = "Field `BUF2` reader - 32 bits data buffer 2, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
-pub struct BUF2_R(crate::FieldReader<u32>);
-impl BUF2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        BUF2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUF2_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUF2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `BUF2` writer - 32 bits data buffer 2, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
-pub struct BUF2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BUF2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type BUF2_W<'a> = crate::FieldWriter<'a, u32, W2_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - 32 bits data buffer 2, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - 32 bits data buffer 2, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
     #[inline(always)]
     pub fn buf2(&mut self) -> BUF2_W {
-        BUF2_W { w: self }
+        BUF2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

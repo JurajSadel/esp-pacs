@@ -14,20 +14,7 @@ impl From<crate::R<COMB_PVT_ERR_LVT_SITE3_SPEC>> for R {
     }
 }
 #[doc = "Field `COMB_TIMING_ERR_CNT_LVT_SITE3` reader - reg_comb_timing_err_cnt_lvt_site3"]
-pub struct COMB_TIMING_ERR_CNT_LVT_SITE3_R(crate::FieldReader<u16>);
-impl COMB_TIMING_ERR_CNT_LVT_SITE3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        COMB_TIMING_ERR_CNT_LVT_SITE3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COMB_TIMING_ERR_CNT_LVT_SITE3_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COMB_TIMING_ERR_CNT_LVT_SITE3_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - reg_comb_timing_err_cnt_lvt_site3"]
     #[inline(always)]

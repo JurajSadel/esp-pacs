@@ -14,20 +14,7 @@ impl From<crate::R<SHA512_BUSY_SPEC>> for R {
     }
 }
 #[doc = "Field `SHA512_BUSY` reader - SHA-512 operation status: 1 if the SHA accelerator is processing data, 0 if it is idle."]
-pub struct SHA512_BUSY_R(crate::FieldReader<bool>);
-impl SHA512_BUSY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SHA512_BUSY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SHA512_BUSY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SHA512_BUSY_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - SHA-512 operation status: 1 if the SHA accelerator is processing data, 0 if it is idle."]
     #[inline(always)]

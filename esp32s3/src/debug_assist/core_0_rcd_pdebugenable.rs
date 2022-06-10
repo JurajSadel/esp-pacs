@@ -35,42 +35,10 @@ impl From<crate::W<CORE_0_RCD_PDEBUGENABLE_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_RCD_PDEBUGENABLE` reader - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
-pub struct CORE_0_RCD_PDEBUGENABLE_R(crate::FieldReader<bool>);
-impl CORE_0_RCD_PDEBUGENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_0_RCD_PDEBUGENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_RCD_PDEBUGENABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_RCD_PDEBUGENABLE_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_0_RCD_PDEBUGENABLE` writer - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
-pub struct CORE_0_RCD_PDEBUGENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_RCD_PDEBUGENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type CORE_0_RCD_PDEBUGENABLE_W<'a> =
+    crate::BitWriter<'a, u32, CORE_0_RCD_PDEBUGENABLE_SPEC, bool, 0>;
 impl R {
     #[doc = "Bit 0 - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
     #[inline(always)]
@@ -82,7 +50,7 @@ impl W {
     #[doc = "Bit 0 - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
     #[inline(always)]
     pub fn core_0_rcd_pdebugenable(&mut self) -> CORE_0_RCD_PDEBUGENABLE_W {
-        CORE_0_RCD_PDEBUGENABLE_W { w: self }
+        CORE_0_RCD_PDEBUGENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,207 +35,30 @@ impl From<crate::W<SAR_TOUCH_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `TOUCH_MEAS_DELAY` reader - the meas length (in 8MHz)"]
-pub struct TOUCH_MEAS_DELAY_R(crate::FieldReader<u16>);
-impl TOUCH_MEAS_DELAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TOUCH_MEAS_DELAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_MEAS_DELAY_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_MEAS_DELAY_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_MEAS_DELAY` writer - the meas length (in 8MHz)"]
-pub struct TOUCH_MEAS_DELAY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_MEAS_DELAY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type TOUCH_MEAS_DELAY_W<'a> =
+    crate::FieldWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, u16, u16, 16, 0>;
 #[doc = "Field `TOUCH_XPD_WAIT` reader - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
-pub struct TOUCH_XPD_WAIT_R(crate::FieldReader<u8>);
-impl TOUCH_XPD_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TOUCH_XPD_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_XPD_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_XPD_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TOUCH_XPD_WAIT` writer - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
-pub struct TOUCH_XPD_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_XPD_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
+pub type TOUCH_XPD_WAIT_W<'a> = crate::FieldWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, u8, u8, 8, 16>;
 #[doc = "Field `TOUCH_OUT_SEL` reader - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
-pub struct TOUCH_OUT_SEL_R(crate::FieldReader<bool>);
-impl TOUCH_OUT_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_OUT_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_OUT_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_OUT_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_OUT_SEL` writer - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
-pub struct TOUCH_OUT_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_OUT_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type TOUCH_OUT_SEL_W<'a> = crate::BitWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, bool, 24>;
 #[doc = "Field `TOUCH_OUT_1EN` reader - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 & SET2 is both \"touched\""]
-pub struct TOUCH_OUT_1EN_R(crate::FieldReader<bool>);
-impl TOUCH_OUT_1EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TOUCH_OUT_1EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_OUT_1EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_OUT_1EN_R = crate::BitReader<bool>;
 #[doc = "Field `TOUCH_OUT_1EN` writer - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 & SET2 is both \"touched\""]
-pub struct TOUCH_OUT_1EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOUCH_OUT_1EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type TOUCH_OUT_1EN_W<'a> = crate::BitWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, bool, 25>;
 #[doc = "Field `XPD_HALL_FORCE` reader - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
-pub struct XPD_HALL_FORCE_R(crate::FieldReader<bool>);
-impl XPD_HALL_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        XPD_HALL_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for XPD_HALL_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type XPD_HALL_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `XPD_HALL_FORCE` writer - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
-pub struct XPD_HALL_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> XPD_HALL_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type XPD_HALL_FORCE_W<'a> = crate::BitWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, bool, 26>;
 #[doc = "Field `HALL_PHASE_FORCE` reader - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
-pub struct HALL_PHASE_FORCE_R(crate::FieldReader<bool>);
-impl HALL_PHASE_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HALL_PHASE_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HALL_PHASE_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HALL_PHASE_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `HALL_PHASE_FORCE` writer - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
-pub struct HALL_PHASE_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HALL_PHASE_FORCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type HALL_PHASE_FORCE_W<'a> = crate::BitWriter<'a, u32, SAR_TOUCH_CTRL1_SPEC, bool, 27>;
 impl R {
     #[doc = "Bits 0:15 - the meas length (in 8MHz)"]
     #[inline(always)]
@@ -272,32 +95,32 @@ impl W {
     #[doc = "Bits 0:15 - the meas length (in 8MHz)"]
     #[inline(always)]
     pub fn touch_meas_delay(&mut self) -> TOUCH_MEAS_DELAY_W {
-        TOUCH_MEAS_DELAY_W { w: self }
+        TOUCH_MEAS_DELAY_W::new(self)
     }
     #[doc = "Bits 16:23 - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
     #[inline(always)]
     pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W {
-        TOUCH_XPD_WAIT_W { w: self }
+        TOUCH_XPD_WAIT_W::new(self)
     }
     #[doc = "Bit 24 - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
     #[inline(always)]
     pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W {
-        TOUCH_OUT_SEL_W { w: self }
+        TOUCH_OUT_SEL_W::new(self)
     }
     #[doc = "Bit 25 - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 & SET2 is both \"touched\""]
     #[inline(always)]
     pub fn touch_out_1en(&mut self) -> TOUCH_OUT_1EN_W {
-        TOUCH_OUT_1EN_W { w: self }
+        TOUCH_OUT_1EN_W::new(self)
     }
     #[doc = "Bit 26 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W {
-        XPD_HALL_FORCE_W { w: self }
+        XPD_HALL_FORCE_W::new(self)
     }
     #[doc = "Bit 27 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
     pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W {
-        HALL_PHASE_FORCE_W { w: self }
+        HALL_PHASE_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

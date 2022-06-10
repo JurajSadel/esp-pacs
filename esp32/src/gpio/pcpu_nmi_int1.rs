@@ -14,20 +14,7 @@ impl From<crate::R<PCPU_NMI_INT1_SPEC>> for R {
     }
 }
 #[doc = "Field `PROCPU_NMI_INT_H` reader - GPIO32~39 PRO CPU non-maskable interrupt status"]
-pub struct PROCPU_NMI_INT_H_R(crate::FieldReader<u8>);
-impl PROCPU_NMI_INT_H_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PROCPU_NMI_INT_H_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROCPU_NMI_INT_H_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PROCPU_NMI_INT_H_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - GPIO32~39 PRO CPU non-maskable interrupt status"]
     #[inline(always)]

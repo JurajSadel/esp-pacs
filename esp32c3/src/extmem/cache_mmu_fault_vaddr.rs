@@ -14,20 +14,7 @@ impl From<crate::R<CACHE_MMU_FAULT_VADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `CACHE_MMU_FAULT_VADDR` reader - The bits are used to indicate the virtual address which cause mmu fault.."]
-pub struct CACHE_MMU_FAULT_VADDR_R(crate::FieldReader<u32>);
-impl CACHE_MMU_FAULT_VADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CACHE_MMU_FAULT_VADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CACHE_MMU_FAULT_VADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CACHE_MMU_FAULT_VADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to indicate the virtual address which cause mmu fault.."]
     #[inline(always)]

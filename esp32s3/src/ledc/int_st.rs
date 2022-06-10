@@ -14,305 +14,45 @@ impl From<crate::R<INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER0_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER0_OVF_INT interrupt when LEDC_TIMER0_OVF_INT_ENA is set to 1."]
-pub struct TIMER0_OVF_INT_ST_R(crate::FieldReader<bool>);
-impl TIMER0_OVF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER0_OVF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER0_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER0_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER1_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER1_OVF_INT interrupt when LEDC_TIMER1_OVF_INT_ENA is set to 1."]
-pub struct TIMER1_OVF_INT_ST_R(crate::FieldReader<bool>);
-impl TIMER1_OVF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER1_OVF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER1_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER1_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER2_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER2_OVF_INT interrupt when LEDC_TIMER2_OVF_INT_ENA is set to 1."]
-pub struct TIMER2_OVF_INT_ST_R(crate::FieldReader<bool>);
-impl TIMER2_OVF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER2_OVF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER2_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER2_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER3_OVF_INT_ST` reader - This is the masked interrupt status bit for the LEDC_TIMER3_OVF_INT interrupt when LEDC_TIMER3_OVF_INT_ENA is set to 1."]
-pub struct TIMER3_OVF_INT_ST_R(crate::FieldReader<bool>);
-impl TIMER3_OVF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER3_OVF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER3_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER3_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_CH0_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH0_INT interrupt when LEDC_DUTY_CHNG_END_CH0_INT_ENAIS set to 1."]
-pub struct DUTY_CHNG_END_CH0_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_CH0_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_CH0_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_CH0_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_CH0_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_CH1_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH1_INT interrupt when LEDC_DUTY_CHNG_END_CH1_INT_ENAIS set to 1."]
-pub struct DUTY_CHNG_END_CH1_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_CH1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_CH1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_CH1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_CH1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_CH2_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH2_INT interrupt when LEDC_DUTY_CHNG_END_CH2_INT_ENAIS set to 1."]
-pub struct DUTY_CHNG_END_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_CH3_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH3_INT interrupt when LEDC_DUTY_CHNG_END_CH3_INT_ENAIS set to 1."]
-pub struct DUTY_CHNG_END_CH3_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_CH3_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_CH3_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_CH3_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_CH3_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_CH4_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH4_INT interrupt when LEDC_DUTY_CHNG_END_CH4_INT_ENAIS set to 1."]
-pub struct DUTY_CHNG_END_CH4_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_CH4_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_CH4_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_CH4_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_CH4_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_CH5_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH5_INT interrupt when LEDC_DUTY_CHNG_END_CH5_INT_ENAIS set to 1."]
-pub struct DUTY_CHNG_END_CH5_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_CH5_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_CH5_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_CH5_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_CH5_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_CH6_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH6_INT interrupt when LEDC_DUTY_CHNG_END_CH6_INT_ENAIS set to 1."]
-pub struct DUTY_CHNG_END_CH6_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_CH6_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_CH6_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_CH6_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_CH6_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `DUTY_CHNG_END_CH7_INT_ST` reader - This is the masked interrupt status bit for the LEDC_DUTY_CHNG_END_CH7_INT interrupt when LEDC_DUTY_CHNG_END_CH7_INT_ENAIS set to 1."]
-pub struct DUTY_CHNG_END_CH7_INT_ST_R(crate::FieldReader<bool>);
-impl DUTY_CHNG_END_CH7_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DUTY_CHNG_END_CH7_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DUTY_CHNG_END_CH7_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DUTY_CHNG_END_CH7_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_CH0_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH0_INT interrupt when LEDC_OVF_CNT_CH0_INT_ENA is set to 1."]
-pub struct OVF_CNT_CH0_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_CH0_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_CH0_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_CH0_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_CH0_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_CH1_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH1_INT interrupt when LEDC_OVF_CNT_CH1_INT_ENA is set to 1."]
-pub struct OVF_CNT_CH1_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_CH1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_CH1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_CH1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_CH1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_CH2_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH2_INT interrupt when LEDC_OVF_CNT_CH2_INT_ENA is set to 1."]
-pub struct OVF_CNT_CH2_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_CH2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_CH2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_CH2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_CH2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_CH3_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH3_INT interrupt when LEDC_OVF_CNT_CH3_INT_ENA is set to 1."]
-pub struct OVF_CNT_CH3_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_CH3_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_CH3_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_CH3_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_CH3_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_CH4_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH4_INT interrupt when LEDC_OVF_CNT_CH4_INT_ENA is set to 1."]
-pub struct OVF_CNT_CH4_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_CH4_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_CH4_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_CH4_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_CH4_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_CH5_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH5_INT interrupt when LEDC_OVF_CNT_CH5_INT_ENA is set to 1."]
-pub struct OVF_CNT_CH5_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_CH5_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_CH5_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_CH5_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_CH5_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_CH6_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH6_INT interrupt when LEDC_OVF_CNT_CH6_INT_ENA is set to 1."]
-pub struct OVF_CNT_CH6_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_CH6_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_CH6_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_CH6_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_CH6_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `OVF_CNT_CH7_INT_ST` reader - This is the masked interrupt status bit for the LEDC_OVF_CNT_CH7_INT interrupt when LEDC_OVF_CNT_CH7_INT_ENA is set to 1."]
-pub struct OVF_CNT_CH7_INT_ST_R(crate::FieldReader<bool>);
-impl OVF_CNT_CH7_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVF_CNT_CH7_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVF_CNT_CH7_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OVF_CNT_CH7_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - This is the masked interrupt status bit for the LEDC_TIMER0_OVF_INT interrupt when LEDC_TIMER0_OVF_INT_ENA is set to 1."]
     #[inline(always)]

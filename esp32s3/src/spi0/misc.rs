@@ -35,153 +35,21 @@ impl From<crate::W<MISC_SPEC>> for W {
     }
 }
 #[doc = "Field `FSUB_PIN` reader - Flash is connected to SPI SUBPIN bus."]
-pub struct FSUB_PIN_R(crate::FieldReader<bool>);
-impl FSUB_PIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FSUB_PIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FSUB_PIN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FSUB_PIN_R = crate::BitReader<bool>;
 #[doc = "Field `FSUB_PIN` writer - Flash is connected to SPI SUBPIN bus."]
-pub struct FSUB_PIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FSUB_PIN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type FSUB_PIN_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 7>;
 #[doc = "Field `SSUB_PIN` reader - Ext_RAM is connected to SPI SUBPIN bus."]
-pub struct SSUB_PIN_R(crate::FieldReader<bool>);
-impl SSUB_PIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SSUB_PIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SSUB_PIN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SSUB_PIN_R = crate::BitReader<bool>;
 #[doc = "Field `SSUB_PIN` writer - Ext_RAM is connected to SPI SUBPIN bus."]
-pub struct SSUB_PIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SSUB_PIN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type SSUB_PIN_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 8>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: SPI_CLK line is high when idle. 0: SPI_CLK line is low when idle"]
-pub struct CK_IDLE_EDGE_R(crate::FieldReader<bool>);
-impl CK_IDLE_EDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CK_IDLE_EDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CK_IDLE_EDGE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CK_IDLE_EDGE_R = crate::BitReader<bool>;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: SPI_CLK line is high when idle. 0: SPI_CLK line is low when idle"]
-pub struct CK_IDLE_EDGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CK_IDLE_EDGE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type CK_IDLE_EDGE_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 9>;
 #[doc = "Field `CS_KEEP_ACTIVE` reader - SPI_CS line keep low when the bit is set."]
-pub struct CS_KEEP_ACTIVE_R(crate::FieldReader<bool>);
-impl CS_KEEP_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CS_KEEP_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CS_KEEP_ACTIVE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CS_KEEP_ACTIVE_R = crate::BitReader<bool>;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - SPI_CS line keep low when the bit is set."]
-pub struct CS_KEEP_ACTIVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CS_KEEP_ACTIVE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type CS_KEEP_ACTIVE_W<'a> = crate::BitWriter<'a, u32, MISC_SPEC, bool, 10>;
 impl R {
     #[doc = "Bit 7 - Flash is connected to SPI SUBPIN bus."]
     #[inline(always)]
@@ -208,22 +76,22 @@ impl W {
     #[doc = "Bit 7 - Flash is connected to SPI SUBPIN bus."]
     #[inline(always)]
     pub fn fsub_pin(&mut self) -> FSUB_PIN_W {
-        FSUB_PIN_W { w: self }
+        FSUB_PIN_W::new(self)
     }
     #[doc = "Bit 8 - Ext_RAM is connected to SPI SUBPIN bus."]
     #[inline(always)]
     pub fn ssub_pin(&mut self) -> SSUB_PIN_W {
-        SSUB_PIN_W { w: self }
+        SSUB_PIN_W::new(self)
     }
     #[doc = "Bit 9 - 1: SPI_CLK line is high when idle. 0: SPI_CLK line is low when idle"]
     #[inline(always)]
     pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W {
-        CK_IDLE_EDGE_W { w: self }
+        CK_IDLE_EDGE_W::new(self)
     }
     #[doc = "Bit 10 - SPI_CS line keep low when the bit is set."]
     #[inline(always)]
     pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W {
-        CS_KEEP_ACTIVE_W { w: self }
+        CS_KEEP_ACTIVE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

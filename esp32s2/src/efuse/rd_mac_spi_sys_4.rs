@@ -14,20 +14,7 @@ impl From<crate::R<RD_MAC_SPI_SYS_4_SPEC>> for R {
     }
 }
 #[doc = "Field `SYS_DATA_PART0_1` reader - Stores the fist part of the zeroth part of system data."]
-pub struct SYS_DATA_PART0_1_R(crate::FieldReader<u32>);
-impl SYS_DATA_PART0_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SYS_DATA_PART0_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SYS_DATA_PART0_1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SYS_DATA_PART0_1_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Stores the fist part of the zeroth part of system data."]
     #[inline(always)]

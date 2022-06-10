@@ -35,32 +35,10 @@ impl From<crate::W<SAR2_PATT_TAB4_SPEC>> for W {
     }
 }
 #[doc = "Field `SARADC_SAR2_PATT_TAB4` reader - Item 12 ~ 15 for pattern table 2 (each item 6bit)"]
-pub struct SARADC_SAR2_PATT_TAB4_R(crate::FieldReader<u32>);
-impl SARADC_SAR2_PATT_TAB4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SARADC_SAR2_PATT_TAB4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SARADC_SAR2_PATT_TAB4_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SARADC_SAR2_PATT_TAB4_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SARADC_SAR2_PATT_TAB4` writer - Item 12 ~ 15 for pattern table 2 (each item 6bit)"]
-pub struct SARADC_SAR2_PATT_TAB4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SARADC_SAR2_PATT_TAB4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
-        self.w
-    }
-}
+pub type SARADC_SAR2_PATT_TAB4_W<'a> =
+    crate::FieldWriter<'a, u32, SAR2_PATT_TAB4_SPEC, u32, u32, 24, 0>;
 impl R {
     #[doc = "Bits 0:23 - Item 12 ~ 15 for pattern table 2 (each item 6bit)"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:23 - Item 12 ~ 15 for pattern table 2 (each item 6bit)"]
     #[inline(always)]
     pub fn saradc_sar2_patt_tab4(&mut self) -> SARADC_SAR2_PATT_TAB4_W {
-        SARADC_SAR2_PATT_TAB4_W { w: self }
+        SARADC_SAR2_PATT_TAB4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

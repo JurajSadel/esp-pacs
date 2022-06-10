@@ -14,35 +14,9 @@ impl From<crate::R<CORE_1_DRAM0_PMS_MONITOR_3_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR` reader - recorded core1 dram0 wr status, 1 means store, 0 means load."]
-pub struct CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R(crate::FieldReader<bool>);
-impl CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_WR_R = crate::BitReader<bool>;
 #[doc = "Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN` reader - recorded core1 dram0 byteen status."]
-pub struct CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R(crate::FieldReader<u16>);
-impl CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_DRAM0_PMS_MONITOR_VIOLATE_STATUS_BYTEEN_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bit 0 - recorded core1 dram0 wr status, 1 means store, 0 means load."]
     #[inline(always)]

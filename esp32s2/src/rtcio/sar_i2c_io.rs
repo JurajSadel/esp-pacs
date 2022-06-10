@@ -35,86 +35,17 @@ impl From<crate::W<SAR_I2C_IO_SPEC>> for W {
     }
 }
 #[doc = "Field `SAR_DEBUG_BIT_SEL` reader - "]
-pub struct SAR_DEBUG_BIT_SEL_R(crate::FieldReader<u8>);
-impl SAR_DEBUG_BIT_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR_DEBUG_BIT_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_DEBUG_BIT_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_DEBUG_BIT_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR_DEBUG_BIT_SEL` writer - "]
-pub struct SAR_DEBUG_BIT_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_DEBUG_BIT_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 23)) | ((value as u32 & 0x1f) << 23);
-        self.w
-    }
-}
+pub type SAR_DEBUG_BIT_SEL_W<'a> = crate::FieldWriter<'a, u32, SAR_I2C_IO_SPEC, u8, u8, 5, 23>;
 #[doc = "Field `SAR_I2C_SCL_SEL` reader - Selects a pad the RTC I2C SCL signal connects to. 0: use TOUCH PAD0. 1: use TOUCH PAD2."]
-pub struct SAR_I2C_SCL_SEL_R(crate::FieldReader<u8>);
-impl SAR_I2C_SCL_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR_I2C_SCL_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_I2C_SCL_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_I2C_SCL_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR_I2C_SCL_SEL` writer - Selects a pad the RTC I2C SCL signal connects to. 0: use TOUCH PAD0. 1: use TOUCH PAD2."]
-pub struct SAR_I2C_SCL_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_I2C_SCL_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
-        self.w
-    }
-}
+pub type SAR_I2C_SCL_SEL_W<'a> = crate::FieldWriter<'a, u32, SAR_I2C_IO_SPEC, u8, u8, 2, 28>;
 #[doc = "Field `SAR_I2C_SDA_SEL` reader - Selects a pad the RTC I2C SDA signal connects to. 0: use TOUCH PAD1. 1: use TOUCH PAD3."]
-pub struct SAR_I2C_SDA_SEL_R(crate::FieldReader<u8>);
-impl SAR_I2C_SDA_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR_I2C_SDA_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_I2C_SDA_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_I2C_SDA_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR_I2C_SDA_SEL` writer - Selects a pad the RTC I2C SDA signal connects to. 0: use TOUCH PAD1. 1: use TOUCH PAD3."]
-pub struct SAR_I2C_SDA_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_I2C_SDA_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 30)) | ((value as u32 & 3) << 30);
-        self.w
-    }
-}
+pub type SAR_I2C_SDA_SEL_W<'a> = crate::FieldWriter<'a, u32, SAR_I2C_IO_SPEC, u8, u8, 2, 30>;
 impl R {
     #[doc = "Bits 23:27"]
     #[inline(always)]
@@ -136,17 +67,17 @@ impl W {
     #[doc = "Bits 23:27"]
     #[inline(always)]
     pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W {
-        SAR_DEBUG_BIT_SEL_W { w: self }
+        SAR_DEBUG_BIT_SEL_W::new(self)
     }
     #[doc = "Bits 28:29 - Selects a pad the RTC I2C SCL signal connects to. 0: use TOUCH PAD0. 1: use TOUCH PAD2."]
     #[inline(always)]
     pub fn sar_i2c_scl_sel(&mut self) -> SAR_I2C_SCL_SEL_W {
-        SAR_I2C_SCL_SEL_W { w: self }
+        SAR_I2C_SCL_SEL_W::new(self)
     }
     #[doc = "Bits 30:31 - Selects a pad the RTC I2C SDA signal connects to. 0: use TOUCH PAD1. 1: use TOUCH PAD3."]
     #[inline(always)]
     pub fn sar_i2c_sda_sel(&mut self) -> SAR_I2C_SDA_SEL_W {
-        SAR_I2C_SDA_SEL_W { w: self }
+        SAR_I2C_SDA_SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

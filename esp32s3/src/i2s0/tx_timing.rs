@@ -35,167 +35,29 @@ impl From<crate::W<TX_TIMING_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_SD_OUT_DM` reader - The delay mode of I2S TX SD output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_SD_OUT_DM_R(crate::FieldReader<u8>);
-impl TX_SD_OUT_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_SD_OUT_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_SD_OUT_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_SD_OUT_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_SD_OUT_DM` writer - The delay mode of I2S TX SD output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_SD_OUT_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_SD_OUT_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type TX_SD_OUT_DM_W<'a> = crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `TX_SD1_OUT_DM` reader - The delay mode of I2S TX SD1 output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_SD1_OUT_DM_R(crate::FieldReader<u8>);
-impl TX_SD1_OUT_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_SD1_OUT_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_SD1_OUT_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_SD1_OUT_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_SD1_OUT_DM` writer - The delay mode of I2S TX SD1 output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_SD1_OUT_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_SD1_OUT_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type TX_SD1_OUT_DM_W<'a> = crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `TX_WS_OUT_DM` reader - The delay mode of I2S TX WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_WS_OUT_DM_R(crate::FieldReader<u8>);
-impl TX_WS_OUT_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_WS_OUT_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_WS_OUT_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_WS_OUT_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_WS_OUT_DM` writer - The delay mode of I2S TX WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_WS_OUT_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_WS_OUT_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type TX_WS_OUT_DM_W<'a> = crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, 16>;
 #[doc = "Field `TX_BCK_OUT_DM` reader - The delay mode of I2S TX BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_BCK_OUT_DM_R(crate::FieldReader<u8>);
-impl TX_BCK_OUT_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_BCK_OUT_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_BCK_OUT_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_BCK_OUT_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_BCK_OUT_DM` writer - The delay mode of I2S TX BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_BCK_OUT_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_BCK_OUT_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
-        self.w
-    }
-}
+pub type TX_BCK_OUT_DM_W<'a> = crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, 20>;
 #[doc = "Field `TX_WS_IN_DM` reader - The delay mode of I2S TX WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_WS_IN_DM_R(crate::FieldReader<u8>);
-impl TX_WS_IN_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_WS_IN_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_WS_IN_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_WS_IN_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_WS_IN_DM` writer - The delay mode of I2S TX WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_WS_IN_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_WS_IN_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 24)) | ((value as u32 & 3) << 24);
-        self.w
-    }
-}
+pub type TX_WS_IN_DM_W<'a> = crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, 24>;
 #[doc = "Field `TX_BCK_IN_DM` reader - The delay mode of I2S TX BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_BCK_IN_DM_R(crate::FieldReader<u8>);
-impl TX_BCK_IN_DM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TX_BCK_IN_DM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_BCK_IN_DM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_BCK_IN_DM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TX_BCK_IN_DM` writer - The delay mode of I2S TX BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
-pub struct TX_BCK_IN_DM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_BCK_IN_DM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 28)) | ((value as u32 & 3) << 28);
-        self.w
-    }
-}
+pub type TX_BCK_IN_DM_W<'a> = crate::FieldWriter<'a, u32, TX_TIMING_SPEC, u8, u8, 2, 28>;
 impl R {
     #[doc = "Bits 0:1 - The delay mode of I2S TX SD output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
@@ -232,32 +94,32 @@ impl W {
     #[doc = "Bits 0:1 - The delay mode of I2S TX SD output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn tx_sd_out_dm(&mut self) -> TX_SD_OUT_DM_W {
-        TX_SD_OUT_DM_W { w: self }
+        TX_SD_OUT_DM_W::new(self)
     }
     #[doc = "Bits 4:5 - The delay mode of I2S TX SD1 output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn tx_sd1_out_dm(&mut self) -> TX_SD1_OUT_DM_W {
-        TX_SD1_OUT_DM_W { w: self }
+        TX_SD1_OUT_DM_W::new(self)
     }
     #[doc = "Bits 16:17 - The delay mode of I2S TX WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn tx_ws_out_dm(&mut self) -> TX_WS_OUT_DM_W {
-        TX_WS_OUT_DM_W { w: self }
+        TX_WS_OUT_DM_W::new(self)
     }
     #[doc = "Bits 20:21 - The delay mode of I2S TX BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn tx_bck_out_dm(&mut self) -> TX_BCK_OUT_DM_W {
-        TX_BCK_OUT_DM_W { w: self }
+        TX_BCK_OUT_DM_W::new(self)
     }
     #[doc = "Bits 24:25 - The delay mode of I2S TX WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn tx_ws_in_dm(&mut self) -> TX_WS_IN_DM_W {
-        TX_WS_IN_DM_W { w: self }
+        TX_WS_IN_DM_W::new(self)
     }
     #[doc = "Bits 28:29 - The delay mode of I2S TX BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
     pub fn tx_bck_in_dm(&mut self) -> TX_BCK_IN_DM_W {
-        TX_BCK_IN_DM_W { w: self }
+        TX_BCK_IN_DM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

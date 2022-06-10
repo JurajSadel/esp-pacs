@@ -14,20 +14,7 @@ impl From<crate::R<CLEAN_SPEC>> for R {
     }
 }
 #[doc = "Field `CLEAN` reader - The content of this bit is 1 when memories complete initialization."]
-pub struct CLEAN_R(crate::FieldReader<bool>);
-impl CLEAN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLEAN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLEAN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLEAN_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The content of this bit is 1 when memories complete initialization."]
     #[inline(always)]

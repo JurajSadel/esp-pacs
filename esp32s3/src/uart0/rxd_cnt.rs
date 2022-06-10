@@ -14,20 +14,7 @@ impl From<crate::R<RXD_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `RXD_EDGE_CNT` reader - This register stores the count of rxd edge change. It is used in baud rate-detect process."]
-pub struct RXD_EDGE_CNT_R(crate::FieldReader<u16>);
-impl RXD_EDGE_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RXD_EDGE_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXD_EDGE_CNT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXD_EDGE_CNT_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:9 - This register stores the count of rxd edge change. It is used in baud rate-detect process."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<LACTRTC_SPEC>> for W {
     }
 }
 #[doc = "Field `LACT_RTC_STEP_LEN` reader - Reserved."]
-pub struct LACT_RTC_STEP_LEN_R(crate::FieldReader<u32>);
-impl LACT_RTC_STEP_LEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        LACT_RTC_STEP_LEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LACT_RTC_STEP_LEN_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LACT_RTC_STEP_LEN_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `LACT_RTC_STEP_LEN` writer - Reserved."]
-pub struct LACT_RTC_STEP_LEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LACT_RTC_STEP_LEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff_ffff << 6)) | ((value as u32 & 0x03ff_ffff) << 6);
-        self.w
-    }
-}
+pub type LACT_RTC_STEP_LEN_W<'a> = crate::FieldWriter<'a, u32, LACTRTC_SPEC, u32, u32, 26, 6>;
 impl R {
     #[doc = "Bits 6:31 - Reserved."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 6:31 - Reserved."]
     #[inline(always)]
     pub fn lact_rtc_step_len(&mut self) -> LACT_RTC_STEP_LEN_W {
-        LACT_RTC_STEP_LEN_W { w: self }
+        LACT_RTC_STEP_LEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

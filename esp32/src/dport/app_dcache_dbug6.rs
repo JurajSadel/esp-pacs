@@ -14,20 +14,7 @@ impl From<crate::R<APP_DCACHE_DBUG6_SPEC>> for R {
     }
 }
 #[doc = "Field `APP_IRAM0ADDR_IA` reader - "]
-pub struct APP_IRAM0ADDR_IA_R(crate::FieldReader<u32>);
-impl APP_IRAM0ADDR_IA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        APP_IRAM0ADDR_IA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APP_IRAM0ADDR_IA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APP_IRAM0ADDR_IA_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]

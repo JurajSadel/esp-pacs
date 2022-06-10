@@ -35,32 +35,9 @@ impl From<crate::W<CH_RX_LIM_SPEC>> for W {
     }
 }
 #[doc = "Field `RX_LIM` reader - This register is used to configure the maximum entries that CHANNEL%s can receive."]
-pub struct RX_LIM_R(crate::FieldReader<u16>);
-impl RX_LIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RX_LIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_LIM_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_LIM_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RX_LIM` writer - This register is used to configure the maximum entries that CHANNEL%s can receive."]
-pub struct RX_LIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RX_LIM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01ff) | (value as u32 & 0x01ff);
-        self.w
-    }
-}
+pub type RX_LIM_W<'a> = crate::FieldWriter<'a, u32, CH_RX_LIM_SPEC, u16, u16, 9, 0>;
 impl R {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can receive."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can receive."]
     #[inline(always)]
     pub fn rx_lim(&mut self) -> RX_LIM_W {
-        RX_LIM_W { w: self }
+        RX_LIM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

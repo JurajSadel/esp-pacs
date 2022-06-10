@@ -35,32 +35,9 @@ impl From<crate::W<T0LOADLO_SPEC>> for W {
     }
 }
 #[doc = "Field `T0_LOAD_LO` reader - Lower 32 bits of the value that will load into timer 0 time-base counter"]
-pub struct T0_LOAD_LO_R(crate::FieldReader<u32>);
-impl T0_LOAD_LO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        T0_LOAD_LO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for T0_LOAD_LO_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type T0_LOAD_LO_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `T0_LOAD_LO` writer - Lower 32 bits of the value that will load into timer 0 time-base counter"]
-pub struct T0_LOAD_LO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> T0_LOAD_LO_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type T0_LOAD_LO_W<'a> = crate::FieldWriter<'a, u32, T0LOADLO_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - Lower 32 bits of the value that will load into timer 0 time-base counter"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - Lower 32 bits of the value that will load into timer 0 time-base counter"]
     #[inline(always)]
     pub fn t0_load_lo(&mut self) -> T0_LOAD_LO_W {
-        T0_LOAD_LO_W { w: self }
+        T0_LOAD_LO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

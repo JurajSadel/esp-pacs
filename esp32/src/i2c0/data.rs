@@ -14,20 +14,7 @@ impl From<crate::R<DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `FIFO_RDATA` reader - The register represent the byte data read from rxfifo when use apb fifo access"]
-pub struct FIFO_RDATA_R(crate::FieldReader<u8>);
-impl FIFO_RDATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FIFO_RDATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFO_RDATA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFO_RDATA_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - The register represent the byte data read from rxfifo when use apb fifo access"]
     #[inline(always)]

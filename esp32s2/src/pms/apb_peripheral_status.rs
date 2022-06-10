@@ -14,20 +14,7 @@ impl From<crate::R<APB_PERIPHERAL_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_PERI_BYTE_ERROR_ADDR` reader - Record the illegitimate address of APB peripheral."]
-pub struct APB_PERI_BYTE_ERROR_ADDR_R(crate::FieldReader<u32>);
-impl APB_PERI_BYTE_ERROR_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        APB_PERI_BYTE_ERROR_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_PERI_BYTE_ERROR_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_PERI_BYTE_ERROR_ADDR_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Record the illegitimate address of APB peripheral."]
     #[inline(always)]

@@ -35,272 +35,35 @@ impl From<crate::W<FAULT_DETECT_SPEC>> for W {
     }
 }
 #[doc = "Field `F0_EN` reader - When set, event_f0 generation is enabled"]
-pub struct F0_EN_R(crate::FieldReader<bool>);
-impl F0_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        F0_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for F0_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type F0_EN_R = crate::BitReader<bool>;
 #[doc = "Field `F0_EN` writer - When set, event_f0 generation is enabled"]
-pub struct F0_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> F0_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type F0_EN_W<'a> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, 0>;
 #[doc = "Field `F1_EN` reader - When set, event_f1 generation is enabled"]
-pub struct F1_EN_R(crate::FieldReader<bool>);
-impl F1_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        F1_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for F1_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type F1_EN_R = crate::BitReader<bool>;
 #[doc = "Field `F1_EN` writer - When set, event_f1 generation is enabled"]
-pub struct F1_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> F1_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type F1_EN_W<'a> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, 1>;
 #[doc = "Field `F2_EN` reader - When set, event_f2 generation is enabled"]
-pub struct F2_EN_R(crate::FieldReader<bool>);
-impl F2_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        F2_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for F2_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type F2_EN_R = crate::BitReader<bool>;
 #[doc = "Field `F2_EN` writer - When set, event_f2 generation is enabled"]
-pub struct F2_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> F2_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type F2_EN_W<'a> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, 2>;
 #[doc = "Field `F0_POLE` reader - Set event_f0 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub struct F0_POLE_R(crate::FieldReader<bool>);
-impl F0_POLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        F0_POLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for F0_POLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type F0_POLE_R = crate::BitReader<bool>;
 #[doc = "Field `F0_POLE` writer - Set event_f0 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub struct F0_POLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> F0_POLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type F0_POLE_W<'a> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, 3>;
 #[doc = "Field `F1_POLE` reader - Set event_f1 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub struct F1_POLE_R(crate::FieldReader<bool>);
-impl F1_POLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        F1_POLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for F1_POLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type F1_POLE_R = crate::BitReader<bool>;
 #[doc = "Field `F1_POLE` writer - Set event_f1 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub struct F1_POLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> F1_POLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type F1_POLE_W<'a> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, 4>;
 #[doc = "Field `F2_POLE` reader - Set event_f2 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub struct F2_POLE_R(crate::FieldReader<bool>);
-impl F2_POLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        F2_POLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for F2_POLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type F2_POLE_R = crate::BitReader<bool>;
 #[doc = "Field `F2_POLE` writer - Set event_f2 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
-pub struct F2_POLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> F2_POLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type F2_POLE_W<'a> = crate::BitWriter<'a, u32, FAULT_DETECT_SPEC, bool, 5>;
 #[doc = "Field `EVENT_F0` reader - Set and reset by hardware. If set, event_f0 is on going"]
-pub struct EVENT_F0_R(crate::FieldReader<bool>);
-impl EVENT_F0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EVENT_F0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EVENT_F0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EVENT_F0_R = crate::BitReader<bool>;
 #[doc = "Field `EVENT_F1` reader - Set and reset by hardware. If set, event_f1 is on going"]
-pub struct EVENT_F1_R(crate::FieldReader<bool>);
-impl EVENT_F1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EVENT_F1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EVENT_F1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EVENT_F1_R = crate::BitReader<bool>;
 #[doc = "Field `EVENT_F2` reader - Set and reset by hardware. If set, event_f2 is on going"]
-pub struct EVENT_F2_R(crate::FieldReader<bool>);
-impl EVENT_F2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EVENT_F2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EVENT_F2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EVENT_F2_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - When set, event_f0 generation is enabled"]
     #[inline(always)]
@@ -352,32 +115,32 @@ impl W {
     #[doc = "Bit 0 - When set, event_f0 generation is enabled"]
     #[inline(always)]
     pub fn f0_en(&mut self) -> F0_EN_W {
-        F0_EN_W { w: self }
+        F0_EN_W::new(self)
     }
     #[doc = "Bit 1 - When set, event_f1 generation is enabled"]
     #[inline(always)]
     pub fn f1_en(&mut self) -> F1_EN_W {
-        F1_EN_W { w: self }
+        F1_EN_W::new(self)
     }
     #[doc = "Bit 2 - When set, event_f2 generation is enabled"]
     #[inline(always)]
     pub fn f2_en(&mut self) -> F2_EN_W {
-        F2_EN_W { w: self }
+        F2_EN_W::new(self)
     }
     #[doc = "Bit 3 - Set event_f0 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
     #[inline(always)]
     pub fn f0_pole(&mut self) -> F0_POLE_W {
-        F0_POLE_W { w: self }
+        F0_POLE_W::new(self)
     }
     #[doc = "Bit 4 - Set event_f1 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
     #[inline(always)]
     pub fn f1_pole(&mut self) -> F1_POLE_W {
-        F1_POLE_W { w: self }
+        F1_POLE_W::new(self)
     }
     #[doc = "Bit 5 - Set event_f2 trigger polarity on FAULT2 source from GPIO matrix. 0: level low, 1: level high"]
     #[inline(always)]
     pub fn f2_pole(&mut self) -> F2_POLE_W {
-        F2_POLE_W { w: self }
+        F2_POLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,50 +14,11 @@ impl From<crate::R<DMA_IN_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `IN_FULL` reader - Data-input FIFO full signal."]
-pub struct IN_FULL_R(crate::FieldReader<bool>);
-impl IN_FULL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_FULL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_FULL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_FULL_R = crate::BitReader<bool>;
 #[doc = "Field `IN_EMPTY` reader - Data-input FIFO empty signal."]
-pub struct IN_EMPTY_R(crate::FieldReader<bool>);
-impl IN_EMPTY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_EMPTY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_EMPTY_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_EMPTY_R = crate::BitReader<bool>;
 #[doc = "Field `RX_ERR_CAUSE` reader - This register indicates the error type when DMA has received a packet with error. 3'b001: Checksum error in the HCI packet; 3'b010: Sequence number error in the HCI packet; 3'b011: CRC bit error in the HCI packet; 3'b100: 0xC0 is found but the received HCI packet is not end; 3'b101: 0xC0 is not found when the HCI packet has been received; 3'b110: CRC check error."]
-pub struct RX_ERR_CAUSE_R(crate::FieldReader<u8>);
-impl RX_ERR_CAUSE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RX_ERR_CAUSE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RX_ERR_CAUSE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RX_ERR_CAUSE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - Data-input FIFO full signal."]
     #[inline(always)]

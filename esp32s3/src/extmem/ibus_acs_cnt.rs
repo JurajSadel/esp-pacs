@@ -14,20 +14,7 @@ impl From<crate::R<IBUS_ACS_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `IBUS_ACS_CNT` reader - The bits are used to count the number of ibus access flash/spiram through icache."]
-pub struct IBUS_ACS_CNT_R(crate::FieldReader<u32>);
-impl IBUS_ACS_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        IBUS_ACS_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IBUS_ACS_CNT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IBUS_ACS_CNT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The bits are used to count the number of ibus access flash/spiram through icache."]
     #[inline(always)]

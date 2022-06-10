@@ -35,79 +35,13 @@ impl From<crate::W<ICACHE_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `ICACHE_SHUT_IBUS` reader - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
-pub struct ICACHE_SHUT_IBUS_R(crate::FieldReader<bool>);
-impl ICACHE_SHUT_IBUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_SHUT_IBUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_SHUT_IBUS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_SHUT_IBUS_R = crate::BitReader<bool>;
 #[doc = "Field `ICACHE_SHUT_IBUS` writer - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
-pub struct ICACHE_SHUT_IBUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ICACHE_SHUT_IBUS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type ICACHE_SHUT_IBUS_W<'a> = crate::BitWriter<'a, u32, ICACHE_CTRL1_SPEC, bool, 0>;
 #[doc = "Field `ICACHE_SHUT_DBUS` reader - The bit is used to disable core1 ibus, 0: enable, 1: disable"]
-pub struct ICACHE_SHUT_DBUS_R(crate::FieldReader<bool>);
-impl ICACHE_SHUT_DBUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ICACHE_SHUT_DBUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ICACHE_SHUT_DBUS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ICACHE_SHUT_DBUS_R = crate::BitReader<bool>;
 #[doc = "Field `ICACHE_SHUT_DBUS` writer - The bit is used to disable core1 ibus, 0: enable, 1: disable"]
-pub struct ICACHE_SHUT_DBUS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ICACHE_SHUT_DBUS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type ICACHE_SHUT_DBUS_W<'a> = crate::BitWriter<'a, u32, ICACHE_CTRL1_SPEC, bool, 1>;
 impl R {
     #[doc = "Bit 0 - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
     #[inline(always)]
@@ -124,12 +58,12 @@ impl W {
     #[doc = "Bit 0 - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn icache_shut_ibus(&mut self) -> ICACHE_SHUT_IBUS_W {
-        ICACHE_SHUT_IBUS_W { w: self }
+        ICACHE_SHUT_IBUS_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to disable core1 ibus, 0: enable, 1: disable"]
     #[inline(always)]
     pub fn icache_shut_dbus(&mut self) -> ICACHE_SHUT_DBUS_W {
-        ICACHE_SHUT_DBUS_W { w: self }
+        ICACHE_SHUT_DBUS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

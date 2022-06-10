@@ -35,32 +35,9 @@ impl From<crate::W<FLASH_ACE2_SIZE_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_ACE2_SIZE` reader - ******* Description ***********"]
-pub struct FLASH_ACE2_SIZE_R(crate::FieldReader<u16>);
-impl FLASH_ACE2_SIZE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        FLASH_ACE2_SIZE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_ACE2_SIZE_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_ACE2_SIZE_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `FLASH_ACE2_SIZE` writer - ******* Description ***********"]
-pub struct FLASH_ACE2_SIZE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_ACE2_SIZE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type FLASH_ACE2_SIZE_W<'a> = crate::FieldWriter<'a, u32, FLASH_ACE2_SIZE_SPEC, u16, u16, 16, 0>;
 impl R {
     #[doc = "Bits 0:15 - ******* Description ***********"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:15 - ******* Description ***********"]
     #[inline(always)]
     pub fn flash_ace2_size(&mut self) -> FLASH_ACE2_SIZE_W {
-        FLASH_ACE2_SIZE_W { w: self }
+        FLASH_ACE2_SIZE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

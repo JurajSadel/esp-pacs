@@ -35,150 +35,25 @@ impl From<crate::W<SAR_MEAS_WAIT2_SPEC>> for W {
     }
 }
 #[doc = "Field `FORCE_XPD_SAR_SW` reader - "]
-pub struct FORCE_XPD_SAR_SW_R(crate::FieldReader<bool>);
-impl FORCE_XPD_SAR_SW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_XPD_SAR_SW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_XPD_SAR_SW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_XPD_SAR_SW_R = crate::BitReader<bool>;
 #[doc = "Field `FORCE_XPD_SAR_SW` writer - "]
-pub struct FORCE_XPD_SAR_SW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_XPD_SAR_SW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type FORCE_XPD_SAR_SW_W<'a> = crate::BitWriter<'a, u32, SAR_MEAS_WAIT2_SPEC, bool, 0>;
 #[doc = "Field `SAR_AMP_WAIT3` reader - "]
-pub struct SAR_AMP_WAIT3_R(crate::FieldReader<u16>);
-impl SAR_AMP_WAIT3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SAR_AMP_WAIT3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_AMP_WAIT3_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_AMP_WAIT3_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SAR_AMP_WAIT3` writer - "]
-pub struct SAR_AMP_WAIT3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_AMP_WAIT3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type SAR_AMP_WAIT3_W<'a> = crate::FieldWriter<'a, u32, SAR_MEAS_WAIT2_SPEC, u16, u16, 16, 0>;
 #[doc = "Field `FORCE_XPD_AMP` reader - "]
-pub struct FORCE_XPD_AMP_R(crate::FieldReader<u8>);
-impl FORCE_XPD_AMP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FORCE_XPD_AMP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_XPD_AMP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_XPD_AMP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FORCE_XPD_AMP` writer - "]
-pub struct FORCE_XPD_AMP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_XPD_AMP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type FORCE_XPD_AMP_W<'a> = crate::FieldWriter<'a, u32, SAR_MEAS_WAIT2_SPEC, u8, u8, 2, 16>;
 #[doc = "Field `FORCE_XPD_SAR` reader - "]
-pub struct FORCE_XPD_SAR_R(crate::FieldReader<u8>);
-impl FORCE_XPD_SAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FORCE_XPD_SAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_XPD_SAR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_XPD_SAR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FORCE_XPD_SAR` writer - "]
-pub struct FORCE_XPD_SAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_XPD_SAR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
-        self.w
-    }
-}
+pub type FORCE_XPD_SAR_W<'a> = crate::FieldWriter<'a, u32, SAR_MEAS_WAIT2_SPEC, u8, u8, 2, 18>;
 #[doc = "Field `SAR2_RSTB_WAIT` reader - "]
-pub struct SAR2_RSTB_WAIT_R(crate::FieldReader<u8>);
-impl SAR2_RSTB_WAIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SAR2_RSTB_WAIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR2_RSTB_WAIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR2_RSTB_WAIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SAR2_RSTB_WAIT` writer - "]
-pub struct SAR2_RSTB_WAIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR2_RSTB_WAIT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 20)) | ((value as u32 & 0xff) << 20);
-        self.w
-    }
-}
+pub type SAR2_RSTB_WAIT_W<'a> = crate::FieldWriter<'a, u32, SAR_MEAS_WAIT2_SPEC, u8, u8, 8, 20>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -210,27 +85,27 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn force_xpd_sar_sw(&mut self) -> FORCE_XPD_SAR_SW_W {
-        FORCE_XPD_SAR_SW_W { w: self }
+        FORCE_XPD_SAR_SW_W::new(self)
     }
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn sar_amp_wait3(&mut self) -> SAR_AMP_WAIT3_W {
-        SAR_AMP_WAIT3_W { w: self }
+        SAR_AMP_WAIT3_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     pub fn force_xpd_amp(&mut self) -> FORCE_XPD_AMP_W {
-        FORCE_XPD_AMP_W { w: self }
+        FORCE_XPD_AMP_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W {
-        FORCE_XPD_SAR_W { w: self }
+        FORCE_XPD_SAR_W::new(self)
     }
     #[doc = "Bits 20:27"]
     #[inline(always)]
     pub fn sar2_rstb_wait(&mut self) -> SAR2_RSTB_WAIT_W {
-        SAR2_RSTB_WAIT_W { w: self }
+        SAR2_RSTB_WAIT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

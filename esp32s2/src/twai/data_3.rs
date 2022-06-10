@@ -20,22 +20,12 @@ impl From<crate::W<DATA_3_SPEC>> for W {
     }
 }
 #[doc = "Field `TX_BYTE_3` writer - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, it stores the 3rd byte information of the data to be transmitted under operating mode."]
-pub struct TX_BYTE_3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_BYTE_3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type TX_BYTE_3_W<'a> = crate::FieldWriter<'a, u32, DATA_3_SPEC, u8, u8, 8, 0>;
 impl W {
     #[doc = "Bits 0:7 - In reset mode, it is acceptance code register 3 with R/W Permission. In operation mode, it stores the 3rd byte information of the data to be transmitted under operating mode."]
     #[inline(always)]
     pub fn tx_byte_3(&mut self) -> TX_BYTE_3_W {
-        TX_BYTE_3_W { w: self }
+        TX_BYTE_3_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

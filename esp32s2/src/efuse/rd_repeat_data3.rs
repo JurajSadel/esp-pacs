@@ -14,185 +14,29 @@ impl From<crate::R<RD_REPEAT_DATA3_SPEC>> for R {
     }
 }
 #[doc = "Field `DIS_DOWNLOAD_MODE` reader - Set this bit to disable all download boot modes."]
-pub struct DIS_DOWNLOAD_MODE_R(crate::FieldReader<bool>);
-impl DIS_DOWNLOAD_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_DOWNLOAD_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_DOWNLOAD_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_DOWNLOAD_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_LEGACY_SPI_BOOT` reader - Set this bit to disable Legacy SPI boot mode."]
-pub struct DIS_LEGACY_SPI_BOOT_R(crate::FieldReader<bool>);
-impl DIS_LEGACY_SPI_BOOT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_LEGACY_SPI_BOOT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_LEGACY_SPI_BOOT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_LEGACY_SPI_BOOT_R = crate::BitReader<bool>;
 #[doc = "Field `UART_PRINT_CHANNEL` reader - Selects the default UART for printing boot messages. 0: UART0. 1: UART1."]
-pub struct UART_PRINT_CHANNEL_R(crate::FieldReader<bool>);
-impl UART_PRINT_CHANNEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART_PRINT_CHANNEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART_PRINT_CHANNEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART_PRINT_CHANNEL_R = crate::BitReader<bool>;
 #[doc = "Field `RPT4_RESERVED3` reader - Reserved (used for four backups method)."]
-pub struct RPT4_RESERVED3_R(crate::FieldReader<bool>);
-impl RPT4_RESERVED3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RPT4_RESERVED3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RPT4_RESERVED3_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RPT4_RESERVED3_R = crate::BitReader<bool>;
 #[doc = "Field `DIS_USB_DOWNLOAD_MODE` reader - Set this bit to disable use of USB OTG in UART download boot mode."]
-pub struct DIS_USB_DOWNLOAD_MODE_R(crate::FieldReader<bool>);
-impl DIS_USB_DOWNLOAD_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIS_USB_DOWNLOAD_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIS_USB_DOWNLOAD_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DIS_USB_DOWNLOAD_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `ENABLE_SECURITY_DOWNLOAD` reader - Set this bit to enable secure UART download mode (read/write flash only)."]
-pub struct ENABLE_SECURITY_DOWNLOAD_R(crate::FieldReader<bool>);
-impl ENABLE_SECURITY_DOWNLOAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_SECURITY_DOWNLOAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_SECURITY_DOWNLOAD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENABLE_SECURITY_DOWNLOAD_R = crate::BitReader<bool>;
 #[doc = "Field `UART_PRINT_CONTROL` reader - Set the default UART boot message output mode. 00: Enabled. 01: Enable when GPIO46 is low at reset. 10: Enable when GPIO46 is high at reset. 11: Disabled."]
-pub struct UART_PRINT_CONTROL_R(crate::FieldReader<u8>);
-impl UART_PRINT_CONTROL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UART_PRINT_CONTROL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART_PRINT_CONTROL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART_PRINT_CONTROL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PIN_POWER_SELECTION` reader - Set default power supply for GPIO33-GPIO37, set when SPI flash is initialized. 0: VDD3P3_CPU. 1: VDD_SPI."]
-pub struct PIN_POWER_SELECTION_R(crate::FieldReader<bool>);
-impl PIN_POWER_SELECTION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PIN_POWER_SELECTION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN_POWER_SELECTION_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN_POWER_SELECTION_R = crate::BitReader<bool>;
 #[doc = "Field `FLASH_TYPE` reader - SPI flash type. 0: maximum four data lines, 1: eight data lines."]
-pub struct FLASH_TYPE_R(crate::FieldReader<bool>);
-impl FLASH_TYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FLASH_TYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FLASH_TYPE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FLASH_TYPE_R = crate::BitReader<bool>;
 #[doc = "Field `FORCE_SEND_RESUME` reader - If set, forces ROM code to send an SPI flash resume command during SPI boot."]
-pub struct FORCE_SEND_RESUME_R(crate::FieldReader<bool>);
-impl FORCE_SEND_RESUME_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_SEND_RESUME_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_SEND_RESUME_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_SEND_RESUME_R = crate::BitReader<bool>;
 #[doc = "Field `SECURE_VERSION` reader - Secure version (used by ESP-IDF anti-rollback feature)."]
-pub struct SECURE_VERSION_R(crate::FieldReader<u16>);
-impl SECURE_VERSION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SECURE_VERSION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECURE_VERSION_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECURE_VERSION_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `RPT4_RESERVED2` reader - Reserved (used for four backups method)."]
-pub struct RPT4_RESERVED2_R(crate::FieldReader<u8>);
-impl RPT4_RESERVED2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RPT4_RESERVED2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RPT4_RESERVED2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RPT4_RESERVED2_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bit 0 - Set this bit to disable all download boot modes."]
     #[inline(always)]

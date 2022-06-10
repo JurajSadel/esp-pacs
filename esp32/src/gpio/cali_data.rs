@@ -14,50 +14,11 @@ impl From<crate::R<CALI_DATA_SPEC>> for R {
     }
 }
 #[doc = "Field `CALI_VALUE_SYNC2` reader - "]
-pub struct CALI_VALUE_SYNC2_R(crate::FieldReader<u32>);
-impl CALI_VALUE_SYNC2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CALI_VALUE_SYNC2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CALI_VALUE_SYNC2_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CALI_VALUE_SYNC2_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CALI_RDY_REAL` reader - "]
-pub struct CALI_RDY_REAL_R(crate::FieldReader<bool>);
-impl CALI_RDY_REAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CALI_RDY_REAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CALI_RDY_REAL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CALI_RDY_REAL_R = crate::BitReader<bool>;
 #[doc = "Field `CALI_RDY_SYNC2` reader - "]
-pub struct CALI_RDY_SYNC2_R(crate::FieldReader<bool>);
-impl CALI_RDY_SYNC2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CALI_RDY_SYNC2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CALI_RDY_SYNC2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CALI_RDY_SYNC2_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]

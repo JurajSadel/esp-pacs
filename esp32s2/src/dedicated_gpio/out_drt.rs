@@ -20,22 +20,12 @@ impl From<crate::W<OUT_DRT_SPEC>> for W {
     }
 }
 #[doc = "Field `VLAUE` writer - This register is used to configure directive output value of 8-channel dedicated GPIO."]
-pub struct VLAUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VLAUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type VLAUE_W<'a> = crate::FieldWriter<'a, u32, OUT_DRT_SPEC, u8, u8, 8, 0>;
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure directive output value of 8-channel dedicated GPIO."]
     #[inline(always)]
     pub fn vlaue(&mut self) -> VLAUE_W {
-        VLAUE_W { w: self }
+        VLAUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

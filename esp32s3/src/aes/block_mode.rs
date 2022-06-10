@@ -35,32 +35,9 @@ impl From<crate::W<BLOCK_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `BLOCK_MODE` reader - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
-pub struct BLOCK_MODE_R(crate::FieldReader<u8>);
-impl BLOCK_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BLOCK_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BLOCK_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BLOCK_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BLOCK_MODE` writer - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
-pub struct BLOCK_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BLOCK_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type BLOCK_MODE_W<'a> = crate::FieldWriter<'a, u32, BLOCK_MODE_SPEC, u8, u8, 3, 0>;
 impl R {
     #[doc = "Bits 0:2 - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:2 - Defines the block cipher mode of the AES accelerator operating under the DMA-AES working mode. 0x0: ECB, 0x1: CBC, 0x2: OFB, 0x3: CTR, 0x4: CFB-8, 0x5: CFB-128, 0x6: reserved, 0x7: reserved."]
     #[inline(always)]
     pub fn block_mode(&mut self) -> BLOCK_MODE_W {
-        BLOCK_MODE_W { w: self }
+        BLOCK_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

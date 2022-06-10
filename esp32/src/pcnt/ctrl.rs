@@ -35,634 +35,73 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PLUS_CNT_RST_U0` reader - Set this bit to clear unit0's counter."]
-pub struct PLUS_CNT_RST_U0_R(crate::FieldReader<bool>);
-impl PLUS_CNT_RST_U0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLUS_CNT_RST_U0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLUS_CNT_RST_U0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLUS_CNT_RST_U0_R = crate::BitReader<bool>;
 #[doc = "Field `PLUS_CNT_RST_U0` writer - Set this bit to clear unit0's counter."]
-pub struct PLUS_CNT_RST_U0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLUS_CNT_RST_U0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type PLUS_CNT_RST_U0_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 0>;
 #[doc = "Field `CNT_PAUSE_U0` reader - Set this bit to pause unit0's counter."]
-pub struct CNT_PAUSE_U0_R(crate::FieldReader<bool>);
-impl CNT_PAUSE_U0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_PAUSE_U0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_PAUSE_U0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_PAUSE_U0_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U0` writer - Set this bit to pause unit0's counter."]
-pub struct CNT_PAUSE_U0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_PAUSE_U0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type CNT_PAUSE_U0_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 1>;
 #[doc = "Field `PLUS_CNT_RST_U1` reader - Set this bit to clear unit1's counter."]
-pub struct PLUS_CNT_RST_U1_R(crate::FieldReader<bool>);
-impl PLUS_CNT_RST_U1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLUS_CNT_RST_U1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLUS_CNT_RST_U1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLUS_CNT_RST_U1_R = crate::BitReader<bool>;
 #[doc = "Field `PLUS_CNT_RST_U1` writer - Set this bit to clear unit1's counter."]
-pub struct PLUS_CNT_RST_U1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLUS_CNT_RST_U1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PLUS_CNT_RST_U1_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 2>;
 #[doc = "Field `CNT_PAUSE_U1` reader - Set this bit to pause unit1's counter."]
-pub struct CNT_PAUSE_U1_R(crate::FieldReader<bool>);
-impl CNT_PAUSE_U1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_PAUSE_U1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_PAUSE_U1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_PAUSE_U1_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U1` writer - Set this bit to pause unit1's counter."]
-pub struct CNT_PAUSE_U1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_PAUSE_U1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type CNT_PAUSE_U1_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 3>;
 #[doc = "Field `PLUS_CNT_RST_U2` reader - Set this bit to clear unit2's counter."]
-pub struct PLUS_CNT_RST_U2_R(crate::FieldReader<bool>);
-impl PLUS_CNT_RST_U2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLUS_CNT_RST_U2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLUS_CNT_RST_U2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLUS_CNT_RST_U2_R = crate::BitReader<bool>;
 #[doc = "Field `PLUS_CNT_RST_U2` writer - Set this bit to clear unit2's counter."]
-pub struct PLUS_CNT_RST_U2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLUS_CNT_RST_U2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PLUS_CNT_RST_U2_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 4>;
 #[doc = "Field `CNT_PAUSE_U2` reader - Set this bit to pause unit2's counter."]
-pub struct CNT_PAUSE_U2_R(crate::FieldReader<bool>);
-impl CNT_PAUSE_U2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_PAUSE_U2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_PAUSE_U2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_PAUSE_U2_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U2` writer - Set this bit to pause unit2's counter."]
-pub struct CNT_PAUSE_U2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_PAUSE_U2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type CNT_PAUSE_U2_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 5>;
 #[doc = "Field `PLUS_CNT_RST_U3` reader - Set this bit to clear unit3's counter."]
-pub struct PLUS_CNT_RST_U3_R(crate::FieldReader<bool>);
-impl PLUS_CNT_RST_U3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLUS_CNT_RST_U3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLUS_CNT_RST_U3_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLUS_CNT_RST_U3_R = crate::BitReader<bool>;
 #[doc = "Field `PLUS_CNT_RST_U3` writer - Set this bit to clear unit3's counter."]
-pub struct PLUS_CNT_RST_U3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLUS_CNT_RST_U3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type PLUS_CNT_RST_U3_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 6>;
 #[doc = "Field `CNT_PAUSE_U3` reader - Set this bit to pause unit3's counter."]
-pub struct CNT_PAUSE_U3_R(crate::FieldReader<bool>);
-impl CNT_PAUSE_U3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_PAUSE_U3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_PAUSE_U3_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_PAUSE_U3_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U3` writer - Set this bit to pause unit3's counter."]
-pub struct CNT_PAUSE_U3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_PAUSE_U3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type CNT_PAUSE_U3_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 7>;
 #[doc = "Field `PLUS_CNT_RST_U4` reader - Set this bit to clear unit4's counter."]
-pub struct PLUS_CNT_RST_U4_R(crate::FieldReader<bool>);
-impl PLUS_CNT_RST_U4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLUS_CNT_RST_U4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLUS_CNT_RST_U4_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLUS_CNT_RST_U4_R = crate::BitReader<bool>;
 #[doc = "Field `PLUS_CNT_RST_U4` writer - Set this bit to clear unit4's counter."]
-pub struct PLUS_CNT_RST_U4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLUS_CNT_RST_U4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type PLUS_CNT_RST_U4_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 8>;
 #[doc = "Field `CNT_PAUSE_U4` reader - Set this bit to pause unit4's counter."]
-pub struct CNT_PAUSE_U4_R(crate::FieldReader<bool>);
-impl CNT_PAUSE_U4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_PAUSE_U4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_PAUSE_U4_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_PAUSE_U4_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U4` writer - Set this bit to pause unit4's counter."]
-pub struct CNT_PAUSE_U4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_PAUSE_U4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type CNT_PAUSE_U4_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 9>;
 #[doc = "Field `PLUS_CNT_RST_U5` reader - Set this bit to clear unit5's counter."]
-pub struct PLUS_CNT_RST_U5_R(crate::FieldReader<bool>);
-impl PLUS_CNT_RST_U5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLUS_CNT_RST_U5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLUS_CNT_RST_U5_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLUS_CNT_RST_U5_R = crate::BitReader<bool>;
 #[doc = "Field `PLUS_CNT_RST_U5` writer - Set this bit to clear unit5's counter."]
-pub struct PLUS_CNT_RST_U5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLUS_CNT_RST_U5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type PLUS_CNT_RST_U5_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 10>;
 #[doc = "Field `CNT_PAUSE_U5` reader - Set this bit to pause unit5's counter."]
-pub struct CNT_PAUSE_U5_R(crate::FieldReader<bool>);
-impl CNT_PAUSE_U5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_PAUSE_U5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_PAUSE_U5_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_PAUSE_U5_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U5` writer - Set this bit to pause unit5's counter."]
-pub struct CNT_PAUSE_U5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_PAUSE_U5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type CNT_PAUSE_U5_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 11>;
 #[doc = "Field `PLUS_CNT_RST_U6` reader - Set this bit to clear unit6's counter."]
-pub struct PLUS_CNT_RST_U6_R(crate::FieldReader<bool>);
-impl PLUS_CNT_RST_U6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLUS_CNT_RST_U6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLUS_CNT_RST_U6_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLUS_CNT_RST_U6_R = crate::BitReader<bool>;
 #[doc = "Field `PLUS_CNT_RST_U6` writer - Set this bit to clear unit6's counter."]
-pub struct PLUS_CNT_RST_U6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLUS_CNT_RST_U6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type PLUS_CNT_RST_U6_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 12>;
 #[doc = "Field `CNT_PAUSE_U6` reader - Set this bit to pause unit6's counter."]
-pub struct CNT_PAUSE_U6_R(crate::FieldReader<bool>);
-impl CNT_PAUSE_U6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_PAUSE_U6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_PAUSE_U6_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_PAUSE_U6_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U6` writer - Set this bit to pause unit6's counter."]
-pub struct CNT_PAUSE_U6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_PAUSE_U6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type CNT_PAUSE_U6_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 13>;
 #[doc = "Field `PLUS_CNT_RST_U7` reader - Set this bit to clear unit7's counter."]
-pub struct PLUS_CNT_RST_U7_R(crate::FieldReader<bool>);
-impl PLUS_CNT_RST_U7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLUS_CNT_RST_U7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLUS_CNT_RST_U7_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLUS_CNT_RST_U7_R = crate::BitReader<bool>;
 #[doc = "Field `PLUS_CNT_RST_U7` writer - Set this bit to clear unit7's counter."]
-pub struct PLUS_CNT_RST_U7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLUS_CNT_RST_U7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type PLUS_CNT_RST_U7_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 14>;
 #[doc = "Field `CNT_PAUSE_U7` reader - Set this bit to pause unit7's counter."]
-pub struct CNT_PAUSE_U7_R(crate::FieldReader<bool>);
-impl CNT_PAUSE_U7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CNT_PAUSE_U7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CNT_PAUSE_U7_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CNT_PAUSE_U7_R = crate::BitReader<bool>;
 #[doc = "Field `CNT_PAUSE_U7` writer - Set this bit to pause unit7's counter."]
-pub struct CNT_PAUSE_U7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CNT_PAUSE_U7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type CNT_PAUSE_U7_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 15>;
 #[doc = "Field `CLK_EN` reader - "]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - "]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, 16>;
 impl R {
     #[doc = "Bit 0 - Set this bit to clear unit0's counter."]
     #[inline(always)]
@@ -754,87 +193,87 @@ impl W {
     #[doc = "Bit 0 - Set this bit to clear unit0's counter."]
     #[inline(always)]
     pub fn plus_cnt_rst_u0(&mut self) -> PLUS_CNT_RST_U0_W {
-        PLUS_CNT_RST_U0_W { w: self }
+        PLUS_CNT_RST_U0_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to pause unit0's counter."]
     #[inline(always)]
     pub fn cnt_pause_u0(&mut self) -> CNT_PAUSE_U0_W {
-        CNT_PAUSE_U0_W { w: self }
+        CNT_PAUSE_U0_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to clear unit1's counter."]
     #[inline(always)]
     pub fn plus_cnt_rst_u1(&mut self) -> PLUS_CNT_RST_U1_W {
-        PLUS_CNT_RST_U1_W { w: self }
+        PLUS_CNT_RST_U1_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to pause unit1's counter."]
     #[inline(always)]
     pub fn cnt_pause_u1(&mut self) -> CNT_PAUSE_U1_W {
-        CNT_PAUSE_U1_W { w: self }
+        CNT_PAUSE_U1_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to clear unit2's counter."]
     #[inline(always)]
     pub fn plus_cnt_rst_u2(&mut self) -> PLUS_CNT_RST_U2_W {
-        PLUS_CNT_RST_U2_W { w: self }
+        PLUS_CNT_RST_U2_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to pause unit2's counter."]
     #[inline(always)]
     pub fn cnt_pause_u2(&mut self) -> CNT_PAUSE_U2_W {
-        CNT_PAUSE_U2_W { w: self }
+        CNT_PAUSE_U2_W::new(self)
     }
     #[doc = "Bit 6 - Set this bit to clear unit3's counter."]
     #[inline(always)]
     pub fn plus_cnt_rst_u3(&mut self) -> PLUS_CNT_RST_U3_W {
-        PLUS_CNT_RST_U3_W { w: self }
+        PLUS_CNT_RST_U3_W::new(self)
     }
     #[doc = "Bit 7 - Set this bit to pause unit3's counter."]
     #[inline(always)]
     pub fn cnt_pause_u3(&mut self) -> CNT_PAUSE_U3_W {
-        CNT_PAUSE_U3_W { w: self }
+        CNT_PAUSE_U3_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to clear unit4's counter."]
     #[inline(always)]
     pub fn plus_cnt_rst_u4(&mut self) -> PLUS_CNT_RST_U4_W {
-        PLUS_CNT_RST_U4_W { w: self }
+        PLUS_CNT_RST_U4_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to pause unit4's counter."]
     #[inline(always)]
     pub fn cnt_pause_u4(&mut self) -> CNT_PAUSE_U4_W {
-        CNT_PAUSE_U4_W { w: self }
+        CNT_PAUSE_U4_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to clear unit5's counter."]
     #[inline(always)]
     pub fn plus_cnt_rst_u5(&mut self) -> PLUS_CNT_RST_U5_W {
-        PLUS_CNT_RST_U5_W { w: self }
+        PLUS_CNT_RST_U5_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to pause unit5's counter."]
     #[inline(always)]
     pub fn cnt_pause_u5(&mut self) -> CNT_PAUSE_U5_W {
-        CNT_PAUSE_U5_W { w: self }
+        CNT_PAUSE_U5_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to clear unit6's counter."]
     #[inline(always)]
     pub fn plus_cnt_rst_u6(&mut self) -> PLUS_CNT_RST_U6_W {
-        PLUS_CNT_RST_U6_W { w: self }
+        PLUS_CNT_RST_U6_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to pause unit6's counter."]
     #[inline(always)]
     pub fn cnt_pause_u6(&mut self) -> CNT_PAUSE_U6_W {
-        CNT_PAUSE_U6_W { w: self }
+        CNT_PAUSE_U6_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to clear unit7's counter."]
     #[inline(always)]
     pub fn plus_cnt_rst_u7(&mut self) -> PLUS_CNT_RST_U7_W {
-        PLUS_CNT_RST_U7_W { w: self }
+        PLUS_CNT_RST_U7_W::new(self)
     }
     #[doc = "Bit 15 - Set this bit to pause unit7's counter."]
     #[inline(always)]
     pub fn cnt_pause_u7(&mut self) -> CNT_PAUSE_U7_W {
-        CNT_PAUSE_U7_W { w: self }
+        CNT_PAUSE_U7_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,35 +14,9 @@ impl From<crate::R<SAR_TOUCH_OUT5_SPEC>> for R {
     }
 }
 #[doc = "Field `TOUCH_MEAS_OUT9` reader - the counter for touch pad 9"]
-pub struct TOUCH_MEAS_OUT9_R(crate::FieldReader<u16>);
-impl TOUCH_MEAS_OUT9_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TOUCH_MEAS_OUT9_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_MEAS_OUT9_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_MEAS_OUT9_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOUCH_MEAS_OUT8` reader - the counter for touch pad 8"]
-pub struct TOUCH_MEAS_OUT8_R(crate::FieldReader<u16>);
-impl TOUCH_MEAS_OUT8_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TOUCH_MEAS_OUT8_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOUCH_MEAS_OUT8_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOUCH_MEAS_OUT8_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - the counter for touch pad 9"]
     #[inline(always)]

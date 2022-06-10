@@ -14,20 +14,7 @@ impl From<crate::R<CORE_1_DRAM0_EXCEPTION_MONITOR_2_SPEC>> for R {
     }
 }
 #[doc = "Field `CORE_1_DRAM0_RECORDING_PC_0` reader - The first dram0's PC status when trigger DRAM busy interrupt"]
-pub struct CORE_1_DRAM0_RECORDING_PC_0_R(crate::FieldReader<u32>);
-impl CORE_1_DRAM0_RECORDING_PC_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_1_DRAM0_RECORDING_PC_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_DRAM0_RECORDING_PC_0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_DRAM0_RECORDING_PC_0_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - The first dram0's PC status when trigger DRAM busy interrupt"]
     #[inline(always)]

@@ -14,20 +14,7 @@ impl From<crate::R<PRO_AHB_4_SPEC>> for R {
     }
 }
 #[doc = "Field `PRO_AHB_ILG_ST` reader - Record the illegitimate information of PeriBus2. \\[31:2\\]: store the bits \\[31:2\\] of PeriBus2 address. \\[1\\]: 1 means data access, 0 means instruction access. \\[0\\]: 1 means write operation, 0 means read operation."]
-pub struct PRO_AHB_ILG_ST_R(crate::FieldReader<u32>);
-impl PRO_AHB_ILG_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PRO_AHB_ILG_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_AHB_ILG_ST_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_AHB_ILG_ST_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Record the illegitimate information of PeriBus2. \\[31:2\\]: store the bits \\[31:2\\] of PeriBus2 address. \\[1\\]: 1 means data access, 0 means instruction access. \\[0\\]: 1 means write operation, 0 means read operation."]
     #[inline(always)]

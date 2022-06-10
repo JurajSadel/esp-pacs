@@ -35,96 +35,19 @@ impl From<crate::W<I2S_LC_HUNG_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `I2S_LC_FIFO_TIMEOUT` reader - the i2s_tx_hung_int interrupt or the i2s_rx_hung_int interrupt will be triggered when fifo hung counter is equal to this value"]
-pub struct I2S_LC_FIFO_TIMEOUT_R(crate::FieldReader<u8>);
-impl I2S_LC_FIFO_TIMEOUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        I2S_LC_FIFO_TIMEOUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_LC_FIFO_TIMEOUT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_LC_FIFO_TIMEOUT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `I2S_LC_FIFO_TIMEOUT` writer - the i2s_tx_hung_int interrupt or the i2s_rx_hung_int interrupt will be triggered when fifo hung counter is equal to this value"]
-pub struct I2S_LC_FIFO_TIMEOUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_LC_FIFO_TIMEOUT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type I2S_LC_FIFO_TIMEOUT_W<'a> =
+    crate::FieldWriter<'a, u32, I2S_LC_HUNG_CONF_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `I2S_LC_FIFO_TIMEOUT_SHIFT` reader - The bits are used to scale tick counter threshold. The tick counter is reset when counter value >= 88000/2^i2s_lc_fifo_timeout_shift"]
-pub struct I2S_LC_FIFO_TIMEOUT_SHIFT_R(crate::FieldReader<u8>);
-impl I2S_LC_FIFO_TIMEOUT_SHIFT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        I2S_LC_FIFO_TIMEOUT_SHIFT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_LC_FIFO_TIMEOUT_SHIFT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_LC_FIFO_TIMEOUT_SHIFT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `I2S_LC_FIFO_TIMEOUT_SHIFT` writer - The bits are used to scale tick counter threshold. The tick counter is reset when counter value >= 88000/2^i2s_lc_fifo_timeout_shift"]
-pub struct I2S_LC_FIFO_TIMEOUT_SHIFT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_LC_FIFO_TIMEOUT_SHIFT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 8)) | ((value as u32 & 7) << 8);
-        self.w
-    }
-}
+pub type I2S_LC_FIFO_TIMEOUT_SHIFT_W<'a> =
+    crate::FieldWriter<'a, u32, I2S_LC_HUNG_CONF_SPEC, u8, u8, 3, 8>;
 #[doc = "Field `I2S_LC_FIFO_TIMEOUT_ENA` reader - The enable bit for FIFO timeout"]
-pub struct I2S_LC_FIFO_TIMEOUT_ENA_R(crate::FieldReader<bool>);
-impl I2S_LC_FIFO_TIMEOUT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2S_LC_FIFO_TIMEOUT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2S_LC_FIFO_TIMEOUT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2S_LC_FIFO_TIMEOUT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `I2S_LC_FIFO_TIMEOUT_ENA` writer - The enable bit for FIFO timeout"]
-pub struct I2S_LC_FIFO_TIMEOUT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2S_LC_FIFO_TIMEOUT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type I2S_LC_FIFO_TIMEOUT_ENA_W<'a> = crate::BitWriter<'a, u32, I2S_LC_HUNG_CONF_SPEC, bool, 11>;
 impl R {
     #[doc = "Bits 0:7 - the i2s_tx_hung_int interrupt or the i2s_rx_hung_int interrupt will be triggered when fifo hung counter is equal to this value"]
     #[inline(always)]
@@ -146,17 +69,17 @@ impl W {
     #[doc = "Bits 0:7 - the i2s_tx_hung_int interrupt or the i2s_rx_hung_int interrupt will be triggered when fifo hung counter is equal to this value"]
     #[inline(always)]
     pub fn i2s_lc_fifo_timeout(&mut self) -> I2S_LC_FIFO_TIMEOUT_W {
-        I2S_LC_FIFO_TIMEOUT_W { w: self }
+        I2S_LC_FIFO_TIMEOUT_W::new(self)
     }
     #[doc = "Bits 8:10 - The bits are used to scale tick counter threshold. The tick counter is reset when counter value >= 88000/2^i2s_lc_fifo_timeout_shift"]
     #[inline(always)]
     pub fn i2s_lc_fifo_timeout_shift(&mut self) -> I2S_LC_FIFO_TIMEOUT_SHIFT_W {
-        I2S_LC_FIFO_TIMEOUT_SHIFT_W { w: self }
+        I2S_LC_FIFO_TIMEOUT_SHIFT_W::new(self)
     }
     #[doc = "Bit 11 - The enable bit for FIFO timeout"]
     #[inline(always)]
     pub fn i2s_lc_fifo_timeout_ena(&mut self) -> I2S_LC_FIFO_TIMEOUT_ENA_W {
-        I2S_LC_FIFO_TIMEOUT_ENA_W { w: self }
+        I2S_LC_FIFO_TIMEOUT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,708 +35,81 @@ impl From<crate::W<INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `RXFIFO_FULL_INT_ENA` reader - This is the enable bit for rxfifo_full_int_st register."]
-pub struct RXFIFO_FULL_INT_ENA_R(crate::FieldReader<bool>);
-impl RXFIFO_FULL_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXFIFO_FULL_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_FULL_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_FULL_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFO_FULL_INT_ENA` writer - This is the enable bit for rxfifo_full_int_st register."]
-pub struct RXFIFO_FULL_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXFIFO_FULL_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type RXFIFO_FULL_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 0>;
 #[doc = "Field `TXFIFO_EMPTY_INT_ENA` reader - This is the enable bit for rxfifo_full_int_st register."]
-pub struct TXFIFO_EMPTY_INT_ENA_R(crate::FieldReader<bool>);
-impl TXFIFO_EMPTY_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXFIFO_EMPTY_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFIFO_EMPTY_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFIFO_EMPTY_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TXFIFO_EMPTY_INT_ENA` writer - This is the enable bit for rxfifo_full_int_st register."]
-pub struct TXFIFO_EMPTY_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXFIFO_EMPTY_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type TXFIFO_EMPTY_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 1>;
 #[doc = "Field `PARITY_ERR_INT_ENA` reader - This is the enable bit for parity_err_int_st register."]
-pub struct PARITY_ERR_INT_ENA_R(crate::FieldReader<bool>);
-impl PARITY_ERR_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PARITY_ERR_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PARITY_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PARITY_ERR_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PARITY_ERR_INT_ENA` writer - This is the enable bit for parity_err_int_st register."]
-pub struct PARITY_ERR_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PARITY_ERR_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PARITY_ERR_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 2>;
 #[doc = "Field `FRM_ERR_INT_ENA` reader - This is the enable bit for frm_err_int_st register."]
-pub struct FRM_ERR_INT_ENA_R(crate::FieldReader<bool>);
-impl FRM_ERR_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FRM_ERR_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRM_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FRM_ERR_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `FRM_ERR_INT_ENA` writer - This is the enable bit for frm_err_int_st register."]
-pub struct FRM_ERR_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRM_ERR_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type FRM_ERR_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 3>;
 #[doc = "Field `RXFIFO_OVF_INT_ENA` reader - This is the enable bit for rxfifo_ovf_int_st register."]
-pub struct RXFIFO_OVF_INT_ENA_R(crate::FieldReader<bool>);
-impl RXFIFO_OVF_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXFIFO_OVF_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_OVF_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFO_OVF_INT_ENA` writer - This is the enable bit for rxfifo_ovf_int_st register."]
-pub struct RXFIFO_OVF_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXFIFO_OVF_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type RXFIFO_OVF_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 4>;
 #[doc = "Field `DSR_CHG_INT_ENA` reader - This is the enable bit for dsr_chg_int_st register."]
-pub struct DSR_CHG_INT_ENA_R(crate::FieldReader<bool>);
-impl DSR_CHG_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DSR_CHG_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DSR_CHG_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DSR_CHG_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `DSR_CHG_INT_ENA` writer - This is the enable bit for dsr_chg_int_st register."]
-pub struct DSR_CHG_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DSR_CHG_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type DSR_CHG_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 5>;
 #[doc = "Field `CTS_CHG_INT_ENA` reader - This is the enable bit for cts_chg_int_st register."]
-pub struct CTS_CHG_INT_ENA_R(crate::FieldReader<bool>);
-impl CTS_CHG_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CTS_CHG_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CTS_CHG_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CTS_CHG_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `CTS_CHG_INT_ENA` writer - This is the enable bit for cts_chg_int_st register."]
-pub struct CTS_CHG_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CTS_CHG_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type CTS_CHG_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 6>;
 #[doc = "Field `BRK_DET_INT_ENA` reader - This is the enable bit for brk_det_int_st register."]
-pub struct BRK_DET_INT_ENA_R(crate::FieldReader<bool>);
-impl BRK_DET_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BRK_DET_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BRK_DET_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BRK_DET_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `BRK_DET_INT_ENA` writer - This is the enable bit for brk_det_int_st register."]
-pub struct BRK_DET_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BRK_DET_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type BRK_DET_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 7>;
 #[doc = "Field `RXFIFO_TOUT_INT_ENA` reader - This is the enable bit for rxfifo_tout_int_st register."]
-pub struct RXFIFO_TOUT_INT_ENA_R(crate::FieldReader<bool>);
-impl RXFIFO_TOUT_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXFIFO_TOUT_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIFO_TOUT_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXFIFO_TOUT_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RXFIFO_TOUT_INT_ENA` writer - This is the enable bit for rxfifo_tout_int_st register."]
-pub struct RXFIFO_TOUT_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXFIFO_TOUT_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type RXFIFO_TOUT_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 8>;
 #[doc = "Field `SW_XON_INT_ENA` reader - This is the enable bit for sw_xon_int_st register."]
-pub struct SW_XON_INT_ENA_R(crate::FieldReader<bool>);
-impl SW_XON_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SW_XON_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_XON_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_XON_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `SW_XON_INT_ENA` writer - This is the enable bit for sw_xon_int_st register."]
-pub struct SW_XON_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_XON_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type SW_XON_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 9>;
 #[doc = "Field `SW_XOFF_INT_ENA` reader - This is the enable bit for sw_xoff_int_st register."]
-pub struct SW_XOFF_INT_ENA_R(crate::FieldReader<bool>);
-impl SW_XOFF_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SW_XOFF_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_XOFF_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_XOFF_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `SW_XOFF_INT_ENA` writer - This is the enable bit for sw_xoff_int_st register."]
-pub struct SW_XOFF_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_XOFF_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type SW_XOFF_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 10>;
 #[doc = "Field `GLITCH_DET_INT_ENA` reader - This is the enable bit for glitch_det_int_st register."]
-pub struct GLITCH_DET_INT_ENA_R(crate::FieldReader<bool>);
-impl GLITCH_DET_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GLITCH_DET_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GLITCH_DET_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GLITCH_DET_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `GLITCH_DET_INT_ENA` writer - This is the enable bit for glitch_det_int_st register."]
-pub struct GLITCH_DET_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GLITCH_DET_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type GLITCH_DET_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 11>;
 #[doc = "Field `TX_BRK_DONE_INT_ENA` reader - This is the enable bit for tx_brk_done_int_st register."]
-pub struct TX_BRK_DONE_INT_ENA_R(crate::FieldReader<bool>);
-impl TX_BRK_DONE_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_BRK_DONE_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_BRK_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_BRK_DONE_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TX_BRK_DONE_INT_ENA` writer - This is the enable bit for tx_brk_done_int_st register."]
-pub struct TX_BRK_DONE_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_BRK_DONE_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type TX_BRK_DONE_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 12>;
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_ENA` reader - This is the enable bit for tx_brk_idle_done_int_st register."]
-pub struct TX_BRK_IDLE_DONE_INT_ENA_R(crate::FieldReader<bool>);
-impl TX_BRK_IDLE_DONE_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_BRK_IDLE_DONE_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_BRK_IDLE_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_BRK_IDLE_DONE_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TX_BRK_IDLE_DONE_INT_ENA` writer - This is the enable bit for tx_brk_idle_done_int_st register."]
-pub struct TX_BRK_IDLE_DONE_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_BRK_IDLE_DONE_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type TX_BRK_IDLE_DONE_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 13>;
 #[doc = "Field `TX_DONE_INT_ENA` reader - This is the enable bit for tx_done_int_st register."]
-pub struct TX_DONE_INT_ENA_R(crate::FieldReader<bool>);
-impl TX_DONE_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TX_DONE_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TX_DONE_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TX_DONE_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `TX_DONE_INT_ENA` writer - This is the enable bit for tx_done_int_st register."]
-pub struct TX_DONE_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TX_DONE_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type TX_DONE_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 14>;
 #[doc = "Field `RS485_PARITY_ERR_INT_ENA` reader - This is the enable bit for rs485_parity_err_int_st register."]
-pub struct RS485_PARITY_ERR_INT_ENA_R(crate::FieldReader<bool>);
-impl RS485_PARITY_ERR_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RS485_PARITY_ERR_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RS485_PARITY_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RS485_PARITY_ERR_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RS485_PARITY_ERR_INT_ENA` writer - This is the enable bit for rs485_parity_err_int_st register."]
-pub struct RS485_PARITY_ERR_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RS485_PARITY_ERR_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type RS485_PARITY_ERR_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 15>;
 #[doc = "Field `RS485_FRM_ERR_INT_ENA` reader - This is the enable bit for rs485_parity_err_int_st register."]
-pub struct RS485_FRM_ERR_INT_ENA_R(crate::FieldReader<bool>);
-impl RS485_FRM_ERR_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RS485_FRM_ERR_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RS485_FRM_ERR_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RS485_FRM_ERR_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RS485_FRM_ERR_INT_ENA` writer - This is the enable bit for rs485_parity_err_int_st register."]
-pub struct RS485_FRM_ERR_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RS485_FRM_ERR_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type RS485_FRM_ERR_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 16>;
 #[doc = "Field `RS485_CLASH_INT_ENA` reader - This is the enable bit for rs485_clash_int_st register."]
-pub struct RS485_CLASH_INT_ENA_R(crate::FieldReader<bool>);
-impl RS485_CLASH_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RS485_CLASH_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RS485_CLASH_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RS485_CLASH_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `RS485_CLASH_INT_ENA` writer - This is the enable bit for rs485_clash_int_st register."]
-pub struct RS485_CLASH_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RS485_CLASH_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type RS485_CLASH_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 17>;
 #[doc = "Field `AT_CMD_CHAR_DET_INT_ENA` reader - This is the enable bit for at_cmd_char_det_int_st register."]
-pub struct AT_CMD_CHAR_DET_INT_ENA_R(crate::FieldReader<bool>);
-impl AT_CMD_CHAR_DET_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AT_CMD_CHAR_DET_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AT_CMD_CHAR_DET_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AT_CMD_CHAR_DET_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `AT_CMD_CHAR_DET_INT_ENA` writer - This is the enable bit for at_cmd_char_det_int_st register."]
-pub struct AT_CMD_CHAR_DET_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AT_CMD_CHAR_DET_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type AT_CMD_CHAR_DET_INT_ENA_W<'a> = crate::BitWriter<'a, u32, INT_ENA_SPEC, bool, 18>;
 impl R {
     #[doc = "Bit 0 - This is the enable bit for rxfifo_full_int_st register."]
     #[inline(always)]
@@ -838,97 +211,97 @@ impl W {
     #[doc = "Bit 0 - This is the enable bit for rxfifo_full_int_st register."]
     #[inline(always)]
     pub fn rxfifo_full_int_ena(&mut self) -> RXFIFO_FULL_INT_ENA_W {
-        RXFIFO_FULL_INT_ENA_W { w: self }
+        RXFIFO_FULL_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1 - This is the enable bit for rxfifo_full_int_st register."]
     #[inline(always)]
     pub fn txfifo_empty_int_ena(&mut self) -> TXFIFO_EMPTY_INT_ENA_W {
-        TXFIFO_EMPTY_INT_ENA_W { w: self }
+        TXFIFO_EMPTY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - This is the enable bit for parity_err_int_st register."]
     #[inline(always)]
     pub fn parity_err_int_ena(&mut self) -> PARITY_ERR_INT_ENA_W {
-        PARITY_ERR_INT_ENA_W { w: self }
+        PARITY_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3 - This is the enable bit for frm_err_int_st register."]
     #[inline(always)]
     pub fn frm_err_int_ena(&mut self) -> FRM_ERR_INT_ENA_W {
-        FRM_ERR_INT_ENA_W { w: self }
+        FRM_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4 - This is the enable bit for rxfifo_ovf_int_st register."]
     #[inline(always)]
     pub fn rxfifo_ovf_int_ena(&mut self) -> RXFIFO_OVF_INT_ENA_W {
-        RXFIFO_OVF_INT_ENA_W { w: self }
+        RXFIFO_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - This is the enable bit for dsr_chg_int_st register."]
     #[inline(always)]
     pub fn dsr_chg_int_ena(&mut self) -> DSR_CHG_INT_ENA_W {
-        DSR_CHG_INT_ENA_W { w: self }
+        DSR_CHG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6 - This is the enable bit for cts_chg_int_st register."]
     #[inline(always)]
     pub fn cts_chg_int_ena(&mut self) -> CTS_CHG_INT_ENA_W {
-        CTS_CHG_INT_ENA_W { w: self }
+        CTS_CHG_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7 - This is the enable bit for brk_det_int_st register."]
     #[inline(always)]
     pub fn brk_det_int_ena(&mut self) -> BRK_DET_INT_ENA_W {
-        BRK_DET_INT_ENA_W { w: self }
+        BRK_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8 - This is the enable bit for rxfifo_tout_int_st register."]
     #[inline(always)]
     pub fn rxfifo_tout_int_ena(&mut self) -> RXFIFO_TOUT_INT_ENA_W {
-        RXFIFO_TOUT_INT_ENA_W { w: self }
+        RXFIFO_TOUT_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9 - This is the enable bit for sw_xon_int_st register."]
     #[inline(always)]
     pub fn sw_xon_int_ena(&mut self) -> SW_XON_INT_ENA_W {
-        SW_XON_INT_ENA_W { w: self }
+        SW_XON_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10 - This is the enable bit for sw_xoff_int_st register."]
     #[inline(always)]
     pub fn sw_xoff_int_ena(&mut self) -> SW_XOFF_INT_ENA_W {
-        SW_XOFF_INT_ENA_W { w: self }
+        SW_XOFF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11 - This is the enable bit for glitch_det_int_st register."]
     #[inline(always)]
     pub fn glitch_det_int_ena(&mut self) -> GLITCH_DET_INT_ENA_W {
-        GLITCH_DET_INT_ENA_W { w: self }
+        GLITCH_DET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12 - This is the enable bit for tx_brk_done_int_st register."]
     #[inline(always)]
     pub fn tx_brk_done_int_ena(&mut self) -> TX_BRK_DONE_INT_ENA_W {
-        TX_BRK_DONE_INT_ENA_W { w: self }
+        TX_BRK_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13 - This is the enable bit for tx_brk_idle_done_int_st register."]
     #[inline(always)]
     pub fn tx_brk_idle_done_int_ena(&mut self) -> TX_BRK_IDLE_DONE_INT_ENA_W {
-        TX_BRK_IDLE_DONE_INT_ENA_W { w: self }
+        TX_BRK_IDLE_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14 - This is the enable bit for tx_done_int_st register."]
     #[inline(always)]
     pub fn tx_done_int_ena(&mut self) -> TX_DONE_INT_ENA_W {
-        TX_DONE_INT_ENA_W { w: self }
+        TX_DONE_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15 - This is the enable bit for rs485_parity_err_int_st register."]
     #[inline(always)]
     pub fn rs485_parity_err_int_ena(&mut self) -> RS485_PARITY_ERR_INT_ENA_W {
-        RS485_PARITY_ERR_INT_ENA_W { w: self }
+        RS485_PARITY_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 16 - This is the enable bit for rs485_parity_err_int_st register."]
     #[inline(always)]
     pub fn rs485_frm_err_int_ena(&mut self) -> RS485_FRM_ERR_INT_ENA_W {
-        RS485_FRM_ERR_INT_ENA_W { w: self }
+        RS485_FRM_ERR_INT_ENA_W::new(self)
     }
     #[doc = "Bit 17 - This is the enable bit for rs485_clash_int_st register."]
     #[inline(always)]
     pub fn rs485_clash_int_ena(&mut self) -> RS485_CLASH_INT_ENA_W {
-        RS485_CLASH_INT_ENA_W { w: self }
+        RS485_CLASH_INT_ENA_W::new(self)
     }
     #[doc = "Bit 18 - This is the enable bit for at_cmd_char_det_int_st register."]
     #[inline(always)]
     pub fn at_cmd_char_det_int_ena(&mut self) -> AT_CMD_CHAR_DET_INT_ENA_W {
-        AT_CMD_CHAR_DET_INT_ENA_W { w: self }
+        AT_CMD_CHAR_DET_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

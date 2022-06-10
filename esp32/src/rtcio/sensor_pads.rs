@@ -35,853 +35,101 @@ impl From<crate::W<SENSOR_PADS_SPEC>> for W {
     }
 }
 #[doc = "Field `SENSE4_FUN_IE` reader - the input enable of the pad"]
-pub struct SENSE4_FUN_IE_R(crate::FieldReader<bool>);
-impl SENSE4_FUN_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE4_FUN_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE4_FUN_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE4_FUN_IE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE4_FUN_IE` writer - the input enable of the pad"]
-pub struct SENSE4_FUN_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE4_FUN_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type SENSE4_FUN_IE_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 4>;
 #[doc = "Field `SENSE4_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct SENSE4_SLP_IE_R(crate::FieldReader<bool>);
-impl SENSE4_SLP_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE4_SLP_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE4_SLP_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE4_SLP_IE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE4_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub struct SENSE4_SLP_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE4_SLP_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type SENSE4_SLP_IE_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 5>;
 #[doc = "Field `SENSE4_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct SENSE4_SLP_SEL_R(crate::FieldReader<bool>);
-impl SENSE4_SLP_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE4_SLP_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE4_SLP_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE4_SLP_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE4_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub struct SENSE4_SLP_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE4_SLP_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type SENSE4_SLP_SEL_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 6>;
 #[doc = "Field `SENSE4_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct SENSE4_FUN_SEL_R(crate::FieldReader<u8>);
-impl SENSE4_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SENSE4_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE4_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE4_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SENSE4_FUN_SEL` writer - the functional selection signal of the pad"]
-pub struct SENSE4_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE4_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 7)) | ((value as u32 & 3) << 7);
-        self.w
-    }
-}
+pub type SENSE4_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, SENSOR_PADS_SPEC, u8, u8, 2, 7>;
 #[doc = "Field `SENSE3_FUN_IE` reader - the input enable of the pad"]
-pub struct SENSE3_FUN_IE_R(crate::FieldReader<bool>);
-impl SENSE3_FUN_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE3_FUN_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE3_FUN_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE3_FUN_IE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE3_FUN_IE` writer - the input enable of the pad"]
-pub struct SENSE3_FUN_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE3_FUN_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type SENSE3_FUN_IE_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 9>;
 #[doc = "Field `SENSE3_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct SENSE3_SLP_IE_R(crate::FieldReader<bool>);
-impl SENSE3_SLP_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE3_SLP_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE3_SLP_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE3_SLP_IE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE3_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub struct SENSE3_SLP_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE3_SLP_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type SENSE3_SLP_IE_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 10>;
 #[doc = "Field `SENSE3_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct SENSE3_SLP_SEL_R(crate::FieldReader<bool>);
-impl SENSE3_SLP_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE3_SLP_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE3_SLP_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE3_SLP_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE3_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub struct SENSE3_SLP_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE3_SLP_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type SENSE3_SLP_SEL_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 11>;
 #[doc = "Field `SENSE3_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct SENSE3_FUN_SEL_R(crate::FieldReader<u8>);
-impl SENSE3_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SENSE3_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE3_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE3_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SENSE3_FUN_SEL` writer - the functional selection signal of the pad"]
-pub struct SENSE3_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE3_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type SENSE3_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, SENSOR_PADS_SPEC, u8, u8, 2, 12>;
 #[doc = "Field `SENSE2_FUN_IE` reader - the input enable of the pad"]
-pub struct SENSE2_FUN_IE_R(crate::FieldReader<bool>);
-impl SENSE2_FUN_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE2_FUN_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE2_FUN_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE2_FUN_IE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE2_FUN_IE` writer - the input enable of the pad"]
-pub struct SENSE2_FUN_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE2_FUN_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type SENSE2_FUN_IE_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 14>;
 #[doc = "Field `SENSE2_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct SENSE2_SLP_IE_R(crate::FieldReader<bool>);
-impl SENSE2_SLP_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE2_SLP_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE2_SLP_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE2_SLP_IE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE2_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub struct SENSE2_SLP_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE2_SLP_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type SENSE2_SLP_IE_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 15>;
 #[doc = "Field `SENSE2_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct SENSE2_SLP_SEL_R(crate::FieldReader<bool>);
-impl SENSE2_SLP_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE2_SLP_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE2_SLP_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE2_SLP_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE2_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub struct SENSE2_SLP_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE2_SLP_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SENSE2_SLP_SEL_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 16>;
 #[doc = "Field `SENSE2_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct SENSE2_FUN_SEL_R(crate::FieldReader<u8>);
-impl SENSE2_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SENSE2_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE2_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE2_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SENSE2_FUN_SEL` writer - the functional selection signal of the pad"]
-pub struct SENSE2_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE2_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 17)) | ((value as u32 & 3) << 17);
-        self.w
-    }
-}
+pub type SENSE2_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, SENSOR_PADS_SPEC, u8, u8, 2, 17>;
 #[doc = "Field `SENSE1_FUN_IE` reader - the input enable of the pad"]
-pub struct SENSE1_FUN_IE_R(crate::FieldReader<bool>);
-impl SENSE1_FUN_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE1_FUN_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE1_FUN_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE1_FUN_IE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE1_FUN_IE` writer - the input enable of the pad"]
-pub struct SENSE1_FUN_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE1_FUN_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type SENSE1_FUN_IE_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 19>;
 #[doc = "Field `SENSE1_SLP_IE` reader - the input enable of the pad in sleep status"]
-pub struct SENSE1_SLP_IE_R(crate::FieldReader<bool>);
-impl SENSE1_SLP_IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE1_SLP_IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE1_SLP_IE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE1_SLP_IE_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE1_SLP_IE` writer - the input enable of the pad in sleep status"]
-pub struct SENSE1_SLP_IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE1_SLP_IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type SENSE1_SLP_IE_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 20>;
 #[doc = "Field `SENSE1_SLP_SEL` reader - the sleep status selection signal of the pad"]
-pub struct SENSE1_SLP_SEL_R(crate::FieldReader<bool>);
-impl SENSE1_SLP_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE1_SLP_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE1_SLP_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE1_SLP_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE1_SLP_SEL` writer - the sleep status selection signal of the pad"]
-pub struct SENSE1_SLP_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE1_SLP_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type SENSE1_SLP_SEL_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 21>;
 #[doc = "Field `SENSE1_FUN_SEL` reader - the functional selection signal of the pad"]
-pub struct SENSE1_FUN_SEL_R(crate::FieldReader<u8>);
-impl SENSE1_FUN_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SENSE1_FUN_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE1_FUN_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE1_FUN_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SENSE1_FUN_SEL` writer - the functional selection signal of the pad"]
-pub struct SENSE1_FUN_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE1_FUN_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
-        self.w
-    }
-}
+pub type SENSE1_FUN_SEL_W<'a> = crate::FieldWriter<'a, u32, SENSOR_PADS_SPEC, u8, u8, 2, 22>;
 #[doc = "Field `SENSE4_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE4_MUX_SEL_R(crate::FieldReader<bool>);
-impl SENSE4_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE4_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE4_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE4_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE4_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE4_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE4_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type SENSE4_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 24>;
 #[doc = "Field `SENSE3_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE3_MUX_SEL_R(crate::FieldReader<bool>);
-impl SENSE3_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE3_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE3_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE3_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE3_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE3_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE3_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type SENSE3_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 25>;
 #[doc = "Field `SENSE2_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE2_MUX_SEL_R(crate::FieldReader<bool>);
-impl SENSE2_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE2_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE2_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE2_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE2_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE2_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE2_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type SENSE2_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 26>;
 #[doc = "Field `SENSE1_MUX_SEL` reader - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE1_MUX_SEL_R(crate::FieldReader<bool>);
-impl SENSE1_MUX_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE1_MUX_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE1_MUX_SEL_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE1_MUX_SEL_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE1_MUX_SEL` writer - Ò1Ó select the digital function Ó0Óslection the rtc function"]
-pub struct SENSE1_MUX_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE1_MUX_SEL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type SENSE1_MUX_SEL_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 27>;
 #[doc = "Field `SENSE4_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE4_HOLD_R(crate::FieldReader<bool>);
-impl SENSE4_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE4_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE4_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE4_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE4_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE4_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE4_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type SENSE4_HOLD_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 28>;
 #[doc = "Field `SENSE3_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE3_HOLD_R(crate::FieldReader<bool>);
-impl SENSE3_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE3_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE3_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE3_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE3_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE3_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE3_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type SENSE3_HOLD_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 29>;
 #[doc = "Field `SENSE2_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE2_HOLD_R(crate::FieldReader<bool>);
-impl SENSE2_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE2_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE2_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE2_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE2_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE2_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE2_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type SENSE2_HOLD_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 30>;
 #[doc = "Field `SENSE1_HOLD` reader - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE1_HOLD_R(crate::FieldReader<bool>);
-impl SENSE1_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SENSE1_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SENSE1_HOLD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SENSE1_HOLD_R = crate::BitReader<bool>;
 #[doc = "Field `SENSE1_HOLD` writer - hold the current value of the output when setting the hold to Ò1Ó"]
-pub struct SENSE1_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SENSE1_HOLD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type SENSE1_HOLD_W<'a> = crate::BitWriter<'a, u32, SENSOR_PADS_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 4 - the input enable of the pad"]
     #[inline(always)]
@@ -1008,122 +256,122 @@ impl W {
     #[doc = "Bit 4 - the input enable of the pad"]
     #[inline(always)]
     pub fn sense4_fun_ie(&mut self) -> SENSE4_FUN_IE_W {
-        SENSE4_FUN_IE_W { w: self }
+        SENSE4_FUN_IE_W::new(self)
     }
     #[doc = "Bit 5 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn sense4_slp_ie(&mut self) -> SENSE4_SLP_IE_W {
-        SENSE4_SLP_IE_W { w: self }
+        SENSE4_SLP_IE_W::new(self)
     }
     #[doc = "Bit 6 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn sense4_slp_sel(&mut self) -> SENSE4_SLP_SEL_W {
-        SENSE4_SLP_SEL_W { w: self }
+        SENSE4_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 7:8 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn sense4_fun_sel(&mut self) -> SENSE4_FUN_SEL_W {
-        SENSE4_FUN_SEL_W { w: self }
+        SENSE4_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 9 - the input enable of the pad"]
     #[inline(always)]
     pub fn sense3_fun_ie(&mut self) -> SENSE3_FUN_IE_W {
-        SENSE3_FUN_IE_W { w: self }
+        SENSE3_FUN_IE_W::new(self)
     }
     #[doc = "Bit 10 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn sense3_slp_ie(&mut self) -> SENSE3_SLP_IE_W {
-        SENSE3_SLP_IE_W { w: self }
+        SENSE3_SLP_IE_W::new(self)
     }
     #[doc = "Bit 11 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn sense3_slp_sel(&mut self) -> SENSE3_SLP_SEL_W {
-        SENSE3_SLP_SEL_W { w: self }
+        SENSE3_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 12:13 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn sense3_fun_sel(&mut self) -> SENSE3_FUN_SEL_W {
-        SENSE3_FUN_SEL_W { w: self }
+        SENSE3_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 14 - the input enable of the pad"]
     #[inline(always)]
     pub fn sense2_fun_ie(&mut self) -> SENSE2_FUN_IE_W {
-        SENSE2_FUN_IE_W { w: self }
+        SENSE2_FUN_IE_W::new(self)
     }
     #[doc = "Bit 15 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn sense2_slp_ie(&mut self) -> SENSE2_SLP_IE_W {
-        SENSE2_SLP_IE_W { w: self }
+        SENSE2_SLP_IE_W::new(self)
     }
     #[doc = "Bit 16 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn sense2_slp_sel(&mut self) -> SENSE2_SLP_SEL_W {
-        SENSE2_SLP_SEL_W { w: self }
+        SENSE2_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 17:18 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn sense2_fun_sel(&mut self) -> SENSE2_FUN_SEL_W {
-        SENSE2_FUN_SEL_W { w: self }
+        SENSE2_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 19 - the input enable of the pad"]
     #[inline(always)]
     pub fn sense1_fun_ie(&mut self) -> SENSE1_FUN_IE_W {
-        SENSE1_FUN_IE_W { w: self }
+        SENSE1_FUN_IE_W::new(self)
     }
     #[doc = "Bit 20 - the input enable of the pad in sleep status"]
     #[inline(always)]
     pub fn sense1_slp_ie(&mut self) -> SENSE1_SLP_IE_W {
-        SENSE1_SLP_IE_W { w: self }
+        SENSE1_SLP_IE_W::new(self)
     }
     #[doc = "Bit 21 - the sleep status selection signal of the pad"]
     #[inline(always)]
     pub fn sense1_slp_sel(&mut self) -> SENSE1_SLP_SEL_W {
-        SENSE1_SLP_SEL_W { w: self }
+        SENSE1_SLP_SEL_W::new(self)
     }
     #[doc = "Bits 22:23 - the functional selection signal of the pad"]
     #[inline(always)]
     pub fn sense1_fun_sel(&mut self) -> SENSE1_FUN_SEL_W {
-        SENSE1_FUN_SEL_W { w: self }
+        SENSE1_FUN_SEL_W::new(self)
     }
     #[doc = "Bit 24 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn sense4_mux_sel(&mut self) -> SENSE4_MUX_SEL_W {
-        SENSE4_MUX_SEL_W { w: self }
+        SENSE4_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 25 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn sense3_mux_sel(&mut self) -> SENSE3_MUX_SEL_W {
-        SENSE3_MUX_SEL_W { w: self }
+        SENSE3_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 26 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn sense2_mux_sel(&mut self) -> SENSE2_MUX_SEL_W {
-        SENSE2_MUX_SEL_W { w: self }
+        SENSE2_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 27 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
     pub fn sense1_mux_sel(&mut self) -> SENSE1_MUX_SEL_W {
-        SENSE1_MUX_SEL_W { w: self }
+        SENSE1_MUX_SEL_W::new(self)
     }
     #[doc = "Bit 28 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn sense4_hold(&mut self) -> SENSE4_HOLD_W {
-        SENSE4_HOLD_W { w: self }
+        SENSE4_HOLD_W::new(self)
     }
     #[doc = "Bit 29 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn sense3_hold(&mut self) -> SENSE3_HOLD_W {
-        SENSE3_HOLD_W { w: self }
+        SENSE3_HOLD_W::new(self)
     }
     #[doc = "Bit 30 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn sense2_hold(&mut self) -> SENSE2_HOLD_W {
-        SENSE2_HOLD_W { w: self }
+        SENSE2_HOLD_W::new(self)
     }
     #[doc = "Bit 31 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
     pub fn sense1_hold(&mut self) -> SENSE1_HOLD_W {
-        SENSE1_HOLD_W { w: self }
+        SENSE1_HOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

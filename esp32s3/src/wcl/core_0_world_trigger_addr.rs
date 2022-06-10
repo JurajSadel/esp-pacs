@@ -35,32 +35,10 @@ impl From<crate::W<CORE_0_WORLD_TRIGGER_ADDR_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_0_WORLD_TRIGGER_ADDR` reader - This field is used to configure the entry address from WORLD0 to WORLD1,when the CPU executes to this address,switch to WORLD1"]
-pub struct CORE_0_WORLD_TRIGGER_ADDR_R(crate::FieldReader<u32>);
-impl CORE_0_WORLD_TRIGGER_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_0_WORLD_TRIGGER_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_0_WORLD_TRIGGER_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_0_WORLD_TRIGGER_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_0_WORLD_TRIGGER_ADDR` writer - This field is used to configure the entry address from WORLD0 to WORLD1,when the CPU executes to this address,switch to WORLD1"]
-pub struct CORE_0_WORLD_TRIGGER_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_0_WORLD_TRIGGER_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CORE_0_WORLD_TRIGGER_ADDR_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_0_WORLD_TRIGGER_ADDR_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - This field is used to configure the entry address from WORLD0 to WORLD1,when the CPU executes to this address,switch to WORLD1"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:31 - This field is used to configure the entry address from WORLD0 to WORLD1,when the CPU executes to this address,switch to WORLD1"]
     #[inline(always)]
     pub fn core_0_world_trigger_addr(&mut self) -> CORE_0_WORLD_TRIGGER_ADDR_W {
-        CORE_0_WORLD_TRIGGER_ADDR_W { w: self }
+        CORE_0_WORLD_TRIGGER_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

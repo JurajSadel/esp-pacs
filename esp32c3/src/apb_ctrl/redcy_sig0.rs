@@ -35,47 +35,11 @@ impl From<crate::W<REDCY_SIG0_SPEC>> for W {
     }
 }
 #[doc = "Field `REDCY_SIG0` reader - reg_redcy_sig0"]
-pub struct REDCY_SIG0_R(crate::FieldReader<u32>);
-impl REDCY_SIG0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        REDCY_SIG0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REDCY_SIG0_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REDCY_SIG0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `REDCY_SIG0` writer - reg_redcy_sig0"]
-pub struct REDCY_SIG0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REDCY_SIG0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7fff_ffff) | (value as u32 & 0x7fff_ffff);
-        self.w
-    }
-}
+pub type REDCY_SIG0_W<'a> = crate::FieldWriter<'a, u32, REDCY_SIG0_SPEC, u32, u32, 31, 0>;
 #[doc = "Field `REDCY_ANDOR` reader - reg_redcy_andor"]
-pub struct REDCY_ANDOR_R(crate::FieldReader<bool>);
-impl REDCY_ANDOR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        REDCY_ANDOR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REDCY_ANDOR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REDCY_ANDOR_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:30 - reg_redcy_sig0"]
     #[inline(always)]
@@ -92,7 +56,7 @@ impl W {
     #[doc = "Bits 0:30 - reg_redcy_sig0"]
     #[inline(always)]
     pub fn redcy_sig0(&mut self) -> REDCY_SIG0_W {
-        REDCY_SIG0_W { w: self }
+        REDCY_SIG0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

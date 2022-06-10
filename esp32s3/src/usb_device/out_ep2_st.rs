@@ -14,50 +14,11 @@ impl From<crate::R<OUT_EP2_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `OUT_EP2_STATE` reader - State of OUT Endpoint 2."]
-pub struct OUT_EP2_STATE_R(crate::FieldReader<u8>);
-impl OUT_EP2_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_EP2_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EP2_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EP2_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUT_EP2_WR_ADDR` reader - Write data address of OUT endpoint 2. When USB_DEVICE_SERIAL_OUT_RECV_PKT_INT is detected, there are USB_DEVICE_OUT_EP2_WR_ADDR-2 bytes data in OUT EP2."]
-pub struct OUT_EP2_WR_ADDR_R(crate::FieldReader<u8>);
-impl OUT_EP2_WR_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_EP2_WR_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EP2_WR_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EP2_WR_ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `OUT_EP2_RD_ADDR` reader - Read data address of OUT endpoint 2."]
-pub struct OUT_EP2_RD_ADDR_R(crate::FieldReader<u8>);
-impl OUT_EP2_RD_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUT_EP2_RD_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EP2_RD_ADDR_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EP2_RD_ADDR_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:1 - State of OUT Endpoint 2."]
     #[inline(always)]

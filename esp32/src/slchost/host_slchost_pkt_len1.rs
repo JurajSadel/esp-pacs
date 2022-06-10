@@ -14,20 +14,7 @@ impl From<crate::R<HOST_SLCHOST_PKT_LEN1_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_HOSTSLC0_LEN1` reader - "]
-pub struct HOST_HOSTSLC0_LEN1_R(crate::FieldReader<u32>);
-impl HOST_HOSTSLC0_LEN1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        HOST_HOSTSLC0_LEN1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_HOSTSLC0_LEN1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_HOSTSLC0_LEN1_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]

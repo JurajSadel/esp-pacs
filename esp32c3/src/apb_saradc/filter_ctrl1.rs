@@ -35,59 +35,15 @@ impl From<crate::W<FILTER_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `APB_SARADC_FILTER_FACTOR1` reader - Factor of saradc filter1"]
-pub struct APB_SARADC_FILTER_FACTOR1_R(crate::FieldReader<u8>);
-impl APB_SARADC_FILTER_FACTOR1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        APB_SARADC_FILTER_FACTOR1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC_FILTER_FACTOR1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC_FILTER_FACTOR1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `APB_SARADC_FILTER_FACTOR1` writer - Factor of saradc filter1"]
-pub struct APB_SARADC_FILTER_FACTOR1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_SARADC_FILTER_FACTOR1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 26)) | ((value as u32 & 7) << 26);
-        self.w
-    }
-}
+pub type APB_SARADC_FILTER_FACTOR1_W<'a> =
+    crate::FieldWriter<'a, u32, FILTER_CTRL1_SPEC, u8, u8, 3, 26>;
 #[doc = "Field `APB_SARADC_FILTER_FACTOR0` reader - Factor of saradc filter0"]
-pub struct APB_SARADC_FILTER_FACTOR0_R(crate::FieldReader<u8>);
-impl APB_SARADC_FILTER_FACTOR0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        APB_SARADC_FILTER_FACTOR0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for APB_SARADC_FILTER_FACTOR0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type APB_SARADC_FILTER_FACTOR0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `APB_SARADC_FILTER_FACTOR0` writer - Factor of saradc filter0"]
-pub struct APB_SARADC_FILTER_FACTOR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> APB_SARADC_FILTER_FACTOR0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 29)) | ((value as u32 & 7) << 29);
-        self.w
-    }
-}
+pub type APB_SARADC_FILTER_FACTOR0_W<'a> =
+    crate::FieldWriter<'a, u32, FILTER_CTRL1_SPEC, u8, u8, 3, 29>;
 impl R {
     #[doc = "Bits 26:28 - Factor of saradc filter1"]
     #[inline(always)]
@@ -104,12 +60,12 @@ impl W {
     #[doc = "Bits 26:28 - Factor of saradc filter1"]
     #[inline(always)]
     pub fn apb_saradc_filter_factor1(&mut self) -> APB_SARADC_FILTER_FACTOR1_W {
-        APB_SARADC_FILTER_FACTOR1_W { w: self }
+        APB_SARADC_FILTER_FACTOR1_W::new(self)
     }
     #[doc = "Bits 29:31 - Factor of saradc filter0"]
     #[inline(always)]
     pub fn apb_saradc_filter_factor0(&mut self) -> APB_SARADC_FILTER_FACTOR0_W {
-        APB_SARADC_FILTER_FACTOR0_W { w: self }
+        APB_SARADC_FILTER_FACTOR0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,9 @@ impl From<crate::W<STATUS1_W1TC_SPEC>> for W {
     }
 }
 #[doc = "Field `STATUS1_INT_W1TC` reader - GPIO32~39 interrupt status write 1 to clear"]
-pub struct STATUS1_INT_W1TC_R(crate::FieldReader<u8>);
-impl STATUS1_INT_W1TC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        STATUS1_INT_W1TC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STATUS1_INT_W1TC_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STATUS1_INT_W1TC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `STATUS1_INT_W1TC` writer - GPIO32~39 interrupt status write 1 to clear"]
-pub struct STATUS1_INT_W1TC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS1_INT_W1TC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type STATUS1_INT_W1TC_W<'a> = crate::FieldWriter<'a, u32, STATUS1_W1TC_SPEC, u8, u8, 8, 0>;
 impl R {
     #[doc = "Bits 0:7 - GPIO32~39 interrupt status write 1 to clear"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:7 - GPIO32~39 interrupt status write 1 to clear"]
     #[inline(always)]
     pub fn status1_int_w1tc(&mut self) -> STATUS1_INT_W1TC_W {
-        STATUS1_INT_W1TC_W { w: self }
+        STATUS1_INT_W1TC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

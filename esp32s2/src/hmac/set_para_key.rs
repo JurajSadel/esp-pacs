@@ -20,22 +20,12 @@ impl From<crate::W<SET_PARA_KEY_SPEC>> for W {
     }
 }
 #[doc = "Field `KEY_SET` writer - Select hmac key."]
-pub struct KEY_SET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KEY_SET_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type KEY_SET_W<'a> = crate::FieldWriter<'a, u32, SET_PARA_KEY_SPEC, u8, u8, 3, 0>;
 impl W {
     #[doc = "Bits 0:2 - Select hmac key."]
     #[inline(always)]
     pub fn key_set(&mut self) -> KEY_SET_W {
-        KEY_SET_W { w: self }
+        KEY_SET_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

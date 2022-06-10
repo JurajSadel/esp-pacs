@@ -35,32 +35,9 @@ impl From<crate::W<SPI_INTR_1_MAP_SPEC>> for W {
     }
 }
 #[doc = "Field `SPI_INTR_1_MAP` reader - reg_core0_spi_intr_1_map"]
-pub struct SPI_INTR_1_MAP_R(crate::FieldReader<u8>);
-impl SPI_INTR_1_MAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_INTR_1_MAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_INTR_1_MAP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_INTR_1_MAP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_INTR_1_MAP` writer - reg_core0_spi_intr_1_map"]
-pub struct SPI_INTR_1_MAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI_INTR_1_MAP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
+pub type SPI_INTR_1_MAP_W<'a> = crate::FieldWriter<'a, u32, SPI_INTR_1_MAP_SPEC, u8, u8, 5, 0>;
 impl R {
     #[doc = "Bits 0:4 - reg_core0_spi_intr_1_map"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:4 - reg_core0_spi_intr_1_map"]
     #[inline(always)]
     pub fn spi_intr_1_map(&mut self) -> SPI_INTR_1_MAP_W {
-        SPI_INTR_1_MAP_W { w: self }
+        SPI_INTR_1_MAP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

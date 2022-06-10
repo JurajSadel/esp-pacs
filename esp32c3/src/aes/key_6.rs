@@ -35,32 +35,9 @@ impl From<crate::W<KEY_6_SPEC>> for W {
     }
 }
 #[doc = "Field `KEY_6` reader - This bits stores key_6 that is a part of key material."]
-pub struct KEY_6_R(crate::FieldReader<u32>);
-impl KEY_6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        KEY_6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_6_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_6_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `KEY_6` writer - This bits stores key_6 that is a part of key material."]
-pub struct KEY_6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KEY_6_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type KEY_6_W<'a> = crate::FieldWriter<'a, u32, KEY_6_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - This bits stores key_6 that is a part of key material."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - This bits stores key_6 that is a part of key material."]
     #[inline(always)]
     pub fn key_6(&mut self) -> KEY_6_W {
-        KEY_6_W { w: self }
+        KEY_6_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

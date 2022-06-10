@@ -35,153 +35,25 @@ impl From<crate::W<CACHE_PRELOAD_INT_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_ICACHE_PRELOAD_INT_ST` reader - The bit is used to indicate the interrupt by icache pre-load done."]
-pub struct PRO_ICACHE_PRELOAD_INT_ST_R(crate::FieldReader<bool>);
-impl PRO_ICACHE_PRELOAD_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ICACHE_PRELOAD_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ICACHE_PRELOAD_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ICACHE_PRELOAD_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_INT_ENA` reader - The bit is used to enable the interrupt by icache pre-load done."]
-pub struct PRO_ICACHE_PRELOAD_INT_ENA_R(crate::FieldReader<bool>);
-impl PRO_ICACHE_PRELOAD_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_ICACHE_PRELOAD_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_ICACHE_PRELOAD_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_ICACHE_PRELOAD_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_INT_ENA` writer - The bit is used to enable the interrupt by icache pre-load done."]
-pub struct PRO_ICACHE_PRELOAD_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ICACHE_PRELOAD_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type PRO_ICACHE_PRELOAD_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, CACHE_PRELOAD_INT_CTRL_SPEC, bool, 1>;
 #[doc = "Field `PRO_ICACHE_PRELOAD_INT_CLR` writer - The bit is used to clear the interrupt by icache pre-load done."]
-pub struct PRO_ICACHE_PRELOAD_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_ICACHE_PRELOAD_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type PRO_ICACHE_PRELOAD_INT_CLR_W<'a> =
+    crate::BitWriter<'a, u32, CACHE_PRELOAD_INT_CTRL_SPEC, bool, 2>;
 #[doc = "Field `PRO_DCACHE_PRELOAD_INT_ST` reader - The bit is used to indicate the interrupt by dcache pre-load done."]
-pub struct PRO_DCACHE_PRELOAD_INT_ST_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_PRELOAD_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_PRELOAD_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_PRELOAD_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_PRELOAD_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_PRELOAD_INT_ENA` reader - The bit is used to enable the interrupt by dcache pre-load done."]
-pub struct PRO_DCACHE_PRELOAD_INT_ENA_R(crate::FieldReader<bool>);
-impl PRO_DCACHE_PRELOAD_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DCACHE_PRELOAD_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DCACHE_PRELOAD_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DCACHE_PRELOAD_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DCACHE_PRELOAD_INT_ENA` writer - The bit is used to enable the interrupt by dcache pre-load done."]
-pub struct PRO_DCACHE_PRELOAD_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_PRELOAD_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type PRO_DCACHE_PRELOAD_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, CACHE_PRELOAD_INT_CTRL_SPEC, bool, 4>;
 #[doc = "Field `PRO_DCACHE_PRELOAD_INT_CLR` writer - The bit is used to clear the interrupt by dcache pre-load done."]
-pub struct PRO_DCACHE_PRELOAD_INT_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DCACHE_PRELOAD_INT_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type PRO_DCACHE_PRELOAD_INT_CLR_W<'a> =
+    crate::BitWriter<'a, u32, CACHE_PRELOAD_INT_CTRL_SPEC, bool, 5>;
 impl R {
     #[doc = "Bit 0 - The bit is used to indicate the interrupt by icache pre-load done."]
     #[inline(always)]
@@ -208,22 +80,22 @@ impl W {
     #[doc = "Bit 1 - The bit is used to enable the interrupt by icache pre-load done."]
     #[inline(always)]
     pub fn pro_icache_preload_int_ena(&mut self) -> PRO_ICACHE_PRELOAD_INT_ENA_W {
-        PRO_ICACHE_PRELOAD_INT_ENA_W { w: self }
+        PRO_ICACHE_PRELOAD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2 - The bit is used to clear the interrupt by icache pre-load done."]
     #[inline(always)]
     pub fn pro_icache_preload_int_clr(&mut self) -> PRO_ICACHE_PRELOAD_INT_CLR_W {
-        PRO_ICACHE_PRELOAD_INT_CLR_W { w: self }
+        PRO_ICACHE_PRELOAD_INT_CLR_W::new(self)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt by dcache pre-load done."]
     #[inline(always)]
     pub fn pro_dcache_preload_int_ena(&mut self) -> PRO_DCACHE_PRELOAD_INT_ENA_W {
-        PRO_DCACHE_PRELOAD_INT_ENA_W { w: self }
+        PRO_DCACHE_PRELOAD_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5 - The bit is used to clear the interrupt by dcache pre-load done."]
     #[inline(always)]
     pub fn pro_dcache_preload_int_clr(&mut self) -> PRO_DCACHE_PRELOAD_INT_CLR_W {
-        PRO_DCACHE_PRELOAD_INT_CLR_W { w: self }
+        PRO_DCACHE_PRELOAD_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

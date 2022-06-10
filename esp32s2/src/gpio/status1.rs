@@ -35,32 +35,9 @@ impl From<crate::W<STATUS1_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERRUPT` reader - GPIO32 ~ 53 interrupt status register."]
-pub struct INTERRUPT_R(crate::FieldReader<u32>);
-impl INTERRUPT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INTERRUPT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERRUPT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERRUPT_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `INTERRUPT` writer - GPIO32 ~ 53 interrupt status register."]
-pub struct INTERRUPT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERRUPT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x003f_ffff) | (value as u32 & 0x003f_ffff);
-        self.w
-    }
-}
+pub type INTERRUPT_W<'a> = crate::FieldWriter<'a, u32, STATUS1_SPEC, u32, u32, 22, 0>;
 impl R {
     #[doc = "Bits 0:21 - GPIO32 ~ 53 interrupt status register."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:21 - GPIO32 ~ 53 interrupt status register."]
     #[inline(always)]
     pub fn interrupt(&mut self) -> INTERRUPT_W {
-        INTERRUPT_W { w: self }
+        INTERRUPT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

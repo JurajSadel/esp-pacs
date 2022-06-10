@@ -20,22 +20,12 @@ impl From<crate::W<STATUS_W1TC_SPEC>> for W {
     }
 }
 #[doc = "Field `STATUS_W1TC` writer - GPIO0 ~ 31 interrupt status clear register. If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be cleared. Recommended operation: use this register to clear GPIO_STATUS_INTERRUPT."]
-pub struct STATUS_W1TC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STATUS_W1TC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type STATUS_W1TC_W<'a> = crate::FieldWriter<'a, u32, STATUS_W1TC_SPEC, u32, u32, 32, 0>;
 impl W {
     #[doc = "Bits 0:31 - GPIO0 ~ 31 interrupt status clear register. If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be cleared. Recommended operation: use this register to clear GPIO_STATUS_INTERRUPT."]
     #[inline(always)]
     pub fn status_w1tc(&mut self) -> STATUS_W1TC_W {
-        STATUS_W1TC_W { w: self }
+        STATUS_W1TC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

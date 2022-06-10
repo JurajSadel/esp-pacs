@@ -35,893 +35,101 @@ impl From<crate::W<CONF0_SPEC>> for W {
     }
 }
 #[doc = "Field `IN_RST` reader - Set this bit to reset in link operations."]
-pub struct IN_RST_R(crate::FieldReader<bool>);
-impl IN_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_RST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_RST` writer - Set this bit to reset in link operations."]
-pub struct IN_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type IN_RST_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 0>;
 #[doc = "Field `OUT_RST` reader - Set this bit to reset out link operations."]
-pub struct OUT_RST_R(crate::FieldReader<bool>);
-impl OUT_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_RST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_RST` writer - Set this bit to reset out link operations."]
-pub struct OUT_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type OUT_RST_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 1>;
 #[doc = "Field `AHBM_FIFO_RST` reader - Set this bit to reset dma ahb fifo."]
-pub struct AHBM_FIFO_RST_R(crate::FieldReader<bool>);
-impl AHBM_FIFO_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AHBM_FIFO_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHBM_FIFO_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHBM_FIFO_RST_R = crate::BitReader<bool>;
 #[doc = "Field `AHBM_FIFO_RST` writer - Set this bit to reset dma ahb fifo."]
-pub struct AHBM_FIFO_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AHBM_FIFO_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type AHBM_FIFO_RST_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 2>;
 #[doc = "Field `AHBM_RST` reader - Set this bit to reset dma ahb interface."]
-pub struct AHBM_RST_R(crate::FieldReader<bool>);
-impl AHBM_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AHBM_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHBM_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHBM_RST_R = crate::BitReader<bool>;
 #[doc = "Field `AHBM_RST` writer - Set this bit to reset dma ahb interface."]
-pub struct AHBM_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AHBM_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type AHBM_RST_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 3>;
 #[doc = "Field `IN_LOOP_TEST` reader - Set this bit to enable loop test for in links."]
-pub struct IN_LOOP_TEST_R(crate::FieldReader<bool>);
-impl IN_LOOP_TEST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IN_LOOP_TEST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IN_LOOP_TEST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IN_LOOP_TEST_R = crate::BitReader<bool>;
 #[doc = "Field `IN_LOOP_TEST` writer - Set this bit to enable loop test for in links."]
-pub struct IN_LOOP_TEST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IN_LOOP_TEST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type IN_LOOP_TEST_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 4>;
 #[doc = "Field `OUT_LOOP_TEST` reader - Set this bit to enable loop test for out links."]
-pub struct OUT_LOOP_TEST_R(crate::FieldReader<bool>);
-impl OUT_LOOP_TEST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_LOOP_TEST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_LOOP_TEST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_LOOP_TEST_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_LOOP_TEST` writer - Set this bit to enable loop test for out links."]
-pub struct OUT_LOOP_TEST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_LOOP_TEST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type OUT_LOOP_TEST_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 5>;
 #[doc = "Field `OUT_AUTO_WRBACK` reader - when in link's length is 0 go on to use the next in link automatically."]
-pub struct OUT_AUTO_WRBACK_R(crate::FieldReader<bool>);
-impl OUT_AUTO_WRBACK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_AUTO_WRBACK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_AUTO_WRBACK_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_AUTO_WRBACK_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_AUTO_WRBACK` writer - when in link's length is 0 go on to use the next in link automatically."]
-pub struct OUT_AUTO_WRBACK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_AUTO_WRBACK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type OUT_AUTO_WRBACK_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 6>;
 #[doc = "Field `OUT_NO_RESTART_CLR` reader - don't use"]
-pub struct OUT_NO_RESTART_CLR_R(crate::FieldReader<bool>);
-impl OUT_NO_RESTART_CLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_NO_RESTART_CLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_NO_RESTART_CLR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_NO_RESTART_CLR_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_NO_RESTART_CLR` writer - don't use"]
-pub struct OUT_NO_RESTART_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_NO_RESTART_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type OUT_NO_RESTART_CLR_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 7>;
 #[doc = "Field `OUT_EOF_MODE` reader - Set this bit to produce eof after DMA pops all data clear this bit to produce eof after DMA pushes all data"]
-pub struct OUT_EOF_MODE_R(crate::FieldReader<bool>);
-impl OUT_EOF_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_EOF_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_EOF_MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_EOF_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_EOF_MODE` writer - Set this bit to produce eof after DMA pops all data clear this bit to produce eof after DMA pushes all data"]
-pub struct OUT_EOF_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_EOF_MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type OUT_EOF_MODE_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 8>;
 #[doc = "Field `UART0_CE` reader - Set this bit to use UART to transmit or receive data."]
-pub struct UART0_CE_R(crate::FieldReader<bool>);
-impl UART0_CE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART0_CE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART0_CE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART0_CE_R = crate::BitReader<bool>;
 #[doc = "Field `UART0_CE` writer - Set this bit to use UART to transmit or receive data."]
-pub struct UART0_CE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART0_CE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type UART0_CE_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 9>;
 #[doc = "Field `UART1_CE` reader - Set this bit to use UART1 to transmit or receive data."]
-pub struct UART1_CE_R(crate::FieldReader<bool>);
-impl UART1_CE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART1_CE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART1_CE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART1_CE_R = crate::BitReader<bool>;
 #[doc = "Field `UART1_CE` writer - Set this bit to use UART1 to transmit or receive data."]
-pub struct UART1_CE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART1_CE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type UART1_CE_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 10>;
 #[doc = "Field `UART2_CE` reader - Set this bit to use UART2 to transmit or receive data."]
-pub struct UART2_CE_R(crate::FieldReader<bool>);
-impl UART2_CE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART2_CE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART2_CE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART2_CE_R = crate::BitReader<bool>;
 #[doc = "Field `UART2_CE` writer - Set this bit to use UART2 to transmit or receive data."]
-pub struct UART2_CE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART2_CE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type UART2_CE_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 11>;
 #[doc = "Field `OUTDSCR_BURST_EN` reader - Set this bit to enable DMA in links to use burst mode."]
-pub struct OUTDSCR_BURST_EN_R(crate::FieldReader<bool>);
-impl OUTDSCR_BURST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTDSCR_BURST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTDSCR_BURST_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTDSCR_BURST_EN_R = crate::BitReader<bool>;
 #[doc = "Field `OUTDSCR_BURST_EN` writer - Set this bit to enable DMA in links to use burst mode."]
-pub struct OUTDSCR_BURST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTDSCR_BURST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type OUTDSCR_BURST_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 12>;
 #[doc = "Field `INDSCR_BURST_EN` reader - Set this bit to enable DMA out links to use burst mode."]
-pub struct INDSCR_BURST_EN_R(crate::FieldReader<bool>);
-impl INDSCR_BURST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INDSCR_BURST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INDSCR_BURST_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INDSCR_BURST_EN_R = crate::BitReader<bool>;
 #[doc = "Field `INDSCR_BURST_EN` writer - Set this bit to enable DMA out links to use burst mode."]
-pub struct INDSCR_BURST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INDSCR_BURST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type INDSCR_BURST_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 13>;
 #[doc = "Field `OUT_DATA_BURST_EN` reader - Set this bit to enable DMA burst MODE"]
-pub struct OUT_DATA_BURST_EN_R(crate::FieldReader<bool>);
-impl OUT_DATA_BURST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_DATA_BURST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_DATA_BURST_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_DATA_BURST_EN_R = crate::BitReader<bool>;
 #[doc = "Field `OUT_DATA_BURST_EN` writer - Set this bit to enable DMA burst MODE"]
-pub struct OUT_DATA_BURST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_DATA_BURST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type OUT_DATA_BURST_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 14>;
 #[doc = "Field `MEM_TRANS_EN` reader - "]
-pub struct MEM_TRANS_EN_R(crate::FieldReader<bool>);
-impl MEM_TRANS_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MEM_TRANS_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MEM_TRANS_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MEM_TRANS_EN_R = crate::BitReader<bool>;
 #[doc = "Field `MEM_TRANS_EN` writer - "]
-pub struct MEM_TRANS_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MEM_TRANS_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type MEM_TRANS_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 15>;
 #[doc = "Field `SEPER_EN` reader - Set this bit to use special char to separate the data frame."]
-pub struct SEPER_EN_R(crate::FieldReader<bool>);
-impl SEPER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SEPER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEPER_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEPER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SEPER_EN` writer - Set this bit to use special char to separate the data frame."]
-pub struct SEPER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEPER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SEPER_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 16>;
 #[doc = "Field `HEAD_EN` reader - Set this bit to enable to use head packet before the data frame."]
-pub struct HEAD_EN_R(crate::FieldReader<bool>);
-impl HEAD_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HEAD_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HEAD_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HEAD_EN_R = crate::BitReader<bool>;
 #[doc = "Field `HEAD_EN` writer - Set this bit to enable to use head packet before the data frame."]
-pub struct HEAD_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HEAD_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type HEAD_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 17>;
 #[doc = "Field `CRC_REC_EN` reader - Set this bit to enable receiver''s ability of crc calculation when crc_en bit in head packet is 1 then there will be crc bytes after data_frame"]
-pub struct CRC_REC_EN_R(crate::FieldReader<bool>);
-impl CRC_REC_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CRC_REC_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CRC_REC_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CRC_REC_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CRC_REC_EN` writer - Set this bit to enable receiver''s ability of crc calculation when crc_en bit in head packet is 1 then there will be crc bytes after data_frame"]
-pub struct CRC_REC_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CRC_REC_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type CRC_REC_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 18>;
 #[doc = "Field `UART_IDLE_EOF_EN` reader - Set this bit to enable to use idle time when the idle time after data frame is satisfied this means the end of a data frame."]
-pub struct UART_IDLE_EOF_EN_R(crate::FieldReader<bool>);
-impl UART_IDLE_EOF_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART_IDLE_EOF_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART_IDLE_EOF_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART_IDLE_EOF_EN_R = crate::BitReader<bool>;
 #[doc = "Field `UART_IDLE_EOF_EN` writer - Set this bit to enable to use idle time when the idle time after data frame is satisfied this means the end of a data frame."]
-pub struct UART_IDLE_EOF_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART_IDLE_EOF_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type UART_IDLE_EOF_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 19>;
 #[doc = "Field `LEN_EOF_EN` reader - Set this bit to enable to use packet_len in packet head when the received data is equal to packet_len this means the end of a data frame."]
-pub struct LEN_EOF_EN_R(crate::FieldReader<bool>);
-impl LEN_EOF_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LEN_EOF_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LEN_EOF_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type LEN_EOF_EN_R = crate::BitReader<bool>;
 #[doc = "Field `LEN_EOF_EN` writer - Set this bit to enable to use packet_len in packet head when the received data is equal to packet_len this means the end of a data frame."]
-pub struct LEN_EOF_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LEN_EOF_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type LEN_EOF_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 20>;
 #[doc = "Field `ENCODE_CRC_EN` reader - Set this bit to enable crc calculation for data frame when bit6 in the head packet is 1."]
-pub struct ENCODE_CRC_EN_R(crate::FieldReader<bool>);
-impl ENCODE_CRC_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENCODE_CRC_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENCODE_CRC_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENCODE_CRC_EN_R = crate::BitReader<bool>;
 #[doc = "Field `ENCODE_CRC_EN` writer - Set this bit to enable crc calculation for data frame when bit6 in the head packet is 1."]
-pub struct ENCODE_CRC_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENCODE_CRC_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type ENCODE_CRC_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 21>;
 #[doc = "Field `CLK_EN` reader - Set this bit to enable clock-gating for read or write registers."]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - Set this bit to enable clock-gating for read or write registers."]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 22>;
 #[doc = "Field `UART_RX_BRK_EOF_EN` reader - Set this bit to enable to use brk char as the end of a data frame."]
-pub struct UART_RX_BRK_EOF_EN_R(crate::FieldReader<bool>);
-impl UART_RX_BRK_EOF_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UART_RX_BRK_EOF_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UART_RX_BRK_EOF_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UART_RX_BRK_EOF_EN_R = crate::BitReader<bool>;
 #[doc = "Field `UART_RX_BRK_EOF_EN` writer - Set this bit to enable to use brk char as the end of a data frame."]
-pub struct UART_RX_BRK_EOF_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UART_RX_BRK_EOF_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type UART_RX_BRK_EOF_EN_W<'a> = crate::BitWriter<'a, u32, CONF0_SPEC, bool, 23>;
 impl R {
     #[doc = "Bit 0 - Set this bit to reset in link operations."]
     #[inline(always)]
@@ -1048,122 +256,122 @@ impl W {
     #[doc = "Bit 0 - Set this bit to reset in link operations."]
     #[inline(always)]
     pub fn in_rst(&mut self) -> IN_RST_W {
-        IN_RST_W { w: self }
+        IN_RST_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit to reset out link operations."]
     #[inline(always)]
     pub fn out_rst(&mut self) -> OUT_RST_W {
-        OUT_RST_W { w: self }
+        OUT_RST_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to reset dma ahb fifo."]
     #[inline(always)]
     pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W {
-        AHBM_FIFO_RST_W { w: self }
+        AHBM_FIFO_RST_W::new(self)
     }
     #[doc = "Bit 3 - Set this bit to reset dma ahb interface."]
     #[inline(always)]
     pub fn ahbm_rst(&mut self) -> AHBM_RST_W {
-        AHBM_RST_W { w: self }
+        AHBM_RST_W::new(self)
     }
     #[doc = "Bit 4 - Set this bit to enable loop test for in links."]
     #[inline(always)]
     pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W {
-        IN_LOOP_TEST_W { w: self }
+        IN_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 5 - Set this bit to enable loop test for out links."]
     #[inline(always)]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W {
-        OUT_LOOP_TEST_W { w: self }
+        OUT_LOOP_TEST_W::new(self)
     }
     #[doc = "Bit 6 - when in link's length is 0 go on to use the next in link automatically."]
     #[inline(always)]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W {
-        OUT_AUTO_WRBACK_W { w: self }
+        OUT_AUTO_WRBACK_W::new(self)
     }
     #[doc = "Bit 7 - don't use"]
     #[inline(always)]
     pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W {
-        OUT_NO_RESTART_CLR_W { w: self }
+        OUT_NO_RESTART_CLR_W::new(self)
     }
     #[doc = "Bit 8 - Set this bit to produce eof after DMA pops all data clear this bit to produce eof after DMA pushes all data"]
     #[inline(always)]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W {
-        OUT_EOF_MODE_W { w: self }
+        OUT_EOF_MODE_W::new(self)
     }
     #[doc = "Bit 9 - Set this bit to use UART to transmit or receive data."]
     #[inline(always)]
     pub fn uart0_ce(&mut self) -> UART0_CE_W {
-        UART0_CE_W { w: self }
+        UART0_CE_W::new(self)
     }
     #[doc = "Bit 10 - Set this bit to use UART1 to transmit or receive data."]
     #[inline(always)]
     pub fn uart1_ce(&mut self) -> UART1_CE_W {
-        UART1_CE_W { w: self }
+        UART1_CE_W::new(self)
     }
     #[doc = "Bit 11 - Set this bit to use UART2 to transmit or receive data."]
     #[inline(always)]
     pub fn uart2_ce(&mut self) -> UART2_CE_W {
-        UART2_CE_W { w: self }
+        UART2_CE_W::new(self)
     }
     #[doc = "Bit 12 - Set this bit to enable DMA in links to use burst mode."]
     #[inline(always)]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W {
-        OUTDSCR_BURST_EN_W { w: self }
+        OUTDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 13 - Set this bit to enable DMA out links to use burst mode."]
     #[inline(always)]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W {
-        INDSCR_BURST_EN_W { w: self }
+        INDSCR_BURST_EN_W::new(self)
     }
     #[doc = "Bit 14 - Set this bit to enable DMA burst MODE"]
     #[inline(always)]
     pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W {
-        OUT_DATA_BURST_EN_W { w: self }
+        OUT_DATA_BURST_EN_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W {
-        MEM_TRANS_EN_W { w: self }
+        MEM_TRANS_EN_W::new(self)
     }
     #[doc = "Bit 16 - Set this bit to use special char to separate the data frame."]
     #[inline(always)]
     pub fn seper_en(&mut self) -> SEPER_EN_W {
-        SEPER_EN_W { w: self }
+        SEPER_EN_W::new(self)
     }
     #[doc = "Bit 17 - Set this bit to enable to use head packet before the data frame."]
     #[inline(always)]
     pub fn head_en(&mut self) -> HEAD_EN_W {
-        HEAD_EN_W { w: self }
+        HEAD_EN_W::new(self)
     }
     #[doc = "Bit 18 - Set this bit to enable receiver''s ability of crc calculation when crc_en bit in head packet is 1 then there will be crc bytes after data_frame"]
     #[inline(always)]
     pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W {
-        CRC_REC_EN_W { w: self }
+        CRC_REC_EN_W::new(self)
     }
     #[doc = "Bit 19 - Set this bit to enable to use idle time when the idle time after data frame is satisfied this means the end of a data frame."]
     #[inline(always)]
     pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W {
-        UART_IDLE_EOF_EN_W { w: self }
+        UART_IDLE_EOF_EN_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to enable to use packet_len in packet head when the received data is equal to packet_len this means the end of a data frame."]
     #[inline(always)]
     pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W {
-        LEN_EOF_EN_W { w: self }
+        LEN_EOF_EN_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to enable crc calculation for data frame when bit6 in the head packet is 1."]
     #[inline(always)]
     pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W {
-        ENCODE_CRC_EN_W { w: self }
+        ENCODE_CRC_EN_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to enable clock-gating for read or write registers."]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Bit 23 - Set this bit to enable to use brk char as the end of a data frame."]
     #[inline(always)]
     pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W {
-        UART_RX_BRK_EOF_EN_W { w: self }
+        UART_RX_BRK_EOF_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

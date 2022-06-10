@@ -14,20 +14,7 @@ impl From<crate::R<U0_CNT_SPEC>> for R {
     }
 }
 #[doc = "Field `PLUS_CNT_U0` reader - This register stores the current pulse count value for unit0."]
-pub struct PLUS_CNT_U0_R(crate::FieldReader<u16>);
-impl PLUS_CNT_U0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PLUS_CNT_U0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLUS_CNT_U0_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLUS_CNT_U0_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register stores the current pulse count value for unit0."]
     #[inline(always)]

@@ -35,217 +35,29 @@ impl From<crate::W<IRAM_DRAM_AHB_SEL_SPEC>> for W {
     }
 }
 #[doc = "Field `MASK_PRO_IRAM` reader - "]
-pub struct MASK_PRO_IRAM_R(crate::FieldReader<bool>);
-impl MASK_PRO_IRAM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASK_PRO_IRAM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASK_PRO_IRAM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASK_PRO_IRAM_R = crate::BitReader<bool>;
 #[doc = "Field `MASK_PRO_IRAM` writer - "]
-pub struct MASK_PRO_IRAM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASK_PRO_IRAM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type MASK_PRO_IRAM_W<'a> = crate::BitWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, bool, 0>;
 #[doc = "Field `MASK_APP_IRAM` reader - "]
-pub struct MASK_APP_IRAM_R(crate::FieldReader<bool>);
-impl MASK_APP_IRAM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASK_APP_IRAM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASK_APP_IRAM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASK_APP_IRAM_R = crate::BitReader<bool>;
 #[doc = "Field `MASK_APP_IRAM` writer - "]
-pub struct MASK_APP_IRAM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASK_APP_IRAM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MASK_APP_IRAM_W<'a> = crate::BitWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, bool, 1>;
 #[doc = "Field `MASK_PRO_DRAM` reader - "]
-pub struct MASK_PRO_DRAM_R(crate::FieldReader<bool>);
-impl MASK_PRO_DRAM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASK_PRO_DRAM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASK_PRO_DRAM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASK_PRO_DRAM_R = crate::BitReader<bool>;
 #[doc = "Field `MASK_PRO_DRAM` writer - "]
-pub struct MASK_PRO_DRAM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASK_PRO_DRAM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type MASK_PRO_DRAM_W<'a> = crate::BitWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, bool, 2>;
 #[doc = "Field `MASK_APP_DRAM` reader - "]
-pub struct MASK_APP_DRAM_R(crate::FieldReader<bool>);
-impl MASK_APP_DRAM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASK_APP_DRAM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASK_APP_DRAM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASK_APP_DRAM_R = crate::BitReader<bool>;
 #[doc = "Field `MASK_APP_DRAM` writer - "]
-pub struct MASK_APP_DRAM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASK_APP_DRAM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type MASK_APP_DRAM_W<'a> = crate::BitWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, bool, 3>;
 #[doc = "Field `MASK_AHB` reader - "]
-pub struct MASK_AHB_R(crate::FieldReader<bool>);
-impl MASK_AHB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MASK_AHB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MASK_AHB_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MASK_AHB_R = crate::BitReader<bool>;
 #[doc = "Field `MASK_AHB` writer - "]
-pub struct MASK_AHB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MASK_AHB_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type MASK_AHB_W<'a> = crate::BitWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, bool, 4>;
 #[doc = "Field `MAC_DUMP_MODE` reader - "]
-pub struct MAC_DUMP_MODE_R(crate::FieldReader<u8>);
-impl MAC_DUMP_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MAC_DUMP_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAC_DUMP_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAC_DUMP_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `MAC_DUMP_MODE` writer - "]
-pub struct MAC_DUMP_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MAC_DUMP_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 5)) | ((value as u32 & 3) << 5);
-        self.w
-    }
-}
+pub type MAC_DUMP_MODE_W<'a> = crate::FieldWriter<'a, u32, IRAM_DRAM_AHB_SEL_SPEC, u8, u8, 2, 5>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -282,32 +94,32 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn mask_pro_iram(&mut self) -> MASK_PRO_IRAM_W {
-        MASK_PRO_IRAM_W { w: self }
+        MASK_PRO_IRAM_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn mask_app_iram(&mut self) -> MASK_APP_IRAM_W {
-        MASK_APP_IRAM_W { w: self }
+        MASK_APP_IRAM_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn mask_pro_dram(&mut self) -> MASK_PRO_DRAM_W {
-        MASK_PRO_DRAM_W { w: self }
+        MASK_PRO_DRAM_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn mask_app_dram(&mut self) -> MASK_APP_DRAM_W {
-        MASK_APP_DRAM_W { w: self }
+        MASK_APP_DRAM_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn mask_ahb(&mut self) -> MASK_AHB_W {
-        MASK_AHB_W { w: self }
+        MASK_AHB_W::new(self)
     }
     #[doc = "Bits 5:6"]
     #[inline(always)]
     pub fn mac_dump_mode(&mut self) -> MAC_DUMP_MODE_W {
-        MAC_DUMP_MODE_W { w: self }
+        MAC_DUMP_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

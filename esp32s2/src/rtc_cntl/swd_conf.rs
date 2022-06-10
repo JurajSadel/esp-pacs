@@ -35,180 +35,25 @@ impl From<crate::W<SWD_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `SWD_RESET_FLAG` reader - Indicates the super watchdog reset flag."]
-pub struct SWD_RESET_FLAG_R(crate::FieldReader<bool>);
-impl SWD_RESET_FLAG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SWD_RESET_FLAG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SWD_RESET_FLAG_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SWD_RESET_FLAG_R = crate::BitReader<bool>;
 #[doc = "Field `SWD_FEED_INT` reader - Receiving this interrupt leads to feeding the super watchdog via SW."]
-pub struct SWD_FEED_INT_R(crate::FieldReader<bool>);
-impl SWD_FEED_INT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SWD_FEED_INT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SWD_FEED_INT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SWD_FEED_INT_R = crate::BitReader<bool>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` reader - Adjusts the signal width sent to the super watchdog."]
-pub struct SWD_SIGNAL_WIDTH_R(crate::FieldReader<u16>);
-impl SWD_SIGNAL_WIDTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        SWD_SIGNAL_WIDTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SWD_SIGNAL_WIDTH_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SWD_SIGNAL_WIDTH_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `SWD_SIGNAL_WIDTH` writer - Adjusts the signal width sent to the super watchdog."]
-pub struct SWD_SIGNAL_WIDTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWD_SIGNAL_WIDTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 18)) | ((value as u32 & 0x03ff) << 18);
-        self.w
-    }
-}
+pub type SWD_SIGNAL_WIDTH_W<'a> = crate::FieldWriter<'a, u32, SWD_CONF_SPEC, u16, u16, 10, 18>;
 #[doc = "Field `SWD_RST_FLAG_CLR` writer - Set to reset the super watchdog reset flag."]
-pub struct SWD_RST_FLAG_CLR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWD_RST_FLAG_CLR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type SWD_RST_FLAG_CLR_W<'a> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, 28>;
 #[doc = "Field `SWD_FEED` writer - Set to feed the super watchdog via SW."]
-pub struct SWD_FEED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWD_FEED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 29)) | ((value as u32 & 1) << 29);
-        self.w
-    }
-}
+pub type SWD_FEED_W<'a> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, 29>;
 #[doc = "Field `SWD_DISABLE` reader - Set this bit to disable super watchdog."]
-pub struct SWD_DISABLE_R(crate::FieldReader<bool>);
-impl SWD_DISABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SWD_DISABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SWD_DISABLE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SWD_DISABLE_R = crate::BitReader<bool>;
 #[doc = "Field `SWD_DISABLE` writer - Set this bit to disable super watchdog."]
-pub struct SWD_DISABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWD_DISABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type SWD_DISABLE_W<'a> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, 30>;
 #[doc = "Field `SWD_AUTO_FEED_EN` reader - Set this bit to enable automatic watchdog feeding upon interrupts."]
-pub struct SWD_AUTO_FEED_EN_R(crate::FieldReader<bool>);
-impl SWD_AUTO_FEED_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SWD_AUTO_FEED_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SWD_AUTO_FEED_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SWD_AUTO_FEED_EN_R = crate::BitReader<bool>;
 #[doc = "Field `SWD_AUTO_FEED_EN` writer - Set this bit to enable automatic watchdog feeding upon interrupts."]
-pub struct SWD_AUTO_FEED_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SWD_AUTO_FEED_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type SWD_AUTO_FEED_EN_W<'a> = crate::BitWriter<'a, u32, SWD_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 0 - Indicates the super watchdog reset flag."]
     #[inline(always)]
@@ -240,27 +85,27 @@ impl W {
     #[doc = "Bits 18:27 - Adjusts the signal width sent to the super watchdog."]
     #[inline(always)]
     pub fn swd_signal_width(&mut self) -> SWD_SIGNAL_WIDTH_W {
-        SWD_SIGNAL_WIDTH_W { w: self }
+        SWD_SIGNAL_WIDTH_W::new(self)
     }
     #[doc = "Bit 28 - Set to reset the super watchdog reset flag."]
     #[inline(always)]
     pub fn swd_rst_flag_clr(&mut self) -> SWD_RST_FLAG_CLR_W {
-        SWD_RST_FLAG_CLR_W { w: self }
+        SWD_RST_FLAG_CLR_W::new(self)
     }
     #[doc = "Bit 29 - Set to feed the super watchdog via SW."]
     #[inline(always)]
     pub fn swd_feed(&mut self) -> SWD_FEED_W {
-        SWD_FEED_W { w: self }
+        SWD_FEED_W::new(self)
     }
     #[doc = "Bit 30 - Set this bit to disable super watchdog."]
     #[inline(always)]
     pub fn swd_disable(&mut self) -> SWD_DISABLE_W {
-        SWD_DISABLE_W { w: self }
+        SWD_DISABLE_W::new(self)
     }
     #[doc = "Bit 31 - Set this bit to enable automatic watchdog feeding upon interrupts."]
     #[inline(always)]
     pub fn swd_auto_feed_en(&mut self) -> SWD_AUTO_FEED_EN_W {
-        SWD_AUTO_FEED_EN_W { w: self }
+        SWD_AUTO_FEED_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

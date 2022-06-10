@@ -35,329 +35,53 @@ impl From<crate::W<GEN1_A_SPEC>> for W {
     }
 }
 #[doc = "Field `UTEZ` reader - "]
-pub struct UTEZ_R(crate::FieldReader<u8>);
-impl UTEZ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UTEZ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UTEZ_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UTEZ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `UTEZ` writer - "]
-pub struct UTEZ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UTEZ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type UTEZ_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `UTEP` reader - "]
-pub struct UTEP_R(crate::FieldReader<u8>);
-impl UTEP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UTEP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UTEP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UTEP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `UTEP` writer - "]
-pub struct UTEP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UTEP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type UTEP_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `UTEA` reader - "]
-pub struct UTEA_R(crate::FieldReader<u8>);
-impl UTEA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UTEA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UTEA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UTEA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `UTEA` writer - "]
-pub struct UTEA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UTEA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type UTEA_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `UTEB` reader - "]
-pub struct UTEB_R(crate::FieldReader<u8>);
-impl UTEB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UTEB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UTEB_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UTEB_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `UTEB` writer - "]
-pub struct UTEB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UTEB_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type UTEB_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `UT0` reader - "]
-pub struct UT0_R(crate::FieldReader<u8>);
-impl UT0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UT0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UT0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UT0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `UT0` writer - "]
-pub struct UT0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UT0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type UT0_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `UT1` reader - "]
-pub struct UT1_R(crate::FieldReader<u8>);
-impl UT1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UT1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UT1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UT1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `UT1` writer - "]
-pub struct UT1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UT1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type UT1_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 10>;
 #[doc = "Field `DTEZ` reader - "]
-pub struct DTEZ_R(crate::FieldReader<u8>);
-impl DTEZ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DTEZ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEZ_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DTEZ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DTEZ` writer - "]
-pub struct DTEZ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEZ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type DTEZ_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 12>;
 #[doc = "Field `DTEP` reader - "]
-pub struct DTEP_R(crate::FieldReader<u8>);
-impl DTEP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DTEP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DTEP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DTEP` writer - "]
-pub struct DTEP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 14)) | ((value as u32 & 3) << 14);
-        self.w
-    }
-}
+pub type DTEP_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 14>;
 #[doc = "Field `DTEA` reader - "]
-pub struct DTEA_R(crate::FieldReader<u8>);
-impl DTEA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DTEA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEA_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DTEA_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DTEA` writer - "]
-pub struct DTEA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 16)) | ((value as u32 & 3) << 16);
-        self.w
-    }
-}
+pub type DTEA_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 16>;
 #[doc = "Field `DTEB` reader - "]
-pub struct DTEB_R(crate::FieldReader<u8>);
-impl DTEB_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DTEB_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DTEB_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DTEB_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DTEB` writer - "]
-pub struct DTEB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DTEB_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 18)) | ((value as u32 & 3) << 18);
-        self.w
-    }
-}
+pub type DTEB_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 18>;
 #[doc = "Field `DT0` reader - "]
-pub struct DT0_R(crate::FieldReader<u8>);
-impl DT0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DT0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DT0` writer - "]
-pub struct DT0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 20)) | ((value as u32 & 3) << 20);
-        self.w
-    }
-}
+pub type DT0_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 20>;
 #[doc = "Field `DT1` reader - "]
-pub struct DT1_R(crate::FieldReader<u8>);
-impl DT1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DT1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DT1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DT1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DT1` writer - "]
-pub struct DT1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DT1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 22)) | ((value as u32 & 3) << 22);
-        self.w
-    }
-}
+pub type DT1_W<'a> = crate::FieldWriter<'a, u32, GEN1_A_SPEC, u8, u8, 2, 22>;
 impl R {
     #[doc = "Bits 0:1"]
     #[inline(always)]
@@ -424,62 +148,62 @@ impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
     pub fn utez(&mut self) -> UTEZ_W {
-        UTEZ_W { w: self }
+        UTEZ_W::new(self)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
     pub fn utep(&mut self) -> UTEP_W {
-        UTEP_W { w: self }
+        UTEP_W::new(self)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
     pub fn utea(&mut self) -> UTEA_W {
-        UTEA_W { w: self }
+        UTEA_W::new(self)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
     pub fn uteb(&mut self) -> UTEB_W {
-        UTEB_W { w: self }
+        UTEB_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     pub fn ut0(&mut self) -> UT0_W {
-        UT0_W { w: self }
+        UT0_W::new(self)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
     pub fn ut1(&mut self) -> UT1_W {
-        UT1_W { w: self }
+        UT1_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     pub fn dtez(&mut self) -> DTEZ_W {
-        DTEZ_W { w: self }
+        DTEZ_W::new(self)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
     pub fn dtep(&mut self) -> DTEP_W {
-        DTEP_W { w: self }
+        DTEP_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     pub fn dtea(&mut self) -> DTEA_W {
-        DTEA_W { w: self }
+        DTEA_W::new(self)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
     pub fn dteb(&mut self) -> DTEB_W {
-        DTEB_W { w: self }
+        DTEB_W::new(self)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
     pub fn dt0(&mut self) -> DT0_W {
-        DT0_W { w: self }
+        DT0_W::new(self)
     }
     #[doc = "Bits 22:23"]
     #[inline(always)]
     pub fn dt1(&mut self) -> DT1_W {
-        DT1_W { w: self }
+        DT1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

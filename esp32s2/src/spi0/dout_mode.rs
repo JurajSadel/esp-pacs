@@ -35,221 +35,37 @@ impl From<crate::W<DOUT_MODE_SPEC>> for W {
     }
 }
 #[doc = "Field `DOUT0_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT0_MODE_R(crate::FieldReader<u8>);
-impl DOUT0_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DOUT0_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOUT0_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DOUT0_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DOUT0_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT0_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOUT0_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type DOUT0_MODE_W<'a> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `DOUT1_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT1_MODE_R(crate::FieldReader<u8>);
-impl DOUT1_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DOUT1_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOUT1_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DOUT1_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DOUT1_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT1_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOUT1_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
-        self.w
-    }
-}
+pub type DOUT1_MODE_W<'a> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, 3>;
 #[doc = "Field `DOUT2_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT2_MODE_R(crate::FieldReader<u8>);
-impl DOUT2_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DOUT2_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOUT2_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DOUT2_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DOUT2_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT2_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOUT2_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 6)) | ((value as u32 & 7) << 6);
-        self.w
-    }
-}
+pub type DOUT2_MODE_W<'a> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, 6>;
 #[doc = "Field `DOUT3_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT3_MODE_R(crate::FieldReader<u8>);
-impl DOUT3_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DOUT3_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOUT3_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DOUT3_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DOUT3_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT3_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOUT3_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 9)) | ((value as u32 & 7) << 9);
-        self.w
-    }
-}
+pub type DOUT3_MODE_W<'a> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, 9>;
 #[doc = "Field `DOUT4_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT4_MODE_R(crate::FieldReader<u8>);
-impl DOUT4_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DOUT4_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOUT4_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DOUT4_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DOUT4_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT4_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOUT4_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 12)) | ((value as u32 & 7) << 12);
-        self.w
-    }
-}
+pub type DOUT4_MODE_W<'a> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, 12>;
 #[doc = "Field `DOUT5_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT5_MODE_R(crate::FieldReader<u8>);
-impl DOUT5_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DOUT5_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOUT5_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DOUT5_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DOUT5_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT5_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOUT5_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 15)) | ((value as u32 & 7) << 15);
-        self.w
-    }
-}
+pub type DOUT5_MODE_W<'a> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, 15>;
 #[doc = "Field `DOUT6_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT6_MODE_R(crate::FieldReader<u8>);
-impl DOUT6_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DOUT6_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOUT6_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DOUT6_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DOUT6_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT6_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOUT6_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 18)) | ((value as u32 & 7) << 18);
-        self.w
-    }
-}
+pub type DOUT6_MODE_W<'a> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, 18>;
 #[doc = "Field `DOUT7_MODE` reader - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT7_MODE_R(crate::FieldReader<u8>);
-impl DOUT7_MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DOUT7_MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOUT7_MODE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DOUT7_MODE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DOUT7_MODE` writer - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
-pub struct DOUT7_MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOUT7_MODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 21)) | ((value as u32 & 7) << 21);
-        self.w
-    }
-}
+pub type DOUT7_MODE_W<'a> = crate::FieldWriter<'a, u32, DOUT_MODE_SPEC, u8, u8, 3, 21>;
 impl R {
     #[doc = "Bits 0:2 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
@@ -296,42 +112,42 @@ impl W {
     #[doc = "Bits 0:2 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout0_mode(&mut self) -> DOUT0_MODE_W {
-        DOUT0_MODE_W { w: self }
+        DOUT0_MODE_W::new(self)
     }
     #[doc = "Bits 3:5 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout1_mode(&mut self) -> DOUT1_MODE_W {
-        DOUT1_MODE_W { w: self }
+        DOUT1_MODE_W::new(self)
     }
     #[doc = "Bits 6:8 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout2_mode(&mut self) -> DOUT2_MODE_W {
-        DOUT2_MODE_W { w: self }
+        DOUT2_MODE_W::new(self)
     }
     #[doc = "Bits 9:11 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout3_mode(&mut self) -> DOUT3_MODE_W {
-        DOUT3_MODE_W { w: self }
+        DOUT3_MODE_W::new(self)
     }
     #[doc = "Bits 12:14 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout4_mode(&mut self) -> DOUT4_MODE_W {
-        DOUT4_MODE_W { w: self }
+        DOUT4_MODE_W::new(self)
     }
     #[doc = "Bits 15:17 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout5_mode(&mut self) -> DOUT5_MODE_W {
-        DOUT5_MODE_W { w: self }
+        DOUT5_MODE_W::new(self)
     }
     #[doc = "Bits 18:20 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout6_mode(&mut self) -> DOUT6_MODE_W {
-        DOUT6_MODE_W { w: self }
+        DOUT6_MODE_W::new(self)
     }
     #[doc = "Bits 21:23 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
     pub fn dout7_mode(&mut self) -> DOUT7_MODE_W {
-        DOUT7_MODE_W { w: self }
+        DOUT7_MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

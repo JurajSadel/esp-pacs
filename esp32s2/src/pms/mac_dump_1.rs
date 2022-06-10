@@ -35,32 +35,9 @@ impl From<crate::W<MAC_DUMP_1_SPEC>> for W {
     }
 }
 #[doc = "Field `MAC_DUMP_CONNECT` reader - Configure MAC dump connection."]
-pub struct MAC_DUMP_CONNECT_R(crate::FieldReader<u16>);
-impl MAC_DUMP_CONNECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MAC_DUMP_CONNECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MAC_DUMP_CONNECT_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MAC_DUMP_CONNECT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `MAC_DUMP_CONNECT` writer - Configure MAC dump connection."]
-pub struct MAC_DUMP_CONNECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MAC_DUMP_CONNECT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
-    }
-}
+pub type MAC_DUMP_CONNECT_W<'a> = crate::FieldWriter<'a, u32, MAC_DUMP_1_SPEC, u16, u16, 12, 0>;
 impl R {
     #[doc = "Bits 0:11 - Configure MAC dump connection."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:11 - Configure MAC dump connection."]
     #[inline(always)]
     pub fn mac_dump_connect(&mut self) -> MAC_DUMP_CONNECT_W {
-        MAC_DUMP_CONNECT_W { w: self }
+        MAC_DUMP_CONNECT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

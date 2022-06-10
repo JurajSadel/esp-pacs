@@ -35,133 +35,21 @@ impl From<crate::W<CFG_DATA7_SPEC>> for W {
     }
 }
 #[doc = "Field `PIN_STATE` reader - "]
-pub struct PIN_STATE_R(crate::FieldReader<u8>);
-impl PIN_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PIN_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PIN_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PIN_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PIN_STATE` writer - "]
-pub struct PIN_STATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PIN_STATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type PIN_STATE_W<'a> = crate::FieldWriter<'a, u32, CFG_DATA7_SPEC, u8, u8, 8, 0>;
 #[doc = "Field `CHIP_STATE` reader - "]
-pub struct CHIP_STATE_R(crate::FieldReader<u8>);
-impl CHIP_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CHIP_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CHIP_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CHIP_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CHIP_STATE` writer - "]
-pub struct CHIP_STATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CHIP_STATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type CHIP_STATE_W<'a> = crate::FieldWriter<'a, u32, CFG_DATA7_SPEC, u8, u8, 8, 8>;
 #[doc = "Field `SDIO_RST` reader - "]
-pub struct SDIO_RST_R(crate::FieldReader<bool>);
-impl SDIO_RST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_RST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_RST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_RST_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_RST` writer - "]
-pub struct SDIO_RST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_RST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type SDIO_RST_W<'a> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, 16>;
 #[doc = "Field `SDIO_IOREADY0` reader - "]
-pub struct SDIO_IOREADY0_R(crate::FieldReader<bool>);
-impl SDIO_IOREADY0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_IOREADY0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_IOREADY0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_IOREADY0_R = crate::BitReader<bool>;
 #[doc = "Field `SDIO_IOREADY0` writer - "]
-pub struct SDIO_IOREADY0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDIO_IOREADY0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type SDIO_IOREADY0_W<'a> = crate::BitWriter<'a, u32, CFG_DATA7_SPEC, bool, 17>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]
@@ -188,22 +76,22 @@ impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     pub fn pin_state(&mut self) -> PIN_STATE_W {
-        PIN_STATE_W { w: self }
+        PIN_STATE_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     pub fn chip_state(&mut self) -> CHIP_STATE_W {
-        CHIP_STATE_W { w: self }
+        CHIP_STATE_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn sdio_rst(&mut self) -> SDIO_RST_W {
-        SDIO_RST_W { w: self }
+        SDIO_RST_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn sdio_ioready0(&mut self) -> SDIO_IOREADY0_W {
-        SDIO_IOREADY0_W { w: self }
+        SDIO_IOREADY0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,10 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_5_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR` reader - BackUp access rtcfast_spltaddr permission."]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R(crate::FieldReader<u16>);
-impl BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR` writer - BackUp access rtcfast_spltaddr permission."]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff) | (value as u32 & 0x07ff);
-        self.w
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W<'a> =
+    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_5_SPEC, u16, u16, 11, 0>;
 impl R {
     #[doc = "Bits 0:10 - BackUp access rtcfast_spltaddr permission."]
     #[inline(always)]
@@ -76,7 +54,7 @@ impl W {
     pub fn backup_bus_pms_constrain_rtcfast_spltaddr(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W {
-        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W { w: self }
+        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

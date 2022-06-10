@@ -35,59 +35,15 @@ impl From<crate::W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC>> for W {
     }
 }
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L` reader - BackUp access rtcfast_l permission."]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L` writer - BackUp access rtcfast_l permission."]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !7) | (value as u32 & 7);
-        self.w
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<'a> =
+    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_6_SPEC, u8, u8, 3, 0>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H` reader - BackUp access rtcfast_h permission."]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_R(crate::FieldReader<u8>);
-impl BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H` writer - BackUp access rtcfast_h permission."]
-pub struct BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 3)) | ((value as u32 & 7) << 3);
-        self.w
-    }
-}
+pub type BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<'a> =
+    crate::FieldWriter<'a, u32, BACKUP_BUS_PMS_CONSTRAIN_6_SPEC, u8, u8, 3, 3>;
 impl R {
     #[doc = "Bits 0:2 - BackUp access rtcfast_l permission."]
     #[inline(always)]
@@ -104,12 +60,12 @@ impl W {
     #[doc = "Bits 0:2 - BackUp access rtcfast_l permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_rtcfast_l(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W {
-        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W { w: self }
+        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W::new(self)
     }
     #[doc = "Bits 3:5 - BackUp access rtcfast_h permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_rtcfast_h(&mut self) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W {
-        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W { w: self }
+        BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

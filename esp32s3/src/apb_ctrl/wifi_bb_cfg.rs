@@ -35,32 +35,9 @@ impl From<crate::W<WIFI_BB_CFG_SPEC>> for W {
     }
 }
 #[doc = "Field `WIFI_BB_CFG` reader - ******* Description ***********"]
-pub struct WIFI_BB_CFG_R(crate::FieldReader<u32>);
-impl WIFI_BB_CFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        WIFI_BB_CFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WIFI_BB_CFG_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WIFI_BB_CFG_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `WIFI_BB_CFG` writer - ******* Description ***********"]
-pub struct WIFI_BB_CFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WIFI_BB_CFG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type WIFI_BB_CFG_W<'a> = crate::FieldWriter<'a, u32, WIFI_BB_CFG_SPEC, u32, u32, 32, 0>;
 impl R {
     #[doc = "Bits 0:31 - ******* Description ***********"]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:31 - ******* Description ***********"]
     #[inline(always)]
     pub fn wifi_bb_cfg(&mut self) -> WIFI_BB_CFG_W {
-        WIFI_BB_CFG_W { w: self }
+        WIFI_BB_CFG_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,158 +35,23 @@ impl From<crate::W<OUT_LINK_CH1_SPEC>> for W {
     }
 }
 #[doc = "Field `OUTLINK_ADDR_CH1` reader - This register stores the 20 least significant bits of the first outlink descriptor's address."]
-pub struct OUTLINK_ADDR_CH1_R(crate::FieldReader<u32>);
-impl OUTLINK_ADDR_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        OUTLINK_ADDR_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_ADDR_CH1_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_ADDR_CH1_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `OUTLINK_ADDR_CH1` writer - This register stores the 20 least significant bits of the first outlink descriptor's address."]
-pub struct OUTLINK_ADDR_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTLINK_ADDR_CH1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x000f_ffff) | (value as u32 & 0x000f_ffff);
-        self.w
-    }
-}
+pub type OUTLINK_ADDR_CH1_W<'a> = crate::FieldWriter<'a, u32, OUT_LINK_CH1_SPEC, u32, u32, 20, 0>;
 #[doc = "Field `OUTLINK_STOP_CH1` reader - Set this bit to stop dealing with the outlink descriptors."]
-pub struct OUTLINK_STOP_CH1_R(crate::FieldReader<bool>);
-impl OUTLINK_STOP_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTLINK_STOP_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_STOP_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_STOP_CH1_R = crate::BitReader<bool>;
 #[doc = "Field `OUTLINK_STOP_CH1` writer - Set this bit to stop dealing with the outlink descriptors."]
-pub struct OUTLINK_STOP_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTLINK_STOP_CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type OUTLINK_STOP_CH1_W<'a> = crate::BitWriter<'a, u32, OUT_LINK_CH1_SPEC, bool, 20>;
 #[doc = "Field `OUTLINK_START_CH1` reader - Set this bit to start dealing with the outlink descriptors."]
-pub struct OUTLINK_START_CH1_R(crate::FieldReader<bool>);
-impl OUTLINK_START_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTLINK_START_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_START_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_START_CH1_R = crate::BitReader<bool>;
 #[doc = "Field `OUTLINK_START_CH1` writer - Set this bit to start dealing with the outlink descriptors."]
-pub struct OUTLINK_START_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTLINK_START_CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type OUTLINK_START_CH1_W<'a> = crate::BitWriter<'a, u32, OUT_LINK_CH1_SPEC, bool, 21>;
 #[doc = "Field `OUTLINK_RESTART_CH1` reader - Set this bit to restart a new outlink from the last address."]
-pub struct OUTLINK_RESTART_CH1_R(crate::FieldReader<bool>);
-impl OUTLINK_RESTART_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTLINK_RESTART_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_RESTART_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_RESTART_CH1_R = crate::BitReader<bool>;
 #[doc = "Field `OUTLINK_RESTART_CH1` writer - Set this bit to restart a new outlink from the last address."]
-pub struct OUTLINK_RESTART_CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTLINK_RESTART_CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type OUTLINK_RESTART_CH1_W<'a> = crate::BitWriter<'a, u32, OUT_LINK_CH1_SPEC, bool, 22>;
 #[doc = "Field `OUTLINK_PARK_CH1` reader - 1: the outlink descriptor's FSM is in idle state. 0: the outlink descriptor's FSM is working."]
-pub struct OUTLINK_PARK_CH1_R(crate::FieldReader<bool>);
-impl OUTLINK_PARK_CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUTLINK_PARK_CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUTLINK_PARK_CH1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUTLINK_PARK_CH1_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bits 0:19 - This register stores the 20 least significant bits of the first outlink descriptor's address."]
     #[inline(always)]
@@ -218,22 +83,22 @@ impl W {
     #[doc = "Bits 0:19 - This register stores the 20 least significant bits of the first outlink descriptor's address."]
     #[inline(always)]
     pub fn outlink_addr_ch1(&mut self) -> OUTLINK_ADDR_CH1_W {
-        OUTLINK_ADDR_CH1_W { w: self }
+        OUTLINK_ADDR_CH1_W::new(self)
     }
     #[doc = "Bit 20 - Set this bit to stop dealing with the outlink descriptors."]
     #[inline(always)]
     pub fn outlink_stop_ch1(&mut self) -> OUTLINK_STOP_CH1_W {
-        OUTLINK_STOP_CH1_W { w: self }
+        OUTLINK_STOP_CH1_W::new(self)
     }
     #[doc = "Bit 21 - Set this bit to start dealing with the outlink descriptors."]
     #[inline(always)]
     pub fn outlink_start_ch1(&mut self) -> OUTLINK_START_CH1_W {
-        OUTLINK_START_CH1_W { w: self }
+        OUTLINK_START_CH1_W::new(self)
     }
     #[doc = "Bit 22 - Set this bit to restart a new outlink from the last address."]
     #[inline(always)]
     pub fn outlink_restart_ch1(&mut self) -> OUTLINK_RESTART_CH1_W {
-        OUTLINK_RESTART_CH1_W { w: self }
+        OUTLINK_RESTART_CH1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

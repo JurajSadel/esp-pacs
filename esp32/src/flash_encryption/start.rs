@@ -20,22 +20,12 @@ impl From<crate::W<START_SPEC>> for W {
     }
 }
 #[doc = "Field `FLASH_START` writer - Set this bit to start encryption operation on data buffer."]
-pub struct FLASH_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FLASH_START_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type FLASH_START_W<'a> = crate::FieldWriter<'a, u32, START_SPEC, u8, u8, 8, 0>;
 impl W {
     #[doc = "Bits 0:7 - Set this bit to start encryption operation on data buffer."]
     #[inline(always)]
     pub fn flash_start(&mut self) -> FLASH_START_W {
-        FLASH_START_W { w: self }
+        FLASH_START_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

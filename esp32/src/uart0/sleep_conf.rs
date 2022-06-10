@@ -35,32 +35,9 @@ impl From<crate::W<SLEEP_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `ACTIVE_THRESHOLD` reader - When the input rxd edge changes more than this register value. the uart is active from light sleeping mode."]
-pub struct ACTIVE_THRESHOLD_R(crate::FieldReader<u16>);
-impl ACTIVE_THRESHOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        ACTIVE_THRESHOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ACTIVE_THRESHOLD_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ACTIVE_THRESHOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `ACTIVE_THRESHOLD` writer - When the input rxd edge changes more than this register value. the uart is active from light sleeping mode."]
-pub struct ACTIVE_THRESHOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ACTIVE_THRESHOLD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type ACTIVE_THRESHOLD_W<'a> = crate::FieldWriter<'a, u32, SLEEP_CONF_SPEC, u16, u16, 10, 0>;
 impl R {
     #[doc = "Bits 0:9 - When the input rxd edge changes more than this register value. the uart is active from light sleeping mode."]
     #[inline(always)]
@@ -72,7 +49,7 @@ impl W {
     #[doc = "Bits 0:9 - When the input rxd edge changes more than this register value. the uart is active from light sleeping mode."]
     #[inline(always)]
     pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W {
-        ACTIVE_THRESHOLD_W { w: self }
+        ACTIVE_THRESHOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,32 +35,10 @@ impl From<crate::W<CORE_1_REGION_PMS_CONSTRAIN_7_SPEC>> for W {
     }
 }
 #[doc = "Field `CORE_1_REGION_PMS_CONSTRAIN_ADDR_4` reader - Region 3 end address and Region 4 start address for core1."]
-pub struct CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_R(crate::FieldReader<u32>);
-impl CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CORE_1_REGION_PMS_CONSTRAIN_ADDR_4` writer - Region 3 end address and Region 4 start address for core1."]
-pub struct CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff_ffff) | (value as u32 & 0x3fff_ffff);
-        self.w
-    }
-}
+pub type CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_W<'a> =
+    crate::FieldWriter<'a, u32, CORE_1_REGION_PMS_CONSTRAIN_7_SPEC, u32, u32, 30, 0>;
 impl R {
     #[doc = "Bits 0:29 - Region 3 end address and Region 4 start address for core1."]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:29 - Region 3 end address and Region 4 start address for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_addr_4(&mut self) -> CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_W {
-        CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_W { w: self }
+        CORE_1_REGION_PMS_CONSTRAIN_ADDR_4_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -14,260 +14,39 @@ impl From<crate::R<RD_REPEAT_DATA1_SPEC>> for R {
     }
 }
 #[doc = "Field `VDD_SPI_DREFM` reader - SPI regulator medium voltage reference."]
-pub struct VDD_SPI_DREFM_R(crate::FieldReader<u8>);
-impl VDD_SPI_DREFM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VDD_SPI_DREFM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_DREFM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_DREFM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VDD_SPI_DREFL` reader - SPI regulator low voltage reference."]
-pub struct VDD_SPI_DREFL_R(crate::FieldReader<u8>);
-impl VDD_SPI_DREFL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VDD_SPI_DREFL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_DREFL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_DREFL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VDD_SPI_XPD` reader - SPI regulator power up signal."]
-pub struct VDD_SPI_XPD_R(crate::FieldReader<bool>);
-impl VDD_SPI_XPD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VDD_SPI_XPD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_XPD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_XPD_R = crate::BitReader<bool>;
 #[doc = "Field `VDD_SPI_TIEH` reader - SPI regulator output is short connected to VDD3P3_RTC_IO."]
-pub struct VDD_SPI_TIEH_R(crate::FieldReader<bool>);
-impl VDD_SPI_TIEH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VDD_SPI_TIEH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_TIEH_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_TIEH_R = crate::BitReader<bool>;
 #[doc = "Field `VDD_SPI_FORCE` reader - Set this bit and force to use the configuration of eFuse to configure VDD_SPI."]
-pub struct VDD_SPI_FORCE_R(crate::FieldReader<bool>);
-impl VDD_SPI_FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VDD_SPI_FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_FORCE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_FORCE_R = crate::BitReader<bool>;
 #[doc = "Field `VDD_SPI_EN_INIT` reader - Set SPI regulator to 0 to configure init\\[1:0\\]=0."]
-pub struct VDD_SPI_EN_INIT_R(crate::FieldReader<bool>);
-impl VDD_SPI_EN_INIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VDD_SPI_EN_INIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_EN_INIT_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_EN_INIT_R = crate::BitReader<bool>;
 #[doc = "Field `VDD_SPI_ENCURLIM` reader - Set SPI regulator to 1 to enable output current limit."]
-pub struct VDD_SPI_ENCURLIM_R(crate::FieldReader<bool>);
-impl VDD_SPI_ENCURLIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VDD_SPI_ENCURLIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_ENCURLIM_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_ENCURLIM_R = crate::BitReader<bool>;
 #[doc = "Field `VDD_SPI_DCURLIM` reader - Tunes the current limit threshold of SPI regulator when tieh=0, about 800 mA/(8+d)."]
-pub struct VDD_SPI_DCURLIM_R(crate::FieldReader<u8>);
-impl VDD_SPI_DCURLIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VDD_SPI_DCURLIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_DCURLIM_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_DCURLIM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VDD_SPI_INIT` reader - Adds resistor from LDO output to ground. 0: no resistance 1: 6 K 2: 4 K 3: 2 K."]
-pub struct VDD_SPI_INIT_R(crate::FieldReader<u8>);
-impl VDD_SPI_INIT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VDD_SPI_INIT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_INIT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_INIT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VDD_SPI_DCAP` reader - Prevents SPI regulator from overshoot."]
-pub struct VDD_SPI_DCAP_R(crate::FieldReader<u8>);
-impl VDD_SPI_DCAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VDD_SPI_DCAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VDD_SPI_DCAP_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VDD_SPI_DCAP_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `WDT_DELAY_SEL` reader - Selects RTC watchdog timeout threshold, in unit of slow clock cycle. 0: 40000. 1: 80000. 2: 160000. 3:320000."]
-pub struct WDT_DELAY_SEL_R(crate::FieldReader<u8>);
-impl WDT_DELAY_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WDT_DELAY_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WDT_DELAY_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WDT_DELAY_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SPI_BOOT_CRYPT_CNT` reader - Set this bit to enable SPI boot encrypt/decrypt. Odd number of 1: enable. even number of 1: disable."]
-pub struct SPI_BOOT_CRYPT_CNT_R(crate::FieldReader<u8>);
-impl SPI_BOOT_CRYPT_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SPI_BOOT_CRYPT_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPI_BOOT_CRYPT_CNT_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SPI_BOOT_CRYPT_CNT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE0` reader - Set this bit to enable revoking first secure boot key."]
-pub struct SECURE_BOOT_KEY_REVOKE0_R(crate::FieldReader<bool>);
-impl SECURE_BOOT_KEY_REVOKE0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECURE_BOOT_KEY_REVOKE0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECURE_BOOT_KEY_REVOKE0_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECURE_BOOT_KEY_REVOKE0_R = crate::BitReader<bool>;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE1` reader - Set this bit to enable revoking second secure boot key."]
-pub struct SECURE_BOOT_KEY_REVOKE1_R(crate::FieldReader<bool>);
-impl SECURE_BOOT_KEY_REVOKE1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECURE_BOOT_KEY_REVOKE1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECURE_BOOT_KEY_REVOKE1_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECURE_BOOT_KEY_REVOKE1_R = crate::BitReader<bool>;
 #[doc = "Field `SECURE_BOOT_KEY_REVOKE2` reader - Set this bit to enable revoking third secure boot key."]
-pub struct SECURE_BOOT_KEY_REVOKE2_R(crate::FieldReader<bool>);
-impl SECURE_BOOT_KEY_REVOKE2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SECURE_BOOT_KEY_REVOKE2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SECURE_BOOT_KEY_REVOKE2_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SECURE_BOOT_KEY_REVOKE2_R = crate::BitReader<bool>;
 #[doc = "Field `KEY_PURPOSE_0` reader - Purpose of Key0."]
-pub struct KEY_PURPOSE_0_R(crate::FieldReader<u8>);
-impl KEY_PURPOSE_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_PURPOSE_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_PURPOSE_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_PURPOSE_0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `KEY_PURPOSE_1` reader - Purpose of Key1."]
-pub struct KEY_PURPOSE_1_R(crate::FieldReader<u8>);
-impl KEY_PURPOSE_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        KEY_PURPOSE_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KEY_PURPOSE_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type KEY_PURPOSE_1_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:1 - SPI regulator medium voltage reference."]
     #[inline(always)]

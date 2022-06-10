@@ -14,95 +14,17 @@ impl From<crate::R<SDIO_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `CMD_ST` reader - "]
-pub struct CMD_ST_R(crate::FieldReader<u8>);
-impl CMD_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CMD_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CMD_ST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CMD_ST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FUNC_ST` reader - "]
-pub struct FUNC_ST_R(crate::FieldReader<u8>);
-impl FUNC_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FUNC_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FUNC_ST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FUNC_ST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SDIO_WAKEUP` reader - "]
-pub struct SDIO_WAKEUP_R(crate::FieldReader<bool>);
-impl SDIO_WAKEUP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SDIO_WAKEUP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SDIO_WAKEUP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SDIO_WAKEUP_R = crate::BitReader<bool>;
 #[doc = "Field `BUS_ST` reader - "]
-pub struct BUS_ST_R(crate::FieldReader<u8>);
-impl BUS_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BUS_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BUS_ST_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BUS_ST_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FUNC1_ACC_STATE` reader - "]
-pub struct FUNC1_ACC_STATE_R(crate::FieldReader<u8>);
-impl FUNC1_ACC_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FUNC1_ACC_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FUNC1_ACC_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FUNC1_ACC_STATE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FUNC2_ACC_STATE` reader - "]
-pub struct FUNC2_ACC_STATE_R(crate::FieldReader<u8>);
-impl FUNC2_ACC_STATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FUNC2_ACC_STATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FUNC2_ACC_STATE_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FUNC2_ACC_STATE_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]

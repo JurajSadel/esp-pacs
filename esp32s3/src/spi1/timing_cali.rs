@@ -35,69 +35,13 @@ impl From<crate::W<TIMING_CALI_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMING_CALI` reader - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
-pub struct TIMING_CALI_R(crate::FieldReader<bool>);
-impl TIMING_CALI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMING_CALI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMING_CALI_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMING_CALI_R = crate::BitReader<bool>;
 #[doc = "Field `TIMING_CALI` writer - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
-pub struct TIMING_CALI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMING_CALI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type TIMING_CALI_W<'a> = crate::BitWriter<'a, u32, TIMING_CALI_SPEC, bool, 1>;
 #[doc = "Field `EXTRA_DUMMY_CYCLELEN` reader - Extra SPI_CLK cycles added in DUMMY phase for timing compensation. Active when SPI_MEM_TIMING_CALI bit is set."]
-pub struct EXTRA_DUMMY_CYCLELEN_R(crate::FieldReader<u8>);
-impl EXTRA_DUMMY_CYCLELEN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        EXTRA_DUMMY_CYCLELEN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EXTRA_DUMMY_CYCLELEN_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EXTRA_DUMMY_CYCLELEN_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `EXTRA_DUMMY_CYCLELEN` writer - Extra SPI_CLK cycles added in DUMMY phase for timing compensation. Active when SPI_MEM_TIMING_CALI bit is set."]
-pub struct EXTRA_DUMMY_CYCLELEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTRA_DUMMY_CYCLELEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(7 << 2)) | ((value as u32 & 7) << 2);
-        self.w
-    }
-}
+pub type EXTRA_DUMMY_CYCLELEN_W<'a> = crate::FieldWriter<'a, u32, TIMING_CALI_SPEC, u8, u8, 3, 2>;
 impl R {
     #[doc = "Bit 1 - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bit 1 - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
     #[inline(always)]
     pub fn timing_cali(&mut self) -> TIMING_CALI_W {
-        TIMING_CALI_W { w: self }
+        TIMING_CALI_W::new(self)
     }
     #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation. Active when SPI_MEM_TIMING_CALI bit is set."]
     #[inline(always)]
     pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W {
-        EXTRA_DUMMY_CYCLELEN_W { w: self }
+        EXTRA_DUMMY_CYCLELEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,94 +35,15 @@ impl From<crate::W<DCACHE_FREEZE_SPEC>> for W {
     }
 }
 #[doc = "Field `ENA` reader - The bit is used to enable dcache freeze mode"]
-pub struct ENA_R(crate::FieldReader<bool>);
-impl ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ENA_R = crate::BitReader<bool>;
 #[doc = "Field `ENA` writer - The bit is used to enable dcache freeze mode"]
-pub struct ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type ENA_W<'a> = crate::BitWriter<'a, u32, DCACHE_FREEZE_SPEC, bool, 0>;
 #[doc = "Field `MODE` reader - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
-pub struct MODE_R(crate::FieldReader<bool>);
-impl MODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MODE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MODE_R = crate::BitReader<bool>;
 #[doc = "Field `MODE` writer - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
-pub struct MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type MODE_W<'a> = crate::BitWriter<'a, u32, DCACHE_FREEZE_SPEC, bool, 1>;
 #[doc = "Field `DONE` reader - The bit is used to indicate dcache freeze success"]
-pub struct DONE_R(crate::FieldReader<bool>);
-impl DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DONE_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DONE_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - The bit is used to enable dcache freeze mode"]
     #[inline(always)]
@@ -144,12 +65,12 @@ impl W {
     #[doc = "Bit 0 - The bit is used to enable dcache freeze mode"]
     #[inline(always)]
     pub fn ena(&mut self) -> ENA_W {
-        ENA_W { w: self }
+        ENA_W::new(self)
     }
     #[doc = "Bit 1 - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
     #[inline(always)]
     pub fn mode(&mut self) -> MODE_W {
-        MODE_W { w: self }
+        MODE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

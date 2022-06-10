@@ -35,180 +35,26 @@ impl From<crate::W<PRO_DRAM0_2_SPEC>> for W {
     }
 }
 #[doc = "Field `PRO_DRAM0_RTCFAST_SPLTADDR` reader - Configure the split address of RTC FAST for DBUS0 access."]
-pub struct PRO_DRAM0_RTCFAST_SPLTADDR_R(crate::FieldReader<u16>);
-impl PRO_DRAM0_RTCFAST_SPLTADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PRO_DRAM0_RTCFAST_SPLTADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DRAM0_RTCFAST_SPLTADDR_R {
-    type Target = crate::FieldReader<u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DRAM0_RTCFAST_SPLTADDR_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `PRO_DRAM0_RTCFAST_SPLTADDR` writer - Configure the split address of RTC FAST for DBUS0 access."]
-pub struct PRO_DRAM0_RTCFAST_SPLTADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DRAM0_RTCFAST_SPLTADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff) | (value as u32 & 0x07ff);
-        self.w
-    }
-}
+pub type PRO_DRAM0_RTCFAST_SPLTADDR_W<'a> =
+    crate::FieldWriter<'a, u32, PRO_DRAM0_2_SPEC, u16, u16, 11, 0>;
 #[doc = "Field `PRO_DRAM0_RTCFAST_L_R` reader - Setting to 1 grants DBUS0 permission to read RTC FAST low address region."]
-pub struct PRO_DRAM0_RTCFAST_L_R_R(crate::FieldReader<bool>);
-impl PRO_DRAM0_RTCFAST_L_R_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DRAM0_RTCFAST_L_R_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DRAM0_RTCFAST_L_R_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DRAM0_RTCFAST_L_R_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DRAM0_RTCFAST_L_R` writer - Setting to 1 grants DBUS0 permission to read RTC FAST low address region."]
-pub struct PRO_DRAM0_RTCFAST_L_R_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DRAM0_RTCFAST_L_R_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type PRO_DRAM0_RTCFAST_L_R_W<'a> = crate::BitWriter<'a, u32, PRO_DRAM0_2_SPEC, bool, 11>;
 #[doc = "Field `PRO_DRAM0_RTCFAST_L_W` reader - Setting to 1 grants DBUS0 permission to write RTC FAST low address region."]
-pub struct PRO_DRAM0_RTCFAST_L_W_R(crate::FieldReader<bool>);
-impl PRO_DRAM0_RTCFAST_L_W_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DRAM0_RTCFAST_L_W_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DRAM0_RTCFAST_L_W_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DRAM0_RTCFAST_L_W_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DRAM0_RTCFAST_L_W` writer - Setting to 1 grants DBUS0 permission to write RTC FAST low address region."]
-pub struct PRO_DRAM0_RTCFAST_L_W_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DRAM0_RTCFAST_L_W_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type PRO_DRAM0_RTCFAST_L_W_W<'a> = crate::BitWriter<'a, u32, PRO_DRAM0_2_SPEC, bool, 12>;
 #[doc = "Field `PRO_DRAM0_RTCFAST_H_R` reader - Setting to 1 grants DBUS0 permission to read RTC FAST high address region."]
-pub struct PRO_DRAM0_RTCFAST_H_R_R(crate::FieldReader<bool>);
-impl PRO_DRAM0_RTCFAST_H_R_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DRAM0_RTCFAST_H_R_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DRAM0_RTCFAST_H_R_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DRAM0_RTCFAST_H_R_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DRAM0_RTCFAST_H_R` writer - Setting to 1 grants DBUS0 permission to read RTC FAST high address region."]
-pub struct PRO_DRAM0_RTCFAST_H_R_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DRAM0_RTCFAST_H_R_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type PRO_DRAM0_RTCFAST_H_R_W<'a> = crate::BitWriter<'a, u32, PRO_DRAM0_2_SPEC, bool, 13>;
 #[doc = "Field `PRO_DRAM0_RTCFAST_H_W` reader - Setting to 1 grants DBUS0 permission to write RTC FAST high address region."]
-pub struct PRO_DRAM0_RTCFAST_H_W_R(crate::FieldReader<bool>);
-impl PRO_DRAM0_RTCFAST_H_W_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRO_DRAM0_RTCFAST_H_W_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRO_DRAM0_RTCFAST_H_W_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRO_DRAM0_RTCFAST_H_W_R = crate::BitReader<bool>;
 #[doc = "Field `PRO_DRAM0_RTCFAST_H_W` writer - Setting to 1 grants DBUS0 permission to write RTC FAST high address region."]
-pub struct PRO_DRAM0_RTCFAST_H_W_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRO_DRAM0_RTCFAST_H_W_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type PRO_DRAM0_RTCFAST_H_W_W<'a> = crate::BitWriter<'a, u32, PRO_DRAM0_2_SPEC, bool, 14>;
 impl R {
     #[doc = "Bits 0:10 - Configure the split address of RTC FAST for DBUS0 access."]
     #[inline(always)]
@@ -240,27 +86,27 @@ impl W {
     #[doc = "Bits 0:10 - Configure the split address of RTC FAST for DBUS0 access."]
     #[inline(always)]
     pub fn pro_dram0_rtcfast_spltaddr(&mut self) -> PRO_DRAM0_RTCFAST_SPLTADDR_W {
-        PRO_DRAM0_RTCFAST_SPLTADDR_W { w: self }
+        PRO_DRAM0_RTCFAST_SPLTADDR_W::new(self)
     }
     #[doc = "Bit 11 - Setting to 1 grants DBUS0 permission to read RTC FAST low address region."]
     #[inline(always)]
     pub fn pro_dram0_rtcfast_l_r(&mut self) -> PRO_DRAM0_RTCFAST_L_R_W {
-        PRO_DRAM0_RTCFAST_L_R_W { w: self }
+        PRO_DRAM0_RTCFAST_L_R_W::new(self)
     }
     #[doc = "Bit 12 - Setting to 1 grants DBUS0 permission to write RTC FAST low address region."]
     #[inline(always)]
     pub fn pro_dram0_rtcfast_l_w(&mut self) -> PRO_DRAM0_RTCFAST_L_W_W {
-        PRO_DRAM0_RTCFAST_L_W_W { w: self }
+        PRO_DRAM0_RTCFAST_L_W_W::new(self)
     }
     #[doc = "Bit 13 - Setting to 1 grants DBUS0 permission to read RTC FAST high address region."]
     #[inline(always)]
     pub fn pro_dram0_rtcfast_h_r(&mut self) -> PRO_DRAM0_RTCFAST_H_R_W {
-        PRO_DRAM0_RTCFAST_H_R_W { w: self }
+        PRO_DRAM0_RTCFAST_H_R_W::new(self)
     }
     #[doc = "Bit 14 - Setting to 1 grants DBUS0 permission to write RTC FAST high address region."]
     #[inline(always)]
     pub fn pro_dram0_rtcfast_h_w(&mut self) -> PRO_DRAM0_RTCFAST_H_W_W {
-        PRO_DRAM0_RTCFAST_H_W_W { w: self }
+        PRO_DRAM0_RTCFAST_H_W_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

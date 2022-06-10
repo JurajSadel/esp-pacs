@@ -35,133 +35,21 @@ impl From<crate::W<TIMER1_SYNC_SPEC>> for W {
     }
 }
 #[doc = "Field `TIMER1_SYNCI_EN` reader - When set, timer reloading with phase on sync input event is enabled."]
-pub struct TIMER1_SYNCI_EN_R(crate::FieldReader<bool>);
-impl TIMER1_SYNCI_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER1_SYNCI_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER1_SYNCI_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER1_SYNCI_EN_R = crate::BitReader<bool>;
 #[doc = "Field `TIMER1_SYNCI_EN` writer - When set, timer reloading with phase on sync input event is enabled."]
-pub struct TIMER1_SYNCI_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER1_SYNCI_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type TIMER1_SYNCI_EN_W<'a> = crate::BitWriter<'a, u32, TIMER1_SYNC_SPEC, bool, 0>;
 #[doc = "Field `SW` reader - Toggling this bit will trigger a software sync."]
-pub struct SW_R(crate::FieldReader<bool>);
-impl SW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SW_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SW_R = crate::BitReader<bool>;
 #[doc = "Field `SW` writer - Toggling this bit will trigger a software sync."]
-pub struct SW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SW_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type SW_W<'a> = crate::BitWriter<'a, u32, TIMER1_SYNC_SPEC, bool, 1>;
 #[doc = "Field `TIMER1_SYNCO_SEL` reader - PWM timer1 sync_out selection, 0: synci, 1: TEZ, 2: TEP, otherwise:sync out is software sync"]
-pub struct TIMER1_SYNCO_SEL_R(crate::FieldReader<u8>);
-impl TIMER1_SYNCO_SEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMER1_SYNCO_SEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER1_SYNCO_SEL_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER1_SYNCO_SEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMER1_SYNCO_SEL` writer - PWM timer1 sync_out selection, 0: synci, 1: TEZ, 2: TEP, otherwise:sync out is software sync"]
-pub struct TIMER1_SYNCO_SEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER1_SYNCO_SEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type TIMER1_SYNCO_SEL_W<'a> = crate::FieldWriter<'a, u32, TIMER1_SYNC_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `TIMER1_PHASE` reader - phase for timer reload on sync event"]
-pub struct TIMER1_PHASE_R(crate::FieldReader<u32>);
-impl TIMER1_PHASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TIMER1_PHASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER1_PHASE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER1_PHASE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TIMER1_PHASE` writer - phase for timer reload on sync event"]
-pub struct TIMER1_PHASE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMER1_PHASE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0001_ffff << 4)) | ((value as u32 & 0x0001_ffff) << 4);
-        self.w
-    }
-}
+pub type TIMER1_PHASE_W<'a> = crate::FieldWriter<'a, u32, TIMER1_SYNC_SPEC, u32, u32, 17, 4>;
 impl R {
     #[doc = "Bit 0 - When set, timer reloading with phase on sync input event is enabled."]
     #[inline(always)]
@@ -188,22 +76,22 @@ impl W {
     #[doc = "Bit 0 - When set, timer reloading with phase on sync input event is enabled."]
     #[inline(always)]
     pub fn timer1_synci_en(&mut self) -> TIMER1_SYNCI_EN_W {
-        TIMER1_SYNCI_EN_W { w: self }
+        TIMER1_SYNCI_EN_W::new(self)
     }
     #[doc = "Bit 1 - Toggling this bit will trigger a software sync."]
     #[inline(always)]
     pub fn sw(&mut self) -> SW_W {
-        SW_W { w: self }
+        SW_W::new(self)
     }
     #[doc = "Bits 2:3 - PWM timer1 sync_out selection, 0: synci, 1: TEZ, 2: TEP, otherwise:sync out is software sync"]
     #[inline(always)]
     pub fn timer1_synco_sel(&mut self) -> TIMER1_SYNCO_SEL_W {
-        TIMER1_SYNCO_SEL_W { w: self }
+        TIMER1_SYNCO_SEL_W::new(self)
     }
     #[doc = "Bits 4:20 - phase for timer reload on sync event"]
     #[inline(always)]
     pub fn timer1_phase(&mut self) -> TIMER1_PHASE_W {
-        TIMER1_PHASE_W { w: self }
+        TIMER1_PHASE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -35,449 +35,53 @@ impl From<crate::W<ANA_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `I2C_RESET_POR_FORCE_PD` reader - force down I2C_RESET_POR"]
-pub struct I2C_RESET_POR_FORCE_PD_R(crate::FieldReader<bool>);
-impl I2C_RESET_POR_FORCE_PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2C_RESET_POR_FORCE_PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2C_RESET_POR_FORCE_PD_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2C_RESET_POR_FORCE_PD_R = crate::BitReader<bool>;
 #[doc = "Field `I2C_RESET_POR_FORCE_PD` writer - force down I2C_RESET_POR"]
-pub struct I2C_RESET_POR_FORCE_PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_RESET_POR_FORCE_PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type I2C_RESET_POR_FORCE_PD_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 18>;
 #[doc = "Field `I2C_RESET_POR_FORCE_PU` reader - force on I2C_RESET_POR"]
-pub struct I2C_RESET_POR_FORCE_PU_R(crate::FieldReader<bool>);
-impl I2C_RESET_POR_FORCE_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        I2C_RESET_POR_FORCE_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for I2C_RESET_POR_FORCE_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type I2C_RESET_POR_FORCE_PU_R = crate::BitReader<bool>;
 #[doc = "Field `I2C_RESET_POR_FORCE_PU` writer - force on I2C_RESET_POR"]
-pub struct I2C_RESET_POR_FORCE_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C_RESET_POR_FORCE_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type I2C_RESET_POR_FORCE_PU_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 19>;
 #[doc = "Field `GLITCH_RST_EN` reader - enable clk glitch"]
-pub struct GLITCH_RST_EN_R(crate::FieldReader<bool>);
-impl GLITCH_RST_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        GLITCH_RST_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GLITCH_RST_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GLITCH_RST_EN_R = crate::BitReader<bool>;
 #[doc = "Field `GLITCH_RST_EN` writer - enable clk glitch"]
-pub struct GLITCH_RST_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GLITCH_RST_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type GLITCH_RST_EN_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 20>;
 #[doc = "Field `SAR_I2C_PU` reader - PLLA force power up"]
-pub struct SAR_I2C_PU_R(crate::FieldReader<bool>);
-impl SAR_I2C_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SAR_I2C_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SAR_I2C_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SAR_I2C_PU_R = crate::BitReader<bool>;
 #[doc = "Field `SAR_I2C_PU` writer - PLLA force power up"]
-pub struct SAR_I2C_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SAR_I2C_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type SAR_I2C_PU_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 22>;
 #[doc = "Field `ANALOG_TOP_ISO_SLEEP` reader - PLLA force power down"]
-pub struct ANALOG_TOP_ISO_SLEEP_R(crate::FieldReader<bool>);
-impl ANALOG_TOP_ISO_SLEEP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ANALOG_TOP_ISO_SLEEP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ANALOG_TOP_ISO_SLEEP_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ANALOG_TOP_ISO_SLEEP_R = crate::BitReader<bool>;
 #[doc = "Field `ANALOG_TOP_ISO_SLEEP` writer - PLLA force power down"]
-pub struct ANALOG_TOP_ISO_SLEEP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ANALOG_TOP_ISO_SLEEP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type ANALOG_TOP_ISO_SLEEP_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 23>;
 #[doc = "Field `ANALOG_TOP_ISO_MONITOR` reader - PLLA force power up"]
-pub struct ANALOG_TOP_ISO_MONITOR_R(crate::FieldReader<bool>);
-impl ANALOG_TOP_ISO_MONITOR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ANALOG_TOP_ISO_MONITOR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ANALOG_TOP_ISO_MONITOR_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ANALOG_TOP_ISO_MONITOR_R = crate::BitReader<bool>;
 #[doc = "Field `ANALOG_TOP_ISO_MONITOR` writer - PLLA force power up"]
-pub struct ANALOG_TOP_ISO_MONITOR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ANALOG_TOP_ISO_MONITOR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type ANALOG_TOP_ISO_MONITOR_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 24>;
 #[doc = "Field `BBPLL_CAL_SLP_START` reader - start BBPLL calibration during sleep"]
-pub struct BBPLL_CAL_SLP_START_R(crate::FieldReader<bool>);
-impl BBPLL_CAL_SLP_START_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        BBPLL_CAL_SLP_START_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BBPLL_CAL_SLP_START_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BBPLL_CAL_SLP_START_R = crate::BitReader<bool>;
 #[doc = "Field `BBPLL_CAL_SLP_START` writer - start BBPLL calibration during sleep"]
-pub struct BBPLL_CAL_SLP_START_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BBPLL_CAL_SLP_START_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type BBPLL_CAL_SLP_START_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 25>;
 #[doc = "Field `PVTMON_PU` reader - 1: PVTMON power up, otherwise power down"]
-pub struct PVTMON_PU_R(crate::FieldReader<bool>);
-impl PVTMON_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PVTMON_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PVTMON_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PVTMON_PU_R = crate::BitReader<bool>;
 #[doc = "Field `PVTMON_PU` writer - 1: PVTMON power up, otherwise power down"]
-pub struct PVTMON_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PVTMON_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 26)) | ((value as u32 & 1) << 26);
-        self.w
-    }
-}
+pub type PVTMON_PU_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 26>;
 #[doc = "Field `TXRF_I2C_PU` reader - 1: TXRF_I2C power up, otherwise power down"]
-pub struct TXRF_I2C_PU_R(crate::FieldReader<bool>);
-impl TXRF_I2C_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXRF_I2C_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXRF_I2C_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXRF_I2C_PU_R = crate::BitReader<bool>;
 #[doc = "Field `TXRF_I2C_PU` writer - 1: TXRF_I2C power up, otherwise power down"]
-pub struct TXRF_I2C_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXRF_I2C_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 27)) | ((value as u32 & 1) << 27);
-        self.w
-    }
-}
+pub type TXRF_I2C_PU_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 27>;
 #[doc = "Field `RFRX_PBUS_PU` reader - 1: RFRX_PBUS power up, otherwise power down"]
-pub struct RFRX_PBUS_PU_R(crate::FieldReader<bool>);
-impl RFRX_PBUS_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RFRX_PBUS_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RFRX_PBUS_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RFRX_PBUS_PU_R = crate::BitReader<bool>;
 #[doc = "Field `RFRX_PBUS_PU` writer - 1: RFRX_PBUS power up, otherwise power down"]
-pub struct RFRX_PBUS_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RFRX_PBUS_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 28)) | ((value as u32 & 1) << 28);
-        self.w
-    }
-}
+pub type RFRX_PBUS_PU_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 28>;
 #[doc = "Field `CKGEN_I2C_PU` reader - 1: CKGEN_I2C power up, otherwise power down"]
-pub struct CKGEN_I2C_PU_R(crate::FieldReader<bool>);
-impl CKGEN_I2C_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CKGEN_I2C_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CKGEN_I2C_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CKGEN_I2C_PU_R = crate::BitReader<bool>;
 #[doc = "Field `CKGEN_I2C_PU` writer - 1: CKGEN_I2C power up, otherwise power down"]
-pub struct CKGEN_I2C_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CKGEN_I2C_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 30)) | ((value as u32 & 1) << 30);
-        self.w
-    }
-}
+pub type CKGEN_I2C_PU_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 30>;
 #[doc = "Field `PLL_I2C_PU` reader - power on pll i2c"]
-pub struct PLL_I2C_PU_R(crate::FieldReader<bool>);
-impl PLL_I2C_PU_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PLL_I2C_PU_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PLL_I2C_PU_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PLL_I2C_PU_R = crate::BitReader<bool>;
 #[doc = "Field `PLL_I2C_PU` writer - power on pll i2c"]
-pub struct PLL_I2C_PU_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PLL_I2C_PU_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type PLL_I2C_PU_W<'a> = crate::BitWriter<'a, u32, ANA_CONF_SPEC, bool, 31>;
 impl R {
     #[doc = "Bit 18 - force down I2C_RESET_POR"]
     #[inline(always)]
@@ -544,62 +148,62 @@ impl W {
     #[doc = "Bit 18 - force down I2C_RESET_POR"]
     #[inline(always)]
     pub fn i2c_reset_por_force_pd(&mut self) -> I2C_RESET_POR_FORCE_PD_W {
-        I2C_RESET_POR_FORCE_PD_W { w: self }
+        I2C_RESET_POR_FORCE_PD_W::new(self)
     }
     #[doc = "Bit 19 - force on I2C_RESET_POR"]
     #[inline(always)]
     pub fn i2c_reset_por_force_pu(&mut self) -> I2C_RESET_POR_FORCE_PU_W {
-        I2C_RESET_POR_FORCE_PU_W { w: self }
+        I2C_RESET_POR_FORCE_PU_W::new(self)
     }
     #[doc = "Bit 20 - enable clk glitch"]
     #[inline(always)]
     pub fn glitch_rst_en(&mut self) -> GLITCH_RST_EN_W {
-        GLITCH_RST_EN_W { w: self }
+        GLITCH_RST_EN_W::new(self)
     }
     #[doc = "Bit 22 - PLLA force power up"]
     #[inline(always)]
     pub fn sar_i2c_pu(&mut self) -> SAR_I2C_PU_W {
-        SAR_I2C_PU_W { w: self }
+        SAR_I2C_PU_W::new(self)
     }
     #[doc = "Bit 23 - PLLA force power down"]
     #[inline(always)]
     pub fn analog_top_iso_sleep(&mut self) -> ANALOG_TOP_ISO_SLEEP_W {
-        ANALOG_TOP_ISO_SLEEP_W { w: self }
+        ANALOG_TOP_ISO_SLEEP_W::new(self)
     }
     #[doc = "Bit 24 - PLLA force power up"]
     #[inline(always)]
     pub fn analog_top_iso_monitor(&mut self) -> ANALOG_TOP_ISO_MONITOR_W {
-        ANALOG_TOP_ISO_MONITOR_W { w: self }
+        ANALOG_TOP_ISO_MONITOR_W::new(self)
     }
     #[doc = "Bit 25 - start BBPLL calibration during sleep"]
     #[inline(always)]
     pub fn bbpll_cal_slp_start(&mut self) -> BBPLL_CAL_SLP_START_W {
-        BBPLL_CAL_SLP_START_W { w: self }
+        BBPLL_CAL_SLP_START_W::new(self)
     }
     #[doc = "Bit 26 - 1: PVTMON power up, otherwise power down"]
     #[inline(always)]
     pub fn pvtmon_pu(&mut self) -> PVTMON_PU_W {
-        PVTMON_PU_W { w: self }
+        PVTMON_PU_W::new(self)
     }
     #[doc = "Bit 27 - 1: TXRF_I2C power up, otherwise power down"]
     #[inline(always)]
     pub fn txrf_i2c_pu(&mut self) -> TXRF_I2C_PU_W {
-        TXRF_I2C_PU_W { w: self }
+        TXRF_I2C_PU_W::new(self)
     }
     #[doc = "Bit 28 - 1: RFRX_PBUS power up, otherwise power down"]
     #[inline(always)]
     pub fn rfrx_pbus_pu(&mut self) -> RFRX_PBUS_PU_W {
-        RFRX_PBUS_PU_W { w: self }
+        RFRX_PBUS_PU_W::new(self)
     }
     #[doc = "Bit 30 - 1: CKGEN_I2C power up, otherwise power down"]
     #[inline(always)]
     pub fn ckgen_i2c_pu(&mut self) -> CKGEN_I2C_PU_W {
-        CKGEN_I2C_PU_W { w: self }
+        CKGEN_I2C_PU_W::new(self)
     }
     #[doc = "Bit 31 - power on pll i2c"]
     #[inline(always)]
     pub fn pll_i2c_pu(&mut self) -> PLL_I2C_PU_W {
-        PLL_I2C_PU_W { w: self }
+        PLL_I2C_PU_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

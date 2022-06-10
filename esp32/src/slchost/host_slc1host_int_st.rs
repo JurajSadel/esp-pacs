@@ -14,395 +14,57 @@ impl From<crate::R<HOST_SLC1HOST_INT_ST_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_SLC1_TOHOST_BIT0_INT_ST` reader - "]
-pub struct HOST_SLC1_TOHOST_BIT0_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOHOST_BIT0_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOHOST_BIT0_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOHOST_BIT0_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOHOST_BIT0_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT1_INT_ST` reader - "]
-pub struct HOST_SLC1_TOHOST_BIT1_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOHOST_BIT1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOHOST_BIT1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOHOST_BIT1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOHOST_BIT1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT2_INT_ST` reader - "]
-pub struct HOST_SLC1_TOHOST_BIT2_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOHOST_BIT2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOHOST_BIT2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOHOST_BIT2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOHOST_BIT2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT3_INT_ST` reader - "]
-pub struct HOST_SLC1_TOHOST_BIT3_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOHOST_BIT3_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOHOST_BIT3_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOHOST_BIT3_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOHOST_BIT3_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT4_INT_ST` reader - "]
-pub struct HOST_SLC1_TOHOST_BIT4_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOHOST_BIT4_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOHOST_BIT4_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOHOST_BIT4_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOHOST_BIT4_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT5_INT_ST` reader - "]
-pub struct HOST_SLC1_TOHOST_BIT5_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOHOST_BIT5_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOHOST_BIT5_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOHOST_BIT5_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOHOST_BIT5_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT6_INT_ST` reader - "]
-pub struct HOST_SLC1_TOHOST_BIT6_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOHOST_BIT6_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOHOST_BIT6_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOHOST_BIT6_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOHOST_BIT6_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOHOST_BIT7_INT_ST` reader - "]
-pub struct HOST_SLC1_TOHOST_BIT7_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOHOST_BIT7_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOHOST_BIT7_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOHOST_BIT7_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOHOST_BIT7_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOKEN0_1TO0_INT_ST` reader - "]
-pub struct HOST_SLC1_TOKEN0_1TO0_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOKEN0_1TO0_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOKEN0_1TO0_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOKEN0_1TO0_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOKEN0_1TO0_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOKEN1_1TO0_INT_ST` reader - "]
-pub struct HOST_SLC1_TOKEN1_1TO0_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOKEN1_1TO0_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOKEN1_1TO0_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOKEN1_1TO0_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOKEN1_1TO0_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOKEN0_0TO1_INT_ST` reader - "]
-pub struct HOST_SLC1_TOKEN0_0TO1_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOKEN0_0TO1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOKEN0_0TO1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOKEN0_0TO1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOKEN0_0TO1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TOKEN1_0TO1_INT_ST` reader - "]
-pub struct HOST_SLC1_TOKEN1_0TO1_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TOKEN1_0TO1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TOKEN1_0TO1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TOKEN1_0TO1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TOKEN1_0TO1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1HOST_RX_SOF_INT_ST` reader - "]
-pub struct HOST_SLC1HOST_RX_SOF_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1HOST_RX_SOF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1HOST_RX_SOF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1HOST_RX_SOF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1HOST_RX_SOF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1HOST_RX_EOF_INT_ST` reader - "]
-pub struct HOST_SLC1HOST_RX_EOF_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1HOST_RX_EOF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1HOST_RX_EOF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1HOST_RX_EOF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1HOST_RX_EOF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1HOST_RX_START_INT_ST` reader - "]
-pub struct HOST_SLC1HOST_RX_START_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1HOST_RX_START_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1HOST_RX_START_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1HOST_RX_START_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1HOST_RX_START_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1HOST_TX_START_INT_ST` reader - "]
-pub struct HOST_SLC1HOST_TX_START_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1HOST_TX_START_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1HOST_TX_START_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1HOST_TX_START_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1HOST_TX_START_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_RX_UDF_INT_ST` reader - "]
-pub struct HOST_SLC1_RX_UDF_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_RX_UDF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_RX_UDF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_RX_UDF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_RX_UDF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_TX_OVF_INT_ST` reader - "]
-pub struct HOST_SLC1_TX_OVF_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_TX_OVF_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_TX_OVF_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_TX_OVF_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_TX_OVF_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_RX_PF_VALID_INT_ST` reader - "]
-pub struct HOST_SLC1_RX_PF_VALID_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_RX_PF_VALID_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_RX_PF_VALID_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_RX_PF_VALID_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_RX_PF_VALID_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_EXT_BIT0_INT_ST` reader - "]
-pub struct HOST_SLC1_EXT_BIT0_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_EXT_BIT0_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_EXT_BIT0_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_EXT_BIT0_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_EXT_BIT0_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_EXT_BIT1_INT_ST` reader - "]
-pub struct HOST_SLC1_EXT_BIT1_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_EXT_BIT1_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_EXT_BIT1_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_EXT_BIT1_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_EXT_BIT1_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_EXT_BIT2_INT_ST` reader - "]
-pub struct HOST_SLC1_EXT_BIT2_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_EXT_BIT2_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_EXT_BIT2_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_EXT_BIT2_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_EXT_BIT2_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_EXT_BIT3_INT_ST` reader - "]
-pub struct HOST_SLC1_EXT_BIT3_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_EXT_BIT3_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_EXT_BIT3_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_EXT_BIT3_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_EXT_BIT3_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ST` reader - "]
-pub struct HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_WIFI_RX_NEW_PACKET_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_HOST_RD_RETRY_INT_ST` reader - "]
-pub struct HOST_SLC1_HOST_RD_RETRY_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_HOST_RD_RETRY_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_HOST_RD_RETRY_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_HOST_RD_RETRY_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_HOST_RD_RETRY_INT_ST_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_SLC1_BT_RX_NEW_PACKET_INT_ST` reader - "]
-pub struct HOST_SLC1_BT_RX_NEW_PACKET_INT_ST_R(crate::FieldReader<bool>);
-impl HOST_SLC1_BT_RX_NEW_PACKET_INT_ST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_SLC1_BT_RX_NEW_PACKET_INT_ST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_SLC1_BT_RX_NEW_PACKET_INT_ST_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_SLC1_BT_RX_NEW_PACKET_INT_ST_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

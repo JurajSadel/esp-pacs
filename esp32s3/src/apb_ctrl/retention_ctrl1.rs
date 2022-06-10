@@ -35,32 +35,10 @@ impl From<crate::W<RETENTION_CTRL1_SPEC>> for W {
     }
 }
 #[doc = "Field `RETENTION_TAG_LINK_ADDR` reader - ******* Description ***********"]
-pub struct RETENTION_TAG_LINK_ADDR_R(crate::FieldReader<u32>);
-impl RETENTION_TAG_LINK_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        RETENTION_TAG_LINK_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RETENTION_TAG_LINK_ADDR_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RETENTION_TAG_LINK_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `RETENTION_TAG_LINK_ADDR` writer - ******* Description ***********"]
-pub struct RETENTION_TAG_LINK_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RETENTION_TAG_LINK_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07ff_ffff) | (value as u32 & 0x07ff_ffff);
-        self.w
-    }
-}
+pub type RETENTION_TAG_LINK_ADDR_W<'a> =
+    crate::FieldWriter<'a, u32, RETENTION_CTRL1_SPEC, u32, u32, 27, 0>;
 impl R {
     #[doc = "Bits 0:26 - ******* Description ***********"]
     #[inline(always)]
@@ -72,7 +50,7 @@ impl W {
     #[doc = "Bits 0:26 - ******* Description ***********"]
     #[inline(always)]
     pub fn retention_tag_link_addr(&mut self) -> RETENTION_TAG_LINK_ADDR_W {
-        RETENTION_TAG_LINK_ADDR_W { w: self }
+        RETENTION_TAG_LINK_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

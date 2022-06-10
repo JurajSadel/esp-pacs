@@ -35,194 +35,40 @@ impl From<crate::W<REGION_PMS_CONSTRAIN_2_SPEC>> for W {
     }
 }
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_0` reader - region_pms_constrain_world_1_area_0"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R(crate::FieldReader<u8>);
-impl REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_0` writer - region_pms_constrain_world_1_area_0"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !3) | (value as u32 & 3);
-        self.w
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W<'a> =
+    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, 0>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_1` reader - region_pms_constrain_world_1_area_1"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R(crate::FieldReader<u8>);
-impl REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_1` writer - region_pms_constrain_world_1_area_1"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 2)) | ((value as u32 & 3) << 2);
-        self.w
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W<'a> =
+    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, 2>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_2` reader - region_pms_constrain_world_1_area_2"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R(crate::FieldReader<u8>);
-impl REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_2` writer - region_pms_constrain_world_1_area_2"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 4)) | ((value as u32 & 3) << 4);
-        self.w
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W<'a> =
+    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, 4>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_3` reader - region_pms_constrain_world_1_area_3"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R(crate::FieldReader<u8>);
-impl REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_3` writer - region_pms_constrain_world_1_area_3"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 6)) | ((value as u32 & 3) << 6);
-        self.w
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W<'a> =
+    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, 6>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_4` reader - region_pms_constrain_world_1_area_4"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R(crate::FieldReader<u8>);
-impl REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_4` writer - region_pms_constrain_world_1_area_4"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 8)) | ((value as u32 & 3) << 8);
-        self.w
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W<'a> =
+    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, 8>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_5` reader - region_pms_constrain_world_1_area_5"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R(crate::FieldReader<u8>);
-impl REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_5` writer - region_pms_constrain_world_1_area_5"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 10)) | ((value as u32 & 3) << 10);
-        self.w
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W<'a> =
+    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, 10>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_6` reader - region_pms_constrain_world_1_area_6"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R(crate::FieldReader<u8>);
-impl REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R {
-    type Target = crate::FieldReader<u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `REGION_PMS_CONSTRAIN_WORLD_1_AREA_6` writer - region_pms_constrain_world_1_area_6"]
-pub struct REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(3 << 12)) | ((value as u32 & 3) << 12);
-        self.w
-    }
-}
+pub type REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W<'a> =
+    crate::FieldWriter<'a, u32, REGION_PMS_CONSTRAIN_2_SPEC, u8, u8, 2, 12>;
 impl R {
     #[doc = "Bits 0:1 - region_pms_constrain_world_1_area_0"]
     #[inline(always)]
@@ -264,37 +110,37 @@ impl W {
     #[doc = "Bits 0:1 - region_pms_constrain_world_1_area_0"]
     #[inline(always)]
     pub fn region_pms_constrain_world_1_area_0(&mut self) -> REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W { w: self }
+        REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W::new(self)
     }
     #[doc = "Bits 2:3 - region_pms_constrain_world_1_area_1"]
     #[inline(always)]
     pub fn region_pms_constrain_world_1_area_1(&mut self) -> REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W { w: self }
+        REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W::new(self)
     }
     #[doc = "Bits 4:5 - region_pms_constrain_world_1_area_2"]
     #[inline(always)]
     pub fn region_pms_constrain_world_1_area_2(&mut self) -> REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W { w: self }
+        REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W::new(self)
     }
     #[doc = "Bits 6:7 - region_pms_constrain_world_1_area_3"]
     #[inline(always)]
     pub fn region_pms_constrain_world_1_area_3(&mut self) -> REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W { w: self }
+        REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W::new(self)
     }
     #[doc = "Bits 8:9 - region_pms_constrain_world_1_area_4"]
     #[inline(always)]
     pub fn region_pms_constrain_world_1_area_4(&mut self) -> REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W { w: self }
+        REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W::new(self)
     }
     #[doc = "Bits 10:11 - region_pms_constrain_world_1_area_5"]
     #[inline(always)]
     pub fn region_pms_constrain_world_1_area_5(&mut self) -> REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W { w: self }
+        REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W::new(self)
     }
     #[doc = "Bits 12:13 - region_pms_constrain_world_1_area_6"]
     #[inline(always)]
     pub fn region_pms_constrain_world_1_area_6(&mut self) -> REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W {
-        REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W { w: self }
+        REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

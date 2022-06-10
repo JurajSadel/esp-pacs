@@ -14,20 +14,7 @@ impl From<crate::R<TX_CRC_SPEC>> for R {
     }
 }
 #[doc = "Field `DATA` reader - For SPI1, the value of crc32."]
-pub struct DATA_R(crate::FieldReader<u32>);
-impl DATA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DATA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATA_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATA_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - For SPI1, the value of crc32."]
     #[inline(always)]

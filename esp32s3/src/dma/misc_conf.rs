@@ -35,153 +35,21 @@ impl From<crate::W<MISC_CONF_SPEC>> for W {
     }
 }
 #[doc = "Field `AHBM_RST_INTER` reader - Set this bit, then clear this bit to reset the internal ahb FSM."]
-pub struct AHBM_RST_INTER_R(crate::FieldReader<bool>);
-impl AHBM_RST_INTER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AHBM_RST_INTER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHBM_RST_INTER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHBM_RST_INTER_R = crate::BitReader<bool>;
 #[doc = "Field `AHBM_RST_INTER` writer - Set this bit, then clear this bit to reset the internal ahb FSM."]
-pub struct AHBM_RST_INTER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AHBM_RST_INTER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type AHBM_RST_INTER_W<'a> = crate::BitWriter<'a, u32, MISC_CONF_SPEC, bool, 0>;
 #[doc = "Field `AHBM_RST_EXTER` reader - Set this bit, then clear this bit to reset the external ahb FSM."]
-pub struct AHBM_RST_EXTER_R(crate::FieldReader<bool>);
-impl AHBM_RST_EXTER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        AHBM_RST_EXTER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for AHBM_RST_EXTER_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type AHBM_RST_EXTER_R = crate::BitReader<bool>;
 #[doc = "Field `AHBM_RST_EXTER` writer - Set this bit, then clear this bit to reset the external ahb FSM."]
-pub struct AHBM_RST_EXTER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AHBM_RST_EXTER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type AHBM_RST_EXTER_W<'a> = crate::BitWriter<'a, u32, MISC_CONF_SPEC, bool, 1>;
 #[doc = "Field `ARB_PRI_DIS` reader - Set this bit to disable priority arbitration function."]
-pub struct ARB_PRI_DIS_R(crate::FieldReader<bool>);
-impl ARB_PRI_DIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ARB_PRI_DIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ARB_PRI_DIS_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ARB_PRI_DIS_R = crate::BitReader<bool>;
 #[doc = "Field `ARB_PRI_DIS` writer - Set this bit to disable priority arbitration function."]
-pub struct ARB_PRI_DIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ARB_PRI_DIS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type ARB_PRI_DIS_W<'a> = crate::BitWriter<'a, u32, MISC_CONF_SPEC, bool, 2>;
 #[doc = "Field `CLK_EN` reader - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, MISC_CONF_SPEC, bool, 4>;
 impl R {
     #[doc = "Bit 0 - Set this bit, then clear this bit to reset the internal ahb FSM."]
     #[inline(always)]
@@ -208,22 +76,22 @@ impl W {
     #[doc = "Bit 0 - Set this bit, then clear this bit to reset the internal ahb FSM."]
     #[inline(always)]
     pub fn ahbm_rst_inter(&mut self) -> AHBM_RST_INTER_W {
-        AHBM_RST_INTER_W { w: self }
+        AHBM_RST_INTER_W::new(self)
     }
     #[doc = "Bit 1 - Set this bit, then clear this bit to reset the external ahb FSM."]
     #[inline(always)]
     pub fn ahbm_rst_exter(&mut self) -> AHBM_RST_EXTER_W {
-        AHBM_RST_EXTER_W { w: self }
+        AHBM_RST_EXTER_W::new(self)
     }
     #[doc = "Bit 2 - Set this bit to disable priority arbitration function."]
     #[inline(always)]
     pub fn arb_pri_dis(&mut self) -> ARB_PRI_DIS_W {
-        ARB_PRI_DIS_W { w: self }
+        ARB_PRI_DIS_W::new(self)
     }
     #[doc = "Bit 4 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

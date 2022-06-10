@@ -35,69 +35,13 @@ impl From<crate::W<DATE_SPEC>> for W {
     }
 }
 #[doc = "Field `DATE` reader - x"]
-pub struct DATE_R(crate::FieldReader<u32>);
-impl DATE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        DATE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DATE_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DATE_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `DATE` writer - x"]
-pub struct DATE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff_ffff) | (value as u32 & 0x0fff_ffff);
-        self.w
-    }
-}
+pub type DATE_W<'a> = crate::FieldWriter<'a, u32, DATE_SPEC, u32, u32, 28, 0>;
 #[doc = "Field `CLK_EN` reader - register file clk gating"]
-pub struct CLK_EN_R(crate::FieldReader<bool>);
-impl CLK_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_EN_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CLK_EN` writer - register file clk gating"]
-pub struct CLK_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLK_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 31)) | ((value as u32 & 1) << 31);
-        self.w
-    }
-}
+pub type CLK_EN_W<'a> = crate::BitWriter<'a, u32, DATE_SPEC, bool, 31>;
 impl R {
     #[doc = "Bits 0:27 - x"]
     #[inline(always)]
@@ -114,12 +58,12 @@ impl W {
     #[doc = "Bits 0:27 - x"]
     #[inline(always)]
     pub fn date(&mut self) -> DATE_W {
-        DATE_W { w: self }
+        DATE_W::new(self)
     }
     #[doc = "Bit 31 - register file clk gating"]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W {
-        CLK_EN_W { w: self }
+        CLK_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

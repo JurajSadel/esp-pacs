@@ -35,967 +35,135 @@ impl From<crate::W<HOST_SLC0HOST_FUNC1_INT_ENA_SPEC>> for W {
     }
 }
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !1) | (value as u32 & 1);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 0>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 1)) | ((value as u32 & 1) << 1);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 1>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 2)) | ((value as u32 & 1) << 2);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 2>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 3)) | ((value as u32 & 1) << 3);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 3>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 4)) | ((value as u32 & 1) << 4);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 4>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 5)) | ((value as u32 & 1) << 5);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 5>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 6)) | ((value as u32 & 1) << 6);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 6>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 7)) | ((value as u32 & 1) << 7);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 7>;
 #[doc = "Field `HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 8)) | ((value as u32 & 1) << 8);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 8>;
 #[doc = "Field `HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 9)) | ((value as u32 & 1) << 9);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 9>;
 #[doc = "Field `HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 10)) | ((value as u32 & 1) << 10);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 10>;
 #[doc = "Field `HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 11)) | ((value as u32 & 1) << 11);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 11>;
 #[doc = "Field `HOST_FN1_SLC0HOST_RX_SOF_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0HOST_RX_SOF_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 12)) | ((value as u32 & 1) << 12);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 12>;
 #[doc = "Field `HOST_FN1_SLC0HOST_RX_EOF_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0HOST_RX_EOF_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 13)) | ((value as u32 & 1) << 13);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 13>;
 #[doc = "Field `HOST_FN1_SLC0HOST_RX_START_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0HOST_RX_START_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0HOST_RX_START_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0HOST_RX_START_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0HOST_RX_START_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0HOST_RX_START_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0HOST_RX_START_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0HOST_RX_START_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0HOST_RX_START_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 14)) | ((value as u32 & 1) << 14);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0HOST_RX_START_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 14>;
 #[doc = "Field `HOST_FN1_SLC0HOST_TX_START_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0HOST_TX_START_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0HOST_TX_START_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0HOST_TX_START_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0HOST_TX_START_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0HOST_TX_START_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0HOST_TX_START_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0HOST_TX_START_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0HOST_TX_START_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 15)) | ((value as u32 & 1) << 15);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0HOST_TX_START_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 15>;
 #[doc = "Field `HOST_FN1_SLC0_RX_UDF_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_RX_UDF_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_RX_UDF_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_RX_UDF_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_RX_UDF_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_RX_UDF_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_RX_UDF_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_RX_UDF_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_RX_UDF_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 16)) | ((value as u32 & 1) << 16);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_RX_UDF_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 16>;
 #[doc = "Field `HOST_FN1_SLC0_TX_OVF_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_TX_OVF_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_TX_OVF_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_TX_OVF_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_TX_OVF_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_TX_OVF_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_TX_OVF_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_TX_OVF_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_TX_OVF_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 17)) | ((value as u32 & 1) << 17);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_TX_OVF_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 17>;
 #[doc = "Field `HOST_FN1_SLC0_RX_PF_VALID_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_RX_PF_VALID_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 18)) | ((value as u32 & 1) << 18);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 18>;
 #[doc = "Field `HOST_FN1_SLC0_EXT_BIT0_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_EXT_BIT0_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_EXT_BIT0_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_EXT_BIT0_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_EXT_BIT0_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_EXT_BIT0_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_EXT_BIT0_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_EXT_BIT0_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_EXT_BIT0_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 19)) | ((value as u32 & 1) << 19);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_EXT_BIT0_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 19>;
 #[doc = "Field `HOST_FN1_SLC0_EXT_BIT1_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_EXT_BIT1_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_EXT_BIT1_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_EXT_BIT1_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_EXT_BIT1_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_EXT_BIT1_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_EXT_BIT1_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_EXT_BIT1_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_EXT_BIT1_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 20)) | ((value as u32 & 1) << 20);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_EXT_BIT1_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 20>;
 #[doc = "Field `HOST_FN1_SLC0_EXT_BIT2_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_EXT_BIT2_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_EXT_BIT2_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_EXT_BIT2_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_EXT_BIT2_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_EXT_BIT2_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_EXT_BIT2_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_EXT_BIT2_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_EXT_BIT2_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 21)) | ((value as u32 & 1) << 21);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_EXT_BIT2_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 21>;
 #[doc = "Field `HOST_FN1_SLC0_EXT_BIT3_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_EXT_BIT3_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_EXT_BIT3_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_EXT_BIT3_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_EXT_BIT3_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_EXT_BIT3_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_EXT_BIT3_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_EXT_BIT3_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_EXT_BIT3_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 22)) | ((value as u32 & 1) << 22);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_EXT_BIT3_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 22>;
 #[doc = "Field `HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 23)) | ((value as u32 & 1) << 23);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 23>;
 #[doc = "Field `HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA` reader - "]
-pub struct HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA` writer - "]
-pub struct HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 24)) | ((value as u32 & 1) << 24);
-        self.w
-    }
-}
+pub type HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 24>;
 #[doc = "Field `HOST_FN1_GPIO_SDIO_INT_ENA` reader - "]
-pub struct HOST_FN1_GPIO_SDIO_INT_ENA_R(crate::FieldReader<bool>);
-impl HOST_FN1_GPIO_SDIO_INT_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_FN1_GPIO_SDIO_INT_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_FN1_GPIO_SDIO_INT_ENA_R {
-    type Target = crate::FieldReader<bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type HOST_FN1_GPIO_SDIO_INT_ENA_R = crate::BitReader<bool>;
 #[doc = "Field `HOST_FN1_GPIO_SDIO_INT_ENA` writer - "]
-pub struct HOST_FN1_GPIO_SDIO_INT_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_FN1_GPIO_SDIO_INT_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(1 << 25)) | ((value as u32 & 1) << 25);
-        self.w
-    }
-}
+pub type HOST_FN1_GPIO_SDIO_INT_ENA_W<'a> =
+    crate::BitWriter<'a, u32, HOST_SLC0HOST_FUNC1_INT_ENA_SPEC, bool, 25>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -1132,132 +300,132 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn host_fn1_slc0_tohost_bit0_int_ena(&mut self) -> HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_W {
-        HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOHOST_BIT0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn host_fn1_slc0_tohost_bit1_int_ena(&mut self) -> HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_W {
-        HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOHOST_BIT1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn host_fn1_slc0_tohost_bit2_int_ena(&mut self) -> HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_W {
-        HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOHOST_BIT2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn host_fn1_slc0_tohost_bit3_int_ena(&mut self) -> HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_W {
-        HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOHOST_BIT3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn host_fn1_slc0_tohost_bit4_int_ena(&mut self) -> HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_W {
-        HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOHOST_BIT4_INT_ENA_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn host_fn1_slc0_tohost_bit5_int_ena(&mut self) -> HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_W {
-        HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOHOST_BIT5_INT_ENA_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn host_fn1_slc0_tohost_bit6_int_ena(&mut self) -> HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_W {
-        HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOHOST_BIT6_INT_ENA_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn host_fn1_slc0_tohost_bit7_int_ena(&mut self) -> HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_W {
-        HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOHOST_BIT7_INT_ENA_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     pub fn host_fn1_slc0_token0_1to0_int_ena(&mut self) -> HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_W {
-        HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOKEN0_1TO0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     pub fn host_fn1_slc0_token1_1to0_int_ena(&mut self) -> HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_W {
-        HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOKEN1_1TO0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn host_fn1_slc0_token0_0to1_int_ena(&mut self) -> HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_W {
-        HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOKEN0_0TO1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn host_fn1_slc0_token1_0to1_int_ena(&mut self) -> HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_W {
-        HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TOKEN1_0TO1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn host_fn1_slc0host_rx_sof_int_ena(&mut self) -> HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_W {
-        HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_W { w: self }
+        HOST_FN1_SLC0HOST_RX_SOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn host_fn1_slc0host_rx_eof_int_ena(&mut self) -> HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_W {
-        HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_W { w: self }
+        HOST_FN1_SLC0HOST_RX_EOF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn host_fn1_slc0host_rx_start_int_ena(&mut self) -> HOST_FN1_SLC0HOST_RX_START_INT_ENA_W {
-        HOST_FN1_SLC0HOST_RX_START_INT_ENA_W { w: self }
+        HOST_FN1_SLC0HOST_RX_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     pub fn host_fn1_slc0host_tx_start_int_ena(&mut self) -> HOST_FN1_SLC0HOST_TX_START_INT_ENA_W {
-        HOST_FN1_SLC0HOST_TX_START_INT_ENA_W { w: self }
+        HOST_FN1_SLC0HOST_TX_START_INT_ENA_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     pub fn host_fn1_slc0_rx_udf_int_ena(&mut self) -> HOST_FN1_SLC0_RX_UDF_INT_ENA_W {
-        HOST_FN1_SLC0_RX_UDF_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_RX_UDF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     pub fn host_fn1_slc0_tx_ovf_int_ena(&mut self) -> HOST_FN1_SLC0_TX_OVF_INT_ENA_W {
-        HOST_FN1_SLC0_TX_OVF_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_TX_OVF_INT_ENA_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     pub fn host_fn1_slc0_rx_pf_valid_int_ena(&mut self) -> HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_W {
-        HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_RX_PF_VALID_INT_ENA_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     pub fn host_fn1_slc0_ext_bit0_int_ena(&mut self) -> HOST_FN1_SLC0_EXT_BIT0_INT_ENA_W {
-        HOST_FN1_SLC0_EXT_BIT0_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_EXT_BIT0_INT_ENA_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn host_fn1_slc0_ext_bit1_int_ena(&mut self) -> HOST_FN1_SLC0_EXT_BIT1_INT_ENA_W {
-        HOST_FN1_SLC0_EXT_BIT1_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_EXT_BIT1_INT_ENA_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     pub fn host_fn1_slc0_ext_bit2_int_ena(&mut self) -> HOST_FN1_SLC0_EXT_BIT2_INT_ENA_W {
-        HOST_FN1_SLC0_EXT_BIT2_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_EXT_BIT2_INT_ENA_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     pub fn host_fn1_slc0_ext_bit3_int_ena(&mut self) -> HOST_FN1_SLC0_EXT_BIT3_INT_ENA_W {
-        HOST_FN1_SLC0_EXT_BIT3_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_EXT_BIT3_INT_ENA_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     pub fn host_fn1_slc0_rx_new_packet_int_ena(&mut self) -> HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_W {
-        HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_RX_NEW_PACKET_INT_ENA_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     pub fn host_fn1_slc0_host_rd_retry_int_ena(&mut self) -> HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_W {
-        HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_W { w: self }
+        HOST_FN1_SLC0_HOST_RD_RETRY_INT_ENA_W::new(self)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     pub fn host_fn1_gpio_sdio_int_ena(&mut self) -> HOST_FN1_GPIO_SDIO_INT_ENA_W {
-        HOST_FN1_GPIO_SDIO_INT_ENA_W { w: self }
+        HOST_FN1_GPIO_SDIO_INT_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

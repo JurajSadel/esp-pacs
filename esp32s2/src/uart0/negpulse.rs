@@ -14,20 +14,7 @@ impl From<crate::R<NEGPULSE_SPEC>> for R {
     }
 }
 #[doc = "Field `NEGEDGE_MIN_CNT` reader - This register stores the minimal input clock count between two negative edges. It is used in baud rate detection."]
-pub struct NEGEDGE_MIN_CNT_R(crate::FieldReader<u32>);
-impl NEGEDGE_MIN_CNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        NEGEDGE_MIN_CNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NEGEDGE_MIN_CNT_R {
-    type Target = crate::FieldReader<u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type NEGEDGE_MIN_CNT_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:19 - This register stores the minimal input clock count between two negative edges. It is used in baud rate detection."]
     #[inline(always)]
