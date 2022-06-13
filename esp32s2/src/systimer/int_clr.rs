@@ -19,27 +19,27 @@ impl From<crate::W<INT_CLR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `INT0_CLR` writer - Interrupt clear bit of system timer target 0."]
-pub type INT0_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 0>;
-#[doc = "Field `INT1_CLR` writer - Interrupt clear bit of system timer target 1."]
-pub type INT1_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 1>;
-#[doc = "Field `INT2_CLR` writer - Interrupt clear bit of system timer target 2."]
-pub type INT2_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 2>;
+#[doc = "Field `TARGET0_INT_CLR` writer - Interrupt clear bit of system timer target 0."]
+pub type TARGET0_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 0>;
+#[doc = "Field `TARGET1_INT_CLR` writer - Interrupt clear bit of system timer target 1."]
+pub type TARGET1_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 1>;
+#[doc = "Field `TARGET2_INT_CLR` writer - Interrupt clear bit of system timer target 2."]
+pub type TARGET2_INT_CLR_W<'a> = crate::BitWriter<'a, u32, INT_CLR_SPEC, bool, 2>;
 impl W {
     #[doc = "Bit 0 - Interrupt clear bit of system timer target 0."]
     #[inline(always)]
-    pub fn int0_clr(&mut self) -> INT0_CLR_W {
-        INT0_CLR_W::new(self)
+    pub fn target0_int_clr(&mut self) -> TARGET0_INT_CLR_W {
+        TARGET0_INT_CLR_W::new(self)
     }
     #[doc = "Bit 1 - Interrupt clear bit of system timer target 1."]
     #[inline(always)]
-    pub fn int1_clr(&mut self) -> INT1_CLR_W {
-        INT1_CLR_W::new(self)
+    pub fn target1_int_clr(&mut self) -> TARGET1_INT_CLR_W {
+        TARGET1_INT_CLR_W::new(self)
     }
     #[doc = "Bit 2 - Interrupt clear bit of system timer target 2."]
     #[inline(always)]
-    pub fn int2_clr(&mut self) -> INT2_CLR_W {
-        INT2_CLR_W::new(self)
+    pub fn target2_int_clr(&mut self) -> TARGET2_INT_CLR_W {
+        TARGET2_INT_CLR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
