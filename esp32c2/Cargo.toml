@@ -1,17 +1,18 @@
 [package]
-name = "esp32s2"
-version = "0.2.0"
+name = "esp32c2"
+version = "0.1.0"
 authors = ["Jesse Braham <jesse@beta7.io>"]
 edition = "2021"
-rust-version = "1.58"
+description = "Peripheral access crate for the ESP32-C2"
+documentation = "https://docs.rs/esp32c2/"
 readme = "README.md"
 repository = "https://github.com/esp-rs/esp-pacs"
-description = "Peripheral access crate for the ESP32-S2"
+license = "MIT OR Apache-2.0"
 keywords = [
-    "embedded",
-    "esp32s2",
     "no-std",
+    "esp32-c2",
     "wifi",
+    "embedded",
 ]
 categories = [
     "embedded",
@@ -21,16 +22,15 @@ categories = [
 include = [
     "/src/**",
     "build.rs",
-    "device.x",
+    "device.x"
 ]
-license = "MIT OR Apache-2.0"
 
 [dependencies]
 bare-metal = "1.0"
+riscv = "0.8"
+riscv-rt = { version = "0.9", optional = true }
 vcell = "0.1"
-xtensa-lx = "0.7.0"
-xtensa-lx-rt = { version = "0.13.0", optional = true }
 
 [features]
-default = ["xtensa-lx/esp32s2"]
-rt = ["xtensa-lx-rt/esp32s2"]
+default = []
+rt = ["riscv-rt"]
