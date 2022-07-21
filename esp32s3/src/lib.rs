@@ -58,6 +58,7 @@ extern "C" {
     fn PCNT();
     fn I2C_EXT0();
     fn I2C_EXT1();
+    fn TWAI();
     fn TG0_T0_LEVEL();
     fn TG0_T1_LEVEL();
     fn TG0_WDT_LEVEL();
@@ -155,7 +156,7 @@ pub static __INTERRUPTS: [Vector; 99] = [
     Vector { _handler: I2C_EXT0 },
     Vector { _handler: I2C_EXT1 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: TWAI },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -346,6 +347,8 @@ pub enum Interrupt {
     I2C_EXT0 = 42,
     #[doc = "43 - I2C_EXT1"]
     I2C_EXT1 = 43,
+    #[doc = "45 - TWAI"]
+    TWAI = 45,
     #[doc = "50 - TG0_T0_LEVEL"]
     TG0_T0_LEVEL = 50,
     #[doc = "51 - TG0_T1_LEVEL"]
@@ -470,6 +473,7 @@ impl Interrupt {
             41 => Ok(Interrupt::PCNT),
             42 => Ok(Interrupt::I2C_EXT0),
             43 => Ok(Interrupt::I2C_EXT1),
+            45 => Ok(Interrupt::TWAI),
             50 => Ok(Interrupt::TG0_T0_LEVEL),
             51 => Ok(Interrupt::TG0_T1_LEVEL),
             52 => Ok(Interrupt::TG0_WDT_LEVEL),
@@ -1326,33 +1330,33 @@ impl core::fmt::Debug for RTC_I2C {
 #[doc = "Peripheral RTC_I2C"]
 pub mod rtc_i2c;
 #[doc = "Peripheral RTC_IO"]
-pub struct RTC_IO {
+pub struct RTCIO {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for RTC_IO {}
-impl RTC_IO {
+unsafe impl Send for RTCIO {}
+impl RTCIO {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const rtc_io::RegisterBlock = 0x6000_8400 as *const _;
+    pub const PTR: *const rtcio::RegisterBlock = 0x6000_8400 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const rtc_io::RegisterBlock {
+    pub const fn ptr() -> *const rtcio::RegisterBlock {
         Self::PTR
     }
 }
-impl Deref for RTC_IO {
-    type Target = rtc_io::RegisterBlock;
+impl Deref for RTCIO {
+    type Target = rtcio::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for RTC_IO {
+impl core::fmt::Debug for RTCIO {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("RTC_IO").finish()
+        f.debug_struct("RTCIO").finish()
     }
 }
 #[doc = "Peripheral RTC_IO"]
-pub mod rtc_io;
+pub mod rtcio;
 #[doc = "Peripheral SENSITIVE"]
 pub struct SENSITIVE {
     _marker: PhantomData<*const ()>,
@@ -1633,6 +1637,34 @@ impl core::fmt::Debug for TIMG1 {
 }
 #[doc = "Timer Group"]
 pub use timg0 as timg1;
+#[doc = "Two-Wire Automotive Interface"]
+pub struct TWAI {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for TWAI {}
+impl TWAI {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const twai::RegisterBlock = 0x6002_b000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const twai::RegisterBlock {
+        Self::PTR
+    }
+}
+impl Deref for TWAI {
+    type Target = twai::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for TWAI {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TWAI").finish()
+    }
+}
+#[doc = "Two-Wire Automotive Interface"]
+pub mod twai;
 #[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller"]
 pub struct UART0 {
     _marker: PhantomData<*const ()>,
@@ -1948,8 +1980,8 @@ pub struct Peripherals {
     pub RTC_CNTL: RTC_CNTL,
     #[doc = "RTC_I2C"]
     pub RTC_I2C: RTC_I2C,
-    #[doc = "RTC_IO"]
-    pub RTC_IO: RTC_IO,
+    #[doc = "RTCIO"]
+    pub RTCIO: RTCIO,
     #[doc = "SENSITIVE"]
     pub SENSITIVE: SENSITIVE,
     #[doc = "SHA"]
@@ -1970,6 +2002,8 @@ pub struct Peripherals {
     pub TIMG0: TIMG0,
     #[doc = "TIMG1"]
     pub TIMG1: TIMG1,
+    #[doc = "TWAI"]
+    pub TWAI: TWAI,
     #[doc = "UART0"]
     pub UART0: UART0,
     #[doc = "UART1"]
@@ -2093,7 +2127,7 @@ impl Peripherals {
             RTC_I2C: RTC_I2C {
                 _marker: PhantomData,
             },
-            RTC_IO: RTC_IO {
+            RTCIO: RTCIO {
                 _marker: PhantomData,
             },
             SENSITIVE: SENSITIVE {
@@ -2124,6 +2158,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             TIMG1: TIMG1 {
+                _marker: PhantomData,
+            },
+            TWAI: TWAI {
                 _marker: PhantomData,
             },
             UART0: UART0 {
