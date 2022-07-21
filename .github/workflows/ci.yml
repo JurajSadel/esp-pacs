@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        chip: [esp32c3]
+        chip: [esp32c2, esp32c3]
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
@@ -25,6 +25,7 @@ jobs:
           target: riscv32imc-unknown-none-elf
           toolchain: nightly
           default: true
+          components: rust-src
       - uses: Swatinem/rust-cache@v1
       - uses: actions-rs/cargo@v1
         with:
