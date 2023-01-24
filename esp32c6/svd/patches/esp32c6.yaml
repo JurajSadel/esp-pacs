@@ -3,6 +3,26 @@ _svd: "../esp32c6.base.svd"
 TIMG0:
   "*":
     _strip: "T_"
+  _modify:
+    _interrupts:
+      TG0_T0:
+        name: TG0_T0_LEVEL
+      TG0_T1:
+        name: TG0_T1_LEVEL
+      TG0_WDT:
+        name: TG0_WDT_LEVEL
+
+TIMG1:
+  "*":
+    _strip: "T_"
+  _modify:
+    _interrupts:
+      TG1_T0:
+        name: TG1_T0_LEVEL
+      TG1_T1:
+        name: TG1_T1_LEVEL
+      TG0_WDT:
+        name: TG1_WDT_LEVEL
 
 PMU:
   _modify:
@@ -83,3 +103,41 @@ LP_I2C0:
         name: FIFO_CONF
   FIFO_CONF:
     _strip: "I2C_"
+
+GPIO:
+  _modify:
+    _interrupts:
+      GPIO_PRO:
+        name: GPIO
+      GPIO_PRO_NMI:
+        name: GPIO_NMI
+
+LEDC:
+  "*":
+    _strip_end: "_CH"
+  "TIMER%s_CONF":
+    _strip: "TIMER_"
+    _modify:
+      TICK_SEL_TIMER:
+        name: TICK_SEL
+      CLK_DIV_TIMER:
+        name: CLK_DIV
+# _delete:
+#   _registers: "CH%s_CONF1"
+# _modify:
+#   _registers:
+#     "CH%s_GAMMA_WR":
+#       name: "CH%s_CONF1"
+# "CH%s_CONF1":
+#   # _modify:
+#   _strip_end: "_GAMMA_WR"
+#   _strip: "CH_GAMMA_"
+#   _modify:
+#     SCALE:
+#       name: DUTY_SCALE
+# _add: # WRONG!!!!
+#   DUTY_START:
+#     description: Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1.
+#     bitOffset: 31
+#     bitWidth: 1
+#     access: read-write

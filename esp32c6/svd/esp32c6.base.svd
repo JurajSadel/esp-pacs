@@ -3719,7 +3719,7 @@
           </fields>
         </register>
         <register>
-          <dim>2</dim>
+          <dim>3</dim>
           <dimIncrement>0xC0</dimIncrement>
           <name>OUT_CONF0_CH%s</name>
           <description>Configure 0 register of Tx channel 1</description>

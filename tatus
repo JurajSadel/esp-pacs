@@ -1,0 +1,262 @@
+[33mcommit f3ee45ec2aefc6f073394b0bff3b3d890a9e94fa[m[33m ([m[1;36mHEAD -> [m[1;32mesp32c6[m[33m)[m
+Author: Juraj Sadel <juraj.sadel@espressif.com>
+Date:   Thu Jan 19 18:06:55 2023 +0100
+
+    C6: Patch interrupt_core0 and intpri
+
+[33mcommit cc17ef8a7a7103ba52c5e64e084fbc0b348933a3[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Wed Jan 18 13:18:06 2023 -0800
+
+    New releases for `esp32c2` and `esp32c3` packages
+
+[33mcommit ad8e77cd8e8ea0a92d3c153d4b864754bc575307[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Wed Jan 18 13:15:54 2023 -0800
+
+    Bump dependencies for RISC-V chips
+
+[33mcommit 3fbbf2a832688183e094dac2c32e4841fa7641ce[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Tue Jan 17 07:06:57 2023 -0800
+
+    Add the `USB` interrupt for the ESP32-S2/S3
+
+[33mcommit 9e5e90a89c3e4e318a50c481e0cfafc71b8686c9[m[33m ([m[1;31morigin/esp32c6[m[33m)[m
+Author: Juraj Sadel <juraj.sadel@espressif.com>
+Date:   Mon Jan 16 17:34:54 2023 +0100
+
+    C6: Patch LP_UART and UART0 peripheral
+
+[33mcommit da161e9bcff9e9bd47cfff85fc1b29b5ab36021a[m
+Author: Jesse Braham <jessebraham@users.noreply.github.com>
+Date:   Wed Jan 11 11:13:44 2023 -0800
+
+    Use latest SVDs and remove old patches (#74)
+    
+    * Add latest SVD files and remove old patches which have been upstreamed
+    
+    * Regenerate PACs
+
+[33mcommit 55af42eab8c484a8fb5aaae84b5c117e42d348d9[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Wed Jan 11 08:15:19 2023 -0800
+
+    Use latest `xtensa-toolchain` version
+
+[33mcommit c2612385140eebaad3540397be05932d61fbd2b1[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Mon Jan 9 06:51:37 2023 -0800
+
+    New releases for `esp32`, `esp32c2`, `esp32s2`, and `esp32s3`
+
+[33mcommit 1f7aee90f27d92ad228bc6b1df8578fddd3b495b[m
+Author: bjoernQ <bjoern.quentin@mobile-j.de>
+Date:   Mon Jan 9 09:25:22 2023 +0100
+
+    Add missing interrupts for ESP32-C2
+
+[33mcommit 274443c2fa3dccee5ba31ab95dc57c7eb4ce43a4[m
+Author: Christopher Liebman <liebman@zod.com>
+Date:   Thu Jan 5 14:18:13 2023 -0800
+
+    PCNT status register field names for esp32/esp32s2/esp32s3
+
+[33mcommit 4975f8a14bb22fa8c84b515ce83c19f9929f906a[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Wed Jan 4 08:27:19 2023 -0800
+
+    New releases for `esp32`, `esp32c3`, `esp32s2`, and `esp32s3`
+
+[33mcommit caa2edef3927f0d233c0c88572fcc354f526056e[m
+Author: Jesse Braham <jessebraham@users.noreply.github.com>
+Date:   Wed Jan 4 08:24:30 2023 -0800
+
+    Update `xtask` dependencies and regenerate PACs using latest `svd2rust` (#68)
+    
+    * Update `xtask` dependencies
+    
+    * Regenerate all packages using latest `svd2rust`
+
+[33mcommit 5a8c9e1c45b79995d64723bb13cfcefb38f914d7[m
+Author: liebman <liebman@zod.com>
+Date:   Wed Jan 4 07:20:55 2023 -0800
+
+    make PCNT peripheral consistant across esp32/esp32s2/esp32s3 (#67)
+
+[33mcommit 0be980f38a2035be4aefef2787a2d70842195ee8[m
+Author: Jesse Braham <jessebraham@users.noreply.github.com>
+Date:   Tue Jan 3 13:11:29 2023 -0800
+
+    Change `CAN` to `TWAI` where applicable in the `SYSTEM` peripheral (#66)
+    
+    * Change `CAN` to `TWAI` where applicable
+    
+    * Regenerate sources for `esp32c3`, `esp32s2`, and `esp32s3`
+
+[33mcommit 661929752b49e8201de3816bc5a83a7a1c378ce0[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Tue Jan 3 12:17:00 2023 -0800
+
+    Fix the CI badge in the README, other small updates
+
+[33mcommit a6ead2db04a310261022f3eb92b03ef3b539b9ef[m
+Author: Christopher Liebman <liebman@zod.com>
+Date:   Tue Jan 3 10:34:40 2023 -0800
+
+    rename some PCNT register fields to remove the unit number
+    where the register is unit specific.
+
+[33mcommit 28f3caf8a6b944f5f533b20ed4ad252a30028a7b[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Tue Dec 6 10:11:35 2022 +0100
+
+    New releases for ESP32, ESP32-S2, and ESP32-S3
+
+[33mcommit fffc9b4fad542524b188f3b8c93e9433f071adce[m
+Author: bjoernQ <bjoern.quentin@mobile-j.de>
+Date:   Fri Dec 2 14:01:36 2022 +0100
+
+    Update xtensa-lx-rt to 0.14.0
+
+[33mcommit 416885ede6bf4629fb40cec30d66d612f98e5925[m
+Author: Jesse Braham <jessebraham@users.noreply.github.com>
+Date:   Tue Nov 29 12:02:39 2022 -0800
+
+    Additional corrections for ESP32-S3's MCPWM peripheral (#59)
+    
+    * Additional corrections for ESP32-S3's MCPWM peripheral
+    
+    * Bump version for `esp32s3` package, README updates
+
+[33mcommit 5310eb21caa4144413bef3d45a2293499abd913a[m
+Author: Jesse Braham <jessebraham@users.noreply.github.com>
+Date:   Mon Nov 28 08:01:44 2022 -0800
+
+    Apply patches to `esp32` and `esp32s3` packages (#58)
+    
+    * Add patches for SHA peripheral on ESP32
+    
+    * Add patches for MCPWM peripheral on ESP32-S3
+    
+    * Bump versions for `esp32` and `esp32s3` packages
+    
+    * Patch TWAI peripheral for ESP32
+    
+    * Patch TWAI peripheral for ESP32-S3
+
+[33mcommit 67f067a5786ea097f7871eec0462b5f30779d633[m
+Author: Jesse Braham <jessebraham@users.noreply.github.com>
+Date:   Thu Nov 17 10:44:58 2022 -0800
+
+    Create a PAC for the ESP32-H2 (#56)
+    
+    * Create the `esp32h2` package and teach `xtask` about it
+    
+    * Generate the PAC
+    
+    * Update CI workflow
+
+[33mcommit aa697194a865db330df6885f816e5e450ec4f9a3[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Thu Nov 17 08:36:26 2022 -0800
+
+    New releases for `esp32c2` and `esp32c3`
+
+[33mcommit 697fe88ddf43fb9027aee0feb71367b0f3d50631[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Tue Nov 15 11:17:20 2022 -0800
+
+    Bump `riscv` dependency for ESP32-C2/C3/C6
+
+[33mcommit ba89eca69e87280e3e50d3878ef3643080b3384d[m
+Author: Jesse Braham <jessebraham@users.noreply.github.com>
+Date:   Thu Nov 10 08:39:16 2022 -0800
+
+    New releases for ESP32/C2/C3/S2/S3 (#53)
+    
+    * Regenerate `esp32s3` package
+    
+    * Use newest versions of each action in the CI workflow
+    
+    * Bump the version numbers for ESP32/C2/C3/S2/S3
+
+[33mcommit bf8143c73df8866da8e7d44f692bbdd884bf0656[m
+Author: bjoernQ <bjoern.quentin@mobile-j.de>
+Date:   Thu Nov 10 09:29:25 2022 +0100
+
+    Strip prefixes from ESP32-S3 I2S1
+
+[33mcommit 7c14341b109cbf0fbc7c9e02101d60f6d9226515[m
+Author: Jesse Braham <jessebraham@users.noreply.github.com>
+Date:   Wed Nov 9 09:41:44 2022 -0800
+
+    Update `xtask` dependencies and regenerate PACs for ESP32/C2/C3/S2/S3 (#51)
+    
+    * Update the `xtask` dependencies
+    
+    * Regenerate `esp32` package
+    
+    * Regenerate `esp32c2` package
+    
+    * Regenerate `esp32c3` package
+    
+    * Regenerate `esp32s2` package
+    
+    * Regenerate `esp32s3` package
+
+[33mcommit 78c1a15935d529047d5df93adb009aa1c7a1fdc7[m
+Author: i404788 <ferris+gh@devdroplets.com>
+Date:   Wed Nov 9 17:41:33 2022 +0100
+
+    Make SHA registers uniform for S2 Chip
+
+[33mcommit 4a5314cf097e841756457ae7556f9282693321d3[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Mon Nov 7 13:39:53 2022 -0800
+
+    Update `riscv_rt` dependency for ESP32-C2/C3/C6
+
+[33mcommit 347a09a8ca38f018a15e6b97d7de81d534008e2c[m
+Author: Jesse Braham <jessebraham@users.noreply.github.com>
+Date:   Thu Nov 3 14:07:41 2022 -0700
+
+    Create a PAC for the ESP32-C6 (#48)
+    
+    * Create `esp32c6` package
+    
+    * Update xtask
+    
+    * Generate the `esp32c6` package
+    
+    * Check the ESP32-C6's PAC in CI
+    
+    * Update README
+
+[33mcommit 2512329c93f1a51d968a82380fb269a6dec2c55e[m
+Author: Jesse Braham <jessebraham@users.noreply.github.com>
+Date:   Thu Nov 3 11:11:16 2022 -0700
+
+    Patch the GDMA peripheral for ESP32-C2/C3/S3 to make it more consistent (#47)
+    
+    * Add new SVD for ESP32-C2 and regenerate
+    
+    * Add new SVD for ESP32-C3 and regenerate
+    
+    * Add new SVD for ESP32-S3 and regenerate
+    
+    * Bump version numbers for ESP32-C2/C3/S3
+
+[33mcommit 36e3f28906b2779e31901a3a14a63428b290ee5b[m
+Author: Jesse Braham <jesse@beta7.io>
+Date:   Thu Nov 3 07:26:09 2022 -0700
+
+    Patch the ESP32-C2's LEDC peripheral
+
+[33mcommit 48dfeafbf7bba72f76638f94da1bf98130bca297[m
+Author: Juraj Sadel <juraj.sadel@espressif.com>
+Date:   Wed Nov 2 18:05:08 2022 +0100
+
+    S3: Remove SAR prefix in SENS peripheral (#45)
+    
+    * S3: Remove SAR prefix in SENS pe
