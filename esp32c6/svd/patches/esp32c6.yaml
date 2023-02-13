@@ -158,3 +158,8 @@ LP_WDT:
     _modify:
       "LP_WDT_INT_ST":
         name: "WDT_INT_ST"
+INTPRI:
+  _add:
+    _interrupts:
+      RTC_TIMER:
+        value: 15
