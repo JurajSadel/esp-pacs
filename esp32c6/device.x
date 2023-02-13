@@ -12,6 +12,7 @@ PROVIDE(BLE_SEC = DefaultHandler);
 PROVIDE(I2C_MASTER = DefaultHandler);
 PROVIDE(PMU = DefaultHandler);
 PROVIDE(EFUSE = DefaultHandler);
+PROVIDE(RTC_TIMER = DefaultHandler);
 PROVIDE(LP_UART = DefaultHandler);
 PROVIDE(LP_I2C = DefaultHandler);
 PROVIDE(LP_PERI_TIMEOUT = DefaultHandler);

@@ -41,6 +41,7 @@ extern "C" {
     fn I2C_MASTER();
     fn PMU();
     fn EFUSE();
+    fn RTC_TIMER();
     fn LP_UART();
     fn LP_I2C();
     fn LP_PERI_TIMEOUT();
@@ -132,7 +133,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 77] = [
     Vector { _reserved: 0 },
     Vector { _handler: PMU },
     Vector { _handler: EFUSE },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: RTC_TIMER,
+    },
     Vector { _handler: LP_UART },
     Vector { _handler: LP_I2C },
     Vector { _reserved: 0 },
